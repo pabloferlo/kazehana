@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KAZEHANA · Crónicas del Camino</title>
+<meta name="description" content="RPG de anime en el navegador: crea tu personaje, explora, lucha, enamórate y forma una familia.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- TÍTULO -->
+  <section id="title" class="screen active">
+    <div class="title-art" aria-hidden="true"><span class="moon"></span><span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span><span class="petal p5"></span></div>
+    <div class="title-box">
+      <p class="kicker">風花 · Crónicas del Camino</p>
+      <h1>KAZEHANA</h1>
+      <p class="tag">Crea a tu personaje, recorre el reino, pelea, haz amigos, enamórate y forma una familia.</p>
+      <div class="title-actions">
+        <button class="btn primary big" data-act="newgame">⛩️ Nueva partida</button>
+        <button class="btn" data-act="import">⬆️ Importar partida</button>
+        <button class="btn ghost" id="snd-title" data-act="sound">🔊 Sonido activado</button>
+      </div>
+      <div id="title-saves" class="saves"></div>
+      <input type="file" id="file-import" accept=".json,application/json" hidden>
+      <p class="foot">Todo se guarda en tu navegador · Juego para adultos jóvenes · Los romances son no explícitos</p>
+    </div>
+  </section>
+
+  <!-- CREACIÓN -->
+  <section id="create" class="screen">
+    <div class="create-wrap">
+      <aside class="create-side"><div id="cc-preview" class="cc-preview"></div><p class="muted center">Así te ven los demás</p></aside>
+      <div id="create-body" class="create-body"></div>
+    </div>
+  </section>
+
+  <!-- JUEGO -->
+  <section id="game" class="screen">
+    <header id="hud"></header>
+    <main id="layout">
+      <div id="viewport">
+        <canvas id="map" width="480" height="352"></canvas>
+        <div class="vp-row">
+          <canvas id="minimap" title="Mapa explorado" width="192" height="144"></canvas>
+          <div id="dpad" aria-label="Mover">
+            <button class="btn dp up" data-act="dir" data-a="0" data-b="-1" aria-label="Arriba">▲</button>
+            <button class="btn dp left" data-act="dir" data-a="-1" data-b="0" aria-label="Izquierda">◀</button>
+            <button class="btn dp right" data-act="dir" data-a="1" data-b="0" aria-label="Derecha">▶</button>
+            <button class="btn dp down" data-act="dir" data-a="0" data-b="1" aria-label="Abajo">▼</button>
+          </div>
+        </div>
+        <nav id="quicktabs">
+          <button class="btn mini" data-act="tab" data-a="char">🧑 Yo</button>
+          <button class="btn mini" data-act="tab" data-a="inv">🎒</button>
+          <button class="btn mini" data-act="tab" data-a="quests">📜</button>
+          <button class="btn mini" data-act="tab" data-a="rel">💞</button>
+          <button class="btn mini" data-act="tab" data-a="family">🏠</button>
+          <button class="btn mini" data-act="tab" data-a="map">🗺️</button>
+        </nav>
+      </div>
+      <aside id="panel" class="panel"></aside>
+    </main>
+  </section>
+
+  <div id="modal" class="modal hidden"></div>
+  <div id="toast" aria-live="polite"></div>
+</div>
+
+<!-- Orden importante: utilidades → datos → lógica → interfaz -->
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/data_social.js"></script>
+<script src="js/npcgen.js"></script>
+<script src="js/portraits.js"></script>
+<script src="js/world.js"></script>
+<script src="js/services.js"></script>
+<script src="js/game.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/social.js"></script>
+<script src="js/ui_core.js"></script>
+<script src="js/ui_views.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

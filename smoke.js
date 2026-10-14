@@ -1,0 +1,45 @@
+// Prueba de humo en Node con un DOM falso: node tools/smoke.js
+const fs = require('fs'), vm = require('vm'), path = require('path');
+const els = {};
+function mkEl(id){ return { id, innerHTML:'', textContent:'', style:{}, dataset:{}, classList:{add(){},remove(){},toggle(){},contains(){return false}}, appendChild(c){ this.innerHTML += (c.innerHTML||''); }, querySelector(){ return mkEl('q'); }, querySelectorAll(){ return []; }, addEventListener(){}, getContext(){ return new Proxy(function(){}, { get:(t,k)=> k==='measureText'?()=>({width:5}):(()=>{}) , set:()=>true }); }, getBoundingClientRect(){return {left:0,top:0,width:480,height:352}}, remove(){}, click(){}, scrollTop:0, scrollHeight:0 }; }
+const document = { getElementById:(id)=> els[id] || (els[id]=mkEl(id)), createElement:(t)=>mkEl(t), querySelector:()=>mkEl('q'), querySelectorAll:()=>[], addEventListener(){}, body:mkEl('body'), readyState:'complete' };
+const ls = {getItem(){return null},setItem(){},removeItem(){}};
+const win = { document, addEventListener(){}, indexedDB:null, localStorage:ls, AudioContext:undefined };
+win.window = win;
+const ctx = vm.createContext(Object.assign(win, { console, setInterval:()=>0, clearInterval(){}, setTimeout:()=>0, localStorage:ls, Date, Math, JSON, Blob:function(){}, URL:{createObjectURL(){return ''}}, confirm:()=>true, alert(){} }));
+const order = ['utils','data','data_social','npcgen','portraits','world','services','game','combat','social','ui_core','ui_views'];
+order.forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname,'..','js',f+'.js'),'utf8'), ctx, {filename:f}));
+const G = ctx.G, D=G.D, U=G.U, Game=G.Game, So=G.Social, C=G.Combat, UI=G.UI, W=G.World, NPC=G.NPC;
+const fails=[]; const t=(name,fn)=>{ try{ fn(); }catch(e){ fails.push(name+': '+e.stack.split('\n').slice(0,3).join(' | ')); } };
+const cfgFor=(o)=>Object.assign({name:'Aiko',gender:'f',age:18,self:{look:'Soy alta, pelo rojo largo y ojos verdes, atlética, con pecas',pers:'',story:'x'},look:{skin:D.SKINS[1],hairColor:'#b9472b',hairName:'pelirrojo',hairStyle:'long',eye:'#3c9a5a',eyeName:'verdes',outfit:D.OUTFITS[0],outfit2:'#f4d8a0',accs:['pecas']},build:'atletico',height:'alto',traits:['valiente','curioso'],stats:{fue:6,agi:6,men:6,car:8,esp:8},origin:'aldea',power:'fuego',interest:'both',types:['musculoso','alto'],permadeath:false},o||{});
+for (const origin of ['aldea','ciudad','capital','monte','azar']) t('newGame '+origin,()=>{ Game.newGame(cfgFor({origin})); const s=G.S; if(!s.world.pois.length) throw new Error('sin pois'); });
+t('parse',()=>{ console.log('parse',JSON.stringify(NPC.parseSelf('Soy alta, pelo rojo largo y ojos verdes, atlética, con pecas'))); });
+t('world',()=>{ Game.newGame(cfgFor({})); const s=G.S; console.log('POIs:',s.world.pois.map(p=>p.type).join(',')); const n=Object.values(s.npcs); console.log('NPCs',n.length,'menores 18:',n.filter(x=>x.age<18).length);
+  const w=s.world.w,h=s.world.h,seen=new Set(),q=[[s.player.x,s.player.y]]; seen.add(s.player.y*w+s.player.x);
+  while(q.length){const [x,y]=q.shift();[[1,0],[-1,0],[0,1],[0,-1]].forEach(([a,b])=>{const nx=x+a,ny=y+b;if(nx<0||ny<0||nx>=w||ny>=h)return;const k=ny*w+nx;if(seen.has(k)||s.world.tiles[k]===0)return;seen.add(k);q.push([nx,ny]);});}
+  s.world.pois.forEach(p=>{ if(!seen.has(p.y*w+p.x)) throw new Error('POI inalcanzable '+p.name); });
+  const types={}; s.world.tiles.forEach(x=>types[x]=(types[x]||0)+1); console.log('tiles',JSON.stringify(types)); });
+t('portraits',()=>{ Object.values(G.S.npcs).slice(0,30).forEach(n=>{ Object.keys(D.MOODS).forEach(m=>{ if(!G.Port.svg(n,m).startsWith('<svg')) throw new Error('svg'); }); }); });
+t('desc',()=>{ const ns=Object.values(G.S.npcs); console.log('\n-- ejemplos --'); ns.filter(n=>n.gender==='m'&&n.age>=45).slice(0,1).concat(ns.filter(n=>n.gender==='f'&&n.age<30).slice(0,2)).forEach(n=>console.log(n.name,n.age,'|',NPC.describe(n))); });
+t('walk',()=>{ const s=G.S; let enc={},steps=0; for(let i=0;i<3000;i++){ const d=[[1,0],[-1,0],[0,1],[0,-1]][i%4]; const r=Game.step(d[0],d[1]); if(r.blocked) continue; steps++; if(r.enc){ enc[r.enc.type]=(enc[r.enc.type]||0)+1; } } console.log('steps',steps,JSON.stringify(enc),'day',s.time.day); });
+t('events',()=>{ D.EVENTS.forEach(ev=>ev.choices.forEach(c=>{ Game.newGame(cfgFor({})); G.S.player.gold=500; ['pocion','onigiri','dango'].forEach(i=>Game.addItem(i,3)); Game.applyOutcome(c.o); })); });
+t('events ui',()=>{ Game.newGame(cfgFor({})); UI.mode='game'; D.EVENTS.forEach(ev=>{ UI.viewEvent(ev,()=>{}); ev.choices.forEach((c,i)=>{ UI.ev={ev,done:()=>{}}; UI.acts.ev_choice(i); }); }); });
+t('combat balance',()=>{ const out=[]; for(const lvl of [1,3,6,10]){ for(const pw of ['fuego','espada','agua']){ Game.newGame(cfgFor({power:pw})); const P=G.S.player; for(let i=1;i<lvl;i++){ Game.gainXp(Game.xpNeed(P.level)); P.stats.fue+=1; P.stats.esp+=1; P.stats.agi+=1; } P.points=0; const d=Game.derived(P);
+   const tier=lvl<3?1:lvl<6?2:3; const pool=Object.values(D.ENEMIES).filter(e=>!e.boss&&e.tier===tier); let wins=0,n=0,hpLeft=0; pool.forEach(e=>{ for(let k=0;k<6;k++){ P.hp=d.maxHp;P.en=d.maxEn; const res=C.simulate(P,[{id:e.id,lvl:Math.max(1,lvl)}]); n++; if(res==='win'){wins++; hpLeft+=P.hp/d.maxHp;} } }); out.push(`lvl${lvl} ${pw} tier${tier}: win ${Math.round(wins/n*100)}% hp-restante ${Math.round(hpLeft/Math.max(1,wins)*100)}%`); } } console.log(out.join('\n')); });
+t('social',()=>{ Game.newGame(cfgFor({interest:'both'})); const s=G.S,P=s.player; const poi=W.poi(s,P.home); const ids=poi.npcs.filter(id=>NPC.canRomance(s.npcs[id],P)); const n=s.npcs[ids[0]]; console.log('romanceables en pueblo inicial:',ids.length);
+  So.introduce(n); [['charlar','general'],['charlar','trabajo'],['bromear'],['cumplido','aspecto'],['coquetear'],['coquetear'],['charlar','rumores']].forEach(a=>{ n.today={}; n.affinity=Math.max(n.affinity,0); So.interact(n.id,a[0],a[1]); });
+  Game.addItem('flor',2); Game.addItem('anillo',2); P.gold=900;
+  ['regalar:flor','cita:paseo','cita:cena','confesar','noche','proponer','retar'].forEach(x=>{ const [a,b]=x.split(':'); n.today={}; n.affinity=90; n.romance=Math.max(n.romance,90); const r=So.interact(n.id,a,b); if(!r.lines.length) throw new Error('sin lineas '+x); });
+  for(let i=0;i<10&&P.spouse!==n.id;i++){ n.today={}; n.status='dating'; n.affinity=100; n.romance=100; So.interact(n.id,'proponer'); }
+  console.log('casado:',P.spouse===n.id);
+  Game.buyHouse(poi); P.gold=500; So.adopt(); console.log('tryChild',JSON.stringify(So.tryChild(n)),'niños',s.family.children.length);
+  Game.advance(24*14); console.log('niños tras 14 días',s.family.children.length);
+  UI.mode='game'; UI.dlg={id:n.id,lines:[],sub:null,back:()=>{}}; UI.renderNpc(); ['topics','compl','gifts','dates'].forEach(k=>{UI.dlg.sub=k;UI.renderNpc();}); UI.viewHome(poi); ['rel','family'].forEach(k=>UI.openModal(k)); });
+t('mentor',()=>{ Game.newGame(cfgFor({})); So.interact('n_mentor','charlar','general'); if(G.S.main.stage!==1) throw new Error('mentor no avanza'); });
+t('dungeon+boss',()=>{ Game.newGame(cfgFor({})); const s=G.S; for(let k=0;k<3;k++){ const sh=s.world.pois.filter(p=>p.type==='santuario')[k]; Game.enterDungeon(sh); Game.dungeonFinish(); } console.log('sellos',s.main.seals,'lair',s.main.lair); if(!s.main.lair) throw new Error('lair no revelada'); });
+t('ui pantallas',()=>{ Game.newGame(cfgFor({})); const s=G.S; const poi=s.world.pois.find(p=>p.type==='ciudad'); const b=Game.board(poi); Game.acceptQuest(poi.id,b.quests[0].id); UI.mode='game'; ['board','shop','train','rank','arena'].forEach(k=>UI.acts[k](poi.id)); UI.viewTown(poi); UI.viewPlace(poi,'plaza'); UI.viewPlace(poi,'taberna'); UI.viewPoi(s.world.pois.find(p=>p.type==='cueva')); UI.viewExplore(); UI.draw(); ['char','inv','quests','rel','family','map','diary','sys'].forEach(tb=>UI.openModal(tb)); UI.acts.stroll(poi.id); UI.acts.drink(poi.id); UI.acts.pray(poi.id); UI.acts.inn(poi.id); });
+t('combat ui',()=>{ Game.newGame(cfgFor({})); UI.mode='game'; UI.fight([{id:'lobo',lvl:1},{id:'bandido',lvl:1}],{},()=>{}); for(let i=0;i<40&&G.S.combat&&!G.S.combat.done;i++){ UI.acts.cb('attack'); } console.log('combate ui resultado',G.S.combat?G.S.combat.done:'derrota gestionada'); });
+t('defeat+heir',()=>{ Game.newGame(cfgFor({permadeath:true})); const s=G.S; s.family.children.push({id:'c1',name:'Hikaru',gender:'m',birthDay:-600,look:{skin:'#fff',hairColor:'#000',hairName:'negro',hairStyle:'short',grey:0,eye:'#000',eyeName:'negros',outfit:'#333',outfit2:'#fff',accs:[],age:18,gender:'m',build:'atletico',buildTags:['atletico'],height:'medio'},bond:50,skill:0,trait:'valiente',power:'rayo'}); s.player.hp=0; const r=Game.defeat(); if(!r.over||!r.heirs.length) throw new Error('herederos'); Game.continueAsHeir('c1'); if(G.S.player.name!=='Hikaru') throw new Error('no heredó'); });
+t('save',()=>{ Game.newGame(cfgFor({})); console.log('tamaño save',JSON.stringify(G.S).length); });
+t('creator ui',()=>{ UI.startCreate(); for(let i=0;i<8;i++){ UI.cc.name='Aiko'; UI.cc.step=i; UI.renderCreate(); } });
+console.log('\nFALLOS:',fails.length); fails.forEach(f=>console.log(' -',f)); process.exit(fails.length?1:0);
