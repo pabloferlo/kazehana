@@ -1,0 +1,741 @@
+{
+ "techniques": [
+  {
+   "id": "tajo_firme",
+   "name": "Tajo Firme",
+   "type": "attack",
+   "element": "fisico",
+   "power": 40,
+   "mpCost": 0,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un corte directo y fiable."
+  },
+  {
+   "id": "guardia_alta",
+   "name": "Guardia Alta",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 5,
+   "target": "self",
+   "effect": {
+    "def_up": 2
+   },
+   "desc": "Adopta una postura defensiva."
+  },
+  {
+   "id": "embestida",
+   "name": "Embestida",
+   "type": "attack",
+   "element": "fisico",
+   "power": 60,
+   "mpCost": 6,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.2
+   },
+   "desc": "Carga con el hombro; puede aturdir."
+  },
+  {
+   "id": "grito_de_guerra",
+   "name": "Grito de Guerra",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 8,
+   "target": "party",
+   "effect": {
+    "atk_up": 3
+   },
+   "desc": "Un rugido que enardece al grupo."
+  },
+  {
+   "id": "tajo_sismico",
+   "name": "Tajo Sísmico",
+   "type": "attack",
+   "element": "fisico",
+   "power": 95,
+   "mpCost": 14,
+   "target": "enemy",
+   "effect": null,
+   "desc": "El suelo se parte bajo el filo."
+  },
+  {
+   "id": "chispa_ardiente",
+   "name": "Chispa Ardiente",
+   "type": "attack",
+   "element": "fuego",
+   "power": 38,
+   "mpCost": 4,
+   "target": "enemy",
+   "effect": {
+    "burn": 0.2
+   },
+   "desc": "Una chispa que prende al objetivo."
+  },
+  {
+   "id": "barrera_arcana",
+   "name": "Barrera Arcana",
+   "type": "buff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 8,
+   "target": "party",
+   "effect": {
+    "def_up": 2
+   },
+   "desc": "Un escudo de maná cubre al grupo."
+  },
+  {
+   "id": "bola_de_fuego",
+   "name": "Bola de Fuego",
+   "type": "attack",
+   "element": "fuego",
+   "power": 65,
+   "mpCost": 10,
+   "target": "enemy",
+   "effect": {
+    "burn": 0.3
+   },
+   "desc": "Esfera de llamas que estalla al impactar."
+  },
+  {
+   "id": "muro_de_llamas",
+   "name": "Muro de Llamas",
+   "type": "attack",
+   "element": "fuego",
+   "power": 55,
+   "mpCost": 16,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 0.4
+   },
+   "desc": "Una pared ígnea barre el campo."
+  },
+  {
+   "id": "fenix_ascendente",
+   "name": "Fénix Ascendente",
+   "type": "attack",
+   "element": "fuego",
+   "power": 120,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "burn": 0.6
+   },
+   "desc": "Un fénix de fuego se alza y cae en picado."
+  },
+  {
+   "id": "aguja_de_hielo",
+   "name": "Aguja de Hielo",
+   "type": "attack",
+   "element": "hielo",
+   "power": 38,
+   "mpCost": 4,
+   "target": "enemy",
+   "effect": {
+    "slow": 0.2
+   },
+   "desc": "Una aguja gélida que ralentiza."
+  },
+  {
+   "id": "ventisca",
+   "name": "Ventisca",
+   "type": "attack",
+   "element": "hielo",
+   "power": 52,
+   "mpCost": 14,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.3
+   },
+   "desc": "Un vendaval helado cubre el campo."
+  },
+  {
+   "id": "prision_glacial",
+   "name": "Prisión Glacial",
+   "type": "attack",
+   "element": "hielo",
+   "power": 70,
+   "mpCost": 18,
+   "target": "enemy",
+   "effect": {
+    "freeze": 0.4
+   },
+   "desc": "Encierra al objetivo en hielo."
+  },
+  {
+   "id": "cero_absoluto",
+   "name": "Cero Absoluto",
+   "type": "attack",
+   "element": "hielo",
+   "power": 125,
+   "mpCost": 30,
+   "target": "enemy",
+   "effect": {
+    "freeze": 0.7
+   },
+   "desc": "El aire mismo se detiene y se quiebra."
+  },
+  {
+   "id": "descarga",
+   "name": "Descarga",
+   "type": "attack",
+   "element": "rayo",
+   "power": 40,
+   "mpCost": 4,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.15
+   },
+   "desc": "Un latigazo eléctrico."
+  },
+  {
+   "id": "cadena_de_rayos",
+   "name": "Cadena de Rayos",
+   "type": "attack",
+   "element": "rayo",
+   "power": 55,
+   "mpCost": 14,
+   "target": "all_enemies",
+   "effect": null,
+   "desc": "El rayo salta de enemigo en enemigo."
+  },
+  {
+   "id": "paso_relampago",
+   "name": "Paso Relámpago",
+   "type": "buff",
+   "element": "rayo",
+   "power": 0,
+   "mpCost": 8,
+   "target": "self",
+   "effect": {
+    "spd_up": 3,
+    "dodge_up": 2
+   },
+   "desc": "Te mueves como un destello."
+  },
+  {
+   "id": "juicio_del_trueno",
+   "name": "Juicio del Trueno",
+   "type": "attack",
+   "element": "rayo",
+   "power": 125,
+   "mpCost": 30,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.4
+   },
+   "desc": "El cielo dicta sentencia."
+  },
+  {
+   "id": "proyectil_arcano",
+   "name": "Proyectil Arcano",
+   "type": "attack",
+   "element": "arcano",
+   "power": 40,
+   "mpCost": 4,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Maná comprimido lanzado con precisión."
+  },
+  {
+   "id": "luz_sanadora",
+   "name": "Luz Sanadora",
+   "type": "heal",
+   "element": "arcano",
+   "power": 45,
+   "mpCost": 10,
+   "target": "ally",
+   "effect": null,
+   "desc": "Restaura vida a un aliado."
+  },
+  {
+   "id": "sello_debilitador",
+   "name": "Sello Debilitador",
+   "type": "debuff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 10,
+   "target": "enemy",
+   "effect": {
+    "atk_down": 2,
+    "def_down": 2
+   },
+   "desc": "Un sello que mina las fuerzas."
+  },
+  {
+   "id": "cuchilla_de_vacio",
+   "name": "Cuchilla de Vacío",
+   "type": "attack",
+   "element": "arcano",
+   "power": 75,
+   "mpCost": 16,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.5
+   },
+   "desc": "Un filo de vacío que ignora parte de la defensa."
+  },
+  {
+   "id": "nova_estelar",
+   "name": "Nova Estelar",
+   "type": "attack",
+   "element": "arcano",
+   "power": 115,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": null,
+   "desc": "Una estrella nace y estalla."
+  },
+  {
+   "id": "filo_encantado",
+   "name": "Filo Encantado",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 42,
+   "mpCost": 3,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un tajo cargado de maná."
+  },
+  {
+   "id": "corte_gelido",
+   "name": "Corte Gélido",
+   "type": "attack",
+   "element": "hielo",
+   "power": 62,
+   "mpCost": 10,
+   "target": "enemy",
+   "effect": {
+    "slow": 0.3
+   },
+   "desc": "La espada exhala escarcha."
+  },
+  {
+   "id": "danza_de_chispas",
+   "name": "Danza de Chispas",
+   "type": "attack",
+   "element": "rayo",
+   "power": 70,
+   "mpCost": 14,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.25
+   },
+   "desc": "Tres cortes eléctricos en un suspiro."
+  },
+  {
+   "id": "luna_de_acero",
+   "name": "Luna de Acero",
+   "type": "attack",
+   "element": "arcano",
+   "power": 110,
+   "mpCost": 26,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un arco lunar que parte la noche."
+  },
+  {
+   "id": "palma_runica",
+   "name": "Palma Rúnica",
+   "type": "attack",
+   "element": "arcano",
+   "power": 40,
+   "mpCost": 3,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un golpe con runas brillantes."
+  },
+  {
+   "id": "respiracion_profunda",
+   "name": "Respiración Profunda",
+   "type": "heal",
+   "element": "arcano",
+   "power": 35,
+   "mpCost": 8,
+   "target": "self",
+   "effect": {
+    "regen": 3
+   },
+   "desc": "Recupera vida poco a poco."
+  },
+  {
+   "id": "furia_de_mil_puños",
+   "name": "Furia de Mil Puños",
+   "type": "attack",
+   "element": "fisico",
+   "power": 90,
+   "mpCost": 18,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Una ráfaga imposible de seguir."
+  },
+  {
+   "id": "sello_del_dragon",
+   "name": "Sello del Dragón",
+   "type": "attack",
+   "element": "arcano",
+   "power": 115,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "def_down": 2
+   },
+   "desc": "Un dragón de runas muerde al objetivo."
+  },
+  {
+   "id": "disparo_de_mana",
+   "name": "Disparo de Maná",
+   "type": "attack",
+   "element": "arcano",
+   "power": 40,
+   "mpCost": 3,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un disparo veloz de maná."
+  },
+  {
+   "id": "paso_lateral",
+   "name": "Paso Lateral",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 5,
+   "target": "self",
+   "effect": {
+    "dodge_up": 3
+   },
+   "desc": "Preparas la esquiva."
+  },
+  {
+   "id": "lluvia_de_flechas",
+   "name": "Lluvia de Flechas",
+   "type": "attack",
+   "element": "fisico",
+   "power": 50,
+   "mpCost": 12,
+   "target": "all_enemies",
+   "effect": null,
+   "desc": "Una lluvia de proyectiles de maná."
+  },
+  {
+   "id": "marca_del_cazador",
+   "name": "Marca del Cazador",
+   "type": "debuff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 8,
+   "target": "enemy",
+   "effect": {
+    "def_down": 3
+   },
+   "desc": "Marca una presa; recibe más daño."
+  },
+  {
+   "id": "estrella_fugaz",
+   "name": "Estrella Fugaz",
+   "type": "attack",
+   "element": "arcano",
+   "power": 110,
+   "mpCost": 26,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.3
+   },
+   "desc": "Un disparo que deja una estela de luz."
+  },
+  {
+   "id": "copo_afilado",
+   "name": "Copo Afilado",
+   "type": "attack",
+   "element": "hielo",
+   "power": 40,
+   "mpCost": 4,
+   "target": "enemy",
+   "effect": {
+    "slow": 0.2
+   },
+   "desc": "Copos de nieve cortantes."
+  },
+  {
+   "id": "escarcha_protectora",
+   "name": "Escarcha Protectora",
+   "type": "buff",
+   "element": "hielo",
+   "power": 0,
+   "mpCost": 8,
+   "target": "ally",
+   "effect": {
+    "def_up": 3
+   },
+   "desc": "Un manto de hielo protege a un aliado."
+  },
+  {
+   "id": "aliento_gelido",
+   "name": "Aliento Gélido",
+   "type": "attack",
+   "element": "hielo",
+   "power": 60,
+   "mpCost": 12,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.3
+   },
+   "desc": "Un soplo helado recorre el campo."
+  },
+  {
+   "id": "aullido_lunar",
+   "name": "Aullido Lunar",
+   "type": "ultimate",
+   "element": "hielo",
+   "power": 0,
+   "mpCost": 0,
+   "target": "party",
+   "effect": {
+    "transform_wolf": 3,
+    "atk_up": 4,
+    "heal": 0.4
+   },
+   "desc": "Yukine se transforma en loba: aúlla, se cura y potencia al equipo."
+  },
+  {
+   "id": "furia_del_titan",
+   "name": "Furia del Titán",
+   "type": "attack",
+   "element": "fisico",
+   "power": 170,
+   "mpCost": 0,
+   "target": "enemy",
+   "effect": {
+    "atk_up": 3
+   },
+   "desc": "Tu arma cae con el peso de una montaña.",
+   "ultimate": true
+  },
+  {
+   "id": "supernova_carmesi",
+   "name": "Supernova Carmesí",
+   "type": "attack",
+   "element": "fuego",
+   "power": 115,
+   "mpCost": 0,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 0.8
+   },
+   "desc": "Un sol rojo nace sobre el campo y estalla.",
+   "ultimate": true
+  },
+  {
+   "id": "era_glacial",
+   "name": "Era Glacial",
+   "type": "attack",
+   "element": "hielo",
+   "power": 105,
+   "mpCost": 0,
+   "target": "all_enemies",
+   "effect": {
+    "freeze": 0.6
+   },
+   "desc": "El mundo entero se cubre de escarcha.",
+   "ultimate": true
+  },
+  {
+   "id": "tormenta_celestial",
+   "name": "Tormenta Celestial",
+   "type": "attack",
+   "element": "rayo",
+   "power": 110,
+   "mpCost": 0,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.5
+   },
+   "desc": "El cielo se abre y cien rayos responden.",
+   "ultimate": true
+  },
+  {
+   "id": "eclipse_arcano",
+   "name": "Eclipse Arcano",
+   "type": "attack",
+   "element": "arcano",
+   "power": 160,
+   "mpCost": 0,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.7
+   },
+   "desc": "La luz se apaga y solo queda el vacío.",
+   "ultimate": true
+  },
+  {
+   "id": "mil_lunas",
+   "name": "Mil Lunas",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 180,
+   "mpCost": 0,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.4
+   },
+   "desc": "Mil arcos de luz lunar parten el aire.",
+   "ultimate": true
+  },
+  {
+   "id": "dragon_interior",
+   "name": "Dragón Interior",
+   "type": "attack",
+   "element": "arcano",
+   "power": 155,
+   "mpCost": 0,
+   "target": "enemy",
+   "effect": {
+    "def_down": 3
+   },
+   "desc": "Liberas el dragón sellado en tus runas.",
+   "ultimate": true
+  },
+  {
+   "id": "lluvia_de_estrellas",
+   "name": "Lluvia de Estrellas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 105,
+   "mpCost": 0,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.4
+   },
+   "desc": "El cielo nocturno se descuelga sobre el enemigo.",
+   "ultimate": true
+  },
+  {
+   "id": "bendicion_invernal",
+   "name": "Bendición Invernal",
+   "type": "heal",
+   "element": "hielo",
+   "power": 50,
+   "mpCost": 10,
+   "target": "ally",
+   "effect": null,
+   "desc": "Una brisa fresca cierra las heridas."
+  },
+  {
+   "id": "lanza_de_escarcha",
+   "name": "Lanza de Escarcha",
+   "type": "attack",
+   "element": "hielo",
+   "power": 85,
+   "mpCost": 14,
+   "target": "enemy",
+   "effect": {
+    "slow": 0.3
+   },
+   "desc": "Una lanza de hielo atraviesa al objetivo."
+  },
+  {
+   "id": "tormenta_polar",
+   "name": "Tormenta Polar",
+   "type": "attack",
+   "element": "hielo",
+   "power": 85,
+   "mpCost": 24,
+   "target": "all_enemies",
+   "effect": {
+    "freeze": 0.3
+   },
+   "desc": "Un vendaval polar arrasa el campo."
+  },
+  {
+   "id": "tajo_relampago",
+   "name": "Tajo Relámpago",
+   "type": "attack",
+   "element": "rayo",
+   "power": 75,
+   "mpCost": 8,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.2
+   },
+   "desc": "Un corte tan rápido que el trueno llega después."
+  },
+  {
+   "id": "aura_curativa",
+   "name": "Aura Curativa",
+   "type": "heal",
+   "element": "arcano",
+   "power": 32,
+   "mpCost": 16,
+   "target": "party",
+   "effect": null,
+   "desc": "Una luz cálida cubre a todo el grupo."
+  },
+  {
+   "id": "velo_de_bruma",
+   "name": "Velo de Bruma",
+   "type": "buff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 10,
+   "target": "party",
+   "effect": {
+    "dodge_up": 3
+   },
+   "desc": "La niebla te envuelve: los golpes fallan."
+  },
+  {
+   "id": "rompeguardia",
+   "name": "Rompeguardia",
+   "type": "debuff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 8,
+   "target": "enemy",
+   "effect": {
+    "def_down": 3,
+    "atk_down": 2
+   },
+   "desc": "Un golpe preciso que abre la defensa rival."
+  },
+  {
+   "id": "llama_fantasma",
+   "name": "Llama Fantasma",
+   "type": "attack",
+   "element": "fuego",
+   "power": 62,
+   "mpCost": 10,
+   "target": "enemy",
+   "effect": {
+    "burn": 0.6
+   },
+   "desc": "Fuego azul que no se apaga."
+  },
+  {
+   "id": "rafaga_cortante",
+   "name": "Ráfaga Cortante",
+   "type": "attack",
+   "element": "fisico",
+   "power": 72,
+   "mpCost": 8,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Una ráfaga de filos invisibles."
+  },
+  {
+   "id": "meditacion",
+   "name": "Meditación",
+   "type": "utility",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 0,
+   "target": "self",
+   "effect": {
+    "mp_restore": 30
+   },
+   "desc": "Respiras hondo y recuperas el maná."
+  }
+ ]
+}

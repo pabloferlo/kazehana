@@ -1,0 +1,615 @@
+{
+ "npcs": [
+  {
+   "id": "protagonista",
+   "name": "Tú",
+   "age": null,
+   "desc": "El protagonista. Su ilustración la pones tú.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "determined"
+   ]
+  },
+  {
+   "id": "padre",
+   "name": "Padre",
+   "age": 41,
+   "desc": "Es un hombre de mediana edad, alto, de hombros anchos y brazos de leñador, con barba corta y el pelo castaño ya salpicado de canas.",
+   "emotions": [
+    "neutral",
+    "determined",
+    "sad"
+   ]
+  },
+  {
+   "id": "madre",
+   "name": "Madre",
+   "age": 38,
+   "desc": "Es una mujer de estatura media, de pelo castaño recogido en una trenza, cuerpo fuerte de quien trabaja la tierra y una sonrisa cálida.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "determined"
+   ]
+  },
+  {
+   "id": "yukine",
+   "name": "Yukine",
+   "age": 22,
+   "desc": "Es una joven adulta de estatura media y complexión ágil, con el pelo largo y blanco como la nieve, orejas y cola de loba, y ojos azul hielo. Su mirada es seria hasta que se ríe.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "shy",
+    "smug",
+    "determined",
+    "wolf"
+   ]
+  },
+  {
+   "id": "haruko",
+   "name": "Haruko",
+   "age": 72,
+   "role": "Superviviente de Tsukimori",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "desc": "Es una anciana pequeña y encorvada, de pelo blanco recogido en un moño, rostro surcado de arrugas y manos nudosas que aún se mueven con sorprendente rapidez.",
+   "talk": [
+    {
+     "if": [
+      "q:s3=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruko",
+       "char": "haruko",
+       "emotion": "happy",
+       "text": "¿Esa carta...? ¡Es de la madre de Mika! Creía que se había perdido para siempre. Gracias, hijo mío."
+      },
+      {
+       "speaker": "Haruko",
+       "char": "haruko",
+       "emotion": "sad",
+       "text": "Su madre cayó con los demás rebeldes. La carta es de antes... una despedida que nunca entregó. Se la guardaré a la niña hasta que sea mayor.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "s3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "!met_haruko"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruko",
+       "char": "haruko",
+       "emotion": "sad",
+       "text": "Tú eres el hijo de esos dos... Tienes sus ojos. Llevo años cuidando vuestras tumbas, ¿sabes?",
+       "actions": [
+        {
+         "type": "flag",
+         "flag": "met_haruko"
+        }
+       ]
+      },
+      {
+       "speaker": "Haruko",
+       "char": "haruko",
+       "emotion": "neutral",
+       "text": "Al otro lado del Camino de la Niebla está Hojarroja. Allí aún hay gente con agallas. Y si buscas al Oni, tendrás que romper los tres santuarios antes de que su torre se deje ver."
+      },
+      {
+       "speaker": "{name}",
+       "char": "protagonista",
+       "emotion": "determined",
+       "text": "Lo haré. Se lo debo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Haruko",
+       "char": "haruko",
+       "emotion": "neutral",
+       "text": "Come algo, que estás en los huesos. Y no te mueras por esa venganza, ¿eh? Tu madre me mataría... y ya está muerta."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "genzo",
+   "name": "Genzo",
+   "age": 54,
+   "role": "Posadero de Hojarroja",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "desc": "Es un hombre robusto y de mediana edad, con barriga prominente, calva brillante, bigote espeso y delantal siempre manchado de salsa.",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Genzo",
+       "char": "genzo",
+       "emotion": "happy",
+       "text": "¡Bienvenido a la Posada del Arce Rojo! Cama caliente, sopa más caliente y precios decentes. Pregunta por la habitación, si quieres..."
+      },
+      {
+       "speaker": "Genzo",
+       "char": "genzo",
+       "emotion": "neutral",
+       "text": "...Y si vais en pareja, no me pregunto nada. Las paredes son gruesas. Casi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ayame",
+   "name": "Ayame",
+   "age": 24,
+   "role": "Mercader",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "desc": "Es una mujer joven y alta, de pelo rojo largo atado en una coleta alta, ojos verdes, cuerpo esbelto y una sonrisa de quien sabe exactamente cuánto vale cada cosa.",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Ayame",
+       "char": "ayame",
+       "emotion": "smug",
+       "text": "Ah, cliente nuevo. Tengo de todo: pociones, acero y cosas que no deberías preguntar de dónde salen. ¿Qué te pongo?",
+       "actions": [
+        {
+         "type": "shop"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sora",
+   "name": "Sora",
+   "age": 29,
+   "role": "Herborista",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "desc": "Es una mujer de unos treinta años, de estatura media y complexión delgada pero ágil, con el pelo verde oscuro en una trenza larga y la piel morena por pasar el día al sol.",
+   "talk": [
+    {
+     "if": [
+      "q:s1=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sora",
+       "char": "sora",
+       "emotion": "happy",
+       "text": "¡Tres Hierbas Luna! Con esto puedo preparar medicina para media aldea. Toma, te lo has ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "s1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s1=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sora",
+       "char": "sora",
+       "emotion": "neutral",
+       "text": "Necesito tres Hierbas Luna. Los hongos tóxicos las llevan pegadas, y dicen que en las cuevas hay más. Ten cuidado."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s1=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sora",
+       "char": "sora",
+       "emotion": "sad",
+       "text": "Mis medicinas se acaban y los heridos no dejan de llegar. Necesito tres Hierbas Luna, y ya no me atrevo a ir sola al bosque. ¿Me ayudas?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Sora",
+           "char": "sora",
+           "emotion": "happy",
+           "text": "¡Gracias! Te lo compensaré bien."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "s1"
+          }
+         ]
+        },
+        {
+         "label": "Ahora no puedo.",
+         "reply": [
+          {
+           "speaker": "Sora",
+           "char": "sora",
+           "emotion": "neutral",
+           "text": "Lo entiendo. Si cambias de idea, aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sora",
+       "char": "sora",
+       "emotion": "happy",
+       "text": "Con tu ayuda, Hojarroja respira un poco más tranquila."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "takeru",
+   "name": "Takeru",
+   "age": 33,
+   "role": "Cazador",
+   "emotions": [
+    "neutral",
+    "angry",
+    "happy"
+   ],
+   "desc": "Es un hombre joven de estatura alta y cuerpo atlético, con el pelo negro y desordenado, barba de tres días, capa de piel y un arco que parece parte de su espalda.",
+   "talk": [
+    {
+     "if": [
+      "q:s2=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Takeru",
+       "char": "takeru",
+       "emotion": "happy",
+       "text": "¿Cinco lobos menos? Buen trabajo. Toma mi capa: me ha salvado el pellejo más veces que mi madre.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "s2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s2=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Takeru",
+       "char": "takeru",
+       "emotion": "neutral",
+       "text": "Cinco lobos sombríos, ni uno menos. Los encontrarás por el Camino de la Niebla y el Río Cristal."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s2=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Takeru",
+       "char": "takeru",
+       "emotion": "angry",
+       "text": "Los lobos sombríos están comiéndose a mis presas y a mis amigos. Si matas a cinco, te regalo algo bueno de mi equipo.",
+       "choices": [
+        {
+         "label": "Hecho.",
+         "reply": [
+          {
+           "speaker": "Takeru",
+           "char": "takeru",
+           "emotion": "happy",
+           "text": "Así me gusta."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "s2"
+          }
+         ]
+        },
+        {
+         "label": "Otro día.",
+         "reply": [
+          {
+           "speaker": "Takeru",
+           "char": "takeru",
+           "emotion": "neutral",
+           "text": "Como quieras."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Takeru",
+       "char": "takeru",
+       "emotion": "neutral",
+       "text": "Los bosques se están quedando más tranquilos gracias a ti."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "daigo",
+   "name": "Daigo",
+   "age": 46,
+   "role": "Herrero",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "desc": "Es un hombre fornido de mediana edad, completamente calvo, con brazos como troncos, barba gris recortada y la piel curtida por la fragua.",
+   "talk": [
+    {
+     "if": [
+      "q:s4=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daigo",
+       "char": "daigo",
+       "emotion": "happy",
+       "text": "¡Mineral Negro de verdad! Dame un momento... listo. Es la mejor espada que ha salido de esta fragua. Haz que merezca la pena.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "s4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s4=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daigo",
+       "char": "daigo",
+       "emotion": "neutral",
+       "text": "Dos minerales negros. Los hay en las cuevas: la de los Susurros y la Helada."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s4=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daigo",
+       "char": "daigo",
+       "emotion": "neutral",
+       "text": "Con dos Minerales Negros podría forjarte algo digno de un héroe. Están en las cuevas del bosque. ¿Te animas?",
+       "choices": [
+        {
+         "label": "Los traeré.",
+         "reply": [
+          {
+           "speaker": "Daigo",
+           "char": "daigo",
+           "emotion": "happy",
+           "text": "¡Ese es el espíritu!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "s4"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Daigo",
+           "char": "daigo",
+           "emotion": "neutral",
+           "text": "Aquí seguiré, junto al fuego."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Daigo",
+       "char": "daigo",
+       "emotion": "happy",
+       "text": "El acero cuenta historias. Haz que la tuya sea buena."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mika",
+   "name": "Mika",
+   "age": 9,
+   "role": "Niña de Hojarroja",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "desc": "Es una niña pequeña de unos nueve años, con coletas castañas, rodillas con costras y unos ojos muy grandes que miran a todo el mundo con curiosidad.",
+   "talk": [
+    {
+     "if": [
+      "q:s3=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Mika",
+       "char": "mika",
+       "emotion": "sad",
+       "text": "Se me cayó en el Camino de la Niebla... la carta de mamá. Por favor, llévasela a la abuela Haruko cuando la encuentres."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:s3=none",
+      "!carta_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Mika",
+       "char": "mika",
+       "emotion": "sad",
+       "text": "Señor... señora... lo que seas. Mi madre me escribió una carta antes de... antes. Se me ha perdido en el Camino de la Niebla. ¿La buscas?",
+       "choices": [
+        {
+         "label": "Claro que sí, pequeña.",
+         "reply": [
+          {
+           "speaker": "Mika",
+           "char": "mika",
+           "emotion": "happy",
+           "text": "¡Gracias! Llévasela luego a Haruko, en Tsukimori."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "s3"
+          }
+         ]
+        },
+        {
+         "label": "Lo siento, ahora no.",
+         "reply": [
+          {
+           "speaker": "Mika",
+           "char": "mika",
+           "emotion": "sad",
+           "text": "Vale..."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Mika",
+       "char": "mika",
+       "emotion": "happy",
+       "text": "¡Yukine tiene las orejas más suaves del mundo! ¿Puedo tocarlas? ...Vale, no."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ren",
+   "name": "Ren",
+   "age": 27,
+   "role": "Soldado desertor",
+   "emotions": [
+    "neutral",
+    "sad",
+    "determined"
+   ],
+   "desc": "Es un hombre joven y alto, de hombros anchos, pelo negro muy corto, una cicatriz que le cruza la ceja izquierda y una mirada cansada de quien ha visto demasiado.",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Ren",
+       "char": "ren",
+       "emotion": "sad",
+       "text": "Serví a los oni durante dos años. Obedecía órdenes. Hasta que me ordenaron quemar una aldea con gente dentro."
+      },
+      {
+       "speaker": "Ren",
+       "char": "ren",
+       "emotion": "determined",
+       "text": "Kurogane es fuerte, pero tiene un patrón: cada cuatro turnos junta energía para un golpe que lo arrasa todo. Defenderse en ese momento es la clave. Y el hielo le duele."
+      },
+      {
+       "speaker": "Ren",
+       "char": "ren",
+       "emotion": "neutral",
+       "text": "Si quieres vengarte, hazlo con cabeza. Los héroes muertos no cobran recompensas."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

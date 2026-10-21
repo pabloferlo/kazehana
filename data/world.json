@@ -1,0 +1,763 @@
+{
+ "kasumi": {
+  "name": "Bosques de Kasumi",
+  "start": "tsukimori",
+  "bg": "radial-gradient(circle at 30% 20%, #1d4a3a, transparent 55%), radial-gradient(circle at 80% 80%, #24305a, transparent 50%), linear-gradient(180deg,#0f2a22,#14352b 60%,#0a1713)",
+  "decor": [
+   {
+    "e": "🌲",
+    "x": 6,
+    "y": 30
+   },
+   {
+    "e": "🌲",
+    "x": 20,
+    "y": 22
+   },
+   {
+    "e": "🌲",
+    "x": 38,
+    "y": 38
+   },
+   {
+    "e": "🌲",
+    "x": 58,
+    "y": 44
+   },
+   {
+    "e": "🌲",
+    "x": 88,
+    "y": 50
+   },
+   {
+    "e": "🌲",
+    "x": 76,
+    "y": 88
+   },
+   {
+    "e": "🌲",
+    "x": 36,
+    "y": 90
+   },
+   {
+    "e": "🌲",
+    "x": 90,
+    "y": 30
+   },
+   {
+    "e": "⛰️",
+    "x": 62,
+    "y": 8
+   },
+   {
+    "e": "⛰️",
+    "x": 92,
+    "y": 8
+   },
+   {
+    "e": "🌫️",
+    "x": 40,
+    "y": 58
+   },
+   {
+    "e": "🌫️",
+    "x": 70,
+    "y": 48
+   }
+  ],
+  "locations": {
+   "tsukimori": {
+    "name": "Tsukimori",
+    "type": "town",
+    "icon": "🏚️",
+    "x": 10,
+    "y": 82,
+    "links": [
+     "camino_niebla"
+    ],
+    "tagline": "La aldea que perdiste.",
+    "theme": [
+     "#2b3a67",
+     "#5c7aa8"
+    ],
+    "desc": "Casas vacías, huertos secos y un silencio que pesa. Aquí todo empezó.",
+    "onFirst": "kasumi_arrival",
+    "town": {
+     "npcs": [
+      "haruko"
+     ]
+    }
+   },
+   "camino_niebla": {
+    "name": "Camino de la Niebla",
+    "type": "wild",
+    "icon": "🌫️",
+    "x": 27,
+    "y": 68,
+    "links": [
+     "tsukimori",
+     "hojarroja",
+     "santuario_1",
+     "cueva_susurros"
+    ],
+    "desc": "Un sendero entre árboles cubiertos de bruma. Los demonios patrullan.",
+    "onFirst": "yukine_meet",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "diablillo"
+      ],
+      [
+       "diablillo",
+       "diablillo"
+      ],
+      [
+       "lobo_sombrio"
+      ],
+      [
+       "lobo_sombrio",
+       "diablillo"
+      ]
+     ]
+    },
+    "onArrive": [
+     {
+      "if": [
+       "q:s3=active",
+       "!found_carta"
+      ],
+      "scene": "carta_found"
+     }
+    ]
+   },
+   "hojarroja": {
+    "name": "Hojarroja",
+    "type": "town",
+    "icon": "🏘️",
+    "x": 46,
+    "y": 80,
+    "links": [
+     "camino_niebla",
+     "rio_cristal"
+    ],
+    "tagline": "Un pueblo que se niega a rendirse.",
+    "theme": [
+     "#6b2a1a",
+     "#d98a3c"
+    ],
+    "desc": "Tejados rojos, humo de chimeneas y gente cansada que aún sabe sonreír. Hay posada, tienda y rumores.",
+    "onFirst": "hojarroja_arrival",
+    "town": {
+     "npcs": [
+      "genzo",
+      "ayame",
+      "sora",
+      "takeru",
+      "daigo",
+      "mika",
+      "ren"
+     ],
+     "inn": {
+      "price": 25
+     },
+     "shop": [
+      "pocion_menor",
+      "pocion",
+      "elixir_menor",
+      "pluma_fenix",
+      "racion",
+      "espada_hierro",
+      "baston_roble",
+      "hoja_runica",
+      "cuero_tratado",
+      "capa_lana",
+      "amuleto_cobre",
+      "flor_de_escarcha",
+      "dulce_de_miel"
+     ]
+    }
+   },
+   "cueva_susurros": {
+    "name": "Cueva de los Susurros",
+    "type": "cave",
+    "icon": "🕳️",
+    "x": 12,
+    "y": 48,
+    "links": [
+     "camino_niebla"
+    ],
+    "optional": true,
+    "tagline": "Algo te llama desde la oscuridad.",
+    "theme": [
+     "#1a1030",
+     "#4b2a7a"
+    ],
+    "recommended": 3,
+    "desc": "Una cueva opcional donde la manada de un lobo alfa corrupto guarda un tesoro.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_sombrio",
+        "lobo_sombrio"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_menor",
+         2
+        ],
+        [
+         "hierba_luna",
+         1
+        ],
+        [
+         "mineral_negro",
+         1
+        ]
+       ],
+       "gold": 30
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "murcielago_demonio",
+        "lobo_sombrio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "lobo_alfa"
+       ],
+       "post": "cave1_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_1_done",
+      "items": [
+       [
+        "perg_llama_fantasma",
+        1
+       ]
+      ],
+      "gold": 80
+     }
+    }
+   },
+   "santuario_1": {
+    "name": "Santuario del Musgo",
+    "type": "sanctuary",
+    "icon": "⛩️",
+    "x": 30,
+    "y": 44,
+    "links": [
+     "camino_niebla",
+     "rio_cristal"
+    ],
+    "order": 1,
+    "tagline": "El primer sello.",
+    "theme": [
+     "#0f3a20",
+     "#4fbf6a"
+    ],
+    "recommended": 3,
+    "desc": "Un templo antiguo devorado por el musgo. El primer sello demoníaco late en su corazón.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sanc1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "diablillo",
+        "diablillo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_menor",
+         2
+        ]
+       ],
+       "gold": 25
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_sombrio",
+        "hongo_toxico"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "murcielago_demonio",
+        "murcielago_demonio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardian_musgo"
+       ],
+       "post": "sanc1_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sanc_1_done",
+      "items": [
+       [
+        "perg_velo_bruma",
+        1
+       ],
+       [
+        "cota_musgo",
+        1
+       ]
+      ],
+      "gold": 120
+     }
+    }
+   },
+   "rio_cristal": {
+    "name": "Río Cristal",
+    "type": "wild",
+    "icon": "🏞️",
+    "x": 50,
+    "y": 58,
+    "links": [
+     "hojarroja",
+     "santuario_1",
+     "santuario_2"
+    ],
+    "desc": "Un río de agua clarísima. Los espíritus de la niebla merodean la orilla.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "lobo_sombrio",
+       "lobo_sombrio"
+      ],
+      [
+       "murcielago_demonio",
+       "hongo_toxico"
+      ],
+      [
+       "espiritu_niebla"
+      ],
+      [
+       "ciervo_corrupto"
+      ]
+     ]
+    }
+   },
+   "santuario_2": {
+    "name": "Santuario de la Raíz Hueca",
+    "type": "sanctuary",
+    "icon": "🕸️",
+    "x": 68,
+    "y": 62,
+    "links": [
+     "rio_cristal",
+     "cueva_helada",
+     "bosque_umbrio"
+    ],
+    "order": 2,
+    "requires": "sanc_1_done",
+    "lockText": "El segundo santuario está sellado. Completa primero el Santuario del Musgo.",
+    "tagline": "El segundo sello.",
+    "theme": [
+     "#2a1040",
+     "#b07aff"
+    ],
+    "recommended": 5,
+    "desc": "Raíces gigantes forman un laberinto cubierto de telarañas. Nada bueno vive aquí.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sanc2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arana_gigante",
+        "hongo_toxico"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         2
+        ],
+        [
+         "amuleto_lobo",
+         1
+        ]
+       ],
+       "gold": 50
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "ciervo_corrupto",
+        "espiritu_niebla"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arana_gigante",
+        "arana_gigante"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "madre_arana"
+       ],
+       "pre": "sanc2_preboss",
+       "post": "sanc2_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sanc_2_done",
+      "items": [
+       [
+        "perg_aura_curativa",
+        1
+       ]
+      ],
+      "gold": 200
+     }
+    }
+   },
+   "cueva_helada": {
+    "name": "Cueva Helada",
+    "type": "cave",
+    "icon": "🧊",
+    "x": 84,
+    "y": 80,
+    "links": [
+     "santuario_2"
+    ],
+    "optional": true,
+    "requires": "sanc_2_done",
+    "lockText": "Un derrumbe bloquea la entrada... por ahora.",
+    "tagline": "Un frío que no es natural.",
+    "theme": [
+     "#0b2a40",
+     "#6fd6ff"
+    ],
+    "recommended": 6,
+    "desc": "Una cueva opcional donde el hielo brilla con energía demoníaca. Yukine se siente rara aquí.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "battle",
+       "enemies": [
+        "espiritu_niebla",
+        "espiritu_niebla"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         1
+        ],
+        [
+         "mineral_negro",
+         1
+        ]
+       ],
+       "gold": 60
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_bosque",
+        "murcielago_demonio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "golem_escarcha"
+       ],
+       "post": "cave2_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_2_done",
+      "items": [
+       [
+        "pendiente_luna",
+        1
+       ],
+       [
+        "perg_tajo_relampago",
+        1
+       ]
+      ],
+      "gold": 150
+     }
+    }
+   },
+   "bosque_umbrio": {
+    "name": "Bosque Umbrío",
+    "type": "wild",
+    "icon": "🌑",
+    "x": 70,
+    "y": 36,
+    "links": [
+     "santuario_2",
+     "santuario_3"
+    ],
+    "requires": "sanc_2_done",
+    "lockText": "Las raíces bloquean el camino. Completa el segundo santuario.",
+    "desc": "La luz apenas llega al suelo. Aquí los demonios se sienten en casa.",
+    "encounters": {
+     "rate": 0.45,
+     "pool": [
+      [
+       "ciervo_corrupto",
+       "sombra_bosque"
+      ],
+      [
+       "oni_menor"
+      ],
+      [
+       "arana_gigante",
+       "hongo_toxico"
+      ],
+      [
+       "sombra_bosque",
+       "sombra_bosque"
+      ]
+     ]
+    }
+   },
+   "santuario_3": {
+    "name": "Santuario del Alba Rota",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 50,
+    "y": 22,
+    "links": [
+     "bosque_umbrio",
+     "torre_kurogane"
+    ],
+    "order": 3,
+    "requires": "sanc_2_done",
+    "lockText": "Solo se llega por el Bosque Umbrío.",
+    "tagline": "El tercer sello.",
+    "theme": [
+     "#40180a",
+     "#ff9a3c"
+    ],
+    "recommended": 7,
+    "desc": "Pasillos de espejos rotos que reflejan un amanecer imposible. Las ilusiones mienten con voz de seres queridos.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sanc3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_bosque",
+        "oni_menor"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         2
+        ],
+        [
+         "elixir_menor",
+         2
+        ]
+       ],
+       "gold": 80
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espiritu_niebla",
+        "sombra_bosque",
+        "espiritu_niebla"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_menor",
+        "ciervo_corrupto"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "kagero"
+       ],
+       "pre": "sanc3_preboss",
+       "post": "sanc3_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sanc_3_done",
+      "items": [
+       [
+        "perg_rompeguardia",
+        1
+       ],
+       [
+        "perg_rafaga",
+        1
+       ]
+      ],
+      "gold": 300
+     }
+    }
+   },
+   "torre_kurogane": {
+    "name": "Torre de Kurogane",
+    "type": "tower",
+    "icon": "🏯",
+    "x": 82,
+    "y": 12,
+    "links": [
+     "santuario_3"
+    ],
+    "order": 4,
+    "requires": "sanc_3_done",
+    "lockText": "Los tres sellos protegen la torre. Rómpelos todos.",
+    "tagline": "El trono del Oni de Hierro.",
+    "theme": [
+     "#3a0505",
+     "#ff2d2d"
+    ],
+    "recommended": 9,
+    "desc": "Una torre negra y roja que se alza sobre Kasumi. En su cima te espera el hombre que mató a tus padres.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "tower_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_menor",
+        "oni_menor"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         1
+        ],
+        [
+         "pluma_fenix",
+         1
+        ]
+       ],
+       "gold": 100
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_bosque",
+        "oni_menor",
+        "sombra_bosque"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_menor",
+        "oni_menor",
+        "oni_menor"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "kurogane"
+       ],
+       "pre": "kurogane_pre",
+       "post": "kurogane_win"
+      }
+     ],
+     "rewards": {
+      "flag": "region_kasumi_done",
+      "items": [
+       [
+        "perg_meditacion",
+        1
+       ],
+       [
+        "pluma_fenix",
+        2
+       ],
+       [
+        "pocion_mayor",
+        2
+       ]
+      ],
+      "gold": 600
+     }
+    }
+   },
+   "paso_shirogane": {
+    "name": "Paso a las Cumbres Shirogane",
+    "type": "gate",
+    "icon": "❄️",
+    "x": 93,
+    "y": 34,
+    "links": [
+     "torre_kurogane"
+    ],
+    "requires": "region_kasumi_done",
+    "lockText": "Primero debes liberar Kasumi derrotando a Kurogane.",
+    "tagline": "La siguiente región te espera.",
+    "theme": [
+     "#1b2a4a",
+     "#8fd3ff"
+    ],
+    "desc": "Un sendero helado asciende entre las montañas. Más allá se alzan las Cumbres Shirogane, donde gobierna el siguiente señor demoníaco. Disponible en la Parte 3."
+   }
+  }
+ }
+}

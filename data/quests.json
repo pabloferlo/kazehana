@@ -1,0 +1,160 @@
+{
+ "quests": {
+  "m1": {
+   "type": "main",
+   "name": "Las huellas del Oni",
+   "desc": "Sal de Tsukimori y sigue el rastro de los demonios por el Camino de la Niebla.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "yukine_joined",
+     "text": "Encontrar a alguien en el Camino de la Niebla"
+    }
+   ],
+   "reward": {
+    "gold": 30
+   }
+  },
+  "m2": {
+   "type": "main",
+   "name": "Los Tres Santuarios",
+   "desc": "Tres sellos demoníacos protegen la torre de Kurogane. Rómpelos en orden.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "sanc_1_done",
+     "text": "Santuario del Musgo"
+    },
+    {
+     "type": "flag",
+     "flag": "sanc_2_done",
+     "text": "Santuario de la Raíz Hueca"
+    },
+    {
+     "type": "flag",
+     "flag": "sanc_3_done",
+     "text": "Santuario del Alba Rota"
+    }
+   ],
+   "reward": {
+    "gold": 100
+   }
+  },
+  "m3": {
+   "type": "main",
+   "name": "El Oni de Hierro",
+   "desc": "Sube a la torre y acaba con Kurogane.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "region_kasumi_done",
+     "text": "Derrotar a Kurogane"
+    }
+   ],
+   "reward": {
+    "gold": 0
+   }
+  },
+  "s1": {
+   "type": "side",
+   "name": "Hierbas para Sora",
+   "desc": "La herborista Sora necesita 3 Hierbas Luna para sus medicinas. Los hongos tóxicos y las cuevas las esconden.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "hierba_luna",
+     "count": 3,
+     "text": "Hierba Luna"
+    }
+   ],
+   "giver": "sora",
+   "reward": {
+    "gold": 120,
+    "items": [
+     [
+      "pocion_mayor",
+      1
+     ],
+     [
+      "flor_de_escarcha",
+      1
+     ]
+    ]
+   }
+  },
+  "s2": {
+   "type": "side",
+   "name": "Colmillos de la Niebla",
+   "desc": "Takeru quiere que reduzcas la manada de lobos sombríos que acecha el camino.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "lobo_sombrio",
+     "count": 5,
+     "text": "Lobos Sombríos derrotados"
+    }
+   ],
+   "giver": "takeru",
+   "reward": {
+    "gold": 80,
+    "items": [
+     [
+      "capa_cazador",
+      1
+     ]
+    ]
+   }
+  },
+  "s3": {
+   "type": "side",
+   "name": "La carta de Mika",
+   "desc": "Mika te pide que recuperes una carta de su madre y se la lleves a Haruko, en Tsukimori. Dice que se le cayó en el Camino de la Niebla.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "found_carta",
+     "text": "Recuperar la carta (Camino de la Niebla)"
+    }
+   ],
+   "giver": "mika",
+   "reward": {
+    "gold": 50,
+    "items": [
+     [
+      "dulce_de_miel",
+      2
+     ]
+    ]
+   },
+   "consume": [
+    [
+     "carta_arrugada",
+     1
+    ]
+   ]
+  },
+  "s4": {
+   "type": "side",
+   "name": "Hierro para Daigo",
+   "desc": "El herrero Daigo forjará un arma excepcional si le traes 2 Minerales Negros de las cuevas.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "mineral_negro",
+     "count": 2,
+     "text": "Mineral Negro"
+    }
+   ],
+   "giver": "daigo",
+   "reward": {
+    "gold": 0,
+    "items": [
+     [
+      "espada_hierro_negro",
+      1
+     ]
+    ]
+   }
+  }
+ }
+}

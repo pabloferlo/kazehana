@@ -1,0 +1,699 @@
+{
+ "enemies": {
+  "diablillo": {
+   "name": "Diablillo",
+   "emoji": "😈",
+   "color": "#ff5577",
+   "level": 1,
+   "hp": 49,
+   "atk": 13,
+   "def": 4,
+   "mag": 8,
+   "spd": 9,
+   "xp": 14,
+   "gold": 8,
+   "weak": [
+    "arcano"
+   ],
+   "desc": "Un demonio menor, mala leche en miniatura.",
+   "skills": [
+    {
+     "name": "Arañazo",
+     "power": 35,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Chispazo Infernal",
+     "power": 40,
+     "element": "fuego",
+     "stat": "mag",
+     "target": "enemy",
+     "weight": 1
+    }
+   ]
+  },
+  "lobo_sombrio": {
+   "name": "Lobo Sombrío",
+   "emoji": "🐺",
+   "color": "#7a6cff",
+   "level": 2,
+   "hp": 65,
+   "atk": 16,
+   "def": 6,
+   "mag": 5,
+   "spd": 12,
+   "xp": 20,
+   "gold": 10,
+   "weak": [
+    "fuego"
+   ],
+   "desc": "Un lobo con ojos de brasa, atrapado por la magia demoníaca.",
+   "skills": [
+    {
+     "name": "Mordisco",
+     "power": 40,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aullido Oscuro",
+     "type": "buff",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "effect": {
+      "atk_up": 3
+     },
+     "weight": 1
+    }
+   ]
+  },
+  "murcielago_demonio": {
+   "name": "Murciélago Demonio",
+   "emoji": "🦇",
+   "color": "#9b59d0",
+   "level": 3,
+   "hp": 59,
+   "atk": 14,
+   "def": 4,
+   "mag": 10,
+   "spd": 15,
+   "dodgeBonus": 0.12,
+   "xp": 26,
+   "gold": 12,
+   "weak": [
+    "rayo"
+   ],
+   "desc": "Rápido y escurridizo. Cuesta acertarle.",
+   "skills": [
+    {
+     "name": "Picado",
+     "power": 38,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Chillido Sónico",
+     "power": 30,
+     "element": "oscuro",
+     "stat": "mag",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ]
+  },
+  "hongo_toxico": {
+   "name": "Hongo Tóxico",
+   "emoji": "🍄",
+   "color": "#7bd36a",
+   "level": 3,
+   "hp": 89,
+   "atk": 12,
+   "def": 9,
+   "mag": 13,
+   "spd": 6,
+   "xp": 28,
+   "gold": 12,
+   "weak": [
+    "fuego"
+   ],
+   "desc": "Huele a bosque... y a problemas.",
+   "loot": [
+    {
+     "item": "hierba_luna",
+     "chance": 0.3
+    }
+   ],
+   "skills": [
+    {
+     "name": "Golpe de Sombrero",
+     "power": 35,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2
+    },
+    {
+     "name": "Esporas Tóxicas",
+     "power": 28,
+     "element": "veneno",
+     "stat": "mag",
+     "target": "all_enemies",
+     "effect": {
+      "poison": 0.5
+     },
+     "weight": 2
+    }
+   ]
+  },
+  "espiritu_niebla": {
+   "name": "Espíritu de la Niebla",
+   "emoji": "👻",
+   "color": "#aee2ff",
+   "level": 4,
+   "hp": 73,
+   "atk": 8,
+   "def": 6,
+   "mag": 20,
+   "spd": 12,
+   "dodgeBonus": 0.18,
+   "xp": 34,
+   "gold": 14,
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "desc": "Una voz sin cuerpo que se disuelve cuando la golpeas.",
+   "skills": [
+    {
+     "name": "Toque Helado",
+     "power": 42,
+     "element": "hielo",
+     "stat": "mag",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Velo de Niebla",
+     "type": "buff",
+     "power": 0,
+     "element": "hielo",
+     "target": "self",
+     "effect": {
+      "dodge_up": 3
+     },
+     "weight": 1
+    }
+   ]
+  },
+  "ciervo_corrupto": {
+   "name": "Ciervo Corrupto",
+   "emoji": "🦌",
+   "color": "#c0884a",
+   "level": 5,
+   "hp": 130,
+   "atk": 20,
+   "def": 10,
+   "mag": 8,
+   "spd": 14,
+   "xp": 42,
+   "gold": 18,
+   "weak": [
+    "rayo"
+   ],
+   "desc": "Un guardián del bosque con las astas negras de corrupción.",
+   "skills": [
+    {
+     "name": "Cornada",
+     "power": 42,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Pisotón",
+     "power": 30,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ]
+  },
+  "oni_menor": {
+   "name": "Oni Menor",
+   "emoji": "👹",
+   "color": "#ff6b3d",
+   "level": 6,
+   "hp": 162,
+   "atk": 25,
+   "def": 13,
+   "mag": 10,
+   "spd": 8,
+   "xp": 56,
+   "gold": 24,
+   "weak": [
+    "hielo"
+   ],
+   "desc": "Soldado raso del Oni de Hierro. Su garrote asusta más que su cerebro.",
+   "loot": [
+    {
+     "item": "pocion_menor",
+     "chance": 0.35
+    }
+   ],
+   "skills": [
+    {
+     "name": "Garrotazo",
+     "power": 45,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Golpe Cargado",
+     "power": 90,
+     "element": "fisico",
+     "target": "enemy",
+     "charge": 1,
+     "weight": 2,
+     "chargeText": "¡El oni alza su garrote con las dos manos!"
+    }
+   ]
+  },
+  "arana_gigante": {
+   "name": "Araña Gigante",
+   "emoji": "🕷️",
+   "color": "#8a8a99",
+   "level": 6,
+   "hp": 148,
+   "atk": 21,
+   "def": 11,
+   "mag": 10,
+   "spd": 11,
+   "xp": 54,
+   "gold": 20,
+   "weak": [
+    "fuego"
+   ],
+   "desc": "Teje trampas entre las raíces del santuario.",
+   "skills": [
+    {
+     "name": "Picadura",
+     "power": 40,
+     "element": "veneno",
+     "target": "enemy",
+     "effect": {
+      "poison": 0.5
+     },
+     "weight": 3
+    },
+    {
+     "name": "Telaraña",
+     "power": 20,
+     "element": "fisico",
+     "target": "enemy",
+     "effect": {
+      "slow": 1.0
+     },
+     "weight": 2
+    }
+   ]
+  },
+  "sombra_bosque": {
+   "name": "Sombra del Bosque",
+   "emoji": "🌑",
+   "color": "#5a4a8a",
+   "level": 7,
+   "hp": 135,
+   "atk": 13,
+   "def": 9,
+   "mag": 26,
+   "spd": 13,
+   "xp": 66,
+   "gold": 26,
+   "weak": [
+    "arcano",
+    "fuego"
+   ],
+   "desc": "Una silueta sin rostro que se alimenta del miedo.",
+   "skills": [
+    {
+     "name": "Lanza Umbría",
+     "power": 55,
+     "element": "oscuro",
+     "stat": "mag",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Maldición Débil",
+     "type": "debuff",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "effect": {
+      "atk_down": 3
+     },
+     "weight": 1
+    },
+    {
+     "name": "Ola de Sombras",
+     "power": 40,
+     "element": "oscuro",
+     "stat": "mag",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ]
+  },
+  "lobo_alfa": {
+   "name": "Lobo Alfa Corrupto",
+   "emoji": "🐺",
+   "color": "#ff4d6d",
+   "level": 4,
+   "hp": 304,
+   "atk": 20,
+   "def": 9,
+   "mag": 5,
+   "spd": 14,
+   "xp": 90,
+   "gold": 40,
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "desc": "El líder de una manada envenenada por la magia demoníaca.",
+   "loot": [
+    {
+     "item": "colmillo_alfa",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Lobo Alfa aúlla con furia! ¡Su ataque se dispara!"
+   },
+   "skills": [
+    {
+     "name": "Zarpazo",
+     "power": 48,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aullido de Manada",
+     "type": "buff",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "effect": {
+      "atk_up": 3
+     },
+     "weight": 1
+    },
+    {
+     "name": "Salto Feroz",
+     "power": 85,
+     "element": "fisico",
+     "target": "enemy",
+     "charge": 1,
+     "weight": 2,
+     "chargeText": "¡El Lobo Alfa se agazapa, listo para saltar!"
+    }
+   ]
+  },
+  "golem_escarcha": {
+   "name": "Gólem de Escarcha Corrupta",
+   "emoji": "🧊",
+   "color": "#6fd6ff",
+   "level": 7,
+   "hp": 512,
+   "atk": 25,
+   "def": 20,
+   "mag": 18,
+   "spd": 6,
+   "xp": 150,
+   "gold": 70,
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "desc": "Un guardián de hielo envenenado por energía demoníaca.",
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡El gólem se resquebraja y brilla con furia!"
+   },
+   "skills": [
+    {
+     "name": "Puño Glacial",
+     "power": 55,
+     "element": "hielo",
+     "stat": "mag",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Ventisca Corrupta",
+     "power": 45,
+     "element": "hielo",
+     "stat": "mag",
+     "target": "all_enemies",
+     "effect": {
+      "slow": 0.5
+     },
+     "weight": 2
+    }
+   ]
+  },
+  "guardian_musgo": {
+   "name": "Guardián del Musgo",
+   "emoji": "🗿",
+   "color": "#6bbf59",
+   "level": 5,
+   "hp": 480,
+   "atk": 22,
+   "def": 13,
+   "mag": 10,
+   "spd": 7,
+   "xp": 120,
+   "gold": 60,
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "desc": "Un coloso de piedra y musgo que protege el primer sello.",
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡El musgo del Guardián arde de furia!"
+   },
+   "skills": [
+    {
+     "name": "Puñetazo Pétreo",
+     "power": 45,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Raíces Aprisionantes",
+     "power": 30,
+     "element": "fisico",
+     "target": "enemy",
+     "effect": {
+      "slow": 1.0
+     },
+     "weight": 1
+    }
+   ],
+   "ultimate": {
+    "name": "Sacudida Ancestral",
+    "power": 75,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El suelo tiembla! ¡El Guardián alza ambos puños!"
+   }
+  },
+  "madre_arana": {
+   "name": "Madre Tejeraíces",
+   "emoji": "🕸️",
+   "color": "#b07aff",
+   "level": 7,
+   "hp": 704,
+   "atk": 27,
+   "def": 14,
+   "mag": 18,
+   "spd": 12,
+   "xp": 190,
+   "gold": 90,
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "desc": "La araña matriarca que teje el segundo sello con raíces vivas.",
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡Madre Tejeraíces chilla! ¡Sus patas golpean frenéticas!"
+   },
+   "skills": [
+    {
+     "name": "Colmillos Venenosos",
+     "power": 50,
+     "element": "veneno",
+     "target": "enemy",
+     "effect": {
+      "poison": 0.6
+     },
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Crías",
+     "power": 30,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 2
+    }
+   ],
+   "ultimate": {
+    "name": "Tapiz de Raíces Mortales",
+    "power": 85,
+    "element": "fisico",
+    "target": "all_enemies",
+    "effect": {
+     "slow": 1.0
+    },
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Madre Tejeraíces hila un tapiz de raíces sobre vosotros!"
+   }
+  },
+  "kagero": {
+   "name": "Kagerō, la Zorra Espectral",
+   "emoji": "🦊",
+   "color": "#ff9a3c",
+   "level": 8,
+   "hp": 832,
+   "atk": 18,
+   "def": 12,
+   "mag": 34,
+   "spd": 16,
+   "dodgeBonus": 0.1,
+   "xp": 240,
+   "gold": 120,
+   "boss": true,
+   "weak": [
+    "arcano",
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "desc": "Una kitsune al servicio de los demonios, maestra de las ilusiones.",
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡Las nueve colas de Kagerō arden con fuego espectral!"
+   },
+   "skills": [
+    {
+     "name": "Llama Fantasma",
+     "power": 55,
+     "element": "fuego",
+     "stat": "mag",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Ilusión Perturbadora",
+     "type": "debuff",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "effect": {
+      "def_down": 3
+     },
+     "weight": 1
+    }
+   ],
+   "ultimate": {
+    "name": "Danza de las Nueve Colas",
+    "power": 95,
+    "element": "fuego",
+    "stat": "mag",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Kagerō baila! ¡Nueve colas de fuego giran a su alrededor!"
+   }
+  },
+  "kurogane": {
+   "name": "Kurogane, el Oni de Hierro",
+   "emoji": "👹",
+   "color": "#ff2d2d",
+   "level": 10,
+   "hp": 1440,
+   "atk": 36,
+   "def": 18,
+   "mag": 16,
+   "spd": 10,
+   "xp": 520,
+   "gold": 300,
+   "boss": true,
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "desc": "El señor de los Bosques de Kasumi. Su martillo ha enterrado a media región.",
+   "loot": [
+    {
+     "item": "colmillo_oni",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Kurogane ruge! ¡Sus brazos se enrojecen como el hierro candente!"
+   },
+   "skills": [
+    {
+     "name": "Mazazo de Hierro",
+     "power": 60,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Armadura Infernal",
+     "type": "buff",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "effect": {
+      "def_up": 3
+     },
+     "weight": 1
+    },
+    {
+     "name": "Brasas del Yugo",
+     "power": 40,
+     "element": "fuego",
+     "stat": "mag",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "ultimate": {
+    "name": "Martillo del Eclipse Carmesí",
+    "power": 130,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El cielo se tiñe de rojo! ¡Kurogane alza su martillo hacia el sol!"
+   }
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "scenes": [
+    { "bg": "linear-gradient(180deg,#2b3a67,#5c7aa8 55%,#1a2238)", "narration": true,
+      "text": "Naciste en Tsukimori, una aldea de leñadores y cazadores al pie de las Montañas Kasumi. Un lugar pequeño, donde todos se conocían por el nombre... y por el apodo vergonzoso de la infancia." },
+    { "narration": true,
+      "text": "Tus primeros años fueron sencillos: leña al amanecer, cuentos junto al fuego y la certeza de que tus padres siempre estarían en la puerta cuando volvías a casa." },
+    { "bg": "linear-gradient(180deg,#3a0f14,#8a2a2a 55%,#1a0508)", "narration": true,
+      "text": "Entonces cumpliste diez años, y el cielo se tiñó de rojo. Los demonios descendieron de las montañas con sus estandartes negros." },
+    { "narration": true,
+      "text": "Impusieron su dictadura sobre toda la región: tributos, toques de queda, aldeas selladas. Quien miraba con desafío, desaparecía." },
+    { "char": "padre", "emotion": "determined", "speaker": "Padre",
+      "text": "No podemos seguir de rodillas. Si no nos levantamos ahora, vuestros hijos crecerán sin saber lo que es ser libres." },
+    { "char": "madre", "emotion": "sad", "speaker": "Madre",
+      "text": "Quédate escondido en el sótano, {name}. Pase lo que pase, no salgas hasta que todo haya terminado. ¿Me lo prometes?" },
+    { "speaker": "Recuerdo", "emotion": "", "narration": true,
+      "text": "Prometiste obedecer. Y de aquel día, de lo que más te acuerdas es de...",
+      "choices": [
+        { "label": "Su abrazo antes de irse.", "setFlag": "memory_hug" },
+        { "label": "Sus últimas palabras.", "setFlag": "memory_words" },
+        { "label": "El olor a humo y hierro.", "setFlag": "memory_smoke" }
+      ] },
+    { "bg": "linear-gradient(180deg,#1a1020,#3a1a30 55%,#0a0610)", "narration": true,
+      "text": "El pueblo se rebeló. Los demonios aplastaron la revuelta sin esfuerzo. Entre los caídos estaban tus padres." },
+    { "narration": true,
+      "text": "Aquella noche el miedo se transformó en algo más duro. Creciste en silencio, entrenando a escondidas, con un solo nombre grabado en la mente: el de quienes lo destruyeron todo." },
+    { "bg": "linear-gradient(180deg,#2b3a67,#5c7aa8 55%,#1a2238)", "narration": true,
+      "text": "Hoy tienes {age} años. Has afilado tu arma, revisado tu equipaje y mirado la puerta de casa mil veces." },
+    { "minAge": 25, "maxAge": 29, "narration": true,
+      "text": "Quizá has tardado un poquito en decidirte. Pero los grandes planes de venganza requieren paciencia. Eso dices." },
+    { "minAge": 30, "maxAge": 39, "narration": true,
+      "text": "Sí, {age} años. Los demonios llevan ya más de veinte años gobernando y empezaban a preguntarse si te habías olvidado. Pero no: es que estabas esperando el momento perfecto. Hace unas décadas. Quizá." },
+    { "minAge": 40, "narration": true,
+      "text": "{age} años. Dos décadas largas de duelo, preparación y «ya mañana me voy». Los demonios han cambiado de dueño de casa dos veces y aun así sigues amenazando con vengarte. Hoy, por fin, no hay más excusas. Ni siquiera tu espalda las aceptaría." },
+    { "narration": true,
+      "text": "Cruzas la puerta de tu antigua casa por última vez. Al salir, sientes que..." ,
+      "choices": [
+        { "label": "Arde en mí una determinación de hierro.", "setFlag": "mood_resolute" },
+        { "label": "Estoy frío y tranquilo. Sé lo que debo hacer.", "setFlag": "mood_cold" },
+        { "label": "Tengo miedo, pero iré de todos modos.", "setFlag": "mood_afraid" }
+      ] },
+    { "narration": true,
+      "text": "Empieza tu senda. En algún lugar del bosque, una loba blanca ya ha percibido tu rastro..." }
+  ]
+}

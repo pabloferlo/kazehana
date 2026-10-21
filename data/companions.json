@@ -1,0 +1,43 @@
+{
+ "yukine": {
+  "id": "yukine",
+  "name": "Yukine",
+  "icon": "🐺",
+  "hybrid": false,
+  "ultimate": "aullido_lunar",
+  "stats": {
+   "hp": 90,
+   "mp": 80,
+   "atk": 9,
+   "def": 8,
+   "mag": 15,
+   "spd": 13
+  },
+  "learnset": [
+   {
+    "level": 1,
+    "tech": "copo_afilado"
+   },
+   {
+    "level": 1,
+    "tech": "escarcha_protectora"
+   },
+   {
+    "level": 3,
+    "tech": "bendicion_invernal"
+   },
+   {
+    "level": 5,
+    "tech": "aliento_gelido"
+   },
+   {
+    "level": 7,
+    "tech": "lanza_de_escarcha"
+   },
+   {
+    "level": 9,
+    "tech": "tormenta_polar"
+   }
+  ]
+ }
+}

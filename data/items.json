@@ -1,0 +1,38 @@
+{
+  "items": {
+    "pocion_menor": { "name": "Poción Menor", "type": "consumable", "icon": "🧪", "price": 20, "desc": "Restaura 50 PV.", "effect": { "heal": 50 } },
+    "pocion": { "name": "Poción", "type": "consumable", "icon": "🧪", "price": 60, "desc": "Restaura 120 PV.", "effect": { "heal": 120 } },
+    "pocion_mayor": { "name": "Poción Mayor", "type": "consumable", "icon": "⚗️", "price": 150, "desc": "Restaura 250 PV.", "effect": { "heal": 250 } },
+    "elixir_menor": { "name": "Elixir de Maná", "type": "consumable", "icon": "💧", "price": 35, "desc": "Restaura 40 PM.", "effect": { "mp": 40 } },
+    "pluma_fenix": { "name": "Pluma de Fénix", "type": "consumable", "icon": "🪶", "price": 120, "desc": "Revive a un aliado debilitado con la mitad de su vida.", "effect": { "revive": 0.5 } },
+    "racion": { "name": "Ración de Viaje", "type": "consumable", "icon": "🍙", "price": 25, "desc": "Recupera el 30% de PV de quien la come (no revive).", "effect": { "healPct": 0.3 } },
+    "hierba_luna": { "name": "Hierba Luna", "type": "key", "icon": "🌿", "desc": "Una hierba plateada. Sora la busca." },
+    "carta_arrugada": { "name": "Carta Arrugada", "type": "key", "icon": "✉️", "desc": "Una carta sellada, dirigida a Haruko." },
+    "mineral_negro": { "name": "Mineral Negro", "type": "key", "icon": "⛏️", "desc": "Metal oscuro y pesado. Daigo lo querría." },
+    "flor_de_escarcha": { "name": "Flor de Escarcha", "type": "gift", "icon": "❄️", "price": 40, "desc": "Un regalo para Yukine.", "affinity": 4 },
+    "dulce_de_miel": { "name": "Dulce de Miel", "type": "gift", "icon": "🍯", "price": 30, "desc": "A Yukine se le mueve la cola solo con verlo.", "affinity": 3 },
+
+    "espada_hierro": { "name": "Espada de Hierro", "type": "equipment", "slot": "weapon", "icon": "🗡️", "price": 90, "desc": "Una espada sencilla y fiable.", "bonus": { "atk": 4 } },
+    "baston_roble": { "name": "Bastón de Roble", "type": "equipment", "slot": "weapon", "icon": "🪄", "price": 90, "desc": "Canaliza mejor el maná.", "bonus": { "mag": 4 } },
+    "hoja_runica": { "name": "Hoja Rúnica", "type": "equipment", "slot": "weapon", "icon": "⚔️", "price": 160, "desc": "Runas grabadas: filo y hechizo.", "bonus": { "atk": 3, "mag": 3 } },
+    "cuero_tratado": { "name": "Cuero Tratado", "type": "equipment", "slot": "armor", "icon": "🦺", "price": 80, "desc": "Armadura ligera de cazador.", "bonus": { "def": 3, "hp": 10 } },
+    "capa_lana": { "name": "Capa de Lana", "type": "equipment", "slot": "armor", "icon": "🧥", "price": 70, "desc": "Abriga y no estorba.", "bonus": { "def": 2, "spd": 1, "mp": 8 } },
+    "amuleto_cobre": { "name": "Amuleto de Cobre", "type": "equipment", "slot": "accessory", "icon": "📿", "price": 100, "desc": "Un pequeño amuleto de la suerte.", "bonus": { "hp": 15, "mp": 8 } },
+
+    "capa_cazador": { "name": "Capa del Cazador", "type": "equipment", "slot": "armor", "rarity": "rare", "icon": "🧥", "desc": "Regalo de Takeru. Silenciosa como el bosque.", "bonus": { "def": 5, "spd": 3, "hp": 20 } },
+    "espada_hierro_negro": { "name": "Espada de Hierro Negro", "type": "equipment", "slot": "weapon", "rarity": "rare", "icon": "🗡️", "desc": "Forjada por Daigo con mineral de las cuevas.", "bonus": { "atk": 8, "mag": 2 } },
+    "colmillo_alfa": { "name": "Colmillo del Alfa", "type": "equipment", "slot": "accessory", "rarity": "rare", "icon": "🦷", "desc": "Trofeo del Lobo Alfa. Aviva los reflejos.", "bonus": { "atk": 4, "spd": 4 } },
+    "cota_musgo": { "name": "Cota de Musgo Eterno", "type": "equipment", "slot": "armor", "rarity": "rare", "icon": "🛡️", "desc": "Musgo vivo que se endurece como la piedra.", "bonus": { "def": 9, "hp": 40 } },
+    "pendiente_luna": { "name": "Pendiente de Luna Pálida", "type": "equipment", "slot": "accessory", "rarity": "epic", "icon": "🌙", "desc": "Brilla cuando hay hielo cerca. Acelera la carga de la ulti.", "bonus": { "mag": 8, "mp": 25, "ultGain": 3 } },
+    "amuleto_lobo": { "name": "Amuleto del Lobo Blanco", "type": "equipment", "slot": "accessory", "rarity": "epic", "icon": "🐾", "desc": "Hecho con pelo de loba blanca. Late en tu mano.", "bonus": { "spd": 6, "hp": 30, "ultGain": 4 } },
+    "colmillo_oni": { "name": "Colmillo del Oni de Hierro", "type": "equipment", "slot": "weapon", "rarity": "legendary", "icon": "👹", "desc": "El diente del tirano, convertido en arma. Pesa como una promesa.", "bonus": { "atk": 12, "mag": 6, "spd": 2 } },
+
+    "perg_velo_bruma": { "name": "Pergamino: Velo de Bruma", "type": "scroll", "icon": "📜", "desc": "Enseña Velo de Bruma.", "teaches": "velo_de_bruma" },
+    "perg_aura_curativa": { "name": "Pergamino: Aura Curativa", "type": "scroll", "icon": "📜", "desc": "Enseña Aura Curativa.", "teaches": "aura_curativa" },
+    "perg_rompeguardia": { "name": "Pergamino: Rompeguardia", "type": "scroll", "icon": "📜", "desc": "Enseña Rompeguardia.", "teaches": "rompeguardia" },
+    "perg_llama_fantasma": { "name": "Pergamino: Llama Fantasma", "type": "scroll", "icon": "📜", "desc": "Enseña Llama Fantasma.", "teaches": "llama_fantasma" },
+    "perg_tajo_relampago": { "name": "Pergamino: Tajo Relámpago", "type": "scroll", "icon": "📜", "desc": "Enseña Tajo Relámpago.", "teaches": "tajo_relampago" },
+    "perg_rafaga": { "name": "Pergamino: Ráfaga Cortante", "type": "scroll", "icon": "📜", "desc": "Enseña Ráfaga Cortante.", "teaches": "rafaga_cortante" },
+    "perg_meditacion": { "name": "Pergamino: Meditación", "type": "scroll", "icon": "📜", "desc": "Enseña Meditación.", "teaches": "meditacion" }
+  }
+}

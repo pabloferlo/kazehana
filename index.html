@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yukine: La Senda del Vengador</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Pantalla: menú principal -->
+    <section id="screen-title" class="screen active">
+      <div class="title-bg"></div>
+      <div class="title-box">
+        <p class="eyebrow">RPG de anime en el navegador</p>
+        <h1>Yukine</h1>
+        <h2>La Senda del Vengador</h2>
+        <div class="menu">
+          <button class="btn primary" id="btn-new">Nueva partida</button>
+          <button class="btn" id="btn-load">Cargar partida</button>
+          <button class="btn ghost" id="btn-about">Acerca de</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantalla: creación de personaje -->
+    <section id="screen-creation" class="screen"></section>
+
+    <!-- Pantalla: escena narrativa / diálogo -->
+    <section id="screen-story" class="screen">
+      <div id="story-bg" class="story-bg"></div>
+      <div id="story-portrait" class="story-portrait"></div>
+      <div id="dialogue" class="dialogue">
+        <div class="dlg-head">
+          <span id="dlg-speaker" class="dlg-speaker"></span>
+          <span id="dlg-emotion" class="dlg-emotion"></span>
+        </div>
+        <p id="dlg-text" class="dlg-text"></p>
+        <div id="dlg-choices" class="dlg-choices"></div>
+        <div id="dlg-hint" class="dlg-hint">Clic o Espacio para continuar ▾</div>
+      </div>
+    </section>
+
+    <!-- Pantalla: mundo / mapa -->
+    <section id="screen-world" class="screen"></section>
+
+    <!-- Pantalla: combate -->
+    <section id="screen-battle" class="screen"></section>
+
+    <!-- Overlay a pantalla completa: ciudades, mazmorras, menú -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- Modal genérico -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <div id="modal-body"></div>
+        <div class="modal-actions"><button class="btn" id="modal-close">Cerrar</button></div>
+      </div>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

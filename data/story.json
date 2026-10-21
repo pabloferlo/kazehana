@@ -1,0 +1,1057 @@
+{
+ "kasumi_arrival": [
+  {
+   "narration": true,
+   "text": "Tsukimori. Las casas siguen en pie, pero ya nadie las llama hogar. Más allá del bosque de Kasumi, el Oni de Hierro gobierna con un martillo y tres sellos demoníacos.",
+   "bg": "linear-gradient(180deg,#2b3a67,#5c7aa8 55%,#1a2238)"
+  },
+  {
+   "narration": true,
+   "text": "CONSEJO: haz clic en un lugar del mapa para viajar. Entre un punto y otro pueden salir enemigos. Los santuarios deben completarse en orden. Pulsa «Menú» para equipar, guardar y revisar misiones."
+  },
+  {
+   "narration": true,
+   "text": "Quizá Haruko, la anciana que aún vive aquí, sepa algo útil. Hablar con la gente en pueblos y aldeas siempre merece la pena."
+  }
+ ],
+ "yukine_meet": [
+  {
+   "narration": true,
+   "text": "La niebla se espesa a cada paso. De pronto oyes gruñidos... y a una mujer maldiciendo en voz baja.",
+   "bg": "linear-gradient(180deg,#0f2a22,#1d4a3a 60%,#0a1713)"
+  },
+  {
+   "narration": true,
+   "text": "Entre los árboles, unos diablillos acorralan a una joven de estatura media y pelo blanco como la nieve. Tiene orejas y cola de loba, ojos azul hielo y las manos cubiertas de escarcha que ya casi no le obedece."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "angry",
+   "text": "¡Largo, bichos! Estoy... bien. Solo un poco... cansada..."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "(No parece que esté bien.) ¡Aguanta! ¡Voy!"
+  },
+  {
+   "narration": true,
+   "text": "CONSEJO DE COMBATE: cada turno eliges la acción de cada personaje. Los enemigos muestran sobre su cabeza lo que van a hacer: ataque, carga o defensa. ¡Defiéndete cuando veas una carga!",
+   "actions": [
+    {
+     "type": "battle",
+     "group": [
+      "diablillo"
+     ],
+     "canFlee": false
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "El diablillo chilla, cae... y los demás huyen entre la niebla. La chica se desploma sobre una rodilla, jadeando."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "...No te lo pedí. Pero gracias. Hacía mucho que nadie me ayudaba sin pedir algo a cambio."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Eso parecía todo menos controlado.",
+   "choices": [
+    {
+     "label": "¿Estás bien?",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "shy",
+       "text": "...¿Te preocupas por una desconocida? Qué raro eres. Estoy bien. De verdad."
+      }
+     ],
+     "aff": 2
+    },
+    {
+     "label": "Casi te comen, ¿lo sabes?",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "smug",
+       "text": "Cierto. Pero ellos estarían congelados primero. Casi."
+      }
+     ],
+     "aff": 1
+    },
+    {
+     "label": "Me llamo {name}. Busco al Oni de Hierro.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "determined",
+       "text": "¿Al Oni? Entonces nuestros caminos van en la misma dirección."
+      }
+     ],
+     "aff": 1
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Me llamo Yukine. Los demonios quemaron la aldea de mi manada cuando yo era pequeña. Desde entonces corro. Y... estoy cansada de correr."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "Vi lo que haces con esa espada, esa rabia en la mirada... Es la misma que tengo yo. Déjame ir contigo. Hielo y colmillos contra el Oni. ¿Trato hecho?"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Trato hecho, Yukine."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "¡Bien! Pero que quede claro: mi cola no se toca. Nunca. ¿Entendido?",
+   "actions": [
+    {
+     "type": "joinYukine"
+    },
+    {
+     "type": "flag",
+     "flag": "yukine_joined"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "Yukine se une al grupo. A partir de ahora controlas a los dos en combate. Revisa el Menú para equipar y ver sus técnicas."
+  }
+ ],
+ "hojarroja_arrival": [
+  {
+   "narration": true,
+   "text": "Hojarroja huele a pan, a humo y a determinación testaruda. Los vecinos os miran con recelo... y luego con esperanza.",
+   "bg": "linear-gradient(180deg,#6b2a1a,#d98a3c 55%,#2a1008)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "smug",
+   "text": "Mmm, huele a comida. Si hay carne, me quedo a vivir aquí."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "happy",
+   "text": "Primero la posada, luego la comida. Y luego, la venganza."
+  }
+ ],
+ "carta_found": [
+  {
+   "narration": true,
+   "text": "Entre las raíces de un árbol, medio enterrada en el barro, asoma un sobre arrugado."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "¿Eso es una carta? Debe de ser la de la niña."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Se la llevaremos a Haruko.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "found_carta"
+    },
+    {
+     "type": "item",
+     "id": "carta_arrugada",
+     "qty": 1
+    }
+   ]
+  }
+ ],
+ "sanc1_intro": [
+  {
+   "narration": true,
+   "text": "El Santuario del Musgo se alza entre los árboles como un esqueleto verde. Un sello demoníaco palpita en el corazón del templo.",
+   "bg": "linear-gradient(180deg,#0f3a20,#4fbf6a 55%,#071a0d)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Los sellos mantienen la región atada al Oni. Rompe los tres y su torre quedará expuesta."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Entonces, a por el primero."
+  }
+ ],
+ "sanc1_clear": [
+  {
+   "narration": true,
+   "text": "El Guardián del Musgo se desmorona. En el altar queda un pergamino brillante y una cota viva de musgo.",
+   "bg": "linear-gradient(180deg,#0f3a20,#4fbf6a 55%,#071a0d)"
+  },
+  {
+   "narration": true,
+   "text": "El primer sello se rompe con un chasquido que se oye en todo el bosque."
+  },
+  {
+   "narration": true,
+   "text": "Esa noche acampáis junto al santuario. El fuego chisporrotea. Yukine está sentada con las rodillas contra el pecho, la cola enrollada sobre las piernas.",
+   "bg": "linear-gradient(180deg,#1a1020,#3a2a50 55%,#0a0610)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Antes de que preguntes: sí, me gusta el fuego. Es irónico, ¿no? Una loba de hielo mirando llamas."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "...Mi madre me contaba que el hielo y el fuego no son enemigos. Son dos formas de decir «aquí hay vida». ¿Y tus padres? ¿Cómo eran?",
+   "choices": [
+    {
+     "label": "Mi padre cortaba leña; mi madre me prometía que todo saldría bien.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "sad",
+       "text": "Entonces te quisieron mucho. Se nota."
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Gracias por contármelo."
+      }
+     ],
+     "aff": 3
+    },
+    {
+     "label": "Prefiero no hablar de eso.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "neutral",
+       "text": "Está bien. Cuando quieras. O nunca."
+      }
+     ],
+     "aff": 1
+    },
+    {
+     "label": "Mi padre roncaba tanto que asustaba a los lobos.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "¡Jajaja! Pues los lobos le deberíamos haber dado las gracias."
+      }
+     ],
+     "aff": 2
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "...Oye. Me alegra que fueras tú quien me encontró en el camino. No se lo digas a nadie.",
+   "actions": [
+    {
+     "type": "stage",
+     "value": 2
+    },
+    {
+     "type": "flag",
+     "flag": "ev_campfire1"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "Yukine apoya la cabeza, un instante apenas, en tu hombro. Su cola golpea suavemente el suelo."
+  }
+ ],
+ "cave1_clear": [
+  {
+   "narration": true,
+   "text": "El Lobo Alfa gime y huye entre las sombras. Su manada, liberada de la magia, se dispersa. En su guarida brilla algo entre los huesos."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "smug",
+   "text": "Mira esos colmillos. Si algún día me falta estilo, me hago un collar."
+  }
+ ],
+ "sanc2_intro": [
+  {
+   "narration": true,
+   "text": "La Raíz Hueca es un laberinto de raíces enormes. Las telarañas cuelgan como cortinas y algo respira en la oscuridad.",
+   "bg": "linear-gradient(180deg,#2a1040,#b07aff 55%,#0f0518)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Odio las arañas. Odio todo lo que tenga más patas que yo."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Tú tienes cuatro. Dos pies y dos... no, mejor no."
+  }
+ ],
+ "sanc2_preboss": [
+  {
+   "narration": true,
+   "text": "En el centro de la cámara, colgada de un tapiz de raíces, Madre Tejeraíces os observa con ojos como espejos negros.",
+   "bg": "linear-gradient(180deg,#1a0a2a,#6a3aa0 55%,#0a0310)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "...Esto se va a poner feo. Muy feo."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "¿Qué quieres decir?"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Hay una cosa que no te he contado. Algo que puedo hacer... y que me da miedo hacer. Si lo hago, vas a ver quién soy de verdad."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Sea lo que sea, estoy contigo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "Entonces mira. Y no te asustes.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "wolf_unlocked"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "DESBLOQUEADO: Aullido Lunar. Cuando la barra de Yukine llegue al máximo, podrá transformarse en loba: más daño, más vida, regeneración y un aullido que potencia a todo el grupo."
+  }
+ ],
+ "sanc2_clear": [
+  {
+   "narration": true,
+   "text": "Madre Tejeraíces cae entre chillidos. El segundo sello se rompe y el tapiz de raíces se deshace en polvo.",
+   "bg": "linear-gradient(180deg,#2a1040,#b07aff 55%,#0f0518)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "wolf",
+   "text": "...Uf. Ya está. Ya puedes... dejar de mirarme así."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "happy",
+   "text": "Eres increíble, Yukine."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "¡No digas esas cosas tan a la ligera! Me va a... da igual. Vamos a buscar agua. Huelo a araña."
+  },
+  {
+   "narration": true,
+   "text": "Siguiendo el rastro de vapor encontráis unas aguas termales ocultas entre las rocas, cálidas y humeantes.",
+   "bg": "linear-gradient(180deg,#1a3a50,#7ab8d8 55%,#0a1a28)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "smug",
+   "text": "Tú te quedas al otro lado de esas rocas. Si veo un solo mechón asomando, te congelo hasta la próxima luna. ¿Entendido?",
+   "choices": [
+    {
+     "label": "Entendido. Ni miraré.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Más te vale... gracias por respetarme."
+      },
+      {
+       "narration": true,
+       "text": "Pasas el rato mirando el cielo y contando estrellas. Del otro lado llega un suspiro largo y satisfecho."
+      }
+     ],
+     "aff": 4
+    },
+    {
+     "label": "Intentar asomarse un poco...",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "angry",
+       "text": "¡¡ESTOY VIENDO TU SOMBRA, {name}!!"
+      },
+      {
+       "narration": true,
+       "text": "Una ventisca localizada te sepulta en nieve hasta el cuello. Tardas media hora en derretirte."
+      }
+     ],
+     "aff": -2,
+     "setFlag": "peeked"
+    },
+    {
+     "label": "Bromear: «Yo me lavo contigo, ahorramos agua».",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "shy",
+       "text": "¡¿Q-qué?! ¡Cállate, tonto! ...Y no, no ahorramos nada."
+      },
+      {
+       "narration": true,
+       "text": "Su cola golpea el agua con fuerza. Se le ha puesto la cara roja hasta las orejas."
+      }
+     ],
+     "aff": 2
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "Hace mucho que no me sentía tan tranquila. Gracias por estar aquí.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_springs"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "En el reflejo del agua, ves cómo Yukine sonríe sin darse cuenta.",
+   "actions": [
+    {
+     "type": "stagecheck",
+     "value": 3,
+     "minAff": 8
+    }
+   ]
+  }
+ ],
+ "cave2_clear": [
+  {
+   "narration": true,
+   "text": "El gólem se resquebraja. El hielo se disuelve sin dejar nada sospechoso. Yukine toca la pared helada."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Este hielo... estaba corrupto. Alguien lo usó para cazar lobos de mi especie. No te preocupes, estoy bien."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Si algún día quieres hablar de ello..."
+  }
+ ],
+ "sanc3_intro": [
+  {
+   "narration": true,
+   "text": "El Santuario del Alba Rota está lleno de espejos agrietados. En cada uno ves un amanecer que nunca llega a salir.",
+   "bg": "linear-gradient(180deg,#40180a,#ff9a3c 55%,#1a0805)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "No mires demasiado a los espejos. Aquí las ilusiones saben dónde duele."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Gracias por el aviso. Voy a mirar al suelo."
+  }
+ ],
+ "sanc3_preboss": [
+  {
+   "narration": true,
+   "text": "Un espejo se enciende. Dentro, tus padres os sonríen como el último día.",
+   "bg": "linear-gradient(180deg,#40180a,#ff9a3c 55%,#1a0805)"
+  },
+  {
+   "speaker": "Padre",
+   "char": "padre",
+   "emotion": "determined",
+   "text": "{name}... has crecido. Ven, hijo. Déjalo todo. Descansa."
+  },
+  {
+   "speaker": "Madre",
+   "char": "madre",
+   "emotion": "sad",
+   "text": "No tienes que seguir. Quédate con nosotros."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "sad",
+   "text": "...Mamá. Papá.",
+   "choices": [
+    {
+     "label": "Sé que no sois reales. Pero lo siento.",
+     "reply": [
+      {
+       "narration": true,
+       "text": "Los espejos se resquebrajan en cascada."
+      }
+     ],
+     "setFlag": "resisted_illusion",
+     "aff": 2
+    },
+    {
+     "label": "Callaos. No sois ellos.",
+     "reply": [
+      {
+       "narration": true,
+       "text": "Un trueno recorre la sala."
+      }
+     ],
+     "aff": 0
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "¡{name}! ¡Mírame! Yo estoy aquí. Esto no es real. Ven conmigo."
+  },
+  {
+   "narration": true,
+   "text": "Una zorra de nueve colas aparece tras los espejos, riéndose con una voz que imita a todo el mundo a la vez."
+  },
+  {
+   "speaker": "Kagerō",
+   "char": "kagero",
+   "emotion": "smug",
+   "text": "Qué lástima. Tan cerca de rendirte. Bueno, jugaré yo sola."
+  }
+ ],
+ "sanc3_clear": [
+  {
+   "narration": true,
+   "text": "Kagerō se desvanece como humo. El tercer sello se rompe y los espejos caen como lluvia de cristal.",
+   "bg": "linear-gradient(180deg,#40180a,#ff9a3c 55%,#1a0805)"
+  },
+  {
+   "narration": true,
+   "text": "En el horizonte, entre las nubes, se alza una torre negra y roja. La torre de Kurogane."
+  },
+  {
+   "narration": true,
+   "text": "Esa noche, el fuego está más bajo que de costumbre. Yukine se ha sentado a tu lado, sin hablar. Las estrellas son enormes.",
+   "bg": "linear-gradient(180deg,#0a0e2a,#2a3a7a 55%,#05070f)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Cuando oí a tus padres en ese espejo... pensé que ibas a dejarme sola. Y me di cuenta de que no quería eso. De ninguna forma."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "No sé cómo decir esto sin que suene a broma de lobo estúpida. Me importas. Mucho más de lo que debería, para llevar tan poco tiempo juntos.",
+   "if": [
+    "aff>=18"
+   ],
+   "choices": [
+    {
+     "label": "Tú también me importas, Yukine.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "¿De verdad? ...Entonces tengo permiso para hacer esto."
+      },
+      {
+       "narration": true,
+       "text": "Yukine apoya su frente en la tuya. Su cola se enrosca alrededor de tu pierna sin que nadie se lo pida. Os quedáis así mucho tiempo."
+      }
+     ],
+     "aff": 4,
+     "setFlag": "couple_pending"
+    },
+    {
+     "label": "Sí. Y quiero que seamos algo más.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Pensaba que no lo dirías nunca."
+      },
+      {
+       "narration": true,
+       "text": "Se inclina y te besa. Es breve, frío por el invierno y cálido por todo lo demás."
+      }
+     ],
+     "aff": 5,
+     "setFlag": "couple_pending"
+    },
+    {
+     "label": "Necesito pensarlo. Lo siento.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "sad",
+       "text": "...Claro. Sin prisa. Estoy aquí."
+      }
+     ],
+     "aff": 0
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "...No importa. Solo quería que lo supieras. Vamos a dormir, anda.",
+   "if": [
+    "aff<18"
+   ],
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "confession_missed"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "A la luz de la hoguera, la sombra de Yukine descansa pegada a la tuya.",
+   "actions": [
+    {
+     "type": "couplecheck"
+    }
+   ]
+  }
+ ],
+ "tower_intro": [
+  {
+   "narration": true,
+   "text": "La Torre de Kurogane se eleva como un colmillo negro. Cada ventana brilla como una brasa.",
+   "bg": "linear-gradient(180deg,#3a0505,#ff2d2d 55%,#100202)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "Es aquí. Todo lo que hemos hecho, todo lo que hemos perdido, acaba aquí."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Vamos a subir. Juntos."
+  }
+ ],
+ "kurogane_pre": [
+  {
+   "narration": true,
+   "text": "En lo alto de la torre, un oni gigantesco da la espalda al ventanal, con un martillo apoyado en el hombro.",
+   "bg": "linear-gradient(180deg,#3a0505,#ff2d2d 55%,#100202)"
+  },
+  {
+   "speaker": "Kurogane",
+   "char": "kurogane",
+   "emotion": "angry",
+   "text": "¿Otro rebelde? Hace años que no veía a uno con tanta... terquedad. ¿De qué aldea eres?"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "angry",
+   "text": "De Tsukimori. Mis padres eran los de la herrería, los de la rebelión. ¿Te suena?"
+  },
+  {
+   "speaker": "Kurogane",
+   "char": "kurogane",
+   "emotion": "neutral",
+   "text": "Los recuerdo. Gritaban mucho. No duraron."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "Voy a congelarte hasta que dejes de hablar."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "angry",
+   "text": "Esto es por ellos."
+  }
+ ],
+ "kurogane_win": [
+  {
+   "narration": true,
+   "text": "Kurogane cae de rodillas. El martillo se parte en dos. Un silencio absoluto llena la torre.",
+   "bg": "linear-gradient(180deg,#3a0505,#ff2d2d 55%,#100202)"
+  },
+  {
+   "speaker": "Kurogane",
+   "char": "kurogane",
+   "emotion": "sad",
+   "text": "...Así que así acaba. Por lo menos el que me gana tiene motivos."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "sad",
+   "text": "...Se acabó. Se acabó, mamá."
+  },
+  {
+   "narration": true,
+   "text": "Fuera, la niebla se disipa. Por primera vez en doce años, el sol toca los tejados de Tsukimori.",
+   "bg": "linear-gradient(180deg,#2b3a67,#ffd479 55%,#1a2238)"
+  },
+  {
+   "narration": true,
+   "text": "LOS BOSQUES DE KASUMI HAN SIDO LIBERADOS."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "...Lo hemos conseguido. Hemos... ¡lo hemos conseguido!"
+  },
+  {
+   "narration": true,
+   "text": "Pero en el horizonte nevado, otra torre se recorta contra el cielo: las Cumbres Shirogane. El Oni de Hierro era solo el primero de los señores demoníacos."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "determined",
+   "text": "Aún queda mucho camino. ¿Vienes conmigo?"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Hasta el final."
+  },
+  {
+   "narration": true,
+   "text": "(Continuará en la Parte 3: Cumbres Shirogane.)",
+   "actions": [
+    {
+     "type": "couplecheck"
+    }
+   ]
+  }
+ ],
+ "couple_event": [
+  {
+   "narration": true,
+   "text": "Yukine se acerca despacio, con las mejillas rojas.",
+   "bg": "linear-gradient(180deg,#0a0e2a,#2a3a7a 55%,#05070f)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Oye. Sobre lo que dije en el santuario... ¿Sigue en pie lo de ser... algo más?"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "happy",
+   "text": "Sigue en pie.",
+   "choices": [
+    {
+     "label": "Sí. Quiero estar contigo, Yukine.",
+     "reply": [
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "...Entonces es oficial. Tienes novia loba. Que sea para siempre."
+      }
+     ],
+     "aff": 3
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "Se abraza a ti. Su cola se enrosca en tu muñeca. Por primera vez en años, la nieve se siente cálida.",
+   "actions": [
+    {
+     "type": "stage",
+     "value": 4
+    },
+    {
+     "type": "flag",
+     "flag": "couple"
+    }
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": "t1",
+   "title": "Su familia",
+   "if": [],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "sad",
+     "text": "Éramos una manada pequeña. Mi madre cantaba para dormirnos... una canción sin palabras. A veces todavía la tarareo."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "¿Me la cantas?"
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "...Algún día. Cuando haya menos gente. O ninguna."
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "title": "La manada",
+   "if": [
+    "stage>=2"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "neutral",
+     "text": "Los lobos de mi tipo no tenemos jefe. Solo nos cuidamos entre nosotros."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "...Contigo me siento un poco así. Como si tuviese manada de nuevo."
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "title": "Comida favorita",
+   "if": [
+    "stage>=2"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Carne asada. Pero si es con miel, ya ni te cuento. ¿Tú qué prefieres?"
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "happy",
+     "text": "El pan recién hecho con queso."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "smug",
+     "text": "Aburrido. Pero te lo perdono."
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "title": "La loba blanca",
+   "if": [
+    "sanc_2_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "sad",
+     "text": "Cuando me transformo, siento todo más fuerte. Los olores, el miedo, las ganas de proteger. Es como si dejase de pensar y solo sintiera."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "neutral",
+     "text": "Me daba miedo hacerte daño. Pero ahora sé que contigo a mi lado... no pasaría."
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "title": "El futuro",
+   "if": [
+    "sanc_3_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "neutral",
+     "text": "Cuando todo esto acabe, ¿qué harás?"
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "No lo sé. ¿Tú?"
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "Una casa pequeña. Con chimenea. Y... alguien que me haga reír. No tengo planes más ambiciosos."
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "title": "Una promesa",
+   "if": [
+    "stage>=4"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Prométeme una cosa: pase lo que pase, volveremos juntos."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "determined",
+     "text": "Te lo prometo."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Entonces ya no tengo miedo de nada."
+    }
+   ]
+  }
+ ],
+ "intimate": [
+  [
+   {
+    "narration": true,
+    "text": "Yukine te toma de la mano y te arrastra, entre risitas nerviosas, hasta la tienda. Tras la cortina, el mundo deja de existir un rato."
+   },
+   {
+    "speaker": "Yukine",
+    "char": "yukine",
+    "emotion": "shy",
+    "text": "...No hace falta que digas nada. Solo quédate cerca."
+   },
+   {
+    "narration": true,
+    "text": "Más tarde, bajo las mantas, su cabeza reposa sobre tu pecho y su cola os cubre a los dos."
+   }
+  ],
+  [
+   {
+    "narration": true,
+    "text": "Esa noche, el fuego se apaga solo. Yukine se acerca, con los ojos brillantes y las mejillas rojas."
+   },
+   {
+    "speaker": "Yukine",
+    "char": "yukine",
+    "emotion": "smug",
+    "text": "Dicen que los lobos somos criaturas de instinto. Déjame demostrarte que es verdad."
+   },
+   {
+    "narration": true,
+    "text": "La noche pasa, cálida y suave, entre risas y susurros que solo la nieve escucha."
+   }
+  ],
+  [
+   {
+    "narration": true,
+    "text": "Yukine te besa antes de que puedas decir algo. Su aliento huele a nieve."
+   },
+   {
+    "speaker": "Yukine",
+    "char": "yukine",
+    "emotion": "happy",
+    "text": "Hoy no hay torres, ni demonios, ni nada. Solo tú y yo."
+   },
+   {
+    "narration": true,
+    "text": "Cuando amanece, sigue dormida con la oreja temblando en sueños. No quieres moverte."
+   }
+  ]
+ ]
+}

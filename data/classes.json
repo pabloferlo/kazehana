@@ -1,0 +1,316 @@
+{
+ "classes": [
+  {
+   "id": "guerrero",
+   "name": "Guerrero",
+   "icon": "⚔️",
+   "magic": null,
+   "desc": "Melee puro, sin magia. Resistente y de golpes demoledores.",
+   "stats": {
+    "hp": 120,
+    "mp": 20,
+    "atk": 16,
+    "def": 14,
+    "mag": 4,
+    "spd": 8
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "tajo_firme"
+    },
+    {
+     "level": 1,
+     "tech": "guardia_alta"
+    },
+    {
+     "level": 3,
+     "tech": "embestida"
+    },
+    {
+     "level": 5,
+     "tech": "grito_de_guerra"
+    },
+    {
+     "level": 8,
+     "tech": "tajo_sismico"
+    }
+   ],
+   "ultimate": "furia_del_titan",
+   "hybrid": false
+  },
+  {
+   "id": "mago_fuego",
+   "name": "Mago de Fuego",
+   "icon": "🔥",
+   "magic": "fuego",
+   "desc": "Daño explosivo y quemaduras. Frágil pero devastador.",
+   "stats": {
+    "hp": 80,
+    "mp": 70,
+    "atk": 6,
+    "def": 7,
+    "mag": 17,
+    "spd": 9
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "chispa_ardiente"
+    },
+    {
+     "level": 1,
+     "tech": "barrera_arcana"
+    },
+    {
+     "level": 3,
+     "tech": "bola_de_fuego"
+    },
+    {
+     "level": 6,
+     "tech": "muro_de_llamas"
+    },
+    {
+     "level": 9,
+     "tech": "fenix_ascendente"
+    }
+   ],
+   "ultimate": "supernova_carmesi",
+   "hybrid": false
+  },
+  {
+   "id": "mago_hielo",
+   "name": "Mago de Hielo",
+   "icon": "❄️",
+   "magic": "hielo",
+   "desc": "Control del campo: ralentiza y congela enemigos.",
+   "stats": {
+    "hp": 85,
+    "mp": 70,
+    "atk": 6,
+    "def": 8,
+    "mag": 15,
+    "spd": 10
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "aguja_de_hielo"
+    },
+    {
+     "level": 1,
+     "tech": "barrera_arcana"
+    },
+    {
+     "level": 3,
+     "tech": "ventisca"
+    },
+    {
+     "level": 6,
+     "tech": "prision_glacial"
+    },
+    {
+     "level": 9,
+     "tech": "cero_absoluto"
+    }
+   ],
+   "ultimate": "era_glacial",
+   "hybrid": false
+  },
+  {
+   "id": "mago_rayo",
+   "name": "Mago del Rayo",
+   "icon": "⚡",
+   "magic": "rayo",
+   "desc": "Velocidad y golpes críticos. Ataca primero.",
+   "stats": {
+    "hp": 78,
+    "mp": 68,
+    "atk": 6,
+    "def": 6,
+    "mag": 15,
+    "spd": 15
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "descarga"
+    },
+    {
+     "level": 1,
+     "tech": "barrera_arcana"
+    },
+    {
+     "level": 3,
+     "tech": "cadena_de_rayos"
+    },
+    {
+     "level": 6,
+     "tech": "paso_relampago"
+    },
+    {
+     "level": 9,
+     "tech": "juicio_del_trueno"
+    }
+   ],
+   "ultimate": "tormenta_celestial",
+   "hybrid": false
+  },
+  {
+   "id": "mago_arcano",
+   "name": "Mago Arcano",
+   "icon": "🔮",
+   "magic": "arcano",
+   "desc": "Magia pura: apoyo, curación y daño que ignora defensas.",
+   "stats": {
+    "hp": 82,
+    "mp": 85,
+    "atk": 5,
+    "def": 7,
+    "mag": 14,
+    "spd": 9
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "proyectil_arcano"
+    },
+    {
+     "level": 1,
+     "tech": "luz_sanadora"
+    },
+    {
+     "level": 3,
+     "tech": "sello_debilitador"
+    },
+    {
+     "level": 6,
+     "tech": "cuchilla_de_vacio"
+    },
+    {
+     "level": 9,
+     "tech": "nova_estelar"
+    }
+   ],
+   "ultimate": "eclipse_arcano",
+   "hybrid": false
+  },
+  {
+   "id": "espadachin_magico",
+   "name": "Espadachín Mágico",
+   "icon": "🗡️",
+   "magic": "imbuido",
+   "desc": "Imbuye su espada con magia. Equilibrado entre filo y hechizo.",
+   "stats": {
+    "hp": 100,
+    "mp": 50,
+    "atk": 13,
+    "def": 10,
+    "mag": 11,
+    "spd": 11
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "filo_encantado"
+    },
+    {
+     "level": 1,
+     "tech": "guardia_alta"
+    },
+    {
+     "level": 3,
+     "tech": "corte_gelido"
+    },
+    {
+     "level": 6,
+     "tech": "danza_de_chispas"
+    },
+    {
+     "level": 9,
+     "tech": "luna_de_acero"
+    }
+   ],
+   "ultimate": "mil_lunas",
+   "hybrid": true
+  },
+  {
+   "id": "monje_runico",
+   "name": "Monje Rúnico",
+   "icon": "🌀",
+   "magic": "arcano",
+   "desc": "Híbrido: puños con runas, autocuración y aguante.",
+   "stats": {
+    "hp": 105,
+    "mp": 45,
+    "atk": 12,
+    "def": 11,
+    "mag": 9,
+    "spd": 12
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "palma_runica"
+    },
+    {
+     "level": 1,
+     "tech": "luz_sanadora"
+    },
+    {
+     "level": 3,
+     "tech": "respiracion_profunda"
+    },
+    {
+     "level": 6,
+     "tech": "furia_de_mil_puños"
+    },
+    {
+     "level": 9,
+     "tech": "sello_del_dragon"
+    }
+   ],
+   "ultimate": "dragon_interior",
+   "hybrid": true
+  },
+  {
+   "id": "pistolero_arcano",
+   "name": "Duelista Arcano",
+   "icon": "🏹",
+   "magic": "arcano",
+   "desc": "Híbrido veloz: proyectiles de maná y esquiva elevada.",
+   "stats": {
+    "hp": 90,
+    "mp": 55,
+    "atk": 11,
+    "def": 8,
+    "mag": 11,
+    "spd": 14
+   },
+   "learnset": [
+    {
+     "level": 1,
+     "tech": "disparo_de_mana"
+    },
+    {
+     "level": 1,
+     "tech": "paso_lateral"
+    },
+    {
+     "level": 3,
+     "tech": "lluvia_de_flechas"
+    },
+    {
+     "level": 6,
+     "tech": "marca_del_cazador"
+    },
+    {
+     "level": 9,
+     "tech": "estrella_fugaz"
+    }
+   ],
+   "ultimate": "lluvia_de_estrellas",
+   "hybrid": true
+  }
+ ]
+}
