@@ -13,7 +13,8 @@
    ],
    "reward": {
     "gold": 30
-   }
+   },
+   "give": true
   },
   "m2": {
    "type": "main",
@@ -38,7 +39,8 @@
    ],
    "reward": {
     "gold": 100
-   }
+   },
+   "give": "yukine_joined"
   },
   "m3": {
    "type": "main",
@@ -53,7 +55,8 @@
    ],
    "reward": {
     "gold": 0
-   }
+   },
+   "give": "sanc_3_done"
   },
   "s1": {
    "type": "side",
@@ -155,6 +158,1233 @@
      ]
     ]
    }
+  },
+  "m4": {
+   "type": "main",
+   "name": "Los Cuatro Sellos de Shirogane",
+   "desc": "Cuatro santuarios guardan la Torre del Aliento Blanco. Rómpelos en orden.",
+   "give": "region_kasumi_done",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "sh_1_done",
+     "text": "Santuario del Silencio"
+    },
+    {
+     "type": "flag",
+     "flag": "sh_2_done",
+     "text": "Santuario del Eco Helado"
+    },
+    {
+     "type": "flag",
+     "flag": "sh_3_done",
+     "text": "Santuario de las Mil Campanas"
+    },
+    {
+     "type": "flag",
+     "flag": "sh_4_done",
+     "text": "Santuario del Lobo Dormido"
+    }
+   ],
+   "reward": {
+    "gold": 400
+   }
+  },
+  "m5": {
+   "type": "main",
+   "name": "El Cazador Gélido",
+   "desc": "Sube a la Torre del Aliento Blanco y detén a Reiga.",
+   "give": "sh_4_done",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "region_shirogane_done",
+     "text": "Derrotar a Reiga"
+    }
+   ],
+   "reward": {
+    "gold": 0
+   }
+  },
+  "sq1": {
+   "type": "side",
+   "name": "Cuervos en el Sendero",
+   "desc": "Setsuko quiere que elimines 6 cuervos gélidos que espían al campamento.",
+   "giver": "setsuko",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "cuervo_gelido",
+     "count": 6,
+     "text": "Cuervos Gélidos derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 300,
+    "items": [
+     [
+      "abrigo_pieles",
+      1
+     ],
+     [
+      "pocion_suprema",
+      1
+     ]
+    ]
+   }
+  },
+  "sq2": {
+   "type": "side",
+   "name": "El estofado de Kaito",
+   "desc": "Kaito necesita 3 Hongos de Nieve para su estofado secreto.",
+   "giver": "kaito",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "hongo_nieve",
+     "count": 3,
+     "text": "Hongo de Nieve"
+    }
+   ],
+   "reward": {
+    "gold": 100,
+    "items": [
+     [
+      "racion_caliente",
+      3
+     ],
+     [
+      "elixir_mayor",
+      2
+     ],
+     [
+      "flor_nocturna",
+      1
+     ]
+    ]
+   }
+  },
+  "sq3": {
+   "type": "side",
+   "name": "La campana de Jion",
+   "desc": "Jion pide recuperar la Campana Antigua de la Cueva de Cristal.",
+   "giver": "jion",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "campana_antigua",
+     "count": 1,
+     "text": "Campana Antigua"
+    }
+   ],
+   "reward": {
+    "gold": 200,
+    "items": [
+     [
+      "amuleto_plata",
+      1
+     ],
+     [
+      "pocion_suprema",
+      1
+     ]
+    ]
+   }
+  },
+  "sq4": {
+   "type": "side",
+   "name": "Duelo con Rin",
+   "desc": "Vence a Rin, la espadachina errante, en un duelo amistoso.",
+   "giver": "rin",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "rin_beaten",
+     "text": "Ganar el duelo a Rin"
+    }
+   ],
+   "reward": {
+    "gold": 0,
+    "items": [
+     [
+      "filo_de_rin",
+      1
+     ]
+    ]
+   }
+  },
+  "m6": {
+   "type": "main",
+   "name": "Los Cinco Sellos de Akatsuki",
+   "desc": "Cinco santuarios custodian el castillo del Rey Demonio. Rómpelos en orden.",
+   "give": "region_shirogane_done",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "ak_1_done",
+     "text": "Santuario de la Ceniza"
+    },
+    {
+     "type": "flag",
+     "flag": "ak_2_done",
+     "text": "Santuario de la Seda Roja"
+    },
+    {
+     "type": "flag",
+     "flag": "ak_3_done",
+     "text": "Santuario del Espejo Roto"
+    },
+    {
+     "type": "flag",
+     "flag": "ak_4_done",
+     "text": "Santuario de las Mil Lápidas"
+    },
+    {
+     "type": "flag",
+     "flag": "ak_5_done",
+     "text": "Santuario del Alba Rota"
+    }
+   ],
+   "reward": {
+    "gold": 1000
+   }
+  },
+  "m7": {
+   "type": "main",
+   "name": "El Rey Demonio",
+   "desc": "Entra en el Castillo del Alba Eterna y acaba con Yamikage.",
+   "give": "ak_5_done",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "game_cleared",
+     "text": "Derrotar a Yamikage"
+    }
+   ],
+   "reward": {
+    "gold": 0
+   }
+  },
+  "sq5": {
+   "type": "side",
+   "name": "Flores del Alba",
+   "desc": "Momiji necesita cuatro flores del alba, que llevan algunos demonios del Yermo.",
+   "giver": "momiji",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "flor_alba",
+     "count": 4,
+     "text": "Flores del Alba"
+    }
+   ],
+   "reward": {
+    "gold": 500,
+    "items": [
+     [
+      "perg_exorcismo",
+      1
+     ],
+     [
+      "perfume_luna",
+      1
+     ]
+    ]
+   }
+  },
+  "sq6": {
+   "type": "side",
+   "name": "Cristales para el herrero",
+   "desc": "Tetsu necesita tres cristales de ceniza para reforjar vuestro equipo.",
+   "giver": "tetsu",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "cristal_ceniza",
+     "count": 3,
+     "text": "Cristales de Ceniza"
+    }
+   ],
+   "reward": {
+    "gold": 600,
+    "items": [
+     [
+      "pocion_total",
+      2
+     ],
+     [
+      "elixir_supremo",
+      1
+     ]
+    ]
+   }
+  },
+  "sq7": {
+   "type": "side",
+   "name": "Caza de generales",
+   "desc": "Akane quiere que elimines a cinco onis generales que cortan el camino de los suministros.",
+   "giver": "akane",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "oni_general",
+     "count": 5,
+     "text": "Onis Generales derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 800,
+    "items": [
+     [
+      "perg_alba_rota",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      1
+     ]
+    ]
+   }
+  },
+  "sq8": {
+   "type": "side",
+   "name": "El duelo de Daichi",
+   "desc": "El viejo capitán Daichi quiere medirse contigo antes del final.",
+   "giver": "daichi",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "daichi_beaten",
+     "text": "Vencer a Daichi en duelo"
+    }
+   ],
+   "reward": {
+    "gold": 700,
+    "items": [
+     [
+      "elixir_supremo",
+      2
+     ],
+     [
+      "lazo_carmesi",
+      1
+     ]
+    ]
+   }
+  },
+  "sq9": {
+   "type": "side",
+   "name": "El barril de Hanae",
+   "desc": "Hanae quiere recuperar su barril de sake de ciruela, robado por los oni bandoleros.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "barril_sake",
+     "count": 1,
+     "text": "Barril de Sake"
+    }
+   ],
+   "reward": {
+    "gold": 150,
+    "items": [
+     [
+      "pocion_mayor",
+      2
+     ],
+     [
+      "sake_ciruela",
+      1
+     ]
+    ]
+   },
+   "giver": "hanae"
+  },
+  "sq10": {
+   "type": "side",
+   "name": "Jabalíes corruptos",
+   "desc": "Shinobu pide que elimines a cuatro jabalíes corruptos.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "jabali_corrupto",
+     "count": 4,
+     "text": "Jabalíes corruptos derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 180,
+    "items": [
+     [
+      "katana_cazador",
+      1
+     ]
+    ]
+   },
+   "giver": "shinobu"
+  },
+  "sq11": {
+   "type": "side",
+   "name": "Ungüento para los leñadores",
+   "desc": "Tamaki necesita cuatro hierbas del pantano.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "hierba_pantano",
+     "count": 4,
+     "text": "Hierbas del Pantano"
+    }
+   ],
+   "reward": {
+    "gold": 140,
+    "items": [
+     [
+      "hierba_curativa",
+      5
+     ],
+     [
+      "pocion_mayor",
+      2
+     ]
+    ]
+   },
+   "giver": "tamaki"
+  },
+  "sq12": {
+   "type": "side",
+   "name": "Las perlas del farolillo",
+   "desc": "Kaoru necesita tres perlas del lago para el farolillo mayor.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "perla_lago_menor",
+     "count": 3,
+     "text": "Perlas del Lago"
+    }
+   ],
+   "reward": {
+    "gold": 220,
+    "items": [
+     [
+      "anillo_pescador",
+      1
+     ]
+    ]
+   },
+   "giver": "kaoru"
+  },
+  "sq13": {
+   "type": "side",
+   "name": "Redes enredadas",
+   "desc": "Jirō pide que elimines seis espíritus de las ramas.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "espiritu_ramas",
+     "count": 6,
+     "text": "Espíritus de las ramas derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 200,
+    "items": [
+     [
+      "pocion_suprema",
+      1
+     ],
+     [
+      "castanas_asadas",
+      2
+     ]
+    ]
+   },
+   "giver": "jiro"
+  },
+  "m2b": {
+   "type": "main",
+   "name": "Las ruinas del Puesto de Vigía",
+   "desc": "Los oni bloquean el paso al segundo santuario. Despeja las ruinas del Puesto de Vigía.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "fort_vigia_done",
+     "text": "Derrotar al Capitán Tessen"
+    }
+   ],
+   "reward": {
+    "gold": 150
+   },
+   "give": "sanc_1_done"
+  },
+  "m3b": {
+   "type": "main",
+   "name": "La Mina de Hierro Negro",
+   "desc": "El camino al tercer santuario pasa por la mina. Acaba con el Capataz Dogo.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "mina_done",
+     "text": "Derrotar al Capataz Dogo"
+    }
+   ],
+   "reward": {
+    "gold": 250
+   },
+   "give": "sanc_2_done"
+  },
+  "sq14": {
+   "type": "side",
+   "name": "Lobos del rebaño",
+   "desc": "Haruto pide que elimines seis lobos de ventisca.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "lobo_ventisca",
+     "count": 6,
+     "text": "Lobos de ventisca derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 350,
+    "items": [
+     [
+      "leche_yak",
+      3
+     ],
+     [
+      "manta_lana",
+      1
+     ]
+    ]
+   },
+   "giver": "haruto"
+  },
+  "sq15": {
+   "type": "side",
+   "name": "Incienso para el abad",
+   "desc": "Ryō necesita tres varitas de incienso raro.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "incienso_raro",
+     "count": 3,
+     "text": "Incienso Raro"
+    }
+   ],
+   "reward": {
+    "gold": 400,
+    "items": [
+     [
+      "te_nieve",
+      3
+     ],
+     [
+      "pocion_suprema",
+      2
+     ]
+    ]
+   },
+   "giver": "ryo"
+  },
+  "sq16": {
+   "type": "side",
+   "name": "Arqueras en las crestas",
+   "desc": "Sayaka pide que elimines a cuatro arqueras gélidas.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "arquera_hielo",
+     "count": 4,
+     "text": "Arqueras Gélidas derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 450,
+    "items": [
+     [
+      "collar_pastor",
+      1
+     ]
+    ]
+   },
+   "giver": "sayaka"
+  },
+  "sq17": {
+   "type": "side",
+   "name": "El queso de Otose",
+   "desc": "Otose quiere tres quesos de yak.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "queso_yak",
+     "count": 3,
+     "text": "Quesos de Yak"
+    }
+   ],
+   "reward": {
+    "gold": 380,
+    "items": [
+     [
+      "broche_plata",
+      1
+     ],
+     [
+      "pocion_suprema",
+      1
+     ]
+    ]
+   },
+   "giver": "otose"
+  },
+  "sq18": {
+   "type": "side",
+   "name": "El duelo del abad",
+   "desc": "El abad Genshin quiere medirse contigo en duelo.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "abad_beaten",
+     "text": "Vencer al abad en duelo"
+    }
+   ],
+   "reward": {
+    "gold": 600,
+    "items": [
+     [
+      "rosario_monje",
+      1
+     ]
+    ]
+   },
+   "giver": "genshin"
+  },
+  "m4b": {
+   "type": "main",
+   "name": "La Fortaleza Congelada",
+   "desc": "El General Hakuren bloquea el paso al Santuario del Eco Helado.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "fort_hielo_done",
+     "text": "Derrotar al General Hakuren"
+    }
+   ],
+   "reward": {
+    "gold": 450
+   },
+   "give": "sh_1_done"
+  },
+  "m4c": {
+   "type": "main",
+   "name": "El Templo Hundido",
+   "desc": "El camino al último santuario cruza un templo bajo el hielo.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "templo_done",
+     "text": "Derrotar a la Serpiente Abisal"
+    }
+   ],
+   "reward": {
+    "gold": 550
+   },
+   "give": "sh_3_done"
+  },
+  "sq19": {
+   "type": "side",
+   "name": "Hierro sagrado",
+   "desc": "Hiromi necesita tres trozos de hierro sagrado (brasas eternas).",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "brasa_eterna",
+     "count": 3,
+     "text": "Brasas Eternas"
+    }
+   ],
+   "reward": {
+    "gold": 900,
+    "items": [
+     [
+      "coraza_desierto",
+      1
+     ],
+     [
+      "pocion_total",
+      2
+     ]
+    ]
+   },
+   "giver": "hiromi"
+  },
+  "sq20": {
+   "type": "side",
+   "name": "Los arqueros de Shūji",
+   "desc": "Shūji pide que elimines a cuatro arqueros de brasa.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "arquero_brasa",
+     "count": 4,
+     "text": "Arqueros de Brasa derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 800,
+    "items": [
+     [
+      "botas_arena",
+      1
+     ],
+     [
+      "elixir_supremo",
+      2
+     ]
+    ]
+   },
+   "giver": "shuji"
+  },
+  "sq21": {
+   "type": "side",
+   "name": "Fragmentos de voz",
+   "desc": "Saeko quiere tres fragmentos de voz de los ecos.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "fragmento_voz",
+     "count": 3,
+     "text": "Fragmentos de Voz"
+    }
+   ],
+   "reward": {
+    "gold": 900,
+    "items": [
+     [
+      "lanza_oasis",
+      1
+     ],
+     [
+      "dulce_miel",
+      1
+     ]
+    ]
+   },
+   "giver": "saeko"
+  },
+  "m6b": {
+   "type": "main",
+   "name": "La Ciudadela de Ceniza",
+   "desc": "El General Karasu bloquea el camino al segundo santuario.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "ciudadela_done",
+     "text": "Derrotar al General Karasu"
+    }
+   ],
+   "reward": {
+    "gold": 1200
+   },
+   "give": "ak_1_done"
+  },
+  "m6c": {
+   "type": "main",
+   "name": "La Forja del Demonio",
+   "desc": "El camino al cuarto santuario cruza la forja del rey.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "forja_done",
+     "text": "Derrotar a Kuroda"
+    }
+   ],
+   "reward": {
+    "gold": 1500
+   },
+   "give": "ak_3_done"
+  },
+  "sq22": {
+   "type": "side",
+   "name": "Centinelas de la llanura",
+   "desc": "Sōma pide que elimines a cinco centinelas de luz.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "centinela_luz",
+     "count": 5,
+     "text": "Centinelas de Luz derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 1500,
+    "items": [
+     [
+      "lanza_luz",
+      1
+     ],
+     [
+      "pocion_total",
+      2
+     ]
+    ]
+   },
+   "giver": "soma"
+  },
+  "sq23": {
+   "type": "side",
+   "name": "Fragmentos de noche",
+   "desc": "Yoru quiere tres fragmentos de noche.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "fragmento_noche",
+     "count": 3,
+     "text": "Fragmentos de Noche"
+    }
+   ],
+   "reward": {
+    "gold": 1400,
+    "items": [
+     [
+      "amuleto_alba",
+      1
+     ],
+     [
+      "pluma_dorada",
+      1
+     ]
+    ]
+   },
+   "giver": "yoru"
+  },
+  "m8": {
+   "type": "main",
+   "name": "El Reino del Amanecer Eterno",
+   "desc": "La puerta bajo el castillo de Yamikage conduce a un reino que no conoce la noche. Yukine es la llave.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "am_1_done",
+     "text": "Romper el Santuario del Primer Rayo"
+    },
+    {
+     "type": "flag",
+     "flag": "am_2_done",
+     "text": "Romper el Santuario del Segundo Rayo"
+    },
+    {
+     "type": "flag",
+     "flag": "am_3_done",
+     "text": "Romper el Santuario del Tercer Rayo"
+    },
+    {
+     "type": "flag",
+     "flag": "am_4_done",
+     "text": "Romper el Santuario del Cuarto Rayo"
+    },
+    {
+     "type": "flag",
+     "flag": "am_5_done",
+     "text": "Romper el Quinto Rayo: el sueño de la Madre"
+    }
+   ],
+   "reward": {
+    "gold": 2000
+   },
+   "give": "game_cleared"
+  },
+  "sq24": {
+   "type": "side",
+   "name": "Engranajes detenidos",
+   "desc": "Fumiko necesita tres engranajes quietos de los relojeros huecos.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "engranaje_quieto",
+     "count": 3,
+     "text": "Engranajes Quietos"
+    }
+   ],
+   "reward": {
+    "gold": 1800,
+    "items": [
+     [
+      "anillo_hora",
+      1
+     ],
+     [
+      "ambrosia_alba",
+      2
+     ]
+    ]
+   },
+   "giver": "fumiko"
+  },
+  "sq25": {
+   "type": "side",
+   "name": "Un cielo para Hoshi",
+   "desc": "Hoshi quiere tres fragmentos de noche para montar un cielo estrellado.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "fragmento_noche",
+     "count": 3,
+     "text": "Fragmentos de Noche"
+    }
+   ],
+   "reward": {
+    "gold": 1500,
+    "items": [
+     [
+      "estrella_bolsillo",
+      1
+     ],
+     [
+      "rocio_noche",
+      3
+     ]
+    ]
+   },
+   "giver": "hoshi"
+  },
+  "sq26": {
+   "type": "side",
+   "name": "Caza de cuervos",
+   "desc": "Rōga ofrece una recompensa por seis cuervos dorados.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "cuervo_dorado",
+     "count": 6,
+     "text": "Cuervos Dorados derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 2000,
+    "items": [
+     [
+      "manto_sombra",
+      1
+     ]
+    ]
+   },
+   "giver": "roga"
+  },
+  "m8b": {
+   "type": "main",
+   "name": "La Torre del Reloj Quieto",
+   "desc": "Tokei, relojero eterno, guarda el paso al segundo santuario.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "torre_done",
+     "text": "Derrotar a Tokei"
+    }
+   ],
+   "reward": {
+    "gold": 2200
+   },
+   "give": "am_1_done"
+  },
+  "sq27": {
+   "type": "side",
+   "name": "Ahogados del lago",
+   "desc": "Ryōta quiere librar el lago de seis pescadores ahogados.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "pescador_ahogado",
+     "count": 6,
+     "text": "Pescadores Ahogados derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 2400,
+    "items": [
+     [
+      "@a:epic:4",
+      1
+     ]
+    ]
+   },
+   "giver": "ryota"
+  },
+  "sq28": {
+   "type": "side",
+   "name": "Una corona para siempre",
+   "desc": "Miyu quiere cuatro pétalos de girasol centinela.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "petalo_solar",
+     "count": 4,
+     "text": "Pétalos Solares"
+    }
+   ],
+   "reward": {
+    "gold": 1800,
+    "items": [
+     [
+      "girasol_eterno",
+      2
+     ],
+     [
+      "ambrosia_alba",
+      2
+     ]
+    ]
+   },
+   "giver": "miyu"
+  },
+  "sq29": {
+   "type": "side",
+   "name": "Pan para soñar",
+   "desc": "Gen necesita tres puñados de polvo de vigilia.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "polvo_vigilia",
+     "count": 3,
+     "text": "Polvo de Vigilia"
+    }
+   ],
+   "reward": {
+    "gold": 2200,
+    "items": [
+     [
+      "rocio_noche",
+      3
+     ],
+     [
+      "ambrosia_alba",
+      2
+     ]
+    ]
+   },
+   "giver": "gen"
+  },
+  "sq30": {
+   "type": "side",
+   "name": "Sonámbulos en las colinas",
+   "desc": "Reiko quiere seis sonámbulos fuera de las colinas.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "sonambulo",
+     "count": 6,
+     "text": "Sonámbulos derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 2600,
+    "items": [
+     [
+      "@x:epic:4",
+      1
+     ]
+    ]
+   },
+   "giver": "reiko"
+  },
+  "sq31": {
+   "type": "side",
+   "name": "Una noche para la Ciudad",
+   "desc": "Chiyo pide un frasco de noche para que la ciudad vuelva a dormir.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "frasco_noche",
+     "count": 1,
+     "text": "Frasco de Noche"
+    }
+   ],
+   "reward": {
+    "gold": 3000,
+    "items": [
+     [
+      "manta_noche",
+      1
+     ],
+     [
+      "@x:legendary:4",
+      1
+     ]
+    ]
+   },
+   "giver": "chiyo"
+  },
+  "m8c": {
+   "type": "main",
+   "name": "El Tercer Rayo",
+   "desc": "La Heraldo del Tercer Rayo guarda el santuario tras el Observatorio del Sol Quieto.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "obs_done",
+     "text": "Derrotar al Vigía del Sol Quieto"
+    }
+   ],
+   "reward": {
+    "gold": 2800
+   },
+   "give": "am_2_done"
+  },
+  "m8d": {
+   "type": "main",
+   "name": "La Vigilia Eterna",
+   "desc": "El cuarto santuario está tras la Torre de la Vigilia Eterna.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "vigilia_done",
+     "text": "Derrotar al Capitán Insomne"
+    }
+   ],
+   "reward": {
+    "gold": 3200
+   },
+   "give": "am_3_done"
+  },
+  "sq32": {
+   "type": "side",
+   "name": "Estatuas cansadas",
+   "desc": "Eiji quiere dar descanso a seis estatuas de Heraldos en la senda.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "estatua_heraldo",
+     "count": 6,
+     "text": "Estatuas de Heraldo derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 3200,
+    "items": [
+     [
+      "@a:legendary:4",
+      1
+     ]
+    ]
+   },
+   "giver": "eiji"
+  },
+  "sq33": {
+   "type": "side",
+   "name": "Pétalos para la pena",
+   "desc": "Nanami necesita cuatro pétalos del Alba.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "petalo_alba",
+     "count": 4,
+     "text": "Pétalos del Alba"
+    }
+   ],
+   "reward": {
+    "gold": 2800,
+    "items": [
+     [
+      "rosa_dorada",
+      2
+     ],
+     [
+      "ambrosia_alba",
+      3
+     ]
+    ]
+   },
+   "giver": "nanami"
+  },
+  "sq35": {
+   "type": "side",
+   "name": "Cangrejos en las redes",
+   "desc": "Kaisei quiere cinco cangrejos de cristal fuera de los muelles.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "cangrejo_cristal",
+     "count": 5,
+     "text": "Cangrejos de Cristal derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 3600,
+    "items": [
+     [
+      "@a:legendary:5",
+      1
+     ]
+    ]
+   },
+   "giver": "kaisei"
+  },
+  "sq36": {
+   "type": "side",
+   "name": "Perlas de bruma",
+   "desc": "Nagisa necesita tres perlas de bruma de las medusas lumínicas.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "perla_bruma",
+     "count": 3,
+     "text": "Perlas de Bruma"
+    }
+   ],
+   "reward": {
+    "gold": 3200,
+    "items": [
+     [
+      "concha_memoria",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "nagisa"
+  },
+  "m8e": {
+   "type": "main",
+   "name": "El Palacio del Sol Quieto",
+   "desc": "Tras el cuarto santuario se abre el camino al Palacio del Sol Quieto, donde duerme la Madre del Alba.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "jardines_done",
+     "text": "Cruzar los Jardines Dormidos"
+    },
+    {
+     "type": "flag",
+     "flag": "am_5_done",
+     "text": "Enfrentarte al sueño de la Madre"
+    }
+   ],
+   "reward": {
+    "gold": 5000
+   },
+   "give": "am_4_done"
+  },
+  "m9": {
+   "type": "main",
+   "name": "El Mar de Cristal",
+   "desc": "El rastro de Shirayuki lleva al Mar de Cristal. Allí duermen los recuerdos de la manada.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "faro_done",
+     "text": "Apagar el Faro Hundido"
+    },
+    {
+     "type": "flag",
+     "flag": "c1_done",
+     "text": "Cruzar el Santuario de la Primera Marea"
+    }
+   ],
+   "reward": {
+    "gold": 5000
+   },
+   "give": "am_5_done"
   }
  }
 }

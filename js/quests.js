@@ -2,7 +2,7 @@
  * quests.js — Misiones y evaluación de condiciones (cond) usadas en diálogos y mapa.
  * Estado en game.quests[id] = { status: 'active' | 'turned', base: {kills} }
  */
-import { Data, State, countItem, removeItem, addItem, addGold } from './state.js';
+import { Data, State, countItem, removeItem, addItem, addGold, rollItem } from './state.js';
 
 function objDone(q, o, st) {
   const g = State.game;
@@ -44,7 +44,7 @@ export function turnIn(id) {
   const lines = [];
   const r = q.reward || {};
   if (r.gold) { addGold(r.gold); lines.push(`${r.gold} 🪙`); }
-  for (const [it, n] of r.items || []) { addItem(it, n); lines.push(`${Data.itemById[it].name} ×${n}`); }
+  for (const [sp, n] of r.items || []) { const it = rollItem(sp); if (!it) continue; addItem(it, n); lines.push(`${Data.itemById[it].name} ×${n}`); }
   return lines;
 }
 
@@ -54,7 +54,7 @@ export function autoCompleteMain() {
   for (const [id, q] of Object.entries(Data.quests.quests)) {
     if (q.type !== 'main') continue;
     const st = State.game.quests[id];
-    if (!st) { if (id === 'm1' || (id === 'm2' && State.game.flags.yukine_joined) || (id === 'm3' && State.game.flags.sanc_3_done)) giveQuest(id); }
+    if (!st && q.give !== undefined && (q.give === true || cond(q.give))) giveQuest(id);
     if (State.game.quests[id] && questStatus(id) === 'ready') { const l = turnIn(id); lines.push(`Misión completada: ${q.name}` + (l?.length ? ` (${l.join(', ')})` : '')); }
   }
   return lines;

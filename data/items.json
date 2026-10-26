@@ -1,38 +1,3915 @@
 {
-  "items": {
-    "pocion_menor": { "name": "Poción Menor", "type": "consumable", "icon": "🧪", "price": 20, "desc": "Restaura 50 PV.", "effect": { "heal": 50 } },
-    "pocion": { "name": "Poción", "type": "consumable", "icon": "🧪", "price": 60, "desc": "Restaura 120 PV.", "effect": { "heal": 120 } },
-    "pocion_mayor": { "name": "Poción Mayor", "type": "consumable", "icon": "⚗️", "price": 150, "desc": "Restaura 250 PV.", "effect": { "heal": 250 } },
-    "elixir_menor": { "name": "Elixir de Maná", "type": "consumable", "icon": "💧", "price": 35, "desc": "Restaura 40 PM.", "effect": { "mp": 40 } },
-    "pluma_fenix": { "name": "Pluma de Fénix", "type": "consumable", "icon": "🪶", "price": 120, "desc": "Revive a un aliado debilitado con la mitad de su vida.", "effect": { "revive": 0.5 } },
-    "racion": { "name": "Ración de Viaje", "type": "consumable", "icon": "🍙", "price": 25, "desc": "Recupera el 30% de PV de quien la come (no revive).", "effect": { "healPct": 0.3 } },
-    "hierba_luna": { "name": "Hierba Luna", "type": "key", "icon": "🌿", "desc": "Una hierba plateada. Sora la busca." },
-    "carta_arrugada": { "name": "Carta Arrugada", "type": "key", "icon": "✉️", "desc": "Una carta sellada, dirigida a Haruko." },
-    "mineral_negro": { "name": "Mineral Negro", "type": "key", "icon": "⛏️", "desc": "Metal oscuro y pesado. Daigo lo querría." },
-    "flor_de_escarcha": { "name": "Flor de Escarcha", "type": "gift", "icon": "❄️", "price": 40, "desc": "Un regalo para Yukine.", "affinity": 4 },
-    "dulce_de_miel": { "name": "Dulce de Miel", "type": "gift", "icon": "🍯", "price": 30, "desc": "A Yukine se le mueve la cola solo con verlo.", "affinity": 3 },
-
-    "espada_hierro": { "name": "Espada de Hierro", "type": "equipment", "slot": "weapon", "icon": "🗡️", "price": 90, "desc": "Una espada sencilla y fiable.", "bonus": { "atk": 4 } },
-    "baston_roble": { "name": "Bastón de Roble", "type": "equipment", "slot": "weapon", "icon": "🪄", "price": 90, "desc": "Canaliza mejor el maná.", "bonus": { "mag": 4 } },
-    "hoja_runica": { "name": "Hoja Rúnica", "type": "equipment", "slot": "weapon", "icon": "⚔️", "price": 160, "desc": "Runas grabadas: filo y hechizo.", "bonus": { "atk": 3, "mag": 3 } },
-    "cuero_tratado": { "name": "Cuero Tratado", "type": "equipment", "slot": "armor", "icon": "🦺", "price": 80, "desc": "Armadura ligera de cazador.", "bonus": { "def": 3, "hp": 10 } },
-    "capa_lana": { "name": "Capa de Lana", "type": "equipment", "slot": "armor", "icon": "🧥", "price": 70, "desc": "Abriga y no estorba.", "bonus": { "def": 2, "spd": 1, "mp": 8 } },
-    "amuleto_cobre": { "name": "Amuleto de Cobre", "type": "equipment", "slot": "accessory", "icon": "📿", "price": 100, "desc": "Un pequeño amuleto de la suerte.", "bonus": { "hp": 15, "mp": 8 } },
-
-    "capa_cazador": { "name": "Capa del Cazador", "type": "equipment", "slot": "armor", "rarity": "rare", "icon": "🧥", "desc": "Regalo de Takeru. Silenciosa como el bosque.", "bonus": { "def": 5, "spd": 3, "hp": 20 } },
-    "espada_hierro_negro": { "name": "Espada de Hierro Negro", "type": "equipment", "slot": "weapon", "rarity": "rare", "icon": "🗡️", "desc": "Forjada por Daigo con mineral de las cuevas.", "bonus": { "atk": 8, "mag": 2 } },
-    "colmillo_alfa": { "name": "Colmillo del Alfa", "type": "equipment", "slot": "accessory", "rarity": "rare", "icon": "🦷", "desc": "Trofeo del Lobo Alfa. Aviva los reflejos.", "bonus": { "atk": 4, "spd": 4 } },
-    "cota_musgo": { "name": "Cota de Musgo Eterno", "type": "equipment", "slot": "armor", "rarity": "rare", "icon": "🛡️", "desc": "Musgo vivo que se endurece como la piedra.", "bonus": { "def": 9, "hp": 40 } },
-    "pendiente_luna": { "name": "Pendiente de Luna Pálida", "type": "equipment", "slot": "accessory", "rarity": "epic", "icon": "🌙", "desc": "Brilla cuando hay hielo cerca. Acelera la carga de la ulti.", "bonus": { "mag": 8, "mp": 25, "ultGain": 3 } },
-    "amuleto_lobo": { "name": "Amuleto del Lobo Blanco", "type": "equipment", "slot": "accessory", "rarity": "epic", "icon": "🐾", "desc": "Hecho con pelo de loba blanca. Late en tu mano.", "bonus": { "spd": 6, "hp": 30, "ultGain": 4 } },
-    "colmillo_oni": { "name": "Colmillo del Oni de Hierro", "type": "equipment", "slot": "weapon", "rarity": "legendary", "icon": "👹", "desc": "El diente del tirano, convertido en arma. Pesa como una promesa.", "bonus": { "atk": 12, "mag": 6, "spd": 2 } },
-
-    "perg_velo_bruma": { "name": "Pergamino: Velo de Bruma", "type": "scroll", "icon": "📜", "desc": "Enseña Velo de Bruma.", "teaches": "velo_de_bruma" },
-    "perg_aura_curativa": { "name": "Pergamino: Aura Curativa", "type": "scroll", "icon": "📜", "desc": "Enseña Aura Curativa.", "teaches": "aura_curativa" },
-    "perg_rompeguardia": { "name": "Pergamino: Rompeguardia", "type": "scroll", "icon": "📜", "desc": "Enseña Rompeguardia.", "teaches": "rompeguardia" },
-    "perg_llama_fantasma": { "name": "Pergamino: Llama Fantasma", "type": "scroll", "icon": "📜", "desc": "Enseña Llama Fantasma.", "teaches": "llama_fantasma" },
-    "perg_tajo_relampago": { "name": "Pergamino: Tajo Relámpago", "type": "scroll", "icon": "📜", "desc": "Enseña Tajo Relámpago.", "teaches": "tajo_relampago" },
-    "perg_rafaga": { "name": "Pergamino: Ráfaga Cortante", "type": "scroll", "icon": "📜", "desc": "Enseña Ráfaga Cortante.", "teaches": "rafaga_cortante" },
-    "perg_meditacion": { "name": "Pergamino: Meditación", "type": "scroll", "icon": "📜", "desc": "Enseña Meditación.", "teaches": "meditacion" }
+ "items": {
+  "pocion_menor": {
+   "name": "Poción Menor",
+   "type": "consumable",
+   "icon": "🧪",
+   "price": 20,
+   "desc": "Restaura 50 PV.",
+   "effect": {
+    "heal": 50
+   }
+  },
+  "pocion": {
+   "name": "Poción",
+   "type": "consumable",
+   "icon": "🧪",
+   "price": 60,
+   "desc": "Restaura 120 PV.",
+   "effect": {
+    "heal": 120
+   }
+  },
+  "pocion_mayor": {
+   "name": "Poción Mayor",
+   "type": "consumable",
+   "icon": "⚗️",
+   "price": 150,
+   "desc": "Restaura 250 PV.",
+   "effect": {
+    "heal": 250
+   }
+  },
+  "elixir_menor": {
+   "name": "Elixir de Maná",
+   "type": "consumable",
+   "icon": "💧",
+   "price": 35,
+   "desc": "Restaura 40 PM.",
+   "effect": {
+    "mp": 40
+   }
+  },
+  "pluma_fenix": {
+   "name": "Pluma de Fénix",
+   "type": "consumable",
+   "icon": "🪶",
+   "price": 120,
+   "desc": "Revive a un aliado debilitado con la mitad de su vida.",
+   "effect": {
+    "revive": 0.5
+   }
+  },
+  "racion": {
+   "name": "Ración de Viaje",
+   "type": "consumable",
+   "icon": "🍙",
+   "price": 25,
+   "desc": "Recupera el 30% de PV de quien la come (no revive).",
+   "effect": {
+    "healPct": 0.3
+   }
+  },
+  "hierba_luna": {
+   "name": "Hierba Luna",
+   "type": "key",
+   "icon": "🌿",
+   "desc": "Una hierba plateada. Sora la busca."
+  },
+  "carta_arrugada": {
+   "name": "Carta Arrugada",
+   "type": "key",
+   "icon": "✉️",
+   "desc": "Una carta sellada, dirigida a Haruko."
+  },
+  "mineral_negro": {
+   "name": "Mineral Negro",
+   "type": "key",
+   "icon": "⛏️",
+   "desc": "Metal oscuro y pesado. Daigo lo querría."
+  },
+  "flor_de_escarcha": {
+   "name": "Flor de Escarcha",
+   "type": "gift",
+   "icon": "❄️",
+   "price": 40,
+   "desc": "Un regalo para Yukine.",
+   "affinity": 4
+  },
+  "dulce_de_miel": {
+   "name": "Dulce de Miel",
+   "type": "gift",
+   "icon": "🍯",
+   "price": 30,
+   "desc": "A Yukine se le mueve la cola solo con verlo.",
+   "affinity": 3
+  },
+  "espada_hierro": {
+   "name": "Espada de Hierro",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "price": 90,
+   "desc": "Una espada sencilla y fiable.",
+   "bonus": {
+    "atk": 4
+   },
+   "tier": 1,
+   "rarity": "common",
+   "wtype": "filo",
+   "mprice": 60
+  },
+  "baston_roble": {
+   "name": "Grimorio de Roble",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "price": 90,
+   "desc": "Canaliza mejor el maná.",
+   "bonus": {
+    "mag": 4
+   },
+   "tier": 1,
+   "rarity": "common",
+   "wtype": "grimorio",
+   "mprice": 60
+  },
+  "hoja_runica": {
+   "name": "Hoja Rúnica",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "⚔️",
+   "price": 160,
+   "desc": "Runas grabadas: filo y hechizo.",
+   "bonus": {
+    "atk": 3,
+    "mag": 3
+   },
+   "tier": 1,
+   "rarity": "uncommon",
+   "wtype": "filo",
+   "mprice": 50
+  },
+  "cuero_tratado": {
+   "name": "Cuero Tratado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🦺",
+   "price": 80,
+   "desc": "Armadura ligera de cazador.",
+   "bonus": {
+    "def": 3,
+    "hp": 10
+   },
+   "tier": 1,
+   "rarity": "common",
+   "mprice": 40
+  },
+  "capa_lana": {
+   "name": "Capa de Lana",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "price": 70,
+   "desc": "Abriga y no estorba.",
+   "bonus": {
+    "def": 2,
+    "spd": 1,
+    "mp": 8
+   },
+   "tier": 1,
+   "rarity": "common",
+   "mprice": 20
+  },
+  "amuleto_cobre": {
+   "name": "Amuleto de Cobre",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "📿",
+   "price": 100,
+   "desc": "Un pequeño amuleto de la suerte.",
+   "bonus": {
+    "hp": 15,
+    "mp": 8
+   },
+   "tier": 1,
+   "rarity": "common",
+   "mprice": 20
+  },
+  "capa_cazador": {
+   "name": "Capa del Cazador",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "uncommon",
+   "icon": "🧥",
+   "desc": "Regalo de Takeru. Silenciosa como el bosque.",
+   "bonus": {
+    "def": 5,
+    "spd": 3,
+    "hp": 20
+   },
+   "price": 280,
+   "tier": 1,
+   "mprice": 160
+  },
+  "espada_hierro_negro": {
+   "name": "Espada de Hierro Negro",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🗡️",
+   "desc": "Forjada por Daigo con mineral de las cuevas.",
+   "bonus": {
+    "atk": 8,
+    "mag": 2
+   },
+   "tier": 1,
+   "wtype": "filo",
+   "mprice": 410
+  },
+  "colmillo_alfa": {
+   "name": "Colmillo del Alfa",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🦷",
+   "desc": "Trofeo del Lobo Alfa. Aviva los reflejos.",
+   "bonus": {
+    "atk": 4,
+    "spd": 4
+   },
+   "tier": 1,
+   "mprice": 100
+  },
+  "cota_musgo": {
+   "name": "Cota de Musgo Eterno",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Musgo vivo que se endurece como la piedra.",
+   "bonus": {
+    "def": 9,
+    "hp": 40
+   },
+   "tier": 1,
+   "mprice": 520
+  },
+  "pendiente_luna": {
+   "name": "Pendiente de Luna Pálida",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🌙",
+   "desc": "Brilla cuando hay hielo cerca. Acelera la carga de la ulti.",
+   "bonus": {
+    "mag": 8,
+    "mp": 25,
+    "ultGain": 3
+   },
+   "tier": 1,
+   "mprice": 490
+  },
+  "amuleto_lobo": {
+   "name": "Amuleto del Lobo Blanco",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🐾",
+   "desc": "Hecho con pelo de loba blanca. Late en tu mano.",
+   "bonus": {
+    "spd": 6,
+    "hp": 30,
+    "ultGain": 4
+   },
+   "tier": 1,
+   "mprice": 270
+  },
+  "colmillo_oni": {
+   "name": "Colmillo del Oni de Hierro",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "👹",
+   "desc": "El diente del tirano, convertido en arma. Pesa como una promesa.",
+   "bonus": {
+    "atk": 12,
+    "mag": 6,
+    "spd": 2
+   },
+   "tier": 1,
+   "wtype": "filo",
+   "mprice": 1270
+  },
+  "perg_velo_bruma": {
+   "name": "Pergamino: Velo de Bruma",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Velo de Bruma.",
+   "teaches": "velo_de_bruma"
+  },
+  "perg_aura_curativa": {
+   "name": "Pergamino: Aura Curativa",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Aura Curativa.",
+   "teaches": "aura_curativa"
+  },
+  "perg_rompeguardia": {
+   "name": "Pergamino: Rompeguardia",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Rompeguardia.",
+   "teaches": "rompeguardia"
+  },
+  "perg_llama_fantasma": {
+   "name": "Pergamino: Llama Fantasma",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Llama Fantasma.",
+   "teaches": "llama_fantasma"
+  },
+  "perg_tajo_relampago": {
+   "name": "Pergamino: Tajo Relámpago",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Tajo Relámpago.",
+   "teaches": "tajo_relampago"
+  },
+  "perg_rafaga": {
+   "name": "Pergamino: Ráfaga Cortante",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Ráfaga Cortante.",
+   "teaches": "rafaga_cortante"
+  },
+  "perg_meditacion": {
+   "name": "Pergamino: Meditación",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña Meditación.",
+   "teaches": "meditacion"
+  },
+  "pocion_suprema": {
+   "name": "Poción Suprema",
+   "type": "consumable",
+   "icon": "🧪",
+   "price": 300,
+   "desc": "Restaura 450 PV.",
+   "effect": {
+    "heal": 450
+   }
+  },
+  "elixir_mayor": {
+   "name": "Elixir Mayor",
+   "type": "consumable",
+   "icon": "💧",
+   "price": 120,
+   "desc": "Restaura 100 PM.",
+   "effect": {
+    "mp": 100
+   }
+  },
+  "racion_caliente": {
+   "name": "Ración Caliente",
+   "type": "consumable",
+   "icon": "🍲",
+   "price": 60,
+   "desc": "Recupera el 50% de PV de quien la come (no revive).",
+   "effect": {
+    "healPct": 0.5
+   }
+  },
+  "hongo_nieve": {
+   "name": "Hongo de Nieve",
+   "type": "key",
+   "icon": "🍄",
+   "desc": "Un hongo blanco y raro. A Kaito le encantaría."
+  },
+  "campana_antigua": {
+   "name": "Campana Antigua",
+   "type": "key",
+   "icon": "🔔",
+   "desc": "Una campanilla de bronce con inscripciones. Jion la busca."
+  },
+  "espada_acero": {
+   "name": "Espada de Acero",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "price": 320,
+   "desc": "Acero de las montañas.",
+   "bonus": {
+    "atk": 9
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "wtype": "filo",
+   "mprice": 420
+  },
+  "baston_cristal": {
+   "name": "Grimorio de Cristal",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "price": 320,
+   "desc": "Cristal puro que amplifica el maná.",
+   "bonus": {
+    "mag": 9
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "wtype": "grimorio",
+   "mprice": 420
+  },
+  "hoja_runica_2": {
+   "name": "Hoja Rúnica Reforzada",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "⚔️",
+   "price": 380,
+   "desc": "Filo y hechizo reforzados.",
+   "bonus": {
+    "atk": 7,
+    "mag": 7
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "wtype": "filo",
+   "mprice": 310
+  },
+  "abrigo_pieles": {
+   "name": "Abrigo de Pieles",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "price": 300,
+   "desc": "Calienta y protege.",
+   "bonus": {
+    "def": 8,
+    "hp": 35
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "mprice": 330
+  },
+  "tunica_peregrino": {
+   "name": "Túnica del Peregrino",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "👘",
+   "price": 280,
+   "desc": "Ligera y llena de maná.",
+   "bonus": {
+    "def": 5,
+    "mp": 30,
+    "mag": 2
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "mprice": 130
+  },
+  "amuleto_plata": {
+   "name": "Amuleto de Plata",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "📿",
+   "price": 260,
+   "desc": "Plata bendecida.",
+   "bonus": {
+    "hp": 35,
+    "mp": 25,
+    "spd": 2
+   },
+   "tier": 2,
+   "rarity": "uncommon",
+   "mprice": 130
+  },
+  "filo_de_rin": {
+   "name": "Filo de Rin",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🗡️",
+   "desc": "El katana de Rin, regalo de un duelo noble.",
+   "bonus": {
+    "atk": 12,
+    "spd": 5
+   },
+   "tier": 1,
+   "wtype": "filo",
+   "mprice": 1090
+  },
+  "corona_escarcha": {
+   "name": "Corona de Escarcha",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "👑",
+   "desc": "Fría y bellísima. Potencia el hielo.",
+   "bonus": {
+    "mag": 10,
+    "mp": 30,
+    "ultGain": 3
+   },
+   "tier": 2,
+   "mprice": 760
+  },
+  "cristal_corazon": {
+   "name": "Corazón de Cristal",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "💎",
+   "desc": "Late al ritmo del cristal.",
+   "bonus": {
+    "hp": 60,
+    "def": 6,
+    "ultGain": 2
+   },
+   "tier": 2,
+   "mprice": 760
+  },
+  "colmillo_ancestral": {
+   "name": "Colmillo Ancestral",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🦷",
+   "desc": "Un colmillo de la manada blanca. Resuena con Yukine.",
+   "bonus": {
+    "atk": 8,
+    "mag": 8,
+    "spd": 5,
+    "ultGain": 4
+   },
+   "tier": 2,
+   "mprice": 560
+  },
+  "campana_viento": {
+   "name": "Campana del Viento",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🔔",
+   "desc": "Su tañido acelera.",
+   "bonus": {
+    "spd": 9,
+    "mp": 20
+   },
+   "tier": 2,
+   "mprice": 520
+  },
+  "armadura_glaciar": {
+   "name": "Armadura del Glaciar",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Hielo azul que no se funde.",
+   "bonus": {
+    "def": 15,
+    "hp": 70
+   },
+   "tier": 2,
+   "mprice": 1710
+  },
+  "espada_reiga": {
+   "name": "Lanza-Espada de Reiga",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "⚔️",
+   "desc": "El arma del Cazador Gélido. Aún siente frío.",
+   "bonus": {
+    "atk": 18,
+    "mag": 10,
+    "spd": 3
+   },
+   "tier": 2,
+   "wtype": "filo",
+   "mprice": 2850
+  },
+  "collar_luna": {
+   "name": "Collar de Luna",
+   "type": "gift",
+   "icon": "🌙",
+   "price": 120,
+   "desc": "Un collar de plata para Yukine. Le encantará.",
+   "affinity": 8
+  },
+  "flor_nocturna": {
+   "name": "Flor Nocturna",
+   "type": "gift",
+   "icon": "🌸",
+   "price": 60,
+   "desc": "Una flor de los jardines de Yunomori.",
+   "affinity": 5
+  },
+  "perg_tormenta_filos": {
+   "name": "Pergamino: Tormenta de Filos",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "tormenta_de_filos"
+  },
+  "perg_sanacion_mayor": {
+   "name": "Pergamino: Sanación Mayor",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "sanacion_mayor"
+  },
+  "perg_bendicion_guerra": {
+   "name": "Pergamino: Bendición de Guerra",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "bendicion_de_guerra"
+  },
+  "perg_muro_escarcha": {
+   "name": "Pergamino: Muro de Escarcha",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "muro_de_escarcha"
+  },
+  "perg_llanto_luna": {
+   "name": "Pergamino: Llanto de la Luna",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "llanto_de_la_luna"
+  },
+  "perg_golpe_aturdidor": {
+   "name": "Pergamino: Golpe Aturdidor",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "golpe_aturdidor"
+  },
+  "hoja_del_alba": {
+   "name": "Hoja del Alba",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🗡️",
+   "desc": "Forjada con ceniza y luz roja.",
+   "bonus": {
+    "atk": 20,
+    "mag": 6,
+    "spd": 2
+   },
+   "price": 1400,
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 3040
+  },
+  "baston_ceniza": {
+   "name": "Grimorio de Ceniza Viva",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "📖",
+   "desc": "Un grimorio que arde sin consumirse.",
+   "bonus": {
+    "mag": 22,
+    "spd": 2
+   },
+   "price": 1400,
+   "tier": 3,
+   "wtype": "grimorio",
+   "mprice": 3680
+  },
+  "coraza_oni": {
+   "name": "Coraza de Oni Veterano",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Placas negras de un viejo guerrero demonio.",
+   "bonus": {
+    "def": 17,
+    "hp": 80
+   },
+   "price": 1300,
+   "tier": 3,
+   "mprice": 2200
+  },
+  "manto_ceniza": {
+   "name": "Manto de Ceniza",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🧥",
+   "desc": "Ligero como el humo, duro como la roca.",
+   "bonus": {
+    "def": 11,
+    "mag": 8,
+    "hp": 60
+   },
+   "price": 1300,
+   "tier": 3,
+   "mprice": 920
+  },
+  "anillo_brasa": {
+   "name": "Anillo de Brasa",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "💍",
+   "desc": "Calienta la mano que lo lleva.",
+   "bonus": {
+    "atk": 6,
+    "mag": 6
+   },
+   "price": 700,
+   "tier": 3,
+   "mprice": 230
+  },
+  "talisman_alba": {
+   "name": "Talismán del Alba",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🔮",
+   "desc": "Un sello que repele la oscuridad.",
+   "bonus": {
+    "def": 8,
+    "hp": 60,
+    "mp": 30
+   },
+   "price": 1100,
+   "tier": 3,
+   "mprice": 760
+  },
+  "corazon_jorogumo": {
+   "name": "Corazón de Jorōgumo",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🕸️",
+   "desc": "Late con una cadencia inquietante.",
+   "bonus": {
+    "spd": 8,
+    "mag": 8
+   },
+   "tier": 3,
+   "mprice": 490
+  },
+  "espejo_vengador": {
+   "name": "Fragmento del Espejo",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🪞",
+   "desc": "Refleja lo que más temes... y lo que puedes ser.",
+   "bonus": {
+    "atk": 10,
+    "mag": 10,
+    "def": 4
+   },
+   "tier": 3,
+   "mprice": 760
+  },
+  "hueso_gashadokuro": {
+   "name": "Colmillo de Gashadokuro",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🦴",
+   "desc": "Hueso gigante afilado por mil lápidas.",
+   "bonus": {
+    "atk": 26,
+    "def": 6,
+    "hp": 40
+   },
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 5950
+  },
+  "pluma_fenix_eterna": {
+   "name": "Pluma del Fénix Caído",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🪶",
+   "desc": "Arde, cae y vuelve a alzarse.",
+   "bonus": {
+    "hp": 120,
+    "mp": 50,
+    "spd": 6
+   },
+   "tier": 3,
+   "mprice": 3520
+  },
+  "armadura_alba": {
+   "name": "Armadura del Alba",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🌅",
+   "desc": "El sol atrapado en un peto.",
+   "bonus": {
+    "def": 24,
+    "hp": 130,
+    "mag": 6
+   },
+   "tier": 3,
+   "mprice": 5070
+  },
+  "martillo_kurogane": {
+   "name": "Martillo de Kurogane Renacido",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🔨",
+   "desc": "Pesa como una montaña. Golpea como dos.",
+   "bonus": {
+    "atk": 32,
+    "def": 4
+   },
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 9010
+  },
+  "filo_yamikage": {
+   "name": "Filo de Yamikage",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "⚔️",
+   "desc": "La espada del Rey Demonio. Susurra tu nombre.",
+   "bonus": {
+    "atk": 30,
+    "mag": 20,
+    "spd": 4
+   },
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 7920
+  },
+  "corona_alba": {
+   "name": "Corona del Alba Eterna",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "👑",
+   "desc": "Quien la porta no teme a la noche.",
+   "bonus": {
+    "atk": 10,
+    "mag": 14,
+    "def": 10,
+    "hp": 100,
+    "mp": 40
+   },
+   "tier": 3,
+   "mprice": 2250
+  },
+  "pocion_total": {
+   "name": "Poción Total",
+   "type": "consumable",
+   "icon": "🧪",
+   "price": 600,
+   "desc": "Restaura 900 PV.",
+   "effect": {
+    "heal": 900
+   }
+  },
+  "elixir_supremo": {
+   "name": "Elixir Supremo",
+   "type": "consumable",
+   "icon": "💧",
+   "price": 260,
+   "desc": "Restaura 200 PM.",
+   "effect": {
+    "mp": 200
+   }
+  },
+  "pluma_fenix_dorada": {
+   "name": "Pluma de Fénix Dorada",
+   "type": "consumable",
+   "icon": "🪶",
+   "price": 380,
+   "desc": "Revive a un aliado con toda su vida.",
+   "effect": {
+    "revive": 1.0
+   }
+  },
+  "ramen_del_alba": {
+   "name": "Ramen del Alba",
+   "type": "consumable",
+   "icon": "🍜",
+   "price": 140,
+   "desc": "Recupera el 80% de PV de quien lo come (no revive).",
+   "effect": {
+    "healPct": 0.8
+   }
+  },
+  "flor_alba": {
+   "name": "Flor del Alba",
+   "type": "key",
+   "icon": "🌺",
+   "desc": "Una flor roja que solo florece en el Yermo. Momiji las colecciona."
+  },
+  "cristal_ceniza": {
+   "name": "Cristal de Ceniza",
+   "type": "key",
+   "icon": "🔶",
+   "desc": "Cristal caliente. Tetsu lo usa para forjar."
+  },
+  "lazo_carmesi": {
+   "name": "Lazo Carmesí",
+   "type": "gift",
+   "icon": "🎀",
+   "price": 140,
+   "desc": "Un lazo de seda roja para el pelo.",
+   "affinity": 7
+  },
+  "farolillo_alba": {
+   "name": "Farolillo del Alba",
+   "type": "gift",
+   "icon": "🏮",
+   "price": 160,
+   "desc": "Un farolillo que brilla con luz rosada.",
+   "affinity": 8
+  },
+  "perfume_luna": {
+   "name": "Perfume de Luna",
+   "type": "gift",
+   "icon": "🧴",
+   "price": 220,
+   "desc": "Huele a nieve recién caída y a flor de cerezo.",
+   "affinity": 10
+  },
+  "perg_velo_carmesi": {
+   "name": "Pergamino: Velo Carmesí",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "velo_carmesi",
+   "price": 900
+  },
+  "perg_mil_cuchillas": {
+   "name": "Pergamino: Mil Cuchillas",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "mil_cuchillas",
+   "price": 900
+  },
+  "perg_alba_rota": {
+   "name": "Pergamino: Alba Rota",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "alba_rota",
+   "price": 1200
+  },
+  "perg_exorcismo": {
+   "name": "Pergamino: Exorcismo",
+   "type": "scroll",
+   "icon": "📜",
+   "desc": "Enseña la técnica.",
+   "teaches": "exorcismo",
+   "price": 800
+  },
+  "katana_cazador": {
+   "name": "Katana del Cazador",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "uncommon",
+   "icon": "🗡️",
+   "desc": "Ligera, afilada y bien equilibrada.",
+   "bonus": {
+    "atk": 8,
+    "spd": 1
+   },
+   "price": 320,
+   "tier": 1,
+   "wtype": "filo",
+   "mprice": 410
+  },
+  "peto_hierro_negro": {
+   "name": "Peto de Hierro Negro",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "uncommon",
+   "icon": "🛡️",
+   "desc": "Placas de hierro negro de la mina.",
+   "bonus": {
+    "def": 9,
+    "hp": 25
+   },
+   "price": 340,
+   "tier": 1,
+   "mprice": 520
+  },
+  "anillo_pescador": {
+   "name": "Anillo del Pescador",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "uncommon",
+   "icon": "💍",
+   "desc": "Un aro de nácar que trae buena suerte.",
+   "bonus": {
+    "mp": 20,
+    "def": 3
+   },
+   "price": 260,
+   "tier": 1,
+   "mprice": 60
+  },
+  "maza_capataz": {
+   "name": "Maza del Capataz",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🔨",
+   "desc": "Pesa mucho, pega aún más.",
+   "bonus": {
+    "atk": 10,
+    "def": 2
+   },
+   "tier": 1,
+   "wtype": "filo",
+   "mprice": 640
+  },
+  "cuerno_espectral": {
+   "name": "Cuerno Espectral",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🦌",
+   "desc": "Un fragmento de asta de luz.",
+   "bonus": {
+    "mag": 9,
+    "spd": 4,
+    "hp": 30
+   },
+   "tier": 1,
+   "mprice": 620
+  },
+  "hierba_curativa": {
+   "name": "Hierba Curativa",
+   "type": "consumable",
+   "icon": "🌿",
+   "price": 25,
+   "desc": "Restaura 90 PV.",
+   "effect": {
+    "heal": 90
+   }
+  },
+  "barril_sake": {
+   "name": "Barril de Sake",
+   "type": "key",
+   "icon": "🍶",
+   "desc": "Un barrilito robado a la taberna."
+  },
+  "hierba_pantano": {
+   "name": "Hierba del Pantano",
+   "type": "key",
+   "icon": "🌱",
+   "desc": "Una hierba viscosa con propiedades curativas."
+  },
+  "perla_lago_menor": {
+   "name": "Perla del Lago",
+   "type": "key",
+   "icon": "⚪",
+   "desc": "Una perla pequeña y brillante."
+  },
+  "perla_lago": {
+   "name": "Gran Perla del Lago",
+   "type": "key",
+   "icon": "🔮",
+   "desc": "La perla de la corona de la Reina Rana."
+  },
+  "red_antigua": {
+   "name": "Red Antigua",
+   "type": "key",
+   "icon": "🕸️",
+   "desc": "Una red de pesca encantada."
+  },
+  "sake_ciruela": {
+   "name": "Sake de Ciruela",
+   "type": "gift",
+   "icon": "🍶",
+   "price": 90,
+   "desc": "Dulce y traicionero. A Yukine le pica la curiosidad.",
+   "affinity": 5
+  },
+  "castanas_asadas": {
+   "name": "Castañas Asadas",
+   "type": "gift",
+   "icon": "🌰",
+   "price": 50,
+   "desc": "Calentitas y crujientes.",
+   "affinity": 4
+  },
+  "lanza_escarcha": {
+   "name": "Lanza de Escarcha",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "uncommon",
+   "icon": "🔱",
+   "desc": "Una lanza forjada con hielo que no se derrite.",
+   "bonus": {
+    "atk": 13,
+    "mag": 4
+   },
+   "price": 520,
+   "tier": 2,
+   "wtype": "filo",
+   "mprice": 1080
+  },
+  "peto_nieve": {
+   "name": "Peto de Nieve Compacta",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "uncommon",
+   "icon": "🛡️",
+   "desc": "Armadura de placas blancas.",
+   "bonus": {
+    "def": 13,
+    "hp": 40
+   },
+   "price": 540,
+   "tier": 2,
+   "mprice": 1080
+  },
+  "collar_pastor": {
+   "name": "Collar del Pastor",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "uncommon",
+   "icon": "📿",
+   "desc": "Un collar de cuentas de madera. Protege al rebaño... y a ti.",
+   "bonus": {
+    "spd": 5,
+    "hp": 40
+   },
+   "price": 480,
+   "tier": 2,
+   "mprice": 230
+  },
+  "espada_hakuren": {
+   "name": "Espada de Hakuren",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "⚔️",
+   "desc": "La espada del general de hielo.",
+   "bonus": {
+    "atk": 17,
+    "def": 3
+   },
+   "tier": 2,
+   "wtype": "filo",
+   "mprice": 2200
+  },
+  "escudo_templo": {
+   "name": "Escudo del Templo Hundido",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Cubierto de runas que brillan bajo el agua.",
+   "bonus": {
+    "def": 18,
+    "hp": 60
+   },
+   "tier": 2,
+   "mprice": 2460
+  },
+  "rosario_monje": {
+   "name": "Rosario del Abad",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "uncommon",
+   "icon": "📿",
+   "desc": "Cuentas de hielo con mantras grabados.",
+   "bonus": {
+    "mp": 40,
+    "mag": 9,
+    "def": 4
+   },
+   "price": 900,
+   "tier": 2,
+   "mprice": 620
+  },
+  "colmillo_dragon": {
+   "name": "Colmillo de Dragón de Nieve",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🦷",
+   "desc": "Frío como el invierno, afilado como la verdad.",
+   "bonus": {
+    "hp": 90,
+    "mag": 12,
+    "atk": 8
+   },
+   "tier": 2,
+   "mprice": 1980
+  },
+  "leche_yak": {
+   "name": "Leche de Yak",
+   "type": "consumable",
+   "icon": "🥛",
+   "price": 70,
+   "desc": "Restaura 200 PV.",
+   "effect": {
+    "heal": 200
+   }
+  },
+  "te_nieve": {
+   "name": "Té de Nieve",
+   "type": "consumable",
+   "icon": "🍵",
+   "price": 85,
+   "desc": "Restaura 70 PM.",
+   "effect": {
+    "mp": 70
+   }
+  },
+  "incienso_raro": {
+   "name": "Incienso Raro",
+   "type": "key",
+   "icon": "🕯️",
+   "desc": "Incienso de un monasterio perdido."
+  },
+  "queso_yak": {
+   "name": "Queso de Yak",
+   "type": "key",
+   "icon": "🧀",
+   "desc": "Queso curado y duro como una piedra."
+  },
+  "punta_flecha": {
+   "name": "Punta de Flecha Negra",
+   "type": "key",
+   "icon": "🏹",
+   "desc": "Una punta de flecha negra con hielo."
+  },
+  "broche_plata": {
+   "name": "Broche de Plata",
+   "type": "gift",
+   "icon": "📎",
+   "price": 160,
+   "desc": "Un broche con forma de luna creciente.",
+   "affinity": 8
+  },
+  "manta_lana": {
+   "name": "Manta de Lana de Yak",
+   "type": "gift",
+   "icon": "🧶",
+   "price": 140,
+   "desc": "Calentita y suave. Perfecta para una loba friolera.",
+   "affinity": 7
+  },
+  "hacha_karasu": {
+   "name": "Hacha de Karasu",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🪓",
+   "desc": "El hacha del general de ceniza. Aún tibia.",
+   "bonus": {
+    "atk": 24,
+    "def": 4
+   },
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 4380
+  },
+  "martillo_kuroda": {
+   "name": "Martillo de Kuroda",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🔨",
+   "desc": "Un martillo de herrero demoníaco. Pesa, pero golpea fuerte.",
+   "bonus": {
+    "atk": 27,
+    "spd": -2
+   },
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 5540
+  },
+  "anillo_cristal": {
+   "name": "Anillo de Cristal",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "💍",
+   "desc": "Un anillo de cristal con luz atrapada.",
+   "bonus": {
+    "mag": 14,
+    "mp": 50,
+    "def": 5
+   },
+   "tier": 3,
+   "mprice": 1490
+  },
+  "collar_ecos": {
+   "name": "Collar de los Ecos",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "📿",
+   "desc": "Susurra cuando duermes.",
+   "bonus": {
+    "mag": 16,
+    "spd": 6,
+    "hp": 80
+   },
+   "tier": 3,
+   "mprice": 1950
+  },
+  "corona_abismo": {
+   "name": "Corona del Abismo",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "👑",
+   "desc": "Una corona hecha de luz solidificada.",
+   "bonus": {
+    "atk": 14,
+    "mag": 18,
+    "def": 10,
+    "hp": 160,
+    "mp": 60
+   },
+   "tier": 3,
+   "mprice": 5950
+  },
+  "coraza_desierto": {
+   "name": "Coraza del Desierto",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Placas de cristal sobre cuero curtido.",
+   "bonus": {
+    "def": 22,
+    "hp": 70
+   },
+   "price": 1500,
+   "tier": 3,
+   "mprice": 3100
+  },
+  "lanza_oasis": {
+   "name": "Lanza del Oasis",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🔱",
+   "desc": "Ligera y precisa.",
+   "bonus": {
+    "atk": 22,
+    "spd": 3
+   },
+   "price": 1450,
+   "tier": 3,
+   "wtype": "filo",
+   "mprice": 3100
+  },
+  "botas_arena": {
+   "name": "Botas de Arena",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "👢",
+   "desc": "Livianas y silenciosas.",
+   "bonus": {
+    "spd": 8,
+    "hp": 50
+   },
+   "price": 1300,
+   "tier": 3,
+   "mprice": 410
+  },
+  "agua_oasis": {
+   "name": "Agua del Oasis",
+   "type": "consumable",
+   "icon": "💧",
+   "price": 160,
+   "desc": "Restaura 300 PV.",
+   "effect": {
+    "heal": 300
+   }
+  },
+  "dulce_dunas": {
+   "name": "Dulce de las Dunas",
+   "type": "consumable",
+   "icon": "🍯",
+   "price": 170,
+   "desc": "Restaura 100 PM.",
+   "effect": {
+    "mp": 100
+   }
+  },
+  "brasa_eterna": {
+   "name": "Brasa Eterna",
+   "type": "key",
+   "icon": "🔥",
+   "desc": "Una brasa que no se apaga."
+  },
+  "punta_ceniza": {
+   "name": "Punta de Flecha de Ceniza",
+   "type": "key",
+   "icon": "🏹",
+   "desc": "Punta de flecha todavía caliente."
+  },
+  "fragmento_voz": {
+   "name": "Fragmento de Voz",
+   "type": "key",
+   "icon": "🔮",
+   "desc": "Un cristal que susurra."
+  },
+  "hierro_sagrado": {
+   "name": "Hierro Sagrado",
+   "type": "key",
+   "icon": "⚒️",
+   "desc": "Hierro que Hiromi usará para forjar algo especial."
+  },
+  "farolillo_rojo": {
+   "name": "Farolillo Rojo",
+   "type": "gift",
+   "icon": "🏮",
+   "price": 260,
+   "desc": "Un farolillo de papel que no arde.",
+   "affinity": 9
+  },
+  "dulce_miel": {
+   "name": "Dulce de Miel del Oasis",
+   "type": "gift",
+   "icon": "🍯",
+   "price": 220,
+   "desc": "Almíbar de dátiles. Yukine casi llora.",
+   "affinity": 8
+  },
+  "espada_primer_rayo": {
+   "name": "Espada del Primer Rayo",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "epic",
+   "icon": "⚔️",
+   "desc": "Una hoja de luz condensada. No proyecta sombra.",
+   "bonus": {
+    "atk": 30,
+    "mag": 8
+   },
+   "tier": 4,
+   "wtype": "filo",
+   "mprice": 6840
+  },
+  "reliquia_rayo": {
+   "name": "Reliquia del Heraldo",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "epic",
+   "icon": "🔆",
+   "desc": "Un fragmento de rayo vivo. Late.",
+   "bonus": {
+    "atk": 12,
+    "mag": 14,
+    "hp": 120,
+    "spd": 5
+   },
+   "tier": 4,
+   "mprice": 3040
+  },
+  "coraza_luz": {
+   "name": "Coraza de Luz Sólida",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🛡️",
+   "desc": "Placas translúcidas, ligeras y duras como diamante.",
+   "bonus": {
+    "def": 27,
+    "hp": 95
+   },
+   "price": 2400,
+   "tier": 4,
+   "mprice": 4670
+  },
+  "amuleto_alba": {
+   "name": "Amuleto del Alba Sin Fin",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "🌞",
+   "desc": "Calienta siempre, aunque te lo quites.",
+   "bonus": {
+    "mag": 13,
+    "spd": 7,
+    "hp": 90
+   },
+   "price": 2000,
+   "tier": 4,
+   "mprice": 1440
+  },
+  "lanza_luz": {
+   "name": "Lanza de Luz Sólida",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "🔱",
+   "desc": "Lanza de cristal dorado, afilada como un rayo.",
+   "bonus": {
+    "atk": 26,
+    "spd": 4
+   },
+   "price": 2300,
+   "tier": 4,
+   "wtype": "filo",
+   "mprice": 4330
+  },
+  "fragmento_noche": {
+   "name": "Fragmento de Noche",
+   "type": "key",
+   "icon": "🌑",
+   "desc": "Un trozo de oscuridad sólida. Un tesoro en este reino."
+  },
+  "pluma_dorada": {
+   "name": "Pluma de Mariposa del Alba",
+   "type": "gift",
+   "icon": "🪶",
+   "price": 280,
+   "desc": "Suave como un recuerdo. Yukine la mira durante horas.",
+   "affinity": 9
+  },
+  "hoz_tiempo": {
+   "name": "Hoz del Tiempo",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "epic",
+   "icon": "🗡️",
+   "desc": "Una hoz cuyas manecillas giran al revés.",
+   "bonus": {
+    "atk": 33,
+    "spd": 6
+   },
+   "tier": 4,
+   "wtype": "filo",
+   "mprice": 8280
+  },
+  "reliquia_segundo_rayo": {
+   "name": "Reliquia del Segundo Rayo",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "epic",
+   "icon": "⚡",
+   "desc": "Late más fuerte que la anterior.",
+   "bonus": {
+    "atk": 14,
+    "mag": 16,
+    "hp": 140,
+    "spd": 6
+   },
+   "tier": 4,
+   "mprice": 4020
+  },
+  "manto_noche": {
+   "name": "Manto de la Primera Noche",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "epic",
+   "icon": "🧥",
+   "desc": "Una capa llena de estrellas pequeñas. Absorbe la luz.",
+   "bonus": {
+    "def": 33,
+    "hp": 120,
+    "mag": 10
+   },
+   "tier": 4,
+   "mprice": 8280
+  },
+  "manto_sombra": {
+   "name": "Manto de Sombra Tejida",
+   "type": "equipment",
+   "slot": "armor",
+   "rarity": "rare",
+   "icon": "🧥",
+   "desc": "Tejido con hilos de penumbra. Huele a noche.",
+   "bonus": {
+    "def": 30,
+    "hp": 105
+   },
+   "price": 3100,
+   "tier": 4,
+   "mprice": 5760
+  },
+  "hoja_penumbra": {
+   "name": "Hoja de Penumbra",
+   "type": "equipment",
+   "slot": "weapon",
+   "rarity": "rare",
+   "icon": "⚔️",
+   "desc": "Una hoja negra que no refleja la luz.",
+   "bonus": {
+    "atk": 29,
+    "spd": 5
+   },
+   "price": 3300,
+   "tier": 4,
+   "wtype": "filo",
+   "mprice": 5380
+  },
+  "anillo_hora": {
+   "name": "Anillo de la Hora Quieta",
+   "type": "equipment",
+   "slot": "accessory",
+   "rarity": "rare",
+   "icon": "💍",
+   "desc": "Marca siempre las doce. Eso es suerte.",
+   "bonus": {
+    "mag": 15,
+    "spd": 8,
+    "hp": 100
+   },
+   "price": 2800,
+   "tier": 4,
+   "mprice": 1640
+  },
+  "ambrosia_alba": {
+   "name": "Ambrosía del Alba",
+   "type": "consumable",
+   "icon": "🍯",
+   "price": 260,
+   "desc": "Restaura 450 PV.",
+   "effect": {
+    "heal": 450
+   }
+  },
+  "rocio_noche": {
+   "name": "Rocío de la Noche",
+   "type": "consumable",
+   "icon": "🌙",
+   "price": 280,
+   "desc": "Restaura 140 PM.",
+   "effect": {
+    "mp": 140
+   }
+  },
+  "engranaje_quieto": {
+   "name": "Engranaje Quieto",
+   "type": "key",
+   "icon": "⚙️",
+   "desc": "Un engranaje que no gira desde hace siglos."
+  },
+  "esquirla_prisma": {
+   "name": "Esquirla de Prisma",
+   "type": "key",
+   "icon": "🔷",
+   "desc": "Un pedazo de cristal que descompone la luz."
+  },
+  "estrella_bolsillo": {
+   "name": "Estrella de Bolsillo",
+   "type": "gift",
+   "icon": "⭐",
+   "price": 300,
+   "desc": "Una estrella diminuta atrapada en un frasco. Yukine la abraza.",
+   "affinity": 10
+  },
+  "g1_common_filo": {
+   "name": "Espada de Aprendiz",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "common",
+   "tier": 1,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza común.",
+   "bonus": {
+    "atk": 4
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 60
+  },
+  "g1_common_grimorio": {
+   "name": "Grimorio de Aprendiz",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "common",
+   "tier": 1,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza común.",
+   "bonus": {
+    "mag": 4
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 60
+  },
+  "g1_common_guantelete": {
+   "name": "Guanteletes de Aprendiz",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "common",
+   "tier": 1,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza común.",
+   "bonus": {
+    "atk": 3,
+    "def": 1,
+    "hp": 6
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 60
+  },
+  "g1_common_pistola": {
+   "name": "Pistola de Aprendiz",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "common",
+   "tier": 1,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza común.",
+   "bonus": {
+    "atk": 4,
+    "spd": 1
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 60
+  },
+  "g1_common_a_pesada": {
+   "name": "Coraza de Aprendiz",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "common",
+   "tier": 1,
+   "desc": "Armadura pesada de rareza común.",
+   "bonus": {
+    "def": 3,
+    "hp": 9
+   },
+   "mprice": 40,
+   "gen": true,
+   "price": 20
+  },
+  "g1_common_a_ligera": {
+   "name": "Manto de Aprendiz",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "common",
+   "tier": 1,
+   "desc": "Armadura ligera de rareza común.",
+   "bonus": {
+    "def": 2,
+    "mag": 1,
+    "spd": 1,
+    "mp": 4
+   },
+   "mprice": 40,
+   "gen": true,
+   "price": 20
+  },
+  "g1_common_x_a": {
+   "name": "Amuleto de Aprendiz",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "common",
+   "tier": 1,
+   "desc": "Accesorio de rareza común.",
+   "bonus": {
+    "hp": 14,
+    "def": 1
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 30
+  },
+  "g1_common_x_b": {
+   "name": "Anillo de Aprendiz",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "common",
+   "tier": 1,
+   "desc": "Accesorio de rareza común.",
+   "bonus": {
+    "atk": 1,
+    "mag": 1,
+    "spd": 1
+   },
+   "mprice": 60,
+   "gen": true,
+   "price": 30
+  },
+  "g1_uncommon_filo": {
+   "name": "Katana de Cazador",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "uncommon",
+   "tier": 1,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza poco común.",
+   "bonus": {
+    "atk": 6
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_uncommon_grimorio": {
+   "name": "Códice de Cazador",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "uncommon",
+   "tier": 1,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza poco común.",
+   "bonus": {
+    "mag": 6,
+    "mp": 5
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_uncommon_guantelete": {
+   "name": "Puños de Cazador",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "uncommon",
+   "tier": 1,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza poco común.",
+   "bonus": {
+    "atk": 5,
+    "def": 2,
+    "hp": 9
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_uncommon_pistola": {
+   "name": "Revólver de Cazador",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "uncommon",
+   "tier": 1,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza poco común.",
+   "bonus": {
+    "atk": 5,
+    "spd": 1
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_uncommon_a_pesada": {
+   "name": "Peto de Cazador",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "uncommon",
+   "tier": 1,
+   "desc": "Armadura pesada de rareza poco común.",
+   "bonus": {
+    "def": 5,
+    "hp": 15
+   },
+   "mprice": 130,
+   "gen": true
+  },
+  "g1_uncommon_a_ligera": {
+   "name": "Túnica de Cazador",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "uncommon",
+   "tier": 1,
+   "desc": "Armadura ligera de rareza poco común.",
+   "bonus": {
+    "def": 4,
+    "mag": 2,
+    "spd": 1,
+    "mp": 8
+   },
+   "mprice": 130,
+   "gen": true
+  },
+  "g1_uncommon_x_a": {
+   "name": "Talismán de Cazador",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "uncommon",
+   "tier": 1,
+   "desc": "Accesorio de rareza poco común.",
+   "bonus": {
+    "hp": 22,
+    "def": 2
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_uncommon_x_b": {
+   "name": "Pendiente de Cazador",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "uncommon",
+   "tier": 1,
+   "desc": "Accesorio de rareza poco común.",
+   "bonus": {
+    "atk": 2,
+    "mag": 2,
+    "spd": 1
+   },
+   "mprice": 190,
+   "gen": true
+  },
+  "g1_rare_filo": {
+   "name": "Sable del Bosque Rojo",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "rare",
+   "tier": 1,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza rara.",
+   "bonus": {
+    "atk": 9,
+    "spd": 1
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_rare_grimorio": {
+   "name": "Tomo del Bosque Rojo",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "rare",
+   "tier": 1,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza rara.",
+   "bonus": {
+    "mag": 9,
+    "mp": 7
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_rare_guantelete": {
+   "name": "Manoplas del Bosque Rojo",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "rare",
+   "tier": 1,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza rara.",
+   "bonus": {
+    "atk": 8,
+    "def": 2,
+    "hp": 14
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_rare_pistola": {
+   "name": "Pistola del Bosque Rojo",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "rare",
+   "tier": 1,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza rara.",
+   "bonus": {
+    "atk": 8,
+    "spd": 2
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_rare_a_pesada": {
+   "name": "Armadura del Bosque Rojo",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "rare",
+   "tier": 1,
+   "desc": "Armadura pesada de rareza rara.",
+   "bonus": {
+    "def": 8,
+    "hp": 24
+   },
+   "mprice": 410,
+   "gen": true
+  },
+  "g1_rare_a_ligera": {
+   "name": "Capa del Bosque Rojo",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "rare",
+   "tier": 1,
+   "desc": "Armadura ligera de rareza rara.",
+   "bonus": {
+    "def": 6,
+    "mag": 3,
+    "spd": 1,
+    "mp": 12
+   },
+   "mprice": 410,
+   "gen": true
+  },
+  "g1_rare_x_a": {
+   "name": "Colgante del Bosque Rojo",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "rare",
+   "tier": 1,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "hp": 36,
+    "def": 2
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_rare_x_b": {
+   "name": "Brazalete del Bosque Rojo",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "rare",
+   "tier": 1,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "atk": 3,
+    "mag": 3,
+    "spd": 1
+   },
+   "mprice": 520,
+   "gen": true
+  },
+  "g1_epic_filo": {
+   "name": "Hoja del Zorro Plateado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "epic",
+   "tier": 1,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza épica.",
+   "bonus": {
+    "atk": 12,
+    "spd": 1
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_grimorio": {
+   "name": "Libro del Zorro Plateado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "epic",
+   "tier": 1,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza épica.",
+   "bonus": {
+    "mag": 12,
+    "mp": 10
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_guantelete": {
+   "name": "Guanteletes del Zorro Plateado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "epic",
+   "tier": 1,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza épica.",
+   "bonus": {
+    "atk": 10,
+    "def": 3,
+    "hp": 18
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_pistola": {
+   "name": "Revólver del Zorro Plateado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "epic",
+   "tier": 1,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza épica.",
+   "bonus": {
+    "atk": 11,
+    "spd": 2
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_a_pesada": {
+   "name": "Coraza del Zorro Plateado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "epic",
+   "tier": 1,
+   "desc": "Armadura pesada de rareza épica.",
+   "bonus": {
+    "def": 12,
+    "hp": 36
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_a_ligera": {
+   "name": "Manto del Zorro Plateado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "epic",
+   "tier": 1,
+   "desc": "Armadura ligera de rareza épica.",
+   "bonus": {
+    "def": 8,
+    "mag": 5,
+    "spd": 2,
+    "mp": 18
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_x_a": {
+   "name": "Medallón del Zorro Plateado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "epic",
+   "tier": 1,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "hp": 54,
+    "def": 4,
+    "ultGain": 2
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g1_epic_x_b": {
+   "name": "Sello del Zorro Plateado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "epic",
+   "tier": 1,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "atk": 4,
+    "mag": 4,
+    "spd": 1,
+    "ultGain": 2
+   },
+   "mprice": 1090,
+   "gen": true
+  },
+  "g2_uncommon_filo": {
+   "name": "Espada de Escarcha Leve",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "uncommon",
+   "tier": 2,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza poco común.",
+   "bonus": {
+    "atk": 9
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 320
+  },
+  "g2_uncommon_grimorio": {
+   "name": "Grimorio de Escarcha Leve",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "uncommon",
+   "tier": 2,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza poco común.",
+   "bonus": {
+    "mag": 9,
+    "mp": 7
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 320
+  },
+  "g2_uncommon_guantelete": {
+   "name": "Guanteletes de Escarcha Leve",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "uncommon",
+   "tier": 2,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza poco común.",
+   "bonus": {
+    "atk": 8,
+    "def": 2,
+    "hp": 14
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 320
+  },
+  "g2_uncommon_pistola": {
+   "name": "Pistola de Escarcha Leve",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "uncommon",
+   "tier": 2,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza poco común.",
+   "bonus": {
+    "atk": 8,
+    "spd": 2
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 320
+  },
+  "g2_uncommon_a_pesada": {
+   "name": "Coraza de Escarcha Leve",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "uncommon",
+   "tier": 2,
+   "desc": "Armadura pesada de rareza poco común.",
+   "bonus": {
+    "def": 8,
+    "hp": 24
+   },
+   "mprice": 330,
+   "gen": true,
+   "price": 150
+  },
+  "g2_uncommon_a_ligera": {
+   "name": "Manto de Escarcha Leve",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "uncommon",
+   "tier": 2,
+   "desc": "Armadura ligera de rareza poco común.",
+   "bonus": {
+    "def": 6,
+    "mag": 3,
+    "spd": 1,
+    "mp": 12
+   },
+   "mprice": 330,
+   "gen": true,
+   "price": 150
+  },
+  "g2_uncommon_x_a": {
+   "name": "Amuleto de Escarcha Leve",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "uncommon",
+   "tier": 2,
+   "desc": "Accesorio de rareza poco común.",
+   "bonus": {
+    "hp": 36,
+    "def": 2
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 190
+  },
+  "g2_uncommon_x_b": {
+   "name": "Anillo de Escarcha Leve",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "uncommon",
+   "tier": 2,
+   "desc": "Accesorio de rareza poco común.",
+   "bonus": {
+    "atk": 3,
+    "mag": 3,
+    "spd": 1
+   },
+   "mprice": 420,
+   "gen": true,
+   "price": 190
+  },
+  "g2_rare_filo": {
+   "name": "Katana de la Ventisca",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "rare",
+   "tier": 2,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza rara.",
+   "bonus": {
+    "atk": 13,
+    "spd": 1
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 680
+  },
+  "g2_rare_grimorio": {
+   "name": "Códice de la Ventisca",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "rare",
+   "tier": 2,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza rara.",
+   "bonus": {
+    "mag": 13,
+    "mp": 10
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 680
+  },
+  "g2_rare_guantelete": {
+   "name": "Puños de la Ventisca",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "rare",
+   "tier": 2,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza rara.",
+   "bonus": {
+    "atk": 11,
+    "def": 3,
+    "hp": 20
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 680
+  },
+  "g2_rare_pistola": {
+   "name": "Revólver de la Ventisca",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "rare",
+   "tier": 2,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza rara.",
+   "bonus": {
+    "atk": 12,
+    "spd": 2
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 680
+  },
+  "g2_rare_a_pesada": {
+   "name": "Peto de la Ventisca",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "rare",
+   "tier": 2,
+   "desc": "Armadura pesada de rareza rara.",
+   "bonus": {
+    "def": 11,
+    "hp": 33
+   },
+   "mprice": 770,
+   "gen": true,
+   "price": 350
+  },
+  "g2_rare_a_ligera": {
+   "name": "Túnica de la Ventisca",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "rare",
+   "tier": 2,
+   "desc": "Armadura ligera de rareza rara.",
+   "bonus": {
+    "def": 8,
+    "mag": 4,
+    "spd": 2,
+    "mp": 16
+   },
+   "mprice": 770,
+   "gen": true,
+   "price": 350
+  },
+  "g2_rare_x_a": {
+   "name": "Talismán de la Ventisca",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "rare",
+   "tier": 2,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "hp": 50,
+    "def": 3
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 490
+  },
+  "g2_rare_x_b": {
+   "name": "Pendiente de la Ventisca",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "rare",
+   "tier": 2,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "atk": 5,
+    "mag": 5,
+    "spd": 2
+   },
+   "mprice": 1080,
+   "gen": true,
+   "price": 490
+  },
+  "g2_epic_filo": {
+   "name": "Sable del Lobo Blanco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "epic",
+   "tier": 2,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza épica.",
+   "bonus": {
+    "atk": 17,
+    "spd": 1
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g2_epic_grimorio": {
+   "name": "Tomo del Lobo Blanco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "epic",
+   "tier": 2,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza épica.",
+   "bonus": {
+    "mag": 17,
+    "mp": 14
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g2_epic_guantelete": {
+   "name": "Manoplas del Lobo Blanco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "epic",
+   "tier": 2,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza épica.",
+   "bonus": {
+    "atk": 14,
+    "def": 4,
+    "hp": 26
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g2_epic_pistola": {
+   "name": "Pistola del Lobo Blanco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "epic",
+   "tier": 2,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza épica.",
+   "bonus": {
+    "atk": 15,
+    "spd": 3
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g2_epic_a_pesada": {
+   "name": "Armadura del Lobo Blanco",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "epic",
+   "tier": 2,
+   "desc": "Armadura pesada de rareza épica.",
+   "bonus": {
+    "def": 15,
+    "hp": 45
+   },
+   "mprice": 1710,
+   "gen": true
+  },
+  "g2_epic_a_ligera": {
+   "name": "Capa del Lobo Blanco",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "epic",
+   "tier": 2,
+   "desc": "Armadura ligera de rareza épica.",
+   "bonus": {
+    "def": 10,
+    "mag": 6,
+    "spd": 2,
+    "mp": 22
+   },
+   "mprice": 1710,
+   "gen": true
+  },
+  "g2_epic_x_a": {
+   "name": "Colgante del Lobo Blanco",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "epic",
+   "tier": 2,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "hp": 68,
+    "def": 4,
+    "ultGain": 2
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g2_epic_x_b": {
+   "name": "Brazalete del Lobo Blanco",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "epic",
+   "tier": 2,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "atk": 6,
+    "mag": 6,
+    "spd": 2,
+    "ultGain": 2
+   },
+   "mprice": 2200,
+   "gen": true
+  },
+  "g3_rare_filo": {
+   "name": "Espada de Brasa Viva",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "rare",
+   "tier": 3,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza rara.",
+   "bonus": {
+    "atk": 21,
+    "spd": 2
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1760
+  },
+  "g3_rare_grimorio": {
+   "name": "Grimorio de Brasa Viva",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "rare",
+   "tier": 3,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza rara.",
+   "bonus": {
+    "mag": 21,
+    "mp": 17
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1760
+  },
+  "g3_rare_guantelete": {
+   "name": "Guanteletes de Brasa Viva",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "rare",
+   "tier": 3,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza rara.",
+   "bonus": {
+    "atk": 18,
+    "def": 5,
+    "hp": 32
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1760
+  },
+  "g3_rare_pistola": {
+   "name": "Pistola de Brasa Viva",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "rare",
+   "tier": 3,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza rara.",
+   "bonus": {
+    "atk": 19,
+    "spd": 4
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1760
+  },
+  "g3_rare_a_pesada": {
+   "name": "Coraza de Brasa Viva",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "rare",
+   "tier": 3,
+   "desc": "Armadura pesada de rareza rara.",
+   "bonus": {
+    "def": 18,
+    "hp": 54
+   },
+   "mprice": 2070,
+   "gen": true,
+   "price": 930
+  },
+  "g3_rare_a_ligera": {
+   "name": "Manto de Brasa Viva",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "rare",
+   "tier": 3,
+   "desc": "Armadura ligera de rareza rara.",
+   "bonus": {
+    "def": 13,
+    "mag": 7,
+    "spd": 3,
+    "mp": 27
+   },
+   "mprice": 2070,
+   "gen": true,
+   "price": 930
+  },
+  "g3_rare_x_a": {
+   "name": "Amuleto de Brasa Viva",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "rare",
+   "tier": 3,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "hp": 81,
+    "def": 5
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1270
+  },
+  "g3_rare_x_b": {
+   "name": "Anillo de Brasa Viva",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "rare",
+   "tier": 3,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "atk": 7,
+    "mag": 7,
+    "spd": 3
+   },
+   "mprice": 2820,
+   "gen": true,
+   "price": 1270
+  },
+  "g3_epic_filo": {
+   "name": "Katana del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "epic",
+   "tier": 3,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza épica.",
+   "bonus": {
+    "atk": 26,
+    "spd": 2
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2700
+  },
+  "g3_epic_grimorio": {
+   "name": "Códice del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "epic",
+   "tier": 3,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza épica.",
+   "bonus": {
+    "mag": 26,
+    "mp": 21
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2700
+  },
+  "g3_epic_guantelete": {
+   "name": "Puños del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "epic",
+   "tier": 3,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza épica.",
+   "bonus": {
+    "atk": 22,
+    "def": 6,
+    "hp": 39
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2700
+  },
+  "g3_epic_pistola": {
+   "name": "Revólver del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "epic",
+   "tier": 3,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza épica.",
+   "bonus": {
+    "atk": 23,
+    "spd": 5
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2700
+  },
+  "g3_epic_a_pesada": {
+   "name": "Peto del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "epic",
+   "tier": 3,
+   "desc": "Armadura pesada de rareza épica.",
+   "bonus": {
+    "def": 22,
+    "hp": 66
+   },
+   "mprice": 3680,
+   "gen": true,
+   "price": 1660
+  },
+  "g3_epic_a_ligera": {
+   "name": "Túnica del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "epic",
+   "tier": 3,
+   "desc": "Armadura ligera de rareza épica.",
+   "bonus": {
+    "def": 15,
+    "mag": 9,
+    "spd": 3,
+    "mp": 33
+   },
+   "mprice": 3680,
+   "gen": true,
+   "price": 1660
+  },
+  "g3_epic_x_a": {
+   "name": "Talismán del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "epic",
+   "tier": 3,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "hp": 99,
+    "def": 7,
+    "ultGain": 2
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2310
+  },
+  "g3_epic_x_b": {
+   "name": "Pendiente del Desierto Carmesí",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "epic",
+   "tier": 3,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "atk": 9,
+    "mag": 9,
+    "spd": 3,
+    "ultGain": 2
+   },
+   "mprice": 5140,
+   "gen": true,
+   "price": 2310
+  },
+  "g4_rare_filo": {
+   "name": "Espada del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "rare",
+   "tier": 4,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza rara.",
+   "bonus": {
+    "atk": 30,
+    "spd": 2
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 3600
+  },
+  "g4_rare_grimorio": {
+   "name": "Grimorio del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "rare",
+   "tier": 4,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza rara.",
+   "bonus": {
+    "mag": 30,
+    "mp": 24
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 3600
+  },
+  "g4_rare_guantelete": {
+   "name": "Guanteletes del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "rare",
+   "tier": 4,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza rara.",
+   "bonus": {
+    "atk": 26,
+    "def": 8,
+    "hp": 45
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 3600
+  },
+  "g4_rare_pistola": {
+   "name": "Pistola del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "rare",
+   "tier": 4,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza rara.",
+   "bonus": {
+    "atk": 27,
+    "spd": 5
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 3600
+  },
+  "g4_rare_a_pesada": {
+   "name": "Coraza del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "rare",
+   "tier": 4,
+   "desc": "Armadura pesada de rareza rara.",
+   "bonus": {
+    "def": 25,
+    "hp": 75
+   },
+   "mprice": 4000,
+   "gen": true,
+   "price": 1800
+  },
+  "g4_rare_a_ligera": {
+   "name": "Manto del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "rare",
+   "tier": 4,
+   "desc": "Armadura ligera de rareza rara.",
+   "bonus": {
+    "def": 18,
+    "mag": 10,
+    "spd": 4,
+    "mp": 38
+   },
+   "mprice": 4000,
+   "gen": true,
+   "price": 1800
+  },
+  "g4_rare_x_a": {
+   "name": "Amuleto del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "rare",
+   "tier": 4,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "hp": 112,
+    "def": 8
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 2590
+  },
+  "g4_rare_x_b": {
+   "name": "Anillo del Amanecer Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "rare",
+   "tier": 4,
+   "desc": "Accesorio de rareza rara.",
+   "bonus": {
+    "atk": 10,
+    "mag": 10,
+    "spd": 4
+   },
+   "mprice": 5760,
+   "gen": true,
+   "price": 2590
+  },
+  "g4_epic_filo": {
+   "name": "Katana de Luz Sólida",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "epic",
+   "tier": 4,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza épica.",
+   "bonus": {
+    "atk": 35,
+    "spd": 3
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4900
+  },
+  "g4_epic_grimorio": {
+   "name": "Códice de Luz Sólida",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "epic",
+   "tier": 4,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza épica.",
+   "bonus": {
+    "mag": 35,
+    "mp": 28
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4900
+  },
+  "g4_epic_guantelete": {
+   "name": "Puños de Luz Sólida",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "epic",
+   "tier": 4,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza épica.",
+   "bonus": {
+    "atk": 30,
+    "def": 9,
+    "hp": 52
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4900
+  },
+  "g4_epic_pistola": {
+   "name": "Revólver de Luz Sólida",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "epic",
+   "tier": 4,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza épica.",
+   "bonus": {
+    "atk": 32,
+    "spd": 6
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4900
+  },
+  "g4_epic_a_pesada": {
+   "name": "Peto de Luz Sólida",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "epic",
+   "tier": 4,
+   "desc": "Armadura pesada de rareza épica.",
+   "bonus": {
+    "def": 29,
+    "hp": 87
+   },
+   "mprice": 6390,
+   "gen": true,
+   "price": 2880
+  },
+  "g4_epic_a_ligera": {
+   "name": "Túnica de Luz Sólida",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "epic",
+   "tier": 4,
+   "desc": "Armadura ligera de rareza épica.",
+   "bonus": {
+    "def": 20,
+    "mag": 12,
+    "spd": 4,
+    "mp": 44
+   },
+   "mprice": 6390,
+   "gen": true,
+   "price": 2880
+  },
+  "g4_epic_x_a": {
+   "name": "Talismán de Luz Sólida",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "epic",
+   "tier": 4,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "hp": 130,
+    "def": 9,
+    "ultGain": 2
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4190
+  },
+  "g4_epic_x_b": {
+   "name": "Pendiente de Luz Sólida",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "epic",
+   "tier": 4,
+   "desc": "Accesorio de rareza épica.",
+   "bonus": {
+    "atk": 12,
+    "mag": 12,
+    "spd": 4,
+    "ultGain": 2
+   },
+   "mprice": 9310,
+   "gen": true,
+   "price": 4190
+  },
+  "g4_legendary_filo": {
+   "name": "Sable de la Hora Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "legendary",
+   "tier": 4,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza legendaria.",
+   "bonus": {
+    "atk": 41,
+    "spd": 3
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_legendary_grimorio": {
+   "name": "Tomo de la Hora Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "legendary",
+   "tier": 4,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza legendaria.",
+   "bonus": {
+    "mag": 41,
+    "mp": 33
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_legendary_guantelete": {
+   "name": "Manoplas de la Hora Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "legendary",
+   "tier": 4,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza legendaria.",
+   "bonus": {
+    "atk": 35,
+    "def": 10,
+    "hp": 62
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_legendary_pistola": {
+   "name": "Pistola de la Hora Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "legendary",
+   "tier": 4,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza legendaria.",
+   "bonus": {
+    "atk": 37,
+    "spd": 7
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_legendary_a_pesada": {
+   "name": "Armadura de la Hora Quieta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Armadura pesada de rareza legendaria.",
+   "bonus": {
+    "def": 34,
+    "hp": 102
+   },
+   "mprice": 10170,
+   "gen": true,
+   "price": 8140
+  },
+  "g4_legendary_a_ligera": {
+   "name": "Capa de la Hora Quieta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Armadura ligera de rareza legendaria.",
+   "bonus": {
+    "def": 24,
+    "mag": 14,
+    "spd": 5,
+    "mp": 51
+   },
+   "mprice": 10170,
+   "gen": true,
+   "price": 8140
+  },
+  "g4_legendary_x_a": {
+   "name": "Colgante de la Hora Quieta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Accesorio de rareza legendaria.",
+   "bonus": {
+    "hp": 153,
+    "def": 10,
+    "ultGain": 3
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_legendary_x_b": {
+   "name": "Brazalete de la Hora Quieta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Accesorio de rareza legendaria.",
+   "bonus": {
+    "atk": 14,
+    "mag": 14,
+    "spd": 5,
+    "ultGain": 3
+   },
+   "mprice": 14790,
+   "gen": true,
+   "price": 11830
+  },
+  "g4_mythic_filo": {
+   "name": "Hoja del Alba Primordial",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "mythic",
+   "tier": 4,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza mítica.",
+   "bonus": {
+    "atk": 49,
+    "spd": 4
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "g4_mythic_grimorio": {
+   "name": "Libro del Alba Primordial",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "mythic",
+   "tier": 4,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza mítica.",
+   "bonus": {
+    "mag": 49,
+    "mp": 39
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "g4_mythic_guantelete": {
+   "name": "Guanteletes del Alba Primordial",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "mythic",
+   "tier": 4,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza mítica.",
+   "bonus": {
+    "atk": 42,
+    "def": 12,
+    "hp": 74
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "g4_mythic_pistola": {
+   "name": "Revólver del Alba Primordial",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "mythic",
+   "tier": 4,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza mítica.",
+   "bonus": {
+    "atk": 44,
+    "spd": 9
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "g4_mythic_a_pesada": {
+   "name": "Coraza del Alba Primordial",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "mythic",
+   "tier": 4,
+   "desc": "Armadura pesada de rareza mítica.",
+   "bonus": {
+    "def": 40,
+    "hp": 120
+   },
+   "mprice": 16000,
+   "gen": true
+  },
+  "g4_mythic_a_ligera": {
+   "name": "Manto del Alba Primordial",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "mythic",
+   "tier": 4,
+   "desc": "Armadura ligera de rareza mítica.",
+   "bonus": {
+    "def": 28,
+    "mag": 16,
+    "spd": 6,
+    "mp": 60
+   },
+   "mprice": 16000,
+   "gen": true
+  },
+  "g4_mythic_x_a": {
+   "name": "Medallón del Alba Primordial",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "mythic",
+   "tier": 4,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "hp": 180,
+    "def": 12,
+    "ultGain": 4
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "g4_mythic_x_b": {
+   "name": "Sello del Alba Primordial",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "mythic",
+   "tier": 4,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "atk": 17,
+    "mag": 17,
+    "spd": 6,
+    "ultGain": 4
+   },
+   "mprice": 24010,
+   "gen": true
+  },
+  "reliquia_tercer_rayo": {
+   "name": "Reliquia del Tercer Rayo",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🌞",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Tibia como una mano que te sujeta.",
+   "bonus": {
+    "atk": 17,
+    "mag": 19,
+    "hp": 170,
+    "spd": 7,
+    "ultGain": 3
+   },
+   "mprice": 6900
+  },
+  "reliquia_cuarto_rayo": {
+   "name": "Reliquia del Cuarto Rayo",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🌅",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Pesa poco y se siente como una promesa.",
+   "bonus": {
+    "atk": 19,
+    "mag": 21,
+    "hp": 190,
+    "spd": 8,
+    "ultGain": 4
+   },
+   "mprice": 8460
+  },
+  "petalo_solar": {
+   "name": "Pétalo Solar",
+   "type": "key",
+   "icon": "🌻",
+   "desc": "Un pétalo que no se marchita nunca."
+  },
+  "polvo_vigilia": {
+   "name": "Polvo de Vigilia",
+   "type": "key",
+   "icon": "✨",
+   "desc": "Polvo de ala. Quien lo respira, bosteza."
+  },
+  "frasco_noche": {
+   "name": "Frasco de Noche",
+   "type": "key",
+   "icon": "🌑",
+   "desc": "Un frasco con un trocito de la Primera Noche. Hay estrellas dentro."
+  },
+  "girasol_eterno": {
+   "name": "Girasol Eterno",
+   "type": "gift",
+   "icon": "🌻",
+   "price": 320,
+   "desc": "Un girasol que mira siempre a quien lo sostiene. Yukine lo abraza.",
+   "affinity": 9
+  },
+  "manta_noche": {
+   "name": "Manta de Noche",
+   "type": "gift",
+   "icon": "🛏️",
+   "price": 340,
+   "desc": "Una manta con estrellas cosidas. Dormir bajo ella es dormir bajo un cielo.",
+   "affinity": 12
+  },
+  "g5_legendary_filo": {
+   "name": "Espada de la Marea Alta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "legendary",
+   "tier": 5,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza legendaria.",
+   "bonus": {
+    "atk": 52,
+    "spd": 4
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_legendary_grimorio": {
+   "name": "Grimorio de la Marea Alta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "legendary",
+   "tier": 5,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza legendaria.",
+   "bonus": {
+    "mag": 52,
+    "mp": 42
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_legendary_guantelete": {
+   "name": "Guanteletes de la Marea Alta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "legendary",
+   "tier": 5,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza legendaria.",
+   "bonus": {
+    "atk": 44,
+    "def": 13,
+    "hp": 78
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_legendary_pistola": {
+   "name": "Pistola de la Marea Alta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "legendary",
+   "tier": 5,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza legendaria.",
+   "bonus": {
+    "atk": 47,
+    "spd": 9
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_legendary_a_pesada": {
+   "name": "Coraza de la Marea Alta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "legendary",
+   "tier": 5,
+   "desc": "Armadura pesada de rareza legendaria.",
+   "bonus": {
+    "def": 44,
+    "hp": 132
+   },
+   "mprice": 17040,
+   "gen": true,
+   "price": 7670
+  },
+  "g5_legendary_a_ligera": {
+   "name": "Manto de la Marea Alta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "legendary",
+   "tier": 5,
+   "desc": "Armadura ligera de rareza legendaria.",
+   "bonus": {
+    "def": 31,
+    "mag": 18,
+    "spd": 7,
+    "mp": 66
+   },
+   "mprice": 17040,
+   "gen": true,
+   "price": 7670
+  },
+  "g5_legendary_x_a": {
+   "name": "Amuleto de la Marea Alta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "legendary",
+   "tier": 5,
+   "desc": "Accesorio de rareza legendaria.",
+   "bonus": {
+    "hp": 198,
+    "def": 13,
+    "ultGain": 3
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_legendary_x_b": {
+   "name": "Anillo de la Marea Alta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "legendary",
+   "tier": 5,
+   "desc": "Accesorio de rareza legendaria.",
+   "bonus": {
+    "atk": 18,
+    "mag": 18,
+    "spd": 6,
+    "ultGain": 3
+   },
+   "mprice": 23800,
+   "gen": true,
+   "price": 10710
+  },
+  "g5_mythic_filo": {
+   "name": "Katana del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "mythic",
+   "tier": 5,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza mítica.",
+   "bonus": {
+    "atk": 60,
+    "spd": 5
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_mythic_grimorio": {
+   "name": "Códice del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "mythic",
+   "tier": 5,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza mítica.",
+   "bonus": {
+    "mag": 60,
+    "mp": 48
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_mythic_guantelete": {
+   "name": "Puños del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "mythic",
+   "tier": 5,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza mítica.",
+   "bonus": {
+    "atk": 51,
+    "def": 15,
+    "hp": 90
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_mythic_pistola": {
+   "name": "Revólver del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "mythic",
+   "tier": 5,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza mítica.",
+   "bonus": {
+    "atk": 54,
+    "spd": 11
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_mythic_a_pesada": {
+   "name": "Peto del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Armadura pesada de rareza mítica.",
+   "bonus": {
+    "def": 52,
+    "hp": 156
+   },
+   "mprice": 27040,
+   "gen": true
+  },
+  "g5_mythic_a_ligera": {
+   "name": "Túnica del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Armadura ligera de rareza mítica.",
+   "bonus": {
+    "def": 36,
+    "mag": 21,
+    "spd": 8,
+    "mp": 78
+   },
+   "mprice": 27040,
+   "gen": true
+  },
+  "g5_mythic_x_a": {
+   "name": "Talismán del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "hp": 234,
+    "def": 16,
+    "ultGain": 4
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_mythic_x_b": {
+   "name": "Pendiente del Abismo Cristalino",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "atk": 21,
+    "mag": 21,
+    "spd": 7,
+    "ultGain": 4
+   },
+   "mprice": 36000,
+   "gen": true
+  },
+  "g5_celestial_filo": {
+   "name": "Sable de la Primera Ola",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "celestial",
+   "tier": 5,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza celestial.",
+   "bonus": {
+    "atk": 70,
+    "spd": 6
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g5_celestial_grimorio": {
+   "name": "Tomo de la Primera Ola",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "celestial",
+   "tier": 5,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza celestial.",
+   "bonus": {
+    "mag": 70,
+    "mp": 56
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g5_celestial_guantelete": {
+   "name": "Manoplas de la Primera Ola",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "celestial",
+   "tier": 5,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza celestial.",
+   "bonus": {
+    "atk": 60,
+    "def": 18,
+    "hp": 105
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g5_celestial_pistola": {
+   "name": "Pistola de la Primera Ola",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "celestial",
+   "tier": 5,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza celestial.",
+   "bonus": {
+    "atk": 63,
+    "spd": 13
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g5_celestial_a_pesada": {
+   "name": "Armadura de la Primera Ola",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "celestial",
+   "tier": 5,
+   "desc": "Armadura pesada de rareza celestial.",
+   "bonus": {
+    "def": 62,
+    "hp": 186
+   },
+   "mprice": 43050,
+   "gen": true
+  },
+  "g5_celestial_a_ligera": {
+   "name": "Capa de la Primera Ola",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "celestial",
+   "tier": 5,
+   "desc": "Armadura ligera de rareza celestial.",
+   "bonus": {
+    "def": 43,
+    "mag": 25,
+    "spd": 9,
+    "mp": 93
+   },
+   "mprice": 43050,
+   "gen": true
+  },
+  "g5_celestial_x_a": {
+   "name": "Colgante de la Primera Ola",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "celestial",
+   "tier": 5,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "hp": 279,
+    "def": 19,
+    "ultGain": 5
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g5_celestial_x_b": {
+   "name": "Brazalete de la Primera Ola",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "celestial",
+   "tier": 5,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "atk": 24,
+    "mag": 24,
+    "spd": 8,
+    "ultGain": 5
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "lagrima_alba": {
+   "name": "Lágrima del Alba",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💧",
+   "rarity": "legendary",
+   "tier": 4,
+   "desc": "Una lágrima dorada que no se seca. Pesa como un abrazo.",
+   "bonus": {
+    "atk": 21,
+    "mag": 24,
+    "hp": 210,
+    "spd": 9,
+    "ultGain": 4
+   },
+   "mprice": 22000
+  },
+  "petalo_alba": {
+   "name": "Pétalo del Alba",
+   "type": "key",
+   "icon": "🌹",
+   "desc": "Un pétalo dorado que huele a sueño."
+  },
+  "perla_bruma": {
+   "name": "Perla de Bruma",
+   "type": "key",
+   "icon": "🫧",
+   "desc": "Una perla pálida que guarda un poco de niebla."
+  },
+  "rosa_dorada": {
+   "name": "Rosa Dorada",
+   "type": "gift",
+   "icon": "🌹",
+   "price": 360,
+   "desc": "Una rosa del palacio que no se marchita. Yukine la guarda junto al pecho.",
+   "affinity": 10
+  },
+  "concha_memoria": {
+   "name": "Concha de Memoria",
+   "type": "gift",
+   "icon": "🐚",
+   "price": 380,
+   "desc": "Si la acercas al oído, oyes un aullido muy lejano. Yukine se queda en silencio.",
+   "affinity": 12
   }
+ }
 }

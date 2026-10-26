@@ -357,10 +357,10 @@
    "emoji": "🐺",
    "color": "#ff4d6d",
    "level": 4,
-   "hp": 304,
-   "atk": 20,
+   "hp": 380,
+   "atk": 22,
    "def": 9,
-   "mag": 5,
+   "mag": 6,
    "spd": 14,
    "xp": 90,
    "gold": 40,
@@ -407,17 +407,18 @@
      "weight": 2,
      "chargeText": "¡El Lobo Alfa se agazapa, listo para saltar!"
     }
-   ]
+   ],
+   "ability": "intimidacion"
   },
   "golem_escarcha": {
    "name": "Gólem de Escarcha Corrupta",
    "emoji": "🧊",
    "color": "#6fd6ff",
    "level": 7,
-   "hp": 512,
-   "atk": 25,
+   "hp": 640,
+   "atk": 28,
    "def": 20,
-   "mag": 18,
+   "mag": 20,
    "spd": 6,
    "xp": 150,
    "gold": 70,
@@ -456,17 +457,18 @@
      },
      "weight": 2
     }
-   ]
+   ],
+   "ability": "dureza"
   },
   "guardian_musgo": {
    "name": "Guardián del Musgo",
    "emoji": "🗿",
    "color": "#6bbf59",
    "level": 5,
-   "hp": 480,
-   "atk": 22,
+   "hp": 600,
+   "atk": 24,
    "def": 13,
-   "mag": 10,
+   "mag": 11,
    "spd": 7,
    "xp": 120,
    "gold": 60,
@@ -509,17 +511,18 @@
     "charge": 1,
     "every": 4,
     "chargeText": "¡El suelo tiembla! ¡El Guardián alza ambos puños!"
-   }
+   },
+   "ability": "dureza"
   },
   "madre_arana": {
    "name": "Madre Tejeraíces",
    "emoji": "🕸️",
    "color": "#b07aff",
    "level": 7,
-   "hp": 704,
-   "atk": 27,
+   "hp": 915,
+   "atk": 30,
    "def": 14,
-   "mag": 18,
+   "mag": 20,
    "spd": 12,
    "xp": 190,
    "gold": 90,
@@ -565,17 +568,18 @@
     "charge": 1,
     "every": 4,
     "chargeText": "¡Madre Tejeraíces hila un tapiz de raíces sobre vosotros!"
-   }
+   },
+   "ability": "amor_filial"
   },
   "kagero": {
    "name": "Kagerō, la Zorra Espectral",
    "emoji": "🦊",
    "color": "#ff9a3c",
    "level": 8,
-   "hp": 832,
-   "atk": 18,
+   "hp": 974,
+   "atk": 20,
    "def": 12,
-   "mag": 34,
+   "mag": 38,
    "spd": 16,
    "dodgeBonus": 0.1,
    "xp": 240,
@@ -623,17 +627,19 @@
     "charge": 1,
     "every": 4,
     "chargeText": "¡Kagerō baila! ¡Nueve colas de fuego giran a su alrededor!"
-   }
+   },
+   "ability": "evasion",
+   "enrageAbility": "ilusion"
   },
   "kurogane": {
    "name": "Kurogane, el Oni de Hierro",
    "emoji": "👹",
    "color": "#ff2d2d",
    "level": 10,
-   "hp": 1440,
-   "atk": 36,
+   "hp": 1944,
+   "atk": 41,
    "def": 18,
-   "mag": 16,
+   "mag": 18,
    "spd": 10,
    "xp": 520,
    "gold": 300,
@@ -693,6 +699,6204 @@
     "charge": 1,
     "every": 4,
     "chargeText": "¡El cielo se tiñe de rojo! ¡Kurogane alza su martillo hacia el sol!"
+   },
+   "ability": "dureza",
+   "enrageAbility": "intimidacion"
+  },
+  "lobo_ventisca": {
+   "name": "Lobo de Ventisca",
+   "emoji": "🐺",
+   "color": "#9fd8ff",
+   "level": 10,
+   "hp": 300,
+   "atk": 42,
+   "def": 20,
+   "mag": 10,
+   "spd": 16,
+   "xp": 134,
+   "gold": 50,
+   "skills": [
+    {
+     "name": "Mordisco Gélido",
+     "power": 48,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "atk"
+    },
+    {
+     "name": "Aullido Gélido",
+     "power": 0,
+     "element": "hielo",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "desc": "Un lobo blanco con la mirada vacía."
+  },
+  "golem_nieve": {
+   "name": "Gólem de Nieve",
+   "emoji": "⛄",
+   "color": "#e8f4ff",
+   "level": 11,
+   "hp": 380,
+   "atk": 45,
+   "def": 28,
+   "mag": 10,
+   "spd": 6,
+   "xp": 151,
+   "gold": 54,
+   "skills": [
+    {
+     "name": "Puño de Nieve",
+     "power": 50,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Alud",
+     "power": 40,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.4
+     }
+    }
+   ],
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "loot": [
+    {
+     "item": "hongo_nieve",
+     "chance": 0.3
+    }
+   ],
+   "desc": "Nieve compactada con rencor."
+  },
+  "espectro_ventisca": {
+   "name": "Espectro de la Ventisca",
+   "emoji": "👻",
+   "color": "#bfe6ff",
+   "level": 11,
+   "hp": 260,
+   "atk": 20,
+   "def": 16,
+   "mag": 52,
+   "spd": 15,
+   "xp": 151,
+   "gold": 54,
+   "skills": [
+    {
+     "name": "Susurro Gélido",
+     "power": 50,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Escarcha Mental",
+     "power": 0,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "dodgeBonus": 0.15,
+   "desc": "La voz del frío."
+  },
+  "cuervo_gelido": {
+   "name": "Cuervo Gélido",
+   "emoji": "🐦‍⬛",
+   "color": "#7a8ac8",
+   "level": 10,
+   "hp": 230,
+   "atk": 40,
+   "def": 12,
+   "mag": 25,
+   "spd": 18,
+   "xp": 134,
+   "gold": 50,
+   "skills": [
+    {
+     "name": "Picotazo",
+     "power": 42,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Graznido",
+     "power": 32,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "weak": [
+    "rayo",
+    "fuego"
+   ],
+   "dodgeBonus": 0.18,
+   "desc": "Veloz y cruel."
+  },
+  "oni_nevado": {
+   "name": "Oni Nevado",
+   "emoji": "👹",
+   "color": "#8fd3ff",
+   "level": 12,
+   "hp": 420,
+   "atk": 52,
+   "def": 26,
+   "mag": 15,
+   "spd": 9,
+   "xp": 168,
+   "gold": 58,
+   "skills": [
+    {
+     "name": "Garrotazo Helado",
+     "power": 52,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Golpe Cargado Glacial",
+     "power": 105,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡El oni nevado alza un bloque de hielo!"
+    }
+   ],
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "desc": "Un soldado del Cazador Gélido."
+  },
+  "yeti_demonio": {
+   "name": "Yeti Demoníaco",
+   "emoji": "🦍",
+   "color": "#d8e4ff",
+   "level": 12,
+   "hp": 500,
+   "atk": 56,
+   "def": 24,
+   "mag": 12,
+   "spd": 8,
+   "xp": 168,
+   "gold": 58,
+   "skills": [
+    {
+     "name": "Zarpazo",
+     "power": 52,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Rugido Atronador",
+     "power": 0,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    },
+    {
+     "name": "Avalancha",
+     "power": 72,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 2,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El yeti golpea el hielo! ¡El monte se viene abajo!"
+    }
+   ],
+   "weak": [
+    "fuego"
+   ],
+   "loot": [
+    {
+     "item": "hongo_nieve",
+     "chance": 0.35
+    },
+    {
+     "item": "queso_yak",
+     "chance": 0.35
+    }
+   ],
+   "desc": "Peludo, enorme y furioso."
+  },
+  "monje_corrupto": {
+   "name": "Monje Corrupto",
+   "emoji": "🧘",
+   "color": "#c27aff",
+   "level": 13,
+   "hp": 420,
+   "atk": 20,
+   "def": 22,
+   "mag": 58,
+   "spd": 12,
+   "xp": 186,
+   "gold": 62,
+   "skills": [
+    {
+     "name": "Rayo Sombrío",
+     "power": 55,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Maldición Débil",
+     "power": 0,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    },
+    {
+     "name": "Plegaria Oscura",
+     "power": 40,
+     "element": "arcano",
+     "target": "party",
+     "weight": 1,
+     "type": "heal"
+    }
+   ],
+   "weak": [
+    "hielo",
+    "rayo"
+   ],
+   "desc": "Un monje que rezó al dios equivocado.",
+   "loot": [
+    {
+     "item": "incienso_raro",
+     "chance": 0.4
+    }
+   ]
+  },
+  "guerrero_oni": {
+   "name": "Guerrero Oni",
+   "emoji": "⚔️",
+   "color": "#ff6b3d",
+   "level": 14,
+   "hp": 560,
+   "atk": 62,
+   "def": 30,
+   "mag": 14,
+   "spd": 11,
+   "xp": 204,
+   "gold": 66,
+   "skills": [
+    {
+     "name": "Tajo Demoníaco",
+     "power": 55,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Guardia de Hierro",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Estocada Cargada",
+     "power": 108,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡El guerrero oni afila su estocada!"
+    }
+   ],
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "loot": [
+    {
+     "item": "pocion",
+     "chance": 0.3
+    }
+   ],
+   "desc": "Élite de la guardia de Reiga."
+  },
+  "ave_trueno": {
+   "name": "Ave del Trueno",
+   "emoji": "🦅",
+   "color": "#ffe14d",
+   "level": 14,
+   "hp": 380,
+   "atk": 22,
+   "def": 14,
+   "mag": 60,
+   "spd": 17,
+   "xp": 204,
+   "gold": 66,
+   "skills": [
+    {
+     "name": "Rayo Picado",
+     "power": 55,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Tormenta Eléctrica",
+     "power": 45,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag",
+     "effect": {
+      "stun": 0.2
+     }
+    }
+   ],
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "dodgeBonus": 0.12,
+   "desc": "Truena allá donde bate las alas."
+  },
+  "rin": {
+   "name": "Rin, la Espadachina Errante",
+   "emoji": "🥷",
+   "color": "#4aa8ff",
+   "level": 13,
+   "hp": 1610,
+   "atk": 65,
+   "def": 22,
+   "mag": 22,
+   "spd": 19,
+   "xp": 742,
+   "gold": 122,
+   "skills": [
+    {
+     "name": "Tajo Doble",
+     "power": 50,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Paso de Viento",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "dodge_up": 3
+     }
+    },
+    {
+     "name": "Corte de Luna",
+     "power": 95,
+     "element": "imbuido",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡Rin envaina la katana y respira hondo!"
+    }
+   ],
+   "boss": true,
+   "dodgeBonus": 0.15,
+   "immune": [
+    "freeze"
+   ],
+   "desc": "Una espadachina que solo respeta a quien se mide con ella."
+  },
+  "reina_cristal": {
+   "name": "Reina de Cristal",
+   "emoji": "👸",
+   "color": "#7de8ff",
+   "level": 11,
+   "hp": 1800,
+   "atk": 35,
+   "def": 26,
+   "mag": 55,
+   "spd": 10,
+   "xp": 603,
+   "gold": 114,
+   "skills": [
+    {
+     "name": "Lanza de Cristal",
+     "power": 55,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Prisma",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡Los cristales de la reina resuenan! ¡Su magia se desborda!"
+   },
+   "ultimate": {
+    "name": "Coro de Cristales",
+    "power": 80,
+    "element": "hielo",
+    "stat": "mag",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Los cristales de la cueva empiezan a cantar!"
+   },
+   "desc": "La soberana de una cueva de hielo vivo.",
+   "ability": "dureza",
+   "enrageAbility": "fragilidad"
+  },
+  "lobo_ancestral": {
+   "name": "Lobo Ancestral Corrupto",
+   "emoji": "🐺",
+   "color": "#ff4d6d",
+   "level": 13,
+   "hp": 2400,
+   "atk": 70,
+   "def": 26,
+   "mag": 22,
+   "spd": 15,
+   "xp": 742,
+   "gold": 122,
+   "skills": [
+    {
+     "name": "Zarpazo Oscuro",
+     "power": 58,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aullido de la Manada",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    },
+    {
+     "name": "Salto Mortal",
+     "power": 110,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡El anciano se agazapa con los ojos rojos!"
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Lobo Ancestral aúlla! ¡La corrupción lo consume!"
+   },
+   "desc": "Uno de los mayores de la manada de Yukine, corrompido por Reiga.",
+   "ability": "intimidacion",
+   "enrageAbility": "regeneracion"
+  },
+  "monje_silencio": {
+   "name": "Monje del Silencio",
+   "emoji": "🔕",
+   "color": "#9a8cff",
+   "level": 12,
+   "hp": 1530,
+   "atk": 26,
+   "def": 24,
+   "mag": 62,
+   "spd": 12,
+   "xp": 672,
+   "gold": 118,
+   "skills": [
+    {
+     "name": "Rayo del Voto",
+     "power": 55,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Sello Mudo",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 2
+     }
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "hielo",
+    "rayo"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡El monje rompe su voto de silencio con un grito!"
+   },
+   "ultimate": {
+    "name": "Voto de Silencio Eterno",
+    "power": 90,
+    "element": "arcano",
+    "stat": "mag",
+    "target": "all_enemies",
+    "effect": {
+     "slow": 0.6
+    },
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todo ruido se apaga! ¡El monje junta las manos!"
+   },
+   "desc": "Guardián del primer sello de Shirogane."
+  },
+  "wendigo": {
+   "name": "Wendigo de Escarcha",
+   "emoji": "🦌",
+   "color": "#d6f0ff",
+   "level": 13,
+   "hp": 2280,
+   "atk": 73,
+   "def": 28,
+   "mag": 33,
+   "spd": 10,
+   "xp": 742,
+   "gold": 122,
+   "skills": [
+    {
+     "name": "Garra Helada",
+     "power": 58,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Hambre Eterna",
+     "power": 30,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.5
+     }
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡El wendigo aúlla de hambre! ¡La escarcha lo envuelve!"
+   },
+   "ultimate": {
+    "name": "Vacío Blanco",
+    "power": 100,
+    "element": "hielo",
+    "stat": "mag",
+    "target": "all_enemies",
+    "effect": {
+     "freeze": 0.4
+    },
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El viento se detiene! ¡El wendigo abre la boca al vacío!"
+   },
+   "desc": "Guardián del segundo sello.",
+   "ability": "aura_helada"
+  },
+  "tengu_campanas": {
+   "name": "Tengu de las Mil Campanas",
+   "emoji": "🐦",
+   "color": "#ffd479",
+   "level": 14,
+   "hp": 2640,
+   "atk": 53,
+   "def": 30,
+   "mag": 68,
+   "spd": 20,
+   "xp": 814,
+   "gold": 126,
+   "skills": [
+    {
+     "name": "Abanico Cortante",
+     "power": 58,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Viento Cortante",
+     "power": 40,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Campanada",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "dodgeBonus": 0.15,
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡Las mil campanas suenan a la vez!"
+   },
+   "ultimate": {
+    "name": "Repique Final",
+    "power": 110,
+    "element": "rayo",
+    "stat": "mag",
+    "target": "all_enemies",
+    "effect": {
+     "stun": 0.4
+    },
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Las campanas empiezan a repicar! ¡El sonido se hace insoportable!"
+   },
+   "desc": "Guardián del tercer sello."
+  },
+  "sombra_alfa": {
+   "name": "Sombra del Alfa Ancestral",
+   "emoji": "🌑",
+   "color": "#6f7bff",
+   "level": 15,
+   "hp": 3120,
+   "atk": 77,
+   "def": 30,
+   "mag": 55,
+   "spd": 13,
+   "xp": 888,
+   "gold": 130,
+   "skills": [
+    {
+     "name": "Zarpazo Espectral",
+     "power": 60,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Eco del Aullido",
+     "power": 45,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Mirada Gélida",
+     "power": 0,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 2
+     }
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "arcano"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡La sombra aúlla con la voz de Yukine!"
+   },
+   "ultimate": {
+    "name": "Aullido Ancestral",
+    "power": 115,
+    "element": "oscuro",
+    "stat": "mag",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La sombra echa la cabeza atrás! ¡Un aullido ancestral resuena!"
+   },
+   "desc": "Guardián del cuarto sello. Un eco corrompido del primer lobo blanco.",
+   "ability": "evasion",
+   "enrageAbility": "intimidacion"
+  },
+  "reiga": {
+   "name": "Reiga, el Cazador Gélido",
+   "emoji": "🏹",
+   "color": "#6fd6ff",
+   "level": 16,
+   "hp": 3409,
+   "atk": 76,
+   "def": 34,
+   "mag": 43,
+   "spd": 13,
+   "xp": 963,
+   "gold": 134,
+   "skills": [
+    {
+     "name": "Lanza de Hielo Negro",
+     "power": 65,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Armadura de Escarcha",
+     "power": 0,
+     "element": "hielo",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Cacería",
+     "power": 95,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡Reiga fija la mirada en su presa y tensa el arco!"
+    }
+   ],
+   "boss": true,
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "espada_reiga",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Reiga arranca su capa! ¡El frío a su alrededor se vuelve mortal!"
+   },
+   "ultimate": {
+    "name": "Cacería Final",
+    "power": 150,
+    "element": "hielo",
+    "stat": "mag",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El cielo se oscurece! ¡Reiga dispara una flecha hecha de ventisca!"
+   },
+   "desc": "El general demonio que cazó a la manada blanca.",
+   "ability": "aura_helada",
+   "enrageAbility": "intimidacion"
+  },
+  "oni_ceniza": {
+   "name": "Oni de Ceniza",
+   "emoji": "👹",
+   "color": "#ff7a3a",
+   "level": 16,
+   "hp": 600,
+   "atk": 78,
+   "def": 32,
+   "mag": 38,
+   "spd": 14,
+   "xp": 241,
+   "gold": 80,
+   "skills": [
+    {
+     "name": "Garrote Ardiente",
+     "power": 52,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Rugido",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "desc": "Un oni cubierto de ceniza caliente.",
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "loot": [
+    {
+     "item": "cristal_ceniza",
+     "chance": 0.4
+    }
+   ]
+  },
+  "perro_brasa": {
+   "name": "Sabueso de Brasas",
+   "emoji": "🐕‍🔥",
+   "color": "#ff5a1a",
+   "level": 16,
+   "hp": 480,
+   "atk": 74,
+   "def": 32,
+   "mag": 38,
+   "spd": 20,
+   "xp": 241,
+   "gold": 80,
+   "skills": [
+    {
+     "name": "Mordisco Candente",
+     "power": 46,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "burn": 0.4
+     }
+    },
+    {
+     "name": "Aullido Rojo",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 2,
+      "dodge_up": 2
+     }
+    }
+   ],
+   "desc": "Un perro de ojos de carbón.",
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ]
+  },
+  "kitsune_carmesi": {
+   "name": "Kitsune Carmesí",
+   "emoji": "🦊",
+   "color": "#ff4d6d",
+   "level": 17,
+   "hp": 510,
+   "atk": 78,
+   "def": 34,
+   "mag": 54,
+   "spd": 18,
+   "xp": 260,
+   "gold": 85,
+   "skills": [
+    {
+     "name": "Fuego Fatuo",
+     "power": 50,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Ilusión",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 2
+     }
+    },
+    {
+     "name": "Danza de las Nueve Colas",
+     "power": 36,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una zorra de nueve colas rojas que baila con fuego fatuo.",
+   "dodgeBonus": 0.12,
+   "weak": [
+    "rayo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "loot": [
+    {
+     "item": "flor_alba",
+     "chance": 0.4
+    }
+   ]
+  },
+  "arana_sangre": {
+   "name": "Araña de Sangre",
+   "emoji": "🕷️",
+   "color": "#b3122e",
+   "level": 17,
+   "hp": 638,
+   "atk": 78,
+   "def": 34,
+   "mag": 41,
+   "spd": 14,
+   "xp": 260,
+   "gold": 85,
+   "skills": [
+    {
+     "name": "Colmillos Venenosos",
+     "power": 50,
+     "element": "veneno",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "poison": 0.5
+     }
+    },
+    {
+     "name": "Telaraña",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "slow": 3
+     }
+    }
+   ],
+   "desc": "Una araña grande como un caballo.",
+   "weak": [
+    "fuego"
+   ]
+  },
+  "samurai_hueco": {
+   "name": "Samurái Hueco",
+   "emoji": "🥷",
+   "color": "#9aa0b5",
+   "level": 18,
+   "hp": 742,
+   "atk": 84,
+   "def": 47,
+   "mag": 44,
+   "spd": 14,
+   "xp": 279,
+   "gold": 90,
+   "skills": [
+    {
+     "name": "Corte Iaijutsu",
+     "power": 58,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Postura Inmóvil",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Tajo Perfecto",
+     "power": 95,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El samurái hueco envaina lentamente su katana!"
+    }
+   ],
+   "desc": "Una armadura vacía que aún recuerda cómo luchar.",
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "immune": [
+    "poison"
+   ],
+   "loot": [
+    {
+     "item": "cristal_ceniza",
+     "chance": 0.35
+    }
+   ]
+  },
+  "gaki_hambriento": {
+   "name": "Gaki Hambriento",
+   "emoji": "👻",
+   "color": "#7d5fb5",
+   "level": 18,
+   "hp": 742,
+   "atk": 84,
+   "def": 36,
+   "mag": 44,
+   "spd": 14,
+   "xp": 279,
+   "gold": 90,
+   "skills": [
+    {
+     "name": "Zarpazo Voraz",
+     "power": 50,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Devorar",
+     "power": 40,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "heal"
+    }
+   ],
+   "desc": "Un espíritu famélico, con la barriga hinchada.",
+   "weak": [
+    "arcano"
+   ],
+   "resist": [
+    "oscuro",
+    "veneno"
+   ],
+   "loot": [
+    {
+     "item": "brasa_eterna",
+     "chance": 0.35
+    }
+   ]
+  },
+  "garuda_cenizas": {
+   "name": "Garuda de Cenizas",
+   "emoji": "🦅",
+   "color": "#ffb040",
+   "level": 19,
+   "hp": 712,
+   "atk": 88,
+   "def": 38,
+   "mag": 46,
+   "spd": 19,
+   "xp": 299,
+   "gold": 95,
+   "skills": [
+    {
+     "name": "Pico Relámpago",
+     "power": 56,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Batir de Alas",
+     "power": 38,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Picado Mortal",
+     "power": 100,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡La garuda asciende hasta perderse en el cielo rojo!"
+    }
+   ],
+   "desc": "Un ave de fuego del tamaño de una casa.",
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego",
+    "rayo"
+   ]
+  },
+  "shikigami_sello": {
+   "name": "Shikigami del Sello",
+   "emoji": "📜",
+   "color": "#e8d7a0",
+   "level": 19,
+   "hp": 641,
+   "atk": 88,
+   "def": 38,
+   "mag": 59,
+   "spd": 17,
+   "xp": 299,
+   "gold": 95,
+   "skills": [
+    {
+     "name": "Sello Cortante",
+     "power": 52,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Bendición Oscura",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 2,
+      "def_up": 2
+     }
+    },
+    {
+     "name": "Maldición",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Un papel mágico que cobró vida.",
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "loot": [
+    {
+     "item": "flor_alba",
+     "chance": 0.35
+    }
+   ]
+  },
+  "oni_general": {
+   "name": "Oni General",
+   "emoji": "👺",
+   "color": "#c01f1f",
+   "level": 20,
+   "hp": 1050,
+   "atk": 101,
+   "def": 48,
+   "mag": 48,
+   "spd": 14,
+   "xp": 318,
+   "gold": 100,
+   "skills": [
+    {
+     "name": "Hachazo Brutal",
+     "power": 64,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Orden de Ataque",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 4
+     }
+    },
+    {
+     "name": "Rompecráneos",
+     "power": 110,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El general alza su hacha con las dos manos!"
+    }
+   ],
+   "desc": "Un oni de élite con armadura de guerra.",
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "cristal_ceniza",
+     "chance": 0.5
+    }
+   ]
+  },
+  "demonio_alba": {
+   "name": "Demonio del Alba",
+   "emoji": "😈",
+   "color": "#ff9a9a",
+   "level": 20,
+   "hp": 825,
+   "atk": 92,
+   "def": 40,
+   "mag": 63,
+   "spd": 17,
+   "xp": 318,
+   "gold": 100,
+   "skills": [
+    {
+     "name": "Garras de Luz Roja",
+     "power": 58,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Estallido del Alba",
+     "power": 44,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Sombra",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "dodge_up": 3
+     }
+    }
+   ],
+   "desc": "Una criatura de piel carmesí nacida del amanecer maldito.",
+   "weak": [
+    "arcano"
+   ],
+   "resist": [
+    "oscuro",
+    "fuego"
+   ],
+   "loot": [
+    {
+     "item": "flor_alba",
+     "chance": 0.3
+    }
+   ]
+  },
+  "guardia_rey": {
+   "name": "Guardia del Rey Demonio",
+   "emoji": "⚔️",
+   "color": "#6b1a2b",
+   "level": 21,
+   "hp": 1024,
+   "atk": 97,
+   "def": 55,
+   "mag": 51,
+   "spd": 14,
+   "xp": 338,
+   "gold": 105,
+   "skills": [
+    {
+     "name": "Estocada Real",
+     "power": 64,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Escudo Real",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Barrido",
+     "power": 44,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "desc": "Un soldado de élite del castillo.",
+   "weak": [
+    "arcano",
+    "rayo"
+   ]
+  },
+  "hechicero_alba": {
+   "name": "Hechicero del Alba",
+   "emoji": "🧙",
+   "color": "#ff6bd6",
+   "level": 21,
+   "hp": 788,
+   "atk": 97,
+   "def": 42,
+   "mag": 76,
+   "spd": 17,
+   "xp": 338,
+   "gold": 105,
+   "skills": [
+    {
+     "name": "Rayo Carmesí",
+     "power": 62,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Tormenta de Cenizas",
+     "power": 46,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Sello de Debilidad",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 2
+     }
+    }
+   ],
+   "desc": "Un brujo que canaliza la luz roja.",
+   "weak": [
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ]
+  },
+  "verdugo_carmesi": {
+   "name": "Verdugo Carmesí",
+   "emoji": "🪓",
+   "color": "#990011",
+   "level": 22,
+   "hp": 1320,
+   "atk": 117,
+   "def": 53,
+   "mag": 53,
+   "spd": 14,
+   "xp": 359,
+   "gold": 110,
+   "skills": [
+    {
+     "name": "Decapitación",
+     "power": 72,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Marca de Sangre",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    },
+    {
+     "name": "Guillotina",
+     "power": 125,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El verdugo alza su hacha hasta rozar el techo!"
+    }
+   ],
+   "desc": "El ejecutor del Rey Demonio. Nunca falla.",
+   "weak": [
+    "arcano",
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ]
+  },
+  "kaen_oni": {
+   "name": "Kaen, el Oni de Ceniza",
+   "emoji": "🔥",
+   "color": "#ff5a1a",
+   "level": 17,
+   "hp": 4485,
+   "atk": 89,
+   "def": 34,
+   "mag": 46,
+   "spd": 14,
+   "xp": 1038,
+   "gold": 238,
+   "skills": [
+    {
+     "name": "Puño de Magma",
+     "power": 62,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Armadura de Brasa",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Erupción",
+     "power": 44,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El guardián del primer sello. Su cuerpo es una brasa viva.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "anillo_brasa",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Kaen se enciende como un volcán! ¡La ceniza arde a su alrededor!"
+   },
+   "ultimate": {
+    "name": "Cráter Carmesí",
+    "power": 140,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El suelo se agrieta! ¡Kaen reúne toda su magma!"
+   }
+  },
+  "jorogumo_carmesi": {
+   "name": "Jorōgumo Carmesí",
+   "emoji": "🕸️",
+   "color": "#d4144a",
+   "level": 18,
+   "hp": 4934,
+   "atk": 94,
+   "def": 36,
+   "mag": 50,
+   "spd": 14,
+   "xp": 1115,
+   "gold": 252,
+   "skills": [
+    {
+     "name": "Hilo Cortante",
+     "power": 62,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2
+    },
+    {
+     "name": "Veneno de Viuda",
+     "power": 50,
+     "element": "veneno",
+     "target": "enemy",
+     "weight": 2,
+     "effect": {
+      "poison": 0.8
+     }
+    },
+    {
+     "name": "Capullo",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "slow": 3,
+      "atk_down": 2
+     }
+    }
+   ],
+   "desc": "Una mujer-araña de seda roja y mirada hipnótica.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "immune": [
+    "poison",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "corazon_jorogumo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Jorōgumo se desgarra el kimono! ¡Ocho patas surgen de su espalda!"
+   },
+   "ultimate": {
+    "name": "Red de la Viuda",
+    "power": 150,
+    "element": "veneno",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Cientos de hilos rojos cubren la sala!"
+   },
+   "ability": "evasion",
+   "enrageAbility": "espinas"
+  },
+  "espejo_del_vengador": {
+   "name": "El Espejo del Vengador",
+   "emoji": "🪞",
+   "color": "#cfd8ff",
+   "level": 19,
+   "hp": 5744,
+   "atk": 99,
+   "def": 38,
+   "mag": 52,
+   "spd": 14,
+   "xp": 1193,
+   "gold": 266,
+   "skills": [
+    {
+     "name": "Tajo Reflejado",
+     "power": 66,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Furia Reflejada",
+     "power": 58,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Máscara de Odio",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "dodge_up": 2
+     }
+    }
+   ],
+   "desc": "Un reflejo oscuro de ti mismo, con tu mirada y tu ira.",
+   "boss": true,
+   "weak": [
+    "arcano"
+   ],
+   "resist": [
+    "fisico"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "dodgeBonus": 0.08,
+   "loot": [
+    {
+     "item": "espejo_vengador",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Espejo se resquebraja! ¡Tu reflejo te mira con odio puro!"
+   },
+   "ultimate": {
+    "name": "Venganza Absoluta",
+    "power": 155,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El reflejo alza tu propia espada! ¡Va a devolverte todo tu rencor!"
+   }
+  },
+  "gashadokuro": {
+   "name": "Gashadokuro",
+   "emoji": "💀",
+   "color": "#e8e2cf",
+   "level": 20,
+   "hp": 6440,
+   "atk": 107,
+   "def": 40,
+   "mag": 56,
+   "spd": 14,
+   "xp": 1273,
+   "gold": 280,
+   "skills": [
+    {
+     "name": "Zarpazo de Huesos",
+     "power": 68,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aliento de Tumba",
+     "power": 50,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Lamento",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 2
+     }
+    }
+   ],
+   "desc": "Un esqueleto gigante formado por las almas de los caídos.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "oscuro",
+    "hielo"
+   ],
+   "immune": [
+    "freeze",
+    "stun",
+    "poison"
+   ],
+   "loot": [
+    {
+     "item": "hueso_gashadokuro",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Gashadokuro reúne más huesos! ¡Sus cuencas arden en azul!"
+   },
+   "ultimate": {
+    "name": "Coro de las Mil Lápidas",
+    "power": 160,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Mil lamentos suben de la tierra! ¡Los huesos tiemblan al unísono!"
+   }
+  },
+  "centinela_alba": {
+   "name": "Centinela del Alba Rota",
+   "emoji": "🌅",
+   "color": "#ffd479",
+   "level": 21,
+   "hp": 7146,
+   "atk": 112,
+   "def": 42,
+   "mag": 58,
+   "spd": 14,
+   "xp": 1353,
+   "gold": 294,
+   "skills": [
+    {
+     "name": "Lanza de Aurora",
+     "power": 70,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Escudo Solar",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 4
+     }
+    },
+    {
+     "name": "Destello",
+     "power": 52,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Un guardián de luz y piedra que lleva siglos custodiando el último sello.",
+   "boss": true,
+   "weak": [
+    "oscuro"
+   ],
+   "resist": [
+    "arcano",
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "loot": [
+    {
+     "item": "armadura_alba",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Centinela se parte! ¡Una luz cegadora brota de sus grietas!"
+   },
+   "ultimate": {
+    "name": "Amanecer Final",
+    "power": 165,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El cielo entero se vuelve blanco! ¡El Centinela concentra el alba en su lanza!"
+   },
+   "ability": "dureza",
+   "enrageAbility": "evasion"
+  },
+  "fenix_caido": {
+   "name": "Fénix Caído",
+   "emoji": "🐦‍🔥",
+   "color": "#ffcf40",
+   "level": 19,
+   "hp": 5589,
+   "atk": 99,
+   "def": 38,
+   "mag": 52,
+   "spd": 14,
+   "xp": 1193,
+   "gold": 266,
+   "skills": [
+    {
+     "name": "Pico de Fuego",
+     "power": 64,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Alas de Brasa",
+     "power": 48,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Renacer",
+     "power": 80,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "heal"
+    }
+   ],
+   "desc": "Un ave sagrada ennegrecida por el odio.",
+   "boss": true,
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "burn"
+   ],
+   "loot": [
+    {
+     "item": "pluma_fenix_eterna",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.4,
+    "text": "¡El Fénix arde con una llama blanca!"
+   },
+   "ultimate": {
+    "name": "Resurrección Solar",
+    "power": 150,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El Fénix se eleva envuelto en llamas blancas!"
+   },
+   "ability": "regeneracion",
+   "enrageAbility": "aura_brasas"
+  },
+  "kurogane_renacido": {
+   "name": "Kurogane Renacido",
+   "emoji": "👹",
+   "color": "#ff2d2d",
+   "level": 22,
+   "hp": 7894,
+   "atk": 121,
+   "def": 44,
+   "mag": 63,
+   "spd": 14,
+   "xp": 1433,
+   "gold": 308,
+   "skills": [
+    {
+     "name": "Mazazo de Hierro",
+     "power": 76,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Armadura Infernal",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3,
+      "atk_up": 2
+     }
+    },
+    {
+     "name": "Brasas del Yugo",
+     "power": 50,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El Oni de Hierro, devuelto de entre los muertos con el doble de furia.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "martillo_kurogane",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Kurogane ruge! ¡Esta vez no habrá piedad!"
+   },
+   "ultimate": {
+    "name": "Martillo del Eclipse Carmesí II",
+    "power": 170,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 3,
+    "chargeText": "¡El cielo se tiñe de sangre! ¡Kurogane alza su martillo hacia el sol!"
+   },
+   "ability": "intimidacion",
+   "enrageAbility": "aura_brasas"
+  },
+  "yamikage": {
+   "name": "Yamikage, el Rey Demonio",
+   "emoji": "👑",
+   "color": "#ff1744",
+   "level": 22,
+   "hp": 7803,
+   "atk": 126,
+   "def": 44,
+   "mag": 60,
+   "spd": 14,
+   "xp": 1433,
+   "gold": 308,
+   "skills": [
+    {
+     "name": "Tajo del Rey",
+     "power": 76,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Llama Negra",
+     "power": 64,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Decreto de Sombras",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 3
+     }
+    },
+    {
+     "name": "Juicio Real",
+     "power": 110,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "charge": 1,
+     "chargeText": "¡Yamikage levanta la mano! ¡La sombra del castillo se cierne sobre vosotros!"
+    }
+   ],
+   "desc": "El soberano de los demonios. Su sola presencia hace sangrar el cielo.",
+   "boss": true,
+   "weak": [
+    "arcano"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "filo_yamikage",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Yamikage desgarra su capa! ¡Su armadura se agrieta y de ella brota luz roja!"
+   },
+   "ultimate": {
+    "name": "Eclipse del Rey",
+    "power": 170,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Yamikage extiende los brazos! ¡El sol rojo se oscurece!"
+   },
+   "ability": "dureza",
+   "enrageAbility": "intimidacion"
+  },
+  "yamikage_alba": {
+   "name": "Yamikage, Alba Eterna",
+   "emoji": "🌑",
+   "color": "#ffffff",
+   "level": 22,
+   "hp": 9302,
+   "atk": 133,
+   "def": 44,
+   "mag": 60,
+   "spd": 14,
+   "xp": 1433,
+   "gold": 308,
+   "skills": [
+    {
+     "name": "Tajo del Alba Eterna",
+     "power": 82,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Estrellas Rojas",
+     "power": 62,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Corona de Espinas",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 4,
+      "atk_down": 3
+     }
+    },
+    {
+     "name": "Rugido del Fin",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "desc": "Yamikage fusionado con el amanecer maldito. Su forma verdadera.",
+   "boss": true,
+   "weak": [
+    "arcano"
+   ],
+   "resist": [
+    "oscuro",
+    "fuego"
+   ],
+   "immune": [
+    "freeze",
+    "stun",
+    "poison"
+   ],
+   "enrage": {
+    "hp": 0.35,
+    "text": "¡Yamikage grita! ¡Su cuerpo se desintegra en pétalos de luz negra!"
+   },
+   "ultimate": {
+    "name": "El Fin del Mundo",
+    "power": 190,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 3,
+    "chargeText": "¡El cielo se abre! ¡Yamikage canaliza el vacío entero!"
+   },
+   "ability": "intimidacion",
+   "enrageAbility": "aura_brasas"
+  },
+  "daichi_duelo": {
+   "name": "Daichi, el Capitán Veterano",
+   "emoji": "🗡️",
+   "color": "#c8b27a",
+   "level": 19,
+   "hp": 3120,
+   "atk": 106,
+   "def": 48,
+   "mag": 51,
+   "spd": 14,
+   "xp": 596,
+   "gold": 150,
+   "skills": [
+    {
+     "name": "Tajo de Veterano",
+     "power": 62,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Voz de Mando",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "def_up": 2
+     }
+    },
+    {
+     "name": "Golpe Certero",
+     "power": 100,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡Daichi se coloca en guardia baja y respira hondo!"
+    }
+   ],
+   "desc": "Un veterano humano que lleva veinte años resistiendo en el Yermo.",
+   "weak": [
+    "arcano"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "boss": true
+  },
+  "jabali_corrupto": {
+   "name": "Jabalí Corrupto",
+   "emoji": "🐗",
+   "color": "#a0522d",
+   "level": 4,
+   "hp": 150,
+   "atk": 23,
+   "def": 10,
+   "mag": 6,
+   "spd": 10,
+   "xp": 28,
+   "gold": 20,
+   "skills": [
+    {
+     "name": "Embestida Brutal",
+     "power": 30,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Chillido",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 2
+     }
+    }
+   ],
+   "desc": "Un jabalí enorme con venas moradas bajo la piel."
+  },
+  "bandido_oni": {
+   "name": "Oni Bandolero",
+   "emoji": "🗡️",
+   "color": "#c0392b",
+   "level": 5,
+   "hp": 165,
+   "atk": 25,
+   "def": 11,
+   "mag": 8,
+   "spd": 12,
+   "xp": 41,
+   "gold": 25,
+   "skills": [
+    {
+     "name": "Tajo Sucio",
+     "power": 32,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Dagas",
+     "power": 22,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Robar el Aliento",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 2
+     }
+    }
+   ],
+   "desc": "Un oni joven con cuchillos oxidados y mala actitud.",
+   "weak": [
+    "arcano"
+   ],
+   "loot": [
+    {
+     "item": "barril_sake",
+     "chance": 0.4
+    }
+   ]
+  },
+  "rana_veneno": {
+   "name": "Rana Venenosa",
+   "emoji": "🐸",
+   "color": "#6fbf3a",
+   "level": 5,
+   "hp": 120,
+   "atk": 18,
+   "def": 8,
+   "mag": 14,
+   "spd": 13,
+   "xp": 41,
+   "gold": 25,
+   "skills": [
+    {
+     "name": "Lengüetazo",
+     "power": 24,
+     "element": "veneno",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "poison": 0.5
+     }
+    },
+    {
+     "name": "Croar",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "dodge_up": 2
+     }
+    }
+   ],
+   "desc": "Una rana del tamaño de un perro, de piel brillante y amarilla.",
+   "weak": [
+    "fuego"
+   ],
+   "immune": [
+    "poison"
+   ],
+   "loot": [
+    {
+     "item": "hierba_pantano",
+     "chance": 0.4
+    },
+    {
+     "item": "perla_lago_menor",
+     "chance": 0.25
+    }
+   ]
+  },
+  "espiritu_ramas": {
+   "name": "Espíritu de las Ramas",
+   "emoji": "🌿",
+   "color": "#4caf50",
+   "level": 6,
+   "hp": 150,
+   "atk": 20,
+   "def": 10,
+   "mag": 24,
+   "spd": 12,
+   "xp": 56,
+   "gold": 30,
+   "skills": [
+    {
+     "name": "Látigo de Raíces",
+     "power": 32,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "slow": 0.3
+     }
+    },
+    {
+     "name": "Susurro",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 2
+     }
+    }
+   ],
+   "desc": "Un espíritu de madera retorcida que susurra nombres olvidados.",
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "loot": [
+    {
+     "item": "red_antigua",
+     "chance": 0.35
+    }
+   ]
+  },
+  "guardia_hierro": {
+   "name": "Guardia de Hierro Negro",
+   "emoji": "🛡️",
+   "color": "#5b5b6b",
+   "level": 7,
+   "hp": 240,
+   "atk": 30,
+   "def": 22,
+   "mag": 6,
+   "spd": 7,
+   "xp": 73,
+   "gold": 35,
+   "skills": [
+    {
+     "name": "Mazazo",
+     "power": 36,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Postura de Hierro",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Un guardia de armadura pesada al servicio de los oni.",
+   "weak": [
+    "rayo",
+    "arcano"
+   ],
+   "immune": [
+    "stun"
+   ]
+  },
+  "capitan_tessen": {
+   "name": "Capitán Tessen",
+   "emoji": "🗡️",
+   "color": "#e04a2a",
+   "level": 5,
+   "hp": 660,
+   "atk": 29,
+   "def": 14,
+   "mag": 10,
+   "spd": 13,
+   "xp": 165,
+   "gold": 70,
+   "skills": [
+    {
+     "name": "Tajo Doble",
+     "power": 34,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Dagas",
+     "power": 24,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Grito de Saqueo",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "desc": "Cabecilla de los bandoleros del Puesto de Vigía. Cree que el miedo es una profesión.",
+   "boss": true,
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "katana_cazador",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Tessen arroja su abrigo! ¡Va a por todas!"
+   },
+   "ultimate": {
+    "name": "Redada Final",
+    "power": 66,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Tessen silba y lanza todas sus dagas al aire!"
+   }
+  },
+  "capataz_dogo": {
+   "name": "Capataz Dogo",
+   "emoji": "⛏️",
+   "color": "#8d6e63",
+   "level": 7,
+   "hp": 1000,
+   "atk": 34,
+   "def": 20,
+   "mag": 12,
+   "spd": 10,
+   "xp": 292,
+   "gold": 98,
+   "skills": [
+    {
+     "name": "Latigazo",
+     "power": 38,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Mazo de Mina",
+     "power": 44,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Furia del Capataz",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "def_up": 2
+     }
+    }
+   ],
+   "desc": "Un oni gigante de brazos como troncos, con el látigo del capataz en el cinturón.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "loot": [
+    {
+     "item": "maza_capataz",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Dogo golpea el suelo! ¡La mina entera tiembla!"
+   },
+   "ultimate": {
+    "name": "Derrumbe de la Mina",
+    "power": 76,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Dogo golpea los pilares! ¡El techo cruje!"
+   }
+  },
+  "reina_rana": {
+   "name": "Reina Rana",
+   "emoji": "👑",
+   "color": "#3acf8a",
+   "level": 6,
+   "hp": 800,
+   "atk": 24,
+   "def": 14,
+   "mag": 22,
+   "spd": 15,
+   "xp": 225,
+   "gold": 84,
+   "skills": [
+    {
+     "name": "Lengua Venenosa",
+     "power": 38,
+     "element": "veneno",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "poison": 0.8
+     }
+    },
+    {
+     "name": "Salto Aplastante",
+     "power": 46,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2,
+     "charge": 1,
+     "chargeText": "¡La Reina Rana se agacha, lista para saltar!"
+    },
+    {
+     "name": "Canto de Ranas",
+     "power": 40,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "heal"
+    }
+   ],
+   "desc": "La soberana de los nenúfares, con una corona de caracoles.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "immune": [
+    "poison"
+   ],
+   "loot": [
+    {
+     "item": "perla_lago",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Reina Rana croa furiosa! ¡Todo el pantano responde!"
+   },
+   "ultimate": {
+    "name": "Cataclismo del Pantano",
+    "power": 70,
+    "element": "veneno",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El agua del pantano sube! ¡Cientos de ranas croan a la vez!"
+   }
+  },
+  "ciervo_espectral": {
+   "name": "Ciervo Espectral",
+   "emoji": "🦌",
+   "color": "#bfe9ff",
+   "level": 8,
+   "hp": 1240,
+   "atk": 24,
+   "def": 18,
+   "mag": 38,
+   "spd": 20,
+   "xp": 366,
+   "gold": 112,
+   "skills": [
+    {
+     "name": "Embestida Espectral",
+     "power": 42,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Niebla Sagrada",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "dodge_up": 3,
+      "def_up": 2
+     }
+    },
+    {
+     "name": "Pisoteo Lunar",
+     "power": 34,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El espíritu del ciervo más antiguo de Kasumi, con astas de luz.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "cuerno_espectral",
+     "chance": 1
+    }
+   ],
+   "dodgeBonus": 0.06,
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Ciervo golpea el suelo! ¡Sus astas se encienden!"
+   },
+   "ultimate": {
+    "name": "Estampida de las Mil Lunas",
+    "power": 82,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Las astas del ciervo se llenan de luz! ¡Todo el bosque tiembla!"
+   }
+  },
+  "soldado_escarcha": {
+   "name": "Soldado de Escarcha",
+   "emoji": "🪖",
+   "color": "#7fa8d9",
+   "level": 11,
+   "hp": 440,
+   "atk": 46,
+   "def": 30,
+   "mag": 12,
+   "spd": 10,
+   "xp": 151,
+   "gold": 55,
+   "skills": [
+    {
+     "name": "Estocada Gélida",
+     "power": 52,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Formación",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Un soldado demoníaco con armadura cubierta de escarcha.",
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ]
+  },
+  "arquera_hielo": {
+   "name": "Arquera Gélida",
+   "emoji": "🏹",
+   "color": "#9fd8ff",
+   "level": 12,
+   "hp": 340,
+   "atk": 52,
+   "def": 18,
+   "mag": 20,
+   "spd": 21,
+   "xp": 168,
+   "gold": 60,
+   "skills": [
+    {
+     "name": "Flecha de Escarcha",
+     "power": 54,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "slow": 0.3
+     }
+    },
+    {
+     "name": "Lluvia de Flechas",
+     "power": 38,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Puntería",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 2,
+      "dodge_up": 2
+     }
+    }
+   ],
+   "desc": "Una arquera de ojos fríos y flechas de hielo con punta negra.",
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "loot": [
+    {
+     "item": "punta_flecha",
+     "chance": 0.3
+    }
+   ]
+  },
+  "serpiente_menor": {
+   "name": "Serpiente de Escarcha",
+   "emoji": "🐍",
+   "color": "#7ad0e8",
+   "level": 13,
+   "hp": 420,
+   "atk": 50,
+   "def": 24,
+   "mag": 16,
+   "spd": 15,
+   "xp": 186,
+   "gold": 65,
+   "skills": [
+    {
+     "name": "Mordisco Helado",
+     "power": 56,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "freeze": 0.2
+     }
+    },
+    {
+     "name": "Enroscarse",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "slow": 3,
+      "def_down": 2
+     }
+    }
+   ],
+   "desc": "Una serpiente de cristal que se desliza sin hacer ruido.",
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze"
+   ]
+  },
+  "monje_hundido": {
+   "name": "Monje Hundido",
+   "emoji": "🧘",
+   "color": "#6a8aff",
+   "level": 13,
+   "hp": 380,
+   "atk": 18,
+   "def": 22,
+   "mag": 56,
+   "spd": 13,
+   "xp": 186,
+   "gold": 65,
+   "skills": [
+    {
+     "name": "Plegaria Ahogada",
+     "power": 54,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Oleada",
+     "power": 40,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Mantra Oscuro",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 2,
+      "atk_up": 2
+     }
+    }
+   ],
+   "desc": "Un monje con la túnica empapada que reza bajo el agua.",
+   "weak": [
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ]
+  },
+  "general_escarcha": {
+   "name": "General Hakuren",
+   "emoji": "🪖",
+   "color": "#5a9aff",
+   "level": 11,
+   "hp": 2990,
+   "atk": 64,
+   "def": 30,
+   "mag": 32,
+   "spd": 12,
+   "xp": 603,
+   "gold": 154,
+   "skills": [
+    {
+     "name": "Tajo Glacial",
+     "power": 58,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Grito de Guerra",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "def_up": 2
+     }
+    },
+    {
+     "name": "Carga de Caballería",
+     "power": 46,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "desc": "El general de las fuerzas gélidas de Reiga. Hace años que no sonríe.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "espada_hakuren",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Hakuren rompe su escudo! ¡Ya no hay formación que valga!"
+   },
+   "ultimate": {
+    "name": "Carga Final del Hielo",
+    "power": 100,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Hakuren alza el estandarte! ¡Toda la fortaleza se prepara para cargar!"
+   }
+  },
+  "serpiente_hielo": {
+   "name": "Serpiente Abisal",
+   "emoji": "🐉",
+   "color": "#2ab0d0",
+   "level": 14,
+   "hp": 3100,
+   "atk": 64,
+   "def": 28,
+   "mag": 52,
+   "spd": 14,
+   "xp": 814,
+   "gold": 196,
+   "skills": [
+    {
+     "name": "Mordisco del Abismo",
+     "power": 64,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "freeze": 0.25
+     }
+    },
+    {
+     "name": "Coletazo",
+     "power": 46,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 2
+    },
+    {
+     "name": "Mirada Helada",
+     "power": 0,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3,
+      "atk_down": 2
+     }
+    }
+   ],
+   "desc": "Una criatura que dormía bajo el templo desde antes de los demonios.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "escudo_templo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Serpiente se alza! ¡El agua del templo hierve!"
+   },
+   "ultimate": {
+    "name": "Marea Abisal",
+    "power": 108,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El agua retrocede! ¡Un muro helado se levanta tras la Serpiente!"
+   }
+  },
+  "cazador_fantasma": {
+   "name": "Cazador Fantasma",
+   "emoji": "👻",
+   "color": "#9a8ac0",
+   "level": 12,
+   "hp": 2660,
+   "atk": 65,
+   "def": 24,
+   "mag": 34,
+   "spd": 22,
+   "xp": 672,
+   "gold": 168,
+   "skills": [
+    {
+     "name": "Flecha Espectral",
+     "power": 56,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Disparo Doble",
+     "power": 46,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Camuflaje",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "dodge_up": 3
+     }
+    }
+   ],
+   "desc": "El espíritu de un cazador que murió sin soltar el arco.",
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "resist": [
+    "arcano",
+    "oscuro"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "collar_pastor",
+     "chance": 1
+    }
+   ],
+   "dodgeBonus": 0.08,
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Cazador apunta! ¡Su arco brilla como una estrella!"
+   },
+   "ultimate": {
+    "name": "Salva de las Almas",
+    "power": 96,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Mil flechas espectrales surgen del aire!"
+   }
+  },
+  "dragon_nieve": {
+   "name": "Dragón de Nieve",
+   "emoji": "🐲",
+   "color": "#e8f4ff",
+   "level": 14,
+   "hp": 3600,
+   "atk": 66,
+   "def": 30,
+   "mag": 60,
+   "spd": 16,
+   "xp": 814,
+   "gold": 196,
+   "skills": [
+    {
+     "name": "Garra Polar",
+     "power": 66,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aliento de Ventisca",
+     "power": 52,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Rugido",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "desc": "Un dragón blanco como la ventisca, dormido bajo la aurora hasta que alguien lo despierte.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "freeze",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "colmillo_dragon",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Dragón de Nieve abre las alas! ¡El cielo se tiñe de verde!"
+   },
+   "ultimate": {
+    "name": "Aurora Mortal",
+    "power": 116,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La aurora desciende! ¡El dragón concentra el frío del cielo entero!"
+   }
+  },
+  "monje_abad": {
+   "name": "Abad Genshin",
+   "emoji": "🧘",
+   "color": "#e8e0ff",
+   "level": 13,
+   "hp": 2700,
+   "atk": 64,
+   "def": 29,
+   "mag": 44,
+   "spd": 14,
+   "xp": 742,
+   "gold": 182,
+   "skills": [
+    {
+     "name": "Palma de Hielo",
+     "power": 58,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Mantra de Calma",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    },
+    {
+     "name": "Golpe del Silencio",
+     "power": 90,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El abad cierra los ojos y respira hondo!"
+    }
+   ],
+   "desc": "El abad del monasterio. Dice que enseñar es golpear hasta que el alumno aprende.",
+   "boss": true,
+   "weak": [
+    "fuego"
+   ],
+   "immune": [
+    "stun"
+   ]
+  },
+  "soldado_ceniza": {
+   "name": "Soldado de Ceniza",
+   "emoji": "🪖",
+   "color": "#c05030",
+   "level": 18,
+   "hp": 820,
+   "atk": 92,
+   "def": 56,
+   "mag": 38,
+   "spd": 18,
+   "xp": 279,
+   "gold": 90,
+   "skills": [
+    {
+     "name": "Tajo Ardiente",
+     "power": 70,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Escudo de Brasas",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Un soldado demoníaco cuyo cuerpo humea al moverse.",
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ]
+  },
+  "arquero_brasa": {
+   "name": "Arquero de Brasa",
+   "emoji": "🏹",
+   "color": "#ff8040",
+   "level": 19,
+   "hp": 680,
+   "atk": 96,
+   "def": 36,
+   "mag": 48,
+   "spd": 26,
+   "xp": 299,
+   "gold": 95,
+   "skills": [
+    {
+     "name": "Flecha Ardiente",
+     "power": 72,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "burn": 0.3
+     }
+    },
+    {
+     "name": "Lluvia de Fuego",
+     "power": 50,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "desc": "Dispara flechas que prenden fuego a lo que tocan.",
+   "weak": [
+    "hielo",
+    "rayo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "loot": [
+    {
+     "item": "punta_ceniza",
+     "chance": 0.3
+    }
+   ]
+  },
+  "escorpion_cristal": {
+   "name": "Escorpión de Cristal",
+   "emoji": "🦂",
+   "color": "#e0c0ff",
+   "level": 19,
+   "hp": 860,
+   "atk": 94,
+   "def": 70,
+   "mag": 34,
+   "spd": 20,
+   "xp": 299,
+   "gold": 95,
+   "skills": [
+    {
+     "name": "Aguijón Tóxico",
+     "power": 72,
+     "element": "veneno",
+     "target": "enemy",
+     "weight": 3,
+     "effect": {
+      "poison": 0.4
+     }
+    },
+    {
+     "name": "Pinza",
+     "power": 56,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2
+    }
+   ],
+   "desc": "Un escorpión del desierto de cristal. Su aguijón rezuma veneno.",
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "veneno"
+   ],
+   "immune": [
+    "poison"
+   ]
+  },
+  "salamandra_lava": {
+   "name": "Salamandra de Lava",
+   "emoji": "🦎",
+   "color": "#ff5020",
+   "level": 20,
+   "hp": 980,
+   "atk": 92,
+   "def": 62,
+   "mag": 66,
+   "spd": 19,
+   "xp": 318,
+   "gold": 100,
+   "skills": [
+    {
+     "name": "Aliento de Magma",
+     "power": 74,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Mordisco",
+     "power": 62,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    }
+   ],
+   "desc": "Un reptil de roca fundida. Su aliento quema el aire.",
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "burn"
+   ]
+  },
+  "esqueleto_barranco": {
+   "name": "Guerrero Esquelético",
+   "emoji": "💀",
+   "color": "#d8d0c0",
+   "level": 20,
+   "hp": 1040,
+   "atk": 104,
+   "def": 60,
+   "mag": 30,
+   "spd": 18,
+   "xp": 318,
+   "gold": 100,
+   "skills": [
+    {
+     "name": "Hachazo Óseo",
+     "power": 78,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Armadura de Huesos",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3,
+      "atk_up": 2
+     }
+    }
+   ],
+   "desc": "Un guerrero que se levanta de los huesos del barranco.",
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "resist": [
+    "veneno",
+    "oscuro"
+   ]
+  },
+  "eco_sombra": {
+   "name": "Eco de Sombra",
+   "emoji": "👤",
+   "color": "#7050a0",
+   "level": 21,
+   "hp": 860,
+   "atk": 70,
+   "def": 40,
+   "mag": 92,
+   "spd": 24,
+   "xp": 338,
+   "gold": 105,
+   "skills": [
+    {
+     "name": "Grito del Eco",
+     "power": 78,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Doble Voz",
+     "power": 56,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Burla",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "desc": "Una voz hecha cuerpo. Repite lo que más temes.",
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "loot": [
+    {
+     "item": "fragmento_voz",
+     "chance": 0.4
+    }
+   ]
+  },
+  "general_ceniza": {
+   "name": "General Karasu",
+   "emoji": "🪖",
+   "color": "#e04820",
+   "level": 20,
+   "hp": 5200,
+   "atk": 106,
+   "def": 64,
+   "mag": 52,
+   "spd": 18,
+   "xp": 1273,
+   "gold": 280,
+   "skills": [
+    {
+     "name": "Tajo de Ceniza",
+     "power": 84,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Orden de Ataque",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "def_up": 2
+     }
+    },
+    {
+     "name": "Carga Infernal",
+     "power": 64,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "desc": "El general de las fuerzas de ceniza. Cada paso suyo deja huellas de fuego.",
+   "boss": true,
+   "weak": [
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "burn",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "hacha_karasu",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Karasu desgarra su capa! ¡Las llamas lo envuelven!"
+   },
+   "ultimate": {
+    "name": "Marea de Fuego",
+    "power": 126,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Karasu levanta su hacha! ¡El suelo se vuelve lava!"
+   }
+  },
+  "herrero_demonio": {
+   "name": "Herrero Maldito Kuroda",
+   "emoji": "🔨",
+   "color": "#ff7a20",
+   "level": 21,
+   "hp": 6200,
+   "atk": 114,
+   "def": 72,
+   "mag": 56,
+   "spd": 17,
+   "xp": 1353,
+   "gold": 294,
+   "skills": [
+    {
+     "name": "Martillazo",
+     "power": 88,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Chispas",
+     "power": 58,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Forjar Armadura",
+     "power": 0,
+     "element": "fuego",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 4
+     }
+    }
+   ],
+   "desc": "Un demonio que forjó las armas del rey. Su martillo no se detiene.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "rayo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "burn",
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "martillo_kuroda",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Kuroda golpea el yunque! ¡Su martillo arde al rojo blanco!"
+   },
+   "ultimate": {
+    "name": "Golpe del Yunque Ardiente",
+    "power": 134,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Kuroda alza el martillo sobre el yunque!"
+   }
+  },
+  "rey_cristal": {
+   "name": "Rey de Cristal",
+   "emoji": "💎",
+   "color": "#c0f0ff",
+   "level": 20,
+   "hp": 4050,
+   "atk": 95,
+   "def": 61,
+   "mag": 68,
+   "spd": 18,
+   "xp": 1273,
+   "gold": 280,
+   "skills": [
+    {
+     "name": "Puño de Cristal",
+     "power": 84,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Refracción",
+     "power": 64,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Caparazón",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 4
+     }
+    }
+   ],
+   "desc": "Un coloso de cristal que gobierna el desierto bajo el sol.",
+   "boss": true,
+   "weak": [
+    "rayo",
+    "fuego"
+   ],
+   "resist": [
+    "arcano",
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "loot": [
+    {
+     "item": "anillo_cristal",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Rey de Cristal brilla! ¡La luz lo vuelve invulnerable!"
+   },
+   "ultimate": {
+    "name": "Prisma Letal",
+    "power": 126,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Toda la luz del desierto se concentra en el Rey!"
+   },
+   "ability": "dureza",
+   "enrageAbility": "fragilidad"
+  },
+  "voz_perdida": {
+   "name": "Voz Perdida",
+   "emoji": "🗣️",
+   "color": "#a080e0",
+   "level": 21,
+   "hp": 5220,
+   "atk": 86,
+   "def": 52,
+   "mag": 112,
+   "spd": 26,
+   "xp": 1353,
+   "gold": 294,
+   "skills": [
+    {
+     "name": "Lamento",
+     "power": 84,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Coro",
+     "power": 62,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Silencio",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "mag_down": 3,
+      "atk_down": 2
+     }
+    }
+   ],
+   "desc": "El eco de un alma que murió llamando a alguien.",
+   "boss": true,
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "immune": [
+    "stun"
+   ],
+   "loot": [
+    {
+     "item": "collar_ecos",
+     "chance": 1
+    }
+   ],
+   "dodgeBonus": 0.08,
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Voz Perdida grita! ¡Es el nombre de alguien!"
+   },
+   "ultimate": {
+    "name": "Lamento Final",
+    "power": 132,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Mil voces empiezan a cantar a la vez!"
+   }
+  },
+  "guardian_alba": {
+   "name": "Guardián del Abismo",
+   "emoji": "🌅",
+   "color": "#ffd080",
+   "level": 22,
+   "hp": 8280,
+   "atk": 115,
+   "def": 66,
+   "mag": 104,
+   "spd": 22,
+   "xp": 1433,
+   "gold": 308,
+   "skills": [
+    {
+     "name": "Lanza del Alba",
+     "power": 96,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Amanecer",
+     "power": 72,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Eclipse",
+     "power": 0,
+     "element": "oscuro",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "def_up": 3,
+      "mag_up": 3
+     }
+    },
+    {
+     "name": "Sentencia",
+     "power": 150,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Guardián alza la lanza! ¡El abismo contiene el aliento!"
+    }
+   ],
+   "desc": "El guardián de algo que lleva eones esperando. Superjefe opcional.",
+   "boss": true,
+   "weak": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze",
+    "burn",
+    "poison"
+   ],
+   "loot": [
+    {
+     "item": "corona_abismo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.45,
+    "text": "¡El Guardián abre los ojos! ¡Es la primera vez en mil años!"
+   },
+   "ultimate": {
+    "name": "Amanecer Eterno",
+    "power": 144,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 3,
+    "chargeText": "¡El abismo se llena de luz blanca! ¡Algo muy antiguo despierta!"
+   }
+  },
+  "centinela_luz": {
+   "name": "Centinela de Luz",
+   "emoji": "🛡️",
+   "color": "#ffe08a",
+   "level": 23,
+   "hp": 1485,
+   "atk": 118,
+   "def": 80,
+   "mag": 76,
+   "spd": 18,
+   "xp": 379,
+   "gold": 115,
+   "skills": [
+    {
+     "name": "Haz de Luz",
+     "power": 82,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Barrera Solar",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Una armadura vacía animada por luz solidificada.",
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "arcano",
+    "rayo"
+   ],
+   "immune": [
+    "burn"
+   ]
+  },
+  "mariposa_alba": {
+   "name": "Mariposa del Alba",
+   "emoji": "🦋",
+   "color": "#ffd9a0",
+   "level": 23,
+   "hp": 1100,
+   "atk": 84,
+   "def": 55,
+   "mag": 126,
+   "spd": 30,
+   "xp": 379,
+   "gold": 115,
+   "skills": [
+    {
+     "name": "Escamas Doradas",
+     "power": 70,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Polvo Cegador",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "slow": 3
+     }
+    },
+    {
+     "name": "Aleteo",
+     "power": 78,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una mariposa del tamaño de una persona, con alas de oro líquido.",
+   "weak": [
+    "rayo",
+    "hielo"
+   ],
+   "resist": [
+    "arcano"
+   ]
+  },
+  "bestia_dorada": {
+   "name": "Bestia Dorada",
+   "emoji": "🦁",
+   "color": "#ffcf50",
+   "level": 24,
+   "hp": 1650,
+   "atk": 134,
+   "def": 76,
+   "mag": 63,
+   "spd": 26,
+   "xp": 400,
+   "gold": 120,
+   "skills": [
+    {
+     "name": "Zarpazo Solar",
+     "power": 86,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Carga Radiante",
+     "power": 66,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Rugido del Mediodía",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3
+     }
+    }
+   ],
+   "desc": "Un felino de melena de fuego dorado que nunca ha conocido la noche.",
+   "weak": [
+    "hielo",
+    "oscuro"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "burn"
+   ]
+  },
+  "sombra_negada": {
+   "name": "Sombra Negada",
+   "emoji": "👤",
+   "color": "#4a3a6a",
+   "level": 24,
+   "hp": 1210,
+   "atk": 105,
+   "def": 50,
+   "mag": 128,
+   "spd": 28,
+   "xp": 400,
+   "gold": 120,
+   "skills": [
+    {
+     "name": "Zarpa de Penumbra",
+     "power": 84,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Ola de Penumbra",
+     "power": 62,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Eclipse Menor",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3,
+      "atk_down": 2
+     }
+    }
+   ],
+   "desc": "Una sombra que sobrevive donde no debería haber ninguna. Odia la luz.",
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "loot": [
+    {
+     "item": "fragmento_noche",
+     "chance": 0.4
+    }
+   ]
+  },
+  "heraldo_rayo": {
+   "name": "Heraldo del Primer Rayo",
+   "emoji": "⚡",
+   "color": "#fff0a0",
+   "level": 24,
+   "hp": 7820,
+   "atk": 118,
+   "def": 75,
+   "mag": 82,
+   "spd": 24,
+   "xp": 1598,
+   "gold": 336,
+   "skills": [
+    {
+     "name": "Lanza del Primer Rayo",
+     "power": 92,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Resplandor",
+     "power": 70,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Sentencia Solar",
+     "power": 130,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Heraldo alza la lanza! ¡La luz se vuelve blanca y silenciosa!"
+    }
+   ],
+   "desc": "El heraldo que guarda el primer umbral del reino. Habla con voz de campana.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "pararrayos",
+   "enrageAbility": "sobrecarga",
+   "loot": [
+    {
+     "item": "reliquia_rayo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Heraldo se desgarra la armadura! ¡Dentro solo hay luz!"
+   },
+   "ultimate": {
+    "name": "Rayo Primigenio",
+    "power": 130,
+    "element": "rayo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El cielo dorado se abre sobre el Heraldo!"
+   }
+  },
+  "relojero_hueco": {
+   "name": "Relojero Hueco",
+   "emoji": "⚙️",
+   "color": "#e0c070",
+   "level": 25,
+   "hp": 1650,
+   "atk": 128,
+   "def": 88,
+   "mag": 74,
+   "spd": 24,
+   "xp": 421,
+   "gold": 125,
+   "skills": [
+    {
+     "name": "Manecilla Cortante",
+     "power": 92,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Cuerda Tensa",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "spd_up": 3
+     }
+    }
+   ],
+   "desc": "Una armadura de engranajes dorados que mide el tiempo con cada paso.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "fisico"
+   ],
+   "immune": [
+    "freeze"
+   ],
+   "loot": [
+    {
+     "item": "engranaje_quieto",
+     "chance": 0.4
+    }
+   ]
+  },
+  "arena_viva": {
+   "name": "Arena Viva",
+   "emoji": "⏳",
+   "color": "#ffd890",
+   "level": 26,
+   "hp": 1155,
+   "atk": 94,
+   "def": 60,
+   "mag": 139,
+   "spd": 32,
+   "xp": 442,
+   "gold": 130,
+   "skills": [
+    {
+     "name": "Latigazo de Arena",
+     "power": 86,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Reloj de Arena",
+     "power": 64,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Un remolino de arena dorada que se ríe sin boca.",
+   "weak": [
+    "hielo",
+    "rayo"
+   ],
+   "resist": [
+    "fuego",
+    "arcano"
+   ],
+   "immune": [
+    "poison"
+   ]
+  },
+  "cuervo_dorado": {
+   "name": "Cuervo Dorado",
+   "emoji": "🐦",
+   "color": "#ffd24a",
+   "level": 26,
+   "hp": 1485,
+   "atk": 136,
+   "def": 64,
+   "mag": 74,
+   "spd": 40,
+   "xp": 442,
+   "gold": 130,
+   "skills": [
+    {
+     "name": "Picotazo Veloz",
+     "power": 90,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Graznido Ensordecedor",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Un cuervo de plumas de oro que roba el brillo a las cosas.",
+   "weak": [
+    "rayo",
+    "hielo"
+   ],
+   "dodgeBonus": 0.06
+  },
+  "guardia_prisma": {
+   "name": "Guardia del Prisma",
+   "emoji": "🔷",
+   "color": "#a0e0ff",
+   "level": 27,
+   "hp": 1870,
+   "atk": 134,
+   "def": 92,
+   "mag": 105,
+   "spd": 26,
+   "xp": 463,
+   "gold": 135,
+   "skills": [
+    {
+     "name": "Estocada de Prisma",
+     "power": 96,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Refracción Cruzada",
+     "power": 68,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Un soldado hecho de cristal que refracta la luz en rayos.",
+   "weak": [
+    "oscuro",
+    "fuego"
+   ],
+   "resist": [
+    "arcano",
+    "rayo"
+   ],
+   "loot": [
+    {
+     "item": "esquirla_prisma",
+     "chance": 0.25
+    }
+   ]
+  },
+  "relojero_eterno": {
+   "name": "Relojero Eterno Tokei",
+   "emoji": "🕰️",
+   "color": "#f0d080",
+   "level": 26,
+   "hp": 6440,
+   "atk": 128,
+   "def": 82,
+   "mag": 88,
+   "spd": 24,
+   "xp": 1766,
+   "gold": 364,
+   "skills": [
+    {
+     "name": "Golpe de Péndulo",
+     "power": 98,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Cuenta Atrás",
+     "power": 74,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Segundo Detenido",
+     "power": 160,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡Tokei levanta la mano! ¡Las agujas del reloj se detienen!"
+    }
+   ],
+   "desc": "El guardián de la torre. Lleva siglos asegurándose de que nadie llegue tarde... ni a tiempo.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "tiempo_detenido",
+   "enrageAbility": "fragilidad",
+   "loot": [
+    {
+     "item": "hoz_tiempo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Tokei rompe su propio reloj! ¡El tiempo empieza a correr sin control!"
+   },
+   "ultimate": {
+    "name": "Hora Final",
+    "power": 138,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todas las campanas de la torre suenan a la vez!"
+   }
+  },
+  "heraldo_segundo": {
+   "name": "Heraldo del Segundo Rayo",
+   "emoji": "🌩️",
+   "color": "#ffb870",
+   "level": 27,
+   "hp": 10810,
+   "atk": 134,
+   "def": 84,
+   "mag": 101,
+   "spd": 26,
+   "xp": 1851,
+   "gold": 378,
+   "skills": [
+    {
+     "name": "Lanza del Segundo Rayo",
+     "power": 100,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Eco del Trueno",
+     "power": 74,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Rayo Doble",
+     "power": 70,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El segundo hermano. Habla despacio, como quien ya ha perdido a uno.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "duelo",
+   "enrageAbility": "sobrecarga",
+   "loot": [
+    {
+     "item": "reliquia_segundo_rayo",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Heraldo grita el nombre de su hermano! ¡El cielo se rasga en dos!"
+   },
+   "ultimate": {
+    "name": "Tormenta del Mediodía",
+    "power": 142,
+    "element": "rayo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El sol quieto se enciende como una antorcha!"
+   }
+  },
+  "primera_noche": {
+   "name": "La Primera Noche",
+   "emoji": "🌑",
+   "color": "#6a50c0",
+   "level": 27,
+   "hp": 6785,
+   "atk": 122,
+   "def": 60,
+   "mag": 130,
+   "spd": 30,
+   "xp": 1851,
+   "gold": 378,
+   "skills": [
+    {
+     "name": "Zarpa de Oscuridad",
+     "power": 100,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Manto de Estrellas",
+     "power": 72,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Silencio Absoluto",
+     "power": 0,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Lo único que quedó de la noche cuando el sol dejó de moverse. Está furiosa y asustada.",
+   "boss": true,
+   "weak": [
+    "arcano",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "immune": [
+    "stun",
+    "freeze",
+    "poison"
+   ],
+   "ability": "velo_nocturno",
+   "enrageAbility": "silencio",
+   "loot": [
+    {
+     "item": "manto_noche",
+     "chance": 1
+    }
+   ],
+   "dodgeBonus": 0.05,
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Primera Noche se agita! ¡Las estrellas se encienden dentro de ella!"
+   },
+   "ultimate": {
+    "name": "Noche Total",
+    "power": 140,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La luz del Reino se apaga por un instante!"
+   }
+  },
+  "girasol_centinela": {
+   "name": "Girasol Centinela",
+   "emoji": "🌻",
+   "color": "#ffd24a",
+   "level": 28,
+   "hp": 1925,
+   "atk": 139,
+   "def": 98,
+   "mag": 84,
+   "spd": 22,
+   "xp": 484,
+   "gold": 140,
+   "skills": [
+    {
+     "name": "Latigazo de Tallo",
+     "power": 94,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Polen Cegador",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "desc": "Un girasol alto como un hombre que siempre mira al sol detenido. Si te mira a ti, es que algo va mal.",
+   "weak": [
+    "hielo",
+    "oscuro"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "loot": [
+    {
+     "item": "petalo_solar",
+     "chance": 0.4
+    }
+   ]
+  },
+  "libelula_cristal": {
+   "name": "Libélula de Cristal",
+   "emoji": "🦟",
+   "color": "#bfe8ff",
+   "level": 28,
+   "hp": 1485,
+   "atk": 124,
+   "def": 70,
+   "mag": 132,
+   "spd": 44,
+   "xp": 484,
+   "gold": 140,
+   "skills": [
+    {
+     "name": "Ala Cortante",
+     "power": 88,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Zumbido Hipnótico",
+     "power": 60,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Alas de vidrio que cortan la luz y a veces a ti.",
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "dodgeBonus": 0.08
+  },
+  "pescador_ahogado": {
+   "name": "Pescador Ahogado",
+   "emoji": "🌊",
+   "color": "#6ab0d0",
+   "level": 29,
+   "hp": 1925,
+   "atk": 139,
+   "def": 100,
+   "mag": 94,
+   "spd": 24,
+   "xp": 506,
+   "gold": 145,
+   "skills": [
+    {
+     "name": "Red Pesada",
+     "power": 98,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aguas Muertas",
+     "power": 72,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Lleva siglos pescando en un lago que no tiene fondo. Aún no ha picado nada.",
+   "weak": [
+    "rayo",
+    "fuego"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "poison"
+   ]
+  },
+  "reflejo_errante": {
+   "name": "Reflejo Errante",
+   "emoji": "🪞",
+   "color": "#c8d8ff",
+   "level": 29,
+   "hp": 1650,
+   "atk": 105,
+   "def": 80,
+   "mag": 145,
+   "spd": 34,
+   "xp": 506,
+   "gold": 145,
+   "skills": [
+    {
+     "name": "Eco de Golpe",
+     "power": 92,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Imagen Rota",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Una silueta hecha de reflejos del lago que imita tus gestos con un segundo de retraso.",
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ]
+  },
+  "sonambulo": {
+   "name": "Sonámbulo",
+   "emoji": "😴",
+   "color": "#b0a0d0",
+   "level": 30,
+   "hp": 2255,
+   "atk": 153,
+   "def": 104,
+   "mag": 63,
+   "spd": 16,
+   "xp": 528,
+   "gold": 150,
+   "skills": [
+    {
+     "name": "Puñetazo Dormido",
+     "power": 100,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Bostezo Contagioso",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "desc": "Camina con los ojos cerrados y pega con los puños abiertos. Murmura que quiere dormir.",
+   "weak": [
+    "rayo",
+    "fuego"
+   ]
+  },
+  "polilla_insomne": {
+   "name": "Polilla Insomne",
+   "emoji": "🦋",
+   "color": "#e0d8a0",
+   "level": 30,
+   "hp": 1650,
+   "atk": 134,
+   "def": 72,
+   "mag": 141,
+   "spd": 42,
+   "xp": 528,
+   "gold": 150,
+   "skills": [
+    {
+     "name": "Polvo de Vigilia",
+     "power": 66,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Aleteo Cortante",
+     "power": 94,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    }
+   ],
+   "desc": "Una polilla pálida que vive de la luz de las farolas de una ciudad que no apaga ninguna.",
+   "weak": [
+    "fuego",
+    "hielo"
+   ],
+   "dodgeBonus": 0.06,
+   "loot": [
+    {
+     "item": "polvo_vigilia",
+     "chance": 0.4
+    }
+   ]
+  },
+  "soldado_vigilia": {
+   "name": "Soldado de la Vigilia",
+   "emoji": "🛡️",
+   "color": "#d0c090",
+   "level": 31,
+   "hp": 2475,
+   "atk": 158,
+   "def": 112,
+   "mag": 76,
+   "spd": 24,
+   "xp": 550,
+   "gold": 155,
+   "skills": [
+    {
+     "name": "Lanza de Guardia",
+     "power": 104,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Formación",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Lleva doscientos años de guardia. Ya no recuerda qué vigila.",
+   "weak": [
+    "oscuro"
+   ]
+  },
+  "golem_ambar": {
+   "name": "Gólem de Ámbar",
+   "emoji": "🪨",
+   "color": "#ffb030",
+   "level": 31,
+   "hp": 2640,
+   "atk": 160,
+   "def": 126,
+   "mag": 67,
+   "spd": 12,
+   "xp": 550,
+   "gold": 155,
+   "skills": [
+    {
+     "name": "Puño de Resina",
+     "power": 108,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Resina Pegajosa",
+     "power": 64,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1,
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Resina endurecida con forma de gigante. Dentro, atrapados, hay insectos de otra era.",
+   "weak": [
+    "rayo",
+    "hielo"
+   ],
+   "resist": [
+    "fisico",
+    "fuego"
+   ]
+  },
+  "vigia_solar": {
+   "name": "Vigía del Sol Quieto",
+   "emoji": "☀️",
+   "color": "#ffe070",
+   "level": 29,
+   "hp": 9775,
+   "atk": 139,
+   "def": 88,
+   "mag": 116,
+   "spd": 26,
+   "xp": 2025,
+   "gold": 406,
+   "skills": [
+    {
+     "name": "Lanza de Luz",
+     "power": 102,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Resplandor",
+     "power": 74,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Mirada Fija",
+     "power": 165,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Vigía clava la mirada en uno de vosotros! ¡El aire se calienta!"
+    }
+   ],
+   "desc": "Un astrónomo de oro que lleva siglos mirando el mismo punto del cielo para comprobar que no se mueve.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "sol_radiante",
+   "enrageAbility": "aura_brasas",
+   "loot": [
+    {
+     "item": "@a:epic:4",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Vigía arranca su telescopio! ¡Por primera vez, mira hacia otro lado!"
+   },
+   "ultimate": {
+    "name": "Mediodía Eterno",
+    "power": 144,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El sol quieto arde cien veces más fuerte!"
+   }
+  },
+  "heraldo_tercero": {
+   "name": "Heraldo del Tercer Rayo",
+   "emoji": "🌞",
+   "color": "#ffd890",
+   "level": 30,
+   "hp": 10600,
+   "atk": 141,
+   "def": 92,
+   "mag": 109,
+   "spd": 28,
+   "xp": 2112,
+   "gold": 420,
+   "skills": [
+    {
+     "name": "Lanza del Tercer Rayo",
+     "power": 104,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Eco Solar",
+     "power": 76,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Espejo del Mediodía",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "La tercera hermana. Habla poco y mira a Yukine como quien mira un recuerdo.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "plegaria",
+   "enrageAbility": "sobrecarga",
+   "loot": [
+    {
+     "item": "reliquia_tercer_rayo",
+     "chance": 1
+    },
+    {
+     "item": "@w:legendary:4",
+     "chance": 0.4
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Heraldo suelta su cabello! ¡El sol se refleja en cada hilo!"
+   },
+   "ultimate": {
+    "name": "Tormenta del Tercer Sol",
+    "power": 146,
+    "element": "rayo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Tres soles aparecen sobre el santuario!"
+   }
+  },
+  "reflejo_mediodia": {
+   "name": "Reflejo del Mediodía",
+   "emoji": "🪞",
+   "color": "#fff0c0",
+   "level": 29,
+   "hp": 7820,
+   "atk": 136,
+   "def": 72,
+   "mag": 118,
+   "spd": 34,
+   "xp": 2025,
+   "gold": 406,
+   "skills": [
+    {
+     "name": "Tu Propio Golpe",
+     "power": 100,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Imagen Cruzada",
+     "power": 74,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El reflejo del sol sobre el agua, que un día decidió ser alguien.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "espejo",
+   "enrageAbility": "evasion",
+   "loot": [
+    {
+     "item": "@x:legendary:4",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El lago entero se vuelve espejo! ¡Hay mil reflejos!"
+   },
+   "ultimate": {
+    "name": "Mil Espejos",
+    "power": 140,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Cada gota de la gruta devuelve un rayo!"
+   }
+  },
+  "capitan_insomne": {
+   "name": "Capitán Insomne",
+   "emoji": "💂",
+   "color": "#d0b070",
+   "level": 31,
+   "hp": 9890,
+   "atk": 153,
+   "def": 98,
+   "mag": 92,
+   "spd": 28,
+   "xp": 2201,
+   "gold": 434,
+   "skills": [
+    {
+     "name": "Estocada sin Descanso",
+     "power": 108,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Toque de Diana",
+     "power": 78,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Redoble",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "spd_up": 3
+     }
+    }
+   ],
+   "desc": "Capitán de la Vigilia Eterna. No ha dormido en doscientos años y ha olvidado por qué sigue en pie.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "insomnio",
+   "enrageAbility": "intimidacion",
+   "loot": [
+    {
+     "item": "@w:legendary:4",
+     "chance": 0.6
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Capitán grita «¡A las armas!» a nadie! ¡Su rabia es de cansancio!"
+   },
+   "ultimate": {
+    "name": "Diana Final",
+    "power": 148,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todas las trompetas de la torre suenan a la vez!"
+   }
+  },
+  "heraldo_cuarto": {
+   "name": "Heraldo del Cuarto Rayo",
+   "emoji": "🌅",
+   "color": "#ffc890",
+   "level": 32,
+   "hp": 13570,
+   "atk": 145,
+   "def": 96,
+   "mag": 118,
+   "spd": 30,
+   "xp": 2290,
+   "gold": 448,
+   "skills": [
+    {
+     "name": "Lanza del Cuarto Rayo",
+     "power": 108,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Eco del Amanecer",
+     "power": 78,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Rayo Sucesivo",
+     "power": 74,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El más joven de los Heraldos. Tiene miedo de que el sol vuelva a moverse.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "panico",
+   "enrageAbility": "fragilidad",
+   "loot": [
+    {
+     "item": "reliquia_cuarto_rayo",
+     "chance": 1
+    },
+    {
+     "item": "@w:legendary:4",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Heraldo se quita el casco! ¡Llora y ataca a la vez!"
+   },
+   "ultimate": {
+    "name": "Amanecer Detenido",
+    "power": 150,
+    "element": "rayo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El sol se mueve un solo segundo, y el mundo entero tiembla!"
+   }
+  },
+  "resina_ancestral": {
+   "name": "Resina Ancestral",
+   "emoji": "🟠",
+   "color": "#ffb030",
+   "level": 31,
+   "hp": 11270,
+   "atk": 147,
+   "def": 120,
+   "mag": 94,
+   "spd": 16,
+   "xp": 2201,
+   "gold": 434,
+   "skills": [
+    {
+     "name": "Abrazo de Ámbar",
+     "power": 106,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Resina Hirviente",
+     "power": 76,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Atrapar",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Ámbar vivo que lleva atrapadas todas las noches que nunca terminaron.",
+   "boss": true,
+   "weak": [
+    "rayo",
+    "hielo"
+   ],
+   "resist": [
+    "fisico",
+    "fuego"
+   ],
+   "immune": [
+    "poison",
+    "freeze"
+   ],
+   "ability": "ambar",
+   "enrageAbility": "dureza",
+   "loot": [
+    {
+     "item": "@a:legendary:4",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La resina hierve! ¡Algo muy antiguo despierta dentro!"
+   },
+   "ultimate": {
+    "name": "Eras Atrapadas",
+    "power": 146,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todas las eras atrapadas en el ámbar estallan!"
+   }
+  },
+  "estatua_heraldo": {
+   "name": "Estatua de Heraldo",
+   "emoji": "🗿",
+   "color": "#e8d890",
+   "level": 33,
+   "hp": 3200,
+   "atk": 166,
+   "def": 136,
+   "mag": 96,
+   "spd": 14,
+   "xp": 595,
+   "gold": 165,
+   "skills": [
+    {
+     "name": "Lanzazo de Piedra",
+     "power": 110,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Resplandor Pétreo",
+     "power": 74,
+     "element": "rayo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una estatua de un Heraldo caído que sigue montando guardia con la lanza en alto.",
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "fisico"
+   ]
+  },
+  "rosa_alba": {
+   "name": "Rosa del Alba",
+   "emoji": "🌹",
+   "color": "#ff9ab0",
+   "level": 33,
+   "hp": 2100,
+   "atk": 126,
+   "def": 84,
+   "mag": 158,
+   "spd": 38,
+   "xp": 595,
+   "gold": 165,
+   "skills": [
+    {
+     "name": "Espina Dorada",
+     "power": 100,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Perfume Soporífero",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "desc": "Una rosa dorada del tamaño de una persona. Perfuma el aire con sueño.",
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "loot": [
+    {
+     "item": "petalo_alba",
+     "chance": 0.4
+    }
+   ]
+  },
+  "lobo_sueno": {
+   "name": "Lobo de Sueño",
+   "emoji": "🐺",
+   "color": "#c8d8ff",
+   "level": 34,
+   "hp": 2650,
+   "atk": 172,
+   "def": 106,
+   "mag": 128,
+   "spd": 48,
+   "xp": 617,
+   "gold": 170,
+   "skills": [
+    {
+     "name": "Zarpazo Onírico",
+     "power": 112,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aullido Lejano",
+     "power": 72,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "El recuerdo de un lobo blanco que corre por un sueño que no es suyo.",
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "dodgeBonus": 0.07
+  },
+  "guardiana_jardin": {
+   "name": "Hanae, Jardinera Eterna",
+   "emoji": "🌺",
+   "color": "#ffb0d0",
+   "level": 33,
+   "hp": 13200,
+   "atk": 160,
+   "def": 110,
+   "mag": 138,
+   "spd": 32,
+   "xp": 2379,
+   "gold": 462,
+   "skills": [
+    {
+     "name": "Podadera Dorada",
+     "power": 112,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Pétalos",
+     "power": 78,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Enredadera",
+     "power": 0,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "La jardinera del palacio. Lleva doscientos años podando rosas para una reina que duerme.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze",
+    "poison"
+   ],
+   "ability": "polen",
+   "enrageAbility": "espinas",
+   "loot": [
+    {
+     "item": "@w:legendary:4",
+     "chance": 0.6
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Hanae arranca todas las rosas de golpe! ¡Los pétalos se vuelven cuchillas!"
+   },
+   "ultimate": {
+    "name": "Jardín Rojo",
+    "power": 154,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Los jardines del palacio florecen todos a la vez!"
+   }
+  },
+  "nodriza_vacia": {
+   "name": "Nodriza de las Cunas Vacías",
+   "emoji": "🍼",
+   "color": "#c8b0ff",
+   "level": 33,
+   "hp": 8200,
+   "atk": 146,
+   "def": 104,
+   "mag": 136,
+   "spd": 28,
+   "xp": 2379,
+   "gold": 462,
+   "skills": [
+    {
+     "name": "Mecer Violento",
+     "power": 108,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Nana Oscura",
+     "power": 76,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una niñera fantasma que mece cunas sin niño. Canta para que nadie despierte.",
+   "boss": true,
+   "weak": [
+    "rayo",
+    "fuego"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "nana",
+   "enrageAbility": "dureza",
+   "loot": [
+    {
+     "item": "@a:legendary:4",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Nodriza deja de cantar! Es mucho peor."
+   },
+   "ultimate": {
+    "name": "Última Nana",
+    "power": 150,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La Nodriza canta tan bajo que cada cuna se estremece!"
+   }
+  },
+  "sueno_madre": {
+   "name": "Sueño de la Madre del Alba",
+   "emoji": "☀️",
+   "color": "#fff0c0",
+   "level": 34,
+   "hp": 16200,
+   "atk": 150,
+   "def": 108,
+   "mag": 148,
+   "spd": 30,
+   "xp": 2470,
+   "gold": 476,
+   "skills": [
+    {
+     "name": "Rayo de Ensueño",
+     "power": 114,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Recuerdo Dorado",
+     "power": 80,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Abrazo de Luz",
+     "power": 92,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Mediodía Detenido",
+     "power": 185,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El sueño se detiene! ¡El sol se hace tan grande como la sala!"
+    }
+   ],
+   "desc": "No es ella: es su sueño. Lleva doscientos años soñando el día que su hija se fue.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "rayo",
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "latido",
+   "enrageAbility": "duelo",
+   "loot": [
+    {
+     "item": "lagrima_alba",
+     "chance": 1
+    },
+    {
+     "item": "@w:legendary:4",
+     "chance": 0.5
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "«¡No te vayas otra vez!» El sueño se quiebra y el sol late con rabia."
+   },
+   "ultimate": {
+    "name": "Sol Roto",
+    "power": 162,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El sol del sueño se parte en dos!"
+   }
+  },
+  "cangrejo_cristal": {
+   "name": "Cangrejo de Cristal",
+   "emoji": "🦀",
+   "color": "#9ae0ff",
+   "level": 35,
+   "hp": 3500,
+   "atk": 174,
+   "def": 156,
+   "mag": 84,
+   "spd": 14,
+   "xp": 640,
+   "gold": 175,
+   "skills": [
+    {
+     "name": "Pinzazo Prismático",
+     "power": 116,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Burbuja Cegadora",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3
+     }
+    }
+   ],
+   "desc": "Un cangrejo cuyo caparazón es un prisma. Cada pinzazo es una chispa.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "fisico"
+   ]
+  },
+  "medusa_luz": {
+   "name": "Medusa Lumínica",
+   "emoji": "🪼",
+   "color": "#e0b0ff",
+   "level": 35,
+   "hp": 2150,
+   "atk": 122,
+   "def": 86,
+   "mag": 176,
+   "spd": 38,
+   "xp": 640,
+   "gold": 175,
+   "skills": [
+    {
+     "name": "Látigo Eléctrico",
+     "power": 104,
+     "element": "rayo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Resplandor Hipnótico",
+     "power": 0,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "type": "debuff",
+     "effect": {
+      "atk_down": 3,
+      "def_down": 3
+     }
+    }
+   ],
+   "desc": "Una medusa que brilla como una linterna. Quien la mira se olvida de respirar.",
+   "weak": [
+    "fuego",
+    "fisico"
+   ],
+   "resist": [
+    "rayo"
+   ],
+   "loot": [
+    {
+     "item": "perla_bruma",
+     "chance": 0.4
+    }
+   ]
+  },
+  "sirena_eco": {
+   "name": "Sirena del Eco",
+   "emoji": "🧜",
+   "color": "#8ae8d8",
+   "level": 36,
+   "hp": 2450,
+   "atk": 132,
+   "def": 94,
+   "mag": 180,
+   "spd": 42,
+   "xp": 663,
+   "gold": 180,
+   "skills": [
+    {
+     "name": "Canto Cortante",
+     "power": 108,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Eco de Ahogados",
+     "power": 74,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Canta con las voces de quienes se ahogaron. Algunas de esas voces dicen tu nombre.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "hielo"
+   ]
+  },
+  "tiburon_espectral": {
+   "name": "Tiburón Espectral",
+   "emoji": "🦈",
+   "color": "#9ab0d0",
+   "level": 36,
+   "hp": 3150,
+   "atk": 186,
+   "def": 114,
+   "mag": 100,
+   "spd": 50,
+   "xp": 663,
+   "gold": 180,
+   "skills": [
+    {
+     "name": "Mordisco Fantasma",
+     "power": 118,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Frenesí",
+     "power": 0,
+     "element": "fisico",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "atk_up": 3,
+      "spd_up": 3
+     }
+    }
+   ],
+   "desc": "Un tiburón sin cuerpo, solo dientes y hambre, nadando por el aire húmedo.",
+   "weak": [
+    "fuego",
+    "arcano"
+   ],
+   "dodgeBonus": 0.06
+  },
+  "farero_ahogado": {
+   "name": "El Farero Ahogado",
+   "emoji": "🕯️",
+   "color": "#8ab0e0",
+   "level": 36,
+   "hp": 11500,
+   "atk": 158,
+   "def": 122,
+   "mag": 142,
+   "spd": 30,
+   "xp": 2653,
+   "gold": 504,
+   "skills": [
+    {
+     "name": "Garfio de Ancla",
+     "power": 118,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Haz Cegador",
+     "power": 82,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Luz de Naufragio",
+     "power": 190,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El faro enfoca toda su luz sobre uno de vosotros!"
+    }
+   ],
+   "desc": "Lleva siglos encendiendo un faro hundido para barcos que ya no existen. Su luz marca a quien mira.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "marca",
+   "enrageAbility": "aura_helada",
+   "loot": [
+    {
+     "item": "@w:legendary:5",
+     "chance": 0.7
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Farero apaga el faro! La oscuridad del agua lo envuelve."
+   },
+   "ultimate": {
+    "name": "Marea Negra",
+    "power": 158,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El mar se levanta dentro del faro!"
+   }
+  },
+  "gran_ostra": {
+   "name": "Gran Ostra Perlada",
+   "emoji": "🦪",
+   "color": "#f0e0ff",
+   "level": 36,
+   "hp": 9800,
+   "atk": 166,
+   "def": 105,
+   "mag": 130,
+   "spd": 16,
+   "xp": 2653,
+   "gold": 504,
+   "skills": [
+    {
+     "name": "Cierre de Concha",
+     "power": 116,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Perla Estallante",
+     "power": 84,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Marea Interior",
+     "power": 0,
+     "element": "arcano",
+     "target": "self",
+     "weight": 1,
+     "type": "buff",
+     "effect": {
+      "def_up": 3
+     }
+    }
+   ],
+   "desc": "Una ostra del tamaño de una casa. Guarda una perla con una memoria dentro.",
+   "boss": true,
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "poison",
+    "freeze"
+   ],
+   "ability": "concha",
+   "enrageAbility": "dureza",
+   "loot": [
+    {
+     "item": "@x:mythic:5",
+     "chance": 0.25
+    },
+    {
+     "item": "@x:legendary:5",
+     "chance": 0.6
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La ostra se abre de golpe! ¡La perla brilla hasta cegar!"
+   },
+   "ultimate": {
+    "name": "Perla Madre",
+    "power": 156,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La perla estalla en mil recuerdos!"
+   }
+  },
+  "loba_memorial": {
+   "name": "Loba del Recuerdo",
+   "emoji": "🐺",
+   "color": "#c0d0ff",
+   "level": 37,
+   "hp": 10800,
+   "atk": 164,
+   "def": 118,
+   "mag": 150,
+   "spd": 44,
+   "xp": 2745,
+   "gold": 518,
+   "skills": [
+    {
+     "name": "Zarpazo Blanco",
+     "power": 120,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aullido Lejano",
+     "power": 84,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Colmillo de Recuerdo",
+     "power": 110,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 2
+    }
+   ],
+   "desc": "El recuerdo de una loba de la manada ancestral. Reconoce a Yukine y aun así debe pelear.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "aullido",
+   "enrageAbility": "intimidacion",
+   "loot": [
+    {
+     "item": "@w:legendary:5",
+     "chance": 0.6
+    },
+    {
+     "item": "@a:mythic:5",
+     "chance": 0.15
+    }
+   ],
+   "dodgeBonus": 0.05,
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Loba aúlla el nombre de Yukine! El recuerdo se vuelve ventisca."
+   },
+   "ultimate": {
+    "name": "Ventisca de Memorias",
+    "power": 164,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Cada recuerdo de la manada cae como nieve afilada!"
    }
   }
  }

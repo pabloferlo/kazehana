@@ -610,6 +610,5244 @@
      ]
     }
    ]
+  },
+  {
+   "id": "kurogane",
+   "name": "Kurogane",
+   "age": null,
+   "desc": "Un oni gigantesco de piel roja, cuernos curvos, hombros como muros y un martillo de hierro negro.",
+   "emotions": [
+    "neutral",
+    "angry",
+    "sad"
+   ],
+   "hidden": true
+  },
+  {
+   "id": "kagero",
+   "name": "Kagerō",
+   "age": null,
+   "desc": "Una kitsune de nueve colas, pelo naranja y ojos dorados. Sonríe demasiado.",
+   "emotions": [
+    "neutral",
+    "smug"
+   ],
+   "hidden": true
+  },
+  {
+   "id": "reiga",
+   "name": "Reiga",
+   "age": null,
+   "desc": "Un demonio alto y esbelto, de piel azulada, pelo blanco largo y capa de pieles de lobo blanco. Lleva un arco enorme.",
+   "emotions": [
+    "neutral",
+    "angry",
+    "smug",
+    "sad"
+   ],
+   "hidden": true
+  },
+  {
+   "id": "setsuko",
+   "name": "Setsuko",
+   "age": 44,
+   "desc": "Es una mujer alta de unos cuarenta y cinco años, de pelo gris corto, hombros anchos, una cicatriz que le cruza la mejilla y una mirada de acero.",
+   "emotions": [
+    "neutral",
+    "angry",
+    "happy"
+   ],
+   "role": "Capitana rebelde",
+   "talk": [
+    {
+     "if": [
+      "q:sq1=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "happy",
+       "text": "¿Seis cuervos menos? Mis exploradores respirarán tranquilos. Toma, de parte del campamento.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq1=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "neutral",
+       "text": "Los cuervos gélidos espían nuestras rutas. Seis, ni uno menos. Los encontrarás en el Sendero Helado."
+      }
+     ]
+    },
+    {
+     "if": [
+      "!met_setsuko"
+     ],
+     "scenes": [
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "neutral",
+       "text": "Así que sois los que tumbaron a Kurogane. Os esperábamos. Soy Setsuko, capitana de lo que queda de la resistencia de Shirogane.",
+       "actions": [
+        {
+         "type": "flag",
+         "flag": "met_setsuko"
+        }
+       ]
+      },
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "angry",
+       "text": "Aquí manda Reiga, el Cazador Gélido. Lleva años exterminando a los lobos blancos para quedarse con su magia. Dicen que queda una sola superviviente..."
+      },
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "neutral",
+       "text": "Si me ayudas con los cuervos del sendero, te daré algo útil.",
+       "choices": [
+        {
+         "label": "Cuenta con ello.",
+         "reply": [
+          {
+           "speaker": "Setsuko",
+           "char": "setsuko",
+           "emotion": "happy",
+           "text": "Bien."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq1"
+          }
+         ]
+        },
+        {
+         "label": "Ahora no.",
+         "reply": [
+          {
+           "speaker": "Setsuko",
+           "char": "setsuko",
+           "emotion": "neutral",
+           "text": "Como veas."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Setsuko",
+       "char": "setsuko",
+       "emotion": "neutral",
+       "text": "Cuatro santuarios mantienen la torre cerrada. Rómpelos en orden. Y cuida de tu amiga: Reiga huele el rastro de los lobos a kilómetros."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bunta",
+   "name": "Bunta",
+   "age": 67,
+   "desc": "Es un anciano bajito y regordete, de barba blanca trenzada, nariz roja por el frío y un abrigo remendado con cientos de bolsillos.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Mercader viajero",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Bunta",
+       "char": "bunta",
+       "emotion": "happy",
+       "text": "¡Compra, vende, regatea! En el campamento no hay mucho, pero lo que hay es honrado... casi siempre.",
+       "actions": [
+        {
+         "type": "shop"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hiro",
+   "name": "Hiro",
+   "age": 20,
+   "desc": "Es un joven delgado y nervioso de veinte años, de pelo castaño revuelto, mejillas coloradas por el viento y una bufanda enorme.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Explorador",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Hiro",
+       "char": "hiro",
+       "emotion": "happy",
+       "text": "¡He oído que derrotasteis al Oni de Hierro! ¡Es increíble! Yo solo exploro, pero algún día quiero ser como vosotros."
+      },
+      {
+       "speaker": "Hiro",
+       "char": "hiro",
+       "emotion": "neutral",
+       "text": "Consejo de explorador: en Yunomori, al este, hay aguas termales. Dicen que curan las penas. Y los huesos."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tsubaki",
+   "name": "Tsubaki",
+   "age": 46,
+   "desc": "Es una mujer elegante de unos cuarenta y seis años, de pelo negro con mechones plateados recogido con un palillo de jade, ojos rasgados y movimientos pausados.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Dueña de las aguas termales",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Tsubaki",
+       "char": "tsubaki",
+       "emotion": "smug",
+       "text": "Bienvenidos a Yunomori. Mis aguas curan casi todo. Casi. La pena la curan peor, pero ayudan."
+      },
+      {
+       "speaker": "Tsubaki",
+       "char": "tsubaki",
+       "emotion": "happy",
+       "text": "Si necesitáis descansar, la posada del pueblo tiene baños privados. Para parejas o amigos. No juzgo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kaito",
+   "name": "Kaito",
+   "age": 31,
+   "desc": "Es un hombre corpulento de treinta y un años, de pelo corto y negro, brazos fuertes, delantal blanco y una sonrisa enorme.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Cocinero",
+   "talk": [
+    {
+     "if": [
+      "q:sq2=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaito",
+       "char": "kaito",
+       "emotion": "happy",
+       "text": "¡Tres hongos de nieve! Con esto preparo mi estofado secreto. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq2=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaito",
+       "char": "kaito",
+       "emotion": "neutral",
+       "text": "Tres Hongos de Nieve. Los llevan los gólems y los yetis a veces. No me preguntéis cómo."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq2=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaito",
+       "char": "kaito",
+       "emotion": "sad",
+       "text": "Mi estofado secreto necesita hongos de nieve y ya no me quedan. Los gólems y los yetis los llevan encima... ¿Me traéis tres?",
+       "choices": [
+        {
+         "label": "Hecho.",
+         "reply": [
+          {
+           "speaker": "Kaito",
+           "char": "kaito",
+           "emotion": "happy",
+           "text": "¡Qué gran día!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq2"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Kaito",
+           "char": "kaito",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Kaito",
+       "char": "kaito",
+       "emotion": "happy",
+       "text": "¿Hambre? Siempre es buena hora para comer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rin_npc",
+   "name": "Rin",
+   "age": 26,
+   "desc": "Es una joven de veintiséis años, alta y atlética, de pelo azul corto y despeinado, ojos grises, una katana a la cintura y una sonrisa de desafío.",
+   "emotions": [
+    "neutral",
+    "smug",
+    "happy"
+   ],
+   "role": "Espadachina errante",
+   "talk": [
+    {
+     "if": [
+      "q:sq4=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rin",
+       "char": "rin",
+       "emotion": "happy",
+       "text": "Has sabido medirte con la mejor. Me gusta. Toma mi filo: no lo suelto por nadie, pero tú me caes bien.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq4=active",
+      "rin_lost"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rin",
+       "char": "rin",
+       "emotion": "smug",
+       "text": "¿Otra vez? Me gusta tu insistencia. Cuando quieras.",
+       "choices": [
+        {
+         "label": "¡Revancha!",
+         "reply": [],
+         "actions": [
+          {
+           "type": "battle",
+           "group": [
+            "rin"
+           ],
+           "canFlee": false,
+           "duel": true,
+           "winFlag": "rin_beaten",
+           "loseFlag": "rin_lost"
+          }
+         ]
+        },
+        {
+         "label": "Más tarde.",
+         "reply": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq4=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rin",
+       "char": "rin",
+       "emotion": "smug",
+       "text": "¿Preparados? No me contengo.",
+       "choices": [
+        {
+         "label": "Vamos.",
+         "reply": [],
+         "actions": [
+          {
+           "type": "battle",
+           "group": [
+            "rin"
+           ],
+           "canFlee": false,
+           "duel": true,
+           "winFlag": "rin_beaten",
+           "loseFlag": "rin_lost"
+          }
+         ]
+        },
+        {
+         "label": "Aún no.",
+         "reply": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq4=turned"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rin",
+       "char": "rin",
+       "emotion": "happy",
+       "text": "Cuida bien ese filo. Y ven a verme cuando quieras otro duelo... de los de verdad."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Rin",
+       "char": "rin",
+       "emotion": "smug",
+       "text": "Eh, ¿tú? Se te ve capaz. Te propongo un duelo amistoso: sin matar, solo orgullo. Si ganas, te llevas mi filo.",
+       "choices": [
+        {
+         "label": "Acepto el duelo.",
+         "reply": [
+          {
+           "speaker": "Rin",
+           "char": "rin",
+           "emotion": "happy",
+           "text": "¡Así se habla! Cuando estés listo, vuelve a hablarme."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq4"
+          }
+         ]
+        },
+        {
+         "label": "No, gracias.",
+         "reply": [
+          {
+           "speaker": "Rin",
+           "char": "rin",
+           "emotion": "neutral",
+           "text": "Qué pena. La oferta sigue en pie."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jion",
+   "name": "Jion",
+   "age": 81,
+   "desc": "Es un monje muy anciano, de ochenta y un años, flaco, completamente calvo, con cejas blancas enormes y manos temblorosas que sostienen un rosario de madera.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Monje anciano",
+   "talk": [
+    {
+     "if": [
+      "q:sq3=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jion",
+       "char": "jion",
+       "emotion": "happy",
+       "text": "¡La campana! Creí que se había perdido para siempre. Con ella los viajeros volverán a orientarse en las ventiscas. Que los dioses os bendigan.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq3=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jion",
+       "char": "jion",
+       "emotion": "neutral",
+       "text": "La campana antigua cayó en la Cueva de Cristal, dicen. Os lo agradeceré eternamente."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq3=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jion",
+       "char": "jion",
+       "emotion": "sad",
+       "text": "Hace años, los demonios arrancaron las campanas del templo. Una de ellas, la más antigua, fue arrastrada a una cueva de cristal. ¿Podríais recuperarla?",
+       "choices": [
+        {
+         "label": "La traeremos.",
+         "reply": [
+          {
+           "speaker": "Jion",
+           "char": "jion",
+           "emotion": "happy",
+           "text": "Os lo agradezco de corazón."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq3"
+          }
+         ]
+        },
+        {
+         "label": "No puedo ahora.",
+         "reply": [
+          {
+           "speaker": "Jion",
+           "char": "jion",
+           "emotion": "neutral",
+           "text": "Lo entiendo, hijo."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Jion",
+       "char": "jion",
+       "emotion": "neutral",
+       "text": "Las montañas lo recuerdan todo. También a los que se fueron. También a los lobos blancos."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sachi",
+   "name": "Sachi",
+   "age": 35,
+   "desc": "Es una mujer de unos treinta y cinco años, de estatura media, pelo castaño recogido, mejillas rosadas y un delantal verde lleno de bolsillos.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Tendera",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Sachi",
+       "char": "sachi",
+       "emotion": "happy",
+       "text": "¡Pasad, pasad! Tengo de todo para el frío y para el cuerpo.",
+       "actions": [
+        {
+         "type": "shop"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "akane",
+   "name": "Akane",
+   "age": 38,
+   "desc": "Es una mujer alta y atlética de treinta y ocho años, con melena corta de un rojo ceniza, una cicatriz cruzándole la ceja izquierda, armadura de cuero remendada y mirada de quien lleva mucho tiempo sin dormir bien.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug",
+    "determined"
+   ],
+   "role": "Capitana de la resistencia",
+   "talk": [
+    {
+     "if": [
+      "q:sq7=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "happy",
+       "text": "Cinco generales menos. Los suministros pasarán. Os debo mucho. Tomad, y que Hinode os recuerde.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq7"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq7=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "neutral",
+       "text": "Los onis generales aparecen en la llanura y en el valle de las Lápidas. Cinco. No es poco."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq7=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "neutral",
+       "text": "Los onis generales cortan los caminos de suministros. Necesito que acabes con cinco. Es una petición, no una orden.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Akane",
+           "char": "akane",
+           "emotion": "happy",
+           "text": "Gracias. Y ten cuidado: son duros."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq7"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Akane",
+           "char": "akane",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "game_cleared"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "happy",
+       "text": "El sol se pone, los niños duermen sin miedo... Gracias por devolvernos esto."
+      }
+     ]
+    },
+    {
+     "if": [
+      "ak_5_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "determined",
+       "text": "Los cinco sellos rotos. Solo falta el rey. Id con cuidado."
+      }
+     ]
+    },
+    {
+     "if": [
+      "ak_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "neutral",
+       "text": "Tres sellos. Va mejor de lo que esperábamos. Seguid."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Akane",
+       "char": "akane",
+       "emotion": "determined",
+       "text": "Cada sello roto es un día más de esperanza."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "momiji",
+   "name": "Momiji",
+   "age": 52,
+   "desc": "Es una mujer menuda de cincuenta y dos años, de pelo gris recogido en un moño, manos manchadas de tierra roja, delantal verde lleno de bolsillos y una sonrisa traviesa.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Herborista",
+   "talk": [
+    {
+     "if": [
+      "q:sq5=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Momiji",
+       "char": "momiji",
+       "emotion": "happy",
+       "text": "¡Cuatro flores del alba! Con esto puedo preparar mi mejor tintura. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq5"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq5=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Momiji",
+       "char": "momiji",
+       "emotion": "neutral",
+       "text": "Las flores del alba las llevan kitsunes, shikigamis y demonios del alba. Cuatro, por favor."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq5=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Momiji",
+       "char": "momiji",
+       "emotion": "neutral",
+       "text": "Necesito cuatro flores del alba para mi tintura más especial. Algunos demonios del Yermo las llevan encima. ¿Me ayudas?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Momiji",
+           "char": "momiji",
+           "emotion": "happy",
+           "text": "¡Gracias, cariño!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq5"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Momiji",
+           "char": "momiji",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Momiji",
+       "char": "momiji",
+       "emotion": "happy",
+       "text": "Las plantas del Yermo son raras. Resisten el calor, la ceniza y el odio. Como nosotros."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tetsu",
+   "name": "Tetsu",
+   "age": 44,
+   "desc": "Es un hombre fornido de cuarenta y cuatro años, calvo, de barba negra trenzada, delantal de cuero quemado y antebrazos llenos de cicatrices de forja.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Herrero",
+   "talk": [
+    {
+     "if": [
+      "q:sq6=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tetsu",
+       "char": "tetsu",
+       "emotion": "happy",
+       "text": "Tres cristales de ceniza. Perfectos. Esto me da para reforjar media resistencia. Tomad, es todo lo que tengo.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq6=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tetsu",
+       "char": "tetsu",
+       "emotion": "neutral",
+       "text": "Los cristales de ceniza los llevan onis y samuráis huecos. Tres, y que sean buenos."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq6=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tetsu",
+       "char": "tetsu",
+       "emotion": "neutral",
+       "text": "Necesito tres cristales de ceniza para fundir buen acero. Los onis y los samuráis huecos los llevan encima.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Tetsu",
+           "char": "tetsu",
+           "emotion": "happy",
+           "text": "Un favor así no se olvida."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq6"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Tetsu",
+           "char": "tetsu",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "martillo_padre"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tetsu",
+       "char": "tetsu",
+       "emotion": "neutral",
+       "text": "Ese martillo... ¿es de la familia de los herreros de Tsukimori? Mi maestro hablaba de ellos. Cuídalo. Es leyenda."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Tetsu",
+       "char": "tetsu",
+       "emotion": "smug",
+       "text": "Mi herrería está abierta. Mira lo que quieras. Y si algo se rompe, aquí me tienes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yomi",
+   "name": "Yomi",
+   "age": 9,
+   "desc": "Es una niña de nueve años, de pelo negro corto y despeinado, ojos enormes y marrones, ropa remendada y una sonrisa con un diente de menos.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Huérfana del refugio",
+   "talk": [
+    {
+     "if": [
+      "game_cleared"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yomi",
+       "char": "yomi",
+       "emotion": "happy",
+       "text": "¡El sol se va a dormir! ¡Es la primera vez que lo veo! ¡Gracias, gracias!"
+      }
+     ]
+    },
+    {
+     "if": [
+      "stage>=4",
+      "ak_2_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yomi",
+       "char": "yomi",
+       "emotion": "happy",
+       "text": "¿Os vais a casar? ¡Yo quiero llevar las flores!"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "shy",
+       "text": "...¡Qué cosas dice esta niña!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Yomi",
+       "char": "yomi",
+       "emotion": "happy",
+       "text": "¿Eres una loba de verdad? ¿Me dejas tocar las orejas?"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Solo una vez. Y con cuidado."
+      },
+      {
+       "speaker": "Yomi",
+       "char": "yomi",
+       "emotion": "happy",
+       "text": "¡Suaves! ¡Son suaves!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sen",
+   "name": "Sen",
+   "age": 81,
+   "desc": "Es un anciano de ochenta y un años, de espalda encorvada, barba blanca hasta el pecho, ojos entrecerrados y un bastón de bambú lleno de nudos. Habla despacio.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "smug"
+   ],
+   "role": "Sabio del refugio",
+   "talk": [
+    {
+     "if": [
+      "ak_4_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sen",
+       "char": "sen",
+       "emotion": "neutral",
+       "text": "Los herreros sellaron con martillo y luna. Cuando el sello cae, la luna y el martillo deben cerrarlo. Tú y la loba. Lo tengo claro."
+      }
+     ]
+    },
+    {
+     "if": [
+      "ak_2_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sen",
+       "char": "sen",
+       "emotion": "neutral",
+       "text": "Yamikage no fue siempre un rey demonio. Cuentan que fue un guerrero humano que quiso detener el tiempo para no perder a su amada. Aprendió que el tiempo no se detiene... sino que se pudre."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sen",
+       "char": "sen",
+       "emotion": "smug",
+       "text": "He visto caer tres reyes y levantarse cuatro. Ninguno duró. Los reyes demonios son como la nieve: bonitos, hasta que llega el sol."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ohana",
+   "name": "Ohana",
+   "age": 29,
+   "desc": "Es una mujer joven de veintinueve años, con orejas y cola de zorra naranja, kimono rojo con estampado de nubes, abanico dorado y una mirada pícara.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Mercader errante",
+   "talk": [
+    {
+     "if": [
+      "stage>=4"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ohana",
+       "char": "ohana",
+       "emotion": "smug",
+       "text": "Vaya, vaya. Qué bien se os ve juntos. ¿Un perfume para ella? Lo llevo en el carro. No lo digas, que se entera."
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "shy",
+       "text": "¡Que te oigo!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ohana",
+       "char": "ohana",
+       "emotion": "smug",
+       "text": "Llevo cosas raras de todo el mundo. La tienda del pueblo tiene lo básico. Yo, lo especial. ...Bueno, también lo básico, pero más caro."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "daichi",
+   "name": "Daichi",
+   "age": 56,
+   "desc": "Es un hombre de cincuenta y seis años, de pelo canoso rapado, bigote espeso, uniforme militar viejo pero impecable, espalda recta y una katana vieja al cinto.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "determined"
+   ],
+   "role": "Capitán veterano",
+   "talk": [
+    {
+     "if": [
+      "q:sq8=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daichi",
+       "char": "daichi",
+       "emotion": "happy",
+       "text": "Buen duelo. Hacía años que no sudaba así. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq8"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq8=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daichi",
+       "char": "daichi",
+       "emotion": "determined",
+       "text": "¿Preparados? No me contengo.",
+       "choices": [
+        {
+         "label": "Vamos.",
+         "reply": [],
+         "actions": [
+          {
+           "type": "battle",
+           "group": [
+            "daichi_duelo"
+           ],
+           "canFlee": false,
+           "duel": true,
+           "winFlag": "daichi_beaten",
+           "loseFlag": "daichi_lost"
+          }
+         ]
+        },
+        {
+         "label": "Aún no.",
+         "reply": [
+          {
+           "speaker": "Daichi",
+           "char": "daichi",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq8=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Daichi",
+       "char": "daichi",
+       "emotion": "determined",
+       "text": "Veinte años luchando contra demonios y ahora me toca ver cómo unos críos acaban con ellos. Un duelo, solo uno, para ver si merece la pena el cuento.",
+       "choices": [
+        {
+         "label": "Acepto. Vuelve a hablarme cuando estés listo.",
+         "reply": [
+          {
+           "speaker": "Daichi",
+           "char": "daichi",
+           "emotion": "happy",
+           "text": "Cuando quieras."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq8"
+          }
+         ]
+        },
+        {
+         "label": "Quizá más tarde.",
+         "reply": [
+          {
+           "speaker": "Daichi",
+           "char": "daichi",
+           "emotion": "neutral",
+           "text": "Cuando quieras."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Daichi",
+       "char": "daichi",
+       "emotion": "neutral",
+       "text": "Mi katana ha sobrevivido a más guerras que yo. Y yo a más de las que debería."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hotaru",
+   "name": "Hotaru",
+   "age": 24,
+   "desc": "Es un joven delgado de veinticuatro años, de pelo azul oscuro atado en coleta, ojos color ámbar, kimono gris desgastado y un shamisen siempre colgado a la espalda.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Bardo",
+   "talk": [
+    {
+     "if": [
+      "game_cleared"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hotaru",
+       "char": "hotaru",
+       "emotion": "happy",
+       "text": "Tengo la canción terminada. Se llama «La luna y el martillo». ¿Queréis oírla?"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Más tarde. Primero, cena."
+      }
+     ]
+    },
+    {
+     "if": [
+      "ak_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hotaru",
+       "char": "hotaru",
+       "emotion": "happy",
+       "text": "Ya voy por la cuarta estrofa. Hay una parte sobre una loba que aúlla en la nieve. Me ha quedado preciosa."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hotaru",
+       "char": "hotaru",
+       "emotion": "happy",
+       "text": "Ando escribiendo vuestra balada. ¿Alguna anécdota graciosa? Las serias ya las tengo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yamikage",
+   "name": "Yamikage",
+   "age": null,
+   "desc": "Un demonio altísimo de piel gris ceniza, cuernos largos y curvos, ojos rojos como brasas, armadura negra con adornos de oro viejo y una espada sin desenvainar.",
+   "emotions": [
+    "neutral",
+    "smug",
+    "angry",
+    "sad"
+   ],
+   "role": "Rey Demonio",
+   "hidden": true
+  },
+  {
+   "id": "jorogumo",
+   "name": "Jorōgumo",
+   "age": null,
+   "desc": "Una mujer de piel pálida y cabello negro larguísimo, kimono rojo sangre y ojos con varias pupilas. De su espalda brotan patas de araña.",
+   "emotions": [
+    "neutral",
+    "sad"
+   ],
+   "role": "Jefa del segundo sello",
+   "hidden": true
+  },
+  {
+   "id": "centinela",
+   "name": "El Centinela",
+   "age": null,
+   "desc": "Una estatua gigantesca de piedra dorada, con un rostro sereno sin ojos y una lanza de luz en la mano.",
+   "emotions": [
+    "neutral",
+    "sad"
+   ],
+   "role": "Guardián del último sello",
+   "hidden": true
+  },
+  {
+   "id": "hanae",
+   "name": "Hanae",
+   "age": 41,
+   "desc": "Es una mujer robusta de cuarenta y un años, de pelo castaño con trenza gruesa, mejillas rojas, delantal de lino con manchas de salsa y brazos fuertes de cargar barriles.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Tabernera",
+   "talk": [
+    {
+     "if": [
+      "q:sq9=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hanae",
+       "char": "hanae",
+       "emotion": "happy",
+       "text": "¡Mi barril! ¡Y sin una gota perdida! Tomad, que os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq9"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq9=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hanae",
+       "char": "hanae",
+       "emotion": "neutral",
+       "text": "El barril lo llevan los oni bandoleros de las ruinas del Puesto de Vigía. Uno solo me vale."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq9=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hanae",
+       "char": "hanae",
+       "emotion": "neutral",
+       "text": "Unos oni me robaron un barril de sake de ciruela hace una semana. Si me lo recuperas, la casa invita.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Hanae",
+           "char": "hanae",
+           "emotion": "happy",
+           "text": "¡Gracias, cielo!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq9"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Hanae",
+           "char": "hanae",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "sanc_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hanae",
+       "char": "hanae",
+       "emotion": "happy",
+       "text": "Cada vez que pasan por aquí, la taberna se llena. Sois buenos para el negocio."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hanae",
+       "char": "hanae",
+       "emotion": "neutral",
+       "text": "Sentaos. El estofado de la casa levanta a un muerto."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gonji",
+   "name": "Gonji",
+   "age": 78,
+   "desc": "Es un anciano de setenta y ocho años, flaco y encorvado, con barba larga y rala de color ceniza, manos callosas de hachero, gorro de lana gris y ojos azules muy claros.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy"
+   ],
+   "role": "Leñador veterano",
+   "talk": [
+    {
+     "if": [
+      "sanc_2_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Gonji",
+       "char": "gonji",
+       "emotion": "sad",
+       "text": "Tu padre venía a por madera de roble para su forja. «Esta es para el martillo de la luna», decía. Nunca entendí qué quería decir con eso."
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "neutral",
+       "text": "Martillo de la luna... Eso me suena."
+      },
+      {
+       "speaker": "{name}",
+       "char": "protagonista",
+       "emotion": "neutral",
+       "text": "Tomo nota. Mi padre guardaba muchos secretos."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Gonji",
+       "char": "gonji",
+       "emotion": "neutral",
+       "text": "Conocí a tu padre. Un buen hombre, terco como una mula. Si has salido a él, los demonios lo van a pasar mal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tamaki",
+   "name": "Tamaki",
+   "age": 23,
+   "desc": "Es una joven delgada de veintitrés años, de pelo corto verde oscuro con flequillo recto, ojos grandes, túnica de herborista y un morral colgando lleno de plantas.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Curandera aprendiz",
+   "talk": [
+    {
+     "if": [
+      "q:sq11=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tamaki",
+       "char": "tamaki",
+       "emotion": "happy",
+       "text": "¡La hierba del pantano! Con esto preparo el ungüento para los leñadores. Os debo una.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq11"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq11=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tamaki",
+       "char": "tamaki",
+       "emotion": "neutral",
+       "text": "La hierba del pantano la llevan las ranas venenosas. Con cuatro tengo suficiente."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq11=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tamaki",
+       "char": "tamaki",
+       "emotion": "neutral",
+       "text": "Necesito cuatro hierbas del pantano para un ungüento. Pero las ranas de allí no se dejan...",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Tamaki",
+           "char": "tamaki",
+           "emotion": "happy",
+           "text": "¡Eres un sol!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq11"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Tamaki",
+           "char": "tamaki",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Tamaki",
+       "char": "tamaki",
+       "emotion": "shy",
+       "text": "Perdona, yo soy... un poco tímida. Pero me gusta escuchar a los viajeros."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ichiro",
+   "name": "Ichiro",
+   "age": 10,
+   "desc": "Es un niño de diez años, de pelo negro revuelto, rodillas llenas de costras, camiseta enorme que le queda grande y una honda en el cinturón.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Niño del pueblo",
+   "talk": [
+    {
+     "if": [
+      "sanc_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ichiro",
+       "char": "ichiro",
+       "emotion": "happy",
+       "text": "¡Os vi en la torre! ¡Bueno, no os vi, pero me lo imaginé!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ichiro",
+       "char": "ichiro",
+       "emotion": "happy",
+       "text": "Cuando sea mayor, voy a ser guerrero y a cazar demonios. O panadero. Aún no lo decido."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shinobu",
+   "name": "Shinobu",
+   "age": 34,
+   "desc": "Es una mujer atlética de treinta y cuatro años, de pelo largo y negro atado en coleta alta, mirada afilada, capa de piel de ciervo y un arco largo a la espalda.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Cazadora jefa",
+   "talk": [
+    {
+     "if": [
+      "q:sq10=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shinobu",
+       "char": "shinobu",
+       "emotion": "happy",
+       "text": "Cuatro jabalíes menos. El bosque respira mejor. Tomad la recompensa.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq10"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq10=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shinobu",
+       "char": "shinobu",
+       "emotion": "neutral",
+       "text": "Los jabalíes corruptos andan por el camino de la niebla y el río. Cuatro."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq10=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shinobu",
+       "char": "shinobu",
+       "emotion": "neutral",
+       "text": "Los jabalíes corruptos están destrozando nuestras trampas. Mata a cuatro y te invito a lo que quieras.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Shinobu",
+           "char": "shinobu",
+           "emotion": "happy",
+           "text": "Buena caza."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq10"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Shinobu",
+           "char": "shinobu",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Shinobu",
+       "char": "shinobu",
+       "emotion": "smug",
+       "text": "Los cazadores no hablamos mucho. Pero me caes bien."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bunzo",
+   "name": "Bunzo",
+   "age": 52,
+   "desc": "Es un hombre rechoncho de cincuenta y dos años, de bigote ancho y ralo, sombrero de paja, delantal de comerciante y una sonrisa amplia que enseña un diente de oro.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Vendedor ambulante",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Bunzo",
+       "char": "bunzo",
+       "emotion": "smug",
+       "text": "¿Algo para el camino? Tengo de todo. Precios de amigo. Bueno, de amigo con dinero."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kaoru",
+   "name": "Kaoru",
+   "age": 67,
+   "desc": "Es una anciana de sesenta y siete años, de pelo blanco recogido en un moño bajo, piel curtida por el sol y el agua, kimono azul desvaído y manos que no dejan de zurcir redes.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy"
+   ],
+   "role": "Pescadora",
+   "talk": [
+    {
+     "if": [
+      "q:sq12=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaoru",
+       "char": "kaoru",
+       "emotion": "happy",
+       "text": "¡La perla del lago! La necesito para el festival. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq12"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq12=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaoru",
+       "char": "kaoru",
+       "emotion": "neutral",
+       "text": "Las perlas pequeñas las llevan las ranas venenosas. Tres, hija."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq12=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaoru",
+       "char": "kaoru",
+       "emotion": "neutral",
+       "text": "Cada año adornamos el farolillo mayor con tres perlas del lago, pero las ranas se han adueñado del pantano. ¿Me traes tres?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Kaoru",
+           "char": "kaoru",
+           "emotion": "happy",
+           "text": "Qué amable."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq12"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Kaoru",
+           "char": "kaoru",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "sanc_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaoru",
+       "char": "kaoru",
+       "emotion": "happy",
+       "text": "Cuando mi marido vivía, me traía perlas. Ahora me las trae el destino."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Kaoru",
+       "char": "kaoru",
+       "emotion": "neutral",
+       "text": "El lago tiene memoria, ¿sabes? Recuerda cada barca que lo cruzó."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "umi",
+   "name": "Umi",
+   "age": 12,
+   "desc": "Es una niña de doce años, de coletas negras con cintas azules, piel morena, vestido de pescadora y una caña de bambú casi más alta que ella.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Niña pescadora",
+   "talk": [
+    {
+     "if": [
+      "ev_mizuumi_noche"
+     ],
+     "scenes": [
+      {
+       "speaker": "Umi",
+       "char": "umi",
+       "emotion": "happy",
+       "text": "¡Os vi en la barca anoche! Chisss, no se lo diré a nadie."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Umi",
+       "char": "umi",
+       "emotion": "happy",
+       "text": "El pez grande de aquí se llama Don Bigotes. Aún no he podido pescarlo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jiro",
+   "name": "Jirō",
+   "age": 36,
+   "desc": "Es un hombre de treinta y seis años, ancho de hombros, piel bronceada, pelo corto y salado, cicatrices de red en las manos y una barca de remos siempre amarrada a su lado.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Barquero",
+   "talk": [
+    {
+     "if": [
+      "q:sq13=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jirō",
+       "char": "jiro",
+       "emotion": "happy",
+       "text": "Seis espíritus menos. Las barcas pueden salir. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq13"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq13=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jirō",
+       "char": "jiro",
+       "emotion": "neutral",
+       "text": "Los espíritus de las ramas rondan el lago y el bosque umbrío. Seis."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq13=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Jirō",
+       "char": "jiro",
+       "emotion": "neutral",
+       "text": "Los espíritus de las ramas enredan mis redes. Elimina a seis y te dejo mi barca cuando quieras.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Jirō",
+           "char": "jiro",
+           "emotion": "happy",
+           "text": "Gracias, forastero."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq13"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Jirō",
+           "char": "jiro",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Jiro",
+       "char": "jiro",
+       "emotion": "smug",
+       "text": "Mi barca es la más rápida del lago. Y la única, pero no lo menciones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "masami",
+   "name": "Masami",
+   "age": 33,
+   "desc": "Es una mujer tranquila de treinta y tres años, de pelo castaño con un lazo azul, ojos dulces, kimono sencillo color arena y manos delicadas de posadera.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Posadera",
+   "talk": [
+    {
+     "if": [
+      "stage>=4"
+     ],
+     "scenes": [
+      {
+       "speaker": "Masami",
+       "char": "masami",
+       "emotion": "shy",
+       "text": "Hay una habitación con vistas al lago que os va a encantar. Para dos. No hace falta que digáis nada."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Masami",
+       "char": "masami",
+       "emotion": "happy",
+       "text": "Esta posada es pequeña, pero tiene el mejor atardecer de todo Kasumi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tessen",
+   "name": "Tessen",
+   "age": null,
+   "desc": "Un oni de piel roja oscura y cuernos cortos, con un parche en el ojo izquierdo, abrigo de cuero con muchos bolsillos y un collar de dientes.",
+   "emotions": [
+    "neutral",
+    "smug",
+    "angry"
+   ],
+   "role": "Bandolero",
+   "hidden": true
+  },
+  {
+   "id": "dogo",
+   "name": "Dogo",
+   "age": null,
+   "desc": "Un oni enorme de piel gris, brazos como troncos, látigo en el cinto y casco de hierro con cuernos.",
+   "emotions": [
+    "neutral",
+    "angry",
+    "sad"
+   ],
+   "role": "Capataz",
+   "hidden": true
+  },
+  {
+   "id": "ermitano",
+   "name": "El Ermitaño",
+   "age": null,
+   "desc": "Un anciano de barba blanquísima hasta el suelo, túnica de hojas cosidas y un bastón de madera con una campanilla.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Guardián de la gruta",
+   "hidden": true
+  },
+  {
+   "id": "haruto",
+   "name": "Haruto",
+   "age": 52,
+   "desc": "Es un hombre robusto de cincuenta y dos años, de barba gris tupida, gorro de piel con orejeras, abrigo de lana de yak y un bastón de pastor en la mano.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Pastor",
+   "talk": [
+    {
+     "if": [
+      "q:sq14=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruto",
+       "char": "haruto",
+       "emotion": "happy",
+       "text": "Seis lobos menos. El rebaño duerme tranquilo. Gracias, forasteros.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq14"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq14=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruto",
+       "char": "haruto",
+       "emotion": "neutral",
+       "text": "Los lobos de ventisca merodean por el sendero. Seis, y mi rebaño estará a salvo."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq14=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruto",
+       "char": "haruto",
+       "emotion": "neutral",
+       "text": "Los lobos corruptos matan mis yaks. Si acabas con seis, te invito a lo que quieras.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Haruto",
+           "char": "haruto",
+           "emotion": "happy",
+           "text": "Que el viento te guíe."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq14"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Haruto",
+           "char": "haruto",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Haruto",
+       "char": "haruto",
+       "emotion": "neutral",
+       "text": "El rebaño y yo llevamos mucho tiempo bajando y subiendo estas montañas. Nunca había visto tanto frío."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chise",
+   "name": "Chise",
+   "age": 11,
+   "desc": "Es una niña de once años, de mejillas rojas por el frío, trenzas rubias con lazos verdes, bufanda enorme y botas de piel que le quedan grandes.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Pastora joven",
+   "talk": [
+    {
+     "if": [
+      "sh_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Chise",
+       "char": "chise",
+       "emotion": "happy",
+       "text": "¡Mi yak más pequeño ya mide como yo! Se llama Copo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Chise",
+       "char": "chise",
+       "emotion": "happy",
+       "text": "¿Eres un guerrero de verdad? ¿Y ella una loba? ¡Qué suerte!"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "¿Quieres tocarme las orejas? Una vez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "otose",
+   "name": "Otose",
+   "age": 70,
+   "desc": "Es una anciana de setenta años, pequeña y redonda, de pelo blanco con trenzas largas, mantón de lana de mil colores, gafas de aro y manos que tejen sin mirar.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Tejedora",
+   "talk": [
+    {
+     "if": [
+      "q:sq17=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Otose",
+       "char": "otose",
+       "emotion": "happy",
+       "text": "¡Queso de yak! Mi nieta me matará si se entera. Tomad, os lo habéis ganado.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq17"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq17=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Otose",
+       "char": "otose",
+       "emotion": "neutral",
+       "text": "El queso de yak lo llevan los yetis. Son difíciles de cazar, hijo. Con tres basta."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq17=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Otose",
+       "char": "otose",
+       "emotion": "neutral",
+       "text": "Mi queso favorito escasea desde que los yetis rondan por aquí. ¿Me traes tres?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Otose",
+           "char": "otose",
+           "emotion": "happy",
+           "text": "Qué buena gente."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq17"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Otose",
+           "char": "otose",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Otose",
+       "char": "otose",
+       "emotion": "happy",
+       "text": "Os estoy tejiendo unos guantes. No preguntéis para quién, ni de qué color."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goro",
+   "name": "Gorō",
+   "age": 45,
+   "desc": "Es un hombre alto y delgado de cuarenta y cinco años, de bigote fino, pelo negro con entradas, chaqueta de cuero y gafas de soldador sobre la frente.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Herrero de campo",
+   "talk": [
+    {
+     "if": [
+      "sh_4_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Gorō",
+       "char": "goro",
+       "emotion": "smug",
+       "text": "Cada hacha que forjo la pruebo contra un oni. Las que sobreviven, las vendo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Gorō",
+       "char": "goro",
+       "emotion": "neutral",
+       "text": "Si vuestro equipo necesita mimo, dejadlo aquí. O comprad algo nuevo, que también me conviene."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sayaka",
+   "name": "Sayaka",
+   "age": 30,
+   "desc": "Es una mujer alta y esbelta de treinta años, de pelo negro muy corto, ojos gris claro, cicatriz fina en la mejilla y un arco largo a la espalda cubierto de plumas negras.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Capitana arquera",
+   "talk": [
+    {
+     "if": [
+      "q:sq16=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sayaka",
+       "char": "sayaka",
+       "emotion": "happy",
+       "text": "Cuatro arqueras menos. Gracias. Os debo una.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq16"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq16=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sayaka",
+       "char": "sayaka",
+       "emotion": "neutral",
+       "text": "Las arqueras gélidas rondan por las cumbres y la fortaleza. Cuatro."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq16=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sayaka",
+       "char": "sayaka",
+       "emotion": "neutral",
+       "text": "Unas arqueras demoníacas nos hostigan desde las crestas. Elimina a cuatro y nos darás respiro.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Sayaka",
+           "char": "sayaka",
+           "emotion": "happy",
+           "text": "Buena puntería."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq16"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Sayaka",
+           "char": "sayaka",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sayaka",
+       "char": "sayaka",
+       "emotion": "smug",
+       "text": "Fui la mejor tiradora de Shirogane. Ahora soy la única. Pero sigo siendo la mejor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tobei",
+   "name": "Tōbei",
+   "age": 58,
+   "desc": "Es un hombre ancho y bajo de cincuenta y ocho años, de nariz rojiza, barba blanca recortada, gorro de cuero y una mula con alforjas a su lado.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Mercader de la mula",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Tōbei",
+       "char": "tobei",
+       "emotion": "happy",
+       "text": "Mi mula y yo vendemos de todo. Aunque ella prefiere vender zanahorias."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "genshin",
+   "name": "Abad Genshin",
+   "age": 66,
+   "desc": "Es un anciano de sesenta y seis años, calvo y de espalda recta, túnica azul pálido, cejas blancas largas y una mirada tranquila que parece atravesarte.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Abad del monasterio",
+   "talk": [
+    {
+     "if": [
+      "q:sq18=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Abad Genshin",
+       "char": "genshin",
+       "emotion": "happy",
+       "text": "Buen combate. Tienes un corazón fuerte. Toma este rosario: lo necesitarás.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq18"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq18=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Abad Genshin",
+       "char": "genshin",
+       "emotion": "smug",
+       "text": "¿Preparados? Un buen maestro no se contiene.",
+       "choices": [
+        {
+         "label": "Vamos.",
+         "reply": [],
+         "actions": [
+          {
+           "type": "battle",
+           "group": [
+            "monje_abad"
+           ],
+           "canFlee": false,
+           "duel": true,
+           "winFlag": "abad_beaten",
+           "loseFlag": "abad_lost"
+          }
+         ]
+        },
+        {
+         "label": "Aún no.",
+         "reply": [
+          {
+           "speaker": "Abad Genshin",
+           "char": "genshin",
+           "emotion": "neutral",
+           "text": "El silencio espera."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq18=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Abad Genshin",
+       "char": "genshin",
+       "emotion": "smug",
+       "text": "Los guerreros hablan mucho. Los monjes escuchamos. Pero a veces hace falta un buen golpe para escuchar mejor. ¿Un duelo?",
+       "choices": [
+        {
+         "label": "Acepto. Vuelve a hablarme cuando estés listo.",
+         "reply": [
+          {
+           "speaker": "Abad Genshin",
+           "char": "genshin",
+           "emotion": "happy",
+           "text": "Cuando quieras."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq18"
+          }
+         ]
+        },
+        {
+         "label": "Quizá más tarde.",
+         "reply": [
+          {
+           "speaker": "Abad Genshin",
+           "char": "genshin",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Abad Genshin",
+       "char": "genshin",
+       "emotion": "neutral",
+       "text": "El hielo y el fuego son lo mismo, si los miras desde la altura suficiente."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ryo",
+   "name": "Ryō",
+   "age": 24,
+   "desc": "Es un joven monje de veinticuatro años, delgado, de cabeza rapada, ojos oscuros enormes, túnica azul y un rosario de madera que no para de girar entre los dedos.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Monje joven",
+   "talk": [
+    {
+     "if": [
+      "q:sq15=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryō",
+       "char": "ryo",
+       "emotion": "happy",
+       "text": "¡El incienso! El abad lo estaba esperando. Os lo agradezco de corazón.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq15"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq15=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryō",
+       "char": "ryo",
+       "emotion": "neutral",
+       "text": "El incienso raro lo llevan los monjes corruptos. Tres varitas, por favor."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq15=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryō",
+       "char": "ryo",
+       "emotion": "neutral",
+       "text": "El abad necesita incienso raro para la ceremonia de la aurora. Los monjes corruptos lo llevan. ¿Tres varitas?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Ryō",
+           "char": "ryo",
+           "emotion": "happy",
+           "text": "Qué la paz os acompañe."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq15"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Ryō",
+           "char": "ryo",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ryō",
+       "char": "ryo",
+       "emotion": "shy",
+       "text": "Perdón, me cuesta hablar con gente que no es del monasterio. Pero me alegra que estéis aquí."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nisa",
+   "name": "Ni-sa",
+   "age": 73,
+   "desc": "Es una monja anciana de setenta y tres años, de piel arrugada como papel, ojos pequeños y brillantes, túnica gris y una sonrisa traviesa que no cuadra con su edad.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Monja sabia",
+   "talk": [
+    {
+     "if": [
+      "stage>=4"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ni-sa",
+       "char": "nisa",
+       "emotion": "smug",
+       "text": "El amor es como el hielo: parece frágil, pero aguanta mucho si se cuida. Cuidaos."
+      }
+     ]
+    },
+    {
+     "if": [
+      "stage>=2"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ni-sa",
+       "char": "nisa",
+       "emotion": "smug",
+       "text": "Vosotros dos os miráis de una forma... A mi edad se nota todo. Y se calla casi todo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ni-sa",
+       "char": "nisa",
+       "emotion": "happy",
+       "text": "Si necesitáis meditar, la sala del silencio está abierta. A veces el silencio habla más."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hakuren",
+   "name": "Hakuren",
+   "age": null,
+   "desc": "Un demonio alto de armadura plateada y manto azul, de pelo blanco recogido en cola, cicatrices en la cara y la mirada cansada de un veterano.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "General",
+   "hidden": true
+  },
+  {
+   "id": "saeko",
+   "name": "Saeko",
+   "age": 34,
+   "desc": "Es una mujer de treinta y cuatro años, de piel bronceada, pelo negro recogido en un pañuelo rojo, ojos color miel y un sable curvo al cinto.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Guía del oasis",
+   "talk": [
+    {
+     "if": [
+      "ak_5_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Saeko",
+       "char": "saeko",
+       "emotion": "smug",
+       "text": "Antes cruzaba el desierto con caravanas. Ahora cruzo con héroes. Cobro igual."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Saeko",
+       "char": "saeko",
+       "emotion": "happy",
+       "text": "El oasis es sagrado. Aquí nadie pelea. Nadie. Ni siquiera tú."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dai",
+   "name": "Dai",
+   "age": 8,
+   "desc": "Es un niño de ocho años, de piel morena, rizos negros enormes, camiseta blanca y una cometa roja que lleva a todas partes.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Niño del oasis",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Dai",
+       "char": "dai",
+       "emotion": "happy",
+       "text": "¡Mi cometa vuela hasta el castillo! ¡Pero nunca la dejan llegar!"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "¿Puedo ayudarte a lanzarla?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hiromi",
+   "name": "Hiromi",
+   "age": 40,
+   "desc": "Es una mujer fornida de cuarenta años, de brazos musculosos, pelo corto teñido de rojo, delantal de cuero quemado y un mazo en el hombro.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "angry"
+   ],
+   "role": "Herrera",
+   "talk": [
+    {
+     "if": [
+      "q:sq19=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hiromi",
+       "char": "hiromi",
+       "emotion": "happy",
+       "text": "¡Hierro sagrado! Con esto forjaré algo digno del rey. O de ti. Tú decides.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq19"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq19=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hiromi",
+       "char": "hiromi",
+       "emotion": "neutral",
+       "text": "El hierro sagrado lo guardan los soldados de ceniza. Con tres, algo haré."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq19=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hiromi",
+       "char": "hiromi",
+       "emotion": "neutral",
+       "text": "Necesito tres trozos de hierro sagrado. Los soldados de ceniza llevan. Si me los traes, te forjo algo bonito.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Hiromi",
+           "char": "hiromi",
+           "emotion": "happy",
+           "text": "Fuego y yunque."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq19"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Hiromi",
+           "char": "hiromi",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hiromi",
+       "char": "hiromi",
+       "emotion": "neutral",
+       "text": "Mi fragua apaga las armas de los demonios. Una por una."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "omar",
+   "name": "Omar",
+   "age": 52,
+   "desc": "Es un hombre de cincuenta y dos años, calvo, barba trenzada, túnica azul y un laúd de tres cuerdas que toca casi sin querer.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Bardo errante",
+   "talk": [
+    {
+     "if": [
+      "stage>=4"
+     ],
+     "scenes": [
+      {
+       "speaker": "Omar",
+       "char": "omar",
+       "emotion": "happy",
+       "text": "Os cantaré una canción de dos que se encontraron en la ceniza. Gratis. Aunque no digáis que fui yo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Omar",
+       "char": "omar",
+       "emotion": "neutral",
+       "text": "Mis canciones tienen mil años. Mis chistes, dos."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shuji",
+   "name": "Shūji",
+   "age": 38,
+   "desc": "Es un hombre de treinta y ocho años, flaco y de mirada cansada, con la armadura de un soldado demoníaco pero sin el emblema, y una cicatriz en el cuello.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Desertor",
+   "talk": [
+    {
+     "if": [
+      "q:sq20=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shūji",
+       "char": "shuji",
+       "emotion": "happy",
+       "text": "Cuatro arqueros menos... Quizá me dejen en paz ahora. Gracias.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq20"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq20=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shūji",
+       "char": "shuji",
+       "emotion": "neutral",
+       "text": "Los arqueros de brasa me cazan. Cuatro, y me dejarán en paz."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq20=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shūji",
+       "char": "shuji",
+       "emotion": "neutral",
+       "text": "Soy desertor. Los arqueros de brasa me persiguen. Si derrotas a cuatro, tendré un respiro.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Shūji",
+           "char": "shuji",
+           "emotion": "happy",
+           "text": "Cuídate."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq20"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Shūji",
+           "char": "shuji",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Shūji",
+       "char": "shuji",
+       "emotion": "sad",
+       "text": "No quería ser un monstruo. Nadie lo quiere."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kaede",
+   "name": "Kaede",
+   "age": 26,
+   "desc": "Es una joven de veintiséis años, ágil, de pelo naranja corto, vendas en los brazos, ojos verdes y dos dagas cruzadas a la espalda.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Mercenaria",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Kaede",
+       "char": "kaede",
+       "emotion": "smug",
+       "text": "Si necesitáis alguien que mate rápido, no me llaméis. No mato rápido, mato bien."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "karasu",
+   "name": "Karasu",
+   "age": null,
+   "desc": "Un demonio alto, de armadura rojo ceniza, pelo negro largo, ojos dorados y un hacha enorme.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "General",
+   "hidden": true
+  },
+  {
+   "id": "kuroda",
+   "name": "Kuroda",
+   "age": null,
+   "desc": "Un demonio robusto, de piel rojiza, cabeza rapada, delantal de cuero y un martillo enorme.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Herrero",
+   "hidden": true
+  },
+  {
+   "id": "vagabundo",
+   "name": "Vagabundo",
+   "age": null,
+   "desc": "Un hombre sin edad, de túnica harapienta y ojos como el sol naciente.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "???",
+   "hidden": true
+  },
+  {
+   "id": "voz_alba",
+   "name": "Voz del Alba",
+   "age": null,
+   "desc": "Una figura de luz sin rostro, con forma vagamente humana, que habla sin mover los labios.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Voz del Alba",
+   "hidden": true
+  },
+  {
+   "id": "teruko",
+   "name": "Teruko",
+   "age": 58,
+   "desc": "Es una mujer de cincuenta y ocho años, regordeta, de pelo gris recogido, ojos cansados con ojeras profundas y un delantal blanco inmaculado.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Posadera",
+   "talk": [
+    {
+     "if": [
+      "am_1_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Teruko",
+       "char": "teruko",
+       "emotion": "happy",
+       "text": "Si derrotáis lo que hay en ese santuario, quizá la gente pueda dormir otra vez."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Teruko",
+       "char": "teruko",
+       "emotion": "sad",
+       "text": "Llevo mil años sin dormir una noche entera. Aquí nadie duerme. Es... agotador."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "soma",
+   "name": "Sōma",
+   "age": 35,
+   "desc": "Es un hombre de treinta y cinco años, de armadura de cuero blanco, capa dorada, ojos entrecerrados por el sol constante y una lanza corta al hombro.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "angry"
+   ],
+   "role": "Capitán de la guardia",
+   "talk": [
+    {
+     "if": [
+      "q:sq22=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sōma",
+       "char": "soma",
+       "emotion": "happy",
+       "text": "Cinco centinelas menos. La aldea respira. Tomad vuestra paga.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq22"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq22=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sōma",
+       "char": "soma",
+       "emotion": "neutral",
+       "text": "Cinco centinelas de luz. Los demás rondan por la llanura."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq22=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sōma",
+       "char": "soma",
+       "emotion": "neutral",
+       "text": "Los centinelas de luz atacan a los viajeros. Elimina a cinco y habrá paz en el camino.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Sōma",
+           "char": "soma",
+           "emotion": "happy",
+           "text": "Que la luz os guíe."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq22"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Sōma",
+           "char": "soma",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sōma",
+       "char": "soma",
+       "emotion": "neutral",
+       "text": "Soy capitán porque nadie más quiso serlo. Pero me quedo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mio",
+   "name": "Mio",
+   "age": 9,
+   "desc": "Es una niña de nueve años, con coletas rubias, ojos enormes brillantes, un vestido amarillo y una linterna apagada en la mano.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Niña curiosa",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Mio",
+       "char": "mio",
+       "emotion": "happy",
+       "text": "¿Es verdad que en vuestro mundo hay noche? ¡Cuéntame! ¿Hay estrellas? ¿Cómo suenan?"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "Suenan a... silencio, pero bonito."
+      },
+      {
+       "speaker": "Mio",
+       "char": "mio",
+       "emotion": "shy",
+       "text": "Quiero verlas algún día."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yoru",
+   "name": "Yoru",
+   "age": 84,
+   "desc": "Es un anciano de ochenta y cuatro años, de barba blanca amarillenta, ojos vendados con una tira de tela oscura y bastón de madera negra.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Anciano de los ojos vendados",
+   "talk": [
+    {
+     "if": [
+      "q:sq23=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yoru",
+       "char": "yoru",
+       "emotion": "happy",
+       "text": "¡Un trozo de noche! Cuánto tiempo... Gracias. Con esto podré volver a soñar.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq23"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq23=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yoru",
+       "char": "yoru",
+       "emotion": "neutral",
+       "text": "Los fragmentos de noche los llevan las sombras negadas. Con tres me conformo."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq23=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yoru",
+       "char": "yoru",
+       "emotion": "neutral",
+       "text": "Mi nombre significa «noche». Hace mil años que no la veo. Si me traes tres fragmentos de noche, te daré algo valioso.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Yoru",
+           "char": "yoru",
+           "emotion": "happy",
+           "text": "Que la oscuridad te sea leve."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq23"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Yoru",
+           "char": "yoru",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Yoru",
+       "char": "yoru",
+       "emotion": "sad",
+       "text": "Me vendé los ojos para recordar cómo era la oscuridad. Es lo único que me queda."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yugure",
+   "name": "Yūgure",
+   "age": 61,
+   "desc": "Es una mujer de sesenta y un años, alta y erguida, de pelo gris recogido, ojos violeta oscuro, capa de terciopelo negro y bastón de ébano.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Líder del Refugio",
+   "talk": [
+    {
+     "if": [
+      "cave_m1_done",
+      "!frasco_dado"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yūgure",
+       "char": "yugure",
+       "emotion": "happy",
+       "text": "Me han contado que en el este hay una ciudad que no duerme. Llevad esto: un trozo de la Noche que salvasteis. Que descansen.",
+       "actions": [
+        {
+         "type": "flag",
+         "flag": "frasco_dado"
+        },
+        {
+         "type": "item",
+         "id": "frasco_noche",
+         "qty": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq25=turned"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yūgure",
+       "char": "yugure",
+       "emotion": "happy",
+       "text": "Hoshi ha visto estrellas. Eso nos alcanza para mil años más."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Yūgure",
+       "char": "yugure",
+       "emotion": "neutral",
+       "text": "Aquí guardamos lo único que queda de la noche. Cuidadla, forasteros."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hoshi",
+   "name": "Hoshi",
+   "age": 13,
+   "desc": "Es un niño de trece años, delgado, de pelo azul oscuro desordenado, ojos grandes color plata, una chaqueta llena de estrellas dibujadas a mano y una libreta bajo el brazo.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Aprendiz de astrónomo",
+   "talk": [
+    {
+     "if": [
+      "q:sq25=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hoshi",
+       "char": "hoshi",
+       "emotion": "happy",
+       "text": "¡Tres fragmentos! ¡Con esto puedo montar un cielo entero! Esta noche, venid. Os lo prometo.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq25"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq25=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hoshi",
+       "char": "hoshi",
+       "emotion": "neutral",
+       "text": "Los fragmentos de noche los llevan las sombras negadas. Tres, por favor."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq25=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hoshi",
+       "char": "hoshi",
+       "emotion": "neutral",
+       "text": "Nunca he visto una estrella de verdad, solo dibujos. Si me traes tres fragmentos de noche, te enseño cómo se hace un cielo.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Hoshi",
+           "char": "hoshi",
+           "emotion": "happy",
+           "text": "¡Gracias!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq25"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Hoshi",
+           "char": "hoshi",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hoshi",
+       "char": "hoshi",
+       "emotion": "shy",
+       "text": "Algún día seré astrónomo. Aunque nadie sepa lo que es una estrella."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kuro",
+   "name": "Kuro",
+   "age": null,
+   "desc": "Un gato negro de ojos dorados, pecho blanco y una campanilla roja en el cuello.",
+   "emotions": [
+    "neutral",
+    "happy"
+   ],
+   "role": "Gato del refugio",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Kuro",
+       "char": "kuro",
+       "emotion": "happy",
+       "text": "Miau. (Se frota contra las piernas de Yukine y se queda dormido sobre su bota.)"
+      },
+      {
+       "speaker": "Yukine",
+       "char": "yukine",
+       "emotion": "happy",
+       "text": "...No me muevo. No me muevo nunca más."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fumiko",
+   "name": "Fumiko",
+   "age": 49,
+   "desc": "Es una mujer de cuarenta y nueve años, baja y robusta, de pelo castaño con mechones grises, gafas de relojero, delantal lleno de herramientas pequeñas y dedos manchados de aceite.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Relojera",
+   "talk": [
+    {
+     "if": [
+      "q:sq24=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Fumiko",
+       "char": "fumiko",
+       "emotion": "happy",
+       "text": "¡Engranajes! Los guardaré. Quizá consiga hacer girar otra vez los relojes del refugio. Tomad esto.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq24"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq24=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Fumiko",
+       "char": "fumiko",
+       "emotion": "neutral",
+       "text": "Los relojeros huecos llevan engranajes quietos. Tres, y te hago algo."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq24=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Fumiko",
+       "char": "fumiko",
+       "emotion": "neutral",
+       "text": "Los relojeros huecos de la torre llevan engranajes quietos. Con tres puedo reparar el reloj del refugio, que marcaba las doce desde hace siglos.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Fumiko",
+           "char": "fumiko",
+           "emotion": "happy",
+           "text": "Tic, tac."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq24"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Fumiko",
+           "char": "fumiko",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Fumiko",
+       "char": "fumiko",
+       "emotion": "neutral",
+       "text": "El tiempo no se detiene. Solo se esconde. Yo lo busco."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "roga",
+   "name": "Rōga",
+   "age": 41,
+   "desc": "Es un hombre de cuarenta y un años, alto, de piel oscura, pelo corto rapado a los lados, cicatriz en la barbilla, abrigo de cuero negro y una espada ancha al cinto.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Mercenario",
+   "talk": [
+    {
+     "if": [
+      "q:sq26=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rōga",
+       "char": "roga",
+       "emotion": "happy",
+       "text": "Seis cuervos menos. Ya puedo dormir con un ojo cerrado. Vuestra paga.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq26"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq26=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rōga",
+       "char": "roga",
+       "emotion": "neutral",
+       "text": "Seis cuervos dorados. Los hay en los campos y en el desfiladero."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq26=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rōga",
+       "char": "roga",
+       "emotion": "neutral",
+       "text": "Los cuervos dorados roban todo lo que brilla, incluida la poca luz que nos queda. Elimina seis y te pago bien.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Rōga",
+           "char": "roga",
+           "emotion": "happy",
+           "text": "Buen viaje."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq26"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Rōga",
+           "char": "roga",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "torre_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rōga",
+       "char": "roga",
+       "emotion": "smug",
+       "text": "Tokei era el mejor relojero del reino. Y lo habéis dejado sin hora. Me gusta vuestro estilo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Rōga",
+       "char": "roga",
+       "emotion": "neutral",
+       "text": "Trabajo de guardaespaldas. Aquí hay menos clientes que sombras. Y menos sombras que clientes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tokei",
+   "name": "Tokei",
+   "age": null,
+   "desc": "Un anciano de piel plateada, vestido con un abrigo cubierto de engranajes dorados, cabeza coronada por un reloj de bolsillo abierto y ojos que giran como manecillas.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Relojero",
+   "hidden": true
+  },
+  {
+   "id": "heraldo2",
+   "name": "Heraldo del Segundo Rayo",
+   "age": null,
+   "desc": "Un hombre de armadura ámbar y capa de luz, cabello castaño largo, ojos tristes y una lanza partida en dos.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Heraldo",
+   "hidden": true
+  },
+  {
+   "id": "sakae",
+   "name": "Sakae",
+   "age": 68,
+   "desc": "Es un hombre de sesenta y ocho años, bajo y encorvado, de barba blanca larga, piel curtida por el sol, sombrero de paja y un bastón con una pequeña esfera de bronce en la punta.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Guardián del Reloj de Sol",
+   "talk": [
+    {
+     "if": [
+      "obs_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sakae",
+       "char": "sakae",
+       "emotion": "happy",
+       "text": "El Vigía por fin apartó la vista. Mañana mi reloj de sol marcará… lo mismo. Pero me sentará distinto."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sakae",
+       "char": "sakae",
+       "emotion": "neutral",
+       "text": "Cuido un reloj de sol cuya sombra no se mueve desde hace doscientos años. Alguien tiene que hacerlo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "miyu",
+   "name": "Miyu",
+   "age": 11,
+   "desc": "Es una niña de once años, delgada, de pelo negro en dos coletas, ojos castaños grandes, vestido amarillo con tirantes y las rodillas siempre manchadas de tierra.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Niña curiosa",
+   "talk": [
+    {
+     "if": [
+      "q:sq28=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Miyu",
+       "char": "miyu",
+       "emotion": "happy",
+       "text": "¡Cuatro pétalos! ¡Voy a hacer una corona que dure para siempre! ¡Para ti también, Yukine!",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq28"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq28=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Miyu",
+       "char": "miyu",
+       "emotion": "neutral",
+       "text": "Los girasoles centinela son los grandes del campo. Cuatro pétalos, por favor."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq28=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Miyu",
+       "char": "miyu",
+       "emotion": "neutral",
+       "text": "Dicen que los girasoles del campo nunca se marchitan. ¡Quiero una corona! ¿Me traes cuatro pétalos de los girasoles grandes?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Miyu",
+           "char": "miyu",
+           "emotion": "happy",
+           "text": "¡Hurra!"
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq28"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Miyu",
+           "char": "miyu",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Miyu",
+       "char": "miyu",
+       "emotion": "happy",
+       "text": "¿Sabes qué es lo mejor del mediodía eterno? ¡Que nunca me mandan a la cama!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ryota",
+   "name": "Ryōta",
+   "age": 38,
+   "desc": "Es un hombre de treinta y ocho años, fornido, de pelo negro corto y mojado, barba de tres días, camiseta sin mangas y una red de pesca al hombro.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Pescador",
+   "talk": [
+    {
+     "if": [
+      "q:sq27=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryōta",
+       "char": "ryota",
+       "emotion": "happy",
+       "text": "Seis menos. Hoy el lago pesca poco. Ahí tienes tu parte.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq27"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq27=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryōta",
+       "char": "ryota",
+       "emotion": "neutral",
+       "text": "Los pescadores ahogados salen del lago. Seis, y te dejo pescar tranquilo."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq27=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryōta",
+       "char": "ryota",
+       "emotion": "neutral",
+       "text": "Los pescadores ahogados espantan los peces. Quítame seis de encima y te pago bien.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Ryōta",
+           "char": "ryota",
+           "emotion": "happy",
+           "text": "Gracias, viajeros."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq27"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Ryōta",
+           "char": "ryota",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ryōta",
+       "char": "ryota",
+       "emotion": "neutral",
+       "text": "Pesco desde que tenía diez años. En el lago no hay peces, pero a mí me da igual."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haruka",
+   "name": "Haruka",
+   "age": 29,
+   "desc": "Es una mujer de veintinueve años, alta y serena, de pelo castaño claro trenzado largo, ojos color miel, túnica blanca con bordados dorados y un colgante en forma de sol.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Sacerdotisa del Sol",
+   "talk": [
+    {
+     "if": [
+      "am_3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Haruka",
+       "char": "haruka",
+       "emotion": "sad",
+       "text": "La Heraldo de arriba era mi maestra. Yo la rezaba cada mañana. Gracias por dejarla descansar."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Haruka",
+       "char": "haruka",
+       "emotion": "neutral",
+       "text": "El Tercer Rayo vive en el santuario. Era una sacerdotisa de aquí, hace mucho. Se fue a servir a la Madre y no volvió."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chiyo",
+   "name": "Chiyo",
+   "age": 58,
+   "desc": "Es una mujer de cincuenta y ocho años, delgada, de pelo gris corto, ojeras profundas, ojos verdes cansados, abrigo largo azul oscuro y una taza de té siempre en la mano.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy"
+   ],
+   "role": "Alcaldesa",
+   "talk": [
+    {
+     "if": [
+      "q:sq31=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Chiyo",
+       "char": "chiyo",
+       "emotion": "happy",
+       "text": "...¿Eso es... noche? ¿De verdad? Dejadme... dejadme llevarlo a la plaza.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq31"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq31=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Chiyo",
+       "char": "chiyo",
+       "emotion": "neutral",
+       "text": "Yūgure, en el Refugio de las Sombras, guarda un trozo de noche. Pídele un frasco."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq31=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Chiyo",
+       "char": "chiyo",
+       "emotion": "neutral",
+       "text": "Mi gente no duerme desde hace doscientos años. Hay quien se ha vuelto sonámbulo, hay quien ha perdido la razón. Dicen que en el Refugio de las Sombras queda noche. ¿Podrías traerme un frasco?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Chiyo",
+           "char": "chiyo",
+           "emotion": "happy",
+           "text": "Que los cielos os lo paguen."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq31"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Chiyo",
+           "char": "chiyo",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "ev_ciudad_duerme"
+     ],
+     "scenes": [
+      {
+       "speaker": "Chiyo",
+       "char": "chiyo",
+       "emotion": "happy",
+       "text": "Anoche dormimos. Todos. La ciudad entera roncaba. Fue el sonido más hermoso que he oído."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Chiyo",
+       "char": "chiyo",
+       "emotion": "neutral",
+       "text": "Esta ciudad lleva doscientos años en vela. Nadie recuerda qué es soñar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen",
+   "name": "Gen",
+   "age": 45,
+   "desc": "Es un hombre de cuarenta y cinco años, grande y barrigón, de pelo rapado, bigote gris, delantal blanco enharinado y ojeras de no dormir desde hace siglos.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Panadero",
+   "talk": [
+    {
+     "if": [
+      "q:sq29=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Gen",
+       "char": "gen",
+       "emotion": "happy",
+       "text": "¡Polvo de vigilia! Con esto haré pan que no da sueño... o que sí. Según el humor. Toma.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq29"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq29=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Gen",
+       "char": "gen",
+       "emotion": "neutral",
+       "text": "Las polillas insomnes llevan el polvo. Tres puñados."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq29=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Gen",
+       "char": "gen",
+       "emotion": "neutral",
+       "text": "Hago pan día y noche, y no hay noche. Si me traes tres puñados de polvo de polilla, haré uno para soñar.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Gen",
+           "char": "gen",
+           "emotion": "happy",
+           "text": "Tic-tac, el horno espera."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq29"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Gen",
+           "char": "gen",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Gen",
+       "char": "gen",
+       "emotion": "neutral",
+       "text": "El pan es lo único que no me aburre. Cada hornada es distinta."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reiko",
+   "name": "Reiko",
+   "age": 36,
+   "desc": "Es una mujer de treinta y seis años, de pelo negro con un mechón blanco, gafas redondas, bata de médica con manchas de té y un maletín gastado.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Doctora",
+   "talk": [
+    {
+     "if": [
+      "q:sq30=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Reiko",
+       "char": "reiko",
+       "emotion": "happy",
+       "text": "Seis sonámbulos menos en la calle. Ahora podré tratarlos en paz. Gracias.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq30"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq30=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Reiko",
+       "char": "reiko",
+       "emotion": "neutral",
+       "text": "Los sonámbulos vagan por las colinas. Seis, y les doy descanso."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq30=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Reiko",
+       "char": "reiko",
+       "emotion": "neutral",
+       "text": "Los sonámbulos caminan hasta las colinas y se pierden. Si los derrotas, los llevo a mi consulta. Seis, por favor.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Reiko",
+           "char": "reiko",
+           "emotion": "happy",
+           "text": "Con cuidado."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq30"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Reiko",
+           "char": "reiko",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Reiko",
+       "char": "reiko",
+       "emotion": "neutral",
+       "text": "La falta de sueño es una enfermedad. Aquí es una epidemia."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aoi",
+   "name": "Aoi",
+   "age": 16,
+   "desc": "Es una chica de dieciséis años, de pelo corto castaño rojizo, ojos verdes, sudadera gris grande y un cuaderno de sueños lleno de dibujos de camas.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "shy"
+   ],
+   "role": "Soñadora",
+   "talk": [
+    {
+     "if": [
+      "ev_ciudad_duerme"
+     ],
+     "scenes": [
+      {
+       "speaker": "Aoi",
+       "char": "aoi",
+       "emotion": "happy",
+       "text": "¡Soñé! ¡Soñé con un caballo que hablaba! ¡Me lo apunto antes de que se me olvide!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Aoi",
+       "char": "aoi",
+       "emotion": "sad",
+       "text": "Nací después de que el sol se parara. Nunca he dormido. Dibujo cómo imagino que es."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tetsuya",
+   "name": "Tetsuya",
+   "age": 33,
+   "desc": "Es un hombre de treinta y tres años, alto y delgado, de pelo negro con coleta, armadura ligera de la Vigilia y una lanza apoyada en el hombro.",
+   "emotions": [
+    "neutral",
+    "smug",
+    "sad"
+   ],
+   "role": "Guardia de la Vigilia",
+   "talk": [
+    {
+     "if": [
+      "vigilia_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tetsuya",
+       "char": "tetsuya",
+       "emotion": "smug",
+       "text": "El Capitán por fin se sentó. Dicen que roncó diez minutos. Lo vi con mis ojos."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Tetsuya",
+       "char": "tetsuya",
+       "emotion": "neutral",
+       "text": "Hago guardia en la plaza. Alguien tiene que hacerlo, aunque ya nadie recuerde de qué."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vigia",
+   "name": "Vigía del Sol Quieto",
+   "age": null,
+   "desc": "Un anciano de piel dorada, vestido con una túnica de latón, con un telescopio gigante en lugar del ojo izquierdo y una barba que le llega al suelo.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Astrónomo",
+   "hidden": true
+  },
+  {
+   "id": "heraldo3",
+   "name": "Heraldo del Tercer Rayo",
+   "age": null,
+   "desc": "Una mujer de armadura dorada y capa blanca, de pelo castaño claro suelto hasta la cintura, ojos color miel llenos de lágrimas y un colgante de sol rota.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Heraldo",
+   "hidden": true
+  },
+  {
+   "id": "capitan",
+   "name": "Capitán Insomne",
+   "age": null,
+   "desc": "Un hombre de cincuenta años en armadura de bronce abollada, con una barba gris descuidada, ojos rojos de no dormir y un casco bajo el brazo.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Capitán",
+   "hidden": true
+  },
+  {
+   "id": "heraldo4",
+   "name": "Heraldo del Cuarto Rayo",
+   "age": null,
+   "desc": "Un joven de diecinueve años de armadura roja y dorada demasiado grande para él, pelo rubio revuelto, ojos grandes y asustados y una lanza corta de luz.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Heraldo",
+   "hidden": true
+  },
+  {
+   "id": "eiji",
+   "name": "Eiji",
+   "age": 52,
+   "desc": "Es un hombre de cincuenta y dos años, alto y de espalda ancha, de pelo gris corto, barba cuidada, ojos azules serenos y una armadura plateada sin adornos con una rosa dorada bordada en la capa.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Líder de los Vigilantes del Alba",
+   "talk": [
+    {
+     "if": [
+      "q:sq32=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Eiji",
+       "char": "eiji",
+       "emotion": "happy",
+       "text": "Seis estatuas menos. Las descansamos con respeto. Gracias, forasteros.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq32"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq32=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Eiji",
+       "char": "eiji",
+       "emotion": "neutral",
+       "text": "Las estatuas de los Heraldos aún montan guardia en la senda. Seis, y las dejamos en paz."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq32=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Eiji",
+       "char": "eiji",
+       "emotion": "neutral",
+       "text": "Las estatuas de los Cinco Rayos siguen guardando la senda. Ya no tienen a quién obedecer. Dales descanso: seis, por favor.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Eiji",
+           "char": "eiji",
+           "emotion": "happy",
+           "text": "Que la luz os guíe."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq32"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Eiji",
+           "char": "eiji",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "am_5_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Eiji",
+       "char": "eiji",
+       "emotion": "happy",
+       "text": "El sol se mueve. Doscientos años esperando este día. Vigilantes del Alba, ¡hoy podemos dormir!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Eiji",
+       "char": "eiji",
+       "emotion": "neutral",
+       "text": "Somos los Vigilantes del Alba. Queremos despertar a la Madre sin hacerle daño. Es más difícil que parece."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nanami",
+   "name": "Nanami",
+   "age": 27,
+   "desc": "Es una mujer de veintisiete años, esbelta, de pelo largo castaño rojizo con una trenza lateral, ojos ámbar, túnica blanca de curandera y un laúd pequeño a la espalda.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Curandera y cantora",
+   "talk": [
+    {
+     "if": [
+      "q:sq33=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nanami",
+       "char": "nanami",
+       "emotion": "happy",
+       "text": "¡Pétalos del Alba! Con ellos haré un ungüento que cura el sueño... y la pena. Tomad.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq33"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq33=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nanami",
+       "char": "nanami",
+       "emotion": "neutral",
+       "text": "Las rosas del Alba dejan caer pétalos dorados. Cuatro."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq33=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nanami",
+       "char": "nanami",
+       "emotion": "neutral",
+       "text": "Los pétalos de las rosas del Alba curan la pena si se saben cocer. Tráeme cuatro y te preparo algo que merezca la pena.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Nanami",
+           "char": "nanami",
+           "emotion": "happy",
+           "text": "Cantaré mientras tanto."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq33"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Nanami",
+           "char": "nanami",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Nanami",
+       "char": "nanami",
+       "emotion": "neutral",
+       "text": "Canto a la Madre cada noche... aunque aquí no haya noche. Dicen que los sueños escuchan."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kou",
+   "name": "Kō",
+   "age": 14,
+   "desc": "Es un chico de catorce años, delgado y nervioso, de pelo negro revuelto, ojos grandes color avellana, chaleco de mensajero con muchos bolsillos y botas gastadas.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Mensajero",
+   "talk": [
+    {
+     "if": [
+      "am_5_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kō",
+       "char": "kou",
+       "emotion": "happy",
+       "text": "¡Corro más rápido ahora que el sol se mueve! ¡Es verdad que el tiempo ayuda!"
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Kō",
+       "char": "kou",
+       "emotion": "shy",
+       "text": "Llevo mensajes entre los campamentos. Nadie me para: los enemigos duermen cuando yo paso. Casi siempre."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shiori",
+   "name": "Shiori",
+   "age": 72,
+   "desc": "Es una mujer de setenta y dos años, pequeña y erguida, de pelo blanco recogido en un moño alto, ojos grises profundos, quimono azul pálido y un abanico de plumas dorado.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Antigua doncella del palacio",
+   "talk": [
+    {
+     "if": [
+      "am_5_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Shiori",
+       "char": "shiori",
+       "emotion": "sad",
+       "text": "Vi a Shirayuki irse y vi a la Madre llorar. Hoy veo a la Madre... dormir en paz. Gracias, niña."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Shiori",
+       "char": "shiori",
+       "emotion": "sad",
+       "text": "Fui la doncella de la Madre. Shirayuki era una niña risueña. Quería ver el mundo de abajo. La Madre solo quería que no se perdiera."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jardinera",
+   "name": "Hanae",
+   "age": null,
+   "desc": "Una mujer de sesenta años de cabello gris recogido, delantal verde lleno de tierra, guantes dorados y una podadera larga.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Jardinera",
+   "hidden": true
+  },
+  {
+   "id": "madre_sueno",
+   "name": "La Madre del Alba (en sueños)",
+   "age": null,
+   "desc": "Una mujer altísima de cabello blanco-dorado flotando como luz líquida, ojos color amanecer llenos de lágrimas, un vestido de rayos de sol y una corona rota.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Madre del Alba",
+   "hidden": true
+  },
+  {
+   "id": "kaisei",
+   "name": "Kaisei",
+   "age": 47,
+   "desc": "Es un hombre de cuarenta y siete años, ancho y de piel bronceada, barba salpicada de gris, pañuelo azul en la cabeza, ojos negros rasgados y manos enormes llenas de callos de cuerda.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Patrón de barco",
+   "talk": [
+    {
+     "if": [
+      "q:sq35=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaisei",
+       "char": "kaisei",
+       "emotion": "happy",
+       "text": "¡Cinco cangrejos menos! Los muelles respiran. Aquí tienes tu paga y mi gratitud.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq35"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq35=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaisei",
+       "char": "kaisei",
+       "emotion": "neutral",
+       "text": "Los cangrejos de cristal rondan las playas. Cinco, y mis redes vuelven a flotar."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq35=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kaisei",
+       "char": "kaisei",
+       "emotion": "neutral",
+       "text": "Los cangrejos de cristal cortan las redes con las pinzas. Elimina cinco y te pago bien.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Kaisei",
+           "char": "kaisei",
+           "emotion": "happy",
+           "text": "Buen viento."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq35"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Kaisei",
+           "char": "kaisei",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Kaisei",
+       "char": "kaisei",
+       "emotion": "neutral",
+       "text": "El Mar de Cristal parece quieto, pero guarda más recuerdos que peces."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nagisa",
+   "name": "Nagisa",
+   "age": 25,
+   "desc": "Es una joven de veinticinco años, atlética y bronceada, de pelo corto turquesa recogido con una cinta, ojos verdes brillantes, traje de buceo ajustado y un cuchillo de perlero al muslo.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "smug"
+   ],
+   "role": "Buscadora de perlas",
+   "talk": [
+    {
+     "if": [
+      "q:sq36=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nagisa",
+       "char": "nagisa",
+       "emotion": "happy",
+       "text": "¡Perlas de bruma! Con tres tengo para un collar... o para una semana de comida. Gracias.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq36"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq36=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nagisa",
+       "char": "nagisa",
+       "emotion": "neutral",
+       "text": "Las medusas llevan perlas de bruma. Tres."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq36=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Nagisa",
+       "char": "nagisa",
+       "emotion": "neutral",
+       "text": "Las perlas de bruma solo salen de las medusas lumínicas. Tráeme tres y te cuento un secreto del arrecife.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Nagisa",
+           "char": "nagisa",
+           "emotion": "happy",
+           "text": "Cuidado con las descargas."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq36"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Nagisa",
+           "char": "nagisa",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Nagisa",
+       "char": "nagisa",
+       "emotion": "smug",
+       "text": "Bajo a buscar perlas cada día. Algún día encontraré la que cante."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tobio",
+   "name": "Tobio",
+   "age": 12,
+   "desc": "Es un niño de doce años, pequeño y rápido, de pelo castaño rapado, ojos negros curiosos, gorro de marinero demasiado grande y las rodillas llenas de costras.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy"
+   ],
+   "role": "Grumete",
+   "talk": [
+    {
+     "scenes": [
+      {
+       "speaker": "Tobio",
+       "char": "tobio",
+       "emotion": "happy",
+       "text": "¡Yo seré capitán! ¡Algún día cruzaré el Mar de Cristal hasta el otro lado!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sumire",
+   "name": "Sumire",
+   "age": 63,
+   "desc": "Es una mujer de sesenta y tres años, delgada y elegante, de pelo plateado largo suelto, ojos violeta, chal azul marino con mapas bordados y lupa colgada del cuello.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Cartógrafa de recuerdos",
+   "talk": [
+    {
+     "if": [
+      "c1_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Sumire",
+       "char": "sumire",
+       "emotion": "sad",
+       "text": "Hace muchos años una loba blanca cruzó este mar con una niña a lomos. Nunca supe cuál era la historia."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Sumire",
+       "char": "sumire",
+       "emotion": "neutral",
+       "text": "Dibujo mapas de recuerdos: lo que el mar te enseña solo se ve una vez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "farero",
+   "name": "El Farero Ahogado",
+   "age": null,
+   "desc": "Un anciano de piel azulada y pálida, vestido con un impermeable roto cubierto de algas, un farol apagado en la mano y ojos blancos como espuma.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Farero",
+   "hidden": true
+  },
+  {
+   "id": "loba_mem",
+   "name": "Loba del Recuerdo",
+   "age": null,
+   "desc": "Una loba blanca enorme de ojos azul hielo, pelaje con reflejos de cristal, cicatriz en el hocico y un collar de conchas rotas.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Recuerdo",
+   "hidden": true
   }
  ]
 }

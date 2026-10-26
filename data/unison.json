@@ -1,0 +1,266 @@
+{
+ "unison": {
+  "guerrero": {
+   "name": "Filo de Luna Llena",
+   "element": "fisico",
+   "desc": "El tajo del guerrero y el zarpazo lunar de Yukine convergen en un único golpe devastador sobre un objetivo. Puede aturdir.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "fisico",
+     "power": 312,
+     "target": "enemy",
+     "effect": {
+      "ignore_def": 0.3
+     }
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 286,
+     "target": "enemy"
+    },
+    {
+     "by": "p",
+     "element": "fisico",
+     "power": 598,
+     "target": "enemy",
+     "effect": {
+      "stun": 0.5,
+      "ignore_def": 0.3
+     }
+    }
+   ]
+  },
+  "mago_fuego": {
+   "name": "Eclipse de Vapor",
+   "element": "fuego",
+   "desc": "Fuego y hielo chocan sobre todo el campo. El choque térmico quema, ralentiza y debilita las defensas.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "fuego",
+     "power": 247,
+     "target": "all_enemies",
+     "effect": {
+      "burn": 0.9
+     }
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 247,
+     "target": "all_enemies",
+     "effect": {
+      "slow": 0.9
+     }
+    },
+    {
+     "by": "p",
+     "element": "fuego",
+     "power": 338,
+     "target": "all_enemies",
+     "effect": {
+      "def_down": 3
+     }
+    }
+   ]
+  },
+  "mago_hielo": {
+   "name": "Aurora de los Dos Inviernos",
+   "element": "hielo",
+   "desc": "Dos tormentas de hielo, la tuya y la de Yukine, se funden en una aurora que congela a todos.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "hielo",
+     "power": 296,
+     "target": "all_enemies"
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 296,
+     "target": "all_enemies",
+     "effect": {
+      "freeze": 0.5
+     }
+    },
+    {
+     "by": "p",
+     "element": "hielo",
+     "power": 437,
+     "target": "all_enemies",
+     "effect": {
+      "freeze": 0.6,
+      "def_down": 2
+     }
+    }
+   ]
+  },
+  "mago_rayo": {
+   "name": "Tormenta Lunar",
+   "element": "rayo",
+   "desc": "Rayos que caen sobre una ventisca bajo la luna. Aturde con facilidad a todos los enemigos.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "rayo",
+     "power": 296,
+     "target": "all_enemies",
+     "effect": {
+      "stun": 0.3
+     }
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 296,
+     "target": "all_enemies"
+    },
+    {
+     "by": "p",
+     "element": "rayo",
+     "power": 437,
+     "target": "all_enemies",
+     "effect": {
+      "stun": 0.55
+     }
+    }
+   ]
+  },
+  "mago_arcano": {
+   "name": "Constelación de la Loba",
+   "element": "arcano",
+   "desc": "Las estrellas dibujan una loba de luz que arrasa a los enemigos y cura a todo el grupo.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 260,
+     "target": "all_enemies"
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 221,
+     "target": "all_enemies"
+    },
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 351,
+     "target": "all_enemies",
+     "effect": {
+      "def_down": 2
+     }
+    }
+   ],
+   "party": {
+    "heal": 0.3
+   }
+  },
+  "espadachin_magico": {
+   "name": "Danza de las Dos Lunas",
+   "element": "imbuido",
+   "desc": "Acero imbuido y garras de hielo bailan sobre un único objetivo en tres cortes casi imposibles de esquivar. Gran probabilidad de crítico.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "imbuido",
+     "power": 273,
+     "target": "enemy",
+     "effect": {
+      "crit_up": 0.3
+     }
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 273,
+     "target": "enemy",
+     "effect": {
+      "crit_up": 0.3
+     }
+    },
+    {
+     "by": "p",
+     "element": "imbuido",
+     "power": 546,
+     "target": "enemy",
+     "effect": {
+      "crit_up": 0.5
+     }
+    }
+   ]
+  },
+  "monje_runico": {
+   "name": "Mantra de la Manada",
+   "element": "arcano",
+   "desc": "Un mantra rúnico y un aullido lunar. Golpea con fuerza a un objetivo e inspira al grupo: regeneración y ataque aumentado.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 299,
+     "target": "enemy"
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 273,
+     "target": "enemy"
+    },
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 520,
+     "target": "enemy",
+     "effect": {
+      "ignore_def": 0.5
+     }
+    }
+   ],
+   "party": {
+    "effect": {
+     "regen": 3,
+     "atk_up": 3
+    }
+   }
+  },
+  "pistolero_arcano": {
+   "name": "Lluvia de Colmillos de Plata",
+   "element": "arcano",
+   "desc": "Mil balas arcanas y colmillos de hielo caen del cielo sobre todos los enemigos. Probabilidad alta de crítico.",
+   "hits": [
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 247,
+     "target": "all_enemies",
+     "effect": {
+      "crit_up": 0.2
+     }
+    },
+    {
+     "by": "y",
+     "element": "hielo",
+     "power": 247,
+     "target": "all_enemies",
+     "effect": {
+      "crit_up": 0.2
+     }
+    },
+    {
+     "by": "p",
+     "element": "arcano",
+     "power": 338,
+     "target": "all_enemies",
+     "effect": {
+      "crit_up": 0.35
+     }
+    }
+   ]
+  }
+ }
+}

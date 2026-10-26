@@ -1,0 +1,1381 @@
+{
+ "gradients": {
+  "linear-gradient(180deg,#2b3a67,#5c7aa8 55%,#1a2238)": "tsukimori_dia",
+  "linear-gradient(180deg,#0f2a22,#1d4a3a 60%,#0a1713)": "bosque_niebla",
+  "linear-gradient(180deg,#6b2a1a,#d98a3c 55%,#2a1008)": "hojarroja",
+  "linear-gradient(180deg,#0f3a20,#4fbf6a 55%,#071a0d)": "santuario1_bosque",
+  "linear-gradient(180deg,#1a1020,#3a2a50 55%,#0a0610)": "noche_morada",
+  "linear-gradient(180deg,#2a1040,#b07aff 55%,#0f0518)": "santuario2_violeta",
+  "linear-gradient(180deg,#1a0a2a,#6a3aa0 55%,#0a0310)": "santuario2_jefe",
+  "linear-gradient(180deg,#1a3a50,#7ab8d8 55%,#0a1a28)": "cueva_hielo_kasumi",
+  "linear-gradient(180deg,#40180a,#ff9a3c 55%,#1a0805)": "santuario3_fuego",
+  "linear-gradient(180deg,#0a0e2a,#2a3a7a 55%,#05070f)": "noche_azul",
+  "linear-gradient(180deg,#3a0505,#ff2d2d 55%,#100202)": "torre_kurogane",
+  "linear-gradient(180deg,#2b3a67,#ffd479 55%,#1a2238)": "amanecer_dorado",
+  "linear-gradient(180deg,#14203c,#4a6a9c 55%,#0d1630)": "cumbres_nieve",
+  "linear-gradient(180deg,#3a2a4a,#ffb3c8 55%,#2a1020)": "yunomori",
+  "linear-gradient(180deg,#1a1a3a,#9a8cff 55%,#05050f)": "santuario_silencio",
+  "linear-gradient(180deg,#10243a,#8fd3ff 55%,#05101a)": "santuario_eco",
+  "linear-gradient(180deg,#0b2a40,#7de8ff 55%,#051018)": "cueva_cristal",
+  "linear-gradient(180deg,#3a2a0a,#ffd479 55%,#150f03)": "templo_campanas",
+  "linear-gradient(180deg,#0a1a3a,#bfe6ff 55%,#030814)": "santuario_lobo",
+  "linear-gradient(180deg,#0a1a3a,#6f7bff 55%,#030814)": "santuario_lobo_jefe",
+  "linear-gradient(180deg,#0a2a4a,#6fd6ff 55%,#030a14)": "torre_reiga",
+  "linear-gradient(180deg,#2a0a10,#c0392b 55%,#14050a)": "yermo_rojo",
+  "linear-gradient(180deg,#3a0f08,#ff7a3a 55%,#140503)": "santuario_ceniza",
+  "linear-gradient(180deg,#3a0818,#ff4d6d 55%,#14040a)": "santuario_seda",
+  "linear-gradient(180deg,#101a3a,#cfd8ff 55%,#050810)": "santuario_espejo",
+  "linear-gradient(180deg,#14141f,#e8e2cf 55%,#050508)": "santuario_lapidas",
+  "linear-gradient(180deg,#0a0e2a,#5a2a4a 55%,#05070f)": "noche_hinode",
+  "linear-gradient(180deg,#3a2a08,#ffd479 55%,#150f03)": "santuario_alba",
+  "linear-gradient(180deg,#1a0008,#ff1744 55%,#0a0003)": "castillo_rey",
+  "linear-gradient(180deg,#2b3a67,#ffd479 55%,#fff1c9)": "amanecer_final",
+  "linear-gradient(180deg,#2a1f10,#8a6a3a 55%,#05050a)": "aldea_raizgris",
+  "linear-gradient(180deg,#1f2a14,#7ab04a 55%,#05050a)": "puesto_cazadores",
+  "linear-gradient(180deg,#0a1a3a,#5aa0d0 55%,#05050a)": "mizuumi",
+  "linear-gradient(180deg,#1a2a20,#7a8a6a 55%,#05050a)": "ruinas_vigia",
+  "linear-gradient(180deg,#14141a,#6a6a7a 55%,#05050a)": "mina_hierro",
+  "linear-gradient(180deg,#1a1a10,#c8b070 55%,#05050a)": "gruta_ermitano",
+  "linear-gradient(180deg,#0f2a1a,#3a6a3a 55%,#05050a)": "pantano_sombrio",
+  "linear-gradient(180deg,#2a3a4a,#c8e0f0 55%,#05050a)": "aldea_pastores",
+  "linear-gradient(180deg,#1a1a2a,#6a7a9a 55%,#05050a)": "puesto_cuervo",
+  "linear-gradient(180deg,#2a2a3a,#e0d8ff 55%,#05050a)": "monasterio_nieves",
+  "linear-gradient(180deg,#101a2a,#6aa0e0 55%,#05050a)": "fortaleza_hielo",
+  "linear-gradient(180deg,#0a2a3a,#4ad0e0 55%,#05050a)": "templo_hundido",
+  "linear-gradient(180deg,#1a1020,#8a7aa0 55%,#05050a)": "cabana_maldita",
+  "linear-gradient(180deg,#0a1a2a,#6affc0 55%,#05050a)": "cueva_aurora",
+  "linear-gradient(180deg,#3a1a10,#ffb070 55%,#05050a)": "oasis_carmesi",
+  "linear-gradient(180deg,#2a1a1a,#a06a50 55%,#05050a)": "campamento_desertores",
+  "linear-gradient(180deg,#1a0a0a,#e06040 55%,#05050a)": "ciudadela_ceniza",
+  "linear-gradient(180deg,#200a05,#ff7a20 55%,#05050a)": "forja_demonio",
+  "linear-gradient(180deg,#1a1020,#a080e0 55%,#05050a)": "cueva_ecos",
+  "linear-gradient(180deg,#05050a,#ffd080 55%,#05050a)": "abismo_alba",
+  "linear-gradient(180deg,#1a1008,#6a4a20 55%,#05050a)": "castillo_noche",
+  "linear-gradient(180deg,#fff1c9,#ffffff 55%,#05050a)": "vision_futuro",
+  "linear-gradient(180deg,#3a2a10,#fff1c9 55%,#05050a)": "umbral_alba",
+  "linear-gradient(180deg,#4a3010,#ffcf70 55%,#05050a)": "aldea_primer_rayo",
+  "linear-gradient(180deg,#3a2a08,#fff6c0 55%,#05050a)": "santuario_primer_rayo",
+  "linear-gradient(180deg,#0a0818,#4a3a8a 55%,#05050a)": "refugio_sombras",
+  "linear-gradient(180deg,#05051a,#3a4a9a 55%,#05050a)": "noche_estrellas",
+  "linear-gradient(180deg,#3a2a10,#e0c070 55%,#05050a)": "torre_reloj",
+  "linear-gradient(180deg,#3a1a08,#ffd0a0 55%,#05050a)": "santuario_segundo_rayo",
+  "linear-gradient(180deg,#05030f,#6a50c0 55%,#05050a)": "cueva_primera_noche",
+  "linear-gradient(180deg,#7a5a18,#ffd878 55%,#05050a)": "aldea_mediodia",
+  "linear-gradient(180deg,#6a4a10,#ffe9a0 55%,#05050a)": "lago_mediodia",
+  "linear-gradient(180deg,#4a3410,#fff0b0 55%,#05050a)": "observatorio_quieto",
+  "linear-gradient(180deg,#5a3000,#ffe080 55%,#05050a)": "santuario_tercer_rayo",
+  "linear-gradient(180deg,#102a40,#d0f0ff 55%,#05050a)": "gruta_espejo",
+  "linear-gradient(180deg,#2a2a48,#c8b878 55%,#05050a)": "ciudad_insomne",
+  "linear-gradient(180deg,#050818,#2a3a78 55%,#05050a)": "ciudad_duerme",
+  "linear-gradient(180deg,#3a3020,#e8d090 55%,#05050a)": "torre_vigilia",
+  "linear-gradient(180deg,#4a1a08,#ffb070 55%,#05050a)": "santuario_cuarto_rayo",
+  "linear-gradient(180deg,#4a2400,#ffc040 55%,#05050a)": "cueva_ambar",
+  "linear-gradient(180deg,#4a3a14,#fff0b0 55%,#05050a)": "senda_cinco_rayos",
+  "linear-gradient(180deg,#5a4018,#ffd890 55%,#05050a)": "campamento_vigilantes",
+  "linear-gradient(180deg,#5a1a08,#ff9a50 55%,#05050a)": "primer_atardecer",
+  "linear-gradient(180deg,#3a3a18,#e8e0a0 55%,#05050a)": "jardines_dormidos",
+  "linear-gradient(180deg,#4a2a08,#fff4d0 55%,#05050a)": "palacio_sol_quieto",
+  "linear-gradient(180deg,#2a1a40,#ffe0a0 55%,#05050a)": "sueno_madre",
+  "linear-gradient(180deg,#2a2040,#c8b0ff 55%,#05050a)": "cueva_cunas",
+  "linear-gradient(180deg,#10305a,#a0e8ff 55%,#05050a)": "orilla_cristal",
+  "linear-gradient(180deg,#1a3a50,#a8c8d8 55%,#05050a)": "puerto_brumas",
+  "linear-gradient(180deg,#0a1a30,#6a90c0 55%,#05050a)": "faro_hundido",
+  "linear-gradient(180deg,#0a2a5a,#7ae0ff 55%,#05050a)": "santuario_marea",
+  "linear-gradient(180deg,#101030,#c0d0ff 55%,#05050a)": "recuerdo_manada",
+  "linear-gradient(180deg,#2a2a50,#f0e0ff 55%,#05050a)": "cueva_perlas",
+  "linear-gradient(180deg,#3a0f14,#8a2a2a 55%,#1a0508)": "prologue_rebelion",
+  "linear-gradient(180deg,#1a1020,#3a1a30 55%,#0a0610)": "prologue_noche"
+ },
+ "list": [
+  {
+   "id": "tsukimori_dia",
+   "label": "Tsukimori / llegada a Kasumi (día azul) y prólogo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "bosque_niebla",
+   "label": "Bosque de Kasumi con niebla (encuentro con Yukine)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "hojarroja",
+   "label": "Aldea Hojarroja (atardecer naranja)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario1_bosque",
+   "label": "Santuario 1 de Kasumi (verde)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "noche_morada",
+   "label": "Noche morada (tras el santuario 1)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario2_violeta",
+   "label": "Santuario 2 de Kasumi (violeta)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario2_jefe",
+   "label": "Santuario 2 de Kasumi, sala del jefe",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_hielo_kasumi",
+   "label": "Cueva de hielo de Kasumi",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario3_fuego",
+   "label": "Santuario 3 de Kasumi (fuego)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "noche_azul",
+   "label": "Noche azul (escenas nocturnas y de pareja)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "torre_kurogane",
+   "label": "Torre de Kurogane (rojo)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "amanecer_dorado",
+   "label": "Amanecer dorado (liberación de una región)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cumbres_nieve",
+   "label": "Cumbres Shirogane, nieve y viento",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "yunomori",
+   "label": "Yunomori, aguas termales (rosa)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_silencio",
+   "label": "Santuario del Silencio",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_eco",
+   "label": "Santuario del Eco Helado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_cristal",
+   "label": "Cueva de Cristal / Cueva de la Manada Blanca",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "templo_campanas",
+   "label": "Santuario de las Mil Campanas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_lobo",
+   "label": "Santuario del Lobo Dormido",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_lobo_jefe",
+   "label": "Santuario del Lobo Dormido, sala del jefe",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "torre_reiga",
+   "label": "Torre del Aliento Blanco (Reiga)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "yermo_rojo",
+   "label": "Yermo Akatsuki, cielo rojo / Refugio Hinode",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_ceniza",
+   "label": "Santuario de la Ceniza",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_seda",
+   "label": "Santuario de la Seda Roja",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_espejo",
+   "label": "Santuario del Espejo Roto",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_lapidas",
+   "label": "Santuario de las Mil Lápidas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "noche_hinode",
+   "label": "Noche en el Refugio Hinode",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_alba",
+   "label": "Santuario del Alba Rota",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "castillo_rey",
+   "label": "Castillo del Alba Eterna / sala del Rey Demonio",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "amanecer_final",
+   "label": "Amanecer final (tras derrotar a Yamikage)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "aldea_raizgris",
+   "label": "Aldea Raíz Gris (leñadores)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puesto_cazadores",
+   "label": "Puesto de cazadores",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "mizuumi",
+   "label": "Mizuumi, pueblo del lago (noche)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "ruinas_vigia",
+   "label": "Ruinas del Puesto de Vigía",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "mina_hierro",
+   "label": "Mina de Hierro Negro",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "gruta_ermitano",
+   "label": "Gruta del Ermitaño",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "pantano_sombrio",
+   "label": "Pantano Sombrío / Cueva de los Nenúfares",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "aldea_pastores",
+   "label": "Aldea de los Pastores del Viento",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puesto_cuervo",
+   "label": "Puesto del Cuervo (arqueras)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "monasterio_nieves",
+   "label": "Monasterio de las Nieves",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "fortaleza_hielo",
+   "label": "Fortaleza Congelada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "templo_hundido",
+   "label": "Templo Hundido",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cabana_maldita",
+   "label": "Cabaña del Cazador Maldito",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_aurora",
+   "label": "Cueva de la Aurora",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "oasis_carmesi",
+   "label": "Oasis Carmesí",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "campamento_desertores",
+   "label": "Campamento de Desertores",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "ciudadela_ceniza",
+   "label": "Ciudadela de Ceniza",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "forja_demonio",
+   "label": "Forja del Demonio",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_ecos",
+   "label": "Cueva de los Ecos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "abismo_alba",
+   "label": "Abismo del Alba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "castillo_noche",
+   "label": "Sala del trono en ruinas, de noche (revelación)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "vision_futuro",
+   "label": "Visión del futuro (luz blanca)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "umbral_alba",
+   "label": "Umbral del Alba (llegada al reino)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "aldea_primer_rayo",
+   "label": "Aldea Primer Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_primer_rayo",
+   "label": "Santuario del Primer Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "refugio_sombras",
+   "label": "Refugio de las Sombras (único sitio con noche)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "noche_estrellas",
+   "label": "Noche de estrellas en el Refugio de las Sombras",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "torre_reloj",
+   "label": "Torre del Reloj Quieto",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_segundo_rayo",
+   "label": "Santuario del Segundo Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_primera_noche",
+   "label": "Cueva de la Primera Noche",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "aldea_mediodia",
+   "label": "Aldea del Mediodía",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "lago_mediodia",
+   "label": "Lago del Mediodía",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "observatorio_quieto",
+   "label": "Observatorio del Sol Quieto",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_tercer_rayo",
+   "label": "Santuario del Tercer Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "gruta_espejo",
+   "label": "Gruta del Espejo de Agua",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "ciudad_insomne",
+   "label": "Ciudad Insomne",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "ciudad_duerme",
+   "label": "Ciudad Insomne durmiendo (primera noche)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "torre_vigilia",
+   "label": "Torre de la Vigilia Eterna",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_cuarto_rayo",
+   "label": "Santuario del Cuarto Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_ambar",
+   "label": "Cueva de Ámbar Viva",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "senda_cinco_rayos",
+   "label": "Senda de los Cinco Rayos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "campamento_vigilantes",
+   "label": "Campamento de los Vigilantes del Alba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "primer_atardecer",
+   "label": "El primer atardecer en doscientos años",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "jardines_dormidos",
+   "label": "Jardines Dormidos del Palacio",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "palacio_sol_quieto",
+   "label": "Santuario del Quinto Rayo: Palacio del Sol Quieto",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "sueno_madre",
+   "label": "El sueño de la Madre",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_cunas",
+   "label": "Cueva de las Cunas Vacías",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "orilla_cristal",
+   "label": "Orilla del Mar de Cristal",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puerto_brumas",
+   "label": "Puerto de las Brumas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "faro_hundido",
+   "label": "Faro Hundido",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_marea",
+   "label": "Santuario de la Primera Marea",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_manada",
+   "label": "Recuerdo de la manada ancestral",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_perlas",
+   "label": "Cueva de las Perlas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "prologue_rebelion",
+   "label": "Prólogo: la rebelión de Tsukimori",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "prologue_noche",
+   "label": "Prólogo: la noche tras la rebelión",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "titulo",
+   "label": "Pantalla de título",
+   "group": "Pantallas"
+  },
+  {
+   "id": "mapa_kasumi",
+   "label": "Mapa de Bosques de Kasumi",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_shirogane",
+   "label": "Mapa de Cumbres Shirogane",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_akatsuki",
+   "label": "Mapa de Yermo Akatsuki",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_amanecer",
+   "label": "Mapa de Reino del Amanecer",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_marcristal",
+   "label": "Mapa de Mar de Cristal",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "combate_kasumi",
+   "label": "Combates en Bosques de Kasumi (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_tsukimori",
+   "label": "Tarjeta de entrada/pueblo: Tsukimori",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_camino_niebla",
+   "label": "Combates en: Camino de la Niebla",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_hojarroja",
+   "label": "Tarjeta de entrada/pueblo: Hojarroja",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_cueva_susurros",
+   "label": "Tarjeta de entrada/pueblo: Cueva de los Susurros",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_susurros",
+   "label": "Combates en: Cueva de los Susurros",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Musgo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_1",
+   "label": "Combates en: Santuario del Musgo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_rio_cristal",
+   "label": "Combates en: Río Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Raíz Hueca",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_2",
+   "label": "Combates en: Santuario de la Raíz Hueca",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_helada",
+   "label": "Tarjeta de entrada/pueblo: Cueva Helada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_helada",
+   "label": "Combates en: Cueva Helada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_bosque_umbrio",
+   "label": "Combates en: Bosque Umbrío",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Alba Rota",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_3",
+   "label": "Combates en: Santuario del Alba Rota",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_torre_kurogane",
+   "label": "Tarjeta de entrada/pueblo: Torre de Kurogane",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_torre_kurogane",
+   "label": "Combates en: Torre de Kurogane",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_paso_shirogane",
+   "label": "Tarjeta de entrada/pueblo: Paso a las Cumbres Shirogane",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_aldea_raizgris",
+   "label": "Tarjeta de entrada/pueblo: Aldea Raíz Gris",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_puesto_cazadores",
+   "label": "Tarjeta de entrada/pueblo: Puesto de Cazadores",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_ruinas_vigia",
+   "label": "Tarjeta de entrada/pueblo: Ruinas del Puesto de Vigía",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_ruinas_vigia",
+   "label": "Combates en: Ruinas del Puesto de Vigía",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_pantano_sombrio",
+   "label": "Combates en: Pantano Sombrío",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_nenufares",
+   "label": "Tarjeta de entrada/pueblo: Cueva de los Nenúfares",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_nenufares",
+   "label": "Combates en: Cueva de los Nenúfares",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_mina_hierro",
+   "label": "Tarjeta de entrada/pueblo: Mina de Hierro Negro",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_mina_hierro",
+   "label": "Combates en: Mina de Hierro Negro",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_lago_luna",
+   "label": "Combates en: Lago de la Luna",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_gruta_ermitano",
+   "label": "Tarjeta de entrada/pueblo: Gruta del Ermitaño",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_gruta_ermitano",
+   "label": "Combates en: Gruta del Ermitaño",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_mizuumi",
+   "label": "Tarjeta de entrada/pueblo: Mizuumi",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_shirogane",
+   "label": "Combates en Cumbres Shirogane (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_paso_kasumi",
+   "label": "Tarjeta de entrada/pueblo: Paso a Kasumi",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_campamento_ventisca",
+   "label": "Tarjeta de entrada/pueblo: Campamento Ventisca",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_sendero_helado",
+   "label": "Combates en: Sendero Helado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_s1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Silencio",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_s1",
+   "label": "Combates en: Santuario del Silencio",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_cristales",
+   "label": "Tarjeta de entrada/pueblo: Cueva de Cristal",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_cristales",
+   "label": "Combates en: Cueva de Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_yunomori",
+   "label": "Tarjeta de entrada/pueblo: Yunomori",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_paso_ventoso",
+   "label": "Combates en: Paso Ventoso",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_s2",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Eco Helado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_s2",
+   "label": "Combates en: Santuario del Eco Helado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_manada",
+   "label": "Tarjeta de entrada/pueblo: Cueva de la Manada Blanca",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_manada",
+   "label": "Combates en: Cueva de la Manada Blanca",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_ventisquero",
+   "label": "Combates en: Ventisquero",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_s3",
+   "label": "Tarjeta de entrada/pueblo: Santuario de las Mil Campanas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_s3",
+   "label": "Combates en: Santuario de las Mil Campanas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_bosque_agujas",
+   "label": "Combates en: Bosque de Agujas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_s4",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Lobo Dormido",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_s4",
+   "label": "Combates en: Santuario del Lobo Dormido",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_torre_reiga",
+   "label": "Tarjeta de entrada/pueblo: Torre del Aliento Blanco",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_torre_reiga",
+   "label": "Combates en: Torre del Aliento Blanco",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_paso_akatsuki",
+   "label": "Tarjeta de entrada/pueblo: Paso al Yermo Akatsuki",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_aldea_pastores",
+   "label": "Tarjeta de entrada/pueblo: Aldea de los Pastores",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_puesto_cuervo",
+   "label": "Tarjeta de entrada/pueblo: Puesto del Cuervo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_monasterio_nieves",
+   "label": "Tarjeta de entrada/pueblo: Monasterio de las Nieves",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_fortaleza_hielo",
+   "label": "Tarjeta de entrada/pueblo: Fortaleza Congelada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_fortaleza_hielo",
+   "label": "Combates en: Fortaleza Congelada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_glaciar_espejo",
+   "label": "Combates en: Glaciar Espejo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_bosque_escarcha",
+   "label": "Combates en: Bosque de Escarcha",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_valle_gritos",
+   "label": "Combates en: Valle de los Gritos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_templo_hundido",
+   "label": "Tarjeta de entrada/pueblo: Templo Hundido",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_templo_hundido",
+   "label": "Combates en: Templo Hundido",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cabana_maldita",
+   "label": "Tarjeta de entrada/pueblo: Cabaña del Cazador Maldito",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cabana_maldita",
+   "label": "Combates en: Cabaña del Cazador Maldito",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_aurora",
+   "label": "Tarjeta de entrada/pueblo: Cueva de la Aurora",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_aurora",
+   "label": "Combates en: Cueva de la Aurora",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_akatsuki",
+   "label": "Combates en Yermo Akatsuki (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_paso_shirogane",
+   "label": "Tarjeta de entrada/pueblo: Paso a Shirogane",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_llanura_cenizas",
+   "label": "Combates en: Llanura de Cenizas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_aldea_amanecer",
+   "label": "Tarjeta de entrada/pueblo: Refugio Hinode",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_santuario_a1",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Ceniza",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a1",
+   "label": "Combates en: Santuario de la Ceniza",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_bosque_rojo",
+   "label": "Combates en: Bosque Rojo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Seda Roja",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a2",
+   "label": "Combates en: Santuario de la Seda Roja",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_camino_brasas",
+   "label": "Combates en: Camino de Brasas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_valle_espejos",
+   "label": "Combates en: Valle de los Espejos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Espejo Roto",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a3",
+   "label": "Combates en: Santuario del Espejo Roto",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_valle_lapidas",
+   "label": "Combates en: Valle de las Lápidas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a4",
+   "label": "Tarjeta de entrada/pueblo: Santuario de las Mil Lápidas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a4",
+   "label": "Combates en: Santuario de las Mil Lápidas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a5",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Alba Rota",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a5",
+   "label": "Combates en: Santuario del Alba Rota",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_camino_castillo",
+   "label": "Combates en: Camino del Castillo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_fenix",
+   "label": "Tarjeta de entrada/pueblo: Cueva del Fénix Caído",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_fenix",
+   "label": "Combates en: Cueva del Fénix Caído",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_recuerdo",
+   "label": "Tarjeta de entrada/pueblo: Cueva del Recuerdo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_recuerdo",
+   "label": "Combates en: Cueva del Recuerdo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_castillo_alba",
+   "label": "Tarjeta de entrada/pueblo: Castillo del Alba Eterna",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_castillo_alba",
+   "label": "Combates en: Castillo del Alba Eterna",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_oasis_carmesi",
+   "label": "Tarjeta de entrada/pueblo: Oasis Carmesí",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_campamento_desertores",
+   "label": "Tarjeta de entrada/pueblo: Campamento de Desertores",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_ciudadela_ceniza",
+   "label": "Tarjeta de entrada/pueblo: Ciudadela de Ceniza",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_ciudadela_ceniza",
+   "label": "Combates en: Ciudadela de Ceniza",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_forja_demonio",
+   "label": "Tarjeta de entrada/pueblo: Forja del Demonio",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_forja_demonio",
+   "label": "Combates en: Forja del Demonio",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_desierto_cristal",
+   "label": "Combates en: Desierto de Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_rio_lava",
+   "label": "Combates en: Río de Lava",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_barranco_huesos",
+   "label": "Combates en: Barranco de Huesos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_ecos",
+   "label": "Tarjeta de entrada/pueblo: Cueva de los Ecos",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_ecos",
+   "label": "Combates en: Cueva de los Ecos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_abismo_alba",
+   "label": "Tarjeta de entrada/pueblo: Abismo del Alba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_abismo_alba",
+   "label": "Combates en: Abismo del Alba",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_camara_cristal",
+   "label": "Tarjeta de entrada/pueblo: Cámara de Cristal",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_camara_cristal",
+   "label": "Combates en: Cámara de Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_fisura_alba",
+   "label": "Tarjeta de entrada/pueblo: Fisura del Alba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_amanecer",
+   "label": "Combates en Reino del Amanecer (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_umbral_alba",
+   "label": "Tarjeta de entrada/pueblo: Fisura del Alba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_llanura_dorada",
+   "label": "Combates en: Llanura Dorada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_aldea_primer_rayo",
+   "label": "Tarjeta de entrada/pueblo: Aldea Primer Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_bosque_sin_sombra",
+   "label": "Combates en: Bosque sin Sombra",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_m1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Primer Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_m1",
+   "label": "Combates en: Santuario del Primer Rayo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_refugio_sombras",
+   "label": "Tarjeta de entrada/pueblo: Refugio de las Sombras",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_campos_espejismo",
+   "label": "Combates en: Campos de Espejismo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_torre_reloj",
+   "label": "Tarjeta de entrada/pueblo: Torre del Reloj Quieto",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_torre_reloj",
+   "label": "Combates en: Torre del Reloj Quieto",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_desfiladero_oro",
+   "label": "Combates en: Desfiladero de Oro",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_m2",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Segundo Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_m2",
+   "label": "Combates en: Santuario del Segundo Rayo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_primera_noche",
+   "label": "Tarjeta de entrada/pueblo: Cueva de la Primera Noche",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_primera_noche",
+   "label": "Combates en: Cueva de la Primera Noche",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_lago_mediodia",
+   "label": "Combates en: Lago del Mediodía",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_campo_girasoles",
+   "label": "Combates en: Campo de Girasoles",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_aldea_mediodia",
+   "label": "Tarjeta de entrada/pueblo: Aldea del Mediodía",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_observatorio_quieto",
+   "label": "Tarjeta de entrada/pueblo: Observatorio del Sol Quieto",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_observatorio_quieto",
+   "label": "Combates en: Observatorio del Sol Quieto",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_m3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Tercer Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_m3",
+   "label": "Combates en: Santuario del Tercer Rayo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_gruta_espejo",
+   "label": "Tarjeta de entrada/pueblo: Gruta del Espejo de Agua",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_gruta_espejo",
+   "label": "Combates en: Gruta del Espejo de Agua",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_colinas_ambar",
+   "label": "Combates en: Colinas de Ámbar",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_camino_vigilia",
+   "label": "Combates en: Camino de la Vigilia",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_ciudad_insomne",
+   "label": "Tarjeta de entrada/pueblo: Ciudad Insomne",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_cueva_ambar",
+   "label": "Tarjeta de entrada/pueblo: Cueva de Ámbar Viva",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_ambar",
+   "label": "Combates en: Cueva de Ámbar Viva",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_torre_vigilia",
+   "label": "Tarjeta de entrada/pueblo: Torre de la Vigilia Eterna",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_torre_vigilia",
+   "label": "Combates en: Torre de la Vigilia Eterna",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_m4",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Cuarto Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_m4",
+   "label": "Combates en: Santuario del Cuarto Rayo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_senda_cinco_rayos",
+   "label": "Combates en: Senda de los Cinco Rayos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_campamento_vigilantes",
+   "label": "Tarjeta de entrada/pueblo: Campamento de los Vigilantes",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_jardines_dormidos",
+   "label": "Combates en: Jardines Dormidos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_ruinas_palacio",
+   "label": "Tarjeta de entrada/pueblo: Jardines del Palacio",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_ruinas_palacio",
+   "label": "Combates en: Jardines del Palacio",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_m5",
+   "label": "Tarjeta de entrada/pueblo: Palacio del Sol Quieto",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_m5",
+   "label": "Combates en: Palacio del Sol Quieto",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_cunas",
+   "label": "Tarjeta de entrada/pueblo: Cueva de las Cunas Vacías",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_cunas",
+   "label": "Combates en: Cueva de las Cunas Vacías",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puerto_alba",
+   "label": "Tarjeta de entrada/pueblo: Camino de Cristal",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_marcristal",
+   "label": "Combates en Mar de Cristal (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_orilla_llegada",
+   "label": "Tarjeta de entrada/pueblo: Camino de Cristal",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_playa_espejo",
+   "label": "Combates en: Playa de Espejos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puerto_brumas",
+   "label": "Tarjeta de entrada/pueblo: Puerto de las Brumas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_arrecife_cristal",
+   "label": "Combates en: Arrecife de Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_faro_hundido",
+   "label": "Tarjeta de entrada/pueblo: Faro Hundido",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_faro_hundido",
+   "label": "Combates en: Faro Hundido",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_c1",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Primera Marea",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_c1",
+   "label": "Combates en: Santuario de la Primera Marea",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_perlas",
+   "label": "Tarjeta de entrada/pueblo: Cueva de las Perlas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_perlas",
+   "label": "Combates en: Cueva de las Perlas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_horizonte_mar",
+   "label": "Tarjeta de entrada/pueblo: Horizonte del Mar",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate",
+   "label": "Combate genérico (si no hay otro)",
+   "group": "Fondos de combate"
+  }
+ ]
+}

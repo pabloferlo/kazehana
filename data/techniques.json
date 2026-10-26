@@ -736,6 +736,594 @@
     "mp_restore": 30
    },
    "desc": "Respiras hondo y recuperas el maná."
+  },
+  {
+   "id": "tajo_del_dragon",
+   "name": "Tajo del Dragón",
+   "type": "attack",
+   "element": "fisico",
+   "power": 120,
+   "mpCost": 20,
+   "target": "enemy",
+   "effect": null,
+   "desc": "Un tajo que silba como un dragón."
+  },
+  {
+   "id": "ruptura_total",
+   "name": "Ruptura Total",
+   "type": "attack",
+   "element": "fisico",
+   "power": 140,
+   "mpCost": 26,
+   "target": "enemy",
+   "effect": {
+    "def_down": 3
+   },
+   "desc": "Rompe la guardia del rival."
+  },
+  {
+   "id": "infierno",
+   "name": "Infierno",
+   "type": "attack",
+   "element": "fuego",
+   "power": 105,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 0.6
+   },
+   "desc": "Un mar de llamas cubre el campo."
+  },
+  {
+   "id": "meteoro",
+   "name": "Meteoro",
+   "type": "attack",
+   "element": "fuego",
+   "power": 150,
+   "mpCost": 34,
+   "target": "enemy",
+   "effect": {
+    "burn": 0.5
+   },
+   "desc": "Una roca ardiente cae del cielo."
+  },
+  {
+   "id": "ventisca_eterna",
+   "name": "Ventisca Eterna",
+   "type": "attack",
+   "element": "hielo",
+   "power": 105,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.5,
+    "freeze": 0.3
+   },
+   "desc": "Un invierno sin fin."
+  },
+  {
+   "id": "lanza_glacial",
+   "name": "Lanza Glacial",
+   "type": "attack",
+   "element": "hielo",
+   "power": 150,
+   "mpCost": 34,
+   "target": "enemy",
+   "effect": {
+    "freeze": 0.4
+   },
+   "desc": "Una lanza de hielo milenario."
+  },
+  {
+   "id": "tormenta_electrica",
+   "name": "Tormenta Eléctrica",
+   "type": "attack",
+   "element": "rayo",
+   "power": 105,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.25
+   },
+   "desc": "Rayos por doquier."
+  },
+  {
+   "id": "rayo_celestial",
+   "name": "Rayo Celestial",
+   "type": "attack",
+   "element": "rayo",
+   "power": 150,
+   "mpCost": 34,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.3
+   },
+   "desc": "Un rayo que baja del cielo y no perdona."
+  },
+  {
+   "id": "rayo_arcano",
+   "name": "Rayo Arcano",
+   "type": "attack",
+   "element": "arcano",
+   "power": 140,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.5
+   },
+   "desc": "Magia pura que ignora defensas."
+  },
+  {
+   "id": "sanacion_astral",
+   "name": "Sanación Astral",
+   "type": "heal",
+   "element": "arcano",
+   "power": 80,
+   "mpCost": 24,
+   "target": "ally",
+   "effect": null,
+   "desc": "Luz estelar que cura grandes heridas."
+  },
+  {
+   "id": "corte_prismatico",
+   "name": "Corte Prismático",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 125,
+   "mpCost": 22,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.2
+   },
+   "desc": "Tu filo se descompone en siete colores."
+  },
+  {
+   "id": "tempestad_de_acero",
+   "name": "Tempestad de Acero",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 100,
+   "mpCost": 28,
+   "target": "all_enemies",
+   "effect": null,
+   "desc": "Una tormenta de filos mágicos."
+  },
+  {
+   "id": "punio_del_trueno",
+   "name": "Puño del Trueno",
+   "type": "attack",
+   "element": "arcano",
+   "power": 130,
+   "mpCost": 22,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.3
+   },
+   "desc": "Un puñetazo con runas de trueno."
+  },
+  {
+   "id": "mantra_vital",
+   "name": "Mantra Vital",
+   "type": "heal",
+   "element": "arcano",
+   "power": 70,
+   "mpCost": 18,
+   "target": "self",
+   "effect": {
+    "regen": 4
+   },
+   "desc": "Entonas un mantra que te regenera."
+  },
+  {
+   "id": "disparo_perforante",
+   "name": "Disparo Perforante",
+   "type": "attack",
+   "element": "arcano",
+   "power": 135,
+   "mpCost": 22,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.6
+   },
+   "desc": "Un disparo que atraviesa armaduras."
+  },
+  {
+   "id": "tormenta_de_estrellas",
+   "name": "Tormenta de Estrellas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 100,
+   "mpCost": 28,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.2
+   },
+   "desc": "Una lluvia de proyectiles de maná."
+  },
+  {
+   "id": "colmillo_polar",
+   "name": "Colmillo Polar",
+   "type": "attack",
+   "element": "hielo",
+   "power": 130,
+   "mpCost": 22,
+   "target": "enemy",
+   "effect": {
+    "freeze": 0.3
+   },
+   "desc": "Un mordisco de hielo puro."
+  },
+  {
+   "id": "ventisca_lunar",
+   "name": "Ventisca Lunar",
+   "type": "attack",
+   "element": "hielo",
+   "power": 110,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.5
+   },
+   "desc": "Nieve bajo la luna."
+  },
+  {
+   "id": "luz_de_luna",
+   "name": "Luz de Luna",
+   "type": "heal",
+   "element": "hielo",
+   "power": 60,
+   "mpCost": 28,
+   "target": "party",
+   "effect": null,
+   "desc": "La luna cura a toda la manada."
+  },
+  {
+   "id": "tormenta_de_filos",
+   "name": "Tormenta de Filos",
+   "type": "attack",
+   "element": "fisico",
+   "power": 80,
+   "mpCost": 22,
+   "target": "all_enemies",
+   "effect": null,
+   "desc": "Filos que cortan por todas partes."
+  },
+  {
+   "id": "sanacion_mayor",
+   "name": "Sanación Mayor",
+   "type": "heal",
+   "element": "arcano",
+   "power": 90,
+   "mpCost": 24,
+   "target": "ally",
+   "effect": null,
+   "desc": "Cura mucho a un aliado."
+  },
+  {
+   "id": "bendicion_de_guerra",
+   "name": "Bendición de Guerra",
+   "type": "buff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 16,
+   "target": "party",
+   "effect": {
+    "atk_up": 4
+   },
+   "desc": "Todo el grupo golpea más fuerte."
+  },
+  {
+   "id": "muro_de_escarcha",
+   "name": "Muro de Escarcha",
+   "type": "buff",
+   "element": "hielo",
+   "power": 0,
+   "mpCost": 14,
+   "target": "party",
+   "effect": {
+    "def_up": 4
+   },
+   "desc": "Una armadura de hielo para todos."
+  },
+  {
+   "id": "llanto_de_la_luna",
+   "name": "Llanto de la Luna",
+   "type": "heal",
+   "element": "arcano",
+   "power": 55,
+   "mpCost": 28,
+   "target": "party",
+   "effect": null,
+   "desc": "Una lluvia curativa sobre el grupo."
+  },
+  {
+   "id": "golpe_aturdidor",
+   "name": "Golpe Aturdidor",
+   "type": "attack",
+   "element": "fisico",
+   "power": 70,
+   "mpCost": 14,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.5
+   },
+   "desc": "Un golpe en la cabeza que aturde."
+  },
+  {
+   "id": "tajo_del_alba",
+   "name": "Tajo del Alba",
+   "type": "attack",
+   "element": "fisico",
+   "power": 150,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.3
+   },
+   "desc": "Un tajo que parte la noche en dos."
+  },
+  {
+   "id": "juicio_del_titan",
+   "name": "Juicio del Titán",
+   "type": "attack",
+   "element": "fisico",
+   "power": 130,
+   "mpCost": 38,
+   "target": "all_enemies",
+   "effect": {
+    "stun": 0.25
+   },
+   "desc": "Un golpe sísmico que alcanza a todos."
+  },
+  {
+   "id": "lluvia_de_ascuas",
+   "name": "Lluvia de Ascuas",
+   "type": "attack",
+   "element": "fuego",
+   "power": 130,
+   "mpCost": 30,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 0.7
+   },
+   "desc": "Brasas del cielo sobre todo el campo."
+  },
+  {
+   "id": "sol_naciente",
+   "name": "Sol Naciente",
+   "type": "attack",
+   "element": "fuego",
+   "power": 190,
+   "mpCost": 40,
+   "target": "enemy",
+   "effect": {
+    "burn": 1.0
+   },
+   "desc": "Un sol en miniatura que calcina al objetivo."
+  },
+  {
+   "id": "tumba_de_escarcha",
+   "name": "Tumba de Escarcha",
+   "type": "attack",
+   "element": "hielo",
+   "power": 150,
+   "mpCost": 30,
+   "target": "enemy",
+   "effect": {
+    "freeze": 0.7
+   },
+   "desc": "Un sarcófago de hielo azul."
+  },
+  {
+   "id": "aurora_boreal",
+   "name": "Aurora Boreal",
+   "type": "attack",
+   "element": "hielo",
+   "power": 135,
+   "mpCost": 38,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.8,
+    "def_down": 2
+   },
+   "desc": "Luces gélidas que debilitan a todos."
+  },
+  {
+   "id": "dios_del_trueno",
+   "name": "Dios del Trueno",
+   "type": "attack",
+   "element": "rayo",
+   "power": 190,
+   "mpCost": 40,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.25
+   },
+   "desc": "El trueno desciende con tu nombre."
+  },
+  {
+   "id": "singularidad",
+   "name": "Singularidad",
+   "type": "attack",
+   "element": "arcano",
+   "power": 140,
+   "mpCost": 32,
+   "target": "all_enemies",
+   "effect": {
+    "def_down": 2
+   },
+   "desc": "Un punto de vacío que lo atrae todo."
+  },
+  {
+   "id": "sanacion_celestial",
+   "name": "Sanación Celestial",
+   "type": "heal",
+   "element": "arcano",
+   "power": 90,
+   "mpCost": 36,
+   "target": "party",
+   "effect": {
+    "regen": 3
+   },
+   "desc": "Luz estelar sobre todo el grupo."
+  },
+  {
+   "id": "corte_de_aurora",
+   "name": "Corte de Aurora",
+   "type": "attack",
+   "element": "arcano",
+   "power": 150,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.3
+   },
+   "desc": "Un filo de luz que corta lo imposible."
+  },
+  {
+   "id": "danza_de_las_cien_lunas",
+   "name": "Danza de las Cien Lunas",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 140,
+   "mpCost": 38,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.2
+   },
+   "desc": "Cien cortes en un solo suspiro."
+  },
+  {
+   "id": "palma_del_vacio",
+   "name": "Palma del Vacío",
+   "type": "attack",
+   "element": "arcano",
+   "power": 150,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.5
+   },
+   "desc": "Una palma que atraviesa cualquier guardia."
+  },
+  {
+   "id": "nirvana",
+   "name": "Nirvana",
+   "type": "heal",
+   "element": "arcano",
+   "power": 80,
+   "mpCost": 34,
+   "target": "party",
+   "effect": {
+    "regen": 4
+   },
+   "desc": "Paz absoluta: el grupo se repone."
+  },
+  {
+   "id": "bala_del_destino",
+   "name": "Bala del Destino",
+   "type": "attack",
+   "element": "arcano",
+   "power": 160,
+   "mpCost": 28,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.3
+   },
+   "desc": "Una bala que nunca falla su marca."
+  },
+  {
+   "id": "cielo_de_balas",
+   "name": "Cielo de Balas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 135,
+   "mpCost": 38,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.15
+   },
+   "desc": "Una lluvia de estrellas de plomo."
+  },
+  {
+   "id": "garra_lunar",
+   "name": "Garra Lunar",
+   "type": "attack",
+   "element": "hielo",
+   "power": 140,
+   "mpCost": 26,
+   "target": "enemy",
+   "effect": {
+    "def_down": 3
+   },
+   "desc": "Zarpazo de loba que rasga armaduras."
+  },
+  {
+   "id": "aullido_del_alba",
+   "name": "Aullido del Alba",
+   "type": "buff",
+   "element": "hielo",
+   "power": 0,
+   "mpCost": 30,
+   "target": "party",
+   "effect": {
+    "atk_up": 4,
+    "spd_up": 3
+   },
+   "desc": "Un aullido que despierta la fuerza de la manada."
+  },
+  {
+   "id": "velo_carmesi",
+   "name": "Velo Carmesí",
+   "type": "buff",
+   "element": "arcano",
+   "power": 0,
+   "mpCost": 28,
+   "target": "party",
+   "effect": {
+    "def_up": 4,
+    "regen": 3
+   },
+   "desc": "Un velo rojo que protege y cura."
+  },
+  {
+   "id": "mil_cuchillas",
+   "name": "Mil Cuchillas",
+   "type": "attack",
+   "element": "fisico",
+   "power": 125,
+   "mpCost": 34,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 0.5
+   },
+   "desc": "Un huracán de filos."
+  },
+  {
+   "id": "alba_rota",
+   "name": "Alba Rota",
+   "type": "attack",
+   "element": "arcano",
+   "power": 170,
+   "mpCost": 36,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.4
+   },
+   "desc": "La luz del alba convertida en lanza."
+  },
+  {
+   "id": "exorcismo",
+   "name": "Exorcismo",
+   "type": "attack",
+   "element": "arcano",
+   "power": 115,
+   "mpCost": 32,
+   "target": "all_enemies",
+   "effect": {
+    "atk_down": 3
+   },
+   "desc": "Un sello sagrado que debilita a los demonios."
   }
  ]
 }

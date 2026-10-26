@@ -70,8 +70,8 @@
     "name": "Tsukimori",
     "type": "town",
     "icon": "🏚️",
-    "x": 10,
-    "y": 82,
+    "x": 7,
+    "y": 86,
     "links": [
      "camino_niebla"
     ],
@@ -92,13 +92,14 @@
     "name": "Camino de la Niebla",
     "type": "wild",
     "icon": "🌫️",
-    "x": 27,
-    "y": 68,
+    "x": 20,
+    "y": 72,
     "links": [
      "tsukimori",
      "hojarroja",
      "santuario_1",
-     "cueva_susurros"
+     "cueva_susurros",
+     "puesto_cazadores"
     ],
     "desc": "Un sendero entre árboles cubiertos de bruma. Los demonios patrullan.",
     "onFirst": "yukine_meet",
@@ -135,8 +136,8 @@
     "name": "Hojarroja",
     "type": "town",
     "icon": "🏘️",
-    "x": 46,
-    "y": 80,
+    "x": 38,
+    "y": 86,
     "links": [
      "camino_niebla",
      "rio_cristal"
@@ -174,7 +175,11 @@
       "capa_lana",
       "amuleto_cobre",
       "flor_de_escarcha",
-      "dulce_de_miel"
+      "dulce_de_miel",
+      "g1_common_filo",
+      "g1_common_grimorio",
+      "g1_common_guantelete",
+      "g1_common_pistola"
      ]
     }
    },
@@ -182,8 +187,8 @@
     "name": "Cueva de los Susurros",
     "type": "cave",
     "icon": "🕳️",
-    "x": 12,
-    "y": 48,
+    "x": 6,
+    "y": 56,
     "links": [
      "camino_niebla"
     ],
@@ -243,21 +248,36 @@
        [
         "perg_llama_fantasma",
         1
+       ],
+       [
+        "@x:uncommon:1",
+        1
        ]
       ],
       "gold": 80
      }
+    },
+    "repeat": {
+     "text": "Otra manada de lobos corruptos ha reclamado la cueva.",
+     "gold": 60,
+     "items": [
+      [
+       "hierba_curativa",
+       2
+      ]
+     ]
     }
    },
    "santuario_1": {
     "name": "Santuario del Musgo",
     "type": "sanctuary",
     "icon": "⛩️",
-    "x": 30,
+    "x": 22,
     "y": 44,
     "links": [
      "camino_niebla",
-     "rio_cristal"
+     "puesto_cazadores",
+     "ruinas_vigia"
     ],
     "order": 1,
     "tagline": "El primer sello.",
@@ -335,12 +355,13 @@
     "name": "Río Cristal",
     "type": "wild",
     "icon": "🏞️",
-    "x": 50,
-    "y": 58,
+    "x": 52,
+    "y": 74,
     "links": [
      "hojarroja",
-     "santuario_1",
-     "santuario_2"
+     "puesto_cazadores",
+     "aldea_raizgris",
+     "pantano_sombrio"
     ],
     "desc": "Un río de agua clarísima. Los espíritus de la niebla merodean la orilla.",
     "encounters": {
@@ -367,16 +388,17 @@
     "name": "Santuario de la Raíz Hueca",
     "type": "sanctuary",
     "icon": "🕸️",
-    "x": 68,
-    "y": 62,
+    "x": 74,
+    "y": 70,
     "links": [
-     "rio_cristal",
+     "pantano_sombrio",
+     "aldea_raizgris",
      "cueva_helada",
      "bosque_umbrio"
     ],
     "order": 2,
-    "requires": "sanc_1_done",
-    "lockText": "El segundo santuario está sellado. Completa primero el Santuario del Musgo.",
+    "requires": "fort_vigia_done",
+    "lockText": "Las ruinas del Puesto de Vigía bloquean el camino. Despéjalas primero.",
     "tagline": "El segundo sello.",
     "theme": [
      "#2a1040",
@@ -453,8 +475,8 @@
     "name": "Cueva Helada",
     "type": "cave",
     "icon": "🧊",
-    "x": 84,
-    "y": 80,
+    "x": 92,
+    "y": 84,
     "links": [
      "santuario_2"
     ],
@@ -520,17 +542,29 @@
       ],
       "gold": 150
      }
+    },
+    "repeat": {
+     "text": "El hielo del fondo vuelve a juntarse y a formar un nuevo golem.",
+     "gold": 100,
+     "items": [
+      [
+       "pocion_mayor",
+       1
+      ]
+     ]
     }
    },
    "bosque_umbrio": {
     "name": "Bosque Umbrío",
     "type": "wild",
     "icon": "🌑",
-    "x": 70,
-    "y": 36,
+    "x": 76,
+    "y": 48,
     "links": [
      "santuario_2",
-     "santuario_3"
+     "mizuumi",
+     "mina_hierro",
+     "lago_luna"
     ],
     "requires": "sanc_2_done",
     "lockText": "Las raíces bloquean el camino. Completa el segundo santuario.",
@@ -560,15 +594,16 @@
     "name": "Santuario del Alba Rota",
     "type": "sanctuary",
     "icon": "🌅",
-    "x": 50,
-    "y": 22,
+    "x": 68,
+    "y": 14,
     "links": [
-     "bosque_umbrio",
+     "mina_hierro",
+     "lago_luna",
      "torre_kurogane"
     ],
     "order": 3,
-    "requires": "sanc_2_done",
-    "lockText": "Solo se llega por el Bosque Umbrío.",
+    "requires": "mina_done",
+    "lockText": "El camino al tercer santuario pasa por la Mina de Hierro Negro.",
     "tagline": "El tercer sello.",
     "theme": [
      "#40180a",
@@ -650,8 +685,8 @@
     "name": "Torre de Kurogane",
     "type": "tower",
     "icon": "🏯",
-    "x": 82,
-    "y": 12,
+    "x": 88,
+    "y": 10,
     "links": [
      "santuario_3"
     ],
@@ -734,6 +769,10 @@
        [
         "pocion_mayor",
         2
+       ],
+       [
+        "@a:rare:1",
+        1
        ]
       ],
       "gold": 600
@@ -744,8 +783,8 @@
     "name": "Paso a las Cumbres Shirogane",
     "type": "gate",
     "icon": "❄️",
-    "x": 93,
-    "y": 34,
+    "x": 96,
+    "y": 26,
     "links": [
      "torre_kurogane"
     ],
@@ -756,7 +795,6709 @@
      "#1b2a4a",
      "#8fd3ff"
     ],
-    "desc": "Un sendero helado asciende entre las montañas. Más allá se alzan las Cumbres Shirogane, donde gobierna el siguiente señor demoníaco. Disponible en la Parte 3."
+    "desc": "Un sendero helado asciende entre las montañas hacia las Cumbres Shirogane, donde gobierna el siguiente señor demoníaco. Puedes partir cuando quieras; podrás volver a Kasumi.",
+    "gate": {
+     "region": "shirogane",
+     "loc": "paso_kasumi",
+     "scene": "shirogane_leave",
+     "title": "Cumbres Shirogane",
+     "text": "Has liberado Kasumi. Más allá de este paso se alzan las Cumbres Shirogane. ¿Partir ahora? Podrás volver a Kasumi cuando quieras."
+    }
+   },
+   "aldea_raizgris": {
+    "name": "Aldea Raíz Gris",
+    "type": "town",
+    "icon": "🪵",
+    "x": 68,
+    "y": 88,
+    "links": [
+     "rio_cristal",
+     "santuario_2"
+    ],
+    "desc": "Casas de troncos, humo de chimeneas y una taberna que nunca cierra. Hay posada, tienda y gente de buen comer.",
+    "tagline": "Leñadores y buen sake.",
+    "theme": [
+     "#2a1f10",
+     "#c89a5a"
+    ],
+    "onFirst": "raizgris_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "sanc_2_done",
+       "!ev_taberna"
+      ],
+      "scene": "raizgris_taberna"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "hanae",
+      "gonji",
+      "tamaki",
+      "ichiro"
+     ],
+     "inn": {
+      "price": 40
+     },
+     "shop": [
+      "pocion",
+      "pocion_mayor",
+      "elixir_menor",
+      "hierba_curativa",
+      "racion",
+      "katana_cazador",
+      "peto_hierro_negro",
+      "sake_ciruela",
+      "dulce_de_miel"
+     ]
+    }
+   },
+   "puesto_cazadores": {
+    "name": "Puesto de Cazadores",
+    "type": "town",
+    "icon": "🏹",
+    "x": 36,
+    "y": 60,
+    "links": [
+     "camino_niebla",
+     "santuario_1",
+     "rio_cristal"
+    ],
+    "desc": "Un claro con tres cabañas, una hoguera siempre encendida y pieles secándose al sol.",
+    "tagline": "Los ojos del bosque.",
+    "theme": [
+     "#1f2a14",
+     "#7ab04a"
+    ],
+    "onFirst": "puesto_arrival",
+    "town": {
+     "npcs": [
+      "shinobu",
+      "bunzo"
+     ],
+     "inn": {
+      "price": 30
+     },
+     "shop": [
+      "pocion",
+      "elixir_menor",
+      "hierba_curativa",
+      "racion",
+      "capa_cazador"
+     ]
+    }
+   },
+   "ruinas_vigia": {
+    "name": "Ruinas del Puesto de Vigía",
+    "type": "ruins",
+    "icon": "🏚️",
+    "x": 40,
+    "y": 28,
+    "links": [
+     "santuario_1",
+     "pantano_sombrio"
+    ],
+    "desc": "Un fuerte humano tomado por oni bandoleros. Su estandarte cuelga de una torre torcida.",
+    "requires": "sanc_1_done",
+    "lockText": "Debes romper antes el sello del Musgo.",
+    "autoDoneIf": "sanc_2_done",
+    "theme": [
+     "#1a2a20",
+     "#7a8a6a"
+    ],
+    "recommended": 4,
+    "tagline": "Los bandoleros del bosque.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "vigia_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "jabali_corrupto",
+        "bandido_oni"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         2
+        ],
+        [
+         "hierba_curativa",
+         2
+        ]
+       ],
+       "gold": 80
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "bandido_oni",
+        "bandido_oni",
+        "lobo_sombrio"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "bandido_oni",
+        "jabali_corrupto",
+        "bandido_oni"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "capitan_tessen"
+       ],
+       "post": "vigia_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "fort_vigia_done",
+      "items": [
+       [
+        "@w:rare:1",
+        1
+       ],
+       [
+        "pocion",
+        3
+       ]
+      ],
+      "gold": 160
+     }
+    }
+   },
+   "pantano_sombrio": {
+    "name": "Pantano Sombrío",
+    "type": "wild",
+    "icon": "🐸",
+    "x": 56,
+    "y": 52,
+    "links": [
+     "rio_cristal",
+     "ruinas_vigia",
+     "santuario_2",
+     "cueva_nenufares"
+    ],
+    "desc": "Un pantano de agua oscura donde croan cientos de ranas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "rana_veneno",
+       "rana_veneno"
+      ],
+      [
+       "rana_veneno",
+       "hongo_toxico"
+      ],
+      [
+       "hongo_toxico",
+       "rana_veneno",
+       "hongo_toxico"
+      ],
+      [
+       "arana_gigante",
+       "rana_veneno"
+      ]
+     ]
+    }
+   },
+   "cueva_nenufares": {
+    "name": "Cueva de los Nenúfares",
+    "type": "cave",
+    "icon": "🪷",
+    "x": 62,
+    "y": 66,
+    "links": [
+     "pantano_sombrio"
+    ],
+    "desc": "Opcional: una cueva llena de nenúfares gigantes y música de ranas. Su reina vigila con celo.",
+    "optional": true,
+    "requires": "sanc_1_done",
+    "lockText": "Un enjambre de ranas te cierra el paso. Vuelve tras romper el primer sello.",
+    "theme": [
+     "#0a2a2a",
+     "#5ad0b0"
+    ],
+    "recommended": 6,
+    "tagline": "Opcional · la reina de los croares.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "nenufares_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "rana_veneno",
+        "rana_veneno",
+        "rana_veneno"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         2
+        ],
+        [
+         "elixir_menor",
+         2
+        ]
+       ],
+       "gold": 120
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "rana_veneno",
+        "espiritu_ramas",
+        "rana_veneno"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "reina_rana"
+       ],
+       "post": "nenufares_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_k3_done",
+      "items": [
+       [
+        "anillo_pescador",
+        1
+       ],
+       [
+        "elixir_mayor",
+        1
+       ]
+      ],
+      "gold": 220
+     }
+    },
+    "repeat": {
+     "text": "Una nueva reina de las ranas ha subido al trono de nenúfares.",
+     "gold": 150,
+     "items": [
+      [
+       "pocion_mayor",
+       1
+      ]
+     ]
+    }
+   },
+   "mina_hierro": {
+    "name": "Mina de Hierro Negro",
+    "type": "ruins",
+    "icon": "⛏️",
+    "x": 90,
+    "y": 36,
+    "links": [
+     "bosque_umbrio",
+     "santuario_3"
+    ],
+    "desc": "Una mina donde los oni obligan a trabajar a prisioneros. Dentro se oyen cadenas.",
+    "requires": "sanc_2_done",
+    "lockText": "Debes romper antes el sello de la Raíz Hueca.",
+    "autoDoneIf": "sanc_3_done",
+    "theme": [
+     "#14141a",
+     "#6a6a7a"
+    ],
+    "recommended": 6,
+    "tagline": "El hierro con el que forjan sus armas.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "mina_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_hierro",
+        "oni_menor"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         2
+        ],
+        [
+         "elixir_menor",
+         2
+        ]
+       ],
+       "gold": 140
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_hierro",
+        "guardia_hierro",
+        "bandido_oni"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_menor",
+        "guardia_hierro",
+        "oni_menor"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "capataz_dogo"
+       ],
+       "post": "mina_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "mina_done",
+      "items": [
+       [
+        "peto_hierro_negro",
+        1
+       ],
+       [
+        "pocion_mayor",
+        3
+       ]
+      ],
+      "gold": 260
+     }
+    }
+   },
+   "lago_luna": {
+    "name": "Lago de la Luna",
+    "type": "wild",
+    "icon": "🌙",
+    "x": 62,
+    "y": 28,
+    "links": [
+     "bosque_umbrio",
+     "gruta_ermitano",
+     "santuario_3"
+    ],
+    "desc": "Un lago de agua inmóvil bajo un sol blanco. Los árboles se miran en él.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "espiritu_ramas",
+       "ciervo_corrupto"
+      ],
+      [
+       "espiritu_ramas",
+       "espiritu_ramas"
+      ],
+      [
+       "sombra_bosque",
+       "espiritu_ramas"
+      ],
+      [
+       "ciervo_corrupto",
+       "oni_menor"
+      ]
+     ]
+    },
+    "requires": "sanc_2_done",
+    "lockText": "El bosque se cierra. Rompe antes el segundo sello."
+   },
+   "gruta_ermitano": {
+    "name": "Gruta del Ermitaño",
+    "type": "cave",
+    "icon": "🔔",
+    "x": 50,
+    "y": 14,
+    "links": [
+     "lago_luna"
+    ],
+    "desc": "Opcional: una cueva con hiedra dorada y una campanilla que suena sin viento.",
+    "optional": true,
+    "requires": "sanc_2_done",
+    "lockText": "Una niebla dorada te rechaza. Vuelve tras romper el segundo sello.",
+    "theme": [
+     "#1a1a10",
+     "#c8b070"
+    ],
+    "recommended": 8,
+    "tagline": "Opcional · el último ciervo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "gruta_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espiritu_ramas",
+        "espiritu_ramas",
+        "sombra_bosque"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         3
+        ],
+        [
+         "elixir_mayor",
+         1
+        ]
+       ],
+       "gold": 200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "ciervo_corrupto",
+        "sombra_bosque",
+        "espiritu_ramas"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "ciervo_espectral"
+       ],
+       "post": "gruta_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_k4_done",
+      "items": [
+       [
+        "cuerno_espectral",
+        1
+       ],
+       [
+        "pocion_suprema",
+        1
+       ]
+      ],
+      "gold": 300
+     }
+    },
+    "repeat": {
+     "text": "El ermitaño avisa: el espíritu del ciervo regresa cada luna llena.",
+     "gold": 200,
+     "items": [
+      [
+       "pocion_mayor",
+       2
+      ]
+     ]
+    }
+   },
+   "mizuumi": {
+    "name": "Mizuumi",
+    "type": "town",
+    "icon": "🏮",
+    "x": 92,
+    "y": 58,
+    "links": [
+     "bosque_umbrio"
+    ],
+    "desc": "Un pueblo de palafitos sobre un lago de aguas quietas. Hay posada, tienda y pescadores.",
+    "requires": "sanc_2_done",
+    "lockText": "Aún no conoces el camino al lago.",
+    "tagline": "El pueblo del lago dormido.",
+    "theme": [
+     "#0a1a3a",
+     "#5aa0d0"
+    ],
+    "onFirst": "mizuumi_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "sanc_3_done",
+       "!ev_mizuumi_noche"
+      ],
+      "scene": "mizuumi_noche"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "kaoru",
+      "umi",
+      "jiro",
+      "masami"
+     ],
+     "inn": {
+      "price": 50
+     },
+     "shop": [
+      "pocion_mayor",
+      "elixir_mayor",
+      "pluma_fenix",
+      "hierba_curativa",
+      "anillo_pescador",
+      "castanas_asadas",
+      "dulce_de_miel",
+      "flor_de_escarcha"
+     ]
+    }
+   }
+  },
+  "order": 1,
+  "events": [
+   {
+    "text": "Entre unas raíces encuentras una bolsita olvidada por algún viajero.",
+    "gold": 40
+   },
+   {
+    "text": "Un conejo de pelaje plateado te mira, se asusta y deja caer una poción... (¿o fue un trueque?)",
+    "items": [
+     [
+      "pocion_menor",
+      1
+     ]
+    ]
+   },
+   {
+    "text": "Yukine te enseña un claro lleno de luciérnagas. «Mira, mira». Os quedáis un rato en silencio.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Encuentras una fuente de agua clara. Bebéis y descansáis un momento.",
+    "heal": true
+   },
+   {
+    "text": "Un grupo de leñadores te regala pan caliente al pasar. Dicen que da buena suerte.",
+    "heal": true
+   },
+   {
+    "text": "Entre los troncos hay una bolsita con monedas y una nota: «Para quien la necesite».",
+    "gold": 90
+   },
+   {
+    "text": "Yukine y tú compartís un caramelo de miel junto a un arroyo. Se le escapa una sonrisa.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Hallas un frasco con una etiqueta ilegible. Huele bien.",
+    "items": [
+     "hierba_curativa"
+    ]
+   },
+   {
+    "text": "Un ciervo blanco os mira desde lejos y desaparece. Algo cálido te recorre el pecho.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un zorro con sombrero de paja arrastra un carro cubierto de talismanes. «Psst… ¿mercancía que no encontrarás en ninguna aldea?»",
+    "merchant": {
+     "name": "Kitsune Buhonero",
+     "tier": 1,
+     "rarities": [
+      "uncommon",
+      "rare"
+     ],
+     "extra": [
+      "pluma_fenix"
+     ],
+     "bonusRarity": "epic",
+     "bonusChance": 0.35
+    }
+   }
+  ]
+ },
+ "shirogane": {
+  "name": "Cumbres Shirogane",
+  "order": 2,
+  "start": "paso_kasumi",
+  "bg": "radial-gradient(circle at 25% 15%, #3a5a8c, transparent 55%), radial-gradient(circle at 80% 80%, #1b2a4a, transparent 55%), linear-gradient(180deg,#14203c,#26406a 60%,#0d1630)",
+  "decor": [
+   {
+    "e": "❄️",
+    "x": 10,
+    "y": 20
+   },
+   {
+    "e": "🏔️",
+    "x": 30,
+    "y": 14
+   },
+   {
+    "e": "🏔️",
+    "x": 66,
+    "y": 6
+   },
+   {
+    "e": "🌨️",
+    "x": 40,
+    "y": 30
+   },
+   {
+    "e": "🌲",
+    "x": 14,
+    "y": 58
+   },
+   {
+    "e": "🌲",
+    "x": 38,
+    "y": 88
+   },
+   {
+    "e": "❄️",
+    "x": 90,
+    "y": 70
+   },
+   {
+    "e": "🏔️",
+    "x": 90,
+    "y": 48
+   },
+   {
+    "e": "🌨️",
+    "x": 72,
+    "y": 60
+   },
+   {
+    "e": "🌲",
+    "x": 26,
+    "y": 88
+   },
+   {
+    "e": "❄️",
+    "x": 50,
+    "y": 50
+   }
+  ],
+  "events": [
+   {
+    "text": "Un viento helado se cuela en tu abrigo. Yukine te presta su cola un momento para calentarte.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Encuentras un cofrecito congelado entre la nieve.",
+    "gold": 90
+   },
+   {
+    "text": "Tropiezas con un trineo abandonado lleno de provisiones.",
+    "items": [
+     [
+      "racion_caliente",
+      1
+     ],
+     [
+      "pocion",
+      1
+     ]
+    ]
+   },
+   {
+    "text": "Una pequeña cabaña de cazador te ofrece refugio un rato.",
+    "heal": true
+   },
+   {
+    "text": "Un pastor os ofrece leche de yak caliente. Está deliciosa.",
+    "heal": true
+   },
+   {
+    "text": "Encuentras una bolsita de monedas congelada entre dos rocas.",
+    "gold": 180
+   },
+   {
+    "text": "Yukine te enseña una huella de lobo en la nieve: «Es de mi manada. Hace años». Sigue un rato mirándola.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre la nieve asoma un frasco olvidado.",
+    "items": [
+     "leche_yak"
+    ]
+   },
+   {
+    "text": "Un copo gigante cae sobre la nariz de Yukine. Estornuda. Ninguno dice nada. Los dos sonríen.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Entre la ventisca aparece un yak cargado de cofres y, a su lado, una anciana que ríe sin frío. «Lo mejor de las montañas, viajero. Lo demás se lo llevó la nieve».",
+    "merchant": {
+     "name": "Anciana de los Yaks",
+     "tier": 2,
+     "rarities": [
+      "uncommon",
+      "rare"
+     ],
+     "extra": [
+      "pluma_fenix",
+      "pocion_suprema"
+     ],
+     "bonusRarity": "epic",
+     "bonusChance": 0.35
+    }
+   }
+  ],
+  "locations": {
+   "paso_kasumi": {
+    "name": "Paso a Kasumi",
+    "type": "gate",
+    "icon": "🌲",
+    "x": 8,
+    "y": 86,
+    "links": [
+     "campamento_ventisca"
+    ],
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#0f2a22",
+     "#4fbf6a"
+    ],
+    "desc": "El sendero que baja a los Bosques de Kasumi. Puedes volver si quieres terminar misiones pendientes.",
+    "gate": {
+     "region": "kasumi",
+     "loc": "paso_shirogane",
+     "title": "Bosques de Kasumi",
+     "text": "¿Volver a los Bosques de Kasumi?"
+    }
+   },
+   "campamento_ventisca": {
+    "name": "Campamento Ventisca",
+    "type": "town",
+    "icon": "⛺",
+    "x": 20,
+    "y": 72,
+    "links": [
+     "paso_kasumi",
+     "sendero_helado",
+     "aldea_pastores",
+     "cabana_maldita"
+    ],
+    "theme": [
+     "#2a3a5a",
+     "#8fd3ff"
+    ],
+    "tagline": "El refugio de los rebeldes de Shirogane.",
+    "desc": "Tiendas de campaña entre la nieve, hogueras que apenas resisten el viento y una resistencia terca. Aquí hay refugio y suministros.",
+    "onFirst": "shirogane_arrival",
+    "town": {
+     "npcs": [
+      "setsuko",
+      "bunta",
+      "hiro"
+     ],
+     "inn": {
+      "price": 50
+     },
+     "shop": [
+      "pocion",
+      "pocion_mayor",
+      "elixir_menor",
+      "racion",
+      "racion_caliente",
+      "pluma_fenix"
+     ]
+    }
+   },
+   "sendero_helado": {
+    "name": "Sendero Helado",
+    "type": "wild",
+    "icon": "🌨️",
+    "x": 35,
+    "y": 58,
+    "links": [
+     "campamento_ventisca",
+     "santuario_s1",
+     "paso_ventoso",
+     "puesto_cuervo",
+     "aldea_pastores",
+     "fortaleza_hielo"
+    ],
+    "desc": "Un sendero apenas visible. Los lobos de ventisca rondan.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "lobo_ventisca",
+       "lobo_ventisca"
+      ],
+      [
+       "cuervo_gelido",
+       "cuervo_gelido"
+      ],
+      [
+       "golem_nieve"
+      ],
+      [
+       "lobo_ventisca",
+       "cuervo_gelido"
+      ]
+     ]
+    }
+   },
+   "santuario_s1": {
+    "name": "Santuario del Silencio",
+    "type": "sanctuary",
+    "icon": "🔕",
+    "x": 46,
+    "y": 70,
+    "links": [
+     "sendero_helado",
+     "cueva_cristales",
+     "yunomori",
+     "paso_ventoso"
+    ],
+    "order": 1,
+    "theme": [
+     "#1a1a3a",
+     "#9a8cff"
+    ],
+    "recommended": 10,
+    "tagline": "El primer sello de Shirogane.",
+    "desc": "Un templo donde las campanas fueron arrancadas y el viento no suena. El silencio aquí es una trampa.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sh1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cuervo_gelido",
+        "cuervo_gelido",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         2
+        ],
+        [
+         "elixir_menor",
+         2
+        ]
+       ],
+       "gold": 120
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ventisca",
+        "golem_nieve"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_nevado",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "monje_silencio"
+       ],
+       "post": "sh1_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sh_1_done",
+      "items": [
+       [
+        "perg_golpe_aturdidor",
+        1
+       ],
+       [
+        "pocion",
+        2
+       ]
+      ],
+      "gold": 400
+     }
+    }
+   },
+   "cueva_cristales": {
+    "name": "Cueva de Cristal",
+    "type": "cave",
+    "icon": "💎",
+    "x": 54,
+    "y": 90,
+    "links": [
+     "santuario_s1"
+    ],
+    "optional": true,
+    "requires": "sh_1_done",
+    "lockText": "La entrada está congelada. Completa el Santuario del Silencio.",
+    "theme": [
+     "#0b2a40",
+     "#7de8ff"
+    ],
+    "recommended": 11,
+    "tagline": "Un palacio de hielo vivo.",
+    "desc": "Opcional: una gruta de cristales cantores guarda tesoros y una reina que no quiere visitas.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_nieve",
+        "golem_nieve"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "campana_antigua",
+         1
+        ],
+        [
+         "pocion_suprema",
+         1
+        ]
+       ],
+       "gold": 150
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ventisca",
+        "monje_corrupto"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "reina_cristal"
+       ],
+       "post": "cave_cristales_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_s1_done",
+      "items": [
+       [
+        "corona_escarcha",
+        1
+       ],
+       [
+        "perg_sanacion_mayor",
+        1
+       ]
+      ],
+      "gold": 350
+     }
+    },
+    "repeat": {
+     "text": "Los cristales de la cueva crecen de nuevo y cobran vida otra vez.",
+     "gold": 250,
+     "items": [
+      [
+       "pocion_suprema",
+       1
+      ]
+     ]
+    }
+   },
+   "yunomori": {
+    "name": "Yunomori",
+    "type": "town",
+    "icon": "♨️",
+    "x": 62,
+    "y": 76,
+    "links": [
+     "santuario_s1",
+     "paso_ventoso",
+     "glaciar_espejo",
+     "valle_gritos"
+    ],
+    "theme": [
+     "#6b2a3a",
+     "#ffb3c8"
+    ],
+    "tagline": "El pueblo de las aguas termales.",
+    "desc": "Vapor, farolillos de papel y casas de madera junto a manantiales calientes. Un respiro entre tanta nieve. Hay posada, tienda y gente curiosa.",
+    "onFirst": "yunomori_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "sh_3_done",
+       "!ev_festival"
+      ],
+      "scene": "festival"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "tsubaki",
+      "kaito",
+      "rin_npc",
+      "jion",
+      "sachi"
+     ],
+     "inn": {
+      "price": 80
+     },
+     "shop": [
+      "pocion_mayor",
+      "pocion_suprema",
+      "elixir_mayor",
+      "pluma_fenix",
+      "racion_caliente",
+      "espada_acero",
+      "baston_cristal",
+      "hoja_runica_2",
+      "abrigo_pieles",
+      "tunica_peregrino",
+      "amuleto_plata",
+      "flor_nocturna",
+      "collar_luna",
+      "dulce_de_miel",
+      "flor_de_escarcha",
+      "g2_uncommon_filo",
+      "g2_uncommon_grimorio",
+      "g2_uncommon_guantelete",
+      "g2_uncommon_pistola"
+     ]
+    }
+   },
+   "paso_ventoso": {
+    "name": "Paso Ventoso",
+    "type": "wild",
+    "icon": "🌬️",
+    "x": 60,
+    "y": 48,
+    "links": [
+     "sendero_helado",
+     "santuario_s1",
+     "yunomori",
+     "fortaleza_hielo",
+     "puesto_cuervo",
+     "glaciar_espejo"
+    ],
+    "desc": "Un desfiladero azotado por el viento. Las ventiscas aparecen de la nada.",
+    "encounters": {
+     "rate": 0.42,
+     "pool": [
+      [
+       "espectro_ventisca",
+       "cuervo_gelido"
+      ],
+      [
+       "oni_nevado"
+      ],
+      [
+       "lobo_ventisca",
+       "lobo_ventisca",
+       "cuervo_gelido"
+      ],
+      [
+       "golem_nieve",
+       "espectro_ventisca"
+      ]
+     ]
+    }
+   },
+   "santuario_s2": {
+    "name": "Santuario del Eco Helado",
+    "type": "sanctuary",
+    "icon": "🔔",
+    "x": 48,
+    "y": 34,
+    "links": [
+     "fortaleza_hielo",
+     "cueva_manada",
+     "ventisquero",
+     "bosque_escarcha"
+    ],
+    "order": 2,
+    "requires": "fort_hielo_done",
+    "lockText": "La Fortaleza Congelada bloquea el camino. Tómala primero.",
+    "theme": [
+     "#10243a",
+     "#8fd3ff"
+    ],
+    "recommended": 11,
+    "tagline": "El segundo sello.",
+    "desc": "Cada paso resuena mil veces en sus galerías de hielo. Algo se alimenta de esos ecos.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sh2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ventisca",
+        "espectro_ventisca"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion",
+         2
+        ],
+        [
+         "cristal_corazon",
+         1
+        ]
+       ],
+       "gold": 150
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_demonio",
+        "cuervo_gelido"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_nevado",
+        "oni_nevado"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "wendigo"
+       ],
+       "post": "sh2_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sh_2_done",
+      "items": [
+       [
+        "perg_muro_escarcha",
+        1
+       ]
+      ],
+      "gold": 500
+     }
+    }
+   },
+   "cueva_manada": {
+    "name": "Cueva de la Manada Blanca",
+    "type": "cave",
+    "icon": "🐾",
+    "x": 24,
+    "y": 36,
+    "links": [
+     "santuario_s2",
+     "bosque_escarcha"
+    ],
+    "optional": true,
+    "requires": "sh_2_done",
+    "lockText": "Un derrumbe la cubre. Completa el Santuario del Eco Helado.",
+    "theme": [
+     "#1a2a4a",
+     "#bfe6ff"
+    ],
+    "recommended": 13,
+    "tagline": "El hogar que Yukine perdió.",
+    "desc": "Opcional: la antigua cueva de la manada de Yukine. Huele a nieve, a recuerdos y a algo corrompido.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cave_manada_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "lobo_ventisca",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         1
+        ],
+        [
+         "elixir_mayor",
+         1
+        ]
+       ],
+       "gold": 200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "lobo_ventisca",
+        "espectro_ventisca"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "lobo_ancestral"
+       ],
+       "post": "cave_manada_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_s2_done",
+      "items": [
+       [
+        "colmillo_ancestral",
+        1
+       ],
+       [
+        "perg_llanto_luna",
+        1
+       ]
+      ],
+      "gold": 400
+     }
+    }
+   },
+   "ventisquero": {
+    "name": "Ventisquero",
+    "type": "wild",
+    "icon": "🏔️",
+    "x": 74,
+    "y": 32,
+    "links": [
+     "santuario_s2",
+     "monasterio_nieves",
+     "bosque_agujas"
+    ],
+    "requires": "sh_2_done",
+    "lockText": "Una ventisca bloquea el paso. Completa el Santuario del Eco Helado.",
+    "desc": "Una ladera de nieve profunda. Los yetis son dueños del lugar.",
+    "encounters": {
+     "rate": 0.45,
+     "pool": [
+      [
+       "yeti_demonio"
+      ],
+      [
+       "oni_nevado",
+       "golem_nieve"
+      ],
+      [
+       "monje_corrupto",
+       "espectro_ventisca"
+      ],
+      [
+       "ave_trueno",
+       "cuervo_gelido"
+      ]
+     ]
+    }
+   },
+   "santuario_s3": {
+    "name": "Santuario de las Mil Campanas",
+    "type": "sanctuary",
+    "icon": "🛎️",
+    "x": 86,
+    "y": 52,
+    "links": [
+     "monasterio_nieves",
+     "valle_gritos",
+     "templo_hundido"
+    ],
+    "order": 3,
+    "requires": "sh_2_done",
+    "lockText": "Se llega por el Ventisquero.",
+    "theme": [
+     "#3a2a0a",
+     "#ffd479"
+    ],
+    "recommended": 13,
+    "tagline": "El tercer sello.",
+    "desc": "Mil campanillas de bronce cuelgan del techo. Cuando suenan juntas, nadie puede pensar.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sh3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_corrupto",
+        "ave_trueno"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         1
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "ave_trueno"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_demonio",
+        "monje_corrupto",
+        "oni_nevado"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "tengu_campanas"
+       ],
+       "post": "sh3_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sh_3_done",
+      "items": [
+       [
+        "perg_bendicion_guerra",
+        1
+       ],
+       [
+        "campana_viento",
+        1
+       ]
+      ],
+      "gold": 650
+     }
+    }
+   },
+   "bosque_agujas": {
+    "name": "Bosque de Agujas",
+    "type": "wild",
+    "icon": "🌲",
+    "x": 74,
+    "y": 16,
+    "links": [
+     "ventisquero",
+     "templo_hundido",
+     "santuario_s4"
+    ],
+    "requires": "sh_3_done",
+    "lockText": "Las agujas de hielo cierran el paso. Completa el tercer santuario.",
+    "desc": "Un bosque de abetos helados que parecen lanzas. La guardia de Reiga patrulla aquí.",
+    "encounters": {
+     "rate": 0.45,
+     "pool": [
+      [
+       "guerrero_oni"
+      ],
+      [
+       "ave_trueno",
+       "ave_trueno"
+      ],
+      [
+       "yeti_demonio",
+       "guerrero_oni"
+      ],
+      [
+       "monje_corrupto",
+       "monje_corrupto",
+       "golem_nieve"
+      ]
+     ]
+    }
+   },
+   "santuario_s4": {
+    "name": "Santuario del Lobo Dormido",
+    "type": "sanctuary",
+    "icon": "🐺",
+    "x": 56,
+    "y": 12,
+    "links": [
+     "bosque_agujas",
+     "torre_reiga",
+     "bosque_escarcha"
+    ],
+    "order": 4,
+    "requires": [
+     "sh_3_done",
+     "templo_done"
+    ],
+    "lockText": "Antes debes cruzar el Templo Hundido.",
+    "theme": [
+     "#0a1a3a",
+     "#bfe6ff"
+    ],
+    "recommended": 14,
+    "tagline": "El cuarto sello.",
+    "desc": "Un santuario construido sobre la tumba del primer lobo blanco. Yukine siente algo que nunca antes había sentido.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sh4_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "monje_corrupto"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         2
+        ],
+        [
+         "pluma_fenix",
+         1
+        ]
+       ],
+       "gold": 250
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "lobo_ventisca",
+        "espectro_ventisca",
+        "espectro_ventisca"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_demonio",
+        "guerrero_oni",
+        "ave_trueno"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "sombra_alfa"
+       ],
+       "pre": "sh4_preboss",
+       "post": "sh4_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "sh_4_done",
+      "items": [
+       [
+        "perg_tormenta_filos",
+        1
+       ],
+       [
+        "armadura_glaciar",
+        1
+       ]
+      ],
+      "gold": 800
+     }
+    }
+   },
+   "torre_reiga": {
+    "name": "Torre del Aliento Blanco",
+    "type": "tower",
+    "icon": "🗼",
+    "x": 86,
+    "y": 8,
+    "links": [
+     "santuario_s4",
+     "paso_akatsuki"
+    ],
+    "order": 5,
+    "requires": "sh_4_done",
+    "lockText": "Los cuatro sellos protegen la torre.",
+    "theme": [
+     "#0a2a4a",
+     "#6fd6ff"
+    ],
+    "recommended": 15,
+    "tagline": "El trono del Cazador Gélido.",
+    "desc": "Una torre de hielo azul donde Reiga guarda los trofeos de su cacería. En su cima te espera quien exterminó a la manada blanca.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "tower2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "guerrero_oni"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ],
+        [
+         "pluma_fenix",
+         1
+        ]
+       ],
+       "gold": 300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_nevado",
+        "oni_nevado",
+        "monje_corrupto"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "yeti_demonio",
+        "ave_trueno"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "reiga"
+       ],
+       "pre": "reiga_pre",
+       "post": "reiga_win"
+      }
+     ],
+     "rewards": {
+      "flag": "region_shirogane_done",
+      "items": [
+       [
+        "pocion_suprema",
+        2
+       ],
+       [
+        "pluma_fenix",
+        2
+       ],
+       [
+        "@a:rare:2",
+        1
+       ]
+      ],
+      "gold": 1500
+     }
+    }
+   },
+   "paso_akatsuki": {
+    "name": "Paso al Yermo Akatsuki",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 96,
+    "y": 26,
+    "links": [
+     "torre_reiga"
+    ],
+    "requires": "region_shirogane_done",
+    "lockText": "Primero debes liberar Shirogane derrotando a Reiga.",
+    "theme": [
+     "#3a0f14",
+     "#ff6b6b"
+    ],
+    "tagline": "La última región.",
+    "desc": "Más allá de las montañas se extiende un yermo rojo donde nunca termina de amanecer. El camino hacia el Rey Demonio.",
+    "gate": {
+     "region": "akatsuki",
+     "loc": "paso_shirogane",
+     "scene": "akatsuki_leave",
+     "title": "Yermo Akatsuki",
+     "text": "Más allá de las montañas se extiende el Yermo Akatsuki. Allí aguarda el Rey Demonio. ¿Partir ahora? Podrás volver a Shirogane cuando quieras."
+    }
+   },
+   "aldea_pastores": {
+    "name": "Aldea de los Pastores",
+    "type": "town",
+    "icon": "🐑",
+    "x": 32,
+    "y": 88,
+    "links": [
+     "campamento_ventisca",
+     "sendero_helado"
+    ],
+    "desc": "Cabañas de piedra, rebaños de yaks y humo que se pierde en el viento. Hay posada, tienda y herrero.",
+    "tagline": "Donde el viento enseña a callar.",
+    "theme": [
+     "#2a3a4a",
+     "#c8e0f0"
+    ],
+    "onFirst": "pastores_arrival",
+    "town": {
+     "npcs": [
+      "haruto",
+      "chise",
+      "otose",
+      "goro"
+     ],
+     "inn": {
+      "price": 60
+     },
+     "shop": [
+      "pocion_mayor",
+      "elixir_mayor",
+      "leche_yak",
+      "te_nieve",
+      "racion_caliente",
+      "lanza_escarcha",
+      "peto_nieve",
+      "manta_lana",
+      "flor_de_escarcha",
+      "g2_rare_filo",
+      "g2_rare_grimorio",
+      "g2_rare_guantelete",
+      "g2_rare_pistola"
+     ]
+    }
+   },
+   "puesto_cuervo": {
+    "name": "Puesto del Cuervo",
+    "type": "town",
+    "icon": "🦅",
+    "x": 46,
+    "y": 52,
+    "links": [
+     "sendero_helado",
+     "paso_ventoso"
+    ],
+    "desc": "Un puesto elevado de arqueras sobre un barranco ventoso. Hay posada y suministros.",
+    "tagline": "Las mejores arqueras de Shirogane.",
+    "theme": [
+     "#1a1a2a",
+     "#8a9aba"
+    ],
+    "onFirst": "cuervo_arrival",
+    "town": {
+     "npcs": [
+      "sayaka",
+      "tobei"
+     ],
+     "inn": {
+      "price": 55
+     },
+     "shop": [
+      "pocion_mayor",
+      "elixir_mayor",
+      "pluma_fenix",
+      "leche_yak",
+      "racion_caliente",
+      "collar_pastor"
+     ]
+    }
+   },
+   "monasterio_nieves": {
+    "name": "Monasterio de las Nieves",
+    "type": "town",
+    "icon": "🏯",
+    "x": 74,
+    "y": 52,
+    "links": [
+     "ventisquero",
+     "santuario_s3",
+     "glaciar_espejo"
+    ],
+    "desc": "Un monasterio de piedra blanca sobre una terraza helada. Silencio, incienso y monjes tranquilos.",
+    "requires": "sh_2_done",
+    "lockText": "El camino al monasterio no se ve entre la ventisca.",
+    "tagline": "Silencio, hielo y mantras.",
+    "theme": [
+     "#2a2a3a",
+     "#e0d8ff"
+    ],
+    "onFirst": "monasterio_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "sh_3_done",
+       "!ev_monasterio_noche"
+      ],
+      "scene": "monasterio_noche"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "genshin",
+      "ryo",
+      "nisa"
+     ],
+     "inn": {
+      "price": 65
+     },
+     "shop": [
+      "pocion_suprema",
+      "elixir_mayor",
+      "te_nieve",
+      "pluma_fenix",
+      "rosario_monje",
+      "broche_plata"
+     ]
+    }
+   },
+   "fortaleza_hielo": {
+    "name": "Fortaleza Congelada",
+    "type": "ruins",
+    "icon": "🏰",
+    "x": 36,
+    "y": 44,
+    "links": [
+     "paso_ventoso",
+     "santuario_s2",
+     "sendero_helado"
+    ],
+    "desc": "Una ciudadela humana tomada por los soldados de Reiga. Banderas azules en las almenas.",
+    "requires": "sh_1_done",
+    "lockText": "Debes romper antes el sello del Silencio.",
+    "autoDoneIf": "sh_2_done",
+    "theme": [
+     "#101a2a",
+     "#6aa0e0"
+    ],
+    "recommended": 11,
+    "tagline": "El general del hielo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fortaleza_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_escarcha",
+        "soldado_escarcha"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         3
+        ],
+        [
+         "elixir_mayor",
+         1
+        ]
+       ],
+       "gold": 220
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arquera_hielo",
+        "soldado_escarcha",
+        "arquera_hielo"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_escarcha",
+        "arquera_hielo",
+        "golem_nieve"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "general_escarcha"
+       ],
+       "post": "fortaleza_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "fort_hielo_done",
+      "items": [
+       [
+        "@w:rare:2",
+        1
+       ],
+       [
+        "perg_bendicion_guerra",
+        1
+       ]
+      ],
+      "gold": 420
+     }
+    }
+   },
+   "glaciar_espejo": {
+    "name": "Glaciar Espejo",
+    "type": "wild",
+    "icon": "🧊",
+    "x": 66,
+    "y": 62,
+    "links": [
+     "yunomori",
+     "paso_ventoso",
+     "monasterio_nieves"
+    ],
+    "desc": "Una llanura de hielo tan liso que refleja el cielo.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "arquera_hielo",
+       "lobo_ventisca"
+      ],
+      [
+       "soldado_escarcha",
+       "soldado_escarcha"
+      ],
+      [
+       "yeti_demonio"
+      ],
+      [
+       "serpiente_menor",
+       "cuervo_gelido"
+      ]
+     ]
+    }
+   },
+   "bosque_escarcha": {
+    "name": "Bosque de Escarcha",
+    "type": "wild",
+    "icon": "🌲",
+    "x": 36,
+    "y": 20,
+    "links": [
+     "cueva_manada",
+     "santuario_s2",
+     "santuario_s4"
+    ],
+    "desc": "Árboles cubiertos de escarcha que tintinean cuando sopla el viento.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "lobo_ventisca",
+       "arquera_hielo"
+      ],
+      [
+       "oni_nevado",
+       "arquera_hielo"
+      ],
+      [
+       "espectro_ventisca",
+       "serpiente_menor"
+      ],
+      [
+       "yeti_demonio",
+       "lobo_ventisca"
+      ]
+     ]
+    },
+    "requires": "fort_hielo_done",
+    "lockText": "La fortaleza bloquea el camino al norte."
+   },
+   "valle_gritos": {
+    "name": "Valle de los Gritos",
+    "type": "wild",
+    "icon": "🏔️",
+    "x": 88,
+    "y": 76,
+    "links": [
+     "yunomori",
+     "santuario_s3",
+     "cueva_aurora"
+    ],
+    "desc": "Un valle donde el viento aúlla como si gritaran mil gargantas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "guerrero_oni",
+       "monje_hundido"
+      ],
+      [
+       "ave_trueno",
+       "serpiente_menor"
+      ],
+      [
+       "yeti_demonio",
+       "yeti_demonio"
+      ],
+      [
+       "monje_corrupto",
+       "soldado_escarcha"
+      ]
+     ]
+    },
+    "requires": "sh_2_done",
+    "lockText": "El camino al valle aún no es seguro."
+   },
+   "templo_hundido": {
+    "name": "Templo Hundido",
+    "type": "ruins",
+    "icon": "🌊",
+    "x": 94,
+    "y": 40,
+    "links": [
+     "santuario_s3",
+     "bosque_agujas"
+    ],
+    "desc": "Un templo emergiendo de un lago helado. Debajo, algo respira.",
+    "requires": "sh_3_done",
+    "lockText": "Debes romper antes el sello de las Mil Campanas.",
+    "autoDoneIf": "sh_4_done",
+    "theme": [
+     "#0a2a3a",
+     "#4ad0e0"
+    ],
+    "recommended": 14,
+    "tagline": "Lo que duerme bajo el hielo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "templo_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "serpiente_menor",
+        "monje_hundido"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 260
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hundido",
+        "serpiente_menor",
+        "monje_hundido"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "serpiente_menor",
+        "monje_corrupto"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "serpiente_hielo"
+       ],
+       "post": "templo_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "templo_done",
+      "items": [
+       [
+        "escudo_templo",
+        1
+       ],
+       [
+        "perg_sanacion_mayor",
+        1
+       ]
+      ],
+      "gold": 480
+     }
+    }
+   },
+   "cabana_maldita": {
+    "name": "Cabaña del Cazador Maldito",
+    "type": "cave",
+    "icon": "🏚️",
+    "x": 10,
+    "y": 56,
+    "links": [
+     "campamento_ventisca"
+    ],
+    "desc": "Opcional: una cabaña con flechas negras clavadas en las paredes. Algo la habita.",
+    "optional": true,
+    "requires": "sh_1_done",
+    "lockText": "La puerta está cerrada con un candado de hielo. Vuelve tras romper el primer sello.",
+    "theme": [
+     "#1a1020",
+     "#8a7aa0"
+    ],
+    "recommended": 12,
+    "tagline": "Opcional · un arco sin dueño.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cabana_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arquera_hielo",
+        "arquera_hielo",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ventisca",
+        "arquera_hielo",
+        "espectro_ventisca"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "cazador_fantasma"
+       ],
+       "post": "cabana_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_s3_done",
+      "items": [
+       [
+        "collar_pastor",
+        1
+       ],
+       [
+        "perg_golpe_aturdidor",
+        1
+       ]
+      ],
+      "gold": 360
+     }
+    }
+   },
+   "cueva_aurora": {
+    "name": "Cueva de la Aurora",
+    "type": "cave",
+    "icon": "🌌",
+    "x": 92,
+    "y": 90,
+    "links": [
+     "valle_gritos"
+    ],
+    "desc": "Opcional: una cueva donde cuelgan cortinas de luz de colores. En el centro duerme un dragón.",
+    "optional": true,
+    "requires": "sh_3_done",
+    "lockText": "La entrada está oculta por una ventisca antinatural. Vuelve tras romper el tercer sello.",
+    "theme": [
+     "#0a1a2a",
+     "#6affc0"
+    ],
+    "recommended": 14,
+    "tagline": "Opcional · el dragón dormido.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "aurora_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "serpiente_menor",
+        "serpiente_menor",
+        "monje_hundido"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         3
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guerrero_oni",
+        "ave_trueno",
+        "serpiente_menor"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "dragon_nieve"
+       ],
+       "post": "aurora_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_s4_done",
+      "items": [
+       [
+        "colmillo_dragon",
+        1
+       ],
+       [
+        "pluma_fenix",
+        2
+       ]
+      ],
+      "gold": 600
+     }
+    },
+    "repeat": {
+     "text": "Cuando una aurora se apaga, otra despierta a un nuevo dragón de nieve.",
+     "gold": 400,
+     "items": [
+      [
+       "pocion_suprema",
+       1
+      ],
+      [
+       "elixir_mayor",
+       1
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "akatsuki": {
+  "name": "Yermo Akatsuki",
+  "order": 3,
+  "start": "paso_shirogane",
+  "bg": "radial-gradient(circle at 20% 20%, #7a1f2a, transparent 55%), radial-gradient(circle at 85% 80%, #3a0f14, transparent 55%), linear-gradient(180deg,#2a0a10,#5a1a22 60%,#14050a)",
+  "decor": [
+   {
+    "e": "🌋",
+    "x": 12,
+    "y": 30
+   },
+   {
+    "e": "☁️",
+    "x": 30,
+    "y": 10
+   },
+   {
+    "e": "🔥",
+    "x": 50,
+    "y": 60
+   },
+   {
+    "e": "🪦",
+    "x": 76,
+    "y": 38
+   },
+   {
+    "e": "🌋",
+    "x": 88,
+    "y": 70
+   },
+   {
+    "e": "☁️",
+    "x": 60,
+    "y": 12
+   },
+   {
+    "e": "🔥",
+    "x": 22,
+    "y": 92
+   },
+   {
+    "e": "💀",
+    "x": 68,
+    "y": 84
+   }
+  ],
+  "events": [
+   {
+    "text": "Un viento cálido acaricia vuestra cara. Yukine apoya la cabeza en tu hombro un momento.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Encuentras una bolsa de monedas en la mano de un soldado caído.",
+    "gold": 250
+   },
+   {
+    "text": "Un viejo ermitaño os ofrece caldo caliente. Nadie pregunta de dónde sacó los ingredientes.",
+    "heal": true
+   },
+   {
+    "text": "Entre las cenizas brilla un pequeño frasco intacto.",
+    "items": [
+     "pocion_suprema"
+    ]
+   },
+   {
+    "text": "Veis una bandada de cuervos rojos volar hacia el castillo. Yukine murmura: «Nos están esperando».",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un viajero os vende un amuleto roto por pura amabilidad. Dentro hay un elixir.",
+    "items": [
+     "elixir_mayor"
+    ]
+   },
+   {
+    "text": "Descansáis unos minutos al abrigo de una roca. El sol rojo no se mueve.",
+    "heal": true
+   },
+   {
+    "text": "Encuentras una bolsa con monedas entre las dunas.",
+    "gold": 350
+   },
+   {
+    "text": "Un viajero te vende agua fría. Estaba buenísima.",
+    "heal": true
+   },
+   {
+    "text": "Yukine te señala un cielo rojo y violeta: «Hace tiempo que no veía un atardecer». Se queda un rato mirándolo.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre la ceniza brilla un frasco intacto.",
+    "items": [
+     "agua_oasis"
+    ]
+   },
+   {
+    "text": "Yukine cae sentada sobre la arena caliente y se queja. Te ríes. Ella también.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Una caravana de linternas rojas se detiene a tu paso. El mercader te mira de arriba abajo: «Conozco a quien busca algo digno de un cazador de reyes».",
+    "merchant": {
+     "name": "Mercader de la Caravana Carmesí",
+     "tier": 3,
+     "rarities": [
+      "rare"
+     ],
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total"
+     ],
+     "bonusRarity": "epic",
+     "bonusChance": 0.4
+    }
+   }
+  ],
+  "locations": {
+   "paso_shirogane": {
+    "name": "Paso a Shirogane",
+    "type": "gate",
+    "icon": "🏔️",
+    "x": 6,
+    "y": 88,
+    "links": [
+     "llanura_cenizas"
+    ],
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#1b2a4a",
+     "#8fd3ff"
+    ],
+    "desc": "El sendero que sube de nuevo a las Cumbres Shirogane. Puedes volver para terminar misiones pendientes.",
+    "gate": {
+     "region": "shirogane",
+     "loc": "paso_akatsuki",
+     "title": "Cumbres Shirogane",
+     "text": "¿Volver a las Cumbres Shirogane?"
+    }
+   },
+   "llanura_cenizas": {
+    "name": "Llanura de Cenizas",
+    "type": "wild",
+    "icon": "🌋",
+    "x": 17,
+    "y": 72,
+    "links": [
+     "paso_shirogane",
+     "aldea_amanecer",
+     "santuario_a1"
+    ],
+    "desc": "Un desierto de cenizas calientes. Los onis acechan entre las dunas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "oni_ceniza",
+       "perro_brasa"
+      ],
+      [
+       "perro_brasa",
+       "perro_brasa",
+       "perro_brasa"
+      ],
+      [
+       "oni_ceniza",
+       "oni_ceniza"
+      ],
+      [
+       "kitsune_carmesi",
+       "perro_brasa"
+      ]
+     ]
+    }
+   },
+   "aldea_amanecer": {
+    "name": "Refugio Hinode",
+    "type": "town",
+    "icon": "🏮",
+    "x": 30,
+    "y": 86,
+    "links": [
+     "llanura_cenizas",
+     "camino_brasas",
+     "santuario_a1",
+     "oasis_carmesi"
+    ],
+    "theme": [
+     "#5a1a2a",
+     "#ffb08a"
+    ],
+    "tagline": "La última aldea libre del Yermo.",
+    "desc": "Casas de adobe, farolillos rojos y gente que no se rinde. Aquí resiste la última gran rebelión contra el Rey Demonio. Hay posada, tienda, herrero y viejos soldados.",
+    "onFirst": "hinode_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "ak_3_done",
+       "!ev_hinode_noche"
+      ],
+      "scene": "hinode_noche"
+     },
+     {
+      "if": [
+       "ak_5_done",
+       "!ev_vigilia"
+      ],
+      "scene": "vigilia"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "akane",
+      "momiji",
+      "tetsu",
+      "yomi",
+      "sen",
+      "ohana",
+      "daichi",
+      "hotaru"
+     ],
+     "inn": {
+      "price": 120
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "pluma_fenix_dorada",
+      "ramen_del_alba",
+      "hoja_del_alba",
+      "baston_ceniza",
+      "coraza_oni",
+      "manto_ceniza",
+      "talisman_alba",
+      "perg_velo_carmesi",
+      "perg_mil_cuchillas",
+      "lazo_carmesi",
+      "farolillo_alba",
+      "perfume_luna",
+      "g3_epic_filo",
+      "g3_epic_grimorio",
+      "g3_epic_guantelete",
+      "g3_epic_pistola"
+     ]
+    }
+   },
+   "santuario_a1": {
+    "name": "Santuario de la Ceniza",
+    "type": "sanctuary",
+    "icon": "🔥",
+    "x": 28,
+    "y": 58,
+    "links": [
+     "llanura_cenizas",
+     "aldea_amanecer",
+     "bosque_rojo",
+     "abismo_alba"
+    ],
+    "order": 1,
+    "theme": [
+     "#3a0f08",
+     "#ff7a3a"
+    ],
+    "recommended": 16,
+    "tagline": "El primer sello del Yermo.",
+    "desc": "Un templo cubierto de ceniza donde arde un fuego que nunca se apaga.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "a1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_ceniza",
+        "perro_brasa",
+        "perro_brasa"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_mayor",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "kitsune_carmesi",
+        "oni_ceniza"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_ceniza",
+        "oni_ceniza",
+        "perro_brasa"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "kaen_oni"
+       ],
+       "post": "a1_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "ak_1_done",
+      "items": [
+       [
+        "perg_velo_carmesi",
+        1
+       ],
+       [
+        "pocion_suprema",
+        2
+       ]
+      ],
+      "gold": 700
+     }
+    }
+   },
+   "bosque_rojo": {
+    "name": "Bosque Rojo",
+    "type": "wild",
+    "icon": "🍁",
+    "x": 42,
+    "y": 44,
+    "links": [
+     "santuario_a1",
+     "ciudadela_ceniza",
+     "cueva_fenix",
+     "santuario_a2"
+    ],
+    "desc": "Árboles de hojas rojas como la sangre. Algo se mueve entre las ramas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "arana_sangre",
+       "kitsune_carmesi"
+      ],
+      [
+       "arana_sangre",
+       "arana_sangre"
+      ],
+      [
+       "samurai_hueco",
+       "kitsune_carmesi"
+      ],
+      [
+       "oni_ceniza",
+       "arana_sangre"
+      ]
+     ]
+    }
+   },
+   "santuario_a2": {
+    "name": "Santuario de la Seda Roja",
+    "type": "sanctuary",
+    "icon": "🕸️",
+    "x": 60,
+    "y": 30,
+    "links": [
+     "bosque_rojo",
+     "valle_lapidas",
+     "ciudadela_ceniza",
+     "valle_espejos"
+    ],
+    "order": 2,
+    "requires": [
+     "ak_1_done",
+     "ciudadela_done"
+    ],
+    "lockText": "La Ciudadela de Ceniza bloquea el camino.",
+    "theme": [
+     "#3a0818",
+     "#ff4d6d"
+    ],
+    "recommended": 17,
+    "tagline": "El segundo sello.",
+    "desc": "Un templo envuelto en hilos rojos. El aire huele a hierro y a veneno.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "a2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arana_sangre",
+        "arana_sangre",
+        "kitsune_carmesi"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 250
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "samurai_hueco",
+        "arana_sangre"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "kitsune_carmesi",
+        "kitsune_carmesi",
+        "arana_sangre"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "jorogumo_carmesi"
+       ],
+       "post": "a2_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "ak_2_done",
+      "items": [
+       [
+        "perg_exorcismo",
+        1
+       ],
+       [
+        "pocion_total",
+        1
+       ]
+      ],
+      "gold": 800
+     }
+    }
+   },
+   "camino_brasas": {
+    "name": "Camino de Brasas",
+    "type": "wild",
+    "icon": "🛤️",
+    "x": 46,
+    "y": 76,
+    "links": [
+     "aldea_amanecer",
+     "valle_espejos",
+     "desierto_cristal",
+     "oasis_carmesi"
+    ],
+    "desc": "Un camino pedregoso entre brasas dispersas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "perro_brasa",
+       "perro_brasa",
+       "oni_ceniza"
+      ],
+      [
+       "samurai_hueco",
+       "perro_brasa"
+      ],
+      [
+       "gaki_hambriento",
+       "kitsune_carmesi"
+      ]
+     ]
+    }
+   },
+   "valle_espejos": {
+    "name": "Valle de los Espejos",
+    "type": "wild",
+    "icon": "🪞",
+    "x": 64,
+    "y": 66,
+    "links": [
+     "camino_brasas",
+     "santuario_a2",
+     "santuario_a3",
+     "cueva_recuerdo",
+     "desierto_cristal",
+     "camara_cristal"
+    ],
+    "desc": "Un valle de espejos rotos que reflejan un cielo equivocado.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "gaki_hambriento",
+       "samurai_hueco"
+      ],
+      [
+       "shikigami_sello",
+       "gaki_hambriento"
+      ],
+      [
+       "garuda_cenizas"
+      ],
+      [
+       "samurai_hueco",
+       "samurai_hueco"
+      ]
+     ]
+    }
+   },
+   "santuario_a3": {
+    "name": "Santuario del Espejo Roto",
+    "type": "sanctuary",
+    "icon": "🪞",
+    "x": 78,
+    "y": 54,
+    "links": [
+     "valle_espejos",
+     "rio_lava",
+     "forja_demonio"
+    ],
+    "order": 3,
+    "requires": "ak_2_done",
+    "lockText": "Debes romper antes el sello de la Seda Roja.",
+    "theme": [
+     "#101a3a",
+     "#cfd8ff"
+    ],
+    "recommended": 18,
+    "tagline": "El tercer sello.",
+    "desc": "Un templo de cristal donde cada reflejo te juzga.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "a3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "gaki_hambriento",
+        "shikigami_sello",
+        "samurai_hueco"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         3
+        ],
+        [
+         "elixir_supremo",
+         1
+        ]
+       ],
+       "gold": 300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "shikigami_sello",
+        "shikigami_sello",
+        "gaki_hambriento"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "samurai_hueco",
+        "garuda_cenizas"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "espejo_del_vengador"
+       ],
+       "post": "a3_clear",
+       "pre": "a3_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "ak_3_done",
+      "items": [
+       [
+        "perg_mil_cuchillas",
+        1
+       ],
+       [
+        "elixir_supremo",
+        2
+       ]
+      ],
+      "gold": 900
+     }
+    }
+   },
+   "valle_lapidas": {
+    "name": "Valle de las Lápidas",
+    "type": "wild",
+    "icon": "🪦",
+    "x": 72,
+    "y": 18,
+    "links": [
+     "santuario_a2",
+     "santuario_a4",
+     "barranco_huesos",
+     "campamento_desertores"
+    ],
+    "desc": "Miles de lápidas sin nombre hasta el horizonte.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "gaki_hambriento",
+       "gaki_hambriento",
+       "samurai_hueco"
+      ],
+      [
+       "garuda_cenizas",
+       "shikigami_sello"
+      ],
+      [
+       "oni_general"
+      ],
+      [
+       "demonio_alba",
+       "gaki_hambriento"
+      ]
+     ]
+    }
+   },
+   "santuario_a4": {
+    "name": "Santuario de las Mil Lápidas",
+    "type": "sanctuary",
+    "icon": "💀",
+    "x": 86,
+    "y": 14,
+    "links": [
+     "valle_lapidas",
+     "santuario_a5",
+     "forja_demonio",
+     "barranco_huesos"
+    ],
+    "order": 4,
+    "requires": [
+     "ak_3_done",
+     "forja_done"
+    ],
+    "lockText": "Antes debes cruzar la Forja del Demonio.",
+    "theme": [
+     "#14141f",
+     "#e8e2cf"
+    ],
+    "recommended": 19,
+    "tagline": "El cuarto sello.",
+    "desc": "Un osario inmenso donde los muertos no descansan.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "a4_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "gaki_hambriento",
+        "gaki_hambriento",
+        "demonio_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         2
+        ],
+        [
+         "elixir_supremo",
+         1
+        ]
+       ],
+       "gold": 350
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_general",
+        "samurai_hueco"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "demonio_alba",
+        "oni_general"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "gashadokuro"
+       ],
+       "post": "a4_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "ak_4_done",
+      "items": [
+       [
+        "perg_alba_rota",
+        1
+       ],
+       [
+        "pocion_total",
+        2
+       ]
+      ],
+      "gold": 1000
+     }
+    }
+   },
+   "santuario_a5": {
+    "name": "Santuario del Alba Rota",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 94,
+    "y": 40,
+    "links": [
+     "santuario_a4",
+     "camino_castillo",
+     "rio_lava"
+    ],
+    "order": 5,
+    "requires": "ak_4_done",
+    "lockText": "Debes romper antes el sello de las Mil Lápidas.",
+    "theme": [
+     "#3a2a08",
+     "#ffd479"
+    ],
+    "recommended": 20,
+    "tagline": "El último sello.",
+    "desc": "Donde el sol dejó de salir. Un templo de luz muerta.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "a5_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "demonio_alba",
+        "demonio_alba",
+        "shikigami_sello"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 400
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_general",
+        "oni_general"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "demonio_alba",
+        "hechicero_alba",
+        "oni_general"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "centinela_alba"
+       ],
+       "post": "a5_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "ak_5_done",
+      "items": [
+       [
+        "pluma_fenix_dorada",
+        2
+       ],
+       [
+        "pocion_total",
+        3
+       ]
+      ],
+      "gold": 1200
+     }
+    }
+   },
+   "camino_castillo": {
+    "name": "Camino del Castillo",
+    "type": "wild",
+    "icon": "🏰",
+    "x": 94,
+    "y": 64,
+    "links": [
+     "santuario_a5",
+     "castillo_alba",
+     "cueva_recuerdo"
+    ],
+    "desc": "Un camino empedrado bajo un sol rojo inmóvil. Los guardias del rey patrullan.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "guardia_rey",
+       "guardia_rey"
+      ],
+      [
+       "hechicero_alba",
+       "guardia_rey"
+      ],
+      [
+       "oni_general",
+       "demonio_alba",
+       "hechicero_alba"
+      ],
+      [
+       "verdugo_carmesi"
+      ]
+     ]
+    },
+    "requires": "ak_5_done",
+    "lockText": "Aún no se ha abierto el camino. Rompe los cinco sellos."
+   },
+   "cueva_fenix": {
+    "name": "Cueva del Fénix Caído",
+    "type": "cave",
+    "icon": "🐦‍🔥",
+    "x": 36,
+    "y": 24,
+    "links": [
+     "bosque_rojo"
+    ],
+    "optional": true,
+    "requires": "ak_1_done",
+    "lockText": "Una barrera de fuego sella la entrada. Rompe antes el primer sello.",
+    "theme": [
+     "#3a1a08",
+     "#ffcf40"
+    ],
+    "recommended": 18,
+    "tagline": "Opcional · una leyenda caída.",
+    "desc": "Opcional: la cueva donde anidó el último fénix, ahora corrompido.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cave_fenix_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "kitsune_carmesi",
+        "perro_brasa",
+        "perro_brasa"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_suprema",
+         2
+        ],
+        [
+         "elixir_mayor",
+         2
+        ]
+       ],
+       "gold": 300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "garuda_cenizas",
+        "oni_ceniza"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "fenix_caido"
+       ],
+       "post": "cave_fenix_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a1_done",
+      "items": [
+       [
+        "perg_mil_cuchillas",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        1
+       ],
+       [
+        "@a:rare:3",
+        1
+       ]
+      ],
+      "gold": 600
+     }
+    },
+    "repeat": {
+     "text": "El Fénix renace de sus propias cenizas, más ansioso de combate que antes.",
+     "gold": 400,
+     "items": [
+      [
+       "pocion_total",
+       1
+      ]
+     ]
+    }
+   },
+   "cueva_recuerdo": {
+    "name": "Cueva del Recuerdo",
+    "type": "cave",
+    "icon": "👹",
+    "x": 82,
+    "y": 80,
+    "links": [
+     "valle_espejos",
+     "camino_castillo"
+    ],
+    "optional": true,
+    "requires": "ak_5_done",
+    "lockText": "Una niebla rojiza la cubre. Solo se abre cuando los cinco sellos están rotos.",
+    "theme": [
+     "#3a0505",
+     "#ff2d2d"
+    ],
+    "recommended": 22,
+    "tagline": "Opcional · el desafío definitivo.",
+    "desc": "Opcional: una cueva donde los muertos regresan. El primer señor demoníaco que derrotaste espera de nuevo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cave_recuerdo_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_general",
+        "oni_general",
+        "demonio_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "verdugo_carmesi",
+        "hechicero_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "kurogane_renacido"
+       ],
+       "post": "cave_recuerdo_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a2_done",
+      "items": [
+       [
+        "pluma_fenix_dorada",
+        2
+       ],
+       [
+        "pocion_total",
+        3
+       ],
+       [
+        "@w:rare:3",
+        1
+       ]
+      ],
+      "gold": 1000
+     }
+    },
+    "repeat": {
+     "text": "La cueva reproduce el recuerdo de Kurogane para quien se atreva a evocarlo.",
+     "gold": 650,
+     "items": [
+      [
+       "pocion_total",
+       1
+      ],
+      [
+       "elixir_supremo",
+       1
+      ]
+     ]
+    }
+   },
+   "castillo_alba": {
+    "name": "Castillo del Alba Eterna",
+    "type": "tower",
+    "icon": "🏰",
+    "x": 96,
+    "y": 84,
+    "links": [
+     "camino_castillo",
+     "fisura_alba"
+    ],
+    "requires": "ak_5_done",
+    "lockText": "El castillo está sellado. Rompe los cinco sellos.",
+    "theme": [
+     "#3a0010",
+     "#ff1744"
+    ],
+    "recommended": 22,
+    "tagline": "La guarida del Rey Demonio.",
+    "desc": "Una fortaleza negra bajo un sol rojo. Aquí empezó todo. Aquí acabará.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "castle_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_rey",
+        "guardia_rey",
+        "hechicero_alba"
+       ]
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "verdugo_carmesi",
+        "guardia_rey"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ],
+        [
+         "pluma_fenix_dorada",
+         1
+        ]
+       ],
+       "gold": 600
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "hechicero_alba",
+        "verdugo_carmesi",
+        "guardia_rey"
+       ]
+      },
+      {
+       "type": "story",
+       "scene": "yamikage_pre"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "yamikage"
+       ],
+       "post": "yamikage_p1_end"
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "yamikage_alba"
+       ],
+       "post": "final_win",
+       "pre": "yamikage_p2_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "region_akatsuki_done",
+      "items": [
+       [
+        "corona_alba",
+        1
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 2000
+     }
+    }
+   },
+   "oasis_carmesi": {
+    "name": "Oasis Carmesí",
+    "type": "town",
+    "icon": "🌴",
+    "x": 38,
+    "y": 92,
+    "links": [
+     "aldea_amanecer",
+     "camino_brasas"
+    ],
+    "desc": "Un oasis de palmeras rojas y farolillos. Aquí nadie pelea. Hay posada, tienda y herrería.",
+    "tagline": "Donde el desierto sonríe.",
+    "theme": [
+     "#3a1a10",
+     "#ffb070"
+    ],
+    "onFirst": "oasis_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "ak_2_done",
+       "!ev_oasis_noche"
+      ],
+      "scene": "oasis_noche"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "saeko",
+      "dai",
+      "hiromi",
+      "omar"
+     ],
+     "inn": {
+      "price": 130
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "agua_oasis",
+      "dulce_dunas",
+      "pluma_fenix_dorada",
+      "coraza_desierto",
+      "lanza_oasis",
+      "botas_arena",
+      "farolillo_rojo",
+      "dulce_miel",
+      "g3_rare_filo",
+      "g3_rare_grimorio",
+      "g3_rare_guantelete",
+      "g3_rare_pistola"
+     ]
+    }
+   },
+   "campamento_desertores": {
+    "name": "Campamento de Desertores",
+    "type": "town",
+    "icon": "⛺",
+    "x": 52,
+    "y": 10,
+    "links": [
+     "valle_lapidas",
+     "barranco_huesos"
+    ],
+    "desc": "Un campamento escondido de soldados que huyeron del rey. Hay posada y suministros.",
+    "requires": "ak_2_done",
+    "lockText": "El barranco aún no es seguro.",
+    "tagline": "Quienes huyeron del rey.",
+    "theme": [
+     "#2a1a1a",
+     "#a06a50"
+    ],
+    "onFirst": "desertores_arrival",
+    "town": {
+     "npcs": [
+      "shuji",
+      "kaede"
+     ],
+     "inn": {
+      "price": 120
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "pluma_fenix_dorada",
+      "agua_oasis",
+      "dulce_dunas"
+     ]
+    }
+   },
+   "ciudadela_ceniza": {
+    "name": "Ciudadela de Ceniza",
+    "type": "ruins",
+    "icon": "🏰",
+    "x": 52,
+    "y": 50,
+    "links": [
+     "bosque_rojo",
+     "santuario_a2"
+    ],
+    "desc": "El cuartel del ejército de Yamikage. Murallas que humean.",
+    "requires": "ak_1_done",
+    "lockText": "Debes romper antes el sello de la Ceniza.",
+    "autoDoneIf": "ak_2_done",
+    "theme": [
+     "#1a0a0a",
+     "#e06040"
+    ],
+    "recommended": 18,
+    "tagline": "El general de ceniza.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciudadela_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_ceniza",
+        "soldado_ceniza"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         2
+        ],
+        [
+         "elixir_supremo",
+         1
+        ]
+       ],
+       "gold": 500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arquero_brasa",
+        "soldado_ceniza",
+        "arquero_brasa"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_ceniza",
+        "arquero_brasa",
+        "oni_general"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "general_ceniza"
+       ],
+       "post": "ciudadela_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "ciudadela_done",
+      "items": [
+       [
+        "@w:rare:3",
+        1
+       ],
+       [
+        "perg_exorcismo",
+        1
+       ]
+      ],
+      "gold": 900
+     }
+    }
+   },
+   "forja_demonio": {
+    "name": "Forja del Demonio",
+    "type": "ruins",
+    "icon": "🔨",
+    "x": 78,
+    "y": 34,
+    "links": [
+     "santuario_a3",
+     "santuario_a4"
+    ],
+    "desc": "Una caverna de lava y yunques donde se forjaron las armas del rey.",
+    "requires": "ak_3_done",
+    "lockText": "Debes romper antes el sello del Espejo.",
+    "autoDoneIf": "ak_4_done",
+    "theme": [
+     "#200a05",
+     "#ff7a20"
+    ],
+    "recommended": 20,
+    "tagline": "El herrero maldito.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "forja_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "salamandra_lava",
+        "soldado_ceniza"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "salamandra_lava",
+        "salamandra_lava",
+        "arquero_brasa"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "oni_general",
+        "salamandra_lava",
+        "demonio_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "herrero_demonio"
+       ],
+       "post": "forja_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "forja_done",
+      "items": [
+       [
+        "@w:rare:3",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        1
+       ]
+      ],
+      "gold": 1000
+     }
+    }
+   },
+   "desierto_cristal": {
+    "name": "Desierto de Cristal",
+    "type": "wild",
+    "icon": "🏜️",
+    "x": 54,
+    "y": 88,
+    "links": [
+     "camino_brasas",
+     "valle_espejos",
+     "camara_cristal"
+    ],
+    "desc": "Dunas de cristal que cantan cuando sopla el viento.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "escorpion_cristal",
+       "escorpion_cristal"
+      ],
+      [
+       "soldado_ceniza",
+       "arquero_brasa"
+      ],
+      [
+       "salamandra_lava",
+       "escorpion_cristal"
+      ],
+      [
+       "garuda_cenizas",
+       "escorpion_cristal"
+      ]
+     ]
+    }
+   },
+   "rio_lava": {
+    "name": "Río de Lava",
+    "type": "wild",
+    "icon": "🌋",
+    "x": 86,
+    "y": 66,
+    "links": [
+     "santuario_a3",
+     "santuario_a5",
+     "cueva_ecos"
+    ],
+    "desc": "Un río de roca fundida. Se cruza por puentes de piedra calcinada.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "salamandra_lava",
+       "salamandra_lava"
+      ],
+      [
+       "oni_general",
+       "salamandra_lava"
+      ],
+      [
+       "arquero_brasa",
+       "soldado_ceniza",
+       "soldado_ceniza"
+      ],
+      [
+       "demonio_alba",
+       "salamandra_lava"
+      ]
+     ]
+    },
+    "requires": "ak_2_done",
+    "lockText": "El río aún no es seguro."
+   },
+   "barranco_huesos": {
+    "name": "Barranco de Huesos",
+    "type": "wild",
+    "icon": "💀",
+    "x": 60,
+    "y": 10,
+    "links": [
+     "valle_lapidas",
+     "santuario_a4",
+     "campamento_desertores"
+    ],
+    "desc": "Un barranco lleno de huesos blanqueados. El viento silba entre las costillas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "esqueleto_barranco",
+       "esqueleto_barranco"
+      ],
+      [
+       "gaki_hambriento",
+       "esqueleto_barranco"
+      ],
+      [
+       "demonio_alba",
+       "esqueleto_barranco"
+      ],
+      [
+       "oni_general",
+       "arquero_brasa"
+      ]
+     ]
+    },
+    "requires": "ak_3_done",
+    "lockText": "Aún no tienes motivo para ir al barranco."
+   },
+   "cueva_ecos": {
+    "name": "Cueva de los Ecos",
+    "type": "cave",
+    "icon": "🔮",
+    "x": 72,
+    "y": 92,
+    "links": [
+     "rio_lava"
+    ],
+    "desc": "Opcional: una cueva donde las voces se repiten para siempre.",
+    "optional": true,
+    "requires": "ak_3_done",
+    "lockText": "La entrada está sellada por una voz.",
+    "theme": [
+     "#1a1020",
+     "#a080e0"
+    ],
+    "recommended": 20,
+    "tagline": "Opcional · la voz perdida.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ecos_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_sombra",
+        "eco_sombra"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_sombra",
+        "eco_sombra",
+        "hechicero_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "voz_perdida"
+       ],
+       "post": "ecos_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a3_done",
+      "items": [
+       [
+        "collar_ecos",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 900
+     }
+    }
+   },
+   "abismo_alba": {
+    "name": "Abismo del Alba",
+    "type": "cave",
+    "icon": "🌅",
+    "x": 12,
+    "y": 48,
+    "links": [
+     "santuario_a1"
+    ],
+    "desc": "Opcional (superjefe): unas escaleras bajan al abismo. El guardián espera.",
+    "optional": true,
+    "requires": "ak_5_done",
+    "lockText": "Una luz te impide el paso. Todavía no.",
+    "theme": [
+     "#05050a",
+     "#ffd080"
+    ],
+    "recommended": 22,
+    "tagline": "Opcional · el superjefe.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "abismo_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_sombra",
+        "hechicero_alba",
+        "demonio_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "pluma_fenix_dorada",
+         2
+        ]
+       ],
+       "gold": 1200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "verdugo_carmesi",
+        "verdugo_carmesi",
+        "hechicero_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardian_alba"
+       ],
+       "post": "abismo_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a4_done",
+      "items": [
+       [
+        "corona_abismo",
+        1
+       ],
+       [
+        "pluma_fenix_eterna",
+        1
+       ]
+      ],
+      "gold": 2500
+     }
+    },
+    "repeat": {
+     "text": "El Guardián del Abismo te pone a prueba una y otra vez, sin rencor.",
+     "gold": 1500,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ],
+      [
+       "elixir_supremo",
+       1
+      ]
+     ]
+    }
+   },
+   "camara_cristal": {
+    "name": "Cámara de Cristal",
+    "type": "cave",
+    "icon": "💎",
+    "x": 66,
+    "y": 82,
+    "links": [
+     "desierto_cristal",
+     "valle_espejos"
+    ],
+    "desc": "Opcional: una cámara de cristal en el corazón del desierto. Su rey vigila la luz.",
+    "optional": true,
+    "requires": "ak_2_done",
+    "lockText": "El desierto aún guarda su secreto.",
+    "theme": [
+     "#3a2a50",
+     "#c0f0ff"
+    ],
+    "recommended": 19,
+    "tagline": "Opcional · el rey del desierto.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "battle",
+       "enemies": [
+        "escorpion_cristal",
+        "escorpion_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         2
+        ],
+        [
+         "elixir_supremo",
+         1
+        ]
+       ],
+       "gold": 500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "salamandra_lava",
+        "escorpion_cristal",
+        "escorpion_cristal"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "rey_cristal"
+       ]
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a5_done",
+      "items": [
+       [
+        "anillo_cristal",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        1
+       ]
+      ],
+      "gold": 850
+     }
+    },
+    "repeat": {
+     "text": "Los cristales vuelven a crecer y el rey se reforma una vez más.",
+     "gold": 600,
+     "items": [
+      [
+       "pocion_total",
+       1
+      ]
+     ]
+    }
+   },
+   "fisura_alba": {
+    "name": "Fisura del Alba",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 88,
+    "y": 94,
+    "links": [
+     "castillo_alba"
+    ],
+    "desc": "Una grieta de luz bajo el castillo en ruinas. Conduce al Reino del Amanecer.",
+    "requires": "acto2_open",
+    "lockText": "Todavía no sabes qué hay bajo el castillo.",
+    "tagline": "La puerta bajo el castillo.",
+    "theme": [
+     "#1a1008",
+     "#ffd479"
+    ],
+    "gate": {
+     "region": "amanecer",
+     "loc": "umbral_alba",
+     "scene": "amanecer_llegada",
+     "title": "Reino del Amanecer",
+     "text": "La grieta de luz conduce a un reino sin noche. Aquí empieza la siguiente etapa del viaje, y los enemigos serán más duros. ¿Cruzar?"
+    }
+   }
+  }
+ },
+ "amanecer": {
+  "name": "Reino del Amanecer",
+  "order": 4,
+  "start": "umbral_alba",
+  "bg": "radial-gradient(circle at 30% 25%, #fff1c9, transparent 55%), radial-gradient(circle at 80% 75%, #ffcf70, transparent 55%), linear-gradient(180deg,#4a3a14,#8a6a2a 60%,#2a1d08)",
+  "decor": [
+   {
+    "e": "☀️",
+    "x": 50,
+    "y": 6
+   },
+   {
+    "e": "🌾",
+    "x": 18,
+    "y": 78
+   },
+   {
+    "e": "🌾",
+    "x": 40,
+    "y": 84
+   },
+   {
+    "e": "✨",
+    "x": 72,
+    "y": 62
+   },
+   {
+    "e": "🦋",
+    "x": 34,
+    "y": 30
+   },
+   {
+    "e": "🌟",
+    "x": 88,
+    "y": 48
+   },
+   {
+    "e": "🌾",
+    "x": 60,
+    "y": 88
+   }
+  ],
+  "events": [
+   {
+    "text": "Una mariposa dorada se posa en tu hombro. Yukine contiene la respiración hasta que se va.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Encuentras monedas que brillan sin sombra bajo el sol quieto.",
+    "gold": 400
+   },
+   {
+    "text": "Un campesino ojeroso te ofrece agua. «Dormir es un recuerdo», dice. Te la bebes.",
+    "heal": true
+   },
+   {
+    "text": "Yukine se pone la mano de visera: «Cómo echo de menos las estrellas». Te mira. Sonríes.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre las hierbas doradas hay una poción olvidada.",
+    "items": [
+     "agua_oasis"
+    ]
+   },
+   {
+    "text": "Un reloj de oro olvidado late en la hierba. Suena una sola vez.",
+    "gold": 450
+   },
+   {
+    "text": "Yukine persigue una mariposa dorada y tropieza. Se ríe tanto que te contagia.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un hombre sin sombra sostiene un maletín abierto, lleno de cosas que parecen venir de otro tiempo. «Pocas piezas, ninguna repetida. Lo mítico no se regala».",
+    "merchant": {
+     "name": "El Mercader sin Sombra",
+     "tier": 4,
+     "rarities": [
+      "rare",
+      "epic",
+      "legendary"
+     ],
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total",
+      "ambrosia_alba"
+     ],
+     "bonusRarity": "mythic",
+     "bonusChance": 0.25
+    }
+   },
+   {
+    "text": "Una libélula de cristal se posa en la cabeza de Yukine. Se queda quietísima.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Entre los girasoles brilla una bolsa de monedas olvidada.",
+    "gold": 600
+   },
+   {
+    "text": "Un sonámbulo te pasa por al lado, te da un abrazo sin despertarse y sigue andando.",
+    "heal": true
+   },
+   {
+    "text": "Una rosa dorada se inclina a tu paso, como si te saludara.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Entre las estatuas, un farolillo dorado olvidado contiene unas monedas.",
+    "gold": 750
+   }
+  ],
+  "locations": {
+   "umbral_alba": {
+    "name": "Fisura del Alba",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 8,
+    "y": 52,
+    "links": [
+     "llanura_dorada"
+    ],
+    "desc": "La escalera de cristal por la que llegasteis. Puedes volver al Yermo Akatsuki cuando quieras.",
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#3a2a10",
+     "#fff1c9"
+    ],
+    "gate": {
+     "region": "akatsuki",
+     "loc": "fisura_alba",
+     "title": "Yermo Akatsuki",
+     "text": "¿Volver al Yermo Akatsuki? Podrás regresar al Reino del Amanecer cuando quieras."
+    }
+   },
+   "llanura_dorada": {
+    "name": "Llanura Dorada",
+    "type": "wild",
+    "icon": "🌾",
+    "x": 24,
+    "y": 66,
+    "links": [
+     "umbral_alba",
+     "aldea_primer_rayo",
+     "bosque_sin_sombra",
+     "cueva_primera_noche"
+    ],
+    "desc": "Un mar de trigo dorado bajo un sol que nunca se mueve.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "centinela_luz",
+       "centinela_luz"
+      ],
+      [
+       "mariposa_alba",
+       "bestia_dorada"
+      ],
+      [
+       "bestia_dorada",
+       "centinela_luz"
+      ],
+      [
+       "mariposa_alba",
+       "mariposa_alba",
+       "centinela_luz"
+      ]
+     ]
+    }
+   },
+   "aldea_primer_rayo": {
+    "name": "Aldea Primer Rayo",
+    "type": "town",
+    "icon": "🏘️",
+    "x": 26,
+    "y": 40,
+    "links": [
+     "llanura_dorada",
+     "bosque_sin_sombra",
+     "refugio_sombras",
+     "cueva_primera_noche"
+    ],
+    "desc": "Casas de piedra clara con ventanas tapadas. Posada, tienda y gente que sueña con la noche.",
+    "tagline": "Aquí nadie duerme.",
+    "theme": [
+     "#4a3010",
+     "#ffcf70"
+    ],
+    "onFirst": "aldea_pr_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "!ev_aldea_pr_noche",
+       "am_1_done"
+      ],
+      "scene": "aldea_pr_noche"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "teruko",
+      "soma",
+      "mio",
+      "yoru"
+     ],
+     "inn": {
+      "price": 160
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "pluma_fenix_dorada",
+      "agua_oasis",
+      "dulce_dunas",
+      "coraza_luz",
+      "amuleto_alba",
+      "lanza_luz",
+      "pluma_dorada",
+      "g4_rare_filo",
+      "g4_rare_grimorio",
+      "g4_rare_guantelete",
+      "g4_rare_pistola"
+     ]
+    }
+   },
+   "bosque_sin_sombra": {
+    "name": "Bosque sin Sombra",
+    "type": "wild",
+    "icon": "🌳",
+    "x": 44,
+    "y": 54,
+    "links": [
+     "llanura_dorada",
+     "aldea_primer_rayo",
+     "santuario_m1"
+    ],
+    "desc": "Árboles de hojas translúcidas que no proyectan sombra. Solo la penumbra de las sombras negadas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "sombra_negada",
+       "mariposa_alba"
+      ],
+      [
+       "bestia_dorada",
+       "sombra_negada"
+      ],
+      [
+       "centinela_luz",
+       "sombra_negada",
+       "sombra_negada"
+      ],
+      [
+       "bestia_dorada",
+       "bestia_dorada"
+      ]
+     ]
+    }
+   },
+   "santuario_m1": {
+    "name": "Santuario del Primer Rayo",
+    "type": "sanctuary",
+    "icon": "⚡",
+    "x": 60,
+    "y": 38,
+    "links": [
+     "bosque_sin_sombra",
+     "campos_espejismo",
+     "desfiladero_oro"
+    ],
+    "desc": "Una columna de luz sólida que sube hasta el sol. El primer umbral del Reino.",
+    "order": 1,
+    "tagline": "El primer umbral.",
+    "theme": [
+     "#3a2a08",
+     "#fff6c0"
+    ],
+    "recommended": 23,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "am1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "centinela_luz",
+        "centinela_luz"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 700
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "mariposa_alba",
+        "bestia_dorada",
+        "centinela_luz"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_negada",
+        "sombra_negada",
+        "bestia_dorada"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heraldo_rayo"
+       ],
+       "post": "am1_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "am_1_done",
+      "items": [
+       [
+        "@w:epic:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ],
+       [
+        "pocion_total",
+        3
+       ]
+      ],
+      "gold": 2500
+     }
+    }
+   },
+   "refugio_sombras": {
+    "name": "Refugio de las Sombras",
+    "type": "town",
+    "icon": "🌙",
+    "x": 14,
+    "y": 16,
+    "links": [
+     "aldea_primer_rayo",
+     "campos_espejismo"
+    ],
+    "desc": "Un valle oculto entre rocas de obsidiana donde aún hay noche. Posada, tienda y gente de ojos violeta.",
+    "requires": "am_1_done",
+    "lockText": "Entre las rocas hay una grieta, pero aún no la ves.",
+    "tagline": "Donde queda la noche.",
+    "theme": [
+     "#0a0818",
+     "#4a3a8a"
+    ],
+    "onFirst": "refugio_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "q:sq25=turned",
+       "!ev_refugio_noche"
+      ],
+      "scene": "refugio_noche"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "yugure",
+      "hoshi",
+      "kuro",
+      "fumiko",
+      "roga"
+     ],
+     "inn": {
+      "price": 180
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "manto_sombra",
+      "hoja_penumbra",
+      "anillo_hora",
+      "estrella_bolsillo",
+      "g4_epic_filo",
+      "g4_epic_grimorio",
+      "g4_epic_guantelete",
+      "g4_epic_pistola"
+     ]
+    }
+   },
+   "campos_espejismo": {
+    "name": "Campos de Espejismo",
+    "type": "wild",
+    "icon": "🌫️",
+    "x": 44,
+    "y": 20,
+    "links": [
+     "santuario_m1",
+     "refugio_sombras",
+     "torre_reloj"
+    ],
+    "desc": "Campos dorados donde el aire tiembla y los reflejos engañan.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "arena_viva",
+       "cuervo_dorado"
+      ],
+      [
+       "relojero_hueco",
+       "relojero_hueco"
+      ],
+      [
+       "cuervo_dorado",
+       "cuervo_dorado",
+       "arena_viva"
+      ],
+      [
+       "guardia_prisma",
+       "relojero_hueco"
+      ]
+     ]
+    },
+    "requires": "am_1_done",
+    "lockText": "El camino aún no se abre."
+   },
+   "torre_reloj": {
+    "name": "Torre del Reloj Quieto",
+    "type": "ruins",
+    "icon": "🕰️",
+    "x": 74,
+    "y": 12,
+    "links": [
+     "campos_espejismo",
+     "santuario_m2"
+    ],
+    "desc": "Un campanario enorme con los engranajes parados. Guarda el paso al segundo santuario.",
+    "requires": "am_1_done",
+    "lockText": "Debes romper antes el Santuario del Primer Rayo.",
+    "theme": [
+     "#3a2a10",
+     "#e0c070"
+    ],
+    "recommended": 25,
+    "tagline": "El relojero eterno.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "torre_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "relojero_hueco",
+        "relojero_hueco"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         2
+        ]
+       ],
+       "gold": 900
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arena_viva",
+        "relojero_hueco",
+        "cuervo_dorado"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_prisma",
+        "relojero_hueco",
+        "arena_viva"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "relojero_eterno"
+       ],
+       "post": "torre_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "torre_done",
+      "items": [
+       [
+        "@w:epic:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 2800
+     }
+    }
+   },
+   "desfiladero_oro": {
+    "name": "Desfiladero de Oro",
+    "type": "wild",
+    "icon": "🏜️",
+    "x": 84,
+    "y": 38,
+    "links": [
+     "santuario_m1",
+     "santuario_m2"
+    ],
+    "desc": "Un cañón de roca dorada donde el sol no proyecta sombra alguna.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "cuervo_dorado",
+       "cuervo_dorado"
+      ],
+      [
+       "guardia_prisma",
+       "arena_viva"
+      ],
+      [
+       "bestia_dorada",
+       "guardia_prisma"
+      ],
+      [
+       "sombra_negada",
+       "cuervo_dorado",
+       "arena_viva"
+      ]
+     ]
+    },
+    "requires": "am_1_done",
+    "lockText": "Todavía no sabes cómo llegar."
+   },
+   "santuario_m2": {
+    "name": "Santuario del Segundo Rayo",
+    "type": "sanctuary",
+    "icon": "🌩️",
+    "x": 90,
+    "y": 64,
+    "links": [
+     "desfiladero_oro",
+     "torre_reloj",
+     "lago_mediodia"
+    ],
+    "desc": "Una columna de luz ámbar partida por la mitad. El segundo umbral del Reino.",
+    "order": 2,
+    "requires": [
+     "am_1_done",
+     "torre_done"
+    ],
+    "lockText": "Antes debes cruzar la Torre del Reloj Quieto.",
+    "tagline": "El umbral partido.",
+    "theme": [
+     "#3a1a08",
+     "#ffd0a0"
+    ],
+    "recommended": 27,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "am2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_prisma",
+        "guardia_prisma"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "elixir_supremo",
+         3
+        ]
+       ],
+       "gold": 1000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "relojero_hueco",
+        "arena_viva",
+        "guardia_prisma"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "bestia_dorada",
+        "guardia_prisma",
+        "cuervo_dorado"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heraldo_segundo"
+       ],
+       "post": "am2_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "am_2_done",
+      "items": [
+       [
+        "reliquia_segundo_rayo",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ],
+       [
+        "pocion_total",
+        4
+       ]
+      ],
+      "gold": 3200
+     }
+    }
+   },
+   "cueva_primera_noche": {
+    "name": "Cueva de la Primera Noche",
+    "type": "cave",
+    "icon": "🌑",
+    "x": 34,
+    "y": 58,
+    "links": [
+     "llanura_dorada",
+     "aldea_primer_rayo"
+    ],
+    "desc": "Opcional: una cueva con cielo estrellado donde vive lo último de la noche.",
+    "optional": true,
+    "requires": "am_1_done",
+    "lockText": "Una sombra bloquea la entrada. Aún no.",
+    "theme": [
+     "#05030f",
+     "#6a50c0"
+    ],
+    "recommended": 27,
+    "tagline": "Opcional · la noche misma.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "noche_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_negada",
+        "sombra_negada",
+        "arena_viva"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 900
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_negada",
+        "sombra_negada",
+        "sombra_negada"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "primera_noche"
+       ],
+       "post": "noche_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_m1_done",
+      "items": [
+       [
+        "manto_noche",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 2500
+     }
+    },
+    "repeat": {
+     "text": "La noche vuelve a crecer en la cueva, un poco más asustada cada vez.",
+     "gold": 1200,
+     "items": [
+      [
+       "rocio_noche",
+       2
+      ]
+     ]
+    }
+   },
+   "lago_mediodia": {
+    "name": "Lago del Mediodía",
+    "type": "wild",
+    "icon": "🏞️",
+    "x": 84,
+    "y": 78,
+    "links": [
+     "santuario_m2",
+     "campo_girasoles",
+     "aldea_mediodia",
+     "gruta_espejo"
+    ],
+    "desc": "Un lago enorme que refleja el sol quieto como una moneda de oro. Nadie ha visto el fondo.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "pescador_ahogado",
+       "libelula_cristal"
+      ],
+      [
+       "pescador_ahogado",
+       "pescador_ahogado"
+      ],
+      [
+       "libelula_cristal",
+       "libelula_cristal",
+       "reflejo_errante"
+      ],
+      [
+       "reflejo_errante",
+       "pescador_ahogado"
+      ]
+     ]
+    },
+    "requires": "am_2_done",
+    "lockText": "Antes debes romper el Santuario del Segundo Rayo."
+   },
+   "campo_girasoles": {
+    "name": "Campo de Girasoles",
+    "type": "wild",
+    "icon": "🌻",
+    "x": 70,
+    "y": 70,
+    "links": [
+     "lago_mediodia",
+     "aldea_mediodia",
+     "observatorio_quieto"
+    ],
+    "desc": "Girasoles gigantes que no han dejado de mirar al mismo punto del cielo en doscientos años.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "girasol_centinela",
+       "girasol_centinela"
+      ],
+      [
+       "girasol_centinela",
+       "libelula_cristal"
+      ],
+      [
+       "reflejo_errante",
+       "girasol_centinela",
+       "libelula_cristal"
+      ],
+      [
+       "bestia_dorada",
+       "girasol_centinela"
+      ]
+     ]
+    },
+    "requires": "am_2_done",
+    "lockText": "El camino aún no se abre."
+   },
+   "aldea_mediodia": {
+    "name": "Aldea del Mediodía",
+    "type": "town",
+    "icon": "🏘️",
+    "x": 76,
+    "y": 90,
+    "links": [
+     "lago_mediodia",
+     "campo_girasoles",
+     "gruta_espejo"
+    ],
+    "desc": "Un pueblo blanco bajo un sol sin sombras. Son las doce desde hace doscientos años.",
+    "requires": "am_2_done",
+    "lockText": "Aún no ves el camino.",
+    "tagline": "Siempre mediodía.",
+    "theme": [
+     "#7a5a18",
+     "#ffd878"
+    ],
+    "onFirst": "aldea_mediodia_arrival",
+    "town": {
+     "npcs": [
+      "sakae",
+      "miyu",
+      "ryota",
+      "haruka"
+     ],
+     "inn": {
+      "price": 200
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "agua_oasis",
+      "g4_epic_filo",
+      "g4_epic_grimorio",
+      "g4_epic_guantelete",
+      "g4_epic_pistola",
+      "g4_epic_a_pesada",
+      "g4_epic_a_ligera",
+      "g4_epic_x_a",
+      "g4_epic_x_b",
+      "girasol_eterno"
+     ]
+    }
+   },
+   "observatorio_quieto": {
+    "name": "Observatorio del Sol Quieto",
+    "type": "ruins",
+    "icon": "🔭",
+    "x": 62,
+    "y": 82,
+    "links": [
+     "campo_girasoles",
+     "santuario_m3"
+    ],
+    "desc": "Una cúpula de bronce con un telescopio gigante. Guarda el paso al tercer santuario.",
+    "requires": "am_2_done",
+    "lockText": "Debes romper antes el Santuario del Segundo Rayo.",
+    "theme": [
+     "#4a3410",
+     "#fff0b0"
+    ],
+    "recommended": 29,
+    "tagline": "Doscientos años mirando.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "obs_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "girasol_centinela",
+        "girasol_centinela"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "@x:rare:4",
+         1
+        ]
+       ],
+       "gold": 1000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "libelula_cristal",
+        "reflejo_errante",
+        "girasol_centinela"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "pescador_ahogado",
+        "girasol_centinela",
+        "libelula_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "vigia_solar"
+       ],
+       "post": "obs_clear",
+       "pre": "obs_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "obs_done",
+      "items": [
+       [
+        "@w:epic:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 3400
+     }
+    }
+   },
+   "santuario_m3": {
+    "name": "Santuario del Tercer Rayo",
+    "type": "sanctuary",
+    "icon": "🌞",
+    "x": 54,
+    "y": 94,
+    "links": [
+     "observatorio_quieto",
+     "colinas_ambar"
+    ],
+    "desc": "Una espiral de luz blanca como un girasol visto desde dentro. El tercer umbral del Reino.",
+    "order": 3,
+    "requires": [
+     "am_2_done",
+     "obs_done"
+    ],
+    "lockText": "Antes debes cruzar el Observatorio del Sol Quieto.",
+    "tagline": "El umbral del girasol.",
+    "theme": [
+     "#5a3000",
+     "#ffe080"
+    ],
+    "recommended": 30,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "am3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_errante",
+        "girasol_centinela",
+        "libelula_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "elixir_supremo",
+         3
+        ]
+       ],
+       "gold": 1100
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "pescador_ahogado",
+        "reflejo_errante",
+        "girasol_centinela"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "libelula_cristal",
+        "libelula_cristal",
+        "pescador_ahogado"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heraldo_tercero"
+       ],
+       "post": "am3_clear",
+       "pre": "am3_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "am_3_done",
+      "items": [
+       [
+        "@x:epic:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ],
+       [
+        "pocion_total",
+        4
+       ]
+      ],
+      "gold": 3700
+     }
+    }
+   },
+   "gruta_espejo": {
+    "name": "Gruta del Espejo de Agua",
+    "type": "cave",
+    "icon": "🪞",
+    "x": 92,
+    "y": 92,
+    "links": [
+     "lago_mediodia",
+     "aldea_mediodia"
+    ],
+    "desc": "Opcional: un lago subterráneo que refleja un sol que aquí no debería existir.",
+    "optional": true,
+    "requires": "am_2_done",
+    "lockText": "La entrada está cubierta por el reflejo del lago. Aún no.",
+    "theme": [
+     "#102a40",
+     "#d0f0ff"
+    ],
+    "recommended": 29,
+    "tagline": "Opcional · el reflejo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "gruta_espejo_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_errante",
+        "reflejo_errante",
+        "libelula_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 1000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_errante",
+        "pescador_ahogado",
+        "reflejo_errante"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "reflejo_mediodia"
+       ],
+       "post": "gruta_espejo_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_m2_done",
+      "items": [
+       [
+        "@x:legendary:4",
+        1
+       ],
+       [
+        "rocio_noche",
+        2
+       ]
+      ],
+      "gold": 2800
+     }
+    },
+    "repeat": {
+     "text": "El lago vuelve a reflejar un sol de más. Y alguien más asoma en el agua.",
+     "gold": 1300,
+     "items": [
+      [
+       "rocio_noche",
+       2
+      ]
+     ]
+    }
+   },
+   "colinas_ambar": {
+    "name": "Colinas de Ámbar",
+    "type": "wild",
+    "icon": "⛰️",
+    "x": 48,
+    "y": 84,
+    "links": [
+     "santuario_m3",
+     "camino_vigilia",
+     "ciudad_insomne",
+     "cueva_ambar"
+    ],
+    "desc": "Colinas de resina dorada endurecida, con insectos antiguos atrapados dentro.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "golem_ambar",
+       "polilla_insomne"
+      ],
+      [
+       "sonambulo",
+       "sonambulo"
+      ],
+      [
+       "polilla_insomne",
+       "polilla_insomne",
+       "golem_ambar"
+      ],
+      [
+       "soldado_vigilia",
+       "sonambulo"
+      ]
+     ]
+    },
+    "requires": [
+     "am_2_done",
+     "am_3_done"
+    ],
+    "lockText": "El Santuario del Tercer Rayo debe caer primero."
+   },
+   "camino_vigilia": {
+    "name": "Camino de la Vigilia",
+    "type": "wild",
+    "icon": "🛤️",
+    "x": 38,
+    "y": 72,
+    "links": [
+     "colinas_ambar",
+     "ciudad_insomne",
+     "torre_vigilia",
+     "cueva_ambar"
+    ],
+    "desc": "Un camino empedrado con faroles que nunca se apagan. Por él caminan, dormidos, los sonámbulos.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "soldado_vigilia",
+       "soldado_vigilia"
+      ],
+      [
+       "sonambulo",
+       "polilla_insomne",
+       "soldado_vigilia"
+      ],
+      [
+       "golem_ambar",
+       "soldado_vigilia"
+      ],
+      [
+       "polilla_insomne",
+       "sonambulo"
+      ]
+     ]
+    },
+    "requires": [
+     "am_2_done",
+     "am_3_done"
+    ],
+    "lockText": "El Santuario del Tercer Rayo debe caer primero."
+   },
+   "ciudad_insomne": {
+    "name": "Ciudad Insomne",
+    "type": "town",
+    "icon": "🏙️",
+    "x": 38,
+    "y": 93,
+    "links": [
+     "colinas_ambar",
+     "camino_vigilia"
+    ],
+    "desc": "Una ciudad de calles anchas y farolas encendidas que no duerme desde hace doscientos años.",
+    "requires": [
+     "am_2_done",
+     "am_3_done"
+    ],
+    "lockText": "Aún no sabes cómo llegar.",
+    "tagline": "La ciudad sin noche.",
+    "theme": [
+     "#2a2a48",
+     "#c8b878"
+    ],
+    "onFirst": "ciudad_insomne_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "q:sq31=turned",
+       "!ev_ciudad_duerme"
+      ],
+      "scene": "ciudad_duerme"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "chiyo",
+      "gen",
+      "reiko",
+      "aoi",
+      "tetsuya"
+     ],
+     "inn": {
+      "price": 220
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g4_legendary_filo",
+      "g4_legendary_grimorio",
+      "g4_legendary_guantelete",
+      "g4_legendary_pistola",
+      "manta_noche"
+     ]
+    }
+   },
+   "cueva_ambar": {
+    "name": "Cueva de Ámbar Viva",
+    "type": "cave",
+    "icon": "🟠",
+    "x": 50,
+    "y": 68,
+    "links": [
+     "colinas_ambar",
+     "camino_vigilia"
+    ],
+    "desc": "Opcional: una cueva de resina dorada con insectos, plumas y hasta una barca atrapados en su interior.",
+    "optional": true,
+    "requires": [
+     "am_2_done",
+     "am_3_done"
+    ],
+    "lockText": "Una pared de resina te corta el paso.",
+    "theme": [
+     "#4a2400",
+     "#ffc040"
+    ],
+    "recommended": 31,
+    "tagline": "Opcional · eras atrapadas.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ambar_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_ambar",
+        "polilla_insomne",
+        "golem_ambar"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 1100
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_ambar",
+        "golem_ambar",
+        "soldado_vigilia"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "resina_ancestral"
+       ],
+       "post": "ambar_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_m3_done",
+      "items": [
+       [
+        "@a:legendary:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 3200
+     }
+    },
+    "repeat": {
+     "text": "La resina vuelve a crecer en las paredes, con una flor nueva dentro.",
+     "gold": 1400,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "torre_vigilia": {
+    "name": "Torre de la Vigilia Eterna",
+    "type": "ruins",
+    "icon": "🗼",
+    "x": 28,
+    "y": 84,
+    "links": [
+     "camino_vigilia",
+     "santuario_m4"
+    ],
+    "desc": "Un faro de bronce sin mar, de ochenta pisos. Guarda el paso al cuarto santuario.",
+    "requires": [
+     "am_2_done",
+     "am_3_done"
+    ],
+    "lockText": "Antes debes romper el Santuario del Tercer Rayo.",
+    "theme": [
+     "#3a3020",
+     "#e8d090"
+    ],
+    "recommended": 31,
+    "tagline": "Doscientos años de guardia.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "vigilia_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_vigilia",
+        "soldado_vigilia"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         3
+        ],
+        [
+         "@a:rare:4",
+         1
+        ]
+       ],
+       "gold": 1100
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo",
+        "soldado_vigilia",
+        "polilla_insomne"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_ambar",
+        "soldado_vigilia",
+        "sonambulo"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "capitan_insomne"
+       ],
+       "post": "vigilia_clear",
+       "pre": "vigilia_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "vigilia_done",
+      "items": [
+       [
+        "@w:epic:4",
+        1
+       ],
+       [
+        "pocion_total",
+        3
+       ]
+      ],
+      "gold": 3900
+     }
+    }
+   },
+   "santuario_m4": {
+    "name": "Santuario del Cuarto Rayo",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 16,
+    "y": 92,
+    "links": [
+     "torre_vigilia",
+     "senda_cinco_rayos"
+    ],
+    "desc": "Una cúpula de luz roja y dorada, como una puesta de sol detenida. El cuarto umbral del Reino.",
+    "order": 4,
+    "requires": [
+     "am_3_done",
+     "vigilia_done"
+    ],
+    "lockText": "Antes debes cruzar la Torre de la Vigilia Eterna.",
+    "tagline": "El umbral del último hermano.",
+    "theme": [
+     "#4a1a08",
+     "#ffb070"
+    ],
+    "recommended": 32,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "am4_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "soldado_vigilia",
+        "sonambulo",
+        "polilla_insomne"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         3
+        ]
+       ],
+       "gold": 1200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_ambar",
+        "soldado_vigilia",
+        "soldado_vigilia"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo",
+        "polilla_insomne",
+        "golem_ambar"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heraldo_cuarto"
+       ],
+       "post": "am4_clear",
+       "pre": "am4_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "am_4_done",
+      "items": [
+       [
+        "@a:legendary:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 4400
+     }
+    }
+   },
+   "senda_cinco_rayos": {
+    "name": "Senda de los Cinco Rayos",
+    "type": "wild",
+    "icon": "🗿",
+    "x": 9,
+    "y": 88,
+    "links": [
+     "santuario_m4",
+     "campamento_vigilantes",
+     "jardines_dormidos"
+    ],
+    "desc": "Una avenida de estatuas doradas: cinco Heraldos con la lanza alzada.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "estatua_heraldo",
+       "estatua_heraldo"
+      ],
+      [
+       "estatua_heraldo",
+       "rosa_alba"
+      ],
+      [
+       "lobo_sueno",
+       "estatua_heraldo"
+      ],
+      [
+       "rosa_alba",
+       "rosa_alba",
+       "lobo_sueno"
+      ]
+     ]
+    },
+    "requires": "am_4_done",
+    "lockText": "Antes debes romper el Santuario del Cuarto Rayo.",
+    "onFirst": "senda_intro"
+   },
+   "campamento_vigilantes": {
+    "name": "Campamento de los Vigilantes",
+    "type": "town",
+    "icon": "⛺",
+    "x": 21,
+    "y": 76,
+    "links": [
+     "senda_cinco_rayos",
+     "jardines_dormidos"
+    ],
+    "desc": "Un campamento de lona y farolillos dorados donde viven quienes quieren despertar a la Madre sin hacerle daño.",
+    "requires": "am_4_done",
+    "lockText": "Todavía no sabes cómo llegar.",
+    "tagline": "Quienes velan el alba.",
+    "theme": [
+     "#5a4018",
+     "#ffd890"
+    ],
+    "onFirst": "campamento_arrival",
+    "onArrive": [
+     {
+      "if": [
+       "am_5_done",
+       "!ev_primer_atardecer"
+      ],
+      "scene": "atardecer_primero"
+     }
+    ],
+    "town": {
+     "npcs": [
+      "eiji",
+      "nanami",
+      "kou",
+      "shiori"
+     ],
+     "inn": {
+      "price": 240
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g4_legendary_filo",
+      "g4_legendary_grimorio",
+      "g4_legendary_guantelete",
+      "g4_legendary_pistola",
+      "g4_legendary_a_pesada",
+      "g4_legendary_a_ligera",
+      "rosa_dorada"
+     ]
+    }
+   },
+   "jardines_dormidos": {
+    "name": "Jardines Dormidos",
+    "type": "wild",
+    "icon": "🌹",
+    "x": 10,
+    "y": 76,
+    "links": [
+     "senda_cinco_rayos",
+     "campamento_vigilantes",
+     "ruinas_palacio",
+     "cueva_cunas"
+    ],
+    "desc": "Rosales dorados y fuentes de luz que nadie ha visto en doscientos años.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "rosa_alba",
+       "rosa_alba"
+      ],
+      [
+       "lobo_sueno",
+       "rosa_alba"
+      ],
+      [
+       "estatua_heraldo",
+       "lobo_sueno"
+      ],
+      [
+       "rosa_alba",
+       "lobo_sueno",
+       "estatua_heraldo"
+      ]
+     ]
+    },
+    "requires": "am_4_done",
+    "lockText": "Aún no ves el camino."
+   },
+   "ruinas_palacio": {
+    "name": "Jardines del Palacio",
+    "type": "ruins",
+    "icon": "🌺",
+    "x": 18,
+    "y": 62,
+    "links": [
+     "jardines_dormidos",
+     "santuario_m5"
+    ],
+    "desc": "Los jardines interiores del palacio, cuidados por una jardinera que no ha dormido en doscientos años.",
+    "requires": "am_4_done",
+    "lockText": "Antes debes romper el Santuario del Cuarto Rayo.",
+    "theme": [
+     "#3a3a18",
+     "#e8e0a0"
+    ],
+    "recommended": 33,
+    "tagline": "La jardinera eterna.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "jardines_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "rosa_alba",
+        "estatua_heraldo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "@x:epic:4",
+         1
+        ]
+       ],
+       "gold": 1300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_sueno",
+        "rosa_alba",
+        "lobo_sueno"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_heraldo",
+        "estatua_heraldo",
+        "rosa_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardiana_jardin"
+       ],
+       "post": "jardines_clear",
+       "pre": "jardines_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "jardines_done",
+      "items": [
+       [
+        "@w:legendary:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 4600
+     }
+    }
+   },
+   "santuario_m5": {
+    "name": "Palacio del Sol Quieto",
+    "type": "sanctuary",
+    "icon": "☀️",
+    "x": 18,
+    "y": 52,
+    "links": [
+     "ruinas_palacio",
+     "puerto_alba"
+    ],
+    "desc": "El quinto umbral: un salón de oro blanco donde duerme la Madre del Alba.",
+    "order": 5,
+    "requires": [
+     "am_4_done",
+     "jardines_done"
+    ],
+    "lockText": "Antes debes cruzar los Jardines del Palacio.",
+    "tagline": "El sueño de la Madre.",
+    "theme": [
+     "#4a2a08",
+     "#fff4d0"
+    ],
+    "recommended": 34,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "palacio_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_heraldo",
+        "estatua_heraldo",
+        "rosa_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         4
+        ]
+       ],
+       "gold": 1500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_sueno",
+        "lobo_sueno",
+        "rosa_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_heraldo",
+        "rosa_alba",
+        "lobo_sueno"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "sueno_madre"
+       ],
+       "post": "sueno_clear",
+       "pre": "sueno_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "am_5_done",
+      "items": [
+       [
+        "@a:legendary:4",
+        1
+       ],
+       [
+        "@x:legendary:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 5600
+     }
+    }
+   },
+   "cueva_cunas": {
+    "name": "Cueva de las Cunas Vacías",
+    "type": "cave",
+    "icon": "🍼",
+    "x": 10,
+    "y": 64,
+    "links": [
+     "jardines_dormidos"
+    ],
+    "desc": "Opcional: una galería de cunas de cristal mecidas por una brisa que no existe.",
+    "optional": true,
+    "requires": "am_4_done",
+    "lockText": "Una nana te corta el paso.",
+    "theme": [
+     "#2a2040",
+     "#c8b0ff"
+    ],
+    "recommended": 33,
+    "tagline": "Opcional · la nana.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cunas_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_sueno",
+        "rosa_alba",
+        "lobo_sueno"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 1300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_heraldo",
+        "lobo_sueno",
+        "rosa_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "nodriza_vacia"
+       ],
+       "post": "cunas_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_m4_done",
+      "items": [
+       [
+        "@a:legendary:4",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 3800
+     }
+    },
+    "repeat": {
+     "text": "Las cunas vuelven a mecerse. Alguien canta, muy bajito, otra vez.",
+     "gold": 1600,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "puerto_alba": {
+    "name": "Camino de Cristal",
+    "type": "gate",
+    "icon": "🌊",
+    "x": 6,
+    "y": 36,
+    "links": [
+     "santuario_m5"
+    ],
+    "desc": "Un camino de cristal que baja del palacio hasta el Mar de Cristal, siguiendo el rastro de Shirayuki.",
+    "requires": "am_5_done",
+    "lockText": "El palacio aún no te deja pasar.",
+    "tagline": "Hacia el mar.",
+    "theme": [
+     "#10305a",
+     "#a0e8ff"
+    ],
+    "gate": {
+     "region": "marcristal",
+     "loc": "orilla_llegada",
+     "scene": "mar_arrival",
+     "title": "Mar de Cristal",
+     "text": "¿Seguir el camino de cristal hasta el Mar de Cristal? Podrás volver al Reino del Amanecer cuando quieras."
+    }
+   }
+  }
+ },
+ "marcristal": {
+  "name": "Mar de Cristal",
+  "order": 5,
+  "start": "orilla_llegada",
+  "bg": "radial-gradient(circle at 25% 20%, #4aa8d8, transparent 55%), radial-gradient(circle at 80% 80%, #1a4a8a, transparent 55%), linear-gradient(180deg,#0a2a5a,#1a5a8a 60%,#061a3a)",
+  "decor": [
+   {
+    "e": "🌊",
+    "x": 16,
+    "y": 22
+   },
+   {
+    "e": "🐚",
+    "x": 38,
+    "y": 78
+   },
+   {
+    "e": "⛵",
+    "x": 60,
+    "y": 12
+   },
+   {
+    "e": "🌊",
+    "x": 88,
+    "y": 34
+   },
+   {
+    "e": "🪸",
+    "x": 24,
+    "y": 90
+   },
+   {
+    "e": "☁️",
+    "x": 72,
+    "y": 6
+   },
+   {
+    "e": "🐋",
+    "x": 84,
+    "y": 88
+   },
+   {
+    "e": "✨",
+    "x": 50,
+    "y": 44
+   }
+  ],
+  "events": [
+   {
+    "text": "Una ola trae una concha. Yukine la acerca al oído y sonríe sin decir qué oye.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre la espuma brilla una bolsa de monedas atada a un trozo de red.",
+    "gold": 900
+   },
+   {
+    "text": "Una brisa salada os despeja la cabeza.",
+    "heal": true
+   },
+   {
+    "text": "Un pez de cristal salta cerca y se vuelve a hundir, riéndose en silencio.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Una gaviota de voz de campana os guía hasta un cofre varado en la orilla.",
+    "items": [
+     "pluma_fenix_dorada"
+    ]
+   },
+   {
+    "text": "Una balsa a vela se detiene a tu lado. El patrón saca una caja cubierta con un paño azul: «Lo mejor del Mar de Cristal. Nada de lo de tierra firme».",
+    "merchant": {
+     "name": "Patrón de la Balsa Azul",
+     "tier": 5,
+     "rarities": [
+      "legendary",
+      "mythic"
+     ],
+     "bonusRarity": "celestial",
+     "bonusChance": 0.25,
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total",
+      "ambrosia_alba"
+     ]
+    }
+   }
+  ],
+  "locations": {
+   "orilla_llegada": {
+    "name": "Camino de Cristal",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 6,
+    "y": 50,
+    "links": [
+     "playa_espejo"
+    ],
+    "desc": "El camino de cristal por el que bajasteis desde el palacio. Puedes volver al Reino del Amanecer cuando quieras.",
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#3a2a10",
+     "#fff1c9"
+    ],
+    "gate": {
+     "region": "amanecer",
+     "loc": "puerto_alba",
+     "title": "Reino del Amanecer",
+     "text": "¿Volver al Reino del Amanecer?"
+    }
+   },
+   "playa_espejo": {
+    "name": "Playa de Espejos",
+    "type": "wild",
+    "icon": "🏖️",
+    "x": 22,
+    "y": 60,
+    "links": [
+     "orilla_llegada",
+     "puerto_brumas",
+     "arrecife_cristal"
+    ],
+    "desc": "Una playa de arena fina y cristalina donde cada ola deja un espejo pequeño.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "cangrejo_cristal",
+       "cangrejo_cristal"
+      ],
+      [
+       "medusa_luz",
+       "cangrejo_cristal"
+      ],
+      [
+       "sirena_eco",
+       "medusa_luz"
+      ],
+      [
+       "tiburon_espectral",
+       "cangrejo_cristal"
+      ]
+     ]
+    }
+   },
+   "puerto_brumas": {
+    "name": "Puerto de las Brumas",
+    "type": "town",
+    "icon": "⚓",
+    "x": 30,
+    "y": 36,
+    "links": [
+     "playa_espejo",
+     "arrecife_cristal"
+    ],
+    "desc": "Un pueblo de madera colgado sobre pilotes de cristal, entre redes, farolillos azules y gaviotas.",
+    "tagline": "Donde empieza el mar.",
+    "theme": [
+     "#1a3a50",
+     "#a8c8d8"
+    ],
+    "onFirst": "puerto_arrival",
+    "town": {
+     "npcs": [
+      "kaisei",
+      "nagisa",
+      "tobio",
+      "sumire"
+     ],
+     "inn": {
+      "price": 260
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g5_legendary_filo",
+      "g5_legendary_grimorio",
+      "g5_legendary_guantelete",
+      "g5_legendary_pistola",
+      "g5_legendary_a_pesada",
+      "g5_legendary_a_ligera",
+      "concha_memoria"
+     ]
+    }
+   },
+   "arrecife_cristal": {
+    "name": "Arrecife de Cristal",
+    "type": "wild",
+    "icon": "🪸",
+    "x": 48,
+    "y": 56,
+    "links": [
+     "playa_espejo",
+     "puerto_brumas",
+     "faro_hundido",
+     "cueva_perlas"
+    ],
+    "desc": "Un arrecife de coral transparente por el que se puede caminar con el agua a los tobillos.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "medusa_luz",
+       "medusa_luz"
+      ],
+      [
+       "sirena_eco",
+       "tiburon_espectral"
+      ],
+      [
+       "cangrejo_cristal",
+       "sirena_eco",
+       "medusa_luz"
+      ],
+      [
+       "tiburon_espectral",
+       "tiburon_espectral"
+      ]
+     ]
+    }
+   },
+   "faro_hundido": {
+    "name": "Faro Hundido",
+    "type": "ruins",
+    "icon": "🕯️",
+    "x": 64,
+    "y": 28,
+    "links": [
+     "arrecife_cristal",
+     "santuario_c1"
+    ],
+    "desc": "Un faro inclinado que sale del agua como un dedo roto. Guarda el paso al santuario.",
+    "theme": [
+     "#0a1a30",
+     "#6a90c0"
+    ],
+    "recommended": 36,
+    "tagline": "El farero ahogado.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "faro_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "medusa_luz",
+        "cangrejo_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "@x:legendary:5",
+         1
+        ]
+       ],
+       "gold": 1500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sirena_eco",
+        "sirena_eco",
+        "medusa_luz"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "tiburon_espectral",
+        "cangrejo_cristal",
+        "sirena_eco"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "farero_ahogado"
+       ],
+       "post": "faro_clear",
+       "pre": "faro_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "faro_done",
+      "items": [
+       [
+        "@w:legendary:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 5200
+     }
+    }
+   },
+   "santuario_c1": {
+    "name": "Santuario de la Primera Marea",
+    "type": "sanctuary",
+    "icon": "🌊",
+    "x": 78,
+    "y": 56,
+    "links": [
+     "faro_hundido",
+     "horizonte_mar"
+    ],
+    "desc": "Una plataforma de cristal que emerge del mar con cada ola. El primer umbral del Mar de Cristal.",
+    "order": 1,
+    "requires": "faro_done",
+    "lockText": "Antes debes apagar el Faro Hundido.",
+    "tagline": "La marea que recuerda.",
+    "theme": [
+     "#0a2a5a",
+     "#7ae0ff"
+    ],
+    "recommended": 37,
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "c1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sirena_eco",
+        "tiburon_espectral",
+        "medusa_luz"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         4
+        ]
+       ],
+       "gold": 1700
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cangrejo_cristal",
+        "cangrejo_cristal",
+        "sirena_eco"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "tiburon_espectral",
+        "sirena_eco",
+        "medusa_luz"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "loba_memorial"
+       ],
+       "post": "c1_clear",
+       "pre": "c1_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "c1_done",
+      "items": [
+       [
+        "@a:legendary:5",
+        1
+       ],
+       [
+        "@x:legendary:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 6000
+     }
+    }
+   },
+   "cueva_perlas": {
+    "name": "Cueva de las Perlas",
+    "type": "cave",
+    "icon": "🦪",
+    "x": 56,
+    "y": 84,
+    "links": [
+     "arrecife_cristal"
+    ],
+    "desc": "Opcional: una gruta submarina que el mar deja al descubierto, con las paredes cubiertas de perlas cerradas.",
+    "optional": true,
+    "theme": [
+     "#2a2a50",
+     "#f0e0ff"
+    ],
+    "recommended": 36,
+    "tagline": "Opcional · la perla madre.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "perlas_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cangrejo_cristal",
+        "medusa_luz",
+        "cangrejo_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 1500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sirena_eco",
+        "cangrejo_cristal",
+        "sirena_eco"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "gran_ostra"
+       ],
+       "post": "perlas_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_c1_done",
+      "items": [
+       [
+        "@x:legendary:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 4200
+     }
+    },
+    "repeat": {
+     "text": "La marea vuelve a cerrar las perlas. Alguna guarda ahora un recuerdo distinto.",
+     "gold": 1800,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "horizonte_mar": {
+    "name": "Horizonte del Mar",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 92,
+    "y": 80,
+    "links": [
+     "santuario_c1"
+    ],
+    "desc": "El mar sigue hacia el este y el sur, entre islas de cristal. Aún no se puede cruzar.",
+    "requires": "c1_done",
+    "lockText": "Todavía no ves más allá de la bruma.",
+    "tagline": "Continuará…",
+    "theme": [
+     "#0a2a5a",
+     "#7ae0ff"
+    ],
+    "soon": "Continuará… El Mar de Cristal guarda cuatro santuarios más, las islas de la manada ancestral y el rastro de Shirayuki. Esta parte termina aquí, por ahora."
    }
   }
  }

@@ -34,6 +34,22 @@
     {
      "level": 8,
      "tech": "tajo_sismico"
+    },
+    {
+     "level": 12,
+     "tech": "tajo_del_dragon"
+    },
+    {
+     "level": 14,
+     "tech": "ruptura_total"
+    },
+    {
+     "level": 17,
+     "tech": "tajo_del_alba"
+    },
+    {
+     "level": 20,
+     "tech": "juicio_del_titan"
     }
    ],
    "ultimate": "furia_del_titan",
@@ -73,6 +89,22 @@
     {
      "level": 9,
      "tech": "fenix_ascendente"
+    },
+    {
+     "level": 12,
+     "tech": "infierno"
+    },
+    {
+     "level": 14,
+     "tech": "meteoro"
+    },
+    {
+     "level": 17,
+     "tech": "lluvia_de_ascuas"
+    },
+    {
+     "level": 20,
+     "tech": "sol_naciente"
     }
    ],
    "ultimate": "supernova_carmesi",
@@ -112,6 +144,22 @@
     {
      "level": 9,
      "tech": "cero_absoluto"
+    },
+    {
+     "level": 12,
+     "tech": "ventisca_eterna"
+    },
+    {
+     "level": 14,
+     "tech": "lanza_glacial"
+    },
+    {
+     "level": 17,
+     "tech": "tumba_de_escarcha"
+    },
+    {
+     "level": 20,
+     "tech": "aurora_boreal"
     }
    ],
    "ultimate": "era_glacial",
@@ -151,6 +199,18 @@
     {
      "level": 9,
      "tech": "juicio_del_trueno"
+    },
+    {
+     "level": 12,
+     "tech": "tormenta_electrica"
+    },
+    {
+     "level": 14,
+     "tech": "rayo_celestial"
+    },
+    {
+     "level": 20,
+     "tech": "dios_del_trueno"
     }
    ],
    "ultimate": "tormenta_celestial",
@@ -190,6 +250,22 @@
     {
      "level": 9,
      "tech": "nova_estelar"
+    },
+    {
+     "level": 12,
+     "tech": "rayo_arcano"
+    },
+    {
+     "level": 14,
+     "tech": "sanacion_astral"
+    },
+    {
+     "level": 17,
+     "tech": "singularidad"
+    },
+    {
+     "level": 20,
+     "tech": "sanacion_celestial"
     }
    ],
    "ultimate": "eclipse_arcano",
@@ -229,6 +305,22 @@
     {
      "level": 9,
      "tech": "luna_de_acero"
+    },
+    {
+     "level": 12,
+     "tech": "corte_prismatico"
+    },
+    {
+     "level": 14,
+     "tech": "tempestad_de_acero"
+    },
+    {
+     "level": 17,
+     "tech": "corte_de_aurora"
+    },
+    {
+     "level": 20,
+     "tech": "danza_de_las_cien_lunas"
     }
    ],
    "ultimate": "mil_lunas",
@@ -268,6 +360,22 @@
     {
      "level": 9,
      "tech": "sello_del_dragon"
+    },
+    {
+     "level": 12,
+     "tech": "punio_del_trueno"
+    },
+    {
+     "level": 14,
+     "tech": "mantra_vital"
+    },
+    {
+     "level": 17,
+     "tech": "palma_del_vacio"
+    },
+    {
+     "level": 20,
+     "tech": "nirvana"
     }
    ],
    "ultimate": "dragon_interior",
@@ -307,6 +415,22 @@
     {
      "level": 9,
      "tech": "estrella_fugaz"
+    },
+    {
+     "level": 12,
+     "tech": "disparo_perforante"
+    },
+    {
+     "level": 14,
+     "tech": "tormenta_de_estrellas"
+    },
+    {
+     "level": 17,
+     "tech": "bala_del_destino"
+    },
+    {
+     "level": 20,
+     "tech": "cielo_de_balas"
     }
    ],
    "ultimate": "lluvia_de_estrellas",

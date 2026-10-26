@@ -88,8 +88,11 @@ textarea { min-height: 80px; resize: vertical; }
 
 /* Escena / diálogo */
 .story-bg { position: absolute; inset: 0; background: #111; transition: background 1s; background-size: cover; background-position: center; }
-.story-portrait { position: absolute; left: 50%; bottom: 190px; transform: translateX(-50%); width: min(340px, 60vw); height: min(520px, 62vh); display: flex; align-items: flex-end; justify-content: center; pointer-events: none; }
-.story-portrait img { max-width: 100%; max-height: 100%; filter: drop-shadow(0 8px 20px rgba(0,0,0,.6)); }
+/* TAMAÑO DE LOS RETRATOS (sprites de emociones): cambia estos 4 valores para agrandarlos o moverlos */
+:root { --portrait-w: 620px; --portrait-h: 900px; --portrait-max-vh: 78vh; --portrait-bottom: 140px; }
+.story-portrait { position: absolute; left: 50%; bottom: var(--portrait-bottom); transform: translateX(-50%); width: min(var(--portrait-w), 60vw); height: min(var(--portrait-h), var(--portrait-max-vh)); display: flex; align-items: flex-end; justify-content: center; pointer-events: none; }
+/* el retrato se ESCALA para llenar la caja (antes solo podía encogerse, por eso se veía pequeño) */
+.story-portrait img { height: 100%; width: auto; max-width: 100%; object-fit: contain; object-position: bottom center; filter: drop-shadow(0 8px 20px rgba(0,0,0,.6)); }
 .portrait-ph { width: 70%; height: 80%; border: 2px dashed var(--panel-border); border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,.35); color: var(--muted); font-size: .8rem; text-align: center; padding: 10px; }
 .portrait-ph .big { font-size: 3.2rem; color: var(--ice-2); }
 .dialogue { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); width: min(900px, 94vw); min-height: 150px; background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 16px 20px; backdrop-filter: blur(8px); cursor: pointer; }
@@ -155,6 +158,7 @@ code { background: rgba(0,0,0,.4); padding: 2px 6px; border-radius: 6px; }
 .node.sanctuary .ni, .node.tower .ni { border-color: var(--gold); }
 .node.cave .ni { border-color: #b07aff; }
 .node.town .ni { border-color: #ff9a6a; }
+.node.ruins .ni { border-color: #5fd3c4; }
 .node.locked .ni { border-color: #444; opacity: .6; }
 .node:hover .ni, .node.sel .ni { transform: scale(1.18); box-shadow: 0 0 18px var(--ice); }
 .node.here .ni { box-shadow: 0 0 0 4px rgba(255,212,121,.35); }
@@ -200,7 +204,7 @@ code { background: rgba(0,0,0,.4); padding: 2px 6px; border-radius: 6px; }
 .shop-row, .inv-row { display: flex; align-items: center; gap: 10px; padding: 8px 4px; border-bottom: 1px solid rgba(255,255,255,.07); }
 .shop-row .si, .inv-row .si { font-size: 1.6rem; width: 40px; text-align: center; }
 .sd { flex: 1; } .sd p { margin: 2px 0 0; font-size: .8rem; color: var(--muted); }
-.inv-row.rare b { color: #6fb7ff; } .inv-row.epic b { color: #c27aff; } .inv-row.legendary b { color: var(--gold); }
+.inv-row.common b{color:#c9ccd6}.inv-row.uncommon b{color:#6fd37a}.inv-row.rare b{color:#5aa8ff}.inv-row.epic b{color:#b06cff}.inv-row.legendary b{color:#ffb43a}.inv-row.mythic b{color:#ff5a7a}.inv-row.celestial b{color:#6ff0ff}.inv-row.divine b{color:#fff2a0;text-shadow:0 0 6px #ffd}.inv-row.cosmic b{color:#ff6cf0;text-shadow:0 0 8px #f6f}
 .shop-gold { color: var(--gold); margin-bottom: 6px; }
 
 /* ---- Menú ---- */
@@ -273,9 +277,9 @@ code { background: rgba(0,0,0,.4); padding: 2px 6px; border-radius: 6px; }
 .b-banner.show { opacity: 1; } .b-banner.enemy { color: #ff7a8c; text-shadow: 0 0 14px #ff2d4d; } .b-banner.warn { color: #ffd479; text-shadow: 0 0 14px #ff9a00; }
 .b-log { position: relative; z-index: 2; height: 62px; overflow: hidden; font-size: .78rem; color: var(--muted); text-align: center; }
 .b-fx { position: absolute; inset: 0; z-index: 8; pointer-events: none; --c: #fff; }
-.cine { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--c) 45%, transparent), rgba(0,0,0,.82) 70%); animation: cineIn 1.5s ease; }
+.cine { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--c) 45%, transparent), rgba(0,0,0,.82) 70%); animation: cineIn var(--d, 1.5s) ease; }
 .cine::before { content: ''; position: absolute; left: -10%; right: -10%; top: 42%; height: 16%; background: linear-gradient(90deg, transparent, var(--c), transparent); opacity: .35; transform: skewY(-6deg); }
-.cine-t { position: relative; font-size: clamp(2rem, 7vw, 4.4rem); font-weight: 900; letter-spacing: .12em; color: #fff; text-shadow: 0 0 30px var(--c), 0 0 60px var(--c); animation: zoomIn 1.5s ease; text-align: center; padding: 0 12px; }
+.cine-t { position: relative; font-size: clamp(2rem, 7vw, 4.4rem); font-weight: 900; letter-spacing: .12em; color: #fff; text-shadow: 0 0 30px var(--c), 0 0 60px var(--c); animation: zoomIn var(--d, 1.5s) ease; text-align: center; padding: 0 12px; }
 .cine-s { position: relative; margin-top: 8px; color: var(--c); font-style: italic; letter-spacing: .1em; }
 @keyframes cineIn { 0% { opacity: 0; } 15%,80% { opacity: 1; } 100% { opacity: 0; } } @keyframes zoomIn { from { transform: scale(1.5); letter-spacing: .4em; } to { transform: scale(1); } }
 .b-allies { margin-top: auto; }
@@ -290,3 +294,37 @@ code { background: rgba(0,0,0,.4); padding: 2px 6px; border-radius: 6px; }
 @media (max-width: 700px) { .card.ally { width: 100%; } .card.enemy { width: 140px; } .w-party { display: none; } }
 
 .chip { color: var(--text); font: inherit; }
+
+/* Parte 4: bestiario y créditos */
+.bestiary { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin-top: 10px; }
+.be-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 3px; }
+.be-card.boss { border-color: #ffb040; box-shadow: 0 0 12px rgba(255,176,64,.2); }
+.be-card.unk { opacity: .45; } .be-ico { font-size: 2rem; } .be-desc { opacity: .75; font-style: italic; }
+.credits-ov { display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 30%, #5a3a1a, #0a0614 75%); }
+.credits { text-align: center; padding: 30px; max-width: 640px; }
+.credits h1 { font-size: 4rem; letter-spacing: .3em; margin: 0; color: #ffd479; text-shadow: 0 0 25px #ff9a3a; }
+.credits h2 { margin: 6px 0 0; font-weight: 400; opacity: .85; }
+.cr-end { font-size: 1.3rem; color: #ffb3c8; margin: 14px 0; }
+.cr-stats { display: grid; gap: 4px; background: rgba(0,0,0,.35); padding: 12px; border-radius: 12px; margin-bottom: 14px; }
+.cr-roll { opacity: .85; margin-bottom: 18px; }
+
+/* Imagen de fondo de la cinemática de ultimate (assets/ultimates/<id>.png) */
+.cine-img { position: absolute; left: 50%; top: 50%; height: 118%; max-width: 100%; object-fit: contain; transform: translate(-50%,-50%); z-index: 0; pointer-events: none;
+  filter: drop-shadow(0 0 40px var(--c)); opacity: 0; animation: cineImg var(--d, 1.5s) ease forwards;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%); }
+.cine-t, .cine-s { z-index: 1; }
+@keyframes cineImg { 0% { opacity: 0; transform: translate(-50%,-50%) scale(1.25); } 25% { opacity: .85; } 85% { opacity: .85; transform: translate(-50%,-50%) scale(1.02); } 100% { opacity: 0; transform: translate(-50%,-50%) scale(1); } }
+
+/* Vínculo / Unión */
+.b-bond { display: flex; align-items: center; gap: 8px; font-size: .85rem; padding: 4px 10px; border-radius: 999px; background: rgba(0,0,0,.4); border: 1px solid rgba(255,182,230,.35); }
+.b-bond .bondbar { width: 140px; height: 8px; } .b-bond .bondbar i { background: linear-gradient(90deg,#ff9ad5,#ffd6f0); display: block; height: 100%; width: 0; transition: width .4s; border-radius: 4px; }
+.b-bond.full { border-color: #ffd6f0; box-shadow: 0 0 14px #ff9ad5; animation: bondPulse 1.2s infinite alternate; }
+@keyframes bondPulse { from { box-shadow: 0 0 6px #ff9ad5; } to { box-shadow: 0 0 20px #ffd6f0; } }
+.unison-btn { background: linear-gradient(90deg,#3a1a40,#3a2a60); border-color: #ff9ad5; }
+.unison-btn.ready { background: linear-gradient(90deg,#ff6fb5,#a58bff); color: #fff; font-weight: 700; box-shadow: 0 0 16px #ff9ad5; }
+.b-top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+/* Guía de elementos */
+.guide h4 { margin: 14px 0 6px; } .guide ul { padding-left: 18px; margin: 4px 0; } .guide li { margin: 3px 0; }
+.el-chip { padding: 2px 8px; border: 1px solid; border-radius: 999px; font-size: .8rem; margin: 0 3px 3px 0; background: rgba(0,0,0,.25); } .el-chip.main { font-weight: 700; box-shadow: 0 0 8px currentColor; }
+.gd-enemy { padding: 8px 10px; margin: 6px 0; border-radius: 10px; background: rgba(255,255,255,.05); } .gd-name { font-weight: 700; } .gd-line { margin: 4px 0; } .dim { opacity: .65; }
+.gd-table { width: 100%; border-collapse: collapse; margin-top: 6px; } .gd-table th, .gd-table td { text-align: left; padding: 4px 8px; border-bottom: 1px solid rgba(255,255,255,.1); }

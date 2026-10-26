@@ -2,10 +2,11 @@
  * combat_ui.js — Interfaz del combate: tarjetas, intenciones enemigas, menús de acción,
  * reproducción de eventos con animaciones, partículas y pantalla de resultado.
  */
-import { $, el, showScreen, toast } from './ui.js';
+import { $, el, showScreen, toast, applyBgImage } from './ui.js';
 import { Data, State, addItem, addGold, items, removeItem } from './state.js';
 import { Battle, makeEnemy, STATUS_INFO } from './combat.js';
-import { partyChars, toUnit, syncBack, gainXp, isFainted, xpNeed, LEVEL_CAP } from './party.js';
+import { partyChars, toUnit, syncBack, gainXp, isFainted, xpNeed, xpMod, LEVEL_CAP } from './party.js';
+import { openGuide, noteAffinity } from './guide.js';
 
 const ELEM = {
   fuego: ['#ff6a3d', 'Fuego'], hielo: ['#8fd3ff', 'Hielo'], rayo: ['#ffe14d', 'Rayo'], arcano: ['#c27aff', 'Arcano'],
@@ -24,7 +25,10 @@ export async function runBattle(cfg) {
   const allies = partyChars().map(toUnit);
   const enemies = cfg.enemies.map((id, i) => makeEnemy(id, i));
   if (cfg.startUlt != null) allies.forEach(a => { a.ult = cfg.startUlt; });   // solo para depurar
-  const battle = new Battle(allies, enemies, { canFlee: cfg.canFlee !== false && !enemies.some(e => e.boss) });
+  const uniDef = State.game.flags.unison_unlocked && allies.some(a => a.id === 'protagonista') && allies.some(a => a.id === 'yukine')
+    ? Data.unison?.unison?.[State.game.player.classId] : null;
+  const battle = new Battle(allies, enemies, { canFlee: cfg.canFlee !== false && !enemies.some(e => e.boss), unison: uniDef ? { ...uniDef, classId: State.game.player.classId } : null });
+  if (cfg.startBond != null) battle.bond = cfg.startBond;   // solo para depurar
   const root = $('#screen-battle');
   const view = {};                                  // instantánea visual por uid
   for (const u of battle.all) view[u.uid] = { hp: u.hp, maxHp: u.maxHp, mp: u.mp, ult: u.ult, fx: { ...u.fx } };
@@ -37,11 +41,16 @@ export async function runBattle(cfg) {
   const cmd = el('div', { class: 'b-cmd' });
   const fxLayer = el('div', { class: 'b-fx' });
   const roundLbl = el('div', { class: 'b-round' });
+  const bondFill = el('i'), bondTxt = el('span', {}, 'Vínculo 0%');
+  const bondBar = battle.unison ? el('div', { class: 'b-bond', title: 'Vínculo: al llegar al 100 % podéis lanzar el Ataque de Unión' }, el('b', {}, '💞'), el('div', { class: 'bar bondbar' }, bondFill), bondTxt) : null;
+  const guideBtn = el('button', { class: 'btn ghost', onclick: () => openGuide({ enemies: battle.enemies.map(e => e.id) }) }, '📖 Elementos');
   const speedBtn = el('button', { class: 'btn ghost b-speed', onclick: () => { fast = !fast; speedBtn.textContent = fast ? '⏩ Rápido' : '▶ Normal'; } }, fast ? '⏩ Rápido' : '▶ Normal');
-  const field = el('div', { class: 'battle' }, el('div', { class: 'b-bg', style: `background:${cfg.bg || ''}` }), fxLayer,
-    el('div', { class: 'b-top' }, roundLbl, speedBtn), enemyRow, banner, log, allyRow, cmd);
+  const bgEl = el('div', { class: 'b-bg', style: `background:${cfg.bg || ''}` });
+  const field = el('div', { class: 'battle' }, bgEl, fxLayer,
+    el('div', { class: 'b-top' }, roundLbl, bondBar, guideBtn, speedBtn), enemyRow, banner, log, allyRow, cmd);
   root.replaceChildren(field);
   showScreen('battle');
+  if (cfg.bgIds) applyBgImage(bgEl, cfg.bgIds, 0.45);
 
   const cards = {};
   const mkBar = cls => el('div', { class: 'bar ' + cls }, el('i'));
@@ -113,10 +122,27 @@ export async function runBattle(cfg) {
     }
   }
   const pulse = (uid, cls, ms = 500) => { const c = cards[uid]; if (!c) return; c.classList.add(cls); setTimeout(() => c.classList.remove(cls), ms); };
-  async function cinematic(text, color, sub = '') {
-    fxLayer.style.setProperty('--c', color);
-    fxLayer.replaceChildren(el('div', { class: 'cine' }, el('div', { class: 'cine-t' }, text), el('div', { class: 'cine-s' }, sub)));
-    field.classList.add('ult'); await sleep(1500); field.classList.remove('ult'); fxLayer.replaceChildren();
+  /** Busca assets/ultimates/<clave>.png (técnica, luego personaje/enemigo). Devuelve la URL o null. */
+  const ultImgCache = {};
+  function findUltImage(keys) {
+    const tryKey = k => ultImgCache[k] !== undefined ? Promise.resolve(ultImgCache[k]) : new Promise(res => {
+      const im = new Image();
+      im.onload = () => res(ultImgCache[k] = im.src); im.onerror = () => res(ultImgCache[k] = null);
+      im.src = `assets/ultimates/${k}.png`;
+    });
+    return (async () => { for (const k of keys.filter(Boolean)) { const r = await tryKey(k); if (r) return r; } return null; })();
+  }
+  function refreshBond() {
+    if (!bondBar) return;
+    bondFill.style.width = battle.bond + '%'; bondTxt.textContent = `Vínculo ${Math.floor(battle.bond)}%`;
+    bondBar.classList.toggle('full', battle.canUnison());
+  }
+  async function cinematic(text, color, sub = '', keys = [], ms = 1500) {
+    fxLayer.style.setProperty('--c', color); fxLayer.style.setProperty('--d', ms + 'ms');
+    const img = await findUltImage(keys);
+    fxLayer.replaceChildren(el('div', { class: 'cine' }, img ? el('img', { class: 'cine-img', src: img, alt: '' }) : null,
+      el('div', { class: 'cine-t' }, text), el('div', { class: 'cine-s' }, sub)));
+    field.classList.add('ult'); await sleep(ms); field.classList.remove('ult'); fxLayer.replaceChildren();
   }
 
   /* ---------- Reproducción de eventos ---------- */
@@ -135,7 +161,8 @@ export async function runBattle(cfg) {
           } else { say(`${u.name}: ${e.name}`, ''); logLine(`${u.name} usa ${e.name}.`); }
           banner.style.setProperty('--c', c);
           pulse(e.actor, 'acting', 700);
-          if (e.ult) await cinematic(e.name.toUpperCase(), u.side === 'enemy' ? '#ff2d2d' : c, u.side === 'enemy' ? '¡Ataque especial!' : `¡Técnica definitiva de ${u.name}!`);
+          if (e.unison) await cinematic(e.name.toUpperCase(), '#ffd6f0', `💞 ¡Ataque de Unión de ${u.name} y ${e.partner}!`, ['unison_' + e.classId, 'unison'], 2800);
+          else if (e.ult) await cinematic(e.name.toUpperCase(), u.side === 'enemy' ? '#ff2d2d' : c, u.side === 'enemy' ? '¡Ataque especial!' : `¡Técnica definitiva de ${u.name}!`, [e.tech, u.id]);
           else await sleep(650);
           break;
         }
@@ -153,7 +180,7 @@ export async function runBattle(cfg) {
         }
         case 'dodge': float(e.target, '¡ESQUIVA!', 'dodge'); pulse(e.target, 'dodging', 500); logLine(e.text); await sleep(600); break;
         case 'heal': view[e.target].hp = e.hp; float(e.target, `+${e.amount}`, 'heal'); burst(e.target, '#7dffa0', 8); refresh(e.target); await sleep(e.regen ? 300 : 500); break;
-        case 'mp': view[e.target].mp = e.mp; float(e.target, `+${e.amount} PM`, 'mp'); refresh(e.target); await sleep(400); break;
+        case 'mp': view[e.target].mp = e.mp; float(e.target, `${e.amount > 0 ? '+' : ''}${e.amount} PM`, 'mp'); refresh(e.target); await sleep(400); break;
         case 'status': view[e.target].fx = e.fx; float(e.target, e.text, 'tag status'); refresh(e.target); await sleep(350); break;
         case 'revive': view[e.target].hp = e.hp; view[e.target].fx = {}; float(e.target, '¡Revive!', 'heal'); logLine(e.text); refresh(e.target); await sleep(600); break;
         case 'faint': view[e.target].hp = 0; cards[e.target]?.classList.remove('charging', 'targeted'); logLine(e.text); say(e.text, 'warn'); refresh(e.target); await sleep(700); break;
@@ -161,18 +188,21 @@ export async function runBattle(cfg) {
         case 'enrage': say(e.text, 'enemy'); logLine(e.text); field.classList.add('enrage'); pulse(e.target, 'chargeflash', 900); await sleep(1200); break;
         case 'transform': {
           view[e.actor].hp = e.hp; view[e.actor].maxHp = e.maxHp; view[e.actor].fx = e.fx; logLine(e.text);
-          await cinematic('AULLIDO LUNAR', '#bfe6ff', e.text);
+          await cinematic('AULLIDO LUNAR', '#bfe6ff', e.text, ['aullido_lunar', 'yukine']);
           refresh(e.actor); burst(e.actor, '#bfe6ff', 30); break;
         }
+        case 'fxclear': view[e.target].fx = e.fx; refresh(e.target); break;
         case 'unwolf': view[e.actor].hp = e.hp; view[e.actor].maxHp = e.maxHp; view[e.actor].fx = { ...(view[e.actor].fx) }; delete view[e.actor].fx.wolf; logLine(e.text); refresh(e.actor); await sleep(400); break;
         case 'tick': syncViews(); refreshAll(); break;
         case 'end': break;
       }
       if (e.t === 'act' || e.t === 'faint') { /* mantiene banner hasta el siguiente */ }
       if (e.t === 'hit' || e.t === 'dodge') Object.values(cards).forEach(c => c.classList.remove('targeted'));
+      if (e.t === 'hit' && (e.weak || e.resist)) { const tu = battle.byUid(e.target); if (tu?.side === 'enemy') noteAffinity(tu.id, e.element, e.weak ? 'weak' : 'resist'); }
+      refreshBond();
     }
     Object.values(cards).forEach(c => c.classList.remove('targeted'));
-    clearBanner(); syncViews(); refreshAll();
+    clearBanner(); syncViews(); refreshAll(); refreshBond();
   }
 
   /* ---------- Menú de acciones ---------- */
@@ -216,6 +246,16 @@ export async function runBattle(cfg) {
               res({ actor: unit.uid, kind: 'ult', tech: unit.ultTech, target });
             } }, `★ ${ut.name.replace(' (ULTI)', '')} ${ultReady ? '' : `(${Math.floor(view[unit.uid].ult)}%)`}`));
         } else if (unit.id === 'yukine') row.append(el('button', { class: 'btn', disabled: 'disabled' }, '★ Ulti bloqueada'));
+        if (battle.unison) {
+          const pr = battle.unisonPartners(), ready = battle.canUnison();
+          const needsTarget = battle.unison.hits.some(h => h.target === 'enemy');
+          row.append(el('button', { class: 'btn unison-btn' + (ready ? ' ready' : ''), disabled: ready ? null : 'disabled', title: battle.unison.desc + (pr ? '' : ' (Requiere a los dos en pie)'),
+            onclick: async () => {
+              let target = null;
+              if (needsTarget) { target = await targetMode('enemy', `${battle.unison.name}: elige enemigo`); if (!target) return main(); }
+              res({ actor: pr.p.uid, kind: 'unison', target });
+            } }, `💞 ${battle.unison.name} ${ready ? '' : (pr ? `(${Math.floor(battle.bond)}%)` : '(no disponible)')}`));
+        }
         row.append(
           el('button', { class: 'btn', onclick: itemMenu }, '🎒 Objeto'),
           el('button', { class: 'btn', onclick: () => res({ actor: unit.uid, kind: 'defend' }) }, '🛡️ Defender'),
@@ -244,7 +284,7 @@ export async function runBattle(cfg) {
 
   /* ---------- Bucle principal ---------- */
   if (cfg.intro) { say(cfg.intro, 'enemy'); await sleep(1300); clearBanner(); }
-  refreshAll();
+  refreshAll(); refreshBond();
   while (!battle.over) {
     await play(battle.startRound());
     showIntents();
@@ -254,6 +294,7 @@ export async function runBattle(cfg) {
       const a = await chooseAction(order[i], i);
       if (a.back) { chosen.pop(); i--; continue; }
       chosen[i] = a; i++;
+      if (a.kind === 'unison') break;       // la Unión sustituye los turnos de ambos
     }
     cmd.replaceChildren(el('div', { class: 'cmd-head' }, '…'));
     hideIntents();
@@ -269,7 +310,7 @@ export async function runBattle(cfg) {
     r.loot.forEach(i => addItem(i, 1)); r.kills.forEach(k => { g.kills[k] = (g.kills[k] || 0) + 1; });
     const lines = [];
     for (const ch of partyChars()) {
-      const before = ch.level; const share = isFainted(ch) ? Math.floor(r.xp / 2) : r.xp;
+      const before = ch.level; const share = Math.round((isFainted(ch) ? Math.floor(r.xp / 2) : r.xp) * xpMod(ch.level, r.avgLevel));
       const res = gainXp(ch, share);
       lines.push(el('div', { class: 'res-line' }, `${ch.name}: +${share} XP` + (res.levels ? `  ⬆ Nivel ${before} → ${ch.level}` : ''),
         ...res.learned.map(t => el('div', { class: 'res-learn' }, `✨ Aprende: ${Data.tech[t].name}`))));

@@ -59,6 +59,20 @@
     </div>
     <div id="toast" class="toast hidden"></div>
   </div>
+  <!-- Aviso si se abre con doble clic (file://): los módulos JS y fetch necesitan un servidor -->
+  <div id="boot-warn" style="display:none;position:fixed;inset:0;z-index:999;background:#0b0e1a;color:#e8eefc;font-family:system-ui,sans-serif;padding:8vh 8vw;line-height:1.6">
+    <h1 style="margin-top:0">⚠️ El juego no puede arrancar así</h1>
+    <p>Has abierto <code>index.html</code> con doble clic. Los navegadores bloquean los módulos JavaScript y la carga de datos desde <code>file://</code>.</p>
+    <p><b>Solución fácil:</b> ejecuta <code>jugar.bat</code> (Windows) o <code>jugar.command</code> / <code>jugar.sh</code> (Mac/Linux), que abren el juego en tu navegador.</p>
+    <p>O manualmente, en esta carpeta: <code>python3 -m http.server 8000</code> y abre <code>http://localhost:8000</code>. También funciona subiéndolo a GitHub Pages.</p>
+  </div>
+  <script>
+    (function () {
+      function show() { document.getElementById('boot-warn').style.display = 'block'; }
+      if (location.protocol === 'file:') show();
+      window.addEventListener('error', function (e) { if (!window.__yukineBooted) { var w = document.getElementById('boot-warn'); w.style.display = 'block'; w.insertAdjacentHTML('beforeend', '<p style="color:#ff8aa0">Error: ' + (e.message || 'carga fallida') + '</p>'); } }, true);
+    })();
+  </script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

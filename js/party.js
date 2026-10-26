@@ -1,10 +1,13 @@
 /**
  * party.js — Personajes: estadísticas por nivel, equipo, experiencia, unidades de combate.
  */
-import { Data, State } from './state.js';
+import { Data, State, scaledBonus } from './state.js';
 
-export const LEVEL_CAP = 10;                       // tope de esta versión (Parte 2)
-export const xpNeed = l => Math.round(20 * Math.pow(l, 1.7));
+export const LEVEL_CAP = 38;                       // tope de esta versión (Mar de Cristal, sector 1)
+/** Curva de experiencia: potencia hasta nivel 10; después crece ~25 % más rápido que el nivel (pensada hasta nivel 100). */
+export const xpNeed = l => l <= 10 ? Math.round(20 * Math.pow(l, 1.7)) : Math.round(1003 * Math.pow(l / 10, 1.25));
+/** Modificador de XP según la diferencia entre tu nivel y el del enemigo (anti-farmeo suave, bonus si vas por debajo). */
+export const xpMod = (lvl, enemyLvl) => { const d = lvl - enemyLvl; return d >= 3 ? Math.max(0.4, 1 - 0.12 * (d - 2)) : d <= -3 ? Math.min(1.3, 1 + 0.05 * (-d - 2)) : 1; };
 
 /** Definición de clase del personaje (el protagonista usa classes.json; Yukine, companions.json). */
 export function classDef(char) {
@@ -26,7 +29,7 @@ export function equipBonus(char) {
   const b = { hp: 0, mp: 0, atk: 0, def: 0, mag: 0, spd: 0, ultGain: 0 };
   for (const id of Object.values(char.equipment || {})) {
     const it = Data.itemById[id]; if (!it?.bonus) continue;
-    for (const [k, v] of Object.entries(it.bonus)) b[k] = (b[k] || 0) + v;
+    for (const [k, v] of Object.entries(scaledBonus(id))) b[k] = (b[k] || 0) + v;
   }
   return b;
 }
@@ -117,7 +120,8 @@ export function toUnit(char) {
     uid: 'a_' + char.id, id: char.id, name: char.name, side: 'ally', char,
     level: char.level, maxHp: m.hp, hp: char.hp, maxMp: m.mp, mp: char.mp,
     atk: m.atk, def: m.def, mag: m.mag, spd: m.spd, hybrid: !!def.hybrid,
-    fx: {}, ult: 0, ultGain: m.ultGain, dodgeBonus: 0,
+    wolfAwakened: char.id === 'yukine' && !!State.game.flags.wolf_awakened,
+    fx: {}, ult: Math.max(0, Math.min(100, char.ult || 0)), ultGain: m.ultGain, dodgeBonus: 0,
     techs: char.techniques.equipped.slice(0, 4),
     ultTech: yukineLocked ? null : def.ultimate
   };
@@ -127,6 +131,7 @@ export function toUnit(char) {
 export function syncBack(unit) {
   if (unit.side !== 'ally') return;
   if (unit.wolfBonus) { unit.maxHp -= unit.wolfBonus; unit.wolfBonus = 0; }
+  unit.char.ult = Math.max(0, Math.min(100, Math.round(unit.ult || 0)));   // la ulti se conserva entre combates
   unit.char.hp = Math.max(0, Math.min(unit.hp, unit.maxHp));
   unit.char.mp = Math.max(0, Math.min(unit.mp, unit.maxMp));
   unit.char.status = unit.char.hp <= 0 ? 'debilitado' : 'ok';

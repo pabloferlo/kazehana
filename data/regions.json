@@ -1,30 +1,79 @@
 {
-  "origin": {
-    "id": "tsukimori",
-    "name": "Tsukimori",
-    "desc": "Aldea de leñadores y cazadores al pie de las Montañas Kasumi. Tu hogar, hasta que los demonios llegaron."
+ "origin": {
+  "id": "tsukimori",
+  "name": "Tsukimori",
+  "desc": "Aldea de leñadores y cazadores al pie de las Montañas Kasumi. Tu hogar, hasta que los demonios llegaron."
+ },
+ "regions": [
+  {
+   "id": "kasumi",
+   "order": 1,
+   "name": "Bosques de Kasumi",
+   "tagline": "Niebla eterna y raíces antiguas.",
+   "difficulty": 1,
+   "sanctuaries": 3,
+   "boss": {
+    "id": "oni_kurogane",
+    "name": "Kurogane, el Oni de Hierro",
+    "title": "Señor de los Bosques de Kasumi"
+   },
+   "bg": "linear-gradient(180deg,#0f2a22,#183d33 60%,#0b1a16)"
   },
-  "regions": [
-    {
-      "id": "kasumi", "order": 1, "name": "Bosques de Kasumi",
-      "tagline": "Niebla eterna y raíces antiguas.",
-      "difficulty": 1, "sanctuaries": 3,
-      "boss": { "id": "oni_kurogane", "name": "Kurogane, el Oni de Hierro", "title": "Señor de los Bosques de Kasumi" },
-      "bg": "linear-gradient(180deg,#0f2a22,#183d33 60%,#0b1a16)"
-    },
-    {
-      "id": "shirogane", "order": 2, "name": "Cumbres Shirogane",
-      "tagline": "Tormentas de nieve y templos olvidados.",
-      "difficulty": 2, "sanctuaries": 4,
-      "boss": { "id": "tbd_2", "name": "Por definir (Parte 3)", "title": "Señor de las Cumbres" },
-      "bg": "linear-gradient(180deg,#1b2a4a,#3a5a8c 60%,#0f1830)"
-    },
-    {
-      "id": "akatsuki", "order": 3, "name": "Yermo Akatsuki",
-      "tagline": "Un amanecer rojo que nunca termina.",
-      "difficulty": 3, "sanctuaries": 5,
-      "boss": { "id": "tbd_3", "name": "Por definir (Parte 4)", "title": "El Rey Demonio" },
-      "bg": "linear-gradient(180deg,#3a0f14,#7a1f2a 60%,#1a0508)"
-    }
-  ]
+  {
+   "id": "shirogane",
+   "order": 2,
+   "name": "Cumbres Shirogane",
+   "tagline": "Tormentas de nieve y templos olvidados.",
+   "difficulty": 2,
+   "sanctuaries": 4,
+   "boss": {
+    "id": "reiga",
+    "name": "Reiga, el Cazador Gélido",
+    "title": "Señor de las Cumbres Shirogane"
+   },
+   "bg": "linear-gradient(180deg,#1b2a4a,#3a5a8c 60%,#0f1830)"
+  },
+  {
+   "id": "akatsuki",
+   "order": 3,
+   "name": "Yermo Akatsuki",
+   "tagline": "Un amanecer rojo que nunca termina.",
+   "difficulty": 3,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "yamikage",
+    "name": "Yamikage, el Rey Demonio",
+    "title": "Soberano del Yermo Akatsuki"
+   },
+   "bg": "linear-gradient(180deg,#3a0f14,#7a1f2a 60%,#1a0508)"
+  },
+  {
+   "id": "amanecer",
+   "order": 4,
+   "name": "Reino del Amanecer",
+   "tagline": "Un día sin noche, mil años de luz.",
+   "difficulty": 4,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "heraldo_rayo",
+    "name": "Heraldo del Primer Rayo",
+    "title": "Guardián del primer umbral"
+   },
+   "bg": "linear-gradient(180deg,#4a3a14,#8a6a2a 60%,#2a1d08)"
+  },
+  {
+   "id": "marcristal",
+   "order": 5,
+   "name": "Mar de Cristal",
+   "tagline": "Agua que recuerda, orillas que cantan.",
+   "difficulty": 5,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "loba_memorial",
+    "name": "Loba del Recuerdo",
+    "title": "Guardiana de la Primera Marea"
+   },
+   "bg": "linear-gradient(180deg,#0a2a5a,#1a5a8a 60%,#061a3a)"
+  }
+ ]
 }

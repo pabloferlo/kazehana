@@ -1,17 +1,19 @@
 /**
  * world.js — Mapa explorable, viaje con encuentros, ciudades, posada, tienda y mazmorras.
  */
-import { $, el, showScreen, toast, openModal, openOverlay, closeOverlay, modalAsync, sleep } from './ui.js';
-import { Data, State, Abort, addItem, addGold, removeItem, countItem, items } from './state.js';
+import { $, el, showScreen, toast, openModal, closeModal, openOverlay, closeOverlay, modalAsync, sleep, applyBgImage } from './ui.js';
+import { Data, State, Abort, addItem, addGold, removeItem, countItem, items, rollItem, rarityName, rarityColor, canEquip, FAMILY } from './state.js';
 import { saveSlot } from './storage.js';
 import { runScenes, registerAction, addAffinity } from './story.js';
 import { runBattle } from './combat_ui.js';
 import { cond, autoCompleteMain } from './quests.js';
 import { partyChars, fullRestore, isFainted, maxOf } from './party.js';
 
+/** Ids de fondo de combate: lugar concreto → región → genérico. */
+const bgIdsFor = loc => ['combate_' + loc, 'combate_' + State.game.regions.current, 'combate'];
 const REGION = () => Data.world[State.game.regions.current];
 const LOCS = () => REGION().locations;
-const TYPE_LABEL = { town: 'Aldea', wild: 'Zona salvaje', sanctuary: 'Santuario', cave: 'Cueva opcional', tower: 'Torre del jefe', gate: 'Paso' };
+const TYPE_LABEL = { town: 'Aldea', wild: 'Zona salvaje', sanctuary: 'Santuario', cave: 'Cueva opcional', tower: 'Torre del jefe', gate: 'Paso', ruins: 'Ruinas / fortaleza' };
 
 export const autosave = () => saveSlot('auto', State.game);
 let hooks = { openMenu: () => {}, gameOver: () => {} };
@@ -24,9 +26,17 @@ export async function safe(fn) {
 
 /* ---------- Acciones para el motor de diálogos ---------- */
 registerAction('battle', async a => {
-  const r = await runBattle({ enemies: a.group, canFlee: a.canFlee, bg: a.bg });
-  if (r.result === 'lose') { hooks.gameOver(); throw new Abort('lose'); }
+  const r = await runBattle({ enemies: a.group, canFlee: a.canFlee, bg: a.bg, bgIds: bgIdsFor(State.game.loc) });
+  if (r.result === 'win' && a.winFlag) State.game.flags[a.winFlag] = true;
+  if (r.result === 'lose') {
+    if (a.duel) { State.game.flags[a.loseFlag || 'duel_lost'] = true; partyChars().forEach(fullRestore); toast('Pierdes el duelo, pero nadie sale herido de gravedad.'); }
+    else { hooks.gameOver(); throw new Abort('lose'); }
+  }
   showScreen('story');
+});
+registerAction('bondcheck', async () => {
+  const g = State.game;
+  if (g.flags.couple && g.romance.stage === 4 && g.romance.affinity >= 36) { g.romance.stage = 5; toast('💞 Vuestro vínculo es ahora inseparable'); }
 });
 registerAction('shop', async () => { await openShop(currentTownShop()); });
 registerAction('couplecheck', async () => {
@@ -67,6 +77,7 @@ export function showWorld() {
   const g = State.game, reg = REGION();
   g.loc ||= reg.start; selected ||= g.loc;
   const map = el('div', { class: 'map', style: `background:${reg.bg}` });
+  applyBgImage(map, ['mapa_' + g.regions.current], 0.3);
   reg.decor.forEach(d => map.append(el('span', { class: 'decor', style: `left:${d.x}%;top:${d.y}%` }, d.e)));
   // caminos
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -91,7 +102,7 @@ export function showWorld() {
   map.append(el('div', { class: 'token', id: 'token', style: `left:${here.x}%;top:${here.y}%` }, '🗡️'));
 
   const head = el('div', { class: 'w-head' },
-    el('div', { class: 'w-title' }, el('b', {}, reg.name), el('small', {}, ' · Región 1/3')),
+    el('div', { class: 'w-title' }, el('b', {}, reg.name), el('small', {}, ` · Región ${reg.order || 1}/${Object.keys(Data.world).length}`)),
     el('div', { class: 'w-party' }, ...partyChars().map(c => {
       const m = maxOf(c);
       return el('div', { class: `pill ${isFainted(c) ? 'down' : ''}`, onclick: () => hooks.openMenu() },
@@ -116,7 +127,7 @@ function infoPanel() {
   const acts = el('div', { class: 'wi-actions' });
   if (!lock) {
     if (!here) acts.append(el('button', { class: 'btn primary', disabled: moving ? 'disabled' : null, onclick: () => safe(() => travel(selected)) }, '🧭 Viajar aquí'));
-    else if (['town', 'sanctuary', 'cave', 'tower', 'gate'].includes(l.type)) acts.append(el('button', { class: 'btn primary', onclick: () => openEntry(selected) }, '⛩️ Entrar'));
+    else if (['town', 'sanctuary', 'cave', 'tower', 'gate', 'ruins'].includes(l.type)) acts.append(el('button', { class: 'btn primary', onclick: () => openEntry(selected) }, '⛩️ Entrar'));
     else if (l.encounters) acts.append(el('button', { class: 'btn primary', onclick: () => safe(() => explore(selected)) }, '🔍 Explorar la zona'));
   }
   box.append(acts); return box;
@@ -139,6 +150,7 @@ async function travel(target) {
       for (const oa of l.onArrive || []) if (cond(oa.if)) await runScenes(oa.scene);
       if (l.encounters && Math.random() < l.encounters.rate && step !== target) { await encounter(l); }
       else if (l.encounters && step === target && Math.random() < l.encounters.rate * 0.6) await encounter(l);
+      else if (Math.random() < 0.09) await randomEvent();
       showWorld();
       if (step !== target) await sleep(100);
     }
@@ -146,12 +158,45 @@ async function travel(target) {
   } finally { moving = false; }
   selected = target; showWorld();
   const l = LOCS()[target];
-  if (['town', 'sanctuary', 'cave', 'tower', 'gate'].includes(l.type)) openEntry(target);
+  if (['town', 'sanctuary', 'cave', 'tower', 'gate', 'ruins'].includes(l.type)) openEntry(target);
+}
+
+export async function randomEvent() {
+  const g = State.game;
+  const evs = (REGION().events || []).filter(e => !e.needYukine || g.flags.yukine_joined);
+  if (!evs.length) return;
+  const e = evs[Math.floor(Math.random() * evs.length)];
+  if (e.merchant) return merchantEvent(e);
+  const lines = [];
+  if (e.gold) { addGold(e.gold); lines.push(`+${e.gold} 🪙`); }
+  for (const sp of e.items || []) { const id = rollItem(sp); if (!id) continue; addItem(id, 1); lines.push(`Obtienes: ${Data.itemById[id]?.name || id}`); }
+  if (e.aff) addAffinity(e.aff);
+  if (e.heal) { partyChars().forEach(fullRestore); lines.push('El grupo se recupera.'); }
+  await modalAsync(el('div', {}, el('h3', {}, '✨ Suceso en el camino'), el('p', {}, e.text), lines.length ? el('p', {}, el('small', {}, lines.join(' · '))) : null));
+}
+
+/** Mercader ambulante: vende lo más raro de la región (equipo adaptado a tu clase). Cada pieza de equipo es única. */
+async function merchantEvent(e) {
+  const m = e.merchant, I = Data.itemById, pf = FAMILY[State.game.player.classId] || 'filo';
+  const ok = ([, v]) => v.type === 'equipment' && v.tier === m.tier && m.rarities.includes(v.rarity);
+  const pool = Object.entries(I).filter(ok);
+  const pick = (arr, n) => { const a = [...arr]; const out = []; while (a.length && out.length < n) out.push(a.splice(Math.floor(Math.random() * a.length), 1)[0][0]); return out; };
+  const top = m.rarities[m.rarities.length - 1];
+  const wp = pool.filter(([, v]) => v.slot === 'weapon' && (v.wtype === pf || v.wtype === 'grimorio'));
+  const stock = [
+    ...pick(wp.filter(([, v]) => v.wtype === pf), 1), ...pick(wp.filter(([, v]) => v.wtype === 'grimorio' && pf !== 'grimorio'), 1),
+    ...pick(wp.filter(([, v]) => v.rarity === top), 1),
+    ...pick(pool.filter(([, v]) => v.slot === 'armor'), 2), ...pick(pool.filter(([, v]) => v.slot === 'accessory'), 2),
+    ...(m.bonusRarity && Math.random() < (m.bonusChance || 0) ? pick(Object.entries(I).filter(([, v]) => v.type === 'equipment' && v.tier === m.tier && v.rarity === m.bonusRarity && (v.slot !== 'weapon' || v.wtype === pf || v.wtype === 'grimorio')), 2) : []),
+    ...(m.extra || [])
+  ].filter((id, i, a) => a.indexOf(id) === i);
+  await modalAsync(el('div', {}, el('h3', {}, `🧳 ${m.name}`), el('p', {}, e.text), el('p', {}, el('small', {}, 'Solo vende piezas únicas, y a precio de coleccionista. Quien tiene suerte ve algo más raro de lo normal.'))));
+  await openShop(stock, { merchant: true, title: `🧳 ${m.name}` });
 }
 
 async function encounter(l) {
   const group = l.encounters.pool[Math.floor(Math.random() * l.encounters.pool.length)];
-  const r = await runBattle({ enemies: group, intro: '¡Emboscada!' });
+  const r = await runBattle({ enemies: group, intro: '¡Emboscada!', bgIds: bgIdsFor(State.game.loc) });
   if (r.result === 'lose') { hooks.gameOver(); throw new Abort('lose'); }
   await autosave(); showWorld();
 }
@@ -182,13 +227,27 @@ export function openEntry(id) {
       el('div', { class: 'entry-actions' },
         el('button', { class: 'btn primary big', onclick: () => enter(id) }, l.type === 'town' ? 'Entrar' : l.type === 'gate' ? 'Observar' : isDone(id) ? 'Revisitar' : 'Adentrarse'),
         el('button', { class: 'btn ghost', onclick: () => { closeOverlay(); showWorld(); } }, 'Volver al mapa'))));
-  openOverlay(card, 'entry-ov');
+  openOverlay(card, 'entry-ov'); applyBgImage(card, ['lugar_' + id], 0.5);
 }
 function enter(id) {
   const l = LOCS()[id];
   if (l.type === 'town') return openTown(id);
-  if (l.type === 'gate') return modalAsync(el('div', {}, el('h3', {}, 'Cumbres Shirogane'), el('p', {}, 'Has liberado Kasumi. La siguiente región (Cumbres Shirogane) llegará en la Parte 3. Mientras tanto, puedes completar las misiones y las cuevas que te queden, y subir de nivel.')));
+  if (l.type === 'gate') return enterGate(id);
   return openDungeon(id);
+}
+
+async function enterGate(id) {
+  const l = LOCS()[id], g = State.game;
+  if (!l.gate) return modalAsync(el('div', {}, el('h3', {}, l.name), el('p', {}, l.soon || 'Todavía no se puede avanzar por aquí.')));
+  const go = await new Promise(res => openModal(el('div', {}, el('h3', {}, l.gate.title), el('p', {}, l.gate.text),
+    el('div', { class: 'menu' }, el('button', { class: 'btn primary', onclick: () => { closeModal(); res(true); } }, 'Partir'), el('button', { class: 'btn', onclick: () => { closeModal(); res(false); } }, 'Quedarme')))));
+  if (!go) return;
+  closeOverlay();
+  const first = !g.flags['gate_' + l.gate.region];
+  g.flags['gate_' + l.gate.region] = true;
+  g.regions.current = l.gate.region; g.loc = l.gate.loc; g.visited[l.gate.loc] = true; selected = null;
+  if (first && l.gate.scene) await safe(() => runScenes(l.gate.scene));
+  await autosave(); showWorld();
 }
 
 /* ---------- Ciudad ---------- */
@@ -207,7 +266,7 @@ export function openTown(id) {
       el('div', { class: 'npc-txt' }, el('b', {}, n.name), el('small', {}, ` · ${n.role || ''}${n.age ? ` · ${n.age} años` : ''}`),
         el('p', {}, n.desc),
         el('button', { class: 'btn', onclick: () => talk(n, id) }, 'Hablar'))))));
-  openOverlay(hub, 'town-ov');
+  openOverlay(hub, 'town-ov'); applyBgImage(hub, ['lugar_' + id], 0.5);
 }
 
 async function talk(npc, townId) {
@@ -240,18 +299,19 @@ async function openInn(price, townId) {
 }
 
 /* ---------- Tienda ---------- */
-export async function openShop(list) {
-  const g = State.game;
+export async function openShop(list, opts = {}) {
+  const g = State.game; list = [...list];
+  const priceOf = it => opts.merchant ? (it.mprice || it.price || 0) : it.price;
   let tab = 'buy';
   const body = el('div', {});
   const render = () => {
     const rows = [];
     if (tab === 'buy') {
-      for (const id of list) {
+      for (const id of list.filter(id => partyChars().some(c => canEquip(c, id)))) {
         const it = Data.itemById[id];
         rows.push(el('div', { class: 'shop-row' }, el('span', { class: 'si' }, it.icon),
-          el('div', { class: 'sd' }, el('b', {}, it.name), el('small', {}, ` ×${countItem(id)}`), el('p', {}, it.desc + (it.bonus ? '  ' + bonusText(it.bonus) : ''))),
-          el('button', { class: 'btn', disabled: g.inventory.gold < it.price ? 'disabled' : null, onclick: () => { addGold(-it.price); addItem(id, 1); toast(`Compras ${it.name}`); render(); } }, `${it.price} 🪙`)));
+          el('div', { class: 'sd' }, el('b', { style: it.rarity ? `color:${rarityColor(it.rarity)}` : null }, it.name), it.rarity ? el('span', { class: 'badge rar' }, rarityName(it.rarity)) : null, el('small', {}, ` ×${countItem(id)}`), el('p', {}, it.desc + (it.bonus ? '  ' + bonusText(it.bonus) : ''))),
+          el('button', { class: 'btn', disabled: g.inventory.gold < priceOf(it) ? 'disabled' : null, onclick: () => { addGold(-priceOf(it)); addItem(id, 1); toast(`Compras ${it.name}`); if (opts.merchant && it.type === 'equipment') list.splice(list.indexOf(id), 1); render(); } }, `${priceOf(it)} 🪙`)));
       }
     } else {
       const eq = new Set(partyChars().flatMap(c => Object.values(c.equipment || {})));
@@ -263,8 +323,8 @@ export async function openShop(list) {
           el('button', { class: 'btn', onclick: () => { removeItem(id, 1); addGold(val); render(); } }, `Vender ${val} 🪙`)));
       }
     }
-    body.replaceChildren(el('h3', {}, '🛒 Tienda'), el('div', { class: 'shop-gold' }, `Tu dinero: 🪙 ${g.inventory.gold}`),
-      el('div', { class: 'tabs' }, el('button', { class: 'chip ' + (tab === 'buy' ? 'on' : ''), onclick: () => { tab = 'buy'; render(); } }, 'Comprar'),
+    body.replaceChildren(el('h3', {}, opts.title || '🛒 Tienda'), el('div', { class: 'shop-gold' }, `Tu dinero: 🪙 ${g.inventory.gold}`),
+      opts.merchant ? null : el('div', { class: 'tabs' }, el('button', { class: 'chip ' + (tab === 'buy' ? 'on' : ''), onclick: () => { tab = 'buy'; render(); } }, 'Comprar'),
         el('button', { class: 'chip ' + (tab === 'sell' ? 'on' : ''), onclick: () => { tab = 'sell'; render(); } }, 'Vender')), ...rows);
   };
   render(); await modalAsync(body);
@@ -279,9 +339,10 @@ const ROOM = { battle: ['⚔️', 'Combate'], chest: ['📦', 'Cofre'], altar: [
 
 export function openDungeon(id) {
   const l = LOCS()[id], g = State.game, d = l.dungeon, [c1, c2] = l.theme;
-  const idx = isDone(id) ? d.rooms.length : (g.dungeons[id] || 0);
+  const rerun = !!g.rerun?.[id];
+  const idx = isDone(id) && !rerun ? d.rooms.length : (g.dungeons[id] || 0);
   const view = el('div', { class: 'dungeon', style: `--c1:${c1};--c2:${c2}` },
-    el('div', { class: 'town-head' }, el('h1', {}, `${l.icon} ${l.name}`), el('p', {}, isDone(id) ? 'Santuario completado.' : `Sala ${Math.min(idx + 1, d.rooms.length)} de ${d.rooms.length}`)),
+    el('div', { class: 'town-head' }, el('h1', {}, `${l.icon} ${l.name}`), el('p', {}, isDone(id) && !rerun ? (l.repeat ? l.repeat.text : 'Lugar completado.') : `${rerun ? 'Nuevo desafío · ' : ''}Sala ${Math.min(idx + 1, d.rooms.length)} de ${d.rooms.length}`)),
     el('div', { class: 'rooms' }, ...d.rooms.map((r, i) => {
       const state = i < idx ? 'done' : i === idx ? 'cur' : 'lock';
       return el('div', { class: `room ${state} ${r.type}` }, el('span', { class: 'ri' }, ROOM[r.type][0]),
@@ -289,9 +350,10 @@ export function openDungeon(id) {
           el('small', {}, r.type === 'battle' ? r.enemies.map(e => Data.enemies.enemies[e].name).join(', ') : r.type === 'chest' ? 'Tesoro escondido' : r.type === 'altar' ? 'Recupera PV/PM' : '')));
     })),
     el('div', { class: 'town-actions' },
-      !isDone(id) ? el('button', { class: 'btn primary big', onclick: () => safe(() => playRoom(id)) }, idx === 0 ? '▶ Comenzar' : '▶ Avanzar') : null,
+      !isDone(id) || rerun ? el('button', { class: 'btn primary big', onclick: () => safe(() => playRoom(id)) }, idx === 0 ? '▶ Comenzar' : '▶ Avanzar') : null,
+      isDone(id) && !rerun && l.repeat ? el('button', { class: 'btn primary big', onclick: () => { (g.rerun ||= {})[id] = true; g.dungeons[id] = 0; closeOverlay(); openDungeon(id); } }, '🔁 Volver a desafiar') : null,
       el('button', { class: 'btn ghost', onclick: () => { closeOverlay(); showWorld(); } }, '← Salir')));
-  openOverlay(view, 'dungeon-ov');
+  openOverlay(view, 'dungeon-ov'); applyBgImage(view, ['lugar_' + id], 0.5);
 }
 
 async function playRoom(id) {
@@ -299,15 +361,16 @@ async function playRoom(id) {
   const i = g.dungeons[id] || 0, room = d.rooms[i];
   closeOverlay();
   const advance = async () => { g.dungeons[id] = i + 1; await autosave(); };
-  if (room.type === 'story') { await runScenes(room.scene); await advance(); }
+  const rerun = !!g.rerun?.[id];
+  if (room.type === 'story') { if (!rerun) await runScenes(room.scene); await advance(); if (rerun) return playRoom(id); }
   else if (room.type === 'battle') {
-    const r = await runBattle({ enemies: room.enemies, bg: `linear-gradient(180deg,${l.theme[0]},#0a0a14)` });
+    const r = await runBattle({ enemies: room.enemies, bgIds: bgIdsFor(id), bg: `linear-gradient(180deg,${l.theme[0]},#0a0a14)` });
     if (r.result === 'lose') { hooks.gameOver(); return; }
     if (r.result === 'win') await advance();
   } else if (room.type === 'chest') {
     const lines = [];
-    for (const [it, n] of room.items || []) { addItem(it, n); lines.push(`${Data.itemById[it].icon} ${Data.itemById[it].name} ×${n}`); }
-    if (room.gold) { addGold(room.gold); lines.push(`🪙 ${room.gold}`); }
+    for (const [sp, n] of room.items || []) { const it = rollItem(sp); if (!it) continue; if (rerun && Data.itemById[it].type !== 'consumable') continue; addItem(it, n); lines.push(`${Data.itemById[it].icon} ${Data.itemById[it].name} ×${n}`); }
+    const cg = rerun ? Math.round((room.gold || 0) / 2) : room.gold; if (cg) { addGold(cg); lines.push(`🪙 ${cg}`); }
     await modalAsync(el('div', {}, el('h3', {}, '📦 ¡Cofre abierto!'), ...lines.map(t => el('p', {}, t))));
     await advance();
   } else if (room.type === 'altar') {
@@ -315,24 +378,33 @@ async function playRoom(id) {
     await modalAsync(el('div', {}, el('h3', {}, '⛩️ Altar de reposo'), el('p', {}, 'Una luz suave os envuelve. PV y PM restaurados por completo.')));
     await advance();
   } else if (room.type === 'boss') {
-    if (room.pre) await runScenes(room.pre);
-    const r = await runBattle({ enemies: room.enemies, canFlee: false, intro: `¡${Data.enemies.enemies[room.enemies[0]].name}!`, bg: `radial-gradient(circle at 50% 30%,${l.theme[1]}55,${l.theme[0]} 60%,#05050a)` });
+    if (room.pre && !rerun) await runScenes(room.pre);
+    const r = await runBattle({ enemies: room.enemies, canFlee: false, intro: `¡${Data.enemies.enemies[room.enemies[0]].name}!`, bgIds: bgIdsFor(id), bg: `radial-gradient(circle at 50% 30%,${l.theme[1]}55,${l.theme[0]} 60%,#05050a)` });
     if (r.result === 'lose') { hooks.gameOver(); return; }
     if (r.result === 'win') {
-      if (room.post) await runScenes(room.post);
-      await completeDungeon(id);
-      await advance(); g.dungeons[id] = d.rooms.length;
+      if (room.post && !rerun) await runScenes(room.post);
+      if (i >= d.rooms.length - 1) { if (rerun) await completeRerun(id); else await completeDungeon(id); await advance(); g.dungeons[id] = d.rooms.length; }
+      else await advance();
     }
   }
   showWorld();
   if (!isDone(id) || room.type !== 'boss') openDungeon(id); else openEntry(id);
 }
 
+async function completeRerun(id) {
+  const l = LOCS()[id], g = State.game, rp = l.repeat || {}; delete g.rerun[id];
+  const lines = [];
+  for (const [sp, n] of rp.items || []) { const it = rollItem(sp); if (!it) continue; addItem(it, n); const d = Data.itemById[it]; lines.push(`${d.icon} ${d.name}${n > 1 ? ' ×' + n : ''}`); }
+  if (rp.gold) { addGold(rp.gold); lines.push(`🪙 ${rp.gold} monedas`); }
+  await modalAsync(el('div', {}, el('h3', {}, `🔁 ¡${l.name} superado de nuevo!`), el('p', {}, 'Botín:'), ...lines.map(t => el('p', {}, t))));
+  await autosave();
+}
+
 async function completeDungeon(id) {
   const l = LOCS()[id], g = State.game, rw = l.dungeon.rewards;
   g.flags[rw.flag] = true;
   const lines = [];
-  for (const [it, n] of rw.items || []) { addItem(it, n); const d = Data.itemById[it]; lines.push(`${d.icon} ${d.name}${n > 1 ? ' ×' + n : ''}${d.rarity ? ` (${d.rarity})` : ''}`); }
+  for (const [sp, n] of rw.items || []) { const it = rollItem(sp); if (!it) continue; addItem(it, n); const d = Data.itemById[it]; lines.push(`${d.icon} ${d.name}${n > 1 ? ' ×' + n : ''}${d.rarity ? ` (${rarityName(d.rarity)})` : ''}`); }
   if (rw.gold) { addGold(rw.gold); lines.push(`🪙 ${rw.gold} monedas`); }
   const done = autoCompleteMain();
   await modalAsync(el('div', {}, el('h3', {}, `✨ ¡${l.name} completado!`), el('p', {}, 'Recompensas:'), ...lines.map(t => el('p', {}, t)),

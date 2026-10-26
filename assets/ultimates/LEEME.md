@@ -19,3 +19,16 @@ El juego busca primero `<id_de_la_técnica>.png` y, si no existe, `<id_del_perso
 
 ## Enemigos (ataque especial del jefe)
 - `<id_del_enemigo>.png`, p. ej. `kurogane.png`, `reiga.png`, `yamikage.png`, `yamikage_alba.png`
+## Ataque de Unión (protagonista + Yukine)
+Un PNG por clase: `unison_guerrero.png`, `unison_mago_fuego.png`, `unison_mago_hielo.png`, `unison_mago_rayo.png`, `unison_mago_arcano.png`, `unison_espadachin_magico.png`, `unison_monje_runico.png`, `unison_pistolero_arcano.png`. Si falta, usa `unison.png`.
+
+| Clase | Nombre del ataque |
+|---|---|
+| Guerrero | Filo de Luna Llena |
+| Mago de Fuego | Eclipse de Vapor |
+| Mago de Hielo | Aurora de los Dos Inviernos |
+| Mago del Rayo | Tormenta Lunar |
+| Mago Arcano | Constelación de la Loba |
+| Espadachín Mágico | Danza de las Dos Lunas |
+| Monje Rúnico | Mantra de la Manada |
+| Duelista Arcano | Lluvia de Colmillos de Plata |

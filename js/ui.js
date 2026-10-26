@@ -76,3 +76,31 @@ export function modalAsync(node) {
     btn.addEventListener('click', h);
   });
 }
+
+/* ---------- Imágenes de fondo opcionales (assets/backgrounds/<id>.jpg|png|webp) ---------- */
+const imgCache = {};
+/** Busca la primera imagen existente para un id. Devuelve la URL o null. Resultado en caché. */
+export function findBgImage(id, dir = 'assets/backgrounds/') {
+  if (!id) return Promise.resolve(null);
+  const key = dir + id;
+  if (imgCache[key] !== undefined) return Promise.resolve(imgCache[key]);
+  const tryExt = ext => new Promise(res => { const im = new Image(); im.onload = () => res(im.src); im.onerror = () => res(null); im.src = `${dir}${id}.${ext}`; });
+  return (async () => { for (const e of ['jpg', 'png', 'webp', 'jpeg']) { const u = await tryExt(e); if (u) return (imgCache[key] = u); } return (imgCache[key] = null); })();
+}
+/** Pone la primera imagen encontrada (de una lista de ids, por orden) como fondo de `node`, oscurecida `dim`. */
+export async function applyBgImage(node, ids, dim = 0.35) {
+  const tok = (node._bgTok = (node._bgTok || 0) + 1);
+  node.style.backgroundImage = ''; // vuelve al degradado mientras carga
+  for (const id of [].concat(ids)) {
+    const u = await findBgImage(id);
+    if (node._bgTok !== tok) return null;           // llegó otra petición
+    if (u) {
+      node.style.backgroundImage = `linear-gradient(rgba(0,0,0,${dim}),rgba(0,0,0,${dim})), url("${u}")`;
+      node.style.backgroundSize = 'cover'; node.style.backgroundPosition = 'center'; node.style.backgroundRepeat = 'no-repeat';
+      return u;
+    }
+  }
+  return null;
+}
+/** Id de imagen que corresponde a un degradado de escena (data/backgrounds.json). */
+export function bgIdFor(gradient, Data) { return Data.backgrounds?.gradients?.[gradient] || null; }

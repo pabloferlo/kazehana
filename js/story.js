@@ -3,8 +3,8 @@
  * Soporta: máquina de escribir, retratos por emoción, elecciones con respuesta,
  * condiciones (if), afinidad con Yukine y acciones (battle, quest, item, flag…).
  */
-import { $, el, showScreen, portraitNode, toast } from './ui.js';
-import { Data, State, fillTemplate, addItem, addGold } from './state.js';
+import { $, el, showScreen, portraitNode, toast, applyBgImage, bgIdFor } from './ui.js';
+import { Data, State, fillTemplate, addItem, addGold, rollItem } from './state.js';
 import { cond, giveQuest, turnIn, autoCompleteMain } from './quests.js';
 import { joinYukine, partyChars, fullRestore } from './party.js';
 
@@ -27,7 +27,7 @@ async function runAction(a) {
   const g = State.game;
   switch (a.type) {
     case 'flag': g.flags[a.flag] = true; break;
-    case 'item': addItem(a.id, a.qty || 1); toast(`Obtienes: ${Data.itemById[a.id].name}`); break;
+    case 'item': { const iid = rollItem(a.id); if (iid) { addItem(iid, a.qty || 1); toast(`Obtienes: ${Data.itemById[iid].name}`); } break; }
     case 'gold': addGold(a.amount); toast(`+${a.amount} 🪙`); break;
     case 'affinity': addAffinity(a.value); break;
     case 'stage': g.romance.stage = Math.max(g.romance.stage, a.value); break;
@@ -71,7 +71,11 @@ function matchesAge(scene, age) {
 
 async function playLine(scene) {
   const g = State.game;
-  if (scene.bg) $('#story-bg').style.background = scene.bg;
+  if (scene.bg) {
+    const bgNode = $('#story-bg'); bgNode.style.background = scene.bg;
+    const bid = bgIdFor(scene.bg, Data) || (/^[\w-]+$/.test(scene.bg) ? scene.bg : null);
+    if (bid) applyBgImage(bgNode, [bid], 0.25);
+  }
   const pHost = $('#story-portrait'); pHost.replaceChildren();
   if (scene.char) pHost.append(portraitNode(scene.char, scene.emotion || 'neutral', scene.speaker));
 

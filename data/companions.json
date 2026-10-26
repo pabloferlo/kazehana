@@ -37,6 +37,26 @@
    {
     "level": 9,
     "tech": "tormenta_polar"
+   },
+   {
+    "level": 11,
+    "tech": "colmillo_polar"
+   },
+   {
+    "level": 13,
+    "tech": "ventisca_lunar"
+   },
+   {
+    "level": 15,
+    "tech": "luz_de_luna"
+   },
+   {
+    "level": 17,
+    "tech": "garra_lunar"
+   },
+   {
+    "level": 19,
+    "tech": "aullido_del_alba"
    }
   ]
  }
