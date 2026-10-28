@@ -178,7 +178,10 @@ function renderEquip(box) {
     const card = el('div', { class: 'char-card' }, el('h3', {}, c.name));
     for (const [slot, label] of SLOTS_EQ) {
       const cur = c.equipment[slot] ? Data.itemById[c.equipment[slot]] : null;
-      const owned = Object.keys(items()).filter(id => Data.itemById[id]?.slot === slot && canEquip(c, id));
+      const owned = Object.keys(items()).filter(id => {
+        const item = Data.itemById[id];
+        return item && item.slot === slot && canEquip(c, id);
+      });
       card.append(el('div', { class: 'eq-slot' }, el('b', {}, label),
         el('div', { class: 'eq-cur' }, cur ? el('span', { style: `color:${rarityColor(cur.rarity)}` }, `${cur.icon} ${cur.name}`) : '', cur ? ` Nv ${itemLevel(c.equipment[slot])}/${itemMax(c.equipment[slot])} — ${bonusText(scaledBonus(c.equipment[slot]))}` : '— vacío —'),
         el('div', { class: 'chips' }, ...owned.map(id => el('button', { class: 'chip', title: bonusText(scaledBonus(id)), onclick: () => equip(c, slot, id) }, `${Data.itemById[id].icon} ${Data.itemById[id].name} Nv${itemLevel(id)}`)),
