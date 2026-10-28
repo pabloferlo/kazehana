@@ -114,7 +114,7 @@ function renderInv(box) {
   if (!entries.length) return box.append(el('p', {}, 'Tu mochila está vacía.'));
   const groups = { consumable: 'Consumibles', scroll: 'Pergaminos', gift: 'Regalos', equipment: 'Equipamiento', key: 'Objetos clave' };
   for (const [type, label] of Object.entries(groups)) {
-    const list = entries.filter(([id]) => Data.itemById[id].type === type); if (!list.length) continue;
+    const list = entries.filter(([id]) => Data.itemById[id]?.type === type); if (!list.length) continue;
     box.append(el('h4', {}, label));
     for (const [id, n] of list) {
       const it = Data.itemById[id];
