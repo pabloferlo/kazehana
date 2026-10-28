@@ -50,6 +50,70 @@
     {
      "level": 20,
      "tech": "juicio_del_titan"
+    },
+    {
+     "level": 23,
+     "tech": "tajo_de_cataclismo"
+    },
+    {
+     "level": 27,
+     "tech": "baluarte_inquebrantable"
+    },
+    {
+     "level": 31,
+     "tech": "destructor_de_asedios"
+    },
+    {
+     "level": 35,
+     "tech": "ultimo_bastion"
+    },
+    {
+     "level": 39,
+     "tech": "colapso_de_montana"
+    },
+    {
+     "level": 43,
+     "tech": "grito_del_titan"
+    },
+    {
+     "level": 45,
+     "tech": "avalancha_dorada"
+    },
+    {
+     "level": 49,
+     "tech": "resonancia_de_guerra"
+    },
+    {
+     "level": 51,
+     "tech": "cumbre_derrumbada"
+    },
+    {
+     "level": 54,
+     "tech": "estandarte_del_alba"
+    },
+    {
+     "level": 57,
+     "tech": "fin_de_la_montana"
+    },
+    {
+     "level": 60,
+     "tech": "gloria_del_titan"
+    },
+    {
+     "level": 63,
+     "tech": "golpe_de_memoria"
+    },
+    {
+     "level": 66,
+     "tech": "voluntad_de_titan"
+    },
+    {
+     "level": 67,
+     "tech": "mandoble_de_mediodia"
+    },
+    {
+     "level": 70,
+     "tech": "juramento_sin_sombra"
     }
    ],
    "ultimate": "furia_del_titan",
@@ -105,6 +169,70 @@
     {
      "level": 20,
      "tech": "sol_naciente"
+    },
+    {
+     "level": 23,
+     "tech": "pira_solar"
+    },
+    {
+     "level": 27,
+     "tech": "cometa_ardiente"
+    },
+    {
+     "level": 31,
+     "tech": "llama_eterna"
+    },
+    {
+     "level": 35,
+     "tech": "cataclismo_carmesi"
+    },
+    {
+     "level": 39,
+     "tech": "estrella_fugaz_ardiente"
+    },
+    {
+     "level": 43,
+     "tech": "mar_de_llamas"
+    },
+    {
+     "level": 45,
+     "tech": "erupcion_del_eco"
+    },
+    {
+     "level": 49,
+     "tech": "tormenta_de_magma"
+    },
+    {
+     "level": 51,
+     "tech": "fenix_de_cumbre"
+    },
+    {
+     "level": 54,
+     "tech": "llamarada_del_coro"
+    },
+    {
+     "level": 57,
+     "tech": "sol_de_medianoche"
+    },
+    {
+     "level": 60,
+     "tech": "fin_del_dia"
+    },
+    {
+     "level": 63,
+     "tech": "llama_sin_sombra"
+    },
+    {
+     "level": 66,
+     "tech": "incendio_de_luz"
+    },
+    {
+     "level": 67,
+     "tech": "sol_detenido"
+    },
+    {
+     "level": 70,
+     "tech": "mediodia_eterno"
     }
    ],
    "ultimate": "supernova_carmesi",
@@ -160,6 +288,70 @@
     {
      "level": 20,
      "tech": "aurora_boreal"
+    },
+    {
+     "level": 23,
+     "tech": "cristal_de_la_eternidad"
+    },
+    {
+     "level": 27,
+     "tech": "tormenta_de_agujas"
+    },
+    {
+     "level": 31,
+     "tech": "pacto_polar"
+    },
+    {
+     "level": 35,
+     "tech": "frio_del_fin"
+    },
+    {
+     "level": 39,
+     "tech": "espejo_de_hielo"
+    },
+    {
+     "level": 43,
+     "tech": "marea_gelida"
+    },
+    {
+     "level": 45,
+     "tech": "estalactita_celeste"
+    },
+    {
+     "level": 49,
+     "tech": "glaciar_viviente"
+    },
+    {
+     "level": 51,
+     "tech": "lanza_de_la_ventisca"
+    },
+    {
+     "level": 54,
+     "tech": "noche_polar"
+    },
+    {
+     "level": 57,
+     "tech": "hielo_sin_tiempo"
+    },
+    {
+     "level": 60,
+     "tech": "invierno_eterno"
+    },
+    {
+     "level": 63,
+     "tech": "espejo_roto_de_hielo"
+    },
+    {
+     "level": 66,
+     "tech": "copos_de_instante"
+    },
+    {
+     "level": 67,
+     "tech": "cristal_de_hora"
+    },
+    {
+     "level": 70,
+     "tech": "nevada_sin_tiempo"
     }
    ],
    "ultimate": "era_glacial",
@@ -211,6 +403,70 @@
     {
      "level": 20,
      "tech": "dios_del_trueno"
+    },
+    {
+     "level": 23,
+     "tech": "cadena_de_relampagos"
+    },
+    {
+     "level": 27,
+     "tech": "sobrecarga_total"
+    },
+    {
+     "level": 31,
+     "tech": "lanza_de_zeus"
+    },
+    {
+     "level": 35,
+     "tech": "ojo_de_la_tormenta"
+    },
+    {
+     "level": 39,
+     "tech": "rayo_de_cielo_abierto"
+    },
+    {
+     "level": 43,
+     "tech": "tormenta_perfecta"
+    },
+    {
+     "level": 45,
+     "tech": "trueno_de_las_cumbres"
+    },
+    {
+     "level": 49,
+     "tech": "cielo_en_llamas_electricas"
+    },
+    {
+     "level": 51,
+     "tech": "rayo_de_cristal"
+    },
+    {
+     "level": 54,
+     "tech": "tempestad_del_coro"
+    },
+    {
+     "level": 57,
+     "tech": "rayo_primero"
+    },
+    {
+     "level": 60,
+     "tech": "dia_de_tormenta"
+    },
+    {
+     "level": 63,
+     "tech": "rayo_sin_sombra"
+    },
+    {
+     "level": 66,
+     "tech": "tormenta_de_mediodia"
+    },
+    {
+     "level": 67,
+     "tech": "relampago_del_alba"
+    },
+    {
+     "level": 70,
+     "tech": "tormenta_sin_nubes"
     }
    ],
    "ultimate": "tormenta_celestial",
@@ -266,6 +522,70 @@
     {
      "level": 20,
      "tech": "sanacion_celestial"
+    },
+    {
+     "level": 23,
+     "tech": "rayo_de_aurora"
+    },
+    {
+     "level": 27,
+     "tech": "renacer_de_las_estrellas"
+    },
+    {
+     "level": 31,
+     "tech": "agujero_negro"
+    },
+    {
+     "level": 35,
+     "tech": "palabra_de_creacion"
+    },
+    {
+     "level": 39,
+     "tech": "nova_arcana"
+    },
+    {
+     "level": 43,
+     "tech": "gracia_de_las_estrellas"
+    },
+    {
+     "level": 45,
+     "tech": "coro_de_estrellas"
+    },
+    {
+     "level": 49,
+     "tech": "bendicion_del_eco"
+    },
+    {
+     "level": 51,
+     "tech": "sinfonia_arcana"
+    },
+    {
+     "level": 54,
+     "tech": "canto_de_curacion"
+    },
+    {
+     "level": 57,
+     "tech": "lluvia_de_universos"
+    },
+    {
+     "level": 60,
+     "tech": "luz_que_cura"
+    },
+    {
+     "level": 63,
+     "tech": "lluvia_de_nombres"
+    },
+    {
+     "level": 66,
+     "tech": "consuelo_de_la_luz"
+    },
+    {
+     "level": 67,
+     "tech": "sombra_devuelta"
+    },
+    {
+     "level": 70,
+     "tech": "luz_que_abraza"
     }
    ],
    "ultimate": "eclipse_arcano",
@@ -321,6 +641,70 @@
     {
      "level": 20,
      "tech": "danza_de_las_cien_lunas"
+    },
+    {
+     "level": 23,
+     "tech": "filo_del_horizonte"
+    },
+    {
+     "level": 27,
+     "tech": "huracan_de_acero"
+    },
+    {
+     "level": 31,
+     "tech": "sello_de_runas"
+    },
+    {
+     "level": 35,
+     "tech": "corte_de_mil_estrellas"
+    },
+    {
+     "level": 39,
+     "tech": "tajo_del_eclipse"
+    },
+    {
+     "level": 43,
+     "tech": "vals_de_acero_y_runas"
+    },
+    {
+     "level": 45,
+     "tech": "tajo_resonante"
+    },
+    {
+     "level": 49,
+     "tech": "ciclon_de_runas"
+    },
+    {
+     "level": 51,
+     "tech": "filo_del_coro"
+    },
+    {
+     "level": 54,
+     "tech": "tormenta_de_acero_cantor"
+    },
+    {
+     "level": 57,
+     "tech": "tajo_sin_sombra"
+    },
+    {
+     "level": 60,
+     "tech": "danza_de_la_luz"
+    },
+    {
+     "level": 63,
+     "tech": "tajo_del_recuerdo"
+    },
+    {
+     "level": 66,
+     "tech": "remolino_de_filos_y_luz"
+    },
+    {
+     "level": 67,
+     "tech": "filo_del_mediodia"
+    },
+    {
+     "level": 70,
+     "tech": "danza_de_luz_y_acero"
     }
    ],
    "ultimate": "mil_lunas",
@@ -376,6 +760,70 @@
     {
      "level": 20,
      "tech": "nirvana"
+    },
+    {
+     "level": 23,
+     "tech": "puno_de_cometa"
+    },
+    {
+     "level": 27,
+     "tech": "serenidad_del_dragon"
+    },
+    {
+     "level": 31,
+     "tech": "danza_de_las_runas"
+    },
+    {
+     "level": 35,
+     "tech": "ultima_palma"
+    },
+    {
+     "level": 39,
+     "tech": "palma_del_dragon_celeste"
+    },
+    {
+     "level": 43,
+     "tech": "aliento_de_la_paz"
+    },
+    {
+     "level": 45,
+     "tech": "palma_del_eco"
+    },
+    {
+     "level": 49,
+     "tech": "meditacion_de_la_cumbre"
+    },
+    {
+     "level": 51,
+     "tech": "palma_del_coro"
+    },
+    {
+     "level": 54,
+     "tech": "armonia_serena"
+    },
+    {
+     "level": 57,
+     "tech": "palma_sin_reloj"
+    },
+    {
+     "level": 60,
+     "tech": "paz_sin_tiempo"
+    },
+    {
+     "level": 63,
+     "tech": "palma_del_recuerdo"
+    },
+    {
+     "level": 66,
+     "tech": "calma_de_la_ciudad"
+    },
+    {
+     "level": 67,
+     "tech": "palma_de_la_hora_quieta"
+    },
+    {
+     "level": 70,
+     "tech": "silencio_de_la_ciudad"
     }
    ],
    "ultimate": "dragon_interior",
@@ -431,6 +879,70 @@
     {
      "level": 20,
      "tech": "cielo_de_balas"
+    },
+    {
+     "level": 23,
+     "tech": "bala_de_cometa"
+    },
+    {
+     "level": 27,
+     "tech": "lluvia_de_plomo_estelar"
+    },
+    {
+     "level": 31,
+     "tech": "punteria_celestial"
+    },
+    {
+     "level": 35,
+     "tech": "disparo_del_ocaso"
+    },
+    {
+     "level": 39,
+     "tech": "bala_del_horizonte"
+    },
+    {
+     "level": 43,
+     "tech": "tormenta_de_cometas"
+    },
+    {
+     "level": 45,
+     "tech": "bala_del_eco"
+    },
+    {
+     "level": 49,
+     "tech": "andanada_de_cumbres"
+    },
+    {
+     "level": 51,
+     "tech": "bala_cantora"
+    },
+    {
+     "level": 54,
+     "tech": "coro_de_balas"
+    },
+    {
+     "level": 57,
+     "tech": "bala_sin_sombra"
+    },
+    {
+     "level": 60,
+     "tech": "tiroteo_de_luz"
+    },
+    {
+     "level": 63,
+     "tech": "bala_del_recuerdo"
+    },
+    {
+     "level": 66,
+     "tech": "salva_sin_sombra"
+    },
+    {
+     "level": 67,
+     "tech": "bala_de_luz_blanca"
+    },
+    {
+     "level": 70,
+     "tech": "descarga_de_mediodia"
     }
    ],
    "ultimate": "lluvia_de_estrellas",

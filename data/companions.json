@@ -57,6 +57,70 @@
    {
     "level": 19,
     "tech": "aullido_del_alba"
+   },
+   {
+    "level": 21,
+    "tech": "mordisco_de_escarcha"
+   },
+   {
+    "level": 25,
+    "tech": "tormenta_de_nieve_lunar"
+   },
+   {
+    "level": 29,
+    "tech": "canto_de_la_manada"
+   },
+   {
+    "level": 33,
+    "tech": "luna_de_cristal"
+   },
+   {
+    "level": 37,
+    "tech": "colmillo_de_la_ventisca"
+   },
+   {
+    "level": 41,
+    "tech": "aullido_de_la_luna_llena"
+   },
+   {
+    "level": 45,
+    "tech": "colmillo_de_cumbre"
+   },
+   {
+    "level": 49,
+    "tech": "aullido_del_eco_dorado"
+   },
+   {
+    "level": 51,
+    "tech": "zarpa_de_la_ventisca_dorada"
+   },
+   {
+    "level": 54,
+    "tech": "canto_de_la_nieve_eterna"
+   },
+   {
+    "level": 57,
+    "tech": "colmillo_del_instante"
+   },
+   {
+    "level": 60,
+    "tech": "aullido_sin_reloj"
+   },
+   {
+    "level": 63,
+    "tech": "zarpa_del_recuerdo"
+   },
+   {
+    "level": 66,
+    "tech": "nana_de_la_loba_blanca"
+   },
+   {
+    "level": 67,
+    "tech": "zarpa_de_la_loba_blanca"
+   },
+   {
+    "level": 70,
+    "tech": "cancion_de_shirayuki"
    }
   ]
  }

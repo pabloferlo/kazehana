@@ -74,6 +74,34 @@
     "title": "Guardiana de la Primera Marea"
    },
    "bg": "linear-gradient(180deg,#0a2a5a,#1a5a8a 60%,#061a3a)"
+  },
+  {
+   "id": "cordillera",
+   "order": 6,
+   "name": "Cordillera del Eco Dorado",
+   "tagline": "Aquí las voces se quedan para siempre.",
+   "difficulty": 6,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "cantor_piedra",
+    "name": "El Cantor de Piedra",
+    "title": "Guardián del primer eco"
+   },
+   "bg": "linear-gradient(180deg,#3a2c10,#7a5a20 60%,#1e1406)"
+  },
+  {
+   "id": "ciudadluz",
+   "order": 7,
+   "name": "Ciudad de Luz sin Reloj",
+   "tagline": "Aquí siempre es mediodía y nadie tiene sombra.",
+   "difficulty": 7,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "instante_primero",
+    "name": "El Primer Instante",
+    "title": "Guardián del primer umbral"
+   },
+   "bg": "linear-gradient(180deg,#d8e0f4,#8a98c0 60%,#3a4268)"
   }
  ]
 }

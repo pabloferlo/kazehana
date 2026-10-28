@@ -22,7 +22,9 @@
 | Montañas de Shirogane | T2 | Poco común → Raro | Poco común, Raro · 35 % de **Épico** |
 | Yermo de Akatsuki | T3 | Raro | Raro · 40 % de **Épico** |
 | Reino del Amanecer | T4 | Raro → Legendario | Raro, Épico, Legendario · 25 % de **Mítico** |
-| Mar de Cristal (en curso, v0.8.0) | T5 | Legendario → Mítico | Mítico · probabilidad de **Celestial** |
+| Mar de Cristal (completo, v0.8.2) | T5 | Legendario → Mítico | Mítico · probabilidad de **Celestial** |
+| Cordillera del Eco Dorado (completa, v0.8.5) | T6 | Mítico → Celestial | Mítico/Celestial · probabilidad de **Divino** |
+| Ciudad de Luz sin Reloj (completa, v0.9.0) | T7 | Celestial → Divino | Celestial/Divino · probabilidad de **Cósmico** |
 | Cordillera del Eco Dorado (futuro) | T6 | Mítico → Celestial | Celestial · probabilidad de **Divino** |
 | Ciudad de Luz sin Reloj (futuro) | T7 | Celestial → Divino | Divino · probabilidad de **Cósmico** |
 | Corazón del Alba (futuro) | T8 | Divino → Cósmico | Solo **Cósmico** |

@@ -1,4 +1,4 @@
-# Enemigos del juego (v0.8.0)
+# Enemigos del juego (v0.9.0)
 
 Formato para pasarme habilidades: `id → base → furia`.
 
@@ -36,6 +36,39 @@ Formato para pasarme habilidades: `id → base → furia`.
 | Aullido de Manada | Cada 3 rondas aúlla y sube su ataque durante 3 rondas. |
 | Concha | El primer golpe que recibe cada ronda hace solo un 50 % del daño. |
 | Ámbar | Cada ataque físico que recibe tiene un 35 % de ralentizar a quien lo hizo. |
+| Sol Fijo | Cada 3 rondas (3, 6, 9…) el sol se detiene sobre ella y recibe un 70 % menos de daño. Se anuncia la ronda anterior: guarda tus golpes fuertes. |
+| Cobro de Intereses | Cura un 25 % del daño que inflige a tu equipo. |
+| Protocolo | Cada ronda decreta un elemento prohibido: los ataques de ese elemento le hacen un 75 % menos de daño. Se anuncia al empezar la ronda. |
+| Luz sin Sombra | Su luz no deja dónde esconderse: sus ataques ignoran un 35 % de tu defensa y tus esquivas no funcionan contra ella. |
+| Escudo de Páginas | Un escudo de páginas absorbe el 15 % de sus PV máximos de daño y se regenera cada 4 rondas. Rómpelo de golpe. |
+| Dualidad | Las rondas impares recibe la mitad del daño físico; las pares, la mitad del daño no físico. Combina elementos. |
+| Aura de Olvido | Cada ronda, cada miembro de tu equipo tiene un 15 % de olvidar qué hacía y perder el turno. |
+| Foco de Escena | Cada ronda pone el foco sobre quien más daño hizo la ronda anterior: recibirá un 40 % más de daño hasta que otro lo supere. |
+| Última Palabra | Con menos del 25 % de PV, al final de cada ronda ataca una vez más. |
+| Conjunción | Cuando golpea a un solo objetivo, el resto de tu equipo recibe un 20 % de ese daño. |
+| Reverberación | Al final de cada ronda repite con la mitad de potencia el último ataque que lanzó tu equipo, contra quien lo lanzó. |
+| Ventisca Callada | Al final de cada ronda cada miembro de tu equipo tiene un 25 % de quedar ralentizado. |
+| Rebobinado | La primera vez que iba a caer, el tiempo retrocede: se recupera hasta el 50 % de sus PV (una vez por combate). |
+| Reloj de Arena | Su ataque sube un 6 % por ronda (máx. +60 %). Ralentizarla reinicia la cuenta. |
+| Sobrecalentamiento | Cada ronda acumula calor; al llegar a 5 libera una explosión (18 % de los PV máx. a todo tu equipo, la mitad si te defiendes). Los ataques de hielo le quitan 2 de calor. |
+| Archivo | Lo que ya ha leído no le sorprende: repetir la misma técnica dos turnos seguidos (quien la lance) le hace un 40 % menos de daño. |
+| Cristalización | Cada golpe que recibe lo endurece un 3 % más (máx. 30 %). Un golpe crítico lo rompe y reinicia la capa. |
+| Contrapunto | Cada 4 rondas, al final de la ronda, ataca una vez más. |
+| Avalancha | Cada 3 rondas una avalancha cae sobre quien tiene menos PV (en %): le hace un 15 % de sus PV máximos (la mitad si se defiende). |
+| Réplica | Cada vez que tu equipo se potencia, ella se potencia igual. |
+| Eco Devuelto | Acumula el daño que recibe; cada 3 rondas lo devuelve como eco a todo tu equipo (12 % de lo acumulado a cada uno, máx. 20 % de sus PV). |
+| Cámara de Eco | Cada técnica que gasta MP te devuelve un eco: quien la lanza pierde un 4 % de sus PV máximos. Los ataques básicos no lo provocan. |
+| Voz Robada | Mientras esté en pie, tus curaciones funcionan a la mitad. |
+| Rayo Mudo | Cada 3 rondas un rayo silencioso cae sobre quien más MP tiene: se lo vacía y le hace un 12 % de sus PV máximos. |
+| Contraluz | Su luz te deslumbra: tu equipo no puede asestar golpes críticos contra ella. |
+| Succión | Al final de cada ronda drena un 6 % del MP máximo de cada miembro de tu equipo y se cura un 0,8 % de sus PV por cada uno. |
+| Aguijón Venenoso | Sus ataques tienen un 40 % de envenenar a quien los recibe. |
+| Casco de Cristal | Ningún golpe puede quitarle más del 4 % de sus PV máximos de una vez. |
+| Fases de la Luna | Ciclo de 4 rondas: luna nueva (1, recibe un 20 % más de daño), creciente (2), llena (3, su ataque sube un 35 %) y menguante (4). |
+| Ancla | Sus golpes tienen un 30 % de anclar (ralentizar) a quien los recibe. |
+| Mareas | Las rondas impares es pleamar (recibe un 20 % menos de daño y se cura un 3 %); las pares, bajamar (recibe un 25 % más). |
+| Prisma | Se adapta: el elemento con el que le golpeaste la ronda anterior le hace un 40 % menos de daño. Varía tus elementos. |
+| Tsunami | Cada 4 rondas una ola golpea a todo tu equipo (18 % de PV máx.). Se anuncia la ronda anterior: defenderse la anula por completo. |
 
 ## Enemigos normales
 
@@ -50,7 +83,7 @@ Formato para pasarme habilidades: `id → base → furia`.
 | `oni_menor` | Oni Menor | 6 | 162 | — | Bosque Umbrío, Santuario del Alba Rota, Torre de Kurogane, Mina de Hierro Negro, Lago de la Luna |
 | `arana_gigante` | Araña Gigante | 6 | 148 | — | Santuario de la Raíz Hueca, Bosque Umbrío, Pantano Sombrío |
 | `sombra_bosque` | Sombra del Bosque | 7 | 135 | — | Cueva Helada, Bosque Umbrío, Santuario del Alba Rota, Torre de Kurogane, Lago de la Luna, Gruta del Ermitaño |
-| `lobo_ventisca` | Lobo de Ventisca | 10 | 300 | — | Sendero Helado, Santuario del Silencio, Paso Ventoso, Cueva de la Manada Blanca, Santuario del Lobo Dormido, Glaciar Espejo, Bosque de Escarcha, Cabaña del Cazador Maldito |
+| `lobo_ventisca` | Lobo de la Ventisca | 52 | 4700 | — | Sendero Helado, Santuario del Silencio, Paso Ventoso, Cueva de la Manada Blanca, Santuario del Lobo Dormido, Glaciar Espejo, Bosque de Escarcha, Cabaña del Cazador Maldito, Cresta Helada, Biblioteca de las Voces Selladas, Cueva del Cristal Cantor, Santuario del Coro Olvidado, Glaciar Susurrante, Puente de las Mil Voces, Santuario de la Voz sin Dueño, Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
 | `golem_nieve` | Gólem de Nieve | 11 | 380 | — | Sendero Helado, Santuario del Silencio, Cueva de Cristal, Paso Ventoso, Ventisquero, Bosque de Agujas, Fortaleza Congelada |
 | `espectro_ventisca` | Espectro de la Ventisca | 11 | 260 | — | Santuario del Silencio, Cueva de Cristal, Paso Ventoso, Santuario del Eco Helado, Cueva de la Manada Blanca, Ventisquero, Santuario del Lobo Dormido, Bosque de Escarcha, Cabaña del Cazador Maldito |
 | `cuervo_gelido` | Cuervo Gélido | 10 | 230 | — | Sendero Helado, Santuario del Silencio, Paso Ventoso, Santuario del Eco Helado, Ventisquero, Glaciar Espejo |
@@ -110,6 +143,35 @@ Formato para pasarme habilidades: `id → base → furia`.
 | `medusa_luz` | Medusa Lumínica | 35 | 2150 | — | Playa de Espejos, Arrecife de Cristal, Faro Hundido, Santuario de la Primera Marea, Cueva de las Perlas |
 | `sirena_eco` | Sirena del Eco | 36 | 2450 | — | Playa de Espejos, Arrecife de Cristal, Faro Hundido, Santuario de la Primera Marea, Cueva de las Perlas |
 | `tiburon_espectral` | Tiburón Espectral | 36 | 3150 | — | Playa de Espejos, Arrecife de Cristal, Faro Hundido, Santuario de la Primera Marea |
+| `marinero_espectro` | Marinero Espectral | 38 | 3800 | — | Bahía de los Naufragios, El Último Lamento, Santuario de la Corriente, Cueva de las Sirenas, Arrecife Profundo, Santuario del Abismo Claro |
+| `anguila_voltaica` | Anguila Voltaica | 39 | 2450 | — | Bahía de los Naufragios, El Último Lamento, Santuario de la Corriente, Cueva de las Sirenas, Arrecife Profundo, Templo Sumergido, Santuario del Abismo Claro |
+| `pulpo_tinta` | Pulpo de Tinta Abisal | 39 | 3400 | — | Bahía de los Naufragios, El Último Lamento, Santuario de la Corriente, Cueva de las Sirenas, Arrecife Profundo, Templo Sumergido, Santuario del Abismo Claro |
+| `golem_coral` | Gólem de Coral | 40 | 4500 | — | Santuario de la Corriente, Cueva de las Sirenas, Arrecife Profundo, Templo Sumergido, Santuario del Abismo Claro |
+| `gaviota_tormenta` | Gaviota de Tormenta | 42 | 2500 | — | Isla del Faro Apagado, Faro Gemelo, Santuario del Eclipse Marino, Gruta de las Medusas Reinas, Archipiélago de los Espejos, Cementerio de Barcos de Cristal, Santuario de la Madre Loba |
+| `nautilo_antiguo` | Nautilo Antiguo | 43 | 4800 | — | Isla del Faro Apagado, Faro Gemelo, Santuario del Eclipse Marino, Gruta de las Medusas Reinas, Archipiélago de los Espejos, Cementerio de Barcos de Cristal, Santuario de la Madre Loba |
+| `espectro_ballenero` | Espectro Ballenero | 44 | 3900 | — | Isla del Faro Apagado, Faro Gemelo, Santuario del Eclipse Marino, Gruta de las Medusas Reinas, Archipiélago de los Espejos, Cementerio de Barcos de Cristal, Santuario de la Madre Loba |
+| `lobo_marino_cristal` | Lobo Marino de Cristal | 44 | 3600 | — | Isla del Faro Apagado, Faro Gemelo, Santuario del Eclipse Marino, Gruta de las Medusas Reinas, Archipiélago de los Espejos, Cementerio de Barcos de Cristal, Santuario de la Madre Loba |
+| `eco_guerrero` | Eco de Guerrero | 47 | 5000 | — | Sendero de los Ecos, Cañón de las Voces, Templo de la Campana Quebrada, Santuario del Primer Eco, Cueva de los Susurros Dorados, Paso de la Ventisca Dorada, Fortaleza del Trueno Mudo, Santuario de la Voz Helada |
+| `cabra_dorada` | Cabra Montés Dorada | 48 | 4300 | — | Sendero de los Ecos, Cañón de las Voces, Templo de la Campana Quebrada, Santuario del Primer Eco, Cueva de los Susurros Dorados, Paso de la Ventisca Dorada, Fortaleza del Trueno Mudo, Santuario de la Voz Helada |
+| `aguila_resonante` | Águila Resonante | 48 | 3300 | — | Sendero de los Ecos, Cañón de las Voces, Templo de la Campana Quebrada, Santuario del Primer Eco, Cueva de los Susurros Dorados, Paso de la Ventisca Dorada, Fortaleza del Trueno Mudo, Santuario de la Voz Helada |
+| `golem_cuarzo` | Gólem de Cuarzo | 49 | 6200 | — | Sendero de los Ecos, Cañón de las Voces, Templo de la Campana Quebrada, Santuario del Primer Eco, Cueva de los Susurros Dorados, Paso de la Ventisca Dorada, Fortaleza del Trueno Mudo, Santuario de la Voz Helada |
+| `monje_hueco` | Monje Hueco | 51 | 5400 | — | Cresta Helada, Biblioteca de las Voces Selladas, Cueva del Cristal Cantor, Santuario del Coro Olvidado, Glaciar Susurrante, Puente de las Mil Voces, Santuario de la Voz sin Dueño, Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
+| `lobo_ventisca` | Lobo de la Ventisca | 52 | 4700 | — | Sendero Helado, Santuario del Silencio, Paso Ventoso, Cueva de la Manada Blanca, Santuario del Lobo Dormido, Glaciar Espejo, Bosque de Escarcha, Cabaña del Cazador Maldito, Cresta Helada, Biblioteca de las Voces Selladas, Cueva del Cristal Cantor, Santuario del Coro Olvidado, Glaciar Susurrante, Puente de las Mil Voces, Santuario de la Voz sin Dueño, Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
+| `yeti_cristal` | Yeti de Cristal | 53 | 7000 | — | Cresta Helada, Biblioteca de las Voces Selladas, Cueva del Cristal Cantor, Santuario del Coro Olvidado, Glaciar Susurrante, Puente de las Mil Voces, Santuario de la Voz sin Dueño, Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
+| `arpia_coro` | Arpía del Coro | 53 | 4200 | — | Cresta Helada, Biblioteca de las Voces Selladas, Cueva del Cristal Cantor, Santuario del Coro Olvidado, Glaciar Susurrante, Puente de las Mil Voces, Santuario de la Voz sin Dueño, Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
+| `eco_estelar` | Eco Estelar | 55 | 4800 | — | Observatorio del Último Eco, Santuario del Eco Dorado, Cueva de la Nieve Callada |
+| `centinela_sin_sombra` | Centinela sin Sombra | 59 | 6600 | — | Avenida sin Sombras, Calle de los Relojes Parados, Torre del Reloj Parado, Santuario del Primer Instante, Sótano de los Engranajes, Jardín sin Sombra |
+| `mariposa_horaria` | Mariposa Horaria | 60 | 4300 | — | Avenida sin Sombras, Calle de los Relojes Parados, Torre del Reloj Parado, Santuario del Primer Instante, Sótano de los Engranajes, Jardín sin Sombra |
+| `automata_de_luz` | Autómata de Luz | 60 | 7400 | — | Avenida sin Sombras, Calle de los Relojes Parados, Torre del Reloj Parado, Santuario del Primer Instante, Sótano de los Engranajes, Jardín sin Sombra |
+| `golem_engranaje` | Gólem de Engranajes | 61 | 9000 | — | Avenida sin Sombras, Calle de los Relojes Parados, Torre del Reloj Parado, Santuario del Primer Instante, Sótano de los Engranajes, Jardín sin Sombra |
+| `reflejo_vacio` | Reflejo Vacío | 62 | 7400 | — | Barrio de los Espejos, Archivo de los Nombres, Santuario de la Memoria Detenida, Galería de los Retratos Vacíos, Canal sin Agua, Teatro de las Voces Calladas, Santuario del Nombre Borrado |
+| `escriba_luz` | Escriba de Luz | 63 | 6000 | — | Barrio de los Espejos, Archivo de los Nombres, Santuario de la Memoria Detenida, Galería de los Retratos Vacíos, Canal sin Agua, Teatro de las Voces Calladas, Santuario del Nombre Borrado |
+| `paloma_cristal` | Paloma de Cristal | 64 | 5200 | — | Barrio de los Espejos, Archivo de los Nombres, Santuario de la Memoria Detenida, Galería de los Retratos Vacíos, Canal sin Agua, Teatro de las Voces Calladas, Santuario del Nombre Borrado |
+| `estatua_viviente` | Estatua Viviente | 65 | 10000 | — | Archivo de los Nombres, Santuario de la Memoria Detenida, Galería de los Retratos Vacíos, Canal sin Agua, Teatro de las Voces Calladas, Santuario del Nombre Borrado |
+| `sombra_prestada` | Sombra Prestada | 67 | 8600 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Cámara de las Sombras Impagadas, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
+| `heraldo_mediodia` | Heraldo del Mediodía | 68 | 7000 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Cámara de las Sombras Impagadas, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
+| `lampara_viviente` | Lámpara Viviente | 69 | 6200 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Cámara de las Sombras Impagadas, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
+| `sol_de_bolsillo` | Sol de Bolsillo | 70 | 11800 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
 
 ## Jefes
 
@@ -169,3 +231,39 @@ Formato para pasarme habilidades: `id → base → furia`.
 | `farero_ahogado` | El Farero Ahogado | 36 | 11500 | Haz del Faro → Aura Helada | Faro Hundido |
 | `gran_ostra` | Gran Ostra Perlada | 36 | 9800 | Concha → Dureza | Cueva de las Perlas |
 | `loba_memorial` | Loba del Recuerdo | 37 | 10800 | Aullido de Manada → Intimidación | Santuario de la Primera Marea |
+| `capitan_ancla` | Capitán Ancla Negra | 38 | 17000 | Ancla → Intimidación | El Último Lamento |
+| `rey_cangrejo` | Rey Cangrejo Prismático | 39 | 14500 | Prisma → Dureza | Cueva de las Sirenas |
+| `leviatan_corriente` | Leviatán de la Corriente | 40 | 12500 | Mareas → Aura Helada | Santuario de la Corriente |
+| `coral_ancestral` | Coral Ancestral | 40 | 9000 | Regeneración → Espinas | Templo Sumergido |
+| `ballena_abisal` | Ballena Cristalina del Abismo | 41 | 13500 | Tsunami → Canción de Cuna | Santuario del Abismo Claro |
+| `hermana_faro` | Mei, Hermana del Faro Gemelo | 42 | 13000 | Contraluz → Espejo | Faro Gemelo |
+| `kraken_eclipse` | Kraken del Eclipse | 43 | 9500 | Succión → Dureza | Santuario del Eclipse Marino |
+| `medusa_reina` | Medusa Reina | 43 | 22000 | Aguijón Venenoso → Sobrecarga | Gruta de las Medusas Reinas |
+| `almirante_cristal` | Almirante Cristalino | 44 | 11500 | Casco de Cristal → Intimidación | Cementerio de Barcos de Cristal |
+| `loba_madre` | Shirorei, Madre de la Manada | 46 | 16500 | Fases de la Luna → Amor filial | Santuario de la Madre Loba |
+| `campanero_dorado` | Sōsuke, el Campanero | 47 | 14500 | Eco Devuelto → Dureza | Templo de la Campana Quebrada |
+| `cantor_piedra` | El Cantor de Piedra | 48 | 10000 | Cámara de Eco → Regeneración | Santuario del Primer Eco |
+| `eco_hambriento` | Eco Hambriento | 48 | 13500 | Voz Robada → Insomnio | Cueva de los Susurros Dorados |
+| `general_raiko` | General Raikō | 49 | 12500 | Intimidación → Dureza | Fortaleza del Trueno Mudo |
+| `condor_mudo` | Cóndor del Trueno Mudo | 50 | 7500 | Rayo Mudo → Aullido de Manada | Santuario de la Voz Helada |
+| `archivista_muda` | Maestra Sayo, la Archivista | 51 | 16000 | Archivo → Insomnio | Biblioteca de las Voces Selladas |
+| `cristal_cantor` | Cristal Cantor | 52 | 14500 | Cristalización → Dureza | Cueva del Cristal Cantor |
+| `directora_coro` | Hizuru, Directora del Coro Olvidado | 53 | 17000 | Contrapunto → Polen Somnífero | Santuario del Coro Olvidado |
+| `guardian_puente` | Guardián del Puente de las Mil Voces | 53 | 11500 | Avalancha → Dureza | Puente de las Mil Voces |
+| `voz_sin_dueno` | La Voz sin Dueño | 54 | 16500 | Réplica → Amor filial | Santuario de la Voz sin Dueño |
+| `astronomo_hueco` | Astrónomo Hueco | 55 | 15500 | Conjunción → Espejo | Observatorio del Último Eco |
+| `sombra_nieve` | Sombra de la Nieve Callada | 56 | 15000 | Ventisca Callada → Aura Helada | Cueva de la Nieve Callada |
+| `eco_dorado` | El Eco Dorado | 58 | 18000 | Reverberación → Aullido de Manada | Santuario del Eco Dorado |
+| `relojero_detenido` | Ōgi, el Relojero Detenido | 59 | 22000 | Rebobinado | Torre del Reloj Parado |
+| `engranaje_madre` | Engranaje Madre | 60 | 25000 | Sobrecalentamiento | Sótano de los Engranajes |
+| `instante_primero` | El Primer Instante | 61 | 27000 | Reloj de Arena → Insomnio | Santuario del Primer Instante |
+| `bibliotecario` | El Bibliotecario sin Nombre | 62 | 26000 | Escudo de Páginas → Insomnio | Archivo de los Nombres |
+| `retrato_vacio` | El Retrato Vacío | 63 | 24000 | Dualidad → Espejo | Galería de los Retratos Vacíos |
+| `guardiana_memoria` | Kanae, la Guardiana de la Memoria | 64 | 27000 | Aura de Olvido → Aullido de Manada | Santuario de la Memoria Detenida |
+| `actor_sin_rostro` | El Actor sin Rostro | 65 | 31000 | Foco de Escena → Intimidación | Teatro de las Voces Calladas |
+| `escribano_ceniza` | El Escribano de Cenizas | 66 | 35000 | Última Palabra → Sol Radiante | Santuario del Nombre Borrado |
+| `heliografo` | El Heliógrafo | 67 | 54000 | Sol Fijo → Contrapunto | Observatorio del Sol Fijo |
+| `prestamista` | El Prestamista de Sombras | 68 | 46000 | Cobro de Intereses → Latido del Sol | Santuario del Sol Inmóvil |
+| `sombra_impaga` | La Sombra Impaga | 68 | 46000 | Velo Nocturno → Pánico | Cámara de las Sombras Impagadas |
+| `chambelan` | El Chambelán del Reloj Roto | 69 | 37000 | Protocolo → Intimidación | Palacio de la Luz Quieta |
+| `dama_luz` | La Dama de la Luz | 70 | 42000 | Luz sin Sombra → Rebobinado | Santuario de la Dama de la Luz |

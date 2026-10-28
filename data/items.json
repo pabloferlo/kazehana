@@ -3620,7 +3620,8 @@
     "spd": 5
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_mythic_grimorio": {
    "name": "Códice del Abismo Cristalino",
@@ -3636,7 +3637,8 @@
     "mp": 48
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_mythic_guantelete": {
    "name": "Puños del Abismo Cristalino",
@@ -3653,7 +3655,8 @@
     "hp": 90
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_mythic_pistola": {
    "name": "Revólver del Abismo Cristalino",
@@ -3669,7 +3672,8 @@
     "spd": 11
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_mythic_a_pesada": {
    "name": "Peto del Abismo Cristalino",
@@ -3684,7 +3688,8 @@
     "hp": 156
    },
    "mprice": 27040,
-   "gen": true
+   "gen": true,
+   "price": 21630
   },
   "g5_mythic_a_ligera": {
    "name": "Túnica del Abismo Cristalino",
@@ -3701,7 +3706,8 @@
     "mp": 78
    },
    "mprice": 27040,
-   "gen": true
+   "gen": true,
+   "price": 21630
   },
   "g5_mythic_x_a": {
    "name": "Talismán del Abismo Cristalino",
@@ -3717,7 +3723,8 @@
     "ultGain": 4
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_mythic_x_b": {
    "name": "Pendiente del Abismo Cristalino",
@@ -3734,7 +3741,8 @@
     "ultGain": 4
    },
    "mprice": 36000,
-   "gen": true
+   "gen": true,
+   "price": 28800
   },
   "g5_celestial_filo": {
    "name": "Sable de la Primera Ola",
@@ -3910,6 +3918,1124 @@
    "price": 380,
    "desc": "Si la acercas al oído, oyes un aullido muy lejano. Yukine se queda en silencio.",
    "affinity": 12
+  },
+  "lagrima_ballena": {
+   "name": "Lágrima de Ballena",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🫧",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Una burbuja que canta bajito cuando la sostienes.",
+   "bonus": {
+    "atk": 26,
+    "mag": 30,
+    "hp": 270,
+    "spd": 10,
+    "ultGain": 5
+   },
+   "mprice": 27500
+  },
+  "tinta_abismal": {
+   "name": "Tinta Abisal",
+   "type": "key",
+   "icon": "🖋️",
+   "desc": "Una tinta oscura que no se seca. Dibuja líneas que nadie lee."
+  },
+  "perla_rosa": {
+   "name": "Perla Rosa",
+   "type": "gift",
+   "icon": "🌸",
+   "price": 420,
+   "desc": "Una perla cálida con un reflejo rosa. Yukine la guarda con cuidado.",
+   "affinity": 12
+  },
+  "brujula_marinera": {
+   "name": "Brújula Marinera",
+   "type": "gift",
+   "icon": "🧭",
+   "price": 440,
+   "desc": "La aguja no apunta al norte: apunta a lo que más echas de menos. Yukine tarda en soltarla.",
+   "affinity": 14
+  },
+  "colmillo_madre": {
+   "name": "Colmillo de la Madre",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🦷",
+   "rarity": "mythic",
+   "tier": 5,
+   "desc": "Un colmillo blanco, frío y cálido a la vez. Yukine no sabe por qué lo reconoce.",
+   "bonus": {
+    "atk": 30,
+    "mag": 28,
+    "hp": 300,
+    "spd": 12,
+    "ultGain": 6
+   },
+   "mprice": 27500
+  },
+  "pluma_tormenta": {
+   "name": "Pluma de Tormenta",
+   "type": "key",
+   "icon": "🪶",
+   "desc": "Una pluma gris que hace cosquillas con electricidad."
+  },
+  "linterna_gemela": {
+   "name": "Linterna Gemela",
+   "type": "gift",
+   "icon": "🏮",
+   "price": 460,
+   "desc": "Dos luces pequeñas que parpadean a la vez. Yukine se queda mirándolas.",
+   "affinity": 14
+  },
+  "collar_de_manada": {
+   "name": "Collar de Manada",
+   "type": "gift",
+   "icon": "📿",
+   "price": 480,
+   "desc": "Un collar de colmillos pulidos, cada uno con una muesca distinta. Yukine lo aprieta en la mano.",
+   "affinity": 16
+  },
+  "g6_mythic_filo": {
+   "name": "Espada del Eco Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "mythic",
+   "tier": 6,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza mítica.",
+   "bonus": {
+    "atk": 68,
+    "spd": 5
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_mythic_grimorio": {
+   "name": "Grimorio del Eco Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "mythic",
+   "tier": 6,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza mítica.",
+   "bonus": {
+    "mag": 68,
+    "mp": 54
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_mythic_guantelete": {
+   "name": "Guanteletes del Eco Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "mythic",
+   "tier": 6,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza mítica.",
+   "bonus": {
+    "atk": 58,
+    "def": 17,
+    "hp": 102
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_mythic_pistola": {
+   "name": "Pistola del Eco Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "mythic",
+   "tier": 6,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza mítica.",
+   "bonus": {
+    "atk": 61,
+    "spd": 12
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_mythic_a_pesada": {
+   "name": "Coraza del Eco Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "mythic",
+   "tier": 6,
+   "desc": "Armadura pesada de rareza mítica.",
+   "bonus": {
+    "def": 58,
+    "hp": 174
+   },
+   "mprice": 33640,
+   "gen": true,
+   "price": 15140
+  },
+  "g6_mythic_a_ligera": {
+   "name": "Manto del Eco Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "mythic",
+   "tier": 6,
+   "desc": "Armadura ligera de rareza mítica.",
+   "bonus": {
+    "def": 41,
+    "mag": 23,
+    "spd": 9,
+    "mp": 87
+   },
+   "mprice": 33640,
+   "gen": true,
+   "price": 15140
+  },
+  "g6_mythic_x_a": {
+   "name": "Amuleto del Eco Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "mythic",
+   "tier": 6,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "hp": 261,
+    "def": 17,
+    "ultGain": 4
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_mythic_x_b": {
+   "name": "Anillo del Eco Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "mythic",
+   "tier": 6,
+   "desc": "Accesorio de rareza mítica.",
+   "bonus": {
+    "atk": 24,
+    "mag": 24,
+    "spd": 8,
+    "ultGain": 4
+   },
+   "mprice": 46240,
+   "gen": true,
+   "price": 20810
+  },
+  "g6_celestial_filo": {
+   "name": "Katana de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "celestial",
+   "tier": 6,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza celestial.",
+   "bonus": {
+    "atk": 80,
+    "spd": 6
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_celestial_grimorio": {
+   "name": "Códice de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "celestial",
+   "tier": 6,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza celestial.",
+   "bonus": {
+    "mag": 80,
+    "mp": 64
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_celestial_guantelete": {
+   "name": "Puños de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "celestial",
+   "tier": 6,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza celestial.",
+   "bonus": {
+    "atk": 68,
+    "def": 20,
+    "hp": 120
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_celestial_pistola": {
+   "name": "Revólver de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "celestial",
+   "tier": 6,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza celestial.",
+   "bonus": {
+    "atk": 72,
+    "spd": 14
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_celestial_a_pesada": {
+   "name": "Peto de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Armadura pesada de rareza celestial.",
+   "bonus": {
+    "def": 70,
+    "hp": 210
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g6_celestial_a_ligera": {
+   "name": "Túnica de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Armadura ligera de rareza celestial.",
+   "bonus": {
+    "def": 49,
+    "mag": 28,
+    "spd": 10,
+    "mp": 105
+   },
+   "mprice": 54880,
+   "gen": true
+  },
+  "g6_celestial_x_a": {
+   "name": "Talismán de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "hp": 315,
+    "def": 21,
+    "ultGain": 5
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_celestial_x_b": {
+   "name": "Pendiente de las Cumbres Resonantes",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "atk": 28,
+    "mag": 28,
+    "spd": 10,
+    "ultGain": 5
+   },
+   "mprice": 71680,
+   "gen": true
+  },
+  "g6_divine_filo": {
+   "name": "Sable del Último Eco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "divine",
+   "tier": 6,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza divina.",
+   "bonus": {
+    "atk": 92,
+    "spd": 7
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "g6_divine_grimorio": {
+   "name": "Tomo del Último Eco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "divine",
+   "tier": 6,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza divina.",
+   "bonus": {
+    "mag": 92,
+    "mp": 74
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "g6_divine_guantelete": {
+   "name": "Manoplas del Último Eco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "divine",
+   "tier": 6,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza divina.",
+   "bonus": {
+    "atk": 78,
+    "def": 23,
+    "hp": 138
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "g6_divine_pistola": {
+   "name": "Pistola del Último Eco",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "divine",
+   "tier": 6,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza divina.",
+   "bonus": {
+    "atk": 83,
+    "spd": 17
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "g6_divine_a_pesada": {
+   "name": "Armadura del Último Eco",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "divine",
+   "tier": 6,
+   "desc": "Armadura pesada de rareza divina.",
+   "bonus": {
+    "def": 82,
+    "hp": 246
+   },
+   "mprice": 83380,
+   "gen": true
+  },
+  "g6_divine_a_ligera": {
+   "name": "Capa del Último Eco",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "divine",
+   "tier": 6,
+   "desc": "Armadura ligera de rareza divina.",
+   "bonus": {
+    "def": 57,
+    "mag": 33,
+    "spd": 12,
+    "mp": 123
+   },
+   "mprice": 83380,
+   "gen": true
+  },
+  "g6_divine_x_a": {
+   "name": "Colgante del Último Eco",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "divine",
+   "tier": 6,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "hp": 369,
+    "def": 25,
+    "ultGain": 6
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "g6_divine_x_b": {
+   "name": "Brazalete del Último Eco",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "divine",
+   "tier": 6,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "atk": 32,
+    "mag": 32,
+    "spd": 11,
+    "ultGain": 6
+   },
+   "mprice": 104950,
+   "gen": true
+  },
+  "campanilla_dorada": {
+   "name": "Campanilla Dorada",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🔔",
+   "rarity": "mythic",
+   "tier": 6,
+   "desc": "Una campanilla que suena un instante después de que la muevas.",
+   "bonus": {
+    "atk": 34,
+    "mag": 32,
+    "hp": 340,
+    "spd": 12,
+    "ultGain": 5
+   },
+   "mprice": 47520
+  },
+  "eco_shirayuki": {
+   "name": "Eco de Shirayuki",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🎐",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Un carillón de cristal que guarda una voz muy lejana. Yukine no se atreve a escucharla entera.",
+   "bonus": {
+    "atk": 40,
+    "mag": 42,
+    "hp": 400,
+    "spd": 14,
+    "ultGain": 7
+   },
+   "mprice": 47520
+  },
+  "campanilla_eco": {
+   "name": "Campanilla de Eco",
+   "type": "key",
+   "icon": "🔔",
+   "desc": "Una campanilla pequeña que se cae del águila al chillar."
+  },
+  "campana_del_valle": {
+   "name": "Campana de Viento",
+   "type": "gift",
+   "icon": "🎐",
+   "price": 520,
+   "desc": "Suena sola, con una nota que parece recordar algo. Yukine inclina la cabeza para oírla.",
+   "affinity": 16
+  },
+  "cristal_de_voz": {
+   "name": "Cristal de Voz",
+   "type": "gift",
+   "icon": "🔮",
+   "price": 540,
+   "desc": "Si hablas a su lado, el cristal repite tus palabras muy bajito. Yukine se ríe sin querer.",
+   "affinity": 18
+  },
+  "nota_olvidada": {
+   "name": "Nota Olvidada",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🎵",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Una nota que se queda flotando cuando la sueltas. Yukine dice que es la primera de una nana.",
+   "bonus": {
+    "atk": 42,
+    "mag": 44,
+    "hp": 420,
+    "spd": 15,
+    "ultGain": 7
+   },
+   "mprice": 47520
+  },
+  "partitura_vieja": {
+   "name": "Partitura Vieja",
+   "type": "key",
+   "icon": "📜",
+   "desc": "Una hoja de música amarillenta. Las notas se mueven si no la miras."
+  },
+  "diapason_dorado": {
+   "name": "Diapasón Dorado",
+   "type": "gift",
+   "icon": "🎼",
+   "price": 560,
+   "desc": "Suena una sola nota, siempre la misma, siempre limpia. Yukine la tararea sin darse cuenta.",
+   "affinity": 18
+  },
+  "flauta_de_hueso": {
+   "name": "Flauta de Hueso",
+   "type": "gift",
+   "icon": "🪈",
+   "price": 580,
+   "desc": "Tallada por un pastor hace siglos. Yukine la prueba y le sale una nana.",
+   "affinity": 20
+  },
+  "g7_celestial_filo": {
+   "name": "Espada de la Luz Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "celestial",
+   "tier": 7,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza celestial.",
+   "bonus": {
+    "atk": 90,
+    "spd": 7
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_celestial_grimorio": {
+   "name": "Grimorio de la Luz Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "celestial",
+   "tier": 7,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza celestial.",
+   "bonus": {
+    "mag": 90,
+    "mp": 72
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_celestial_guantelete": {
+   "name": "Guanteletes de la Luz Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "celestial",
+   "tier": 7,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza celestial.",
+   "bonus": {
+    "atk": 76,
+    "def": 22,
+    "hp": 135
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_celestial_pistola": {
+   "name": "Pistola de la Luz Quieta",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "celestial",
+   "tier": 7,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza celestial.",
+   "bonus": {
+    "atk": 81,
+    "spd": 16
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_celestial_a_pesada": {
+   "name": "Coraza de la Luz Quieta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "celestial",
+   "tier": 7,
+   "desc": "Armadura pesada de rareza celestial.",
+   "bonus": {
+    "def": 80,
+    "hp": 240
+   },
+   "mprice": 71680,
+   "gen": true,
+   "price": 32260
+  },
+  "g7_celestial_a_ligera": {
+   "name": "Manto de la Luz Quieta",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "celestial",
+   "tier": 7,
+   "desc": "Armadura ligera de rareza celestial.",
+   "bonus": {
+    "def": 56,
+    "mag": 32,
+    "spd": 12,
+    "mp": 120
+   },
+   "mprice": 71680,
+   "gen": true,
+   "price": 32260
+  },
+  "g7_celestial_x_a": {
+   "name": "Amuleto de la Luz Quieta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "celestial",
+   "tier": 7,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "hp": 360,
+    "def": 24,
+    "ultGain": 6
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_celestial_x_b": {
+   "name": "Anillo de la Luz Quieta",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "celestial",
+   "tier": 7,
+   "desc": "Accesorio de rareza celestial.",
+   "bonus": {
+    "atk": 31,
+    "mag": 31,
+    "spd": 11,
+    "ultGain": 6
+   },
+   "mprice": 90720,
+   "gen": true,
+   "price": 40820
+  },
+  "g7_divine_filo": {
+   "name": "Katana del Instante Eterno",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "divine",
+   "tier": 7,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza divina.",
+   "bonus": {
+    "atk": 104,
+    "spd": 8
+   },
+   "mprice": 134120,
+   "gen": true,
+   "price": 60350
+  },
+  "g7_divine_grimorio": {
+   "name": "Códice del Instante Eterno",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "divine",
+   "tier": 7,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza divina.",
+   "bonus": {
+    "mag": 104,
+    "mp": 83
+   },
+   "mprice": 134120,
+   "gen": true,
+   "price": 60350
+  },
+  "g7_divine_guantelete": {
+   "name": "Puños del Instante Eterno",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "divine",
+   "tier": 7,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza divina.",
+   "bonus": {
+    "atk": 88,
+    "def": 26,
+    "hp": 156
+   },
+   "mprice": 134120,
+   "gen": true,
+   "price": 60350
+  },
+  "g7_divine_pistola": {
+   "name": "Revólver del Instante Eterno",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "divine",
+   "tier": 7,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza divina.",
+   "bonus": {
+    "atk": 94,
+    "spd": 19
+   },
+   "mprice": 134120,
+   "gen": true,
+   "price": 60350
+  },
+  "g7_divine_a_pesada": {
+   "name": "Peto del Instante Eterno",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Armadura pesada de rareza divina.",
+   "bonus": {
+    "def": 94,
+    "hp": 282
+   },
+   "mprice": 109570,
+   "gen": true,
+   "price": 49310
+  },
+  "g7_divine_a_ligera": {
+   "name": "Túnica del Instante Eterno",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Armadura ligera de rareza divina.",
+   "bonus": {
+    "def": 66,
+    "mag": 38,
+    "spd": 14,
+    "mp": 141
+   },
+   "mprice": 109570,
+   "gen": true,
+   "price": 49310
+  },
+  "g7_divine_x_a": {
+   "name": "Talismán del Instante Eterno",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "hp": 423,
+    "def": 28,
+    "ultGain": 7
+   },
+   "mprice": 134120,
+   "gen": true
+  },
+  "g7_divine_x_b": {
+   "name": "Pendiente del Instante Eterno",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "atk": 36,
+    "mag": 36,
+    "spd": 12,
+    "ultGain": 7
+   },
+   "mprice": 134120,
+   "gen": true
+  },
+  "g7_cosmic_filo": {
+   "name": "Sable sin Reloj",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "cosmic",
+   "tier": 7,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza cósmica.",
+   "bonus": {
+    "atk": 120,
+    "spd": 10
+   },
+   "mprice": 195840,
+   "gen": true,
+   "price": 88130
+  },
+  "g7_cosmic_grimorio": {
+   "name": "Tomo sin Reloj",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "cosmic",
+   "tier": 7,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza cósmica.",
+   "bonus": {
+    "mag": 120,
+    "mp": 96
+   },
+   "mprice": 195840,
+   "gen": true,
+   "price": 88130
+  },
+  "g7_cosmic_guantelete": {
+   "name": "Manoplas sin Reloj",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "cosmic",
+   "tier": 7,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza cósmica.",
+   "bonus": {
+    "atk": 102,
+    "def": 30,
+    "hp": 180
+   },
+   "mprice": 195840,
+   "gen": true
+  },
+  "g7_cosmic_pistola": {
+   "name": "Pistola sin Reloj",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "cosmic",
+   "tier": 7,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza cósmica.",
+   "bonus": {
+    "atk": 108,
+    "spd": 22
+   },
+   "mprice": 195840,
+   "gen": true
+  },
+  "g7_cosmic_a_pesada": {
+   "name": "Armadura sin Reloj",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "cosmic",
+   "tier": 7,
+   "desc": "Armadura pesada de rareza cósmica.",
+   "bonus": {
+    "def": 108,
+    "hp": 324
+   },
+   "mprice": 158630,
+   "gen": true
+  },
+  "g7_cosmic_a_ligera": {
+   "name": "Capa sin Reloj",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "cosmic",
+   "tier": 7,
+   "desc": "Armadura ligera de rareza cósmica.",
+   "bonus": {
+    "def": 76,
+    "mag": 43,
+    "spd": 16,
+    "mp": 162
+   },
+   "mprice": 158630,
+   "gen": true,
+   "price": 71380
+  },
+  "g7_cosmic_x_a": {
+   "name": "Colgante sin Reloj",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "cosmic",
+   "tier": 7,
+   "desc": "Accesorio de rareza cósmica.",
+   "bonus": {
+    "hp": 486,
+    "def": 32,
+    "ultGain": 8
+   },
+   "mprice": 195840,
+   "gen": true
+  },
+  "g7_cosmic_x_b": {
+   "name": "Brazalete sin Reloj",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "cosmic",
+   "tier": 7,
+   "desc": "Accesorio de rareza cósmica.",
+   "bonus": {
+    "atk": 42,
+    "mag": 42,
+    "spd": 14,
+    "ultGain": 8
+   },
+   "mprice": 195840,
+   "gen": true
+  },
+  "voz_dorada": {
+   "name": "Voz Dorada",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🔔",
+   "rarity": "celestial",
+   "tier": 6,
+   "desc": "Una campana diminuta que repite tu nombre cuando la sacudes.",
+   "bonus": {
+    "atk": 46,
+    "mag": 48,
+    "hp": 460,
+    "spd": 16,
+    "ultGain": 8
+   },
+   "mprice": 47520
+  },
+  "reloj_roto": {
+   "name": "Reloj Roto",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🕰️",
+   "rarity": "celestial",
+   "tier": 7,
+   "desc": "Un reloj parado en el instante exacto. Si lo miras mucho, el tiempo se queda quieto un segundo.",
+   "bonus": {
+    "atk": 54,
+    "mag": 56,
+    "hp": 520,
+    "spd": 18,
+    "ultGain": 9
+   },
+   "mprice": 55440
+  },
+  "engranaje_dorado": {
+   "name": "Engranaje Dorado",
+   "type": "key",
+   "icon": "⚙️",
+   "desc": "Un engranaje de oro que sigue girando solo."
+  },
+  "pluma_de_luz": {
+   "name": "Pluma de Luz",
+   "type": "gift",
+   "icon": "🪶",
+   "price": 600,
+   "desc": "Una pluma que no proyecta sombra. Yukine la pasa entre los dedos con una sonrisa.",
+   "affinity": 20
+  },
+  "reloj_de_bolsillo": {
+   "name": "Reloj de Bolsillo Parado",
+   "type": "gift",
+   "icon": "⌚",
+   "price": 620,
+   "desc": "Parado en las doce menos cinco. Yukine lo guarda: «ese minuto es nuestro».",
+   "affinity": 22
+  },
+  "nombre_ceniza": {
+   "name": "Nombre en Ceniza",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🪶",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Un puñado de ceniza que tiene forma de letras. Si las miras mucho casi se leen.",
+   "bonus": {
+    "atk": 62,
+    "mag": 64,
+    "hp": 600,
+    "spd": 20,
+    "ultGain": 10
+   },
+   "mprice": 55440
+  },
+  "hoja_en_blanco": {
+   "name": "Hoja en Blanco",
+   "type": "key",
+   "icon": "📄",
+   "desc": "Una hoja que parece vacía. Si la inclinas, se ve un nombre medio borrado."
+  },
+  "sello_de_lacre": {
+   "name": "Sello de Lacre",
+   "type": "gift",
+   "icon": "🔴",
+   "price": 640,
+   "desc": "Un sello con una marca que no se entiende. Yukine lo huele: «a cera... y a lágrimas».",
+   "affinity": 22
+  },
+  "carta_sin_destinatario": {
+   "name": "Carta sin Destinatario",
+   "type": "gift",
+   "icon": "✉️",
+   "price": 660,
+   "desc": "Una carta cerrada sin nombre. Yukine la guarda sin atreverse a abrirla.",
+   "affinity": 24
+  },
+  "pagare_sin_firma": {
+   "name": "Pagaré sin Firma",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "📜",
+   "rarity": "divine",
+   "tier": 7,
+   "desc": "Un pagaré en blanco. Quien lo lleva no debe nada a nadie… y todos le deben algo.",
+   "bonus": {
+    "atk": 64,
+    "mag": 62,
+    "hp": 620,
+    "spd": 22,
+    "ultGain": 10
+   },
+   "mprice": 55440
+  },
+  "hoja_de_luz": {
+   "name": "Hoja de Luz",
+   "type": "key",
+   "icon": "🍃",
+   "desc": "Una hoja que brilla sin que le dé el sol. No proyecta sombra, y eso la hace valiosa."
+  },
+  "sombra_de_shirayuki": {
+   "name": "Sombra de Shirayuki",
+   "type": "key",
+   "icon": "🌑",
+   "desc": "Una sombra pequeña con forma de loba, doblada como un pañuelo. La Dama la llevó doscientos años para no perderla."
+  },
+  "lampara_sin_aceite": {
+   "name": "Lámpara sin Aceite",
+   "type": "gift",
+   "icon": "🏮",
+   "price": 680,
+   "desc": "Una lámpara que luce sin llama. Yukine la acuna: «calienta, como su abrazo».",
+   "affinity": 24
+  },
+  "peine_de_perla": {
+   "name": "Peine de Perla",
+   "type": "gift",
+   "icon": "🪮",
+   "price": 700,
+   "desc": "Un peine de perla muy antiguo. Yukine lo pasa por el pelo de la loba que lleva dentro: «me lo cepillaba ella».",
+   "affinity": 26
   }
  }
 }

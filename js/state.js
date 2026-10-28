@@ -12,7 +12,7 @@ const FILES = ['classes', 'techniques', 'regions', 'npcs', 'prologue', 'enemies'
 /** Carga todos los JSON de /data. Requiere servidor HTTP (GitHub Pages sirve). */
 export async function loadData() {
   await Promise.all(FILES.map(async f => {
-    const r = await fetch(`data/${f}.json?v=13`);
+    const r = await fetch(`data/${f}.json?v=20`);
     if (!r.ok) throw new Error(`No se pudo cargar data/${f}.json`);
     Data[f] = await r.json();
   }));

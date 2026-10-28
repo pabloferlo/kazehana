@@ -1379,12 +1379,487 @@
      "type": "flag",
      "flag": "c1_done",
      "text": "Cruzar el Santuario de la Primera Marea"
+    },
+    {
+     "type": "flag",
+     "flag": "c2_done",
+     "text": "Cruzar el Santuario de la Corriente"
+    },
+    {
+     "type": "flag",
+     "flag": "c3_done",
+     "text": "Cruzar el Santuario del Abismo Claro"
+    },
+    {
+     "type": "flag",
+     "flag": "c4_done",
+     "text": "Cruzar el Santuario del Eclipse Marino"
+    },
+    {
+     "type": "flag",
+     "flag": "c5_done",
+     "text": "Cruzar el Santuario de la Madre Loba"
     }
    ],
    "reward": {
     "gold": 5000
    },
    "give": "am_5_done"
+  },
+  "sq37": {
+   "type": "side",
+   "name": "Chispas en la corriente",
+   "desc": "Gorobei quiere cinco anguilas voltaicas menos en la corriente.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "anguila_voltaica",
+     "count": 5,
+     "text": "Anguilas Voltaicas derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 4000,
+    "items": [
+     [
+      "@a:mythic:5",
+      1
+     ]
+    ]
+   },
+   "giver": "gorobei"
+  },
+  "sq38": {
+   "type": "side",
+   "name": "Tinta para el mapa",
+   "desc": "Mizuki necesita tres bolsas de tinta abisal.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "tinta_abismal",
+     "count": 3,
+     "text": "Tinta Abisal"
+    }
+   ],
+   "reward": {
+    "gold": 3600,
+    "items": [
+     [
+      "perla_rosa",
+      2
+     ],
+     [
+      "brujula_marinera",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "mizuki"
+  },
+  "sq39": {
+   "type": "side",
+   "name": "Rayos y gaviotas",
+   "desc": "Jinbei quiere seis gaviotas de tormenta menos sobre sus redes.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "gaviota_tormenta",
+     "count": 6,
+     "text": "Gaviotas de Tormenta derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 4600,
+    "items": [
+     [
+      "@a:mythic:5",
+      1
+     ]
+    ]
+   },
+   "giver": "jinbei"
+  },
+  "sq40": {
+   "type": "side",
+   "name": "Amuleto contra rayos",
+   "desc": "Sayako necesita tres plumas de tormenta.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "pluma_tormenta",
+     "count": 3,
+     "text": "Plumas de Tormenta"
+    }
+   ],
+   "reward": {
+    "gold": 4000,
+    "items": [
+     [
+      "linterna_gemela",
+      2
+     ],
+     [
+      "collar_de_manada",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "sayako"
+  },
+  "sq41": {
+   "type": "side",
+   "name": "Cabras de oro",
+   "desc": "Daigorō quiere seis cabras montesas doradas menos en sus pastos.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "cabra_dorada",
+     "count": 6,
+     "text": "Cabras Montesas Doradas derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 5200,
+    "items": [
+     [
+      "@a:mythic:6",
+      1
+     ]
+    ]
+   },
+   "giver": "daigoro"
+  },
+  "sq42": {
+   "type": "side",
+   "name": "Campanillas para afinar",
+   "desc": "Fuyuka necesita tres campanillas de eco.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "campanilla_eco",
+     "count": 3,
+     "text": "Campanillas de Eco"
+    }
+   ],
+   "reward": {
+    "gold": 4600,
+    "items": [
+     [
+      "campana_del_valle",
+      2
+     ],
+     [
+      "cristal_de_voz",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "fuyuka"
+  },
+  "m10": {
+   "type": "main",
+   "name": "La Cordillera del Eco Dorado",
+   "desc": "La Madre Loba abrió un camino hacia las cumbres. Allí, las voces se quedan para siempre.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "g1_done",
+     "text": "Cruzar el Santuario del Primer Eco"
+    },
+    {
+     "type": "flag",
+     "flag": "g2_done",
+     "text": "Cruzar el Santuario de la Voz Helada"
+    },
+    {
+     "type": "flag",
+     "flag": "g3_done",
+     "text": "Cruzar el Santuario del Coro Olvidado"
+    },
+    {
+     "type": "flag",
+     "flag": "g4_done",
+     "text": "Cruzar el Santuario de la Voz sin Dueño"
+    },
+    {
+     "type": "flag",
+     "flag": "g5_done",
+     "text": "Cruzar el Santuario del Eco Dorado"
+    }
+   ],
+   "reward": {
+    "gold": 7000
+   },
+   "give": "c5_done"
+  },
+  "sq43": {
+   "type": "side",
+   "name": "Lobos de la ventisca",
+   "desc": "Hizuru quiere seis lobos de la ventisca menos en los pastos.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "lobo_ventisca",
+     "count": 6,
+     "text": "Lobos de la Ventisca derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 6000,
+    "items": [
+     [
+      "@a:celestial:6",
+      1
+     ]
+    ]
+   },
+   "giver": "hizuru_n"
+  },
+  "sq44": {
+   "type": "side",
+   "name": "Partituras para el coro",
+   "desc": "Tsubasa necesita tres partituras viejas.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "partitura_vieja",
+     "count": 3,
+     "text": "Partituras Viejas"
+    }
+   ],
+   "reward": {
+    "gold": 5400,
+    "items": [
+     [
+      "diapason_dorado",
+      2
+     ],
+     [
+      "flauta_de_hueso",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "tsubasa"
+  },
+  "sq45": {
+   "type": "side",
+   "name": "Centinelas sin sombra",
+   "desc": "Harutoshi quiere seis centinelas sin sombra menos en su ruta.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "centinela_sin_sombra",
+     "count": 6,
+     "text": "Centinelas derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 7000,
+    "items": [
+     [
+      "@a:celestial:7",
+      1
+     ]
+    ]
+   },
+   "giver": "harutoshi"
+  },
+  "sq46": {
+   "type": "side",
+   "name": "Engranajes para el reloj",
+   "desc": "Tokiko necesita tres engranajes dorados.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "engranaje_dorado",
+     "count": 3,
+     "text": "Engranajes Dorados"
+    }
+   ],
+   "reward": {
+    "gold": 6400,
+    "items": [
+     [
+      "pluma_de_luz",
+      2
+     ],
+     [
+      "reloj_de_bolsillo",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "tokiko"
+  },
+  "m11": {
+   "type": "main",
+   "name": "La Ciudad de Luz sin Reloj",
+   "desc": "La voz de Shirayuki te ha indicado la Ciudad de Luz sin Reloj. Allí buscas a la que no tiene sombra.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "reloj_done",
+     "text": "Parar el Reloj Parado: derrotar a Ōgi"
+    },
+    {
+     "type": "flag",
+     "flag": "l1_done",
+     "text": "Cruzar el Santuario del Primer Instante"
+    },
+    {
+     "type": "flag",
+     "flag": "l2_done",
+     "text": "Cruzar el Santuario de la Memoria Detenida"
+    },
+    {
+     "type": "flag",
+     "flag": "l3_done",
+     "text": "Cruzar el Santuario del Nombre Borrado"
+    },
+    {
+     "type": "flag",
+     "flag": "l4_done",
+     "text": "Cruzar el Santuario del Sol Inmóvil"
+    },
+    {
+     "type": "flag",
+     "flag": "l5_done",
+     "text": "Vencer a la Dama de la Luz"
+    }
+   ],
+   "reward": {
+    "gold": 9000
+   },
+   "give": "g5_done"
+  },
+  "sq47": {
+   "type": "side",
+   "name": "Reflejos sin dueño",
+   "desc": "Eisuke quiere seis reflejos vacíos menos en el barrio.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "reflejo_vacio",
+     "count": 6,
+     "text": "Reflejos Vacíos derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 8000,
+    "items": [
+     [
+      "@a:celestial:7",
+      1
+     ]
+    ]
+   },
+   "giver": "eisuke"
+  },
+  "sq48": {
+   "type": "side",
+   "name": "Hojas para el catálogo",
+   "desc": "Shun necesita tres hojas en blanco.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "hoja_en_blanco",
+     "count": 3,
+     "text": "Hojas en Blanco"
+    }
+   ],
+   "reward": {
+    "gold": 7200,
+    "items": [
+     [
+      "sello_de_lacre",
+      2
+     ],
+     [
+      "carta_sin_destinatario",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "shun"
+  },
+  "sq49": {
+   "type": "side",
+   "name": "Sombras en préstamo",
+   "desc": "Miyabi pide ahuyentar seis sombras prestadas.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "sombra_prestada",
+     "count": 6,
+     "text": "Sombras Prestadas derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 9000,
+    "items": [
+     [
+      "@a:divine:7",
+      1
+     ]
+    ]
+   },
+   "giver": "miyabi"
+  },
+  "sq50": {
+   "type": "side",
+   "name": "La lámpara de cuarenta años",
+   "desc": "Ryoichi necesita tres hojas de luz.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "hoja_de_luz",
+     "count": 3,
+     "text": "Hojas de Luz"
+    }
+   ],
+   "reward": {
+    "gold": 8000,
+    "items": [
+     [
+      "lampara_sin_aceite",
+      2
+     ],
+     [
+      "peine_de_perla",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "ryoichi"
   }
  }
 }

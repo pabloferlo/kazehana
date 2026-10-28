@@ -7063,6 +7063,24 @@
       "ambrosia_alba"
      ]
     }
+   },
+   {
+    "text": "Una burbuja grande sube del fondo y estalla con un susurro. Yukine sonríe sin decir qué oyó.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Un barril varado en la orilla trae monedas oxidadas de otra época.",
+    "gold": 1000
+   },
+   {
+    "text": "Una linterna de papel flota sobre el agua y se detiene a tus pies. Dentro, unas monedas.",
+    "gold": 1100
+   },
+   {
+    "text": "Una luciérnaga marina se posa en el hombro de Yukine y se queda un rato a su lado.",
+    "aff": 2,
+    "needYukine": true
    }
   ],
   "locations": {
@@ -7175,7 +7193,8 @@
      "playa_espejo",
      "puerto_brumas",
      "faro_hundido",
-     "cueva_perlas"
+     "cueva_perlas",
+     "templo_sumergido"
     ],
     "desc": "Un arrecife de coral transparente por el que se puede caminar con el agua a los tobillos.",
     "encounters": {
@@ -7209,7 +7228,8 @@
     "y": 28,
     "links": [
      "arrecife_cristal",
-     "santuario_c1"
+     "santuario_c1",
+     "cueva_sirenas"
     ],
     "desc": "Un faro inclinado que sale del agua como un dedo roto. Guarda el paso al santuario.",
     "theme": [
@@ -7297,7 +7317,8 @@
     "y": 56,
     "links": [
      "faro_hundido",
-     "horizonte_mar"
+     "bahia_naufragios",
+     "isla_coral"
     ],
     "desc": "Una plataforma de cristal que emerge del mar con cada ola. El primer umbral del Mar de Cristal.",
     "order": 1,
@@ -7481,23 +7502,4655 @@
     }
    },
    "horizonte_mar": {
-    "name": "Horizonte del Mar",
+    "name": "Camino de Hielo",
     "type": "gate",
     "icon": "🌅",
-    "x": 92,
-    "y": 80,
+    "x": 38,
+    "y": 65,
     "links": [
-     "santuario_c1"
+     "santuario_c5"
     ],
-    "desc": "El mar sigue hacia el este y el sur, entre islas de cristal. Aún no se puede cruzar.",
-    "requires": "c1_done",
+    "desc": "Un camino de hielo hacia las cumbres lejanas de la Cordillera del Eco Dorado.",
+    "requires": "c5_done",
     "lockText": "Todavía no ves más allá de la bruma.",
-    "tagline": "Continuará…",
+    "tagline": "Hacia la Cordillera.",
     "theme": [
      "#0a2a5a",
      "#7ae0ff"
     ],
-    "soon": "Continuará… El Mar de Cristal guarda cuatro santuarios más, las islas de la manada ancestral y el rastro de Shirayuki. Esta parte termina aquí, por ahora."
+    "gate": {
+     "region": "cordillera",
+     "loc": "paso_hielo",
+     "scene": "cord_arrival",
+     "title": "Cordillera del Eco Dorado",
+     "text": "¿Subir por el camino de hielo hasta la Cordillera del Eco Dorado? Podrás volver al Mar de Cristal cuando quieras."
+    }
+   },
+   "bahia_naufragios": {
+    "name": "Bahía de los Naufragios",
+    "type": "wild",
+    "icon": "⚓",
+    "x": 90,
+    "y": 42,
+    "links": [
+     "santuario_c1",
+     "barco_fantasma"
+    ],
+    "desc": "Una bahía sembrada de mástiles hundidos. El agua negra no refleja nada.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "marinero_espectro",
+       "marinero_espectro"
+      ],
+      [
+       "anguila_voltaica",
+       "marinero_espectro"
+      ],
+      [
+       "pulpo_tinta",
+       "anguila_voltaica"
+      ],
+      [
+       "marinero_espectro",
+       "pulpo_tinta",
+       "anguila_voltaica"
+      ]
+     ]
+    },
+    "requires": "c1_done",
+    "lockText": "Antes debes cruzar el Santuario de la Primera Marea.",
+    "onFirst": "bahia_intro"
+   },
+   "barco_fantasma": {
+    "name": "El Último Lamento",
+    "type": "ruins",
+    "icon": "🏴‍☠️",
+    "x": 88,
+    "y": 22,
+    "links": [
+     "bahia_naufragios",
+     "santuario_c2"
+    ],
+    "desc": "Un barco fantasma de velas rasgadas que lleva siglos esperando a un pasajero.",
+    "requires": "c1_done",
+    "lockText": "Aún no has cruzado el primer santuario.",
+    "theme": [
+     "#0a1a28",
+     "#50788a"
+    ],
+    "recommended": 38,
+    "tagline": "El pasaje impagado.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "barco_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "marinero_espectro",
+        "marinero_espectro"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "@x:legendary:5",
+         1
+        ]
+       ],
+       "gold": 1700
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "anguila_voltaica",
+        "pulpo_tinta",
+        "marinero_espectro"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "marinero_espectro",
+        "marinero_espectro",
+        "pulpo_tinta"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "capitan_ancla"
+       ],
+       "post": "barco_clear",
+       "pre": "barco_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "barco_done",
+      "items": [
+       [
+        "@w:legendary:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 5800
+     }
+    }
+   },
+   "santuario_c2": {
+    "name": "Santuario de la Corriente",
+    "type": "sanctuary",
+    "icon": "🌀",
+    "x": 72,
+    "y": 8,
+    "links": [
+     "barco_fantasma",
+     "cueva_sirenas"
+    ],
+    "desc": "El segundo umbral del Mar de Cristal: una grieta por la que pasa un río de agua turquesa.",
+    "order": 2,
+    "requires": "barco_done",
+    "lockText": "Antes debes vencer al capitán del Último Lamento.",
+    "theme": [
+     "#0a3a6a",
+     "#40e0d0"
+    ],
+    "recommended": 39,
+    "tagline": "La corriente que respira.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "c2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "anguila_voltaica",
+        "marinero_espectro",
+        "pulpo_tinta"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         4
+        ]
+       ],
+       "gold": 1900
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "pulpo_tinta",
+        "pulpo_tinta",
+        "anguila_voltaica"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "marinero_espectro",
+        "anguila_voltaica",
+        "golem_coral"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "leviatan_corriente"
+       ],
+       "post": "c2_clear",
+       "pre": "c2_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "c2_done",
+      "items": [
+       [
+        "@a:legendary:5",
+        1
+       ],
+       [
+        "@x:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 6600
+     }
+    }
+   },
+   "cueva_sirenas": {
+    "name": "Cueva de las Sirenas",
+    "type": "cave",
+    "icon": "🧜",
+    "x": 48,
+    "y": 10,
+    "links": [
+     "faro_hundido",
+     "santuario_c2"
+    ],
+    "desc": "Opcional: una gruta con un trono hecho de joyas robadas.",
+    "optional": true,
+    "requires": "c1_done",
+    "lockText": "Aún no has cruzado el primer santuario.",
+    "theme": [
+     "#2a1a50",
+     "#70d8c8"
+    ],
+    "recommended": 38,
+    "tagline": "Opcional · el rey ladrón.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sirenas_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_coral",
+        "anguila_voltaica",
+        "pulpo_tinta"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         4
+        ],
+        [
+         "elixir_supremo",
+         3
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 1700
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "marinero_espectro",
+        "golem_coral",
+        "anguila_voltaica"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "rey_cangrejo"
+       ],
+       "post": "sirenas_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_c2_done",
+      "items": [
+       [
+        "@x:legendary:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 4600
+     }
+    },
+    "repeat": {
+     "text": "Las joyas vuelven a apilarse en el trono. El rey tiene herederos.",
+     "gold": 2000,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "isla_coral": {
+    "name": "Aldea de Coral",
+    "type": "town",
+    "icon": "🪸",
+    "x": 90,
+    "y": 68,
+    "links": [
+     "santuario_c1",
+     "arrecife_profundo"
+    ],
+    "desc": "Un puñado de casas encaladas sobre un islote de coral rosa, donde se cuenta la historia de la loba y la niña.",
+    "requires": "c1_done",
+    "lockText": "Aún no has cruzado el primer santuario.",
+    "tagline": "Donde se cuentan las historias.",
+    "theme": [
+     "#3a2a50",
+     "#ffb0a0"
+    ],
+    "onFirst": "coral_arrival",
+    "town": {
+     "npcs": [
+      "umiko",
+      "gorobei",
+      "mizuki",
+      "koharu"
+     ],
+     "inn": {
+      "price": 300
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g5_mythic_filo",
+      "g5_mythic_grimorio",
+      "g5_mythic_guantelete",
+      "g5_mythic_pistola",
+      "g5_mythic_a_pesada",
+      "g5_mythic_a_ligera",
+      "perla_rosa",
+      "brujula_marinera"
+     ]
+    }
+   },
+   "arrecife_profundo": {
+    "name": "Arrecife Profundo",
+    "type": "wild",
+    "icon": "🪸",
+    "x": 72,
+    "y": 76,
+    "links": [
+     "isla_coral",
+     "templo_sumergido",
+     "santuario_c3"
+    ],
+    "desc": "Un arrecife a cien metros de profundidad que brilla con luz propia.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "pulpo_tinta",
+       "pulpo_tinta"
+      ],
+      [
+       "golem_coral",
+       "anguila_voltaica"
+      ],
+      [
+       "golem_coral",
+       "pulpo_tinta",
+       "marinero_espectro"
+      ],
+      [
+       "anguila_voltaica",
+       "anguila_voltaica",
+       "pulpo_tinta"
+      ]
+     ]
+    },
+    "requires": "c2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Corriente.",
+    "onFirst": "abisal_intro"
+   },
+   "templo_sumergido": {
+    "name": "Templo Sumergido",
+    "type": "ruins",
+    "icon": "🏛️",
+    "x": 58,
+    "y": 68,
+    "links": [
+     "arrecife_profundo",
+     "arrecife_cristal"
+    ],
+    "desc": "El templo de la primera manada, cubierto de coral rosa. Guarda el último recuerdo antes del abismo.",
+    "requires": "c2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Corriente.",
+    "theme": [
+     "#102040",
+     "#a0d8e8"
+    ],
+    "recommended": 40,
+    "tagline": "La primera manada.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "tsum_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_coral",
+        "golem_coral"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "@x:mythic:5",
+         1
+        ]
+       ],
+       "gold": 2000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "pulpo_tinta",
+        "golem_coral",
+        "anguila_voltaica"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_coral",
+        "pulpo_tinta",
+        "golem_coral"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "coral_ancestral"
+       ],
+       "post": "tsum_clear",
+       "pre": "tsum_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "templo_done",
+      "items": [
+       [
+        "@w:legendary:5",
+        1
+       ],
+       [
+        "@a:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 6400
+     }
+    }
+   },
+   "santuario_c3": {
+    "name": "Santuario del Abismo Claro",
+    "type": "sanctuary",
+    "icon": "🐋",
+    "x": 86,
+    "y": 90,
+    "links": [
+     "arrecife_profundo",
+     "isla_faro_apagado"
+    ],
+    "desc": "El tercer umbral: una cúpula de cristal en el fondo del mar donde alguien canta desde hace siglos.",
+    "order": 3,
+    "requires": "templo_done",
+    "lockText": "Antes debes cruzar el Templo Sumergido.",
+    "theme": [
+     "#02061a",
+     "#4090d0"
+    ],
+    "recommended": 41,
+    "tagline": "La nana de la ballena.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "c3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_coral",
+        "pulpo_tinta",
+        "anguila_voltaica"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 2200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "pulpo_tinta",
+        "golem_coral",
+        "marinero_espectro"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_coral",
+        "anguila_voltaica",
+        "pulpo_tinta"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "ballena_abisal"
+       ],
+       "post": "c3_clear",
+       "pre": "c3_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "c3_done",
+      "items": [
+       [
+        "@a:mythic:5",
+        1
+       ],
+       [
+        "@x:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 7200
+     }
+    }
+   },
+   "isla_faro_apagado": {
+    "name": "Isla del Faro Apagado",
+    "type": "wild",
+    "icon": "🏝️",
+    "x": 72,
+    "y": 93,
+    "links": [
+     "santuario_c3",
+     "puerto_linternas"
+    ],
+    "desc": "Una isla en la bruma con un faro sin luz. El cristal bajo los pies brilla a ratos.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "gaviota_tormenta",
+       "gaviota_tormenta"
+      ],
+      [
+       "nautilo_antiguo",
+       "gaviota_tormenta"
+      ],
+      [
+       "espectro_ballenero",
+       "lobo_marino_cristal"
+      ],
+      [
+       "gaviota_tormenta",
+       "espectro_ballenero",
+       "nautilo_antiguo"
+      ]
+     ]
+    },
+    "requires": "c3_done",
+    "lockText": "Antes debes cruzar el Santuario del Abismo Claro.",
+    "onFirst": "isla_intro"
+   },
+   "puerto_linternas": {
+    "name": "Puerto de las Linternas",
+    "type": "town",
+    "icon": "🏮",
+    "x": 48,
+    "y": 93,
+    "links": [
+     "isla_faro_apagado",
+     "faro_gemelo"
+    ],
+    "desc": "Terrazas de madera con cientos de farolillos de colores colgando sobre el mar.",
+    "requires": "c3_done",
+    "lockText": "Aún no ves el camino.",
+    "tagline": "Donde siempre hay luz.",
+    "theme": [
+     "#2a2040",
+     "#ffd090"
+    ],
+    "onFirst": "linternas_arrival",
+    "town": {
+     "npcs": [
+      "hoshiko",
+      "jinbei",
+      "sayako",
+      "tamayo"
+     ],
+     "inn": {
+      "price": 340
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g5_mythic_filo",
+      "g5_mythic_grimorio",
+      "g5_mythic_guantelete",
+      "g5_mythic_pistola",
+      "g5_mythic_a_pesada",
+      "g5_mythic_a_ligera",
+      "linterna_gemela",
+      "collar_de_manada"
+     ]
+    }
+   },
+   "faro_gemelo": {
+    "name": "Faro Gemelo",
+    "type": "ruins",
+    "icon": "💡",
+    "x": 28,
+    "y": 88,
+    "links": [
+     "puerto_linternas",
+     "santuario_c4"
+    ],
+    "desc": "Dos torres unidas por un puente de cristal: una con luz y su reflejo con retraso.",
+    "requires": "c3_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#0a0a24",
+     "#c0d0ff"
+    ],
+    "recommended": 42,
+    "tagline": "La luz de Rin.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fgem_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "gaviota_tormenta",
+        "espectro_ballenero"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "@x:mythic:5",
+         1
+        ]
+       ],
+       "gold": 2100
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_marino_cristal",
+        "nautilo_antiguo",
+        "gaviota_tormenta"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "lobo_marino_cristal",
+        "gaviota_tormenta"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "hermana_faro"
+       ],
+       "post": "fgem_clear",
+       "pre": "fgem_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "faro2_done",
+      "items": [
+       [
+        "@w:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 7000
+     }
+    }
+   },
+   "santuario_c4": {
+    "name": "Santuario del Eclipse Marino",
+    "type": "sanctuary",
+    "icon": "🌑",
+    "x": 10,
+    "y": 80,
+    "links": [
+     "faro_gemelo",
+     "cueva_medusas",
+     "archipielago_espejo"
+    ],
+    "desc": "El cuarto umbral: una cúpula negra sobre una laguna tranquila donde el sol se escondió.",
+    "order": 4,
+    "requires": "faro2_done",
+    "lockText": "Antes debes vencer a la guardiana del Faro Gemelo.",
+    "theme": [
+     "#04040e",
+     "#8060c0"
+    ],
+    "recommended": 43,
+    "tagline": "El día que el sol se escondió.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "c4_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "lobo_marino_cristal",
+        "nautilo_antiguo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 2300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "nautilo_antiguo",
+        "gaviota_tormenta",
+        "espectro_ballenero"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_marino_cristal",
+        "espectro_ballenero",
+        "nautilo_antiguo"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "kraken_eclipse"
+       ],
+       "post": "c4_clear",
+       "pre": "c4_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "c4_done",
+      "items": [
+       [
+        "@a:mythic:5",
+        1
+       ],
+       [
+        "@x:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 7600
+     }
+    }
+   },
+   "cueva_medusas": {
+    "name": "Gruta de las Medusas Reinas",
+    "type": "cave",
+    "icon": "👑",
+    "x": 10,
+    "y": 93,
+    "links": [
+     "santuario_c4"
+    ],
+    "desc": "Opcional: una gruta de luz violeta con una corona flotando en el centro.",
+    "optional": true,
+    "requires": "faro2_done",
+    "lockText": "Aún no has pasado el Faro Gemelo.",
+    "theme": [
+     "#1a0a40",
+     "#d080ff"
+    ],
+    "recommended": 43,
+    "tagline": "Opcional · la reina de las medusas.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "med_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "gaviota_tormenta",
+        "nautilo_antiguo",
+        "lobo_marino_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         4
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 2000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "gaviota_tormenta",
+        "lobo_marino_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "medusa_reina"
+       ],
+       "post": "med_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_c4_done",
+      "items": [
+       [
+        "@x:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 5000
+     }
+    },
+    "repeat": {
+     "text": "La colmena de medusas se reorganiza. La corona flota de nuevo.",
+     "gold": 2200,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "archipielago_espejo": {
+    "name": "Archipiélago de los Espejos",
+    "type": "wild",
+    "icon": "🪞",
+    "x": 8,
+    "y": 64,
+    "links": [
+     "santuario_c4",
+     "cementerio_cristal"
+    ],
+    "desc": "Cientos de islotes de cristal que reflejan un cielo que no es el de arriba.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "lobo_marino_cristal",
+       "lobo_marino_cristal"
+      ],
+      [
+       "espectro_ballenero",
+       "nautilo_antiguo"
+      ],
+      [
+       "gaviota_tormenta",
+       "lobo_marino_cristal",
+       "espectro_ballenero"
+      ],
+      [
+       "nautilo_antiguo",
+       "nautilo_antiguo"
+      ]
+     ]
+    },
+    "requires": "c4_done",
+    "lockText": "Antes debes cruzar el Santuario del Eclipse Marino.",
+    "onFirst": "arch_intro"
+   },
+   "cementerio_cristal": {
+    "name": "Cementerio de Barcos de Cristal",
+    "type": "ruins",
+    "icon": "⚓",
+    "x": 24,
+    "y": 73,
+    "links": [
+     "archipielago_espejo",
+     "santuario_c5"
+    ],
+    "desc": "Una flota de galeones congelada en el fondo de una laguna, con banderas aún ondeando.",
+    "requires": "c4_done",
+    "lockText": "Antes debes cruzar el Santuario del Eclipse Marino.",
+    "theme": [
+     "#102030",
+     "#80b0c0"
+    ],
+    "recommended": 44,
+    "tagline": "La flota de los Heraldos del mar.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cem_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "espectro_ballenero",
+        "lobo_marino_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "@x:mythic:5",
+         1
+        ]
+       ],
+       "gold": 2400
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "nautilo_antiguo",
+        "espectro_ballenero",
+        "gaviota_tormenta"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "nautilo_antiguo",
+        "lobo_marino_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "almirante_cristal"
+       ],
+       "post": "cem_clear",
+       "pre": "cem_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "cem_done",
+      "items": [
+       [
+        "@a:mythic:5",
+        1
+       ],
+       [
+        "@w:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 8000
+     }
+    }
+   },
+   "santuario_c5": {
+    "name": "Santuario de la Madre Loba",
+    "type": "sanctuary",
+    "icon": "🌙",
+    "x": 44,
+    "y": 79,
+    "links": [
+     "cementerio_cristal",
+     "horizonte_mar"
+    ],
+    "desc": "El quinto y último umbral del Mar de Cristal: un círculo de piedras blancas con una luna de cristal.",
+    "order": 5,
+    "requires": "cem_done",
+    "lockText": "Antes debes cruzar el Cementerio de Barcos de Cristal.",
+    "theme": [
+     "#102040",
+     "#e0f0ff"
+    ],
+    "recommended": 45,
+    "tagline": "La primera manada.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "c5_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espectro_ballenero",
+        "lobo_marino_cristal",
+        "nautilo_antiguo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 2600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_marino_cristal",
+        "lobo_marino_cristal",
+        "espectro_ballenero"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "nautilo_antiguo",
+        "lobo_marino_cristal",
+        "gaviota_tormenta"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "loba_madre"
+       ],
+       "post": "c5_clear",
+       "pre": "c5_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "c5_done",
+      "items": [
+       [
+        "@w:mythic:5",
+        1
+       ],
+       [
+        "@a:mythic:5",
+        1
+       ],
+       [
+        "@x:mythic:5",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 9000
+     }
+    }
+   }
+  }
+ },
+ "cordillera": {
+  "name": "Cordillera del Eco Dorado",
+  "order": 6,
+  "start": "paso_hielo",
+  "bg": "radial-gradient(circle at 20% 15%, #e8c060, transparent 55%), radial-gradient(circle at 85% 85%, #8a6a28, transparent 55%), linear-gradient(180deg,#3a2c10,#7a5a20 60%,#1e1406)",
+  "decor": [
+   {
+    "e": "🏔️",
+    "x": 20,
+    "y": 16
+   },
+   {
+    "e": "🔔",
+    "x": 38,
+    "y": 88
+   },
+   {
+    "e": "☁️",
+    "x": 62,
+    "y": 8
+   },
+   {
+    "e": "🦅",
+    "x": 78,
+    "y": 24
+   },
+   {
+    "e": "🏔️",
+    "x": 90,
+    "y": 58
+   },
+   {
+    "e": "✨",
+    "x": 52,
+    "y": 44
+   },
+   {
+    "e": "🪨",
+    "x": 12,
+    "y": 86
+   },
+   {
+    "e": "🐐",
+    "x": 70,
+    "y": 88
+   }
+  ],
+  "events": [
+   {
+    "text": "Una voz lejana repite tu nombre. Yukine se queda quieta y luego sonríe, sin explicar.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre las rocas brilla una bolsa de monedas con un lazo de campana.",
+    "gold": 1300
+   },
+   {
+    "text": "Una ráfaga de aire cálido sube del valle y os despeja la cabeza.",
+    "heal": true
+   },
+   {
+    "text": "Un eco te devuelve una carcajada tuya de hace mucho. Yukine ríe contigo.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un pastor desciende con una mula cargada. «Cosas buenas de las alturas, forasteros. Nada de valle».",
+    "merchant": {
+     "name": "Pastor de las Cumbres",
+     "tier": 6,
+     "rarities": [
+      "mythic",
+      "celestial"
+     ],
+     "bonusRarity": "divine",
+     "bonusChance": 0.2,
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total",
+      "ambrosia_alba"
+     ]
+    }
+   },
+   {
+    "text": "Un copo de nieve se posa en la mano de Yukine y se convierte en una nota. Ella sonríe.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Una ráfaga arrastra una bolsa de monedas sujeta a una cinta de monje.",
+    "gold": 1500
+   },
+   {
+    "text": "La montaña repite tu nombre con una nota dorada. Yukine sonríe con los ojos cerrados.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre dos rocas hay una bolsa de monedas atada a una campanilla.",
+    "gold": 1800
+   }
+  ],
+  "locations": {
+   "paso_hielo": {
+    "name": "Camino de Hielo",
+    "type": "gate",
+    "icon": "🧊",
+    "x": 6,
+    "y": 52,
+    "links": [
+     "sendero_ecos"
+    ],
+    "desc": "El camino de hielo por el que bajaste desde el Mar de Cristal. Puedes volver cuando quieras.",
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#1a2a40",
+     "#d0e8ff"
+    ],
+    "gate": {
+     "region": "marcristal",
+     "loc": "horizonte_mar",
+     "title": "Mar de Cristal",
+     "text": "¿Volver al Mar de Cristal?"
+    }
+   },
+   "sendero_ecos": {
+    "name": "Sendero de los Ecos",
+    "type": "wild",
+    "icon": "🏔️",
+    "x": 20,
+    "y": 66,
+    "links": [
+     "paso_hielo",
+     "aldea_eco",
+     "canon_voces",
+     "cueva_nieve"
+    ],
+    "desc": "Un sendero entre paredes doradas donde las voces de otras épocas se mezclan con el viento.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "eco_guerrero",
+       "eco_guerrero"
+      ],
+      [
+       "cabra_dorada",
+       "eco_guerrero"
+      ],
+      [
+       "aguila_resonante",
+       "cabra_dorada"
+      ],
+      [
+       "golem_cuarzo",
+       "aguila_resonante"
+      ]
+     ]
+    },
+    "onFirst": "sendero_intro"
+   },
+   "aldea_eco": {
+    "name": "Aldea del Eco",
+    "type": "town",
+    "icon": "🔔",
+    "x": 24,
+    "y": 38,
+    "links": [
+     "sendero_ecos",
+     "canon_voces"
+    ],
+    "desc": "Una aldea de piedra y tejados dorados donde cada esquina tiene una campana de bronce.",
+    "tagline": "Donde se escucha más de lo que se habla.",
+    "theme": [
+     "#5a4020",
+     "#ffd890"
+    ],
+    "onFirst": "aldea_arrival",
+    "town": {
+     "npcs": [
+      "rokuro",
+      "fuyuka",
+      "daigoro",
+      "senri"
+     ],
+     "inn": {
+      "price": 380
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g6_mythic_filo",
+      "g6_mythic_grimorio",
+      "g6_mythic_guantelete",
+      "g6_mythic_pistola",
+      "g6_mythic_a_pesada",
+      "g6_mythic_a_ligera",
+      "campana_del_valle",
+      "cristal_de_voz"
+     ]
+    }
+   },
+   "canon_voces": {
+    "name": "Cañón de las Voces",
+    "type": "wild",
+    "icon": "🏜️",
+    "x": 42,
+    "y": 52,
+    "links": [
+     "sendero_ecos",
+     "aldea_eco",
+     "templo_campana",
+     "cueva_susurros",
+     "cueva_cristal"
+    ],
+    "desc": "Un cañón estrecho donde cada grito vuelve tres veces.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "aguila_resonante",
+       "aguila_resonante"
+      ],
+      [
+       "golem_cuarzo",
+       "cabra_dorada"
+      ],
+      [
+       "eco_guerrero",
+       "golem_cuarzo",
+       "aguila_resonante"
+      ],
+      [
+       "cabra_dorada",
+       "cabra_dorada",
+       "eco_guerrero"
+      ]
+     ]
+    }
+   },
+   "templo_campana": {
+    "name": "Templo de la Campana Quebrada",
+    "type": "ruins",
+    "icon": "🔔",
+    "x": 54,
+    "y": 26,
+    "links": [
+     "canon_voces",
+     "santuario_g1"
+    ],
+    "desc": "Una torre de piedra con una campana partida a la que alguien sigue golpeando.",
+    "theme": [
+     "#4a3010",
+     "#ffd070"
+    ],
+    "recommended": 47,
+    "tagline": "El último campanero.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "tcamp_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_guerrero",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "@x:mythic:6",
+         1
+        ]
+       ],
+       "gold": 2500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cabra_dorada",
+        "golem_cuarzo",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_cuarzo",
+        "aguila_resonante",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "campanero_dorado"
+       ],
+       "post": "tcamp_clear",
+       "pre": "tcamp_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "campana_done",
+      "items": [
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 9000
+     }
+    }
+   },
+   "santuario_g1": {
+    "name": "Santuario del Primer Eco",
+    "type": "sanctuary",
+    "icon": "🗻",
+    "x": 72,
+    "y": 40,
+    "links": [
+     "templo_campana",
+     "paso_ventisca"
+    ],
+    "desc": "El primer umbral de la Cordillera: una cueva de cuarzo donde una voz lleva doscientos años atrapada.",
+    "order": 1,
+    "requires": "campana_done",
+    "lockText": "Antes debes silenciar la campana del templo.",
+    "theme": [
+     "#5a4a18",
+     "#fff0a0"
+    ],
+    "recommended": 48,
+    "tagline": "La voz atrapada.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "g1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_cuarzo",
+        "eco_guerrero",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 2800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cabra_dorada",
+        "golem_cuarzo",
+        "golem_cuarzo"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_guerrero",
+        "golem_cuarzo",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "cantor_piedra"
+       ],
+       "post": "g1_clear",
+       "pre": "g1_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "g1_done",
+      "items": [
+       [
+        "@a:mythic:6",
+        1
+       ],
+       [
+        "@x:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 10000
+     }
+    }
+   },
+   "cueva_susurros": {
+    "name": "Cueva de los Susurros Dorados",
+    "type": "cave",
+    "icon": "👄",
+    "x": 44,
+    "y": 82,
+    "links": [
+     "canon_voces"
+    ],
+    "desc": "Opcional: una cueva llena de voces que no dicen nada, y algo que se alimenta de ellas.",
+    "optional": true,
+    "theme": [
+     "#2a2010",
+     "#c8a860"
+    ],
+    "recommended": 48,
+    "tagline": "Opcional · el eco que roba voces.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "susu_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_guerrero",
+        "cabra_dorada",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "elixir_supremo",
+         4
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 2500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_cuarzo",
+        "eco_guerrero",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "eco_hambriento"
+       ],
+       "post": "susu_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_g1_done",
+      "items": [
+       [
+        "@x:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 6000
+     }
+    },
+    "repeat": {
+     "text": "Nuevas voces se acumulan en la cueva. Algo vuelve a alimentarse de ellas.",
+     "gold": 2600,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "paso_ventisca": {
+    "name": "Paso de la Ventisca Dorada",
+    "type": "wild",
+    "icon": "🌬️",
+    "x": 68,
+    "y": 66,
+    "links": [
+     "santuario_g1",
+     "fortaleza_trueno"
+    ],
+    "desc": "Un desfiladero donde el viento arrastra polvo de oro y fragmentos de conversaciones.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "aguila_resonante",
+       "aguila_resonante",
+       "cabra_dorada"
+      ],
+      [
+       "golem_cuarzo",
+       "golem_cuarzo"
+      ],
+      [
+       "eco_guerrero",
+       "aguila_resonante",
+       "golem_cuarzo"
+      ],
+      [
+       "cabra_dorada",
+       "eco_guerrero",
+       "eco_guerrero"
+      ]
+     ]
+    },
+    "requires": "g1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Eco.",
+    "onFirst": "vent_intro"
+   },
+   "fortaleza_trueno": {
+    "name": "Fortaleza del Trueno Mudo",
+    "type": "ruins",
+    "icon": "🏰",
+    "x": 86,
+    "y": 78,
+    "links": [
+     "paso_ventisca",
+     "santuario_g2"
+    ],
+    "desc": "Una fortaleza vacía cuyas piedras aún tiemblan con órdenes de hace dos siglos.",
+    "requires": "g1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Eco.",
+    "theme": [
+     "#202030",
+     "#a0a8c8"
+    ],
+    "recommended": 49,
+    "tagline": "La última guarnición.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fort_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_guerrero",
+        "eco_guerrero",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         5
+        ],
+        [
+         "@x:mythic:6",
+         1
+        ]
+       ],
+       "gold": 2800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_cuarzo",
+        "cabra_dorada",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_guerrero",
+        "golem_cuarzo",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "general_raiko"
+       ],
+       "post": "fort_clear",
+       "pre": "fort_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "fort_done",
+      "items": [
+       [
+        "@a:mythic:6",
+        1
+       ],
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 10500
+     }
+    }
+   },
+   "santuario_g2": {
+    "name": "Santuario de la Voz Helada",
+    "type": "sanctuary",
+    "icon": "❄️",
+    "x": 88,
+    "y": 46,
+    "links": [
+     "fortaleza_trueno",
+     "cresta_helada"
+    ],
+    "desc": "El segundo umbral: una terraza de hielo azul donde no hay eco alguno.",
+    "order": 2,
+    "requires": "fort_done",
+    "lockText": "Antes debes cruzar la Fortaleza del Trueno Mudo.",
+    "theme": [
+     "#18284a",
+     "#e0f0ff"
+    ],
+    "recommended": 50,
+    "tagline": "El silencio que pesa.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "g2_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "aguila_resonante",
+        "golem_cuarzo",
+        "eco_guerrero"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 3000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cabra_dorada",
+        "aguila_resonante",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_cuarzo",
+        "eco_guerrero",
+        "aguila_resonante"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "condor_mudo"
+       ],
+       "post": "g2_clear",
+       "pre": "g2_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "g2_done",
+      "items": [
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "@a:mythic:6",
+        1
+       ],
+       [
+        "@x:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 11500
+     }
+    }
+   },
+   "horizonte_cordillera": {
+    "name": "Camino de Nubes",
+    "type": "gate",
+    "icon": "🌄",
+    "x": 40,
+    "y": 22,
+    "links": [
+     "santuario_g5"
+    ],
+    "desc": "Un camino de nubes hacia una ciudad de torres blancas sin sombras.",
+    "requires": "g5_done",
+    "lockText": "Todavía no ves el camino.",
+    "tagline": "Hacia la Ciudad de Luz sin Reloj.",
+    "theme": [
+     "#18284a",
+     "#e0f0ff"
+    ],
+    "gate": {
+     "region": "ciudadluz",
+     "loc": "puerta_luz",
+     "scene": "ciudad_arrival",
+     "title": "Ciudad de Luz sin Reloj",
+     "text": "¿Cruzar el camino de nubes hasta la Ciudad de Luz sin Reloj? Podrás volver a la Cordillera cuando quieras."
+    }
+   },
+   "cresta_helada": {
+    "name": "Cresta Helada",
+    "type": "wild",
+    "icon": "🌨️",
+    "x": 84,
+    "y": 28,
+    "links": [
+     "santuario_g2",
+     "monasterio_coro"
+    ],
+    "desc": "Un filo de nieve entre dos abismos donde el viento canta casi con palabras.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "lobo_ventisca",
+       "lobo_ventisca"
+      ],
+      [
+       "monje_hueco",
+       "lobo_ventisca"
+      ],
+      [
+       "yeti_cristal",
+       "arpia_coro"
+      ],
+      [
+       "lobo_ventisca",
+       "monje_hueco",
+       "arpia_coro"
+      ]
+     ]
+    },
+    "requires": "g2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Voz Helada.",
+    "onFirst": "cresta_intro"
+   },
+   "monasterio_coro": {
+    "name": "Monasterio del Coro Dorado",
+    "type": "town",
+    "icon": "🎼",
+    "x": 66,
+    "y": 14,
+    "links": [
+     "cresta_helada",
+     "biblioteca_voces"
+    ],
+    "desc": "Un monasterio escalonado de piedra clara y tejados de oro donde los monjes cantan siempre.",
+    "requires": "g2_done",
+    "lockText": "Aún no ves el camino.",
+    "tagline": "La voz de la montaña.",
+    "theme": [
+     "#5a4418",
+     "#ffe8a0"
+    ],
+    "onFirst": "mona_arrival",
+    "town": {
+     "npcs": [
+      "ryokan",
+      "hizuru_n",
+      "tsubasa",
+      "mugen"
+     ],
+     "inn": {
+      "price": 420
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g6_mythic_filo",
+      "g6_mythic_grimorio",
+      "g6_mythic_guantelete",
+      "g6_mythic_pistola",
+      "g6_mythic_a_pesada",
+      "g6_mythic_a_ligera",
+      "diapason_dorado",
+      "flauta_de_hueso"
+     ]
+    }
+   },
+   "biblioteca_voces": {
+    "name": "Biblioteca de las Voces Selladas",
+    "type": "ruins",
+    "icon": "📜",
+    "x": 48,
+    "y": 10,
+    "links": [
+     "monasterio_coro",
+     "santuario_g3",
+     "cueva_cristal"
+    ],
+    "desc": "Una sala de rollos de pergamino que susurran, cada uno con una voz sellada.",
+    "requires": "g2_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#2a2038",
+     "#d8c0f0"
+    ],
+    "recommended": 51,
+    "tagline": "La archivista sin voz.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "bibl_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hueco",
+        "arpia_coro"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "@x:mythic:6",
+         1
+        ]
+       ],
+       "gold": 3000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "monje_hueco",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hueco",
+        "arpia_coro",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "archivista_muda"
+       ],
+       "post": "bibl_clear",
+       "pre": "bibl_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "biblio_done",
+      "items": [
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 12000
+     }
+    }
+   },
+   "cueva_cristal": {
+    "name": "Cueva del Cristal Cantor",
+    "type": "cave",
+    "icon": "💠",
+    "x": 56,
+    "y": 54,
+    "links": [
+     "canon_voces"
+    ],
+    "desc": "Opcional: una cueva de hielo con un cristal gigante que canta una sola nota.",
+    "optional": true,
+    "requires": "g2_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#183050",
+     "#a0e0ff"
+    ],
+    "recommended": 52,
+    "tagline": "Opcional · la nota perfecta.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "cris_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "lobo_ventisca",
+        "arpia_coro"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         5
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 3000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hueco",
+        "yeti_cristal",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "cristal_cantor"
+       ],
+       "post": "cris_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_g2_done",
+      "items": [
+       [
+        "@x:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 7000
+     }
+    },
+    "repeat": {
+     "text": "El cristal vuelve a cantar su nota. Alguien tiene que callarlo otra vez.",
+     "gold": 3000,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "santuario_g3": {
+    "name": "Santuario del Coro Olvidado",
+    "type": "sanctuary",
+    "icon": "🎼",
+    "x": 28,
+    "y": 10,
+    "links": [
+     "biblioteca_voces",
+     "glaciar_susurrante"
+    ],
+    "desc": "El tercer umbral de la Cordillera: un anfiteatro tallado en la montaña donde un coro invisible canta para nadie.",
+    "order": 3,
+    "requires": "biblio_done",
+    "lockText": "Antes debes vencer a la archivista de la biblioteca.",
+    "theme": [
+     "#4a3820",
+     "#fff0c0"
+    ],
+    "recommended": 53,
+    "tagline": "El coro invisible.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "g3_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arpia_coro",
+        "monje_hueco",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         5
+        ]
+       ],
+       "gold": 3300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "arpia_coro",
+        "monje_hueco"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "arpia_coro",
+        "monje_hueco"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "directora_coro"
+       ],
+       "post": "g3_clear",
+       "pre": "g3_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "g3_done",
+      "items": [
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "@a:celestial:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 13000
+     }
+    }
+   },
+   "glaciar_susurrante": {
+    "name": "Glaciar Susurrante",
+    "type": "wild",
+    "icon": "🧊",
+    "x": 10,
+    "y": 16,
+    "links": [
+     "santuario_g3",
+     "puente_mil_voces"
+    ],
+    "desc": "Un río de hielo que habla. Cada grieta murmura un nombre distinto.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "yeti_cristal",
+       "yeti_cristal"
+      ],
+      [
+       "lobo_ventisca",
+       "arpia_coro",
+       "monje_hueco"
+      ],
+      [
+       "yeti_cristal",
+       "lobo_ventisca"
+      ],
+      [
+       "arpia_coro",
+       "arpia_coro",
+       "yeti_cristal"
+      ]
+     ]
+    },
+    "requires": "g3_done",
+    "lockText": "Antes debes cruzar el Santuario del Coro Olvidado.",
+    "onFirst": "glac_intro"
+   },
+   "puente_mil_voces": {
+    "name": "Puente de las Mil Voces",
+    "type": "ruins",
+    "icon": "🌉",
+    "x": 9,
+    "y": 30,
+    "links": [
+     "glaciar_susurrante",
+     "santuario_g4"
+    ],
+    "desc": "Un puente sobre un abismo sin fondo, cada tabla una voz distinta.",
+    "requires": "g3_done",
+    "lockText": "Antes debes cruzar el Santuario del Coro Olvidado.",
+    "theme": [
+     "#2a2a40",
+     "#c0c8e8"
+    ],
+    "recommended": 53,
+    "tagline": "Mil voces y una más.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "puen_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "arpia_coro",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "@x:mythic:6",
+         1
+        ]
+       ],
+       "gold": 3300
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hueco",
+        "yeti_cristal",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "arpia_coro",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardian_puente"
+       ],
+       "post": "puen_clear",
+       "pre": "puen_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "puente_done",
+      "items": [
+       [
+        "@a:mythic:6",
+        1
+       ],
+       [
+        "@w:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 13500
+     }
+    }
+   },
+   "santuario_g4": {
+    "name": "Santuario de la Voz sin Dueño",
+    "type": "sanctuary",
+    "icon": "🎶",
+    "x": 24,
+    "y": 24,
+    "links": [
+     "puente_mil_voces",
+     "observatorio_eco"
+    ],
+    "desc": "El cuarto umbral: una plataforma en el centro del puente con un atril, una partitura en blanco y una nota flotando.",
+    "order": 4,
+    "requires": "puente_done",
+    "lockText": "Antes debes cruzar el Puente de las Mil Voces.",
+    "theme": [
+     "#101830",
+     "#f0f8ff"
+    ],
+    "recommended": 54,
+    "tagline": "Lo que dejó atrás.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "g4_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "monje_hueco",
+        "arpia_coro",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         6
+        ]
+       ],
+       "gold": 3600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "lobo_ventisca",
+        "arpia_coro"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arpia_coro",
+        "monje_hueco",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "voz_sin_dueno"
+       ],
+       "post": "g4_clear",
+       "pre": "g4_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "g4_done",
+      "items": [
+       [
+        "@w:celestial:6",
+        1
+       ],
+       [
+        "@a:mythic:6",
+        1
+       ],
+       [
+        "@x:mythic:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 15000
+     }
+    }
+   },
+   "observatorio_eco": {
+    "name": "Observatorio del Último Eco",
+    "type": "ruins",
+    "icon": "🔭",
+    "x": 40,
+    "y": 38,
+    "links": [
+     "santuario_g4",
+     "santuario_g5"
+    ],
+    "desc": "Una cúpula de piedra con un telescopio que apunta a un cielo que ya no existe.",
+    "requires": "g4_done",
+    "lockText": "Antes debes cruzar el Santuario de la Voz sin Dueño.",
+    "theme": [
+     "#18203a",
+     "#a8b8f0"
+    ],
+    "recommended": 55,
+    "tagline": "El que miraba el cielo.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "obsv_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_estelar",
+        "monje_hueco"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "@x:celestial:6",
+         1
+        ]
+       ],
+       "gold": 3800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "arpia_coro",
+        "eco_estelar",
+        "yeti_cristal"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_estelar",
+        "eco_estelar",
+        "lobo_ventisca"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "astronomo_hueco"
+       ],
+       "post": "obsv_clear",
+       "pre": "obsv_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "obs_done",
+      "items": [
+       [
+        "@w:celestial:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 16000
+     }
+    }
+   },
+   "santuario_g5": {
+    "name": "Santuario del Eco Dorado",
+    "type": "sanctuary",
+    "icon": "🔔",
+    "x": 58,
+    "y": 40,
+    "links": [
+     "observatorio_eco",
+     "horizonte_cordillera"
+    ],
+    "desc": "El quinto y último umbral de la Cordillera: una plataforma abierta sobre todos los picos, con una campana que suena sola.",
+    "order": 5,
+    "requires": "obs_done",
+    "lockText": "Antes debes cruzar el Observatorio del Último Eco.",
+    "theme": [
+     "#6a4a14",
+     "#fff4b0"
+    ],
+    "recommended": 58,
+    "tagline": "La voz de la montaña.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "g5_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_estelar",
+        "arpia_coro",
+        "monje_hueco"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "elixir_supremo",
+         6
+        ]
+       ],
+       "gold": 4200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "eco_estelar",
+        "eco_estelar"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lobo_ventisca",
+        "eco_estelar",
+        "arpia_coro"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "eco_dorado"
+       ],
+       "post": "g5_clear",
+       "pre": "g5_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "g5_done",
+      "items": [
+       [
+        "@w:celestial:6",
+        1
+       ],
+       [
+        "@a:celestial:6",
+        1
+       ],
+       [
+        "@x:celestial:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 18000
+     }
+    }
+   },
+   "cueva_nieve": {
+    "name": "Cueva de la Nieve Callada",
+    "type": "cave",
+    "icon": "🌫️",
+    "x": 28,
+    "y": 86,
+    "links": [
+     "sendero_ecos"
+    ],
+    "desc": "Opcional: una gruta blanca donde no se oye ni el propio paso.",
+    "optional": true,
+    "requires": "g4_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#d8e4f4",
+     "#8090a8"
+    ],
+    "recommended": 56,
+    "tagline": "Opcional · el silencio blanco.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "nieve_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "eco_estelar",
+        "lobo_ventisca",
+        "arpia_coro"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         6
+        ],
+        [
+         "elixir_supremo",
+         5
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 3600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "yeti_cristal",
+        "eco_estelar",
+        "monje_hueco"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "sombra_nieve"
+       ],
+       "post": "nieve_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_g3_done",
+      "items": [
+       [
+        "@x:celestial:6",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 9000
+     }
+    },
+    "repeat": {
+     "text": "La nieve vuelve a caer sin ruido. Algo se mueve entre los copos.",
+     "gold": 3600,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "ciudadluz": {
+  "name": "Ciudad de Luz sin Reloj",
+  "order": 7,
+  "start": "puerta_luz",
+  "bg": "radial-gradient(circle at 25% 20%, #ffffff, transparent 55%), radial-gradient(circle at 80% 85%, #a8b8e8, transparent 55%), linear-gradient(180deg,#d8e0f4,#8a98c0 60%,#3a4268)",
+  "decor": [
+   {
+    "e": "🏛️",
+    "x": 18,
+    "y": 16
+   },
+   {
+    "e": "🕰️",
+    "x": 40,
+    "y": 88
+   },
+   {
+    "e": "☁️",
+    "x": 62,
+    "y": 8
+   },
+   {
+    "e": "⚙️",
+    "x": 80,
+    "y": 22
+   },
+   {
+    "e": "🕊️",
+    "x": 90,
+    "y": 56
+   },
+   {
+    "e": "✨",
+    "x": 52,
+    "y": 46
+   },
+   {
+    "e": "⌚",
+    "x": 12,
+    "y": 86
+   },
+   {
+    "e": "🏛️",
+    "x": 72,
+    "y": 88
+   }
+  ],
+  "events": [
+   {
+    "text": "Un reloj de pared suena una vez, solo para vosotros. Yukine se sobresalta y ríe.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "En un banco hay una bolsa de monedas olvidada hace doscientos años. Está como nueva.",
+    "gold": 2200
+   },
+   {
+    "text": "Una brisa tibia, sin hora, os deja como recién despiertos.",
+    "heal": true
+   },
+   {
+    "text": "Una niña os saluda con la mano y desaparece detrás de una columna. No lleva sombra.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un vendedor ambulante de traje blanco os sale al paso: «Lo mejor de la ciudad. Todo, por supuesto, a la hora que sea».",
+    "merchant": {
+     "name": "Vendedor sin Hora",
+     "tier": 7,
+     "rarities": [
+      "celestial",
+      "divine"
+     ],
+     "bonusRarity": "cosmic",
+     "bonusChance": 0.2,
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total",
+      "ambrosia_alba"
+     ]
+    }
+   },
+   {
+    "text": "Un reloj de bolsillo, parado, suena una sola vez al pasar Yukine. Ella sonríe.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre dos escaparates alguien ha dejado una bolsa de monedas atada con una cinta blanca.",
+    "gold": 2400
+   },
+   {
+    "text": "Una sombra pequeña se queda un momento a tus pies, como un gato, y luego se aleja.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Una farola de latón se apaga sola al pasar tú. Debajo hay un puñado de monedas.",
+    "gold": 2800
+   }
+  ],
+  "locations": {
+   "puerta_luz": {
+    "name": "Camino de Nubes",
+    "type": "gate",
+    "icon": "☁️",
+    "x": 6,
+    "y": 52,
+    "links": [
+     "avenida_sin_sombras"
+    ],
+    "desc": "El camino de nubes por el que subiste desde la Cordillera. Puedes volver cuando quieras.",
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#e8f0ff",
+     "#9ab0d8"
+    ],
+    "gate": {
+     "region": "cordillera",
+     "loc": "horizonte_cordillera",
+     "title": "Cordillera del Eco Dorado",
+     "text": "¿Volver a la Cordillera del Eco Dorado?"
+    }
+   },
+   "avenida_sin_sombras": {
+    "name": "Avenida sin Sombras",
+    "type": "wild",
+    "icon": "🏛️",
+    "x": 20,
+    "y": 66,
+    "links": [
+     "puerta_luz",
+     "plaza_mediodia",
+     "calle_relojes"
+    ],
+    "desc": "Una calle recta de losas blancas con edificios tan limpios que parecen recién hechos y tan viejos que parecen eternos.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "centinela_sin_sombra",
+       "centinela_sin_sombra"
+      ],
+      [
+       "mariposa_horaria",
+       "centinela_sin_sombra"
+      ],
+      [
+       "automata_de_luz",
+       "mariposa_horaria"
+      ],
+      [
+       "golem_engranaje",
+       "automata_de_luz"
+      ]
+     ]
+    },
+    "onFirst": "avenida_intro"
+   },
+   "plaza_mediodia": {
+    "name": "Plaza del Mediodía Eterno",
+    "type": "town",
+    "icon": "⛲",
+    "x": 26,
+    "y": 40,
+    "links": [
+     "avenida_sin_sombras",
+     "calle_relojes"
+    ],
+    "desc": "Un círculo de losas blancas con una fuente en medio, donde siempre es mediodía.",
+    "tagline": "Siempre es mediodía.",
+    "theme": [
+     "#fff0c0",
+     "#c8b888"
+    ],
+    "onFirst": "plaza_arrival",
+    "town": {
+     "npcs": [
+      "tokiko",
+      "harutoshi",
+      "sorami",
+      "jirota",
+      "miyabi",
+      "ryoichi"
+     ],
+     "inn": {
+      "price": 480
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g7_celestial_filo",
+      "g7_celestial_grimorio",
+      "g7_celestial_guantelete",
+      "g7_celestial_pistola",
+      "g7_celestial_a_pesada",
+      "g7_celestial_a_ligera",
+      "pluma_de_luz",
+      "reloj_de_bolsillo"
+     ]
+    }
+   },
+   "calle_relojes": {
+    "name": "Calle de los Relojes Parados",
+    "type": "wild",
+    "icon": "🕰️",
+    "x": 44,
+    "y": 54,
+    "links": [
+     "avenida_sin_sombras",
+     "plaza_mediodia",
+     "torre_reloj",
+     "sotano_engranajes"
+    ],
+    "desc": "Una avenida con relojes en cada fachada, todos parados a una hora distinta.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "automata_de_luz",
+       "automata_de_luz"
+      ],
+      [
+       "mariposa_horaria",
+       "mariposa_horaria",
+       "centinela_sin_sombra"
+      ],
+      [
+       "golem_engranaje",
+       "centinela_sin_sombra"
+      ],
+      [
+       "automata_de_luz",
+       "golem_engranaje",
+       "mariposa_horaria"
+      ]
+     ]
+    },
+    "onFirst": "calle_intro"
+   },
+   "torre_reloj": {
+    "name": "Torre del Reloj Parado",
+    "type": "ruins",
+    "icon": "⏱️",
+    "x": 56,
+    "y": 26,
+    "links": [
+     "calle_relojes",
+     "santuario_l1"
+    ],
+    "desc": "La torre más alta de la ciudad: miles de engranajes inmóviles y un solo tic.",
+    "theme": [
+     "#d0d8e8",
+     "#6a7088"
+    ],
+    "recommended": 59,
+    "tagline": "El tiempo parado.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "trel_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "centinela_sin_sombra",
+        "automata_de_luz"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "@x:celestial:7",
+         1
+        ]
+       ],
+       "gold": 4500
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "mariposa_horaria",
+        "golem_engranaje",
+        "centinela_sin_sombra"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "automata_de_luz",
+        "golem_engranaje",
+        "mariposa_horaria"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "relojero_detenido"
+       ],
+       "post": "trel_clear",
+       "pre": "trel_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "reloj_done",
+      "items": [
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 20000
+     }
+    }
+   },
+   "santuario_l1": {
+    "name": "Santuario del Primer Instante",
+    "type": "sanctuary",
+    "icon": "⏳",
+    "x": 74,
+    "y": 42,
+    "links": [
+     "torre_reloj",
+     "jardin_sin_sombra",
+     "barrio_espejos",
+     "mercado_horas"
+    ],
+    "desc": "El primer umbral de la ciudad: una sala blanca con un rayo de luz sobre un charco que repite un instante.",
+    "order": 1,
+    "requires": "reloj_done",
+    "lockText": "Antes debes detener al relojero de la torre.",
+    "theme": [
+     "#f0f4ff",
+     "#a0b4e0"
+    ],
+    "recommended": 61,
+    "tagline": "El instante que se repite.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "l1_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_engranaje",
+        "automata_de_luz",
+        "mariposa_horaria"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "elixir_supremo",
+         7
+        ]
+       ],
+       "gold": 4800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "centinela_sin_sombra",
+        "centinela_sin_sombra",
+        "golem_engranaje"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "automata_de_luz",
+        "mariposa_horaria",
+        "centinela_sin_sombra"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "instante_primero"
+       ],
+       "post": "l1_clear",
+       "pre": "l1_pre"
+      }
+     ],
+     "rewards": {
+      "flag": "l1_done",
+      "items": [
+       [
+        "@a:celestial:7",
+        1
+       ],
+       [
+        "@x:celestial:7",
+        1
+       ],
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 22000
+     }
+    }
+   },
+   "sotano_engranajes": {
+    "name": "Sótano de los Engranajes",
+    "type": "cave",
+    "icon": "⚙️",
+    "x": 44,
+    "y": 84,
+    "links": [
+     "calle_relojes",
+     "canal_sin_agua"
+    ],
+    "desc": "Opcional: un laberinto de ruedas dentadas que mueven los relojes de la ciudad.",
+    "optional": true,
+    "theme": [
+     "#3a3028",
+     "#b89868"
+    ],
+    "recommended": 60,
+    "tagline": "Opcional · la máquina que no para.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "sota_intro"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_engranaje",
+        "automata_de_luz",
+        "centinela_sin_sombra"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "elixir_supremo",
+         6
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 4200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "golem_engranaje",
+        "golem_engranaje",
+        "mariposa_horaria"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "engranaje_madre"
+       ],
+       "post": "sota_clear"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_l1_done",
+      "items": [
+       [
+        "@x:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 10000
+     }
+    },
+    "repeat": {
+     "text": "Las ruedas vuelven a girar. Algo en el fondo se recalienta otra vez.",
+     "gold": 4400,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "jardin_sin_sombra": {
+    "name": "Jardín sin Sombra",
+    "type": "wild",
+    "icon": "🌳",
+    "x": 68,
+    "y": 70,
+    "links": [
+     "santuario_l1",
+     "canal_sin_agua"
+    ],
+    "desc": "Un parque de árboles blancos de hojas de papel que se mueven con el viento sin proyectar sombra alguna.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "mariposa_horaria",
+       "mariposa_horaria",
+       "automata_de_luz"
+      ],
+      [
+       "golem_engranaje",
+       "golem_engranaje"
+      ],
+      [
+       "centinela_sin_sombra",
+       "mariposa_horaria",
+       "automata_de_luz"
+      ],
+      [
+       "automata_de_luz",
+       "golem_engranaje",
+       "centinela_sin_sombra"
+      ]
+     ]
+    },
+    "requires": "l1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Instante.",
+    "onFirst": "jardin_intro"
+   },
+   "horizonte_luz": {
+    "name": "Corazón de la Ciudad",
+    "type": "gate",
+    "icon": "💠",
+    "x": 36,
+    "y": 6,
+    "links": [
+     "santuario_l5"
+    ],
+    "desc": "Al fondo de la ciudad se ve una torre de luz: el corazón. Aún no se puede llegar.",
+    "requires": "l5_done",
+    "lockText": "Todavía no ves el camino.",
+    "tagline": "Continuará…",
+    "theme": [
+     "#f0f4ff",
+     "#a0b4e0"
+    ],
+    "soon": "Continuará… Tras el horizonte aguarda el Corazón del Alba, donde Madre del Alba espera. La Ciudad de Luz sin Reloj ha terminado. Esta parte llega hasta aquí, por ahora."
+   },
+   "barrio_espejos": {
+    "name": "Barrio de los Espejos",
+    "type": "wild",
+    "icon": "🪞",
+    "x": 88,
+    "y": 24,
+    "links": [
+     "santuario_l1",
+     "mercado_horas",
+     "archivo_nombres"
+    ],
+    "desc": "Una calle de escaparates donde nada se refleja y las figuras caminan en sentido contrario.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "reflejo_vacio",
+       "reflejo_vacio"
+      ],
+      [
+       "escriba_luz",
+       "reflejo_vacio"
+      ],
+      [
+       "paloma_cristal",
+       "escriba_luz"
+      ],
+      [
+       "reflejo_vacio",
+       "escriba_luz",
+       "paloma_cristal"
+      ]
+     ]
+    },
+    "requires": "l1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Instante.",
+    "onFirst": "ciu2_barrio"
+   },
+   "mercado_horas": {
+    "name": "Mercado de las Horas Perdidas",
+    "type": "town",
+    "icon": "⌛",
+    "x": 90,
+    "y": 48,
+    "links": [
+     "santuario_l1",
+     "barrio_espejos"
+    ],
+    "desc": "Una nave abierta con puestos de relojes pequeños donde se venden minutos como quien vende fruta.",
+    "requires": "l1_done",
+    "lockText": "Aún no ves el camino.",
+    "tagline": "Todas las horas, menos la de ahora.",
+    "theme": [
+     "#f8e8c8",
+     "#b09868"
+    ],
+    "onFirst": "ciu2_mercado",
+    "town": {
+     "npcs": [
+      "noriko",
+      "eisuke",
+      "chiyome",
+      "shun"
+     ],
+     "inn": {
+      "price": 540
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g7_celestial_filo",
+      "g7_celestial_grimorio",
+      "g7_celestial_guantelete",
+      "g7_celestial_pistola",
+      "g7_celestial_a_pesada",
+      "g7_celestial_a_ligera",
+      "sello_de_lacre",
+      "carta_sin_destinatario",
+      "g7_divine_filo",
+      "g7_divine_grimorio",
+      "g7_divine_guantelete",
+      "g7_divine_pistola",
+      "g7_divine_a_pesada",
+      "g7_divine_a_ligera",
+      "g7_cosmic_filo",
+      "g7_cosmic_grimorio",
+      "g7_cosmic_a_ligera",
+      "lampara_sin_aceite",
+      "peine_de_perla"
+     ]
+    }
+   },
+   "archivo_nombres": {
+    "name": "Archivo de los Nombres",
+    "type": "ruins",
+    "icon": "📚",
+    "x": 68,
+    "y": 10,
+    "links": [
+     "barrio_espejos",
+     "santuario_l2"
+    ],
+    "desc": "Una galería interminable de estanterías con un nombre por libro.",
+    "requires": "l1_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#e8e0d0",
+     "#7a6a50"
+    ],
+    "recommended": 62,
+    "tagline": "Todos los nombres, menos uno.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu2_archivo_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "escriba_luz",
+        "reflejo_vacio"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "@x:celestial:7",
+         1
+        ]
+       ],
+       "gold": 5200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "paloma_cristal",
+        "escriba_luz",
+        "estatua_viviente"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_vacio",
+        "escriba_luz",
+        "paloma_cristal"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "bibliotecario"
+       ],
+       "post": "ciu2_archivo_c",
+       "pre": "ciu2_archivo_p"
+      }
+     ],
+     "rewards": {
+      "flag": "archivo_done",
+      "items": [
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 24000
+     }
+    }
+   },
+   "santuario_l2": {
+    "name": "Santuario de la Memoria Detenida",
+    "type": "sanctuary",
+    "icon": "🧠",
+    "x": 46,
+    "y": 10,
+    "links": [
+     "archivo_nombres",
+     "galeria_retratos"
+    ],
+    "desc": "El segundo umbral de la ciudad: una sala circular con miles de recuerdos flotando como luces.",
+    "order": 2,
+    "requires": "archivo_done",
+    "lockText": "Antes debes vencer al bibliotecario del archivo.",
+    "theme": [
+     "#f4f0ff",
+     "#a898d8"
+    ],
+    "recommended": 64,
+    "tagline": "Los recuerdos que no pasan.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu2_l2_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_viviente",
+        "reflejo_vacio",
+        "escriba_luz"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "elixir_supremo",
+         7
+        ]
+       ],
+       "gold": 5600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "paloma_cristal",
+        "paloma_cristal",
+        "estatua_viviente"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "escriba_luz",
+        "estatua_viviente",
+        "reflejo_vacio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardiana_memoria"
+       ],
+       "post": "ciu2_l2_c",
+       "pre": "ciu2_l2_p"
+      }
+     ],
+     "rewards": {
+      "flag": "l2_done",
+      "items": [
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "@a:celestial:7",
+        1
+       ],
+       [
+        "@x:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 26000
+     }
+    }
+   },
+   "galeria_retratos": {
+    "name": "Galería de los Retratos Vacíos",
+    "type": "cave",
+    "icon": "🖼️",
+    "x": 28,
+    "y": 14,
+    "links": [
+     "santuario_l2"
+    ],
+    "desc": "Opcional: un pasillo de marcos dorados con lienzos blancos y una única mirada.",
+    "optional": true,
+    "requires": "archivo_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#e0d8e8",
+     "#706880"
+    ],
+    "recommended": 63,
+    "tagline": "Opcional · el retrato sin cara.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu2_galeria_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_vacio",
+        "escriba_luz",
+        "paloma_cristal"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "elixir_supremo",
+         6
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 5000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_viviente",
+        "reflejo_vacio",
+        "reflejo_vacio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "retrato_vacio"
+       ],
+       "post": "ciu2_galeria_c"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_l2_done",
+      "items": [
+       [
+        "@x:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 12000
+     }
+    },
+    "repeat": {
+     "text": "Los lienzos blancos vuelven a mirarte. Uno tiene ya una expresión nueva.",
+     "gold": 5000,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "canal_sin_agua": {
+    "name": "Canal sin Agua",
+    "type": "wild",
+    "icon": "🛶",
+    "x": 56,
+    "y": 88,
+    "links": [
+     "jardin_sin_sombra",
+     "sotano_engranajes",
+     "teatro_voces"
+    ],
+    "desc": "Un cauce de piedra blanca por el que nunca ha corrido agua, con barcas varadas.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "paloma_cristal",
+       "paloma_cristal",
+       "estatua_viviente"
+      ],
+      [
+       "escriba_luz",
+       "reflejo_vacio",
+       "estatua_viviente"
+      ],
+      [
+       "estatua_viviente",
+       "estatua_viviente"
+      ],
+      [
+       "reflejo_vacio",
+       "paloma_cristal",
+       "escriba_luz"
+      ]
+     ]
+    },
+    "requires": "l2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Memoria Detenida.",
+    "onFirst": "ciu2_canal"
+   },
+   "teatro_voces": {
+    "name": "Teatro de las Voces Calladas",
+    "type": "ruins",
+    "icon": "🎭",
+    "x": 30,
+    "y": 92,
+    "links": [
+     "canal_sin_agua",
+     "santuario_l3"
+    ],
+    "desc": "Una sala de terciopelo rojo con mil butacas vacías y un actor sin público.",
+    "requires": "l2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Memoria Detenida.",
+    "theme": [
+     "#f0d8d0",
+     "#8a5a50"
+    ],
+    "recommended": 65,
+    "tagline": "La obra sin público.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu2_teatro_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_viviente",
+        "paloma_cristal",
+        "reflejo_vacio"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         7
+        ],
+        [
+         "@x:celestial:7",
+         1
+        ]
+       ],
+       "gold": 5600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "escriba_luz",
+        "estatua_viviente",
+        "estatua_viviente"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "reflejo_vacio",
+        "paloma_cristal",
+        "estatua_viviente"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "actor_sin_rostro"
+       ],
+       "post": "ciu2_teatro_c",
+       "pre": "ciu2_teatro_p"
+      }
+     ],
+     "rewards": {
+      "flag": "teatro_done",
+      "items": [
+       [
+        "@a:celestial:7",
+        1
+       ],
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 27000
+     }
+    }
+   },
+   "santuario_l3": {
+    "name": "Santuario del Nombre Borrado",
+    "type": "sanctuary",
+    "icon": "🔥",
+    "x": 10,
+    "y": 84,
+    "links": [
+     "teatro_voces",
+     "paseo_lumbreras"
+    ],
+    "desc": "El tercer umbral de la ciudad: una sala blanca con una chimenea apagada y un escritorio cubierto de ceniza.",
+    "order": 3,
+    "requires": "teatro_done",
+    "lockText": "Antes debes cruzar el Teatro de las Voces Calladas.",
+    "theme": [
+     "#f8f8f8",
+     "#9898a8"
+    ],
+    "recommended": 66,
+    "tagline": "Lo que quedó de un nombre.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu2_l3_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estatua_viviente",
+        "reflejo_vacio",
+        "escriba_luz"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         8
+        ],
+        [
+         "elixir_supremo",
+         7
+        ]
+       ],
+       "gold": 6000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "paloma_cristal",
+        "estatua_viviente",
+        "estatua_viviente"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "escriba_luz",
+        "paloma_cristal",
+        "reflejo_vacio"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "escribano_ceniza"
+       ],
+       "post": "ciu2_l3_c",
+       "pre": "ciu2_l3_p"
+      }
+     ],
+     "rewards": {
+      "flag": "l3_done",
+      "items": [
+       [
+        "@w:divine:7",
+        1
+       ],
+       [
+        "@a:celestial:7",
+        1
+       ],
+       [
+        "@x:celestial:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        5
+       ]
+      ],
+      "gold": 30000
+     }
+    }
+   },
+   "paseo_lumbreras": {
+    "name": "Paseo de las Lumbreras",
+    "type": "wild",
+    "icon": "🏮",
+    "x": 34,
+    "y": 70,
+    "links": [
+     "santuario_l3",
+     "observatorio_sol"
+    ],
+    "desc": "Una avenida de farolas de latón encendidas a mediodía, con sombras sin dueño.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "sombra_prestada",
+       "sombra_prestada"
+      ],
+      [
+       "heraldo_mediodia",
+       "sombra_prestada"
+      ],
+      [
+       "lampara_viviente",
+       "heraldo_mediodia"
+      ],
+      [
+       "sombra_prestada",
+       "lampara_viviente",
+       "sol_de_bolsillo"
+      ]
+     ]
+    },
+    "requires": "l3_done",
+    "lockText": "Antes debes cruzar el Santuario del Nombre Borrado.",
+    "onFirst": "ciu3_paseo"
+   },
+   "observatorio_sol": {
+    "name": "Observatorio del Sol Fijo",
+    "type": "ruins",
+    "icon": "🔭",
+    "x": 58,
+    "y": 52,
+    "links": [
+     "paseo_lumbreras",
+     "santuario_l4"
+    ],
+    "desc": "Una torre de espejos que apuntan todos al mismo sol.",
+    "requires": "l3_done",
+    "lockText": "Antes debes cruzar el Santuario del Nombre Borrado.",
+    "theme": [
+     "#fff8e0",
+     "#d8b040"
+    ],
+    "recommended": 67,
+    "tagline": "Un sol que no se mueve.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu3_obs_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "heraldo_mediodia",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         8
+        ],
+        [
+         "@x:celestial:7",
+         1
+        ]
+       ],
+       "gold": 6200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lampara_viviente",
+        "sol_de_bolsillo",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sol_de_bolsillo",
+        "heraldo_mediodia",
+        "lampara_viviente"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heliografo"
+       ],
+       "post": "ciu3_obs_c",
+       "pre": "ciu3_obs_p"
+      }
+     ],
+     "rewards": {
+      "flag": "obs_done",
+      "items": [
+       [
+        "@w:celestial:7",
+        1
+       ],
+       [
+        "@a:divine:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 34000
+     }
+    }
+   },
+   "santuario_l4": {
+    "name": "Santuario del Sol Inmóvil",
+    "type": "sanctuary",
+    "icon": "☀️",
+    "x": 42,
+    "y": 34,
+    "links": [
+     "observatorio_sol",
+     "cueva_sombras",
+     "palacio_luz"
+    ],
+    "desc": "El cuarto umbral de la ciudad: una sala de oro pálido con un sol pequeño colgado del techo.",
+    "order": 4,
+    "requires": "obs_done",
+    "lockText": "Antes debes vencer al Heliógrafo.",
+    "theme": [
+     "#fffbe8",
+     "#e8c860"
+    ],
+    "recommended": 68,
+    "tagline": "Donde todo está a la venta.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu3_l4_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sol_de_bolsillo",
+        "lampara_viviente",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         8
+        ],
+        [
+         "elixir_supremo",
+         8
+        ]
+       ],
+       "gold": 6600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "heraldo_mediodia",
+        "sol_de_bolsillo",
+        "sol_de_bolsillo"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lampara_viviente",
+        "heraldo_mediodia",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "prestamista"
+       ],
+       "post": "ciu3_l4_c",
+       "pre": "ciu3_l4_p"
+      }
+     ],
+     "rewards": {
+      "flag": "l4_done",
+      "items": [
+       [
+        "@w:divine:7",
+        1
+       ],
+       [
+        "@a:celestial:7",
+        1
+       ],
+       [
+        "@x:divine:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        6
+       ]
+      ],
+      "gold": 36000
+     }
+    }
+   },
+   "cueva_sombras": {
+    "name": "Cámara de las Sombras Impagadas",
+    "type": "cave",
+    "icon": "🕳️",
+    "x": 24,
+    "y": 24,
+    "links": [
+     "santuario_l4"
+    ],
+    "desc": "Opcional: una gruta sin luz con siluetas pegadas a las paredes como carteles viejos.",
+    "optional": true,
+    "requires": "obs_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#383048",
+     "#181420"
+    ],
+    "recommended": 68,
+    "tagline": "Opcional · la deuda más antigua.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu3_cueva_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_prestada",
+        "sombra_prestada",
+        "lampara_viviente"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         8
+        ],
+        [
+         "elixir_supremo",
+         7
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 6000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_prestada",
+        "heraldo_mediodia",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "sombra_impaga"
+       ],
+       "post": "ciu3_cueva_c"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_l4_done",
+      "items": [
+       [
+        "@x:divine:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 14000
+     }
+    },
+    "repeat": {
+     "text": "Las siluetas se agitan. Una sombra nueva se ha pegado a la pared durante tu ausencia.",
+     "gold": 5600,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "palacio_luz": {
+    "name": "Palacio de la Luz Quieta",
+    "type": "ruins",
+    "icon": "🏛️",
+    "x": 12,
+    "y": 38,
+    "links": [
+     "santuario_l4",
+     "santuario_l5"
+    ],
+    "desc": "Un edificio de mármol blanco con mil ventanas abiertas donde nada proyecta sombra.",
+    "requires": "l4_done",
+    "lockText": "Antes debes cruzar el Santuario del Sol Inmóvil.",
+    "theme": [
+     "#fffaf0",
+     "#d8d0e8"
+    ],
+    "recommended": 69,
+    "tagline": "El protocolo de doscientos años.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu3_pala_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "heraldo_mediodia",
+        "lampara_viviente",
+        "sol_de_bolsillo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         9
+        ],
+        [
+         "@x:divine:7",
+         1
+        ]
+       ],
+       "gold": 7000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sol_de_bolsillo",
+        "sol_de_bolsillo",
+        "heraldo_mediodia"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lampara_viviente",
+        "sombra_prestada",
+        "sol_de_bolsillo"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "chambelan"
+       ],
+       "post": "ciu3_pala_c",
+       "pre": "ciu3_pala_p"
+      }
+     ],
+     "rewards": {
+      "flag": "palacio_done",
+      "items": [
+       [
+        "@a:divine:7",
+        1
+       ],
+       [
+        "@w:divine:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 38000
+     }
+    }
+   },
+   "santuario_l5": {
+    "name": "Santuario de la Dama de la Luz",
+    "type": "sanctuary",
+    "icon": "💡",
+    "x": 12,
+    "y": 12,
+    "links": [
+     "palacio_luz",
+     "horizonte_luz"
+    ],
+    "desc": "El quinto y último umbral de la ciudad: una sala de luz sin muros, con suelo de cristal.",
+    "order": 5,
+    "requires": "palacio_done",
+    "lockText": "Antes debes cruzar el Palacio de la Luz Quieta.",
+    "theme": [
+     "#ffffff",
+     "#e8e8f8"
+    ],
+    "recommended": 70,
+    "tagline": "La que no tiene sombra.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "ciu3_l5_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sol_de_bolsillo",
+        "heraldo_mediodia",
+        "lampara_viviente"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         9
+        ],
+        [
+         "ambrosia_alba",
+         3
+        ]
+       ],
+       "gold": 8000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sol_de_bolsillo",
+        "sol_de_bolsillo",
+        "sombra_prestada"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "lampara_viviente",
+        "heraldo_mediodia",
+        "sol_de_bolsillo"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "dama_luz"
+       ],
+       "post": "ciu3_l5_c",
+       "pre": "ciu3_l5_p"
+      }
+     ],
+     "rewards": {
+      "flag": "l5_done",
+      "items": [
+       [
+        "@w:divine:7",
+        1
+       ],
+       [
+        "@a:divine:7",
+        1
+       ],
+       [
+        "@x:divine:7",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        5
+       ],
+       [
+        "pocion_total",
+        8
+       ]
+      ],
+      "gold": 60000
+     }
+    }
    }
   }
  }

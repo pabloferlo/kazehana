@@ -39,8 +39,14 @@ Niveles 81-100: Torre Infinita, Torneo, superjefes (nv 100), cuevas con jefes re
 ## 6. Orden de trabajo propuesto
 1. ✅ v0.7.2 (hecho): sectores 3-4 del Reino (santuarios 3-4) + nueva curva de XP + tiers de equipo.
 2. ✅ v0.8.0 (hecho): fin del Reino del Amanecer (santuario 5: el *sueño* de la Madre; la Madre real es el jefe final de la región 8) + sector 1 del Mar de Cristal.
-3. v0.8.1: sector 2 del Mar de Cristal (santuarios 2-3) y técnicas nuevas por clase (los árboles de habilidades acaban hoy en el nivel 20).
-4. Regiones 5-8 por sectores, con tu feedback.
+3. ✅ v0.8.1 (hecho): sector 2 del Mar de Cristal (santuarios 2-3) y técnicas nuevas niveles 21-35.
+4. ✅ v0.8.2 (hecho): sector 3 y final del Mar de Cristal (santuarios 4-5, Madre Loba) y técnicas niveles 37-43. Nivel máx. 46.
+5. ✅ v0.8.3 (hecho): Cordillera del Eco Dorado, sector 1 (santuarios 1-2), equipo tier 6, técnicas niveles 45-49. Nivel máx. 50.
+6. ✅ v0.8.4 (hecho): Cordillera sector 2 (santuarios 3-4), técnicas niveles 51-54. Nivel máx. 54.
+7. ✅ v0.8.5 (hecho): fin de la Cordillera + inicio de la Ciudad de Luz (santuario 1), tier 7, técnicas 57-60. Nivel máx. 62.
+8. ✅ v0.8.6 (hecho): Ciudad de Luz sector 2 (santuarios 2-3), técnicas 63-66. Nivel máx. 66.
+9. ✅ v0.9.0 (hecho): fin de la Ciudad de Luz (santuarios 4-5, la Dama de la Luz), técnicas 67-70. Nivel máx. 70.
+10. Siguiente: Corazón del Alba (niveles 71-80, Madre del Alba), luego postgame (Torre Infinita, torneo).
 
 
 ## Rarezas por región (decidido en v0.7.3)

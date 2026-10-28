@@ -54,6 +54,39 @@ export const ABILITIES = {
   marca: ['Haz del Faro', 'Cada ronda marca a un miembro de tu equipo: el siguiente turno enemigo le hace un 25 % más de daño.'],
   aullido: ['Aullido de Manada', 'Cada 3 rondas aúlla y sube su ataque durante 3 rondas.'],
   concha: ['Concha', 'El primer golpe que recibe cada ronda hace solo un 50 % del daño.'],
+  ancla: ['Ancla', 'Sus golpes tienen un 30 % de anclar (ralentizar) a quien los recibe.'],
+  mareas: ['Mareas', 'Las rondas impares es pleamar (recibe un 20 % menos de daño y se cura un 3 %); las pares, bajamar (recibe un 25 % más).'],
+  prisma: ['Prisma', 'Se adapta: el elemento con el que le golpeaste la ronda anterior le hace un 40 % menos de daño. Varía tus elementos.'],
+  tsunami: ['Tsunami', 'Cada 4 rondas una ola golpea a todo tu equipo (18 % de PV máx.). Se anuncia la ronda anterior: defenderse la anula por completo.'],
+  contraluz: ['Contraluz', 'Su luz te deslumbra: tu equipo no puede asestar golpes críticos contra ella.'],
+  succion: ['Succión', 'Al final de cada ronda drena un 6 % del MP máximo de cada miembro de tu equipo y se cura un 0,8 % de sus PV por cada uno.'],
+  aguijon: ['Aguijón Venenoso', 'Sus ataques tienen un 40 % de envenenar a quien los recibe.'],
+  casco: ['Casco de Cristal', 'Ningún golpe puede quitarle más del 4 % de sus PV máximos de una vez.'],
+  fases: ['Fases de la Luna', 'Ciclo de 4 rondas: luna nueva (1, recibe un 20 % más de daño), creciente (2), llena (3, su ataque sube un 35 %) y menguante (4).'],
+  eco_devuelto: ['Eco Devuelto', 'Acumula el daño que recibe; cada 3 rondas lo devuelve como eco a todo tu equipo (12 % de lo acumulado a cada uno, máx. 20 % de sus PV).'],
+  camara_eco: ['Cámara de Eco', 'Cada técnica que gasta MP te devuelve un eco: quien la lanza pierde un 4 % de sus PV máximos. Los ataques básicos no lo provocan.'],
+  voz_robada: ['Voz Robada', 'Mientras esté en pie, tus curaciones funcionan a la mitad.'],
+  rayo_mudo: ['Rayo Mudo', 'Cada 3 rondas un rayo silencioso cae sobre quien más MP tiene: se lo vacía y le hace un 12 % de sus PV máximos.'],
+  archivo: ['Archivo', 'Lo que ya ha leído no le sorprende: repetir la misma técnica dos turnos seguidos (quien la lance) le hace un 40 % menos de daño.'],
+  cristalizacion: ['Cristalización', 'Cada golpe que recibe lo endurece un 3 % más (máx. 30 %). Un golpe crítico lo rompe y reinicia la capa.'],
+  contrapunto: ['Contrapunto', 'Cada 4 rondas, al final de la ronda, ataca una vez más.'],
+  avalancha: ['Avalancha', 'Cada 3 rondas una avalancha cae sobre quien tiene menos PV (en %): le hace un 15 % de sus PV máximos (la mitad si se defiende).'],
+  replica: ['Réplica', 'Cada vez que tu equipo se potencia, ella se potencia igual.'],
+  conjuncion: ['Conjunción', 'Cuando golpea a un solo objetivo, el resto de tu equipo recibe un 20 % de ese daño.'],
+  reverberacion: ['Reverberación', 'Al final de cada ronda repite con la mitad de potencia el último ataque que lanzó tu equipo, contra quien lo lanzó.'],
+  ventisca_callada: ['Ventisca Callada', 'Al final de cada ronda cada miembro de tu equipo tiene un 25 % de quedar ralentizado.'],
+  rebobinado: ['Rebobinado', 'La primera vez que iba a caer, el tiempo retrocede: se recupera hasta el 50 % de sus PV (una vez por combate).'],
+  reloj_arena: ['Reloj de Arena', 'Su ataque sube un 6 % por ronda (máx. +60 %). Ralentizarla reinicia la cuenta.'],
+  sobrecalentamiento: ['Sobrecalentamiento', 'Cada ronda acumula calor; al llegar a 5 libera una explosión (18 % de los PV máx. a todo tu equipo, la mitad si te defiendes). Los ataques de hielo le quitan 2 de calor.'],
+  paginas: ['Escudo de Páginas', 'Un escudo de páginas absorbe el 15 % de sus PV máximos de daño y se regenera cada 4 rondas. Rómpelo de golpe.'],
+  dualidad: ['Dualidad', 'Las rondas impares recibe la mitad del daño físico; las pares, la mitad del daño no físico. Combina elementos.'],
+  olvido: ['Aura de Olvido', 'Cada ronda, cada miembro de tu equipo tiene un 15 % de olvidar qué hacía y perder el turno.'],
+  foco: ['Foco de Escena', 'Cada ronda pone el foco sobre quien más daño hizo la ronda anterior: recibirá un 40 % más de daño hasta que otro lo supere.'],
+  sol_fijo: ['Sol Fijo', 'Cada 3 rondas (3, 6, 9…) el sol se detiene sobre ella y recibe un 70 % menos de daño. Se anuncia la ronda anterior: guarda tus golpes fuertes.'],
+  cobro: ['Cobro de Intereses', 'Cura un 25 % del daño que inflige a tu equipo.'],
+  protocolo: ['Protocolo', 'Cada ronda decreta un elemento prohibido: los ataques de ese elemento le hacen un 75 % menos de daño. Se anuncia al empezar la ronda.'],
+  sin_sombra: ['Luz sin Sombra', 'Su luz no deja dónde esconderse: sus ataques ignoran un 35 % de tu defensa y tus esquivas no funcionan contra ella.'],
+  ultima_palabra: ['Última Palabra', 'Con menos del 25 % de PV, al final de cada ronda ataca una vez más.'],
   ambar: ['Ámbar', 'Cada ataque físico que recibe tiene un 35 % de ralentizar a quien lo hizo.']
 };
 
@@ -231,8 +264,10 @@ export class Battle {
     const tech = Data.tech[act.tech];
     if (!tech) return;
     if (act.kind === 'ult') { if (u.ult < 100 || !u.ultTech) return; u.ult = 0; }
-    else { if (u.mp < tech.mpCost) return this.ev({ t: 'msg', text: `${u.name} no tiene PM suficientes.` }); u.mp -= tech.mpCost; u.ult = Math.min(100, u.ult + 5); }
+    else { if (u.mp < tech.mpCost) return this.ev({ t: 'msg', text: `${u.name} no tiene PM suficientes.` }); u.mp -= tech.mpCost; u.ult = Math.min(100, u.ult + 5);
+      if (u.side === 'ally' && tech.mpCost > 0 && this.alive('enemy').some(e => e.ability === 'camara_eco')) { const d = Math.max(2, Math.round(u.maxHp * 0.04)); u.hp = Math.max(1, u.hp - d); this.ev({ t: 'hit', target: u.uid, dmg: d, dot: 'eco', hp: u.hp, element: 'arcano' }); } }
     if (u.side === 'ally') this.bondAdd(3);
+    if (u.side === 'ally' && tech.type === 'attack' && tech.power > 0) this._echo = { u, tech };
     this.doTech(u, tech, this.targetsFor(u, tech, act.target));
   }
 
@@ -302,7 +337,9 @@ export class Battle {
     switch (tech.type) {
       case 'attack': for (const t of targets) { if (this.over) break; this.hit(actor, tech, t); } break;
       case 'heal': for (const t of targets) this.heal(actor, tech, t); break;
-      case 'buff': for (const t of targets) this.applyFx(t, tech.effect, `${tech.name}`, true); break;
+      case 'buff': for (const t of targets) this.applyFx(t, tech.effect, `${tech.name}`, true);
+        if (actor.side === 'ally') for (const e of this.alive('enemy')) if (e.ability === 'replica') { this.ev({ t: 'msg', text: `¡${e.name} repite tu canción y se potencia igual!`, target: e.uid }); this.applyFx(e, tech.effect, tech.name, true); }
+        break;
       case 'debuff': for (const t of targets) this.applyFx(t, tech.effect, `${tech.name}`, false); break;
       case 'utility': if (tech.effect?.mp_restore) { actor.mp = Math.min(actor.maxMp, actor.mp + tech.effect.mp_restore); this.ev({ t: 'mp', target: actor.uid, amount: tech.effect.mp_restore, mp: actor.mp }); } break;
       case 'ultimate': this.transformWolf(actor, tech); break;
@@ -327,26 +364,46 @@ export class Battle {
       t._illRound = this.round;
       return this.ev({ t: 'dodge', target: t.uid, text: `¡Ilusión! ${t.name} esquiva el primer ataque.` });
     }
-    if (!tech.noDodge && rnd() < this.dodgeChance(actor, t)) return this.ev({ t: 'dodge', target: t.uid, text: `¡${t.name} esquiva!` });
+    if (!tech.noDodge && actor.ability !== 'sin_sombra' && rnd() < this.dodgeChance(actor, t)) return this.ev({ t: 'dodge', target: t.uid, text: `¡${t.name} esquiva!` });
     const eff = tech.effect || {};
     const raw = tech.power * (this.offense(actor, tech) + actor.level * 1.5) / 25;
-    const def = this.S(t, 'def') * (1 - (eff.ignore_def || 0));
+    const def = this.S(t, 'def') * (1 - (eff.ignore_def || 0)) * (actor.ability === 'sin_sombra' ? 0.65 : 1);
     let dmg = raw * 30 / (30 + def);
     const weak = t.weak?.includes(tech.element), resist = t.resist?.includes(tech.element);
     if (weak) dmg *= 1.5; if (resist) dmg *= 0.6;
-    const crit = rnd() < 0.06 + (eff.crit_up || 0) + (actor.fx.wolf ? 0.1 : 0);
+    const crit = !(actor.side === 'ally' && this.alive('enemy').some(e => e.ability === 'contraluz')) && rnd() < 0.06 + (eff.crit_up || 0) + (actor.fx.wolf ? 0.1 : 0);
     if (crit) dmg *= 1.5;
     if (actor.fx.wolf) dmg *= 1.5;
     if (t.defending) dmg *= 0.5;
     if (t.ability === 'dureza') dmg *= 0.85;
     if (t.ability === 'pararrayos' && tech.element === 'rayo') dmg *= 0.25;
+    if (actor.ability === 'fases' && this.round % 4 === 3) dmg *= 1.35;
+    if (t.ability === 'fases' && this.round % 4 === 1) dmg *= 1.2;
+    if (t.ability === 'casco') dmg = Math.min(dmg, Math.max(1, t.maxHp * 0.04));
+    if (t.ability === 'archivo' && actor.side === 'ally' && tech.id) { if (actor._lastTech === tech.id) dmg *= 0.6; actor._lastTech = tech.id; }
+    if (t.ability === 'cristalizacion' && actor.side === 'ally') { const st = t._cr || 0; dmg *= 1 - 0.03 * st; t._cr = crit ? 0 : Math.min(10, st + 1); }
+    if (actor.ability === 'reloj_arena') dmg *= 1 + 0.06 * Math.min(10, Math.max(0, this.round - 1 - (actor._clockReset || 0)));
+    if (t.ability === 'sobrecalentamiento' && tech.element === 'hielo') t._heat = Math.max(0, (t._heat || 0) - 2);
+    if (t.ability === 'dualidad' && actor.side === 'ally') { const phys = tech.element === 'fisico'; if (this.round % 2 === 1 ? phys : !phys) dmg *= 0.5; }
+    if (actor.ability === 'foco' && t.side === 'ally' && t.uid === this._spot) dmg *= 1.4;
+    if (t.ability === 'sol_fijo' && actor.side === 'ally' && this.round % 3 === 0) dmg *= 0.3;
+    if (t.ability === 'protocolo' && actor.side === 'ally' && this._taboo && tech.element === this._taboo) dmg *= 0.25;
+    if (t.ability === 'mareas') dmg *= this.round % 2 === 1 ? 0.8 : 1.25;
+    if (t.ability === 'prisma' && actor.side === 'ally') { if (t._curRound !== this.round) { t._prevEl = t._curEl; t._curRound = this.round; } if (tech.element === t._prevEl) dmg *= 0.6; t._curEl = tech.element; }
     if (t.ability === 'concha' && t._shellRound !== this.round) { t._shellRound = this.round; dmg *= 0.5; }
     if (t.marked && actor.side === 'enemy') dmg *= 1.25;
     if (t.ability === 'velo_nocturno' && tech.element === 'fisico') dmg *= 0.7;
     if (actor.ability === 'sol_radiante' && (tech.element === 'fuego' || tech.element === 'rayo')) dmg *= 1.3;
     if (actor.side === 'ally' && tech.element === 'hielo' && this.alive('enemy').some(e => e.ability === 'sol_radiante')) dmg *= 0.8;
     dmg = Math.max(1, Math.round(dmg * (0.92 + rnd() * 0.16)));
+    if (actor.side === 'ally') { this._dmgBy ||= {}; this._dmgBy[actor.uid] = (this._dmgBy[actor.uid] || 0) + dmg; }
+    if (t.ability === 'paginas' && actor.side === 'ally') {
+      if (t._shield === undefined) t._shield = Math.round(t.maxHp * 0.15);
+      if (t._shield > 0) { const ab = Math.min(t._shield, dmg); t._shield -= ab; dmg -= ab; this.ev({ t: 'msg', text: ab >= 1 ? `Las páginas absorben ${ab} de daño${t._shield <= 0 ? '… ¡y se rompen!' : '.'}` : '', target: t.uid }); if (dmg <= 0) dmg = 0; }
+    }
+    if (t.ability === 'eco_devuelto' && actor.side === 'ally') t._store = (t._store || 0) + dmg;
     t.hp = Math.max(0, t.hp - dmg);
+    if (actor.ability === 'cobro' && actor.side === 'enemy' && actor.hp > 0 && dmg > 0) { const h = Math.min(actor.maxHp - actor.hp, Math.round(dmg * 0.25)); if (h > 0) { actor.hp += h; this.ev({ t: 'heal', target: actor.uid, amount: h, hp: actor.hp, regen: true }); } }
     if (t.side === 'ally') { t.ult = Math.min(100, t.ult + (this.alive('enemy').some(e => e.ability === 'silencio') ? 3 : 7)); this.bondAdd(4); }
     this.ev({ t: 'hit', target: t.uid, dmg, crit, weak, resist, hp: t.hp, element: tech.element, guard: !!t.defending });
     if (t.ability === 'espinas' && tech.element === 'fisico' && actor.side === 'ally' && actor.hp > 0) {
@@ -360,7 +417,11 @@ export class Battle {
       this.ev({ t: 'hit', target: actor.uid, dmg: r, dot: 'espejo', hp: actor.hp, element: tech.element });
       if (actor.hp <= 0) this.faint(actor);
     }
+    if (actor.ability === 'aguijon' && t.side === 'ally' && t.hp > 0 && rnd() < 0.4) this.status(t, 'poison', 3);
+    if (actor.ability === 'ancla' && t.side === 'ally' && t.hp > 0 && rnd() < 0.3) this.status(t, 'slow', 2);
     if (t.ability === 'ambar' && tech.element === 'fisico' && actor.side === 'ally' && actor.hp > 0 && rnd() < 0.35) this.status(actor, 'slow', 3);
+    if (actor.ability === 'conjuncion' && t.side === 'ally' && tech.target === 'enemy' && dmg > 0) for (const o of this.alive('ally')) if (o !== t) { const d = Math.max(1, Math.round(dmg * 0.2)); o.hp = Math.max(0, o.hp - d); this.ev({ t: 'hit', target: o.uid, dmg: d, dot: 'conjunción', hp: o.hp, element: tech.element }); if (o.hp <= 0) this.faint(o); }
+    if (t.hp <= 0 && t.ability === 'rebobinado' && !t._rew) { t._rew = true; t.hp = Math.round(t.maxHp * 0.5); t.fx = {}; this.ev({ t: 'msg', text: `¡El tiempo retrocede! ${t.name} vuelve a un instante anterior.`, target: t.uid }); this.ev({ t: 'heal', target: t.uid, amount: t.hp, hp: t.hp, regen: true }); return; }
     if (t.hp <= 0) return this.faint(t);
     for (const k of ['burn', 'poison', 'slow', 'freeze', 'stun'])
       if (eff[k] && rnd() < eff[k]) this.status(t, k, k === 'freeze' || k === 'stun' ? 1 : 3);
@@ -375,6 +436,7 @@ export class Battle {
       const b = t.hp; t.hp = Math.min(t.maxHp, t.hp + Math.round(t.maxHp * 0.03)); this.ev({ t: 'heal', target: t.uid, amount: t.hp - b, hp: t.hp, regen: true });
       return this.ev({ t: 'msg', text: `${t.name} no puede dormirse: es inmune.`, target: t.uid, immune: true });
     }
+    if (t.ability === 'reloj_arena' && (k === 'slow' || k === 'stun' || k === 'freeze')) { t._clockReset = this.round - 1; this.ev({ t: 'msg', text: `¡El reloj de arena de ${t.name} se atasca! Su cuenta se reinicia.`, target: t.uid }); }
     if (k === 'freeze' || k === 'stun') { t.fx[k] = 1; if (t.charging) { t.charging = null; this.ev({ t: 'msg', text: `¡Se interrumpe la carga de ${t.name}!`, target: t.uid, interrupt: true }); } }
     else t.fx[k] = Math.max(t.fx[k] || 0, turns);
     this.ev({ t: 'status', target: t.uid, status: k, text: `${STATUS_INFO[k]?.[1] || k}`, fx: { ...t.fx } });
@@ -389,7 +451,8 @@ export class Battle {
     const revive = t.hp <= 0;
     if (revive) return;
     const off = actor.hybrid ? (this.S(actor, 'atk') + this.S(actor, 'mag')) / 2 : this.S(actor, 'mag');
-    const amount = Math.round(tech.power * (off + actor.level * 1.5) / 14);
+    let amount = Math.round(tech.power * (off + actor.level * 1.5) / 14);
+    if (actor.side === 'ally' && this.alive('enemy').some(e => e.ability === 'voz_robada')) amount = Math.round(amount * 0.5);
     const before = t.hp; t.hp = Math.min(t.maxHp, t.hp + amount);
     this.ev({ t: 'heal', target: t.uid, amount: t.hp - before, hp: t.hp });
     if (tech.effect?.regen) this.status(t, 'regen', tech.effect.regen);
@@ -469,6 +532,54 @@ export class Battle {
       if (e.ability === 'nana' && this.round % 3 === 0) {
         this.ev({ t: 'msg', text: `¡${e.name} canta una nana! El cansancio cae sobre tu equipo.`, target: e.uid });
         for (const a of this.alive('ally')) { const lose = Math.round(a.mp * 0.1); a.mp -= lose; a.ult = Math.max(0, a.ult - 10); this.ev({ t: 'mp', target: a.uid, amount: -lose, mp: a.mp }); }
+      }
+      if (e.ability === 'eco_devuelto' && this.round % 3 === 0 && e._store > 0) {
+        this.ev({ t: 'msg', text: `¡El eco de la montaña vuelve! ${e.name} devuelve el daño acumulado.`, target: e.uid });
+        for (const a of this.alive('ally')) { const d = Math.max(3, Math.min(Math.round(e._store * 0.12), Math.round(a.maxHp * 0.2))); a.hp = Math.max(0, a.hp - d); this.ev({ t: 'hit', target: a.uid, dmg: d, dot: 'eco', hp: a.hp, element: 'arcano' }); if (a.hp <= 0) this.faint(a); }
+        e._store = 0;
+      }
+      if (e.ability === 'rayo_mudo' && this.round % 3 === 0) {
+        const al = this.alive('ally'); if (al.length) { const a = al.reduce((m, x) => x.mp > m.mp ? x : m, al[0]); const d = Math.max(3, Math.round(a.maxHp * 0.12)); const lose = a.mp; a.mp = 0; a.hp = Math.max(0, a.hp - d);
+          this.ev({ t: 'msg', text: `¡Un rayo sin trueno cae sobre ${a.name}!`, target: a.uid }); if (lose) this.ev({ t: 'mp', target: a.uid, amount: -lose, mp: 0 }); this.ev({ t: 'hit', target: a.uid, dmg: d, dot: 'rayo mudo', hp: a.hp, element: 'rayo' }); if (a.hp <= 0) this.faint(a); }
+      }
+      if (e.ability === 'contrapunto' && this.round % 4 === 0 && e.hp > 0 && !this.over) { this.ev({ t: 'msg', text: `¡${e.name} entra a contratiempo con una voz más!`, target: e.uid }); this.enemyAct(e); }
+      if (e.ability === 'avalancha' && this.round % 3 === 0) {
+        const al = this.alive('ally'); if (al.length) { const a = al.reduce((m, x) => x.hp / x.maxHp < m.hp / m.maxHp ? x : m, al[0]); const d = Math.max(3, Math.round(a.maxHp * 0.15 * (a.defending ? 0.5 : 1))); a.hp = Math.max(0, a.hp - d);
+          this.ev({ t: 'msg', text: `¡Una avalancha de roca cae sobre ${a.name}!`, target: a.uid }); this.ev({ t: 'hit', target: a.uid, dmg: d, dot: 'avalancha', hp: a.hp, element: 'fisico' }); if (a.hp <= 0) this.faint(a); }
+      }
+      if (e.ability === 'reverberacion' && this._echo && this._echo.u.hp > 0 && e.hp > 0 && !this.over) {
+        const { u, tech } = this._echo; this._echo = null;
+        this.ev({ t: 'msg', text: `¡El eco de ${e.name} te devuelve tu propio golpe, ${u.name}!`, target: u.uid });
+        this.hit(e, { type: 'attack', name: 'Reverberación', element: tech.element, power: Math.round(tech.power * 0.5), target: 'enemy', effect: null, noDodge: true }, u);
+      }
+      if (e.ability === 'ventisca_callada') for (const a of this.alive('ally')) if (rnd() < 0.25) { this.ev({ t: 'msg', text: `La ventisca ralentiza a ${a.name}.`, target: a.uid }); this.status(a, 'slow', 2); }
+      if (e.ability === 'sobrecalentamiento') {
+        e._heat = (e._heat || 0) + 1;
+        if (e._heat === 4) this.ev({ t: 'msg', text: `¡${e.name} echa humo! Está a punto de estallar. ¡Defiéndete o enfríala con hielo!`, target: e.uid });
+        if (e._heat >= 5) { e._heat = 0; this.ev({ t: 'msg', text: `¡${e.name} libera todo su calor!`, target: e.uid });
+          for (const a of this.alive('ally')) { const d = Math.max(3, Math.round(a.maxHp * 0.18 * (a.defending ? 0.5 : 1))); a.hp = Math.max(0, a.hp - d); this.ev({ t: 'hit', target: a.uid, dmg: d, dot: 'calor', hp: a.hp, element: 'fuego' }); if (a.hp <= 0) this.faint(a); } }
+      }
+      if (e.ability === 'paginas' && this.round % 4 === 0 && (e._shield || 0) <= 0) { e._shield = Math.round(e.maxHp * 0.15); this.ev({ t: 'msg', text: `¡${e.name} se rodea de páginas nuevas!`, target: e.uid }); }
+      if (e.ability === 'olvido') for (const a of this.alive('ally')) if (rnd() < 0.15) { this.ev({ t: 'msg', text: `${a.name} olvida qué estaba haciendo.`, target: a.uid }); this.status(a, 'stun', 1); }
+      if (e.ability === 'foco' && this._dmgBy) { let best = null, bv = 0; for (const a of this.alive('ally')) if ((this._dmgBy[a.uid] || 0) > bv) { bv = this._dmgBy[a.uid]; best = a; } this._dmgBy = {}; this._spot = best ? best.uid : null; if (best) this.ev({ t: 'msg', text: `¡El foco de escena apunta a ${best.name}!`, target: best.uid }); }
+      if (e.ability === 'sol_fijo' && this.round % 3 === 2) this.ev({ t: 'msg', text: `¡El sol se queda quieto sobre ${e.name}! La próxima ronda será casi invulnerable.`, target: e.uid });
+      if (e.ability === 'protocolo') { const els = ['fuego', 'hielo', 'rayo', 'arcano', 'fisico']; const nm = { fuego: 'fuego', hielo: 'hielo', rayo: 'rayo', arcano: 'arcano', fisico: 'físico' }; this._taboo = els[Math.floor(rnd() * els.length)]; this.ev({ t: 'msg', text: `${e.name} decreta: «Queda prohibido el elemento ${nm[this._taboo]}».`, target: e.uid }); }
+      if (e.ability === 'ultima_palabra' && e.hp > 0 && e.hp < e.maxHp * 0.25 && !this.over) { this.ev({ t: 'msg', text: `¡${e.name} se niega a dejar de escribir y ataca otra vez!`, target: e.uid }); this.enemyAct(e); }
+      if (e.ability === 'succion') {
+        let n = 0; for (const a of this.alive('ally')) { const lose = Math.min(a.mp, Math.round(a.maxMp * 0.06)); if (lose > 0) { a.mp -= lose; n++; this.ev({ t: 'mp', target: a.uid, amount: -lose, mp: a.mp }); } }
+        if (n && e.hp < e.maxHp) { const b = e.hp; e.hp = Math.min(e.maxHp, e.hp + Math.round(e.maxHp * 0.008 * n)); this.ev({ t: 'heal', target: e.uid, amount: e.hp - b, hp: e.hp, regen: true }); }
+      }
+      if (e.ability === 'fases') { const nx = (this.round + 1) % 4; this.ev({ t: 'msg', text: ['La luna mengua.', 'Luna nueva: la loba queda al descubierto.', 'La luna crece.', 'Luna llena: su ataque se dispara. ¡Cuidado!'][nx], target: e.uid }); }
+      if (e.ability === 'mareas') {
+        if (this.round % 2 === 1 && e.hp < e.maxHp) { const b = e.hp; e.hp = Math.min(e.maxHp, e.hp + Math.round(e.maxHp * 0.03)); this.ev({ t: 'heal', target: e.uid, amount: e.hp - b, hp: e.hp, regen: true }); }
+        this.ev({ t: 'msg', text: this.round % 2 === 1 ? `La marea baja: ${e.name} queda al descubierto.` : `La marea sube: ${e.name} se hace fuerte.`, target: e.uid });
+      }
+      if (e.ability === 'tsunami') {
+        if (this.round % 4 === 3) this.ev({ t: 'msg', text: `¡El agua se retira con un rugido! ¡Viene una ola enorme: defiéndete!`, target: e.uid });
+        if (this.round % 4 === 0) {
+          this.ev({ t: 'msg', text: `¡La ola de ${e.name} rompe sobre tu equipo!`, target: e.uid });
+          for (const a of this.alive('ally')) { if (a.defending) { this.ev({ t: 'msg', text: `${a.name} aguanta la ola.`, target: a.uid }); continue; } const d = Math.max(3, Math.round(a.maxHp * 0.18)); a.hp = Math.max(0, a.hp - d); this.ev({ t: 'hit', target: a.uid, dmg: d, dot: 'tsunami', hp: a.hp, element: 'hielo' }); if (a.hp <= 0) this.faint(a); }
+        }
       }
       if (e.ability === 'aullido' && this.round % 3 === 0) { this.ev({ t: 'msg', text: `¡${e.name} aúlla a la luna ausente!`, target: e.uid }); this.status(e, 'atk_up', 3); }
       if (e.ability === 'marca') {

@@ -90,6 +90,70 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `santuario_marea.jpg` | Santuario de la Primera Marea |
 | `recuerdo_manada.jpg` | Recuerdo de la manada ancestral |
 | `cueva_perlas.jpg` | Cueva de las Perlas |
+| `bahia_naufragios.jpg` | Bahía de los Naufragios |
+| `barco_fantasma.jpg` | El Último Lamento (barco fantasma) |
+| `santuario_corriente.jpg` | Santuario de la Corriente |
+| `recuerdo_corriente.jpg` | Recuerdo de la corriente |
+| `isla_coral.jpg` | Aldea de Coral |
+| `cueva_sirenas.jpg` | Cueva de las Sirenas |
+| `arrecife_profundo.jpg` | Arrecife Profundo |
+| `templo_sumergido.jpg` | Templo Sumergido de la Primera Manada |
+| `santuario_abismo.jpg` | Santuario del Abismo Claro |
+| `isla_faro_apagado.jpg` | Isla del Faro Apagado |
+| `puerto_linternas.jpg` | Puerto de las Linternas |
+| `faro_gemelo.jpg` | Faro Gemelo |
+| `santuario_eclipse.jpg` | Santuario del Eclipse Marino |
+| `gruta_medusas.jpg` | Gruta de las Medusas Reinas |
+| `archipielago_espejo.jpg` | Archipiélago de los Espejos |
+| `cementerio_cristal.jpg` | Cementerio de Barcos de Cristal |
+| `santuario_loba.jpg` | Santuario de la Madre Loba |
+| `recuerdo_loba_madre.jpg` | Recuerdo de la Madre Loba |
+| `paso_hielo.jpg` | Camino de Hielo |
+| `sendero_ecos.jpg` | Sendero de los Ecos |
+| `aldea_eco.jpg` | Aldea del Eco |
+| `templo_campana.jpg` | Templo de la Campana Quebrada |
+| `santuario_primer_eco.jpg` | Santuario del Primer Eco |
+| `recuerdo_voz.jpg` | Recuerdo de una voz en la montaña |
+| `cueva_susurros.jpg` | Cueva de los Susurros Dorados |
+| `paso_ventisca.jpg` | Paso de la Ventisca Dorada |
+| `fortaleza_trueno.jpg` | Fortaleza del Trueno Mudo |
+| `santuario_voz_helada.jpg` | Santuario de la Voz Helada |
+| `cresta_helada.jpg` | Cresta Helada |
+| `monasterio_coro.jpg` | Monasterio del Coro Dorado |
+| `biblioteca_voces.jpg` | Biblioteca de las Voces Selladas |
+| `santuario_coro.jpg` | Santuario del Coro Olvidado |
+| `recuerdo_coro.jpg` | Recuerdo del coro de la montaña |
+| `glaciar_susurrante.jpg` | Glaciar Susurrante |
+| `puente_mil_voces.jpg` | Puente de las Mil Voces |
+| `santuario_voz_sin_dueno.jpg` | Santuario de la Voz sin Dueño |
+| `observatorio_eco.jpg` | Observatorio del Último Eco |
+| `santuario_eco_dorado.jpg` | Santuario del Eco Dorado |
+| `recuerdo_eco_dorado.jpg` | Recuerdo del eco primero |
+| `cueva_nieve_callada.jpg` | Cueva de la Nieve Callada |
+| `puerta_luz.jpg` | Puerta de la Ciudad de Luz |
+| `avenida_sin_sombras.jpg` | Avenida sin Sombras |
+| `plaza_mediodia.jpg` | Plaza del Mediodía Eterno |
+| `santuario_instante.jpg` | Santuario del Primer Instante |
+| `recuerdo_instante.jpg` | Recuerdo del instante detenido |
+| `sotano_engranajes.jpg` | Sótano de los Engranajes |
+| `calle_relojes.jpg` | Calle de los Relojes Parados |
+| `jardin_sin_sombra.jpg` | Jardín sin Sombra |
+| `barrio_espejos.jpg` | Barrio de los Espejos sin Reflejo |
+| `mercado_horas.jpg` | Mercado de las Horas Perdidas |
+| `archivo_nombres.jpg` | Archivo de los Nombres |
+| `santuario_memoria.jpg` | Santuario de la Memoria Detenida |
+| `recuerdo_precio.jpg` | Recuerdo del precio de un nombre |
+| `galeria_retratos.jpg` | Galería de los Retratos Vacíos |
+| `canal_sin_agua.jpg` | Canal sin Agua |
+| `teatro_voces.jpg` | Teatro de las Voces Calladas |
+| `santuario_nombre.jpg` | Santuario del Nombre Borrado |
+| `paseo_lumbreras.jpg` | Paseo de las Lumbreras |
+| `observatorio_sol.jpg` | Observatorio del Sol Fijo |
+| `santuario_sol.jpg` | Santuario del Sol Inmóvil |
+| `camara_sombras.jpg` | Cámara de las Sombras Impagadas |
+| `palacio_luz.jpg` | Palacio de la Luz Quieta |
+| `santuario_dama.jpg` | Santuario de la Dama de la Luz |
+| `recuerdo_sombra.jpg` | Recuerdo de la sombra entregada |
 | `prologue_rebelion.jpg` | Prólogo: la rebelión de Tsukimori |
 | `prologue_noche.jpg` | Prólogo: la noche tras la rebelión |
 
@@ -108,6 +172,8 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `mapa_akatsuki.jpg` | Mapa de Yermo Akatsuki |
 | `mapa_amanecer.jpg` | Mapa de Reino del Amanecer |
 | `mapa_marcristal.jpg` | Mapa de Mar de Cristal |
+| `mapa_cordillera.jpg` | Mapa de Cordillera del Eco Dorado |
+| `mapa_ciudadluz.jpg` | Mapa de Ciudad de Luz sin Reloj |
 
 ## Fondos de combate
 
@@ -201,6 +267,59 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `combate_faro_hundido.jpg` | Combates en: Faro Hundido |
 | `combate_santuario_c1.jpg` | Combates en: Santuario de la Primera Marea |
 | `combate_cueva_perlas.jpg` | Combates en: Cueva de las Perlas |
+| `combate_bahia_naufragios.jpg` | Combates en: Bahía de los Naufragios |
+| `combate_barco_fantasma.jpg` | Combates en: El Último Lamento |
+| `combate_santuario_c2.jpg` | Combates en: Santuario de la Corriente |
+| `combate_cueva_sirenas.jpg` | Combates en: Cueva de las Sirenas |
+| `combate_arrecife_profundo.jpg` | Combates en: Arrecife Profundo |
+| `combate_templo_sumergido.jpg` | Combates en: Templo Sumergido |
+| `combate_santuario_c3.jpg` | Combates en: Santuario del Abismo Claro |
+| `combate_isla_faro_apagado.jpg` | Combates en: Isla del Faro Apagado |
+| `combate_faro_gemelo.jpg` | Combates en: Faro Gemelo |
+| `combate_santuario_c4.jpg` | Combates en: Santuario del Eclipse Marino |
+| `combate_cueva_medusas.jpg` | Combates en: Gruta de las Medusas Reinas |
+| `combate_archipielago_espejo.jpg` | Combates en: Archipiélago de los Espejos |
+| `combate_cementerio_cristal.jpg` | Combates en: Cementerio de Barcos de Cristal |
+| `combate_santuario_c5.jpg` | Combates en: Santuario de la Madre Loba |
+| `combate_cordillera.jpg` | Combates en Cordillera del Eco Dorado (por defecto) |
+| `combate_sendero_ecos.jpg` | Combates en: Sendero de los Ecos |
+| `combate_canon_voces.jpg` | Combates en: Cañón de las Voces |
+| `combate_templo_campana.jpg` | Combates en: Templo de la Campana Quebrada |
+| `combate_santuario_g1.jpg` | Combates en: Santuario del Primer Eco |
+| `combate_cueva_susurros.jpg` | Combates en: Cueva de los Susurros Dorados |
+| `combate_paso_ventisca.jpg` | Combates en: Paso de la Ventisca Dorada |
+| `combate_fortaleza_trueno.jpg` | Combates en: Fortaleza del Trueno Mudo |
+| `combate_santuario_g2.jpg` | Combates en: Santuario de la Voz Helada |
+| `combate_cresta_helada.jpg` | Combates en: Cresta Helada |
+| `combate_biblioteca_voces.jpg` | Combates en: Biblioteca de las Voces Selladas |
+| `combate_cueva_cristal.jpg` | Combates en: Cueva del Cristal Cantor |
+| `combate_santuario_g3.jpg` | Combates en: Santuario del Coro Olvidado |
+| `combate_glaciar_susurrante.jpg` | Combates en: Glaciar Susurrante |
+| `combate_puente_mil_voces.jpg` | Combates en: Puente de las Mil Voces |
+| `combate_santuario_g4.jpg` | Combates en: Santuario de la Voz sin Dueño |
+| `combate_observatorio_eco.jpg` | Combates en: Observatorio del Último Eco |
+| `combate_santuario_g5.jpg` | Combates en: Santuario del Eco Dorado |
+| `combate_cueva_nieve.jpg` | Combates en: Cueva de la Nieve Callada |
+| `combate_ciudadluz.jpg` | Combates en Ciudad de Luz sin Reloj (por defecto) |
+| `combate_avenida_sin_sombras.jpg` | Combates en: Avenida sin Sombras |
+| `combate_calle_relojes.jpg` | Combates en: Calle de los Relojes Parados |
+| `combate_torre_reloj.jpg` | Combates en: Torre del Reloj Parado |
+| `combate_santuario_l1.jpg` | Combates en: Santuario del Primer Instante |
+| `combate_sotano_engranajes.jpg` | Combates en: Sótano de los Engranajes |
+| `combate_jardin_sin_sombra.jpg` | Combates en: Jardín sin Sombra |
+| `combate_barrio_espejos.jpg` | Combates en: Barrio de los Espejos |
+| `combate_archivo_nombres.jpg` | Combates en: Archivo de los Nombres |
+| `combate_santuario_l2.jpg` | Combates en: Santuario de la Memoria Detenida |
+| `combate_galeria_retratos.jpg` | Combates en: Galería de los Retratos Vacíos |
+| `combate_canal_sin_agua.jpg` | Combates en: Canal sin Agua |
+| `combate_teatro_voces.jpg` | Combates en: Teatro de las Voces Calladas |
+| `combate_santuario_l3.jpg` | Combates en: Santuario del Nombre Borrado |
+| `combate_paseo_lumbreras.jpg` | Combates en: Paseo de las Lumbreras |
+| `combate_observatorio_sol.jpg` | Combates en: Observatorio del Sol Fijo |
+| `combate_santuario_l4.jpg` | Combates en: Santuario del Sol Inmóvil |
+| `combate_cueva_sombras.jpg` | Combates en: Cámara de las Sombras Impagadas |
+| `combate_palacio_luz.jpg` | Combates en: Palacio de la Luz Quieta |
+| `combate_santuario_l5.jpg` | Combates en: Santuario de la Dama de la Luz |
 | `combate.jpg` | Combate genérico (si no hay otro) |
 
 ## Lugares (tarjeta de entrada, pueblo, mazmorra)
@@ -284,4 +403,50 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `lugar_faro_hundido.jpg` | Tarjeta de entrada/pueblo: Faro Hundido |
 | `lugar_santuario_c1.jpg` | Tarjeta de entrada/pueblo: Santuario de la Primera Marea |
 | `lugar_cueva_perlas.jpg` | Tarjeta de entrada/pueblo: Cueva de las Perlas |
-| `lugar_horizonte_mar.jpg` | Tarjeta de entrada/pueblo: Horizonte del Mar |
+| `lugar_horizonte_mar.jpg` | Tarjeta de entrada/pueblo: Camino de Hielo |
+| `lugar_barco_fantasma.jpg` | Tarjeta de entrada/pueblo: El Último Lamento |
+| `lugar_santuario_c2.jpg` | Tarjeta de entrada/pueblo: Santuario de la Corriente |
+| `lugar_cueva_sirenas.jpg` | Tarjeta de entrada/pueblo: Cueva de las Sirenas |
+| `lugar_isla_coral.jpg` | Tarjeta de entrada/pueblo: Aldea de Coral |
+| `lugar_templo_sumergido.jpg` | Tarjeta de entrada/pueblo: Templo Sumergido |
+| `lugar_santuario_c3.jpg` | Tarjeta de entrada/pueblo: Santuario del Abismo Claro |
+| `lugar_puerto_linternas.jpg` | Tarjeta de entrada/pueblo: Puerto de las Linternas |
+| `lugar_faro_gemelo.jpg` | Tarjeta de entrada/pueblo: Faro Gemelo |
+| `lugar_santuario_c4.jpg` | Tarjeta de entrada/pueblo: Santuario del Eclipse Marino |
+| `lugar_cueva_medusas.jpg` | Tarjeta de entrada/pueblo: Gruta de las Medusas Reinas |
+| `lugar_cementerio_cristal.jpg` | Tarjeta de entrada/pueblo: Cementerio de Barcos de Cristal |
+| `lugar_santuario_c5.jpg` | Tarjeta de entrada/pueblo: Santuario de la Madre Loba |
+| `lugar_paso_hielo.jpg` | Tarjeta de entrada/pueblo: Camino de Hielo |
+| `lugar_aldea_eco.jpg` | Tarjeta de entrada/pueblo: Aldea del Eco |
+| `lugar_templo_campana.jpg` | Tarjeta de entrada/pueblo: Templo de la Campana Quebrada |
+| `lugar_santuario_g1.jpg` | Tarjeta de entrada/pueblo: Santuario del Primer Eco |
+| `lugar_cueva_susurros.jpg` | Tarjeta de entrada/pueblo: Cueva de los Susurros Dorados |
+| `lugar_fortaleza_trueno.jpg` | Tarjeta de entrada/pueblo: Fortaleza del Trueno Mudo |
+| `lugar_santuario_g2.jpg` | Tarjeta de entrada/pueblo: Santuario de la Voz Helada |
+| `lugar_horizonte_cordillera.jpg` | Tarjeta de entrada/pueblo: Camino de Nubes |
+| `lugar_monasterio_coro.jpg` | Tarjeta de entrada/pueblo: Monasterio del Coro Dorado |
+| `lugar_biblioteca_voces.jpg` | Tarjeta de entrada/pueblo: Biblioteca de las Voces Selladas |
+| `lugar_cueva_cristal.jpg` | Tarjeta de entrada/pueblo: Cueva del Cristal Cantor |
+| `lugar_santuario_g3.jpg` | Tarjeta de entrada/pueblo: Santuario del Coro Olvidado |
+| `lugar_puente_mil_voces.jpg` | Tarjeta de entrada/pueblo: Puente de las Mil Voces |
+| `lugar_santuario_g4.jpg` | Tarjeta de entrada/pueblo: Santuario de la Voz sin Dueño |
+| `lugar_observatorio_eco.jpg` | Tarjeta de entrada/pueblo: Observatorio del Último Eco |
+| `lugar_santuario_g5.jpg` | Tarjeta de entrada/pueblo: Santuario del Eco Dorado |
+| `lugar_cueva_nieve.jpg` | Tarjeta de entrada/pueblo: Cueva de la Nieve Callada |
+| `lugar_puerta_luz.jpg` | Tarjeta de entrada/pueblo: Camino de Nubes |
+| `lugar_plaza_mediodia.jpg` | Tarjeta de entrada/pueblo: Plaza del Mediodía Eterno |
+| `lugar_torre_reloj.jpg` | Tarjeta de entrada/pueblo: Torre del Reloj Parado |
+| `lugar_santuario_l1.jpg` | Tarjeta de entrada/pueblo: Santuario del Primer Instante |
+| `lugar_sotano_engranajes.jpg` | Tarjeta de entrada/pueblo: Sótano de los Engranajes |
+| `lugar_horizonte_luz.jpg` | Tarjeta de entrada/pueblo: Corazón de la Ciudad |
+| `lugar_mercado_horas.jpg` | Tarjeta de entrada/pueblo: Mercado de las Horas Perdidas |
+| `lugar_archivo_nombres.jpg` | Tarjeta de entrada/pueblo: Archivo de los Nombres |
+| `lugar_santuario_l2.jpg` | Tarjeta de entrada/pueblo: Santuario de la Memoria Detenida |
+| `lugar_galeria_retratos.jpg` | Tarjeta de entrada/pueblo: Galería de los Retratos Vacíos |
+| `lugar_teatro_voces.jpg` | Tarjeta de entrada/pueblo: Teatro de las Voces Calladas |
+| `lugar_santuario_l3.jpg` | Tarjeta de entrada/pueblo: Santuario del Nombre Borrado |
+| `lugar_observatorio_sol.jpg` | Tarjeta de entrada/pueblo: Observatorio del Sol Fijo |
+| `lugar_santuario_l4.jpg` | Tarjeta de entrada/pueblo: Santuario del Sol Inmóvil |
+| `lugar_cueva_sombras.jpg` | Tarjeta de entrada/pueblo: Cámara de las Sombras Impagadas |
+| `lugar_palacio_luz.jpg` | Tarjeta de entrada/pueblo: Palacio de la Luz Quieta |
+| `lugar_santuario_l5.jpg` | Tarjeta de entrada/pueblo: Santuario de la Dama de la Luz |

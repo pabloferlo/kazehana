@@ -83,6 +83,72 @@
   "linear-gradient(180deg,#0a2a5a,#7ae0ff 55%,#05050a)": "santuario_marea",
   "linear-gradient(180deg,#101030,#c0d0ff 55%,#05050a)": "recuerdo_manada",
   "linear-gradient(180deg,#2a2a50,#f0e0ff 55%,#05050a)": "cueva_perlas",
+  "linear-gradient(180deg,#1a2a3a,#8aa8b8 55%,#05050a)": "bahia_naufragios",
+  "linear-gradient(180deg,#0a1a28,#50788a 55%,#05050a)": "barco_fantasma",
+  "linear-gradient(180deg,#0a3a6a,#40e0d0 55%,#05050a)": "santuario_corriente",
+  "linear-gradient(180deg,#0a2050,#b0f0ff 55%,#05050a)": "recuerdo_corriente",
+  "linear-gradient(180deg,#3a2a50,#ffb0a0 55%,#05050a)": "isla_coral",
+  "linear-gradient(180deg,#2a1a50,#70d8c8 55%,#05050a)": "cueva_sirenas",
+  "linear-gradient(180deg,#050f2a,#2a60a0 55%,#05050a)": "arrecife_profundo",
+  "linear-gradient(180deg,#102040,#a0d8e8 55%,#05050a)": "templo_sumergido",
+  "linear-gradient(180deg,#02061a,#4090d0 55%,#05050a)": "santuario_abismo",
+  "linear-gradient(180deg,#1a1a30,#8090b8 55%,#05050a)": "isla_faro_apagado",
+  "linear-gradient(180deg,#2a2040,#ffd090 55%,#05050a)": "puerto_linternas",
+  "linear-gradient(180deg,#0a0a24,#c0d0ff 55%,#05050a)": "faro_gemelo",
+  "linear-gradient(180deg,#04040e,#8060c0 55%,#05050a)": "santuario_eclipse",
+  "linear-gradient(180deg,#1a0a40,#d080ff 55%,#05050a)": "gruta_medusas",
+  "linear-gradient(180deg,#204060,#c0f0ff 55%,#05050a)": "archipielago_espejo",
+  "linear-gradient(180deg,#102030,#80b0c0 55%,#05050a)": "cementerio_cristal",
+  "linear-gradient(180deg,#102040,#e0f0ff 55%,#05050a)": "santuario_loba",
+  "linear-gradient(180deg,#1a2a50,#f0f8ff 55%,#05050a)": "recuerdo_loba_madre",
+  "linear-gradient(180deg,#1a2a40,#d0e8ff 55%,#05050a)": "paso_hielo",
+  "linear-gradient(180deg,#3a3020,#e8c880 55%,#05050a)": "sendero_ecos",
+  "linear-gradient(180deg,#5a4020,#ffd890 55%,#05050a)": "aldea_eco",
+  "linear-gradient(180deg,#4a3010,#ffd070 55%,#05050a)": "templo_campana",
+  "linear-gradient(180deg,#5a4a18,#fff0a0 55%,#05050a)": "santuario_primer_eco",
+  "linear-gradient(180deg,#3a2a10,#fff0d0 55%,#05050a)": "recuerdo_voz",
+  "linear-gradient(180deg,#2a2010,#c8a860 55%,#05050a)": "cueva_susurros",
+  "linear-gradient(180deg,#2a3040,#f0e0b0 55%,#05050a)": "paso_ventisca",
+  "linear-gradient(180deg,#202030,#a0a8c8 55%,#05050a)": "fortaleza_trueno",
+  "linear-gradient(180deg,#18284a,#e0f0ff 55%,#05050a)": "santuario_voz_helada",
+  "linear-gradient(180deg,#2a3a58,#e8f0ff 55%,#05050a)": "cresta_helada",
+  "linear-gradient(180deg,#5a4418,#ffe8a0 55%,#05050a)": "monasterio_coro",
+  "linear-gradient(180deg,#2a2038,#d8c0f0 55%,#05050a)": "biblioteca_voces",
+  "linear-gradient(180deg,#183050,#a0e0ff 55%,#05050a)": "cueva_cristal",
+  "linear-gradient(180deg,#4a3820,#fff0c0 55%,#05050a)": "santuario_coro",
+  "linear-gradient(180deg,#4a3818,#fff8e0 55%,#05050a)": "recuerdo_coro",
+  "linear-gradient(180deg,#1a3050,#c8e8ff 55%,#05050a)": "glaciar_susurrante",
+  "linear-gradient(180deg,#2a2a40,#c0c8e8 55%,#05050a)": "puente_mil_voces",
+  "linear-gradient(180deg,#101830,#f0f8ff 55%,#05050a)": "santuario_voz_sin_dueno",
+  "linear-gradient(180deg,#18203a,#a8b8f0 55%,#05050a)": "observatorio_eco",
+  "linear-gradient(180deg,#6a4a14,#fff4b0 55%,#05050a)": "santuario_eco_dorado",
+  "linear-gradient(180deg,#6a4a14,#fffbe0 55%,#05050a)": "recuerdo_eco_dorado",
+  "linear-gradient(180deg,#d8e4f4,#8090a8 55%,#05050a)": "cueva_nieve_callada",
+  "linear-gradient(180deg,#e8f0ff,#9ab0d8 55%,#05050a)": "puerta_luz",
+  "linear-gradient(180deg,#e8e8f0,#a8b0c8 55%,#05050a)": "avenida_sin_sombras",
+  "linear-gradient(180deg,#fff0c0,#c8b888 55%,#05050a)": "plaza_mediodia",
+  "linear-gradient(180deg,#d0d8e8,#6a7088 55%,#05050a)": "torre_reloj",
+  "linear-gradient(180deg,#f0f4ff,#a0b4e0 55%,#05050a)": "santuario_instante",
+  "linear-gradient(180deg,#f8fbff,#c8d8f0 55%,#05050a)": "recuerdo_instante",
+  "linear-gradient(180deg,#3a3028,#b89868 55%,#05050a)": "sotano_engranajes",
+  "linear-gradient(180deg,#d8dce8,#8890a8 55%,#05050a)": "calle_relojes",
+  "linear-gradient(180deg,#f0f8e8,#a8c098 55%,#05050a)": "jardin_sin_sombra",
+  "linear-gradient(180deg,#e8ecf8,#8898c0 55%,#05050a)": "barrio_espejos",
+  "linear-gradient(180deg,#f8e8c8,#b09868 55%,#05050a)": "mercado_horas",
+  "linear-gradient(180deg,#e8e0d0,#7a6a50 55%,#05050a)": "archivo_nombres",
+  "linear-gradient(180deg,#f4f0ff,#a898d8 55%,#05050a)": "santuario_memoria",
+  "linear-gradient(180deg,#fffaf0,#d8c8a8 55%,#05050a)": "recuerdo_precio",
+  "linear-gradient(180deg,#e0d8e8,#706880 55%,#05050a)": "galeria_retratos",
+  "linear-gradient(180deg,#e0eaf4,#7898b8 55%,#05050a)": "canal_sin_agua",
+  "linear-gradient(180deg,#f0d8d0,#8a5a50 55%,#05050a)": "teatro_voces",
+  "linear-gradient(180deg,#f8f8f8,#9898a8 55%,#05050a)": "santuario_nombre",
+  "linear-gradient(180deg,#fff4d8,#c8a860 55%,#05050a)": "paseo_lumbreras",
+  "linear-gradient(180deg,#fff8e0,#d8b040 55%,#05050a)": "observatorio_sol",
+  "linear-gradient(180deg,#fffbe8,#e8c860 55%,#05050a)": "santuario_sol",
+  "linear-gradient(180deg,#383048,#181420 55%,#05050a)": "camara_sombras",
+  "linear-gradient(180deg,#fffaf0,#d8d0e8 55%,#05050a)": "palacio_luz",
+  "linear-gradient(180deg,#ffffff,#e8e8f8 55%,#05050a)": "santuario_dama",
+  "linear-gradient(180deg,#fff4e0,#d0b898 55%,#05050a)": "recuerdo_sombra",
   "linear-gradient(180deg,#3a0f14,#8a2a2a 55%,#1a0508)": "prologue_rebelion",
   "linear-gradient(180deg,#1a1020,#3a1a30 55%,#0a0610)": "prologue_noche"
  },
@@ -503,6 +569,326 @@
    "group": "Escenas de historia"
   },
   {
+   "id": "bahia_naufragios",
+   "label": "Bahía de los Naufragios",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "barco_fantasma",
+   "label": "El Último Lamento (barco fantasma)",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_corriente",
+   "label": "Santuario de la Corriente",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_corriente",
+   "label": "Recuerdo de la corriente",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "isla_coral",
+   "label": "Aldea de Coral",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_sirenas",
+   "label": "Cueva de las Sirenas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "arrecife_profundo",
+   "label": "Arrecife Profundo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "templo_sumergido",
+   "label": "Templo Sumergido de la Primera Manada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_abismo",
+   "label": "Santuario del Abismo Claro",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "isla_faro_apagado",
+   "label": "Isla del Faro Apagado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puerto_linternas",
+   "label": "Puerto de las Linternas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "faro_gemelo",
+   "label": "Faro Gemelo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_eclipse",
+   "label": "Santuario del Eclipse Marino",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "gruta_medusas",
+   "label": "Gruta de las Medusas Reinas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "archipielago_espejo",
+   "label": "Archipiélago de los Espejos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cementerio_cristal",
+   "label": "Cementerio de Barcos de Cristal",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_loba",
+   "label": "Santuario de la Madre Loba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_loba_madre",
+   "label": "Recuerdo de la Madre Loba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "paso_hielo",
+   "label": "Camino de Hielo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "sendero_ecos",
+   "label": "Sendero de los Ecos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "aldea_eco",
+   "label": "Aldea del Eco",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "templo_campana",
+   "label": "Templo de la Campana Quebrada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_primer_eco",
+   "label": "Santuario del Primer Eco",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_voz",
+   "label": "Recuerdo de una voz en la montaña",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_susurros",
+   "label": "Cueva de los Susurros Dorados",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "paso_ventisca",
+   "label": "Paso de la Ventisca Dorada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "fortaleza_trueno",
+   "label": "Fortaleza del Trueno Mudo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_voz_helada",
+   "label": "Santuario de la Voz Helada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cresta_helada",
+   "label": "Cresta Helada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "monasterio_coro",
+   "label": "Monasterio del Coro Dorado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "biblioteca_voces",
+   "label": "Biblioteca de las Voces Selladas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_coro",
+   "label": "Santuario del Coro Olvidado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_coro",
+   "label": "Recuerdo del coro de la montaña",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "glaciar_susurrante",
+   "label": "Glaciar Susurrante",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puente_mil_voces",
+   "label": "Puente de las Mil Voces",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_voz_sin_dueno",
+   "label": "Santuario de la Voz sin Dueño",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "observatorio_eco",
+   "label": "Observatorio del Último Eco",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_eco_dorado",
+   "label": "Santuario del Eco Dorado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_eco_dorado",
+   "label": "Recuerdo del eco primero",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_nieve_callada",
+   "label": "Cueva de la Nieve Callada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "puerta_luz",
+   "label": "Puerta de la Ciudad de Luz",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "avenida_sin_sombras",
+   "label": "Avenida sin Sombras",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "plaza_mediodia",
+   "label": "Plaza del Mediodía Eterno",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_instante",
+   "label": "Santuario del Primer Instante",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_instante",
+   "label": "Recuerdo del instante detenido",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "sotano_engranajes",
+   "label": "Sótano de los Engranajes",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "calle_relojes",
+   "label": "Calle de los Relojes Parados",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "jardin_sin_sombra",
+   "label": "Jardín sin Sombra",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "barrio_espejos",
+   "label": "Barrio de los Espejos sin Reflejo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "mercado_horas",
+   "label": "Mercado de las Horas Perdidas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "archivo_nombres",
+   "label": "Archivo de los Nombres",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_memoria",
+   "label": "Santuario de la Memoria Detenida",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_precio",
+   "label": "Recuerdo del precio de un nombre",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "galeria_retratos",
+   "label": "Galería de los Retratos Vacíos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "canal_sin_agua",
+   "label": "Canal sin Agua",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "teatro_voces",
+   "label": "Teatro de las Voces Calladas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_nombre",
+   "label": "Santuario del Nombre Borrado",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "paseo_lumbreras",
+   "label": "Paseo de las Lumbreras",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "observatorio_sol",
+   "label": "Observatorio del Sol Fijo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_sol",
+   "label": "Santuario del Sol Inmóvil",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "camara_sombras",
+   "label": "Cámara de las Sombras Impagadas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "palacio_luz",
+   "label": "Palacio de la Luz Quieta",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_dama",
+   "label": "Santuario de la Dama de la Luz",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_sombra",
+   "label": "Recuerdo de la sombra entregada",
+   "group": "Escenas de historia"
+  },
+  {
    "id": "prologue_rebelion",
    "label": "Prólogo: la rebelión de Tsukimori",
    "group": "Escenas de historia"
@@ -540,6 +926,16 @@
   {
    "id": "mapa_marcristal",
    "label": "Mapa de Mar de Cristal",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_cordillera",
+   "label": "Mapa de Cordillera del Eco Dorado",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_ciudadluz",
+   "label": "Mapa de Ciudad de Luz sin Reloj",
    "group": "Mapas de región"
   },
   {
@@ -1369,8 +1765,503 @@
   },
   {
    "id": "lugar_horizonte_mar",
-   "label": "Tarjeta de entrada/pueblo: Horizonte del Mar",
+   "label": "Tarjeta de entrada/pueblo: Camino de Hielo",
    "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_bahia_naufragios",
+   "label": "Combates en: Bahía de los Naufragios",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_barco_fantasma",
+   "label": "Tarjeta de entrada/pueblo: El Último Lamento",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_barco_fantasma",
+   "label": "Combates en: El Último Lamento",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_c2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Corriente",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_c2",
+   "label": "Combates en: Santuario de la Corriente",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_sirenas",
+   "label": "Tarjeta de entrada/pueblo: Cueva de las Sirenas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_sirenas",
+   "label": "Combates en: Cueva de las Sirenas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_isla_coral",
+   "label": "Tarjeta de entrada/pueblo: Aldea de Coral",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_arrecife_profundo",
+   "label": "Combates en: Arrecife Profundo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_templo_sumergido",
+   "label": "Tarjeta de entrada/pueblo: Templo Sumergido",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_templo_sumergido",
+   "label": "Combates en: Templo Sumergido",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_c3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Abismo Claro",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_c3",
+   "label": "Combates en: Santuario del Abismo Claro",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_isla_faro_apagado",
+   "label": "Combates en: Isla del Faro Apagado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puerto_linternas",
+   "label": "Tarjeta de entrada/pueblo: Puerto de las Linternas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_faro_gemelo",
+   "label": "Tarjeta de entrada/pueblo: Faro Gemelo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_faro_gemelo",
+   "label": "Combates en: Faro Gemelo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_c4",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Eclipse Marino",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_c4",
+   "label": "Combates en: Santuario del Eclipse Marino",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_medusas",
+   "label": "Tarjeta de entrada/pueblo: Gruta de las Medusas Reinas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_medusas",
+   "label": "Combates en: Gruta de las Medusas Reinas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_archipielago_espejo",
+   "label": "Combates en: Archipiélago de los Espejos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cementerio_cristal",
+   "label": "Tarjeta de entrada/pueblo: Cementerio de Barcos de Cristal",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cementerio_cristal",
+   "label": "Combates en: Cementerio de Barcos de Cristal",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_c5",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Madre Loba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_c5",
+   "label": "Combates en: Santuario de la Madre Loba",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_cordillera",
+   "label": "Combates en Cordillera del Eco Dorado (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_paso_hielo",
+   "label": "Tarjeta de entrada/pueblo: Camino de Hielo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_sendero_ecos",
+   "label": "Combates en: Sendero de los Ecos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_aldea_eco",
+   "label": "Tarjeta de entrada/pueblo: Aldea del Eco",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_canon_voces",
+   "label": "Combates en: Cañón de las Voces",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_templo_campana",
+   "label": "Tarjeta de entrada/pueblo: Templo de la Campana Quebrada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_templo_campana",
+   "label": "Combates en: Templo de la Campana Quebrada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_g1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Primer Eco",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_g1",
+   "label": "Combates en: Santuario del Primer Eco",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_susurros",
+   "label": "Tarjeta de entrada/pueblo: Cueva de los Susurros Dorados",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_susurros",
+   "label": "Combates en: Cueva de los Susurros Dorados",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_paso_ventisca",
+   "label": "Combates en: Paso de la Ventisca Dorada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_fortaleza_trueno",
+   "label": "Tarjeta de entrada/pueblo: Fortaleza del Trueno Mudo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_fortaleza_trueno",
+   "label": "Combates en: Fortaleza del Trueno Mudo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_g2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Voz Helada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_g2",
+   "label": "Combates en: Santuario de la Voz Helada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_horizonte_cordillera",
+   "label": "Tarjeta de entrada/pueblo: Camino de Nubes",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cresta_helada",
+   "label": "Combates en: Cresta Helada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_monasterio_coro",
+   "label": "Tarjeta de entrada/pueblo: Monasterio del Coro Dorado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_biblioteca_voces",
+   "label": "Tarjeta de entrada/pueblo: Biblioteca de las Voces Selladas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_biblioteca_voces",
+   "label": "Combates en: Biblioteca de las Voces Selladas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_cristal",
+   "label": "Tarjeta de entrada/pueblo: Cueva del Cristal Cantor",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_cristal",
+   "label": "Combates en: Cueva del Cristal Cantor",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_g3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Coro Olvidado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_g3",
+   "label": "Combates en: Santuario del Coro Olvidado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_glaciar_susurrante",
+   "label": "Combates en: Glaciar Susurrante",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puente_mil_voces",
+   "label": "Tarjeta de entrada/pueblo: Puente de las Mil Voces",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_puente_mil_voces",
+   "label": "Combates en: Puente de las Mil Voces",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_g4",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Voz sin Dueño",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_g4",
+   "label": "Combates en: Santuario de la Voz sin Dueño",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_observatorio_eco",
+   "label": "Tarjeta de entrada/pueblo: Observatorio del Último Eco",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_observatorio_eco",
+   "label": "Combates en: Observatorio del Último Eco",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_g5",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Eco Dorado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_g5",
+   "label": "Combates en: Santuario del Eco Dorado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_nieve",
+   "label": "Tarjeta de entrada/pueblo: Cueva de la Nieve Callada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_nieve",
+   "label": "Combates en: Cueva de la Nieve Callada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_ciudadluz",
+   "label": "Combates en Ciudad de Luz sin Reloj (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puerta_luz",
+   "label": "Tarjeta de entrada/pueblo: Camino de Nubes",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_avenida_sin_sombras",
+   "label": "Combates en: Avenida sin Sombras",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_plaza_mediodia",
+   "label": "Tarjeta de entrada/pueblo: Plaza del Mediodía Eterno",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_calle_relojes",
+   "label": "Combates en: Calle de los Relojes Parados",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_torre_reloj",
+   "label": "Tarjeta de entrada/pueblo: Torre del Reloj Parado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_torre_reloj",
+   "label": "Combates en: Torre del Reloj Parado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_l1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Primer Instante",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_l1",
+   "label": "Combates en: Santuario del Primer Instante",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_sotano_engranajes",
+   "label": "Tarjeta de entrada/pueblo: Sótano de los Engranajes",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_sotano_engranajes",
+   "label": "Combates en: Sótano de los Engranajes",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_jardin_sin_sombra",
+   "label": "Combates en: Jardín sin Sombra",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_horizonte_luz",
+   "label": "Tarjeta de entrada/pueblo: Corazón de la Ciudad",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_barrio_espejos",
+   "label": "Combates en: Barrio de los Espejos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_mercado_horas",
+   "label": "Tarjeta de entrada/pueblo: Mercado de las Horas Perdidas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "lugar_archivo_nombres",
+   "label": "Tarjeta de entrada/pueblo: Archivo de los Nombres",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_archivo_nombres",
+   "label": "Combates en: Archivo de los Nombres",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_l2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Memoria Detenida",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_l2",
+   "label": "Combates en: Santuario de la Memoria Detenida",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_galeria_retratos",
+   "label": "Tarjeta de entrada/pueblo: Galería de los Retratos Vacíos",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_galeria_retratos",
+   "label": "Combates en: Galería de los Retratos Vacíos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_canal_sin_agua",
+   "label": "Combates en: Canal sin Agua",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_teatro_voces",
+   "label": "Tarjeta de entrada/pueblo: Teatro de las Voces Calladas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_teatro_voces",
+   "label": "Combates en: Teatro de las Voces Calladas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_l3",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Nombre Borrado",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_l3",
+   "label": "Combates en: Santuario del Nombre Borrado",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_paseo_lumbreras",
+   "label": "Combates en: Paseo de las Lumbreras",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_observatorio_sol",
+   "label": "Tarjeta de entrada/pueblo: Observatorio del Sol Fijo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_observatorio_sol",
+   "label": "Combates en: Observatorio del Sol Fijo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_l4",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Sol Inmóvil",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_l4",
+   "label": "Combates en: Santuario del Sol Inmóvil",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_sombras",
+   "label": "Tarjeta de entrada/pueblo: Cámara de las Sombras Impagadas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_sombras",
+   "label": "Combates en: Cámara de las Sombras Impagadas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_palacio_luz",
+   "label": "Tarjeta de entrada/pueblo: Palacio de la Luz Quieta",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_palacio_luz",
+   "label": "Combates en: Palacio de la Luz Quieta",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_l5",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Dama de la Luz",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_l5",
+   "label": "Combates en: Santuario de la Dama de la Luz",
+   "group": "Fondos de combate"
   },
   {
    "id": "combate",

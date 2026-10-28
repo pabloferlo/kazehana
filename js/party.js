@@ -3,7 +3,7 @@
  */
 import { Data, State, scaledBonus } from './state.js';
 
-export const LEVEL_CAP = 38;                       // tope de esta versión (Mar de Cristal, sector 1)
+export const LEVEL_CAP = 70;                       // tope de esta versión (Ciudad de Luz sin Reloj completa)
 /** Curva de experiencia: potencia hasta nivel 10; después crece ~25 % más rápido que el nivel (pensada hasta nivel 100). */
 export const xpNeed = l => l <= 10 ? Math.round(20 * Math.pow(l, 1.7)) : Math.round(1003 * Math.pow(l / 10, 1.25));
 /** Modificador de XP según la diferencia entre tu nivel y el del enemigo (anti-farmeo suave, bonus si vas por debajo). */
