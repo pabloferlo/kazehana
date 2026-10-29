@@ -114,6 +114,30 @@
     {
      "level": 70,
      "tech": "juramento_sin_sombra"
+    },
+    {
+     "level": 71,
+     "tech": "amanecer_de_acero"
+    },
+    {
+     "level": 74,
+     "tech": "voluntad_del_alba"
+    },
+    {
+     "level": 75,
+     "tech": "siega_de_la_tarde"
+    },
+    {
+     "level": 78,
+     "tech": "temple_del_crepusculo"
+    },
+    {
+     "level": 79,
+     "tech": "espada_del_alba_eterna"
+    },
+    {
+     "level": 80,
+     "tech": "corazon_de_titan"
     }
    ],
    "ultimate": "furia_del_titan",
@@ -233,6 +257,30 @@
     {
      "level": 70,
      "tech": "mediodia_eterno"
+    },
+    {
+     "level": 71,
+     "tech": "llama_del_primer_rayo"
+    },
+    {
+     "level": 74,
+     "tech": "amanecer_incandescente"
+    },
+    {
+     "level": 75,
+     "tech": "brasa_de_la_tarde"
+    },
+    {
+     "level": 78,
+     "tech": "incendio_de_ocaso"
+    },
+    {
+     "level": 79,
+     "tech": "sol_recien_nacido"
+    },
+    {
+     "level": 80,
+     "tech": "llamarada_del_alba_eterna"
     }
    ],
    "ultimate": "supernova_carmesi",
@@ -352,6 +400,30 @@
     {
      "level": 70,
      "tech": "nevada_sin_tiempo"
+    },
+    {
+     "level": 71,
+     "tech": "rocio_helado"
+    },
+    {
+     "level": 74,
+     "tech": "escarcha_de_madrugada"
+    },
+    {
+     "level": 75,
+     "tech": "rocio_de_vispera"
+    },
+    {
+     "level": 78,
+     "tech": "helada_de_anochecer"
+    },
+    {
+     "level": 79,
+     "tech": "lagrima_de_la_madre"
+    },
+    {
+     "level": 80,
+     "tech": "noche_estrellada"
     }
    ],
    "ultimate": "era_glacial",
@@ -467,6 +539,30 @@
     {
      "level": 70,
      "tech": "tormenta_sin_nubes"
+    },
+    {
+     "level": 71,
+     "tech": "trueno_del_despertar"
+    },
+    {
+     "level": 74,
+     "tech": "tormenta_de_aurora"
+    },
+    {
+     "level": 75,
+     "tech": "trueno_de_ultima_hora"
+    },
+    {
+     "level": 78,
+     "tech": "tormenta_de_vispera"
+    },
+    {
+     "level": 79,
+     "tech": "trueno_del_corazon"
+    },
+    {
+     "level": 80,
+     "tech": "tempestad_del_alba"
     }
    ],
    "ultimate": "tormenta_celestial",
@@ -586,6 +682,30 @@
     {
      "level": 70,
      "tech": "luz_que_abraza"
+    },
+    {
+     "level": 71,
+     "tech": "polvo_de_estrellas_dormidas"
+    },
+    {
+     "level": 74,
+     "tech": "bendicion_de_la_aurora"
+    },
+    {
+     "level": 75,
+     "tech": "luciernagas_de_estrellas"
+    },
+    {
+     "level": 78,
+     "tech": "bendicion_del_ocaso"
+    },
+    {
+     "level": 79,
+     "tech": "nombre_de_todas_las_estrellas"
+    },
+    {
+     "level": 80,
+     "tech": "abrazo_de_la_noche_y_el_dia"
     }
    ],
    "ultimate": "eclipse_arcano",
@@ -705,6 +825,30 @@
     {
      "level": 70,
      "tech": "danza_de_luz_y_acero"
+    },
+    {
+     "level": 71,
+     "tech": "filo_de_la_primera_luz"
+    },
+    {
+     "level": 74,
+     "tech": "danza_del_amanecer"
+    },
+    {
+     "level": 75,
+     "tech": "filo_del_atardecer"
+    },
+    {
+     "level": 78,
+     "tech": "danza_de_las_espigas"
+    },
+    {
+     "level": 79,
+     "tech": "filo_de_la_madre_y_la_hija"
+    },
+    {
+     "level": 80,
+     "tech": "danza_del_dia_y_la_noche"
     }
    ],
    "ultimate": "mil_lunas",
@@ -824,6 +968,30 @@
     {
      "level": 70,
      "tech": "silencio_de_la_ciudad"
+    },
+    {
+     "level": 71,
+     "tech": "palma_del_despertar"
+    },
+    {
+     "level": 74,
+     "tech": "calma_del_alba"
+    },
+    {
+     "level": 75,
+     "tech": "palma_de_la_tarde"
+    },
+    {
+     "level": 78,
+     "tech": "calma_del_crepusculo"
+    },
+    {
+     "level": 79,
+     "tech": "palma_del_alba_eterna"
+    },
+    {
+     "level": 80,
+     "tech": "calma_del_dia_que_vuelve"
     }
    ],
    "ultimate": "dragon_interior",
@@ -943,6 +1111,30 @@
     {
      "level": 70,
      "tech": "descarga_de_mediodia"
+    },
+    {
+     "level": 71,
+     "tech": "bala_del_primer_rayo"
+    },
+    {
+     "level": 74,
+     "tech": "salva_de_aurora"
+    },
+    {
+     "level": 75,
+     "tech": "bala_de_ultima_luz"
+    },
+    {
+     "level": 78,
+     "tech": "salva_de_ocaso"
+    },
+    {
+     "level": 79,
+     "tech": "bala_del_alba_eterna"
+    },
+    {
+     "level": 80,
+     "tech": "salva_de_todas_las_estrellas"
     }
    ],
    "ultimate": "lluvia_de_estrellas",

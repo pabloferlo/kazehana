@@ -10981,7 +10981,7 @@
     "onFirst": "jardin_intro"
    },
    "horizonte_luz": {
-    "name": "Corazón de la Ciudad",
+    "name": "Horizonte del Alba",
     "type": "gate",
     "icon": "💠",
     "x": 36,
@@ -10989,15 +10989,21 @@
     "links": [
      "santuario_l5"
     ],
-    "desc": "Al fondo de la ciudad se ve una torre de luz: el corazón. Aún no se puede llegar.",
+    "desc": "Más allá de la ciudad, el horizonte se tiñe de rosa y oro. Es el Corazón del Alba.",
     "requires": "l5_done",
     "lockText": "Todavía no ves el camino.",
-    "tagline": "Continuará…",
+    "tagline": "Hacia el alba.",
     "theme": [
      "#f0f4ff",
      "#a0b4e0"
     ],
-    "soon": "Continuará… Tras el horizonte aguarda el Corazón del Alba, donde Madre del Alba espera. La Ciudad de Luz sin Reloj ha terminado. Esta parte llega hasta aquí, por ahora."
+    "gate": {
+     "region": "corazon",
+     "loc": "puerta_alba",
+     "scene": "alba_llegada",
+     "title": "Corazón del Alba",
+     "text": "¿Cruzar el horizonte hasta el Corazón del Alba? Podrás volver a la Ciudad de Luz cuando quieras."
+    }
    },
    "barrio_espejos": {
     "name": "Barrio de los Espejos",
@@ -12149,6 +12155,1831 @@
        ]
       ],
       "gold": 60000
+     }
+    }
+   }
+  }
+ },
+ "corazon": {
+  "name": "Corazón del Alba",
+  "order": 8,
+  "start": "puerta_alba",
+  "bg": "radial-gradient(circle at 30% 20%, #fff0d8, transparent 55%), radial-gradient(circle at 80% 85%, #f0a0b8, transparent 55%), linear-gradient(180deg,#ffd8e0,#e898a8 60%,#6a3858)",
+  "decor": [
+   {
+    "e": "🌅",
+    "x": 14,
+    "y": 14
+   },
+   {
+    "e": "🌸",
+    "x": 60,
+    "y": 8
+   },
+   {
+    "e": "💧",
+    "x": 38,
+    "y": 88
+   },
+   {
+    "e": "🌱",
+    "x": 84,
+    "y": 28
+   },
+   {
+    "e": "🪶",
+    "x": 90,
+    "y": 62
+   },
+   {
+    "e": "✨",
+    "x": 52,
+    "y": 46
+   },
+   {
+    "e": "🐓",
+    "x": 10,
+    "y": 86
+   },
+   {
+    "e": "🔔",
+    "x": 72,
+    "y": 90
+   }
+  ],
+  "events": [
+   {
+    "text": "Una gota de rocío cae sobre la mano de Yukine y brilla un instante con un sol pequeño dentro.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "En un matorral hay una bolsa de monedas cubierta de rocío tibio.",
+    "gold": 3000
+   },
+   {
+    "text": "Una brisa rosada os recorre de pies a cabeza. Os sentís recién levantados.",
+    "heal": true
+   },
+   {
+    "text": "Un pollito rosado os sigue unos pasos, piando, y luego se pierde entre las hierbas.",
+    "aff": 1,
+    "needYukine": true
+   },
+   {
+    "text": "Un vendedor ambulante con un cesto de plumas rosadas os para: «Del alba, a buen precio. Y del bueno».",
+    "merchant": {
+     "name": "Vendedor del Alba",
+     "tier": 8,
+     "rarities": [
+      "divine",
+      "cosmic"
+     ],
+     "bonusRarity": "cosmic",
+     "bonusChance": 0.35,
+     "extra": [
+      "pluma_fenix_dorada",
+      "pocion_total",
+      "ambrosia_alba"
+     ]
+    }
+   },
+   {
+    "text": "Una brisa de tarde trae olor a pan recién hecho. Yukine se relame.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Entre dos haces de trigo hay una bolsa de monedas atada con una cinta naranja.",
+    "gold": 3400
+   },
+   {
+    "text": "Una estrella cae despacio sobre el valle y se apaga antes de tocar el suelo. Yukine pide un deseo en voz baja.",
+    "aff": 2,
+    "needYukine": true
+   },
+   {
+    "text": "Una bolsa de monedas cuelga de una rama, atada con una cinta de seda violeta.",
+    "gold": 3800
+   }
+  ],
+  "locations": {
+   "puerta_alba": {
+    "name": "Puerta del Alba",
+    "type": "gate",
+    "icon": "🌅",
+    "x": 6,
+    "y": 50,
+    "links": [
+     "sendero_rocio"
+    ],
+    "desc": "El horizonte por el que se llega desde la Ciudad de Luz sin Reloj. Puedes volver cuando quieras.",
+    "tagline": "El camino de vuelta.",
+    "theme": [
+     "#ffe8e0",
+     "#e8a890"
+    ],
+    "gate": {
+     "region": "ciudadluz",
+     "loc": "horizonte_luz",
+     "title": "Ciudad de Luz sin Reloj",
+     "text": "¿Volver a la Ciudad de Luz sin Reloj?"
+    }
+   },
+   "sendero_rocio": {
+    "name": "Sendero del Rocío",
+    "type": "wild",
+    "icon": "💧",
+    "x": 20,
+    "y": 64,
+    "links": [
+     "puerta_alba",
+     "refugio_despiertos",
+     "bosque_madrugadas"
+    ],
+    "desc": "Un camino de hierba mojada que brilla como si estuviera lleno de espejitos.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "brote_alba",
+       "brote_alba"
+      ],
+      [
+       "rocio_vivo",
+       "brote_alba"
+      ],
+      [
+       "alondra_aurora",
+       "rocio_vivo"
+      ],
+      [
+       "sonambulo_alba",
+       "brote_alba"
+      ]
+     ]
+    },
+    "onFirst": "alba_rocio"
+   },
+   "refugio_despiertos": {
+    "name": "Refugio de los Despiertos",
+    "type": "town",
+    "icon": "🏡",
+    "x": 24,
+    "y": 32,
+    "links": [
+     "sendero_rocio",
+     "bosque_madrugadas"
+    ],
+    "desc": "Una aldea de casitas de barro y paja en torno a un pozo, donde viven los que despertaron de un sueño ajeno.",
+    "tagline": "Aquí siempre se está empezando.",
+    "theme": [
+     "#fff4e0",
+     "#d8a878"
+    ],
+    "onFirst": "alba_refugio",
+    "town": {
+     "npcs": [
+      "taiga",
+      "oboro",
+      "kagura",
+      "hoshina"
+     ],
+     "inn": {
+      "price": 600
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g8_cosmic_filo",
+      "g8_cosmic_grimorio",
+      "g8_cosmic_guantelete",
+      "g8_cosmic_pistola",
+      "g8_cosmic_a_pesada",
+      "g8_cosmic_a_ligera",
+      "lazo_de_aurora",
+      "hilo_de_alba"
+     ]
+    }
+   },
+   "bosque_madrugadas": {
+    "name": "Bosque de las Madrugadas",
+    "type": "wild",
+    "icon": "🌸",
+    "x": 44,
+    "y": 52,
+    "links": [
+     "sendero_rocio",
+     "refugio_despiertos",
+     "jardin_semillas",
+     "lago_primera_luz"
+    ],
+    "desc": "Un bosque de árboles de corteza rosada donde siempre son las seis de la mañana.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "sonambulo_alba",
+       "alondra_aurora"
+      ],
+      [
+       "brote_alba",
+       "rocio_vivo",
+       "alondra_aurora"
+      ],
+      [
+       "rocio_vivo",
+       "rocio_vivo",
+       "sonambulo_alba"
+      ],
+      [
+       "alondra_aurora",
+       "brote_alba"
+      ]
+     ]
+    },
+    "onFirst": "alba_bosque"
+   },
+   "jardin_semillas": {
+    "name": "Jardín de las Semillas Dormidas",
+    "type": "ruins",
+    "icon": "🌹",
+    "x": 46,
+    "y": 18,
+    "links": [
+     "bosque_madrugadas",
+     "santuario_a1"
+    ],
+    "desc": "Un invernadero inmenso de cristal rosa con miles de macetas de semillas que no germinan.",
+    "theme": [
+     "#f0f8e0",
+     "#98b878"
+    ],
+    "recommended": 71,
+    "tagline": "Semillas que no despiertan.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba_jardin_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "brote_alba",
+        "rocio_vivo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         9
+        ],
+        [
+         "@x:divine:8",
+         1
+        ]
+       ],
+       "gold": 7600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "alondra_aurora",
+        "brote_alba",
+        "sonambulo_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo_alba",
+        "rocio_vivo",
+        "brote_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "jardinero"
+       ],
+       "post": "alba_jardin_c",
+       "pre": "alba_jardin_p"
+      }
+     ],
+     "rewards": {
+      "flag": "jardin_done",
+      "items": [
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 40000
+     }
+    }
+   },
+   "santuario_a1": {
+    "name": "Santuario del Primer Rocío",
+    "type": "sanctuary",
+    "icon": "🫧",
+    "x": 66,
+    "y": 28,
+    "links": [
+     "jardin_semillas",
+     "cueva_nidos"
+    ],
+    "desc": "El primer umbral del Corazón del Alba: una gruta abierta al cielo con una fuente de agua clara.",
+    "order": 1,
+    "requires": "jardin_done",
+    "lockText": "Antes debes vencer al Jardinero.",
+    "theme": [
+     "#f0fff8",
+     "#a8d8c8"
+    ],
+    "recommended": 72,
+    "tagline": "Una gota para cada semilla.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba_a1_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "rocio_vivo",
+        "alondra_aurora",
+        "brote_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         9
+        ],
+        [
+         "elixir_supremo",
+         8
+        ]
+       ],
+       "gold": 8000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo_alba",
+        "rocio_vivo",
+        "rocio_vivo"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "alondra_aurora",
+        "sonambulo_alba",
+        "brote_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "nodriza_rocio"
+       ],
+       "post": "alba_a1_c",
+       "pre": "alba_a1_p"
+      }
+     ],
+     "rewards": {
+      "flag": "a1_done",
+      "items": [
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ],
+       [
+        "pocion_total",
+        6
+       ]
+      ],
+      "gold": 44000
+     }
+    }
+   },
+   "cueva_nidos": {
+    "name": "Cueva de los Nidos Dorados",
+    "type": "cave",
+    "icon": "🪺",
+    "x": 86,
+    "y": 12,
+    "links": [
+     "santuario_a1"
+    ],
+    "desc": "Opcional: una gruta tibia llena de nidos de plumas rosadas y un gallo enorme.",
+    "optional": true,
+    "requires": "jardin_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#4a3820",
+     "#201408"
+    ],
+    "recommended": 72,
+    "tagline": "Opcional · el gallo que guarda los huevos.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba_nidos_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "alondra_aurora",
+        "alondra_aurora",
+        "brote_alba"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         9
+        ],
+        [
+         "elixir_supremo",
+         8
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 7200
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo_alba",
+        "alondra_aurora",
+        "alondra_aurora"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "gallo_dorado"
+       ],
+       "post": "alba_nidos_c"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a1_done",
+      "items": [
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 16000
+     }
+    },
+    "repeat": {
+     "text": "Han puesto huevos nuevos mientras estabas fuera. Uno de ellos tiene una grieta.",
+     "gold": 6400,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "lago_primera_luz": {
+    "name": "Lago de la Primera Luz",
+    "type": "wild",
+    "icon": "🪞",
+    "x": 66,
+    "y": 66,
+    "links": [
+     "bosque_madrugadas",
+     "campanario_gallo"
+    ],
+    "desc": "Un lago inmenso de agua tibia con un sol dorado bajo la superficie.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "rocio_vivo",
+       "rocio_vivo",
+       "alondra_aurora"
+      ],
+      [
+       "sonambulo_alba",
+       "sonambulo_alba"
+      ],
+      [
+       "alondra_aurora",
+       "rocio_vivo",
+       "brote_alba"
+      ],
+      [
+       "brote_alba",
+       "sonambulo_alba",
+       "rocio_vivo"
+      ]
+     ]
+    },
+    "requires": "a1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Rocío.",
+    "onFirst": "alba_lago"
+   },
+   "campanario_gallo": {
+    "name": "Campanario del Gallo Eterno",
+    "type": "ruins",
+    "icon": "🔔",
+    "x": 88,
+    "y": 50,
+    "links": [
+     "lago_primera_luz",
+     "santuario_a2"
+    ],
+    "desc": "Una torre de piedra rosa con una campana gigantesca cuyo tañido adormece.",
+    "requires": "a1_done",
+    "lockText": "Antes debes cruzar el Santuario del Primer Rocío.",
+    "theme": [
+     "#ffe8c8",
+     "#c8985a"
+    ],
+    "recommended": 73,
+    "tagline": "La campana que no calla.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba_cam_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "alondra_aurora",
+        "sonambulo_alba",
+        "rocio_vivo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         9
+        ],
+        [
+         "@x:divine:8",
+         1
+        ]
+       ],
+       "gold": 8400
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo_alba",
+        "sonambulo_alba",
+        "alondra_aurora"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "rocio_vivo",
+        "brote_alba",
+        "sonambulo_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "campanero"
+       ],
+       "post": "alba_cam_c",
+       "pre": "alba_cam_p"
+      }
+     ],
+     "rewards": {
+      "flag": "campanario_done",
+      "items": [
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 46000
+     }
+    }
+   },
+   "santuario_a2": {
+    "name": "Santuario de la Aurora Detenida",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 90,
+    "y": 84,
+    "links": [
+     "campanario_gallo",
+     "campos_oro"
+    ],
+    "desc": "El segundo umbral del Corazón del Alba: un anfiteatro de nubes rosadas con una mujer de luz en el centro.",
+    "order": 2,
+    "requires": "campanario_done",
+    "lockText": "Antes debes callar la campana del campanario.",
+    "theme": [
+     "#ffe0f0",
+     "#d898b8"
+    ],
+    "recommended": 74,
+    "tagline": "El primer amanecer, atrapado.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba_a2_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sonambulo_alba",
+        "alondra_aurora",
+        "rocio_vivo"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         9
+        ],
+        [
+         "ambrosia_alba",
+         3
+        ]
+       ],
+       "gold": 9000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "brote_alba",
+        "sonambulo_alba",
+        "sonambulo_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "alondra_aurora",
+        "rocio_vivo",
+        "sonambulo_alba"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "aurora_detenida"
+       ],
+       "post": "alba_a2_c",
+       "pre": "alba_a2_p"
+      }
+     ],
+     "rewards": {
+      "flag": "a2_done",
+      "items": [
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "@w:cosmic:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        5
+       ],
+       [
+        "pocion_total",
+        8
+       ]
+      ],
+      "gold": 70000
+     }
+    }
+   },
+   "campos_oro": {
+    "name": "Campos de Trigo de Oro",
+    "type": "wild",
+    "icon": "🌾",
+    "x": 70,
+    "y": 90,
+    "links": [
+     "santuario_a2",
+     "posada_rayo"
+    ],
+    "desc": "Campos de trigo de oro que se mecen sin viento bajo un cielo de tarde.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "espiga_viva",
+       "espiga_viva"
+      ],
+      [
+       "cuervo_atardecer",
+       "espiga_viva"
+      ],
+      [
+       "luciernaga_gigante",
+       "cuervo_atardecer"
+      ],
+      [
+       "sombra_vespertina",
+       "espiga_viva"
+      ]
+     ]
+    },
+    "requires": "a2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Aurora Detenida.",
+    "onFirst": "alba2_campos"
+   },
+   "posada_rayo": {
+    "name": "Posada del Último Rayo",
+    "type": "town",
+    "icon": "🏠",
+    "x": 50,
+    "y": 88,
+    "links": [
+     "campos_oro",
+     "rio_miel"
+    ],
+    "desc": "Una casa baja de adobe con un farol de cebada en la puerta, sopa de espiga y pan de leña.",
+    "requires": "a2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Aurora Detenida.",
+    "tagline": "La última cama del día.",
+    "theme": [
+     "#ffe8c8",
+     "#b87838"
+    ],
+    "onFirst": "alba2_posada",
+    "town": {
+     "npcs": [
+      "ryuma",
+      "tomoe",
+      "yoshiro",
+      "hatsumi",
+      "rinto",
+      "ume"
+     ],
+     "inn": {
+      "price": 680
+     },
+     "shop": [
+      "pocion_total",
+      "elixir_supremo",
+      "ambrosia_alba",
+      "rocio_noche",
+      "pluma_fenix_dorada",
+      "g8_cosmic_filo",
+      "g8_cosmic_grimorio",
+      "g8_cosmic_guantelete",
+      "g8_cosmic_pistola",
+      "g8_cosmic_a_pesada",
+      "g8_cosmic_a_ligera",
+      "g8_cosmic_x_a",
+      "g8_cosmic_x_b",
+      "manta_de_trigo",
+      "farol_de_cebada"
+     ]
+    }
+   },
+   "rio_miel": {
+    "name": "Río de Miel",
+    "type": "wild",
+    "icon": "🍯",
+    "x": 32,
+    "y": 84,
+    "links": [
+     "posada_rayo",
+     "templo_horas"
+    ],
+    "desc": "Una corriente lenta y dorada de agua espesa y dulce.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "espiga_viva",
+       "luciernaga_gigante"
+      ],
+      [
+       "cuervo_atardecer",
+       "cuervo_atardecer",
+       "espiga_viva"
+      ],
+      [
+       "sombra_vespertina",
+       "luciernaga_gigante"
+      ],
+      [
+       "luciernaga_gigante",
+       "espiga_viva",
+       "cuervo_atardecer"
+      ]
+     ]
+    },
+    "requires": "a2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Aurora Detenida.",
+    "onFirst": "alba2_rio"
+   },
+   "templo_horas": {
+    "name": "Templo de las Horas Rosadas",
+    "type": "ruins",
+    "icon": "🕯️",
+    "x": 12,
+    "y": 82,
+    "links": [
+     "rio_miel",
+     "santuario_a3"
+    ],
+    "desc": "Un templo de columnas altas con relojes de arena y un altar con doce velas.",
+    "requires": "a2_done",
+    "lockText": "Antes debes cruzar el Santuario de la Aurora Detenida.",
+    "theme": [
+     "#ffe0e0",
+     "#c88898"
+    ],
+    "recommended": 75,
+    "tagline": "Doce oraciones que no pueden saltarse.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba2_templo_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espiga_viva",
+        "cuervo_atardecer"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "@x:divine:8",
+         1
+        ]
+       ],
+       "gold": 9000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "luciernaga_gigante",
+        "espiga_viva",
+        "sombra_vespertina"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_vespertina",
+        "cuervo_atardecer",
+        "luciernaga_gigante"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "sacerdotisa_horas"
+       ],
+       "post": "alba2_templo_c",
+       "pre": "alba2_templo_p"
+      }
+     ],
+     "rewards": {
+      "flag": "templo_done",
+      "items": [
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 48000
+     }
+    }
+   },
+   "santuario_a3": {
+    "name": "Santuario de la Tarde Dorada",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 36,
+    "y": 66,
+    "links": [
+     "templo_horas",
+     "granero_sin_fondo",
+     "mirador_atardecer"
+    ],
+    "desc": "El tercer umbral del Corazón del Alba: una explanada de trigo maduro bajo un sol bajo y enorme.",
+    "order": 3,
+    "requires": "templo_done",
+    "lockText": "Antes debes cruzar el Templo de las Horas Rosadas.",
+    "theme": [
+     "#fff0c0",
+     "#e8a040"
+    ],
+    "recommended": 76,
+    "tagline": "La tarde que se siega.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba2_a3_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "luciernaga_gigante",
+        "espiga_viva",
+        "cuervo_atardecer"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         9
+        ]
+       ],
+       "gold": 9600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_vespertina",
+        "sombra_vespertina",
+        "espiga_viva"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cuervo_atardecer",
+        "luciernaga_gigante",
+        "espiga_viva"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "segador_luz"
+       ],
+       "post": "alba2_a3_c",
+       "pre": "alba2_a3_p"
+      }
+     ],
+     "rewards": {
+      "flag": "a3_done",
+      "items": [
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "@x:cosmic:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        4
+       ],
+       [
+        "pocion_total",
+        7
+       ]
+      ],
+      "gold": 54000
+     }
+    }
+   },
+   "granero_sin_fondo": {
+    "name": "Granero sin Fondo",
+    "type": "cave",
+    "icon": "🎃",
+    "x": 54,
+    "y": 72,
+    "links": [
+     "santuario_a3"
+    ],
+    "desc": "Opcional: una nave de madera con el techo de cristal y un espantapájaros de cuatro metros.",
+    "optional": true,
+    "requires": "templo_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#403018",
+     "#180e04"
+    ],
+    "recommended": 76,
+    "tagline": "Opcional · el espantapájaros del granero.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba2_granero_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espiga_viva",
+        "espiga_viva",
+        "cuervo_atardecer"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         9
+        ],
+        [
+         "rocio_noche",
+         2
+        ]
+       ],
+       "gold": 8800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_vespertina",
+        "luciernaga_gigante",
+        "espiga_viva"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "espantapajaros"
+       ],
+       "post": "alba2_granero_c"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_a3_done",
+      "items": [
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        2
+       ]
+      ],
+      "gold": 18000
+     }
+    },
+    "repeat": {
+     "text": "El trigo ha vuelto a llenar el granero. Entre las espigas alguien ha dejado una bolsa.",
+     "gold": 7200,
+     "items": [
+      [
+       "pocion_total",
+       2
+      ]
+     ]
+    }
+   },
+   "mirador_atardecer": {
+    "name": "Mirador del Atardecer",
+    "type": "ruins",
+    "icon": "🔭",
+    "x": 30,
+    "y": 46,
+    "links": [
+     "santuario_a3",
+     "santuario_a4"
+    ],
+    "desc": "Una terraza de piedra sobre un precipicio, con un catalejo de latón apuntando al horizonte.",
+    "requires": "a3_done",
+    "lockText": "Antes debes cruzar el Santuario de la Tarde Dorada.",
+    "theme": [
+     "#ffd8b0",
+     "#d87848"
+    ],
+    "recommended": 77,
+    "tagline": "La señal que no se da.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba2_mirador_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "cuervo_atardecer",
+        "luciernaga_gigante",
+        "sombra_vespertina"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "@x:divine:8",
+         1
+        ]
+       ],
+       "gold": 9800
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_vespertina",
+        "sombra_vespertina",
+        "cuervo_atardecer"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "luciernaga_gigante",
+        "espiga_viva",
+        "sombra_vespertina"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "vigia_crepusculo"
+       ],
+       "post": "alba2_mirador_c",
+       "pre": "alba2_mirador_p"
+      }
+     ],
+     "rewards": {
+      "flag": "mirador_done",
+      "items": [
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 52000
+     }
+    }
+   },
+   "santuario_a4": {
+    "name": "Santuario del Crepúsculo",
+    "type": "sanctuary",
+    "icon": "🌆",
+    "x": 10,
+    "y": 32,
+    "links": [
+     "mirador_atardecer",
+     "horizonte_alba"
+    ],
+    "desc": "El cuarto umbral del Corazón del Alba: un anfiteatro de colinas con el cielo partido entre rosa y violeta.",
+    "order": 4,
+    "requires": "mirador_done",
+    "lockText": "Antes debes dar la señal en el mirador.",
+    "theme": [
+     "#e8c0d8",
+     "#7a4878"
+    ],
+    "recommended": 78,
+    "tagline": "El instante en que el día se rinde.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "alba2_a4_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "sombra_vespertina",
+        "luciernaga_gigante",
+        "cuervo_atardecer"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         9
+        ],
+        [
+         "ambrosia_alba",
+         3
+        ]
+       ],
+       "gold": 10400
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espiga_viva",
+        "sombra_vespertina",
+        "sombra_vespertina"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "luciernaga_gigante",
+        "cuervo_atardecer",
+        "sombra_vespertina"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "crepusculo_boss"
+       ],
+       "post": "alba2_a4_c",
+       "pre": "alba2_a4_p"
+      }
+     ],
+     "rewards": {
+      "flag": "a4_done",
+      "items": [
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "@x:divine:8",
+        1
+       ],
+       [
+        "@w:cosmic:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        5
+       ],
+       [
+        "pocion_total",
+        8
+       ]
+      ],
+      "gold": 78000
+     }
+    }
+   },
+   "horizonte_alba": {
+    "name": "Escalinata del Alba",
+    "type": "wild",
+    "icon": "🪜",
+    "x": 8,
+    "y": 12,
+    "links": [
+     "santuario_a4",
+     "salon_espejos"
+    ],
+    "desc": "Una escalinata de marmol violeta que sube al Palacio del Alba con el cielo partido a cada peldaño.",
+    "encounters": {
+     "rate": 0.4,
+     "pool": [
+      [
+       "guardia_alba",
+       "guardia_alba"
+      ],
+      [
+       "estrella_dormida",
+       "guardia_alba"
+      ],
+      [
+       "mensajero_aurora",
+       "estrella_dormida"
+      ],
+      [
+       "espejo_viviente",
+       "guardia_alba"
+      ]
+     ]
+    },
+    "requires": "a4_done",
+    "lockText": "Antes debes cruzar el Santuario del Crepúsculo.",
+    "onFirst": "fin_escalinata"
+   },
+   "salon_espejos": {
+    "name": "Salón de los Mil Espejos",
+    "type": "ruins",
+    "icon": "🪞",
+    "x": 26,
+    "y": 8,
+    "links": [
+     "horizonte_alba",
+     "camara_recuerdos",
+     "palacio_alba"
+    ],
+    "desc": "Una galería infinita de espejos del suelo al techo, con una niña distinta en cada uno.",
+    "requires": "a4_done",
+    "lockText": "Antes debes cruzar el Santuario del Crepúsculo.",
+    "theme": [
+     "#fff0f8",
+     "#c898d0"
+    ],
+    "recommended": 79,
+    "tagline": "Mil días de una misma niña.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fin_salon_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_alba",
+        "estrella_dormida"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "@x:cosmic:8",
+         1
+        ]
+       ],
+       "gold": 11000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espejo_viviente",
+        "mensajero_aurora",
+        "guardia_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "mensajero_aurora",
+        "espejo_viviente",
+        "estrella_dormida"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "guardiana_espejos"
+       ],
+       "post": "fin_salon_c",
+       "pre": "fin_salon_p"
+      }
+     ],
+     "rewards": {
+      "flag": "salon_done",
+      "items": [
+       [
+        "@a:cosmic:8",
+        1
+       ],
+       [
+        "@w:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        4
+       ]
+      ],
+      "gold": 60000
+     }
+    }
+   },
+   "camara_recuerdos": {
+    "name": "Cámara de los Recuerdos",
+    "type": "cave",
+    "icon": "🕯️",
+    "x": 44,
+    "y": 6,
+    "links": [
+     "salon_espejos"
+    ],
+    "desc": "Opcional: una sala circular sin puertas con un solo sillón y un recuerdo de invierno.",
+    "optional": true,
+    "requires": "salon_done",
+    "lockText": "Aún no ves el camino.",
+    "theme": [
+     "#fff8e8",
+     "#d8b898"
+    ],
+    "recommended": 80,
+    "tagline": "Opcional · el recuerdo que la Madre guardó.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fin_recuerdos_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estrella_dormida",
+        "guardia_alba",
+        "mensajero_aurora"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "elixir_supremo",
+         10
+        ],
+        [
+         "rocio_noche",
+         3
+        ]
+       ],
+       "gold": 10000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espejo_viviente",
+        "espejo_viviente",
+        "estrella_dormida"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "recuerdo_shirayuki"
+       ],
+       "post": "fin_recuerdos_c"
+      }
+     ],
+     "rewards": {
+      "flag": "cave_alba3_done",
+      "items": [
+       [
+        "@x:cosmic:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        3
+       ]
+      ],
+      "gold": 24000
+     }
+    },
+    "repeat": {
+     "text": "La nieve del suelo conserva una huella de pies descalzos, y de una nana tarareada.",
+     "gold": 8000,
+     "items": [
+      [
+       "pocion_total",
+       3
+      ]
+     ]
+    }
+   },
+   "palacio_alba": {
+    "name": "Palacio del Alba",
+    "type": "ruins",
+    "icon": "🏛️",
+    "x": 64,
+    "y": 8,
+    "links": [
+     "salon_espejos",
+     "santuario_a5"
+    ],
+    "desc": "Una nave de oro blanco con ventanales a un cielo mitad día, mitad noche.",
+    "requires": "salon_done",
+    "lockText": "Antes debes atravesar el Salón de los Mil Espejos.",
+    "theme": [
+     "#fff0d0",
+     "#e8b878"
+    ],
+    "recommended": 80,
+    "tagline": "Los hijos que se quedaron.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fin_palacio_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_alba",
+        "guardia_alba",
+        "estrella_dormida"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         10
+        ],
+        [
+         "@x:cosmic:8",
+         1
+        ]
+       ],
+       "gold": 11600
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espejo_viviente",
+        "guardia_alba",
+        "mensajero_aurora"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "estrella_dormida",
+        "mensajero_aurora",
+        "espejo_viviente"
+       ]
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "heredero_alba"
+       ],
+       "post": "fin_palacio_c",
+       "pre": "fin_palacio_p"
+      }
+     ],
+     "rewards": {
+      "flag": "pal_alba_done",
+      "items": [
+       [
+        "@w:cosmic:8",
+        1
+       ],
+       [
+        "@a:divine:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        4
+       ]
+      ],
+      "gold": 66000
+     }
+    }
+   },
+   "santuario_a5": {
+    "name": "Trono del Alba Eterna",
+    "type": "sanctuary",
+    "icon": "🌅",
+    "x": 92,
+    "y": 32,
+    "links": [
+     "palacio_alba"
+    ],
+    "desc": "El último umbral del Corazón del Alba: una plataforma de luz suspendida entre el día y la noche, con un trono vacío.",
+    "order": 5,
+    "requires": "pal_alba_done",
+    "lockText": "Antes debes cruzar el Palacio del Alba.",
+    "theme": [
+     "#ffffff",
+     "#ffd8a0"
+    ],
+    "recommended": 80,
+    "tagline": "La Madre del Alba te espera.",
+    "dungeon": {
+     "rooms": [
+      {
+       "type": "story",
+       "scene": "fin_madre_i"
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "guardia_alba",
+        "estrella_dormida",
+        "mensajero_aurora"
+       ]
+      },
+      {
+       "type": "chest",
+       "items": [
+        [
+         "pocion_total",
+         12
+        ],
+        [
+         "elixir_supremo",
+         10
+        ],
+        [
+         "ambrosia_alba",
+         5
+        ]
+       ],
+       "gold": 14000
+      },
+      {
+       "type": "battle",
+       "enemies": [
+        "espejo_viviente",
+        "espejo_viviente",
+        "guardia_alba"
+       ]
+      },
+      {
+       "type": "altar"
+      },
+      {
+       "type": "boss",
+       "enemies": [
+        "madre_alba"
+       ],
+       "post": "fin_madre_c",
+       "pre": "fin_madre_p"
+      }
+     ],
+     "rewards": {
+      "flag": "a5_done",
+      "items": [
+       [
+        "@w:cosmic:8",
+        1
+       ],
+       [
+        "@a:cosmic:8",
+        1
+       ],
+       [
+        "@x:cosmic:8",
+        1
+       ],
+       [
+        "pluma_fenix_dorada",
+        8
+       ],
+       [
+        "pocion_total",
+        10
+       ]
+      ],
+      "gold": 150000
      }
     }
    }

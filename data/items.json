@@ -5036,6 +5036,408 @@
    "price": 700,
    "desc": "Un peine de perla muy antiguo. Yukine lo pasa por el pelo de la loba que lleva dentro: «me lo cepillaba ella».",
    "affinity": 26
+  },
+  "g8_divine_filo": {
+   "name": "Espada del Primer Rocío",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "divine",
+   "tier": 8,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza divina.",
+   "bonus": {
+    "atk": 112,
+    "spd": 9
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_divine_grimorio": {
+   "name": "Grimorio del Primer Rocío",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "divine",
+   "tier": 8,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza divina.",
+   "bonus": {
+    "mag": 112,
+    "mp": 90
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_divine_guantelete": {
+   "name": "Guanteletes del Primer Rocío",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "divine",
+   "tier": 8,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza divina.",
+   "bonus": {
+    "atk": 95,
+    "def": 28,
+    "hp": 168
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_divine_pistola": {
+   "name": "Pistola del Primer Rocío",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "divine",
+   "tier": 8,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza divina.",
+   "bonus": {
+    "atk": 101,
+    "spd": 20
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_divine_a_pesada": {
+   "name": "Coraza del Primer Rocío",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "divine",
+   "tier": 8,
+   "desc": "Armadura pesada de rareza divina.",
+   "bonus": {
+    "def": 102,
+    "hp": 306
+   },
+   "mprice": 129010,
+   "gen": true
+  },
+  "g8_divine_a_ligera": {
+   "name": "Manto del Primer Rocío",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "divine",
+   "tier": 8,
+   "desc": "Armadura ligera de rareza divina.",
+   "bonus": {
+    "def": 71,
+    "mag": 41,
+    "spd": 15,
+    "mp": 153
+   },
+   "mprice": 129010,
+   "gen": true
+  },
+  "g8_divine_x_a": {
+   "name": "Amuleto del Primer Rocío",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "divine",
+   "tier": 8,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "hp": 459,
+    "def": 31,
+    "ultGain": 8
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_divine_x_b": {
+   "name": "Anillo del Primer Rocío",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "divine",
+   "tier": 8,
+   "desc": "Accesorio de rareza divina.",
+   "bonus": {
+    "atk": 39,
+    "mag": 39,
+    "spd": 13,
+    "ultGain": 8
+   },
+   "mprice": 155550,
+   "gen": true
+  },
+  "g8_cosmic_filo": {
+   "name": "Katana del Corazón Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🗡️",
+   "rarity": "cosmic",
+   "tier": 8,
+   "wtype": "filo",
+   "desc": "Arma de filo de rareza cósmica.",
+   "bonus": {
+    "atk": 130,
+    "spd": 10
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "g8_cosmic_grimorio": {
+   "name": "Códice del Corazón Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "📖",
+   "rarity": "cosmic",
+   "tier": 8,
+   "wtype": "grimorio",
+   "desc": "Grimorio para Yukine y magos de rareza cósmica.",
+   "bonus": {
+    "mag": 130,
+    "mp": 104
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "g8_cosmic_guantelete": {
+   "name": "Puños del Corazón Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🥊",
+   "rarity": "cosmic",
+   "tier": 8,
+   "wtype": "guantelete",
+   "desc": "Guanteletes de combate de rareza cósmica.",
+   "bonus": {
+    "atk": 110,
+    "def": 32,
+    "hp": 195
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "g8_cosmic_pistola": {
+   "name": "Revólver del Corazón Dorado",
+   "type": "equipment",
+   "slot": "weapon",
+   "icon": "🔫",
+   "rarity": "cosmic",
+   "tier": 8,
+   "wtype": "pistola",
+   "desc": "Pistola arcana de rareza cósmica.",
+   "bonus": {
+    "atk": 117,
+    "spd": 23
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "g8_cosmic_a_pesada": {
+   "name": "Peto del Corazón Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🛡️",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Armadura pesada de rareza cósmica.",
+   "bonus": {
+    "def": 118,
+    "hp": 354
+   },
+   "mprice": 189370,
+   "gen": true,
+   "price": 85220
+  },
+  "g8_cosmic_a_ligera": {
+   "name": "Túnica del Corazón Dorado",
+   "type": "equipment",
+   "slot": "armor",
+   "icon": "🧥",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Armadura ligera de rareza cósmica.",
+   "bonus": {
+    "def": 83,
+    "mag": 47,
+    "spd": 18,
+    "mp": 177
+   },
+   "mprice": 189370,
+   "gen": true,
+   "price": 85220
+  },
+  "g8_cosmic_x_a": {
+   "name": "Talismán del Corazón Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💠",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Accesorio de rareza cósmica.",
+   "bonus": {
+    "hp": 531,
+    "def": 35,
+    "ultGain": 9
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "g8_cosmic_x_b": {
+   "name": "Pendiente del Corazón Dorado",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💍",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Accesorio de rareza cósmica.",
+   "bonus": {
+    "atk": 46,
+    "mag": 46,
+    "spd": 16,
+    "ultGain": 9
+   },
+   "mprice": 229840,
+   "gen": true,
+   "price": 103430
+  },
+  "rocio_eterno": {
+   "name": "Rocío Eterno",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "💧",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Una gota de rocío que nunca se evapora. Dentro se ve un amanecer pequeñito.",
+   "bonus": {
+    "atk": 74,
+    "mag": 72,
+    "hp": 800,
+    "spd": 26,
+    "ultGain": 12
+   },
+   "mprice": 69120
+  },
+  "pluma_de_alba": {
+   "name": "Pluma de Alba",
+   "type": "key",
+   "icon": "🪶",
+   "desc": "Una pluma rosada que está tibia como si el sol acabase de salir."
+  },
+  "lazo_de_aurora": {
+   "name": "Lazo de Aurora",
+   "type": "gift",
+   "icon": "🎀",
+   "price": 720,
+   "desc": "Un lazo del color del primer rosa del día. Yukine se lo pone en la cola: «¡me queda bien!».",
+   "affinity": 26
+  },
+  "hilo_de_alba": {
+   "name": "Hilo de Alba",
+   "type": "gift",
+   "icon": "🧵",
+   "price": 740,
+   "desc": "Un hilo dorado que brilla con luz propia. Yukine lo enrolla en el dedo: «para no olvidarme de hoy».",
+   "affinity": 28
+  },
+  "espiga_de_oro": {
+   "name": "Espiga de Oro",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🌾",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Una espiga de oro macizo que no pesa. Cuando la agitas oyes el rumor de un campo entero.",
+   "bonus": {
+    "atk": 76,
+    "mag": 74,
+    "hp": 820,
+    "spd": 28,
+    "ultGain": 12
+   },
+   "mprice": 69120
+  },
+  "grano_de_luz": {
+   "name": "Grano de Luz",
+   "type": "key",
+   "icon": "✨",
+   "desc": "Un grano que brilla en la palma sin quemar. Dentro parece que se mueve algo."
+  },
+  "manta_de_trigo": {
+   "name": "Manta de Trigo",
+   "type": "gift",
+   "icon": "🧣",
+   "price": 760,
+   "desc": "Una manta tejida con hilo de espiga dorada. Yukine se acurruca: «huele a verano».",
+   "affinity": 28
+  },
+  "farol_de_cebada": {
+   "name": "Farol de Cebada",
+   "type": "gift",
+   "icon": "🏮",
+   "price": 780,
+   "desc": "Un farol hecho de cebada seca con una luciérnaga viva dentro. Yukine lo acuna: «no la dejemos sola».",
+   "affinity": 30
+  },
+  "corona_del_alba": {
+   "name": "Corona del Alba",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "👑",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "La corona rota de la Madre del Alba, recompuesta con luz. Pesa lo que pesa soltar algo que se ha querido demasiado.",
+   "bonus": {
+    "atk": 92,
+    "mag": 90,
+    "hp": 1000,
+    "spd": 32,
+    "ultGain": 14
+   },
+   "mprice": 86400
+  },
+  "panuelo_shirayuki": {
+   "name": "Pañuelo de Shirayuki",
+   "type": "equipment",
+   "slot": "accessory",
+   "icon": "🧣",
+   "rarity": "cosmic",
+   "tier": 8,
+   "desc": "Un pañuelo blanco con un lobo bordado. Huele a nieve y a casa.",
+   "bonus": {
+    "atk": 80,
+    "mag": 82,
+    "hp": 920,
+    "spd": 30,
+    "ultGain": 12
+   },
+   "mprice": 74880
+  },
+  "fragmento_de_estrella": {
+   "name": "Fragmento de Estrella",
+   "type": "key",
+   "icon": "🌟",
+   "desc": "Un trocito de estrella dormida. Si lo acercas al oído, oyes una nana."
+  },
+  "estrella_de_papel": {
+   "name": "Estrella de Papel",
+   "type": "gift",
+   "icon": "⭐",
+   "price": 800,
+   "desc": "Una estrella de papel plegada por manos pequeñas. Yukine la sujeta con las dos manos: «la guardaré siempre».",
+   "affinity": 30
+  },
+  "luz_en_frasco": {
+   "name": "Luz en Frasco",
+   "type": "gift",
+   "icon": "🫙",
+   "price": 820,
+   "desc": "Un frasco con un trocito de alba dentro. Yukine lo mira largo rato: «es tibio, como una mano».",
+   "affinity": 32
   }
  }
 }

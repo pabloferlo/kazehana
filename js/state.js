@@ -12,7 +12,7 @@ const FILES = ['classes', 'techniques', 'regions', 'npcs', 'prologue', 'enemies'
 /** Carga todos los JSON de /data. Requiere servidor HTTP (GitHub Pages sirve). */
 export async function loadData() {
   await Promise.all(FILES.map(async f => {
-    const r = await fetch(`data/${f}.json?v=20`);
+    const r = await fetch(`data/${f}.json?v=23`);
     if (!r.ok) throw new Error(`No se pudo cargar data/${f}.json`);
     Data[f] = await r.json();
   }));
@@ -67,6 +67,13 @@ export function migrate(g) {
   try {
     const mine = [g.player, g.companions?.yukine].filter(Boolean);
     for (const c of mine) { const w = c.equipment?.weapon; if (w && Data.itemById?.[w] && !canEquip(c, w)) { delete c.equipment.weapon; g.inventory.items[w] = (g.inventory.items[w] || 0) + 1; } }
+  } catch (e) { /* datos aún sin cargar */ }
+  // Objetos que ya no existen (partidas antiguas o ids mal resueltos): se eliminan para no romper menús ni tienda.
+  try {
+    if (Data.itemById && Object.keys(Data.itemById).length) {
+      for (const id of Object.keys(g.inventory.items)) if (!Data.itemById[id] || !(g.inventory.items[id] > 0)) delete g.inventory.items[id];
+      for (const c of [g.player, g.companions?.yukine].filter(Boolean)) for (const [sl, id] of Object.entries(c.equipment || {})) if (!Data.itemById[id]) delete c.equipment[sl];
+    }
   } catch (e) { /* datos aún sin cargar */ }
   g.player.equipment ||= {};
   g.player.techniques.known ||= [];

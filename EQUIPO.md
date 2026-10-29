@@ -27,7 +27,7 @@
 | Ciudad de Luz sin Reloj (completa, v0.9.0) | T7 | Celestial → Divino | Celestial/Divino · probabilidad de **Cósmico** |
 | Cordillera del Eco Dorado (futuro) | T6 | Mítico → Celestial | Celestial · probabilidad de **Divino** |
 | Ciudad de Luz sin Reloj (futuro) | T7 | Celestial → Divino | Divino · probabilidad de **Cósmico** |
-| Corazón del Alba (futuro) | T8 | Divino → Cósmico | Solo **Cósmico** |
+| Corazón del Alba (completo, v0.9.3) | T8 | Divino → Cósmico | Solo **Cósmico** |
 
 ## Familias de arma
 Cada clase del protagonista usa una familia; Yukine siempre usa **grimorios**.

@@ -10,7 +10,7 @@
  *   atk_up/atk_down, def_up/def_down, spd_up, dodge_up, regen, wolf (forma de loba),
  *   intimidate (habilidad de Yukine: ataque ↓ a los rivales hasta que acabe la forma de loba)
  */
-import { Data, rollItem } from './state.js';
+import { Data, State, rollItem } from './state.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const rnd = () => Math.random();
@@ -82,6 +82,17 @@ export const ABILITIES = {
   dualidad: ['Dualidad', 'Las rondas impares recibe la mitad del daño físico; las pares, la mitad del daño no físico. Combina elementos.'],
   olvido: ['Aura de Olvido', 'Cada ronda, cada miembro de tu equipo tiene un 15 % de olvidar qué hacía y perder el turno.'],
   foco: ['Foco de Escena', 'Cada ronda pone el foco sobre quien más daño hizo la ronda anterior: recibirá un 40 % más de daño hasta que otro lo supere.'],
+  eterno_retorno: ['Eterno Retorno', 'Ningún golpe le quita más del 4 % de sus PV máximos. Cada 5 rondas recupera un 5 % y borra todas tus mejoras: solo un ataque de Unión puede interrumpirlo.'],
+  dia_noche: ['Día y Noche', 'Alterna Día y Noche cada 2 rondas. De Día, el fuego y lo arcano le hacen solo un 15 %; de Noche, lo oscuro y el hielo. Lleva elementos variados.'],
+  contraataque: ['Contragolpe', 'Cuando la golpean, un 25 % de las veces responde de inmediato con un contragolpe físico.'],
+  siega: ['Siega', 'Sus ataques hacen un 40 % más de daño a quien tiene menos de la mitad de sus PV: remata a los heridos.'],
+  paja: ['Relleno de Paja', 'Los golpes físicos le hacen un 30 % menos de daño, pero el fuego le hace un 60 % más.'],
+  anochecer: ['Anochecer', 'La luz baja: cada ronda esquiva un 3 % más (máx. +30 %).'],
+  crepusculo: ['Crepúsculo', 'Por debajo del 50 % de PV cae la noche: sus ataques de oscuro y arcano hacen un 35 % más y tus curaciones funcionan al 70 %.'],
+  bruma: ['Bruma Matinal', 'Una bruma dorada desvía el 25 % de los ataques de tu equipo contra ella.'],
+  rosal: ['Rosal de Contragolpe', 'Cada golpe crítico que recibe hiere a quien lo asestó (10 % de sus PV máximos).'],
+  cosecha: ['Cosecha', 'Cada vez que un miembro de tu equipo cae, recupera un 15 % de sus PV máximos.'],
+  centella: ['Centella Matutina', 'No tolera otra luz: quien se transforma (ulti de lobo) recibe una centella del 15 % de sus PV máximos.'],
   sol_fijo: ['Sol Fijo', 'Cada 3 rondas (3, 6, 9…) el sol se detiene sobre ella y recibe un 70 % menos de daño. Se anuncia la ronda anterior: guarda tus golpes fuertes.'],
   cobro: ['Cobro de Intereses', 'Cura un 25 % del daño que inflige a tu equipo.'],
   protocolo: ['Protocolo', 'Cada ronda decreta un elemento prohibido: los ataques de ese elemento le hacen un 75 % menos de daño. Se anuncia al empezar la ronda.'],
@@ -274,7 +285,7 @@ export class Battle {
   /** Ataque de Unión: golpes de protagonista y Yukine seguidos, sin esquiva, y efectos de grupo. */
   doUnison(act) {
     const sp = this.unison, pr = this.unisonPartners(); if (!sp || !pr || this.bond < 100) return;
-    this.bond = 0;
+    this.bond = 0; this._unionRound = this.round;
     const { p, y } = pr;
     const chosen = this.byUid(act.target);
     const foes = () => this.alive('enemy');
@@ -342,7 +353,9 @@ export class Battle {
         break;
       case 'debuff': for (const t of targets) this.applyFx(t, tech.effect, `${tech.name}`, false); break;
       case 'utility': if (tech.effect?.mp_restore) { actor.mp = Math.min(actor.maxMp, actor.mp + tech.effect.mp_restore); this.ev({ t: 'mp', target: actor.uid, amount: tech.effect.mp_restore, mp: actor.mp }); } break;
-      case 'ultimate': this.transformWolf(actor, tech); break;
+      case 'ultimate': this.transformWolf(actor, tech);
+        if (actor.side === 'ally' && this.alive('enemy').some(e => e.ability === 'centella') && actor.hp > 0) { const d = Math.max(3, Math.round(actor.maxHp * 0.15)); actor.hp = Math.max(0, actor.hp - d); this.ev({ t: 'msg', text: '¡Una centella matutina cae sobre quien se transforma!', target: actor.uid }); this.ev({ t: 'hit', target: actor.uid, dmg: d, dot: 'centella', hp: actor.hp, element: 'fuego' }); if (actor.hp <= 0) this.faint(actor); }
+        break;
     }
     this.checkEnrage();
   }
@@ -355,7 +368,7 @@ export class Battle {
   }
 
   dodgeChance(actor, t) {
-    const base = 0.03 + (this.S(t, 'spd') - this.S(actor, 'spd')) * 0.01 + (t.dodgeBonus || 0) + (t.fx.dodge_up ? 0.2 : 0) + (t.ability === 'evasion' ? 0.12 : 0);
+    const base = 0.03 + (this.S(t, 'spd') - this.S(actor, 'spd')) * 0.01 + (t.dodgeBonus || 0) + (t.fx.dodge_up ? 0.2 : 0) + (t.ability === 'evasion' ? 0.12 : 0) + (t.ability === 'anochecer' ? Math.min(0.3, 0.03 * (this.round - 1)) : 0);
     return clamp(base, 0, 0.5);
   }
 
@@ -364,6 +377,7 @@ export class Battle {
       t._illRound = this.round;
       return this.ev({ t: 'dodge', target: t.uid, text: `¡Ilusión! ${t.name} esquiva el primer ataque.` });
     }
+    if (t.ability === 'bruma' && actor.side === 'ally' && !tech.noDodge && rnd() < 0.25) return this.ev({ t: 'dodge', target: t.uid, text: `¡La bruma desvía el golpe contra ${t.name}!` });
     if (!tech.noDodge && actor.ability !== 'sin_sombra' && rnd() < this.dodgeChance(actor, t)) return this.ev({ t: 'dodge', target: t.uid, text: `¡${t.name} esquiva!` });
     const eff = tech.effect || {};
     const raw = tech.power * (this.offense(actor, tech) + actor.level * 1.5) / 25;
@@ -379,6 +393,8 @@ export class Battle {
     if (t.ability === 'pararrayos' && tech.element === 'rayo') dmg *= 0.25;
     if (actor.ability === 'fases' && this.round % 4 === 3) dmg *= 1.35;
     if (t.ability === 'fases' && this.round % 4 === 1) dmg *= 1.2;
+    if (t.ability === 'dia_noche' && actor.side === 'ally') { const day = Math.floor((this.round - 1) / 2) % 2 === 0; const el = tech.element; if (day ? (el === 'fuego' || el === 'arcano') : (el === 'oscuro' || el === 'hielo')) dmg *= 0.15; }
+    if (t.ability === 'eterno_retorno') dmg = Math.min(dmg, Math.max(1, t.maxHp * 0.04));
     if (t.ability === 'casco') dmg = Math.min(dmg, Math.max(1, t.maxHp * 0.04));
     if (t.ability === 'archivo' && actor.side === 'ally' && tech.id) { if (actor._lastTech === tech.id) dmg *= 0.6; actor._lastTech = tech.id; }
     if (t.ability === 'cristalizacion' && actor.side === 'ally') { const st = t._cr || 0; dmg *= 1 - 0.03 * st; t._cr = crit ? 0 : Math.min(10, st + 1); }
@@ -388,6 +404,9 @@ export class Battle {
     if (actor.ability === 'foco' && t.side === 'ally' && t.uid === this._spot) dmg *= 1.4;
     if (t.ability === 'sol_fijo' && actor.side === 'ally' && this.round % 3 === 0) dmg *= 0.3;
     if (t.ability === 'protocolo' && actor.side === 'ally' && this._taboo && tech.element === this._taboo) dmg *= 0.25;
+    if (actor.ability === 'siega' && t.side === 'ally' && t.hp < t.maxHp * 0.5) dmg *= 1.4;
+    if (t.ability === 'paja' && actor.side === 'ally') { if (tech.element === 'fisico') dmg *= 0.7; else if (tech.element === 'fuego') dmg *= 1.6; }
+    if (actor.ability === 'crepusculo' && actor.hp < actor.maxHp * 0.5 && (tech.element === 'oscuro' || tech.element === 'arcano')) dmg *= 1.35;
     if (t.ability === 'mareas') dmg *= this.round % 2 === 1 ? 0.8 : 1.25;
     if (t.ability === 'prisma' && actor.side === 'ally') { if (t._curRound !== this.round) { t._prevEl = t._curEl; t._curRound = this.round; } if (tech.element === t._prevEl) dmg *= 0.6; t._curEl = tech.element; }
     if (t.ability === 'concha' && t._shellRound !== this.round) { t._shellRound = this.round; dmg *= 0.5; }
@@ -411,6 +430,12 @@ export class Battle {
       this.ev({ t: 'hit', target: actor.uid, dmg: r, dot: 'espinas', hp: actor.hp, element: 'fisico' });
       if (actor.hp <= 0) this.faint(actor);
     }
+    if (t.ability === 'rosal' && crit && actor.side === 'ally' && actor.hp > 0) {
+      const r = Math.max(3, Math.round(actor.maxHp * 0.1)); actor.hp = Math.max(0, actor.hp - r);
+      this.ev({ t: 'msg', text: `¡Las espinas del rosal hieren a ${actor.name}!`, target: actor.uid });
+      this.ev({ t: 'hit', target: actor.uid, dmg: r, dot: 'espinas', hp: actor.hp, element: 'fisico' });
+      if (actor.hp <= 0) this.faint(actor);
+    }
     if (t.ability === 'pararrayos' && tech.element === 'rayo' && t.hp > 0) { const b = t.hp; t.hp = Math.min(t.maxHp, t.hp + Math.round(t.maxHp * 0.02)); this.ev({ t: 'heal', target: t.uid, amount: t.hp - b, hp: t.hp, regen: true }); }
     if (t.ability === 'espejo' && tech.element !== 'fisico' && actor.side === 'ally' && actor.hp > 0) {
       const r = Math.max(1, Math.round(dmg * 0.2)); actor.hp = Math.max(0, actor.hp - r);
@@ -421,6 +446,18 @@ export class Battle {
     if (actor.ability === 'ancla' && t.side === 'ally' && t.hp > 0 && rnd() < 0.3) this.status(t, 'slow', 2);
     if (t.ability === 'ambar' && tech.element === 'fisico' && actor.side === 'ally' && actor.hp > 0 && rnd() < 0.35) this.status(actor, 'slow', 3);
     if (actor.ability === 'conjuncion' && t.side === 'ally' && tech.target === 'enemy' && dmg > 0) for (const o of this.alive('ally')) if (o !== t) { const d = Math.max(1, Math.round(dmg * 0.2)); o.hp = Math.max(0, o.hp - d); this.ev({ t: 'hit', target: o.uid, dmg: d, dot: 'conjunción', hp: o.hp, element: tech.element }); if (o.hp <= 0) this.faint(o); }
+    if (t.hp <= 0 && t.def?.fakeDeath && !t._ret) {
+      t._ret = true; t.hp = Math.round(t.maxHp * 0.6); t.fx = { atk_up: 99 }; t.enraged = true; t.charging = null; t.intent = null; this.setAbility(t, 'eterno_retorno'); this.refreshAuras();
+      this.ev({ t: 'msg', text: `${t.name} se desploma… y el alba se apaga. Un silencio absoluto cae sobre el palacio.`, target: t.uid });
+      for (const ln of (t.def.fakeDeathText || [])) this.ev({ t: 'msg', text: ln, target: t.uid });
+      this.ev({ t: 'msg', text: '…Pero el alba siempre vuelve.', target: t.uid });
+      this.ev({ t: 'heal', target: t.uid, amount: t.hp, hp: t.hp, regen: true });
+      this.ev({ t: 'enrage', target: t.uid, text: `¡${t.name} regresa, más brillante y más furiosa que antes!` }); return;
+    }
+    if (t.ability === 'contraataque' && actor.side === 'ally' && t.side === 'enemy' && t.hp > 0 && actor.hp > 0 && !tech._counter && rnd() < 0.25) {
+      this.ev({ t: 'msg', text: `¡${t.name} responde con un contragolpe!`, target: t.uid });
+      this.hit(t, { type: 'attack', name: 'Contragolpe', element: 'fisico', power: 130, target: 'enemy', effect: null, noDodge: true, _counter: true }, actor);
+    }
     if (t.hp <= 0 && t.ability === 'rebobinado' && !t._rew) { t._rew = true; t.hp = Math.round(t.maxHp * 0.5); t.fx = {}; this.ev({ t: 'msg', text: `¡El tiempo retrocede! ${t.name} vuelve a un instante anterior.`, target: t.uid }); this.ev({ t: 'heal', target: t.uid, amount: t.hp, hp: t.hp, regen: true }); return; }
     if (t.hp <= 0) return this.faint(t);
     for (const k of ['burn', 'poison', 'slow', 'freeze', 'stun'])
@@ -453,6 +490,7 @@ export class Battle {
     const off = actor.hybrid ? (this.S(actor, 'atk') + this.S(actor, 'mag')) / 2 : this.S(actor, 'mag');
     let amount = Math.round(tech.power * (off + actor.level * 1.5) / 14);
     if (actor.side === 'ally' && this.alive('enemy').some(e => e.ability === 'voz_robada')) amount = Math.round(amount * 0.5);
+    if (actor.side === 'ally' && this.alive('enemy').some(e => e.ability === 'crepusculo' && e.hp < e.maxHp * 0.5)) amount = Math.round(amount * 0.7);
     const before = t.hp; t.hp = Math.min(t.maxHp, t.hp + amount);
     this.ev({ t: 'heal', target: t.uid, amount: t.hp - before, hp: t.hp });
     if (tech.effect?.regen) this.status(t, 'regen', tech.effect.regen);
@@ -590,6 +628,16 @@ export class Battle {
         if (e.hp < e.maxHp * 0.75 && e.fx.atk_up !== 99) { e.fx.atk_up = 99; this.ev({ t: 'status', target: e.uid, status: 'atk_up', text: 'Pánico', fx: { ...e.fx } }); }
         if (e.hp < e.maxHp * 0.5 && e.fx.spd_up !== 99) { e.fx.spd_up = 99; this.ev({ t: 'status', target: e.uid, status: 'spd_up', text: 'Pánico', fx: { ...e.fx } }); }
       }
+      if (e.ability === 'dia_noche' && this.round % 2 === 0) { const nextDay = Math.floor(this.round / 2) % 2 === 0; this.ev({ t: 'msg', text: nextDay ? '¡Amanece de golpe! Es de Día: el fuego y lo arcano apenas la dañan.' : '¡Cae la Noche! Lo oscuro y el hielo apenas la dañan.', target: e.uid }); }
+      if (e.ability === 'eterno_retorno' && this.round % 5 === 0 && e.hp > 0) {
+        if (this._unionRound === this.round) this.ev({ t: 'msg', text: '¡La Unión interrumpe el Eterno Retorno!', target: e.uid });
+        else if (!this._nightHelp && State.game?.flags?.cave_m1_done) { this._nightHelp = true; this.ev({ t: 'msg', text: '¡La Primera Noche acude en vuestra ayuda! Su «Aliento de Noche» ahoga el Eterno Retorno una ronda.', target: e.uid }); }
+        else {
+          const b = e.hp; e.hp = Math.min(e.maxHp, e.hp + Math.round(e.maxHp * 0.05));
+          this.ev({ t: 'msg', text: `¡${e.name} invoca el Eterno Retorno! Todo vuelve a empezar: tus mejoras se borran.`, target: e.uid }); this.ev({ t: 'heal', target: e.uid, amount: e.hp - b, hp: e.hp, regen: true });
+          for (const a of this.alive('ally')) { let ch = false; for (const k of ['atk_up', 'def_up', 'spd_up', 'dodge_up', 'regen', 'crit_up']) if (a.fx[k]) { delete a.fx[k]; ch = true; } if (ch) this.ev({ t: 'fxclear', target: a.uid, fx: { ...a.fx } }); }
+        }
+      }
       if (e.ability === 'tiempo_detenido' && this.round % 3 === 0) {
         this.ev({ t: 'msg', text: `¡${e.name} detiene el tiempo! Las mejoras de tu equipo se desvanecen.`, target: e.uid });
         for (const a of this.alive('ally')) { let ch = false; for (const k of ['atk_up', 'def_up', 'spd_up', 'dodge_up', 'regen']) if (a.fx[k]) { delete a.fx[k]; ch = true; } if (ch) this.ev({ t: 'fxclear', target: a.uid, fx: { ...a.fx } }); }
@@ -630,6 +678,7 @@ export class Battle {
 
   faint(t) {
     const hadWolf = !!t.fx.wolf;
+    if (t.side === 'ally') for (const e of this.alive('enemy')) if (e.ability === 'cosecha') { const b = e.hp; e.hp = Math.min(e.maxHp, e.hp + Math.round(e.maxHp * 0.15)); this.ev({ t: 'msg', text: `¡${e.name} cosecha lo caído!`, target: e.uid }); this.ev({ t: 'heal', target: e.uid, amount: e.hp - b, hp: e.hp, regen: true }); }
     t.fx = {}; t.charging = null; t.intent = null;
     if (t.side === 'enemy') this.defeated.push(t);
     if (t.wolfBonus) { t.maxHp -= t.wolfBonus; t.wolfBonus = 0; }

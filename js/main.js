@@ -61,7 +61,7 @@ async function init() {
   $('#modal-close').addEventListener('click', closeModal);
   $('#btn-load').addEventListener('click', () => slotModal('load'));
   $('#btn-about').addEventListener('click', () => openModal(el('div', {},
-    el('h3', {}, 'Yukine: La Senda del Vengador'), el('small', {}, 'Versión 0.9.0'),
+    el('h3', {}, 'Yukine: La Senda del Vengador'), el('small', {}, 'Versión 0.9.3'),
     el('p', {}, 'RPG de anime single-player. Juego completo: Bosques de Kasumi, Cumbres Shirogane y Yermo Akatsuki. Combate por turnos, Yukine (con su despertar lunar), santuarios, jefes, misiones, bestiario y cuatro finales según tu relación con ella.'))));
   $('#btn-new').addEventListener('click', async () => {
     const player = await runCreation();

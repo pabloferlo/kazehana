@@ -154,6 +154,32 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `palacio_luz.jpg` | Palacio de la Luz Quieta |
 | `santuario_dama.jpg` | Santuario de la Dama de la Luz |
 | `recuerdo_sombra.jpg` | Recuerdo de la sombra entregada |
+| `llegada_alba.jpg` | Llegada al Corazón del Alba |
+| `sendero_rocio.jpg` | Sendero del Rocío |
+| `refugio_despiertos.jpg` | Refugio de los Despiertos |
+| `bosque_madrugadas.jpg` | Bosque de las Madrugadas |
+| `jardin_semillas.jpg` | Jardín de las Semillas Dormidas |
+| `santuario_rocio.jpg` | Santuario del Primer Rocío |
+| `cueva_nidos.jpg` | Cueva de los Nidos Dorados |
+| `lago_primera_luz.jpg` | Lago de la Primera Luz |
+| `campanario_gallo.jpg` | Campanario del Gallo Eterno |
+| `santuario_aurora.jpg` | Santuario de la Aurora Detenida |
+| `recuerdo_alba.jpg` | Recuerdo del primer amanecer |
+| `campos_oro.jpg` | Campos de Trigo de Oro |
+| `posada_rayo.jpg` | Posada del Último Rayo |
+| `rio_miel.jpg` | Río de Miel |
+| `templo_horas.jpg` | Templo de las Horas Rosadas |
+| `santuario_tarde.jpg` | Santuario de la Tarde Dorada |
+| `granero_sin_fondo.jpg` | Granero sin Fondo |
+| `mirador_atardecer.jpg` | Mirador del Atardecer |
+| `santuario_crepusculo.jpg` | Santuario del Crepúsculo |
+| `recuerdo_hija.jpg` | Recuerdo de una niña que se marcha |
+| `escalinata_alba.jpg` | Escalinata del Alba |
+| `salon_espejos.jpg` | Salón de los Mil Espejos |
+| `camara_recuerdos.jpg` | Cámara de los Recuerdos |
+| `palacio_alba.jpg` | Palacio del Alba |
+| `santuario_trono.jpg` | Trono del Alba Eterna |
+| `fin_alba.jpg` | El alba, por fin, se mueve |
 | `prologue_rebelion.jpg` | Prólogo: la rebelión de Tsukimori |
 | `prologue_noche.jpg` | Prólogo: la noche tras la rebelión |
 
@@ -174,6 +200,7 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `mapa_marcristal.jpg` | Mapa de Mar de Cristal |
 | `mapa_cordillera.jpg` | Mapa de Cordillera del Eco Dorado |
 | `mapa_ciudadluz.jpg` | Mapa de Ciudad de Luz sin Reloj |
+| `mapa_corazon.jpg` | Mapa de Corazón del Alba |
 
 ## Fondos de combate
 
@@ -320,6 +347,27 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `combate_cueva_sombras.jpg` | Combates en: Cámara de las Sombras Impagadas |
 | `combate_palacio_luz.jpg` | Combates en: Palacio de la Luz Quieta |
 | `combate_santuario_l5.jpg` | Combates en: Santuario de la Dama de la Luz |
+| `combate_corazon.jpg` | Combates en Corazón del Alba (por defecto) |
+| `combate_sendero_rocio.jpg` | Combates en: Sendero del Rocío |
+| `combate_bosque_madrugadas.jpg` | Combates en: Bosque de las Madrugadas |
+| `combate_jardin_semillas.jpg` | Combates en: Jardín de las Semillas Dormidas |
+| `combate_santuario_a1.jpg` | Combates en: Santuario del Primer Rocío |
+| `combate_cueva_nidos.jpg` | Combates en: Cueva de los Nidos Dorados |
+| `combate_lago_primera_luz.jpg` | Combates en: Lago de la Primera Luz |
+| `combate_campanario_gallo.jpg` | Combates en: Campanario del Gallo Eterno |
+| `combate_santuario_a2.jpg` | Combates en: Santuario de la Aurora Detenida |
+| `combate_campos_oro.jpg` | Combates en: Campos de Trigo de Oro |
+| `combate_rio_miel.jpg` | Combates en: Río de Miel |
+| `combate_templo_horas.jpg` | Combates en: Templo de las Horas Rosadas |
+| `combate_santuario_a3.jpg` | Combates en: Santuario de la Tarde Dorada |
+| `combate_granero_sin_fondo.jpg` | Combates en: Granero sin Fondo |
+| `combate_mirador_atardecer.jpg` | Combates en: Mirador del Atardecer |
+| `combate_santuario_a4.jpg` | Combates en: Santuario del Crepúsculo |
+| `combate_horizonte_alba.jpg` | Combates en: Escalinata del Alba |
+| `combate_salon_espejos.jpg` | Combates en: Salón de los Mil Espejos |
+| `combate_camara_recuerdos.jpg` | Combates en: Cámara de los Recuerdos |
+| `combate_palacio_alba.jpg` | Combates en: Palacio del Alba |
+| `combate_santuario_a5.jpg` | Combates en: Trono del Alba Eterna |
 | `combate.jpg` | Combate genérico (si no hay otro) |
 
 ## Lugares (tarjeta de entrada, pueblo, mazmorra)
@@ -438,7 +486,7 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `lugar_torre_reloj.jpg` | Tarjeta de entrada/pueblo: Torre del Reloj Parado |
 | `lugar_santuario_l1.jpg` | Tarjeta de entrada/pueblo: Santuario del Primer Instante |
 | `lugar_sotano_engranajes.jpg` | Tarjeta de entrada/pueblo: Sótano de los Engranajes |
-| `lugar_horizonte_luz.jpg` | Tarjeta de entrada/pueblo: Corazón de la Ciudad |
+| `lugar_horizonte_luz.jpg` | Tarjeta de entrada/pueblo: Horizonte del Alba |
 | `lugar_mercado_horas.jpg` | Tarjeta de entrada/pueblo: Mercado de las Horas Perdidas |
 | `lugar_archivo_nombres.jpg` | Tarjeta de entrada/pueblo: Archivo de los Nombres |
 | `lugar_santuario_l2.jpg` | Tarjeta de entrada/pueblo: Santuario de la Memoria Detenida |
@@ -450,3 +498,20 @@ Coloca aquí imágenes **.jpg, .png o .webp** (recomendado 1920×1080, horizonta
 | `lugar_cueva_sombras.jpg` | Tarjeta de entrada/pueblo: Cámara de las Sombras Impagadas |
 | `lugar_palacio_luz.jpg` | Tarjeta de entrada/pueblo: Palacio de la Luz Quieta |
 | `lugar_santuario_l5.jpg` | Tarjeta de entrada/pueblo: Santuario de la Dama de la Luz |
+| `lugar_puerta_alba.jpg` | Tarjeta de entrada/pueblo: Puerta del Alba |
+| `lugar_refugio_despiertos.jpg` | Tarjeta de entrada/pueblo: Refugio de los Despiertos |
+| `lugar_jardin_semillas.jpg` | Tarjeta de entrada/pueblo: Jardín de las Semillas Dormidas |
+| `lugar_santuario_a1.jpg` | Tarjeta de entrada/pueblo: Santuario del Primer Rocío |
+| `lugar_cueva_nidos.jpg` | Tarjeta de entrada/pueblo: Cueva de los Nidos Dorados |
+| `lugar_campanario_gallo.jpg` | Tarjeta de entrada/pueblo: Campanario del Gallo Eterno |
+| `lugar_santuario_a2.jpg` | Tarjeta de entrada/pueblo: Santuario de la Aurora Detenida |
+| `lugar_posada_rayo.jpg` | Tarjeta de entrada/pueblo: Posada del Último Rayo |
+| `lugar_templo_horas.jpg` | Tarjeta de entrada/pueblo: Templo de las Horas Rosadas |
+| `lugar_santuario_a3.jpg` | Tarjeta de entrada/pueblo: Santuario de la Tarde Dorada |
+| `lugar_granero_sin_fondo.jpg` | Tarjeta de entrada/pueblo: Granero sin Fondo |
+| `lugar_mirador_atardecer.jpg` | Tarjeta de entrada/pueblo: Mirador del Atardecer |
+| `lugar_santuario_a4.jpg` | Tarjeta de entrada/pueblo: Santuario del Crepúsculo |
+| `lugar_salon_espejos.jpg` | Tarjeta de entrada/pueblo: Salón de los Mil Espejos |
+| `lugar_camara_recuerdos.jpg` | Tarjeta de entrada/pueblo: Cámara de los Recuerdos |
+| `lugar_palacio_alba.jpg` | Tarjeta de entrada/pueblo: Palacio del Alba |
+| `lugar_santuario_a5.jpg` | Tarjeta de entrada/pueblo: Trono del Alba Eterna |

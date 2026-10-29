@@ -121,6 +121,30 @@
    {
     "level": 70,
     "tech": "cancion_de_shirayuki"
+   },
+   {
+    "level": 71,
+    "tech": "zarpa_de_aurora"
+   },
+   {
+    "level": 74,
+    "tech": "aullido_del_primer_dia"
+   },
+   {
+    "level": 75,
+    "tech": "zarpa_del_ocaso"
+   },
+   {
+    "level": 78,
+    "tech": "aullido_de_la_tarde"
+   },
+   {
+    "level": 79,
+    "tech": "zarpa_de_la_nieta_del_alba"
+   },
+   {
+    "level": 80,
+    "tech": "aullido_de_la_familia"
    }
   ]
  }

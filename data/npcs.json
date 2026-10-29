@@ -8044,6 +8044,987 @@
    ],
    "role": "Guardiana del Corazón",
    "hidden": true
+  },
+  {
+   "id": "taiga",
+   "name": "Taiga",
+   "age": 29,
+   "desc": "Es un hombre de veintinueve años, de espalda ancha y piel morena, pelo negro rapado, ojos grises y cálidos, túnica ligera color arena con las mangas remangadas y las manos callosas de cultivar.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Hortelano despierto",
+   "talk": [
+    {
+     "if": [
+      "q:sq51=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Taiga",
+       "char": "taiga",
+       "emotion": "happy",
+       "text": "¡Seis brotes menos! Ya puedo sembrar tranquilo. Toma, es lo que tengo.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq51"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq51=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Taiga",
+       "char": "taiga",
+       "emotion": "neutral",
+       "text": "Los brotes del alba se comen mis cultivos. Seis."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq51=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Taiga",
+       "char": "taiga",
+       "emotion": "neutral",
+       "text": "Los brotes del alba crecen demasiado y se comen los cultivos de todos. ¿Puedes cortar seis?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Taiga",
+           "char": "taiga",
+           "emotion": "happy",
+           "text": "Cuidado con los zarcillos."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq51"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Taiga",
+           "char": "taiga",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Taiga",
+       "char": "taiga",
+       "emotion": "neutral",
+       "text": "Aquí todos nos despertamos de golpe un día. Yo desperté con una azada en la mano. Y ya no la he soltado."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oboro",
+   "name": "Oboro",
+   "age": 58,
+   "desc": "Es una mujer de cincuenta y ocho años, bajita y robusta, de pelo gris recogido en un moño, ojos negros y vivos, delantal de lana rosada y una cesta siempre a mano.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Cocinera del refugio",
+   "talk": [
+    {
+     "if": [
+      "q:sq52=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Oboro",
+       "char": "oboro",
+       "emotion": "happy",
+       "text": "¡Tres plumas de alba! Con ellas hago el almohadón para el abuelo. Tomad.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq52"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq52=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Oboro",
+       "char": "oboro",
+       "emotion": "neutral",
+       "text": "Las alondras de la aurora dejan plumas rosadas al caer. Tres."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq52=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Oboro",
+       "char": "oboro",
+       "emotion": "neutral",
+       "text": "Necesito tres plumas rosadas de alondra para un almohadón. Las alondras las sueltan al caer.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Oboro",
+           "char": "oboro",
+           "emotion": "happy",
+           "text": "Voy preparando la sopa."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq52"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Oboro",
+           "char": "oboro",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Oboro",
+       "char": "oboro",
+       "emotion": "happy",
+       "text": "Hay sopa caliente para quien venga con frío. Aquí siempre amanece, pero el frío sigue entrando."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kagura",
+   "name": "Kagura",
+   "age": 19,
+   "desc": "Es una chica de diecinueve años, delgada y de ojos grandes y soñadores, pelo rosa pálido a media espalda, vestida con un camisón largo de lana y botas de caminar, con una manta echada sobre los hombros.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy",
+    "sad"
+   ],
+   "role": "Despertada reciente",
+   "talk": [
+    {
+     "if": [
+      "a2_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kagura",
+       "char": "kagura",
+       "emotion": "happy",
+       "text": "La Aurora se ha ido. Hoy, por primera vez, ha anochecido. Fue precioso."
+      }
+     ]
+    },
+    {
+     "if": [
+      "a1_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Kagura",
+       "char": "kagura",
+       "emotion": "sad",
+       "text": "Soñaba con un jardín. Era un jardín muy bonito. Lo malo es que no era mío."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Kagura",
+       "char": "kagura",
+       "emotion": "shy",
+       "text": "Hace tres días desperté. Antes... no sé qué era antes. Un sueño de alguien, supongo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hoshina",
+   "name": "Hoshina",
+   "age": 81,
+   "desc": "Es un anciano de ochenta y un años, delgado y encorvado, de barba blanca muy larga, ojos azul pálido casi cerrados, túnica de lino sin teñir y un bastón de caña con un cascabel.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Anciano del refugio",
+   "talk": [
+    {
+     "if": [
+      "a2_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hoshina",
+       "char": "hoshina",
+       "emotion": "happy",
+       "text": "La Aurora ha descansado. Cuántos años esperé verlo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hoshina",
+       "char": "hoshina",
+       "emotion": "neutral",
+       "text": "Quien llega aquí ya no vuelve igual. Algunos se quedan; otros siguen. Tú eres de los que siguen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jardinero_n",
+   "name": "El Jardinero",
+   "age": null,
+   "desc": "Un hombre de edad indefinida, de mono verde remendado, sombrero de paja enorme, manos con callos de tijera y un delantal lleno de semillas.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Jardinero",
+   "hidden": true
+  },
+  {
+   "id": "nodriza_n",
+   "name": "La Nodriza del Rocío",
+   "age": null,
+   "desc": "Una mujer alta y redondeada, de piel de un azul muy pálido, pelo hecho de gotas que caen y vuelven a subir, vestido de gasa húmeda y cántaros en las manos.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Nodriza",
+   "hidden": true
+  },
+  {
+   "id": "campanero_n",
+   "name": "El Campanero",
+   "age": null,
+   "desc": "Un hombre de brazos enormes y espalda ancha, de pelo canoso trenzado con cuerdas, orejas tapadas con cera, camisa de lino sin mangas y un martillo de bronce al cinto.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Campanero",
+   "hidden": true
+  },
+  {
+   "id": "aurora_n",
+   "name": "La Aurora Detenida",
+   "age": null,
+   "desc": "Una mujer de luz rosada, de pelo largo que baila en el aire sin viento, ojos de oro líquido, vestido de nube, y una sonrisa tan antigua como el primer día.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy",
+    "angry"
+   ],
+   "role": "Aurora",
+   "hidden": true
+  },
+  {
+   "id": "ryuma",
+   "name": "Ryūma",
+   "age": 44,
+   "desc": "Es un hombre de cuarenta y cuatro años, de espalda ancha y piel curtida, pelo castaño oscuro corto, ojos verdes, camisa de lino sin mangas con la hoz colgada del cinturón y sombrero de paja.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Segador",
+   "talk": [
+    {
+     "if": [
+      "q:sq53=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryūma",
+       "char": "ryuma",
+       "emotion": "happy",
+       "text": "¡Seis espigas vivas menos! Se me acabó el miedo a segar de noche. Tomad.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq53"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq53=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryūma",
+       "char": "ryuma",
+       "emotion": "neutral",
+       "text": "Las espigas vivas pisotean mis campos. Seis."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq53=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ryūma",
+       "char": "ryuma",
+       "emotion": "neutral",
+       "text": "Las espigas vivas se han vuelto salvajes y pisotean los campos. ¿Puedes cortar seis?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Ryūma",
+           "char": "ryuma",
+           "emotion": "happy",
+           "text": "Cuidado con el polvo."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq53"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Ryūma",
+           "char": "ryuma",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ryūma",
+       "char": "ryuma",
+       "emotion": "neutral",
+       "text": "Hace años que siego estos campos. Siempre con la tarde en la espalda y el sol por delante."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tomoe",
+   "name": "Tomoe",
+   "age": 36,
+   "desc": "Es una mujer de treinta y seis años, de pelo negro con mechones plateados recogido en un pañuelo azul, ojos grandes y atentos, delantal de posadera y un trapo siempre en el hombro.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Posadera",
+   "talk": [
+    {
+     "if": [
+      "q:sq54=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tomoe",
+       "char": "tomoe",
+       "emotion": "happy",
+       "text": "¡Tres granos de luz! Con eso la posada no se apaga nunca. Gracias, de verdad.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq54"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq54=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tomoe",
+       "char": "tomoe",
+       "emotion": "neutral",
+       "text": "Las luciérnagas gigantes dejan granos que brillan. Tres."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq54=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tomoe",
+       "char": "tomoe",
+       "emotion": "neutral",
+       "text": "Necesito tres granos de luz para el farol de la entrada. Las luciérnagas gigantes los sueltan.",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Tomoe",
+           "char": "tomoe",
+           "emotion": "happy",
+           "text": "Os guardo una cama."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq54"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Tomoe",
+           "char": "tomoe",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "a4_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Tomoe",
+       "char": "tomoe",
+       "emotion": "happy",
+       "text": "¡Anochece! ¡Por fin anochece! Nunca pensé que lloraría de alegría por una noche."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Tomoe",
+       "char": "tomoe",
+       "emotion": "happy",
+       "text": "Una cama, una sopa y una historia. Aquí se paga con la tercera."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "yoshiro",
+   "name": "Yoshirō",
+   "age": 67,
+   "desc": "Es un anciano de sesenta y siete años, de espalda recta, pelo gris peinado hacia atrás, ojos castaños apagados, chaleco de cuero y una pipa de madera que no enciende nunca.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy"
+   ],
+   "role": "Pastor jubilado",
+   "talk": [
+    {
+     "if": [
+      "a3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Yoshirō",
+       "char": "yoshiro",
+       "emotion": "happy",
+       "text": "El Segador ya no siega. Cuánto tiempo sin ver el trigo madurar de verdad."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Yoshirō",
+       "char": "yoshiro",
+       "emotion": "neutral",
+       "text": "Pastoreé estas tierras toda mi vida. Cuando el día no acaba, las ovejas no duermen y yo tampoco."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hatsumi",
+   "name": "Hatsumi",
+   "age": 15,
+   "desc": "Es una chica de quince años, delgada y de ojos muy abiertos, pelo largo castaño claro con trenzas finas, vestido de lino con un chal de punto y una lámpara pequeña siempre encendida.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy",
+    "sad"
+   ],
+   "role": "Guardiana de la lámpara",
+   "talk": [
+    {
+     "if": [
+      "a4_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hatsumi",
+       "char": "hatsumi",
+       "emotion": "happy",
+       "text": "Por fin puedo apagar la lámpara. Qué descanso."
+      }
+     ]
+    },
+    {
+     "if": [
+      "a3_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Hatsumi",
+       "char": "hatsumi",
+       "emotion": "sad",
+       "text": "Algunos días me da miedo la noche. Aunque no la haya visto jamás."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Hatsumi",
+       "char": "hatsumi",
+       "emotion": "shy",
+       "text": "Llevo la lámpara de mi abuela. Dijo que nunca la apagara. No sé por qué."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sacerdotisa_n",
+   "name": "La Sacerdotisa",
+   "age": null,
+   "desc": "Una mujer de edad indefinida, alta y erguida, con una túnica larga de color rosa muy pálido, pelo recogido bajo una diadema de pétalos y un báculo con un reloj de arena.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Sacerdotisa",
+   "hidden": true
+  },
+  {
+   "id": "segador_n",
+   "name": "El Segador de Luz",
+   "age": null,
+   "desc": "Una figura alta y delgada envuelta en una capa dorada, cara oculta bajo una capucha de luz, manos largas de dedos finos y una hoz que brilla sin proyectar sombra.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Segador",
+   "hidden": true
+  },
+  {
+   "id": "vigia_n",
+   "name": "La Vigía del Crepúsculo",
+   "age": null,
+   "desc": "Una mujer menuda y de ojos enormes, con un abrigo naranja desteñido, un catalejo de latón y una trenza muy larga que le llega a los pies.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Vigía",
+   "hidden": true
+  },
+  {
+   "id": "crepusculo_n",
+   "name": "El Señor del Crepúsculo",
+   "age": null,
+   "desc": "Un hombre de edad indefinida y gesto cansado, envuelto en un manto violeta que se funde con el cielo, con la mitad de la cara iluminada de rosa y la otra mitad en sombra.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry",
+    "happy"
+   ],
+   "role": "Señor del Crepúsculo",
+   "hidden": true
+  },
+  {
+   "id": "rinto",
+   "name": "Rinto",
+   "age": 41,
+   "desc": "Es un hombre de cuarenta y un años, de complexión fuerte y rostro cuadrado, pelo castaño cortado a cepillo, ojos pardos y serios, con la armadura dorada de un guardia retirado y un yelmo bajo el brazo.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "sad"
+   ],
+   "role": "Guardia retirado",
+   "talk": [
+    {
+     "if": [
+      "q:sq55=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rinto",
+       "char": "rinto",
+       "emotion": "happy",
+       "text": "¡Seis guardias menos! Les debo la vida y se la devuelvo. Que descansen. Gracias.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq55"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq55=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rinto",
+       "char": "rinto",
+       "emotion": "neutral",
+       "text": "Los guardias del alba no saben por qué siguen en pie. Seis."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq55=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rinto",
+       "char": "rinto",
+       "emotion": "neutral",
+       "text": "Los guardias del palacio llevan doscientos años en pie sin saber por qué. ¿Puedes dejar descansar a seis?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Rinto",
+           "char": "rinto",
+           "emotion": "happy",
+           "text": "Con respeto, por favor."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq55"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Rinto",
+           "char": "rinto",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "madre_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Rinto",
+       "char": "rinto",
+       "emotion": "happy",
+       "text": "He oído que la Madre descansa. Me ha dado por llorar. No sé si de pena o de alivio."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Rinto",
+       "char": "rinto",
+       "emotion": "sad",
+       "text": "Serví en el palacio de joven. Nunca vi a la Madre sonreír. Ni una vez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ume",
+   "name": "Ume",
+   "age": 24,
+   "desc": "Es una joven de veinticuatro años, de rostro dulce y ojeras, pelo castaño oscuro largo con un lazo, ojos grandes y soñadores, con un abrigo de lana y un cuaderno lleno de dibujos de estrellas.",
+   "emotions": [
+    "neutral",
+    "happy",
+    "shy",
+    "sad"
+   ],
+   "role": "Dibujante de estrellas",
+   "talk": [
+    {
+     "if": [
+      "q:sq56=ready"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ume",
+       "char": "ume",
+       "emotion": "happy",
+       "text": "¡Tres fragmentos de estrella! Con ellos puedo terminar mi mapa del cielo. Gracias, de corazón.",
+       "actions": [
+        {
+         "type": "quest",
+         "op": "turnin",
+         "id": "sq56"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq56=active"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ume",
+       "char": "ume",
+       "emotion": "neutral",
+       "text": "Las estrellas dormidas sueltan fragmentos al caer. Tres."
+      }
+     ]
+    },
+    {
+     "if": [
+      "q:sq56=none"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ume",
+       "char": "ume",
+       "emotion": "neutral",
+       "text": "Dibujo el cielo, pero me faltan estrellas de verdad. ¿Puedes traerme tres fragmentos de estrella dormida?",
+       "choices": [
+        {
+         "label": "Cuenta conmigo.",
+         "reply": [
+          {
+           "speaker": "Ume",
+           "char": "ume",
+           "emotion": "happy",
+           "text": "Voy preparando el papel."
+          }
+         ],
+         "actions": [
+          {
+           "type": "quest",
+           "op": "give",
+           "id": "sq56"
+          }
+         ]
+        },
+        {
+         "label": "Quizá luego.",
+         "reply": [
+          {
+           "speaker": "Ume",
+           "char": "ume",
+           "emotion": "neutral",
+           "text": "Aquí estaré."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "if": [
+      "madre_done"
+     ],
+     "scenes": [
+      {
+       "speaker": "Ume",
+       "char": "ume",
+       "emotion": "happy",
+       "text": "Ya hay noche. Ya hay estrellas. Por fin mi mapa sirve para algo."
+      }
+     ]
+    },
+    {
+     "scenes": [
+      {
+       "speaker": "Ume",
+       "char": "ume",
+       "emotion": "shy",
+       "text": "Dibujo las estrellas que recuerdo. Algún día las verá alguien."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "guardiana_espejos_n",
+   "name": "La Guardiana de los Espejos",
+   "age": null,
+   "desc": "Una mujer de aspecto joven y rasgos difíciles de fijar, con un vestido plateado hecho de esquirlas de espejo y una corona de cristal. En cada esquirla se ve una cara distinta.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Guardiana",
+   "hidden": true
+  },
+  {
+   "id": "shirayuki_n",
+   "name": "El Recuerdo de Shirayuki",
+   "age": null,
+   "desc": "Una joven alta y esbelta de pelo largo blanco como la nieve y ojos azul hielo, con un vestido blanco sencillo y un pañuelo con un lobo bordado, sonriendo con una tristeza muy antigua.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "happy"
+   ],
+   "role": "Recuerdo",
+   "hidden": true
+  },
+  {
+   "id": "heredero_n",
+   "name": "El Último Hijo del Alba",
+   "age": null,
+   "desc": "Un hombre alto de unos cuarenta años, de pelo dorado corto, ojos color miel, con una armadura de oro blanco desgastada y una corona rota sobre la frente.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry"
+   ],
+   "role": "Hijo adoptivo",
+   "hidden": true
+  },
+  {
+   "id": "madre_alba",
+   "name": "Madre del Alba",
+   "age": null,
+   "desc": "Una mujer altísima de unos cincuenta años de aspecto, de cabello blanco dorado que flota como luz líquida, ojos color amanecer llenos de cansancio, vestido de rayos de sol y una corona de luz recompuesta sobre la frente.",
+   "emotions": [
+    "neutral",
+    "sad",
+    "angry",
+    "happy"
+   ],
+   "role": "Madre del Alba",
+   "hidden": true
   }
  ]
 }

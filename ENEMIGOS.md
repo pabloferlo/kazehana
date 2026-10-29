@@ -1,4 +1,4 @@
-# Enemigos del juego (v0.9.0)
+# Enemigos del juego (v0.9.3)
 
 Formato para pasarme habilidades: `id → base → furia`.
 
@@ -36,6 +36,17 @@ Formato para pasarme habilidades: `id → base → furia`.
 | Aullido de Manada | Cada 3 rondas aúlla y sube su ataque durante 3 rondas. |
 | Concha | El primer golpe que recibe cada ronda hace solo un 50 % del daño. |
 | Ámbar | Cada ataque físico que recibe tiene un 35 % de ralentizar a quien lo hizo. |
+| Contragolpe | Cuando la golpean, un 25 % de las veces responde de inmediato con un contragolpe físico. |
+| Eterno Retorno | Ningún golpe le quita más del 4 % de sus PV máximos. Cada 5 rondas recupera un 5 % y borra todas tus mejoras: solo un ataque de Unión puede interrumpirlo. |
+| Día y Noche | Alterna Día y Noche cada 2 rondas. De Día, el fuego y lo arcano le hacen solo un 15 %; de Noche, lo oscuro y el hielo. Lleva elementos variados. |
+| Siega | Sus ataques hacen un 40 % más de daño a quien tiene menos de la mitad de sus PV: remata a los heridos. |
+| Relleno de Paja | Los golpes físicos le hacen un 30 % menos de daño, pero el fuego le hace un 60 % más. |
+| Anochecer | La luz baja: cada ronda esquiva un 3 % más (máx. +30 %). |
+| Crepúsculo | Por debajo del 50 % de PV cae la noche: sus ataques de oscuro y arcano hacen un 35 % más y tus curaciones funcionan al 70 %. |
+| Bruma Matinal | Una bruma dorada desvía el 25 % de los ataques de tu equipo contra ella. |
+| Rosal de Contragolpe | Cada golpe crítico que recibe hiere a quien lo asestó (10 % de sus PV máximos). |
+| Cosecha | Cada vez que un miembro de tu equipo cae, recupera un 15 % de sus PV máximos. |
+| Centella Matutina | No tolera otra luz: quien se transforma (ulti de lobo) recibe una centella del 15 % de sus PV máximos. |
 | Sol Fijo | Cada 3 rondas (3, 6, 9…) el sol se detiene sobre ella y recibe un 70 % menos de daño. Se anuncia la ronda anterior: guarda tus golpes fuertes. |
 | Cobro de Intereses | Cura un 25 % del daño que inflige a tu equipo. |
 | Protocolo | Cada ronda decreta un elemento prohibido: los ataques de ese elemento le hacen un 75 % menos de daño. Se anuncia al empezar la ronda. |
@@ -172,6 +183,18 @@ Formato para pasarme habilidades: `id → base → furia`.
 | `heraldo_mediodia` | Heraldo del Mediodía | 68 | 7000 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Cámara de las Sombras Impagadas, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
 | `lampara_viviente` | Lámpara Viviente | 69 | 6200 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Cámara de las Sombras Impagadas, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
 | `sol_de_bolsillo` | Sol de Bolsillo | 70 | 11800 | — | Paseo de las Lumbreras, Observatorio del Sol Fijo, Santuario del Sol Inmóvil, Palacio de la Luz Quieta, Santuario de la Dama de la Luz |
+| `brote_alba` | Brote del Alba | 71 | 9400 | — | Sendero del Rocío, Bosque de las Madrugadas, Jardín de las Semillas Dormidas, Santuario del Primer Rocío, Cueva de los Nidos Dorados, Lago de la Primera Luz, Campanario del Gallo Eterno, Santuario de la Aurora Detenida |
+| `rocio_vivo` | Rocío Vivo | 72 | 7600 | — | Sendero del Rocío, Bosque de las Madrugadas, Jardín de las Semillas Dormidas, Santuario del Primer Rocío, Lago de la Primera Luz, Campanario del Gallo Eterno, Santuario de la Aurora Detenida |
+| `alondra_aurora` | Alondra de la Aurora | 73 | 6800 | — | Sendero del Rocío, Bosque de las Madrugadas, Jardín de las Semillas Dormidas, Santuario del Primer Rocío, Cueva de los Nidos Dorados, Lago de la Primera Luz, Campanario del Gallo Eterno, Santuario de la Aurora Detenida |
+| `sonambulo_alba` | Sonámbulo del Alba | 74 | 12800 | — | Sendero del Rocío, Bosque de las Madrugadas, Jardín de las Semillas Dormidas, Santuario del Primer Rocío, Cueva de los Nidos Dorados, Lago de la Primera Luz, Campanario del Gallo Eterno, Santuario de la Aurora Detenida |
+| `espiga_viva` | Espiga Viva | 75 | 10200 | — | Campos de Trigo de Oro, Río de Miel, Templo de las Horas Rosadas, Santuario de la Tarde Dorada, Granero sin Fondo, Mirador del Atardecer, Santuario del Crepúsculo |
+| `cuervo_atardecer` | Cuervo del Atardecer | 76 | 8400 | — | Campos de Trigo de Oro, Río de Miel, Templo de las Horas Rosadas, Santuario de la Tarde Dorada, Granero sin Fondo, Mirador del Atardecer, Santuario del Crepúsculo |
+| `luciernaga_gigante` | Luciérnaga Gigante | 77 | 7600 | — | Campos de Trigo de Oro, Río de Miel, Templo de las Horas Rosadas, Santuario de la Tarde Dorada, Granero sin Fondo, Mirador del Atardecer, Santuario del Crepúsculo |
+| `sombra_vespertina` | Sombra Vespertina | 78 | 14000 | — | Campos de Trigo de Oro, Río de Miel, Templo de las Horas Rosadas, Santuario de la Tarde Dorada, Granero sin Fondo, Mirador del Atardecer, Santuario del Crepúsculo |
+| `guardia_alba` | Guardia del Alba | 79 | 11800 | — | Escalinata del Alba, Salón de los Mil Espejos, Cámara de los Recuerdos, Palacio del Alba, Trono del Alba Eterna |
+| `estrella_dormida` | Estrella Dormida | 79 | 9000 | — | Escalinata del Alba, Salón de los Mil Espejos, Cámara de los Recuerdos, Palacio del Alba, Trono del Alba Eterna |
+| `mensajero_aurora` | Mensajero de la Aurora | 80 | 8400 | — | Escalinata del Alba, Salón de los Mil Espejos, Cámara de los Recuerdos, Palacio del Alba, Trono del Alba Eterna |
+| `espejo_viviente` | Espejo Viviente | 80 | 15200 | — | Escalinata del Alba, Salón de los Mil Espejos, Cámara de los Recuerdos, Palacio del Alba, Trono del Alba Eterna |
 
 ## Jefes
 
@@ -267,3 +290,17 @@ Formato para pasarme habilidades: `id → base → furia`.
 | `sombra_impaga` | La Sombra Impaga | 68 | 46000 | Velo Nocturno → Pánico | Cámara de las Sombras Impagadas |
 | `chambelan` | El Chambelán del Reloj Roto | 69 | 37000 | Protocolo → Intimidación | Palacio de la Luz Quieta |
 | `dama_luz` | La Dama de la Luz | 70 | 42000 | Luz sin Sombra → Rebobinado | Santuario de la Dama de la Luz |
+| `jardinero` | El Jardinero de las Semillas Dormidas | 71 | 27000 | Rosal de Contragolpe → Regeneración | Jardín de las Semillas Dormidas |
+| `nodriza_rocio` | La Nodriza del Rocío | 72 | 24000 | Cosecha → Plegaria | Santuario del Primer Rocío |
+| `gallo_dorado` | El Gallo Dorado | 72 | 50000 | Regeneración → Pánico | Cueva de los Nidos Dorados |
+| `campanero` | El Campanero del Alba | 73 | 38000 | Bruma Matinal → Intimidación | Campanario del Gallo Eterno |
+| `aurora_detenida` | La Aurora Detenida | 74 | 50000 | Centella Matutina → Plegaria | Santuario de la Aurora Detenida |
+| `sacerdotisa_horas` | La Sacerdotisa de las Horas Rosadas | 75 | 56000 | Latido del Sol → Pánico | Templo de las Horas Rosadas |
+| `segador_luz` | El Segador de Luz | 76 | 66000 | Siega → Fragilidad | Santuario de la Tarde Dorada |
+| `espantapajaros` | El Espantapájaros Gigante | 76 | 30000 | Relleno de Paja → Regeneración | Granero sin Fondo |
+| `vigia_crepusculo` | La Vigía del Crepúsculo | 77 | 70000 | Anochecer → Intimidación | Mirador del Atardecer |
+| `crepusculo_boss` | El Señor del Crepúsculo | 78 | 56000 | Crepúsculo → Velo Nocturno | Santuario del Crepúsculo |
+| `guardiana_espejos` | La Guardiana de los Mil Espejos | 79 | 50000 | Contragolpe → Espejo | Salón de los Mil Espejos |
+| `recuerdo_shirayuki` | El Recuerdo de Shirayuki | 80 | 41000 | Concha → Pánico | Cámara de los Recuerdos |
+| `heredero_alba` | El Último Hijo del Alba | 80 | 112000 | Duelo → Aullido de Manada | Palacio del Alba |
+| `madre_alba` | Madre del Alba | 80 | 56000 | Ilusión → Día y Noche → Eterno Retorno (tras la muerte falsa) | Trono del Alba Eterna |

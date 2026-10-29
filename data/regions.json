@@ -102,6 +102,20 @@
     "title": "Guardián del primer umbral"
    },
    "bg": "linear-gradient(180deg,#d8e0f4,#8a98c0 60%,#3a4268)"
+  },
+  {
+   "id": "corazon",
+   "order": 8,
+   "name": "Corazón del Alba",
+   "tagline": "El alba que no termina de empezar.",
+   "difficulty": 8,
+   "sanctuaries": 5,
+   "boss": {
+    "id": "aurora_detenida",
+    "name": "La Aurora Detenida",
+    "title": "Guardiana del primer amanecer"
+   },
+   "bg": "linear-gradient(180deg,#ffd8e0,#e898a8 60%,#6a3858)"
   }
  ]
 }

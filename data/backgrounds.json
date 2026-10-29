@@ -149,6 +149,32 @@
   "linear-gradient(180deg,#fffaf0,#d8d0e8 55%,#05050a)": "palacio_luz",
   "linear-gradient(180deg,#ffffff,#e8e8f8 55%,#05050a)": "santuario_dama",
   "linear-gradient(180deg,#fff4e0,#d0b898 55%,#05050a)": "recuerdo_sombra",
+  "linear-gradient(180deg,#ffe8e0,#e8a890 55%,#05050a)": "llegada_alba",
+  "linear-gradient(180deg,#fff0e8,#e8b8a0 55%,#05050a)": "sendero_rocio",
+  "linear-gradient(180deg,#fff4e0,#d8a878 55%,#05050a)": "refugio_despiertos",
+  "linear-gradient(180deg,#ffe0e8,#c88898 55%,#05050a)": "bosque_madrugadas",
+  "linear-gradient(180deg,#f0f8e0,#98b878 55%,#05050a)": "jardin_semillas",
+  "linear-gradient(180deg,#f0fff8,#a8d8c8 55%,#05050a)": "santuario_rocio",
+  "linear-gradient(180deg,#4a3820,#201408 55%,#05050a)": "cueva_nidos",
+  "linear-gradient(180deg,#fff0d0,#e8b868 55%,#05050a)": "lago_primera_luz",
+  "linear-gradient(180deg,#ffe8c8,#c8985a 55%,#05050a)": "campanario_gallo",
+  "linear-gradient(180deg,#ffe0f0,#d898b8 55%,#05050a)": "santuario_aurora",
+  "linear-gradient(180deg,#fff8e8,#e8c898 55%,#05050a)": "recuerdo_alba",
+  "linear-gradient(180deg,#fff0c0,#e0a830 55%,#05050a)": "campos_oro",
+  "linear-gradient(180deg,#ffe8c8,#b87838 55%,#05050a)": "posada_rayo",
+  "linear-gradient(180deg,#ffe8a0,#c89820 55%,#05050a)": "rio_miel",
+  "linear-gradient(180deg,#ffe0e0,#c88898 55%,#05050a)": "templo_horas",
+  "linear-gradient(180deg,#fff0c0,#e8a040 55%,#05050a)": "santuario_tarde",
+  "linear-gradient(180deg,#403018,#180e04 55%,#05050a)": "granero_sin_fondo",
+  "linear-gradient(180deg,#ffd8b0,#d87848 55%,#05050a)": "mirador_atardecer",
+  "linear-gradient(180deg,#e8c0d8,#7a4878 55%,#05050a)": "santuario_crepusculo",
+  "linear-gradient(180deg,#ffe8d8,#c89890 55%,#05050a)": "recuerdo_hija",
+  "linear-gradient(180deg,#e8d8f8,#a888c8 55%,#05050a)": "escalinata_alba",
+  "linear-gradient(180deg,#fff0f8,#c898d0 55%,#05050a)": "salon_espejos",
+  "linear-gradient(180deg,#fff8e8,#d8b898 55%,#05050a)": "camara_recuerdos",
+  "linear-gradient(180deg,#fff0d0,#e8b878 55%,#05050a)": "palacio_alba",
+  "linear-gradient(180deg,#ffffff,#ffd8a0 55%,#05050a)": "santuario_trono",
+  "linear-gradient(180deg,#ffe0c0,#6a4878 55%,#05050a)": "fin_alba",
   "linear-gradient(180deg,#3a0f14,#8a2a2a 55%,#1a0508)": "prologue_rebelion",
   "linear-gradient(180deg,#1a1020,#3a1a30 55%,#0a0610)": "prologue_noche"
  },
@@ -889,6 +915,136 @@
    "group": "Escenas de historia"
   },
   {
+   "id": "llegada_alba",
+   "label": "Llegada al Corazón del Alba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "sendero_rocio",
+   "label": "Sendero del Rocío",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "refugio_despiertos",
+   "label": "Refugio de los Despiertos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "bosque_madrugadas",
+   "label": "Bosque de las Madrugadas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "jardin_semillas",
+   "label": "Jardín de las Semillas Dormidas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_rocio",
+   "label": "Santuario del Primer Rocío",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "cueva_nidos",
+   "label": "Cueva de los Nidos Dorados",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "lago_primera_luz",
+   "label": "Lago de la Primera Luz",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "campanario_gallo",
+   "label": "Campanario del Gallo Eterno",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_aurora",
+   "label": "Santuario de la Aurora Detenida",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_alba",
+   "label": "Recuerdo del primer amanecer",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "campos_oro",
+   "label": "Campos de Trigo de Oro",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "posada_rayo",
+   "label": "Posada del Último Rayo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "rio_miel",
+   "label": "Río de Miel",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "templo_horas",
+   "label": "Templo de las Horas Rosadas",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_tarde",
+   "label": "Santuario de la Tarde Dorada",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "granero_sin_fondo",
+   "label": "Granero sin Fondo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "mirador_atardecer",
+   "label": "Mirador del Atardecer",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_crepusculo",
+   "label": "Santuario del Crepúsculo",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "recuerdo_hija",
+   "label": "Recuerdo de una niña que se marcha",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "escalinata_alba",
+   "label": "Escalinata del Alba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "salon_espejos",
+   "label": "Salón de los Mil Espejos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "camara_recuerdos",
+   "label": "Cámara de los Recuerdos",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "palacio_alba",
+   "label": "Palacio del Alba",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "santuario_trono",
+   "label": "Trono del Alba Eterna",
+   "group": "Escenas de historia"
+  },
+  {
+   "id": "fin_alba",
+   "label": "El alba, por fin, se mueve",
+   "group": "Escenas de historia"
+  },
+  {
    "id": "prologue_rebelion",
    "label": "Prólogo: la rebelión de Tsukimori",
    "group": "Escenas de historia"
@@ -936,6 +1092,11 @@
   {
    "id": "mapa_ciudadluz",
    "label": "Mapa de Ciudad de Luz sin Reloj",
+   "group": "Mapas de región"
+  },
+  {
+   "id": "mapa_corazon",
+   "label": "Mapa de Corazón del Alba",
    "group": "Mapas de región"
   },
   {
@@ -2140,7 +2301,7 @@
   },
   {
    "id": "lugar_horizonte_luz",
-   "label": "Tarjeta de entrada/pueblo: Corazón de la Ciudad",
+   "label": "Tarjeta de entrada/pueblo: Horizonte del Alba",
    "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
   },
   {
@@ -2261,6 +2422,196 @@
   {
    "id": "combate_santuario_l5",
    "label": "Combates en: Santuario de la Dama de la Luz",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_corazon",
+   "label": "Combates en Corazón del Alba (por defecto)",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_puerta_alba",
+   "label": "Tarjeta de entrada/pueblo: Puerta del Alba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_sendero_rocio",
+   "label": "Combates en: Sendero del Rocío",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_refugio_despiertos",
+   "label": "Tarjeta de entrada/pueblo: Refugio de los Despiertos",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_bosque_madrugadas",
+   "label": "Combates en: Bosque de las Madrugadas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_jardin_semillas",
+   "label": "Tarjeta de entrada/pueblo: Jardín de las Semillas Dormidas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_jardin_semillas",
+   "label": "Combates en: Jardín de las Semillas Dormidas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a1",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Primer Rocío",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a1",
+   "label": "Combates en: Santuario del Primer Rocío",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_cueva_nidos",
+   "label": "Tarjeta de entrada/pueblo: Cueva de los Nidos Dorados",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_cueva_nidos",
+   "label": "Combates en: Cueva de los Nidos Dorados",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_lago_primera_luz",
+   "label": "Combates en: Lago de la Primera Luz",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_campanario_gallo",
+   "label": "Tarjeta de entrada/pueblo: Campanario del Gallo Eterno",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_campanario_gallo",
+   "label": "Combates en: Campanario del Gallo Eterno",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a2",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Aurora Detenida",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a2",
+   "label": "Combates en: Santuario de la Aurora Detenida",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_campos_oro",
+   "label": "Combates en: Campos de Trigo de Oro",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_posada_rayo",
+   "label": "Tarjeta de entrada/pueblo: Posada del Último Rayo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_rio_miel",
+   "label": "Combates en: Río de Miel",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_templo_horas",
+   "label": "Tarjeta de entrada/pueblo: Templo de las Horas Rosadas",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_templo_horas",
+   "label": "Combates en: Templo de las Horas Rosadas",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a3",
+   "label": "Tarjeta de entrada/pueblo: Santuario de la Tarde Dorada",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a3",
+   "label": "Combates en: Santuario de la Tarde Dorada",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_granero_sin_fondo",
+   "label": "Tarjeta de entrada/pueblo: Granero sin Fondo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_granero_sin_fondo",
+   "label": "Combates en: Granero sin Fondo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_mirador_atardecer",
+   "label": "Tarjeta de entrada/pueblo: Mirador del Atardecer",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_mirador_atardecer",
+   "label": "Combates en: Mirador del Atardecer",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a4",
+   "label": "Tarjeta de entrada/pueblo: Santuario del Crepúsculo",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a4",
+   "label": "Combates en: Santuario del Crepúsculo",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "combate_horizonte_alba",
+   "label": "Combates en: Escalinata del Alba",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_salon_espejos",
+   "label": "Tarjeta de entrada/pueblo: Salón de los Mil Espejos",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_salon_espejos",
+   "label": "Combates en: Salón de los Mil Espejos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_camara_recuerdos",
+   "label": "Tarjeta de entrada/pueblo: Cámara de los Recuerdos",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_camara_recuerdos",
+   "label": "Combates en: Cámara de los Recuerdos",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_palacio_alba",
+   "label": "Tarjeta de entrada/pueblo: Palacio del Alba",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_palacio_alba",
+   "label": "Combates en: Palacio del Alba",
+   "group": "Fondos de combate"
+  },
+  {
+   "id": "lugar_santuario_a5",
+   "label": "Tarjeta de entrada/pueblo: Trono del Alba Eterna",
+   "group": "Lugares (tarjeta de entrada, pueblo, mazmorra)"
+  },
+  {
+   "id": "combate_santuario_a5",
+   "label": "Combates en: Trono del Alba Eterna",
    "group": "Fondos de combate"
   },
   {

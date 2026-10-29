@@ -3326,6 +3326,774 @@
     "atk_up": 3
    },
    "desc": "La canción que Shirayuki cantó antes de olvidar su nombre."
+  },
+  {
+   "id": "amanecer_de_acero",
+   "name": "Amanecer de Acero",
+   "type": "attack",
+   "element": "fisico",
+   "power": 320,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "def_down": 6,
+    "crit_up": 0.45
+   },
+   "desc": "Un tajo que abre el día en dos."
+  },
+  {
+   "id": "voluntad_del_alba",
+   "name": "Voluntad del Alba",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 54,
+   "target": "party",
+   "effect": {
+    "atk_up": 6,
+    "def_up": 5,
+    "spd_up": 4
+   },
+   "desc": "Una voluntad que sale con el sol, firme y sin pausa."
+  },
+  {
+   "id": "llama_del_primer_rayo",
+   "name": "Llama del Primer Rayo",
+   "type": "attack",
+   "element": "fuego",
+   "power": 315,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 5
+   },
+   "desc": "Una llama dorada del primer rayo de la mañana."
+  },
+  {
+   "id": "amanecer_incandescente",
+   "name": "Amanecer Incandescente",
+   "type": "attack",
+   "element": "fuego",
+   "power": 265,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 3
+   },
+   "desc": "Un amanecer que arde sobre todo el campo."
+  },
+  {
+   "id": "rocio_helado",
+   "name": "Rocío Helado",
+   "type": "attack",
+   "element": "hielo",
+   "power": 315,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 5
+   },
+   "desc": "Gotas de rocío que se congelan al caer."
+  },
+  {
+   "id": "escarcha_de_madrugada",
+   "name": "Escarcha de Madrugada",
+   "type": "attack",
+   "element": "hielo",
+   "power": 265,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 1.0,
+    "freeze": 0.6,
+    "def_down": 3
+   },
+   "desc": "Una escarcha de madrugada sobre todos."
+  },
+  {
+   "id": "trueno_del_despertar",
+   "name": "Trueno del Despertar",
+   "type": "attack",
+   "element": "rayo",
+   "power": 320,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.75,
+    "stun": 0.6
+   },
+   "desc": "Un trueno que despierta incluso a lo dormido."
+  },
+  {
+   "id": "tormenta_de_aurora",
+   "name": "Tormenta de Aurora",
+   "type": "attack",
+   "element": "rayo",
+   "power": 265,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "stun": 0.6,
+    "crit_up": 0.5
+   },
+   "desc": "Una tormenta teñida de rosa y oro."
+  },
+  {
+   "id": "polvo_de_estrellas_dormidas",
+   "name": "Polvo de Estrellas Dormidas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 270,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "ignore_def": 0.85,
+    "def_down": 4
+   },
+   "desc": "Estrellas que no llegaron a apagarse caen como polvo."
+  },
+  {
+   "id": "bendicion_de_la_aurora",
+   "name": "Bendición de la Aurora",
+   "type": "heal",
+   "element": "arcano",
+   "power": 225,
+   "mpCost": 60,
+   "target": "party",
+   "effect": {
+    "regen": 11,
+    "def_up": 4
+   },
+   "desc": "Una bendición rosa y dorada que cura sin pausa."
+  },
+  {
+   "id": "filo_de_la_primera_luz",
+   "name": "Filo de la Primera Luz",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 320,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.7,
+    "ignore_def": 0.75
+   },
+   "desc": "Un filo que corta con la primera luz."
+  },
+  {
+   "id": "danza_del_amanecer",
+   "name": "Danza del Amanecer",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 270,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.6,
+    "def_down": 4
+   },
+   "desc": "Una danza de acero y luz rosada."
+  },
+  {
+   "id": "palma_del_despertar",
+   "name": "Palma del Despertar",
+   "type": "attack",
+   "element": "arcano",
+   "power": 320,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.75,
+    "ignore_def": 0.75
+   },
+   "desc": "Una palma que despierta el punto débil del rival."
+  },
+  {
+   "id": "calma_del_alba",
+   "name": "Calma del Alba",
+   "type": "heal",
+   "element": "arcano",
+   "power": 225,
+   "mpCost": 58,
+   "target": "party",
+   "effect": {
+    "regen": 11,
+    "def_up": 5
+   },
+   "desc": "La calma de la hora en que todo empieza."
+  },
+  {
+   "id": "bala_del_primer_rayo",
+   "name": "Bala del Primer Rayo",
+   "type": "attack",
+   "element": "arcano",
+   "power": 325,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 0.95,
+    "crit_up": 0.75
+   },
+   "desc": "Una bala que viaja con el primer rayo del día."
+  },
+  {
+   "id": "salva_de_aurora",
+   "name": "Salva de Aurora",
+   "type": "attack",
+   "element": "arcano",
+   "power": 270,
+   "mpCost": 62,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.6,
+    "def_down": 3
+   },
+   "desc": "Una salva de disparos rosados y dorados."
+  },
+  {
+   "id": "zarpa_de_aurora",
+   "name": "Zarpa de Aurora",
+   "type": "attack",
+   "element": "hielo",
+   "power": 320,
+   "mpCost": 56,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 6,
+    "crit_up": 0.3
+   },
+   "desc": "Una zarpa blanca teñida del primer rosa del día."
+  },
+  {
+   "id": "aullido_del_primer_dia",
+   "name": "Aullido del Primer Día",
+   "type": "heal",
+   "element": "hielo",
+   "power": 225,
+   "mpCost": 60,
+   "target": "party",
+   "effect": {
+    "regen": 11,
+    "def_up": 4,
+    "atk_up": 3
+   },
+   "desc": "Un aullido que da la bienvenida al primer día."
+  },
+  {
+   "id": "siega_de_la_tarde",
+   "name": "Siega de la Tarde",
+   "type": "attack",
+   "element": "fisico",
+   "power": 330,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "def_down": 6,
+    "crit_up": 0.5
+   },
+   "desc": "Un tajo ancho como una hoz dorada."
+  },
+  {
+   "id": "temple_del_crepusculo",
+   "name": "Temple del Crepúsculo",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 56,
+   "target": "party",
+   "effect": {
+    "atk_up": 6,
+    "def_up": 6,
+    "spd_up": 4
+   },
+   "desc": "Un temple que se enfría despacio y no se rompe."
+  },
+  {
+   "id": "brasa_de_la_tarde",
+   "name": "Brasa de la Tarde",
+   "type": "attack",
+   "element": "fuego",
+   "power": 325,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 6
+   },
+   "desc": "Una brasa que arde más al caer la tarde."
+  },
+  {
+   "id": "incendio_de_ocaso",
+   "name": "Incendio de Ocaso",
+   "type": "attack",
+   "element": "fuego",
+   "power": 275,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 4
+   },
+   "desc": "Un ocaso que incendia todo el campo."
+  },
+  {
+   "id": "rocio_de_vispera",
+   "name": "Rocío de Víspera",
+   "type": "attack",
+   "element": "hielo",
+   "power": 325,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 6
+   },
+   "desc": "Un rocío frío que anuncia la noche."
+  },
+  {
+   "id": "helada_de_anochecer",
+   "name": "Helada de Anochecer",
+   "type": "attack",
+   "element": "hielo",
+   "power": 275,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 1.0,
+    "freeze": 0.65,
+    "def_down": 4
+   },
+   "desc": "Una helada que cae al atardecer sobre todos."
+  },
+  {
+   "id": "trueno_de_ultima_hora",
+   "name": "Trueno de Última Hora",
+   "type": "attack",
+   "element": "rayo",
+   "power": 330,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.8,
+    "stun": 0.65
+   },
+   "desc": "Un trueno que cierra el día."
+  },
+  {
+   "id": "tormenta_de_vispera",
+   "name": "Tormenta de Víspera",
+   "type": "attack",
+   "element": "rayo",
+   "power": 275,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "stun": 0.65,
+    "crit_up": 0.55
+   },
+   "desc": "Una tormenta de verano que llega justo antes de la noche."
+  },
+  {
+   "id": "luciernagas_de_estrellas",
+   "name": "Luciérnagas de Estrellas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 280,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "ignore_def": 0.9,
+    "def_down": 5
+   },
+   "desc": "Luciérnagas que son estrellas con prisa."
+  },
+  {
+   "id": "bendicion_del_ocaso",
+   "name": "Bendición del Ocaso",
+   "type": "heal",
+   "element": "arcano",
+   "power": 235,
+   "mpCost": 62,
+   "target": "party",
+   "effect": {
+    "regen": 12,
+    "def_up": 5
+   },
+   "desc": "Una bendición cálida de despedida."
+  },
+  {
+   "id": "filo_del_atardecer",
+   "name": "Filo del Atardecer",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 330,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.75,
+    "ignore_def": 0.8
+   },
+   "desc": "Un filo naranja que corta con la última luz."
+  },
+  {
+   "id": "danza_de_las_espigas",
+   "name": "Danza de las Espigas",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 280,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.65,
+    "def_down": 5
+   },
+   "desc": "Una danza entre el trigo con filos que brillan."
+  },
+  {
+   "id": "palma_de_la_tarde",
+   "name": "Palma de la Tarde",
+   "type": "attack",
+   "element": "arcano",
+   "power": 330,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.8,
+    "ignore_def": 0.8
+   },
+   "desc": "Una palma lenta y pesada como el sol poniente."
+  },
+  {
+   "id": "calma_del_crepusculo",
+   "name": "Calma del Crepúsculo",
+   "type": "heal",
+   "element": "arcano",
+   "power": 235,
+   "mpCost": 60,
+   "target": "party",
+   "effect": {
+    "regen": 12,
+    "def_up": 6
+   },
+   "desc": "La calma de la hora en que todo se aquieta."
+  },
+  {
+   "id": "bala_de_ultima_luz",
+   "name": "Bala de Última Luz",
+   "type": "attack",
+   "element": "arcano",
+   "power": 335,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 1.0,
+    "crit_up": 0.8
+   },
+   "desc": "La última luz del día concentrada en un disparo."
+  },
+  {
+   "id": "salva_de_ocaso",
+   "name": "Salva de Ocaso",
+   "type": "attack",
+   "element": "arcano",
+   "power": 280,
+   "mpCost": 64,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.65,
+    "def_down": 4
+   },
+   "desc": "Una salva anaranjada que desgarra el ocaso."
+  },
+  {
+   "id": "zarpa_del_ocaso",
+   "name": "Zarpa del Ocaso",
+   "type": "attack",
+   "element": "hielo",
+   "power": 330,
+   "mpCost": 58,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 6,
+    "crit_up": 0.35
+   },
+   "desc": "Una zarpa blanca teñida del color del ocaso."
+  },
+  {
+   "id": "aullido_de_la_tarde",
+   "name": "Aullido de la Tarde",
+   "type": "heal",
+   "element": "hielo",
+   "power": 235,
+   "mpCost": 62,
+   "target": "party",
+   "effect": {
+    "regen": 12,
+    "def_up": 5,
+    "atk_up": 4
+   },
+   "desc": "Un aullido largo que despide el día y llama a la noche."
+  },
+  {
+   "id": "espada_del_alba_eterna",
+   "name": "Espada del Alba Eterna",
+   "type": "attack",
+   "element": "fisico",
+   "power": 340,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "def_down": 7,
+    "crit_up": 0.55
+   },
+   "desc": "Un tajo con la luz del primer día y la dureza de todos los demás."
+  },
+  {
+   "id": "corazon_de_titan",
+   "name": "Corazón de Titán",
+   "type": "buff",
+   "element": "fisico",
+   "power": 0,
+   "mpCost": 58,
+   "target": "party",
+   "effect": {
+    "atk_up": 7,
+    "def_up": 7,
+    "spd_up": 5
+   },
+   "desc": "Un corazón que no se rinde y se lo pasa a todos."
+  },
+  {
+   "id": "sol_recien_nacido",
+   "name": "Sol Recién Nacido",
+   "type": "attack",
+   "element": "fuego",
+   "power": 335,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 7
+   },
+   "desc": "Un sol que nace en la punta de los dedos."
+  },
+  {
+   "id": "llamarada_del_alba_eterna",
+   "name": "Llamarada del Alba Eterna",
+   "type": "attack",
+   "element": "fuego",
+   "power": 285,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "burn": 1.0,
+    "def_down": 5
+   },
+   "desc": "Una llamarada que nunca se apaga sobre todos."
+  },
+  {
+   "id": "lagrima_de_la_madre",
+   "name": "Lágrima de la Madre",
+   "type": "attack",
+   "element": "hielo",
+   "power": 335,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 7
+   },
+   "desc": "Una lágrima helada que cae con todo el peso del tiempo."
+  },
+  {
+   "id": "noche_estrellada",
+   "name": "Noche Estrellada",
+   "type": "attack",
+   "element": "hielo",
+   "power": 285,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "slow": 1.0,
+    "freeze": 0.7,
+    "def_down": 5
+   },
+   "desc": "Una noche entera con todas sus estrellas, helada."
+  },
+  {
+   "id": "trueno_del_corazon",
+   "name": "Trueno del Corazón",
+   "type": "attack",
+   "element": "rayo",
+   "power": 340,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.85,
+    "stun": 0.7
+   },
+   "desc": "Un trueno que sale directamente del pecho."
+  },
+  {
+   "id": "tempestad_del_alba",
+   "name": "Tempestad del Alba",
+   "type": "attack",
+   "element": "rayo",
+   "power": 285,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "stun": 0.7,
+    "crit_up": 0.6
+   },
+   "desc": "Una tempestad que despierta a todo el cielo."
+  },
+  {
+   "id": "nombre_de_todas_las_estrellas",
+   "name": "Nombre de Todas las Estrellas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 290,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "ignore_def": 0.95,
+    "def_down": 6
+   },
+   "desc": "Cada estrella pronuncia su nombre sobre el enemigo."
+  },
+  {
+   "id": "abrazo_de_la_noche_y_el_dia",
+   "name": "Abrazo de la Noche y el Día",
+   "type": "heal",
+   "element": "arcano",
+   "power": 245,
+   "mpCost": 64,
+   "target": "party",
+   "effect": {
+    "regen": 13,
+    "def_up": 6
+   },
+   "desc": "Un abrazo que reúne lo que nunca debió separarse."
+  },
+  {
+   "id": "filo_de_la_madre_y_la_hija",
+   "name": "Filo de la Madre y la Hija",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 340,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "crit_up": 0.8,
+    "ignore_def": 0.85
+   },
+   "desc": "Un filo que lleva dos nombres y una misma luz."
+  },
+  {
+   "id": "danza_del_dia_y_la_noche",
+   "name": "Danza del Día y la Noche",
+   "type": "attack",
+   "element": "imbuido",
+   "power": 290,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.7,
+    "def_down": 6
+   },
+   "desc": "Una danza entre dos luces."
+  },
+  {
+   "id": "palma_del_alba_eterna",
+   "name": "Palma del Alba Eterna",
+   "type": "attack",
+   "element": "arcano",
+   "power": 340,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "stun": 0.85,
+    "ignore_def": 0.85
+   },
+   "desc": "Una palma con el peso de todas las mañanas."
+  },
+  {
+   "id": "calma_del_dia_que_vuelve",
+   "name": "Calma del Día que Vuelve",
+   "type": "heal",
+   "element": "arcano",
+   "power": 245,
+   "mpCost": 62,
+   "target": "party",
+   "effect": {
+    "regen": 13,
+    "def_up": 7
+   },
+   "desc": "La calma de saber que mañana también amanece."
+  },
+  {
+   "id": "bala_del_alba_eterna",
+   "name": "Bala del Alba Eterna",
+   "type": "attack",
+   "element": "arcano",
+   "power": 345,
+   "mpCost": 62,
+   "target": "enemy",
+   "effect": {
+    "ignore_def": 1.0,
+    "crit_up": 0.85
+   },
+   "desc": "Una bala hecha de un amanecer entero."
+  },
+  {
+   "id": "salva_de_todas_las_estrellas",
+   "name": "Salva de Todas las Estrellas",
+   "type": "attack",
+   "element": "arcano",
+   "power": 290,
+   "mpCost": 66,
+   "target": "all_enemies",
+   "effect": {
+    "crit_up": 0.7,
+    "def_down": 5
+   },
+   "desc": "Una salva que ilumina el cielo entero."
+  },
+  {
+   "id": "zarpa_de_la_nieta_del_alba",
+   "name": "Zarpa de la Nieta del Alba",
+   "type": "attack",
+   "element": "hielo",
+   "power": 340,
+   "mpCost": 60,
+   "target": "enemy",
+   "effect": {
+    "freeze": 1.0,
+    "def_down": 7,
+    "crit_up": 0.4
+   },
+   "desc": "La zarpa de quien por fin sabe de dónde viene."
+  },
+  {
+   "id": "aullido_de_la_familia",
+   "name": "Aullido de la Familia",
+   "type": "heal",
+   "element": "hielo",
+   "power": 245,
+   "mpCost": 64,
+   "target": "party",
+   "effect": {
+    "regen": 13,
+    "def_up": 6,
+    "atk_up": 5
+   },
+   "desc": "Un aullido que llama a todos los que quedaron atrás."
   }
  ]
 }

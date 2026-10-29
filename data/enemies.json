@@ -11008,6 +11008,1665 @@
     "every": 3,
     "chargeText": "¡La sentencia del mediodía cae sobre todos!"
    }
+  },
+  "brote_alba": {
+   "name": "Brote del Alba",
+   "emoji": "🌱",
+   "color": "#a8d878",
+   "level": 71,
+   "hp": 9400,
+   "atk": 306,
+   "def": 188,
+   "mag": 170,
+   "spd": 66,
+   "xp": 1550,
+   "gold": 355,
+   "skills": [
+    {
+     "name": "Zarcillo",
+     "power": 204,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Polen Dorado",
+     "power": 156,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Un brote que se abre con la primera luz y no deja de crecer hasta atrapar algo. Sus raíces buscan calor.",
+   "weak": [
+    "fuego",
+    "hielo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "dodgeBonus": 0.06
+  },
+  "rocio_vivo": {
+   "name": "Rocío Vivo",
+   "emoji": "💧",
+   "color": "#c8f0f0",
+   "level": 72,
+   "hp": 7600,
+   "atk": 210,
+   "def": 156,
+   "mag": 284,
+   "spd": 76,
+   "xp": 1577,
+   "gold": 360,
+   "skills": [
+    {
+     "name": "Golpe de Gota",
+     "power": 200,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Aspersión",
+     "power": 158,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Una gota enorme que se desplaza por el suelo y refleja un amanecer que no está en el cielo.",
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "dodgeBonus": 0.07
+  },
+  "alondra_aurora": {
+   "name": "Alondra de la Aurora",
+   "emoji": "🐦",
+   "color": "#ffd8e0",
+   "level": 73,
+   "hp": 6800,
+   "atk": 250,
+   "def": 142,
+   "mag": 300,
+   "spd": 92,
+   "xp": 1605,
+   "gold": 365,
+   "skills": [
+    {
+     "name": "Pico Rosado",
+     "power": 202,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Canto de Aurora",
+     "power": 160,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Un pájaro rosa que canta antes de que amanezca. Si no la haces callar, tampoco amanece.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "dodgeBonus": 0.11,
+   "loot": [
+    {
+     "item": "pluma_de_alba",
+     "chance": 0.35
+    }
+   ]
+  },
+  "sonambulo_alba": {
+   "name": "Sonámbulo del Alba",
+   "emoji": "🥱",
+   "color": "#e8d0f0",
+   "level": 74,
+   "hp": 12800,
+   "atk": 318,
+   "def": 246,
+   "mag": 130,
+   "spd": 26,
+   "xp": 1632,
+   "gold": 370,
+   "skills": [
+    {
+     "name": "Puño Lento",
+     "power": 212,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Bostezo",
+     "power": 162,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Un caminante que no ha despertado del todo. Todo lo que toca queda un poco más dormido.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "fisico",
+    "hielo"
+   ]
+  },
+  "jardinero": {
+   "name": "El Jardinero de las Semillas Dormidas",
+   "emoji": "🌹",
+   "color": "#a8c878",
+   "level": 71,
+   "hp": 27000,
+   "atk": 270,
+   "def": 184,
+   "mag": 226,
+   "spd": 58,
+   "xp": 6199,
+   "gold": 994,
+   "skills": [
+    {
+     "name": "Tijera de Podar",
+     "power": 212,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Lluvia de Espinas",
+     "power": 162,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Poda Total",
+     "power": 320,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Jardinero abre las enormes tijeras! ¡Va a podar a alguien de raíz!"
+    }
+   ],
+   "desc": "Cuida desde hace siglos un jardín de semillas que nunca germinan. Corta sin piedad lo que crece demasiado deprisa.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "rosal",
+   "enrageAbility": "regeneracion",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.55
+    },
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.08
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Jardinero tira las tijeras! Las rosas del jardín florecen todas a la vez."
+   },
+   "ultimate": {
+    "name": "Gran Poda",
+    "power": 256,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todo el jardín se marchita de golpe!"
+   }
+  },
+  "nodriza_rocio": {
+   "name": "La Nodriza del Rocío",
+   "emoji": "🫧",
+   "color": "#a8e0d8",
+   "level": 72,
+   "hp": 24000,
+   "atk": 290,
+   "def": 188,
+   "mag": 232,
+   "spd": 60,
+   "xp": 6309,
+   "gold": 1008,
+   "skills": [
+    {
+     "name": "Chorro de Rocío",
+     "power": 214,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Niebla Nodriza",
+     "power": 164,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Torrente Nutricio",
+     "power": 324,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡La Nodriza reúne todo el rocío del santuario! ¡Cae de golpe!"
+    }
+   ],
+   "desc": "Alimenta con rocío a las semillas dormidas. Cuando una se apaga, aprovecha lo que quedaba.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "cosecha",
+   "enrageAbility": "plegaria",
+   "loot": [
+    {
+     "item": "@a:divine:8",
+     "chance": 0.55
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.08
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Nodriza se desborda! El rocío del santuario sube hasta los tobillos."
+   },
+   "ultimate": {
+    "name": "Inundación de Rocío",
+    "power": 260,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Una marea de rocío cubre el santuario!"
+   }
+  },
+  "gallo_dorado": {
+   "name": "El Gallo Dorado",
+   "emoji": "🐓",
+   "color": "#f8d878",
+   "level": 72,
+   "hp": 50000,
+   "atk": 292,
+   "def": 180,
+   "mag": 200,
+   "spd": 64,
+   "xp": 6309,
+   "gold": 1008,
+   "skills": [
+    {
+     "name": "Espolón",
+     "power": 212,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Aleteo",
+     "power": 160,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Picotazo Dorado",
+     "power": 320,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Gallo Dorado eriza las plumas! ¡Va a clavar el pico!"
+    }
+   ],
+   "desc": "Un gallo del tamaño de un caballo que guarda los nidos de la cueva. Su cresta es de oro y sus espolones, de verdad.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "oscuro"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "regeneracion",
+   "enrageAbility": "panico",
+   "loot": [
+    {
+     "item": "@x:divine:8",
+     "chance": 0.6
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Gallo Dorado canta con todas sus fuerzas! Todo el nido tiembla."
+   },
+   "ultimate": {
+    "name": "Canto del Gallo",
+    "power": 252,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El canto del Gallo sacude toda la cueva!"
+   }
+  },
+  "campanero": {
+   "name": "El Campanero del Alba",
+   "emoji": "🔔",
+   "color": "#e8c880",
+   "level": 73,
+   "hp": 38000,
+   "atk": 296,
+   "def": 194,
+   "mag": 246,
+   "spd": 62,
+   "xp": 6419,
+   "gold": 1022,
+   "skills": [
+    {
+     "name": "Campanazo",
+     "power": 216,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Eco de Bronce",
+     "power": 166,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Toque a Rebato",
+     "power": 326,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El Campanero tira de la cuerda con las dos manos! ¡Va a sonar la gran campana!"
+    }
+   ],
+   "desc": "Toca la campana del campanario desde antes de que existiera el tiempo. Le da miedo que la campana pare y llegue la noche.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "bruma",
+   "enrageAbility": "intimidacion",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@x:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.08
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Campanero se cuelga de la campana! Cada campanada hace temblar el campanario."
+   },
+   "ultimate": {
+    "name": "Rebato del Alba",
+    "power": 264,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todas las campanas del alba suenan a la vez!"
+   }
+  },
+  "aurora_detenida": {
+   "name": "La Aurora Detenida",
+   "emoji": "🌅",
+   "color": "#ffc8e0",
+   "level": 74,
+   "hp": 50000,
+   "atk": 298,
+   "def": 198,
+   "mag": 270,
+   "spd": 66,
+   "xp": 6529,
+   "gold": 1036,
+   "skills": [
+    {
+     "name": "Rayo Rosado",
+     "power": 220,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Alba sobre el Campo",
+     "power": 168,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Nube de Oro",
+     "power": 200,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Juicio de la Aurora",
+     "power": 334,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡La Aurora abre los brazos! ¡La luz sale de golpe, y es toda de una vez!"
+    }
+   ],
+   "desc": "El primer amanecer del mundo, preso en una mujer de luz rosada. Ni se mueve ni se apaga: espera a que alguien le deje pasar a la mañana.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "arcano",
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "centella",
+   "enrageAbility": "plegaria",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.12
+    },
+    {
+     "item": "rocio_eterno",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Aurora se parte en mil rayos! Ya no espera: avanza."
+   },
+   "ultimate": {
+    "name": "Primer Amanecer",
+    "power": 272,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El primer amanecer del mundo cae sobre vosotros!"
+   }
+  },
+  "espiga_viva": {
+   "name": "Espiga Viva",
+   "emoji": "🌾",
+   "color": "#e8c860",
+   "level": 75,
+   "hp": 10200,
+   "atk": 320,
+   "def": 196,
+   "mag": 178,
+   "spd": 68,
+   "xp": 1660,
+   "gold": 375,
+   "skills": [
+    {
+     "name": "Latigazo de Paja",
+     "power": 212,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Polvo de Grano",
+     "power": 164,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una espiga de trigo de oro que camina sobre sus raíces. Se mece como si hubiera siempre viento.",
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "dodgeBonus": 0.06
+  },
+  "cuervo_atardecer": {
+   "name": "Cuervo del Atardecer",
+   "emoji": "🐦‍⬛",
+   "color": "#684868",
+   "level": 76,
+   "hp": 8400,
+   "atk": 226,
+   "def": 166,
+   "mag": 300,
+   "spd": 88,
+   "xp": 1688,
+   "gold": 380,
+   "skills": [
+    {
+     "name": "Picotazo Sombrío",
+     "power": 210,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Graznido",
+     "power": 166,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Un cuervo grande y de plumas con reflejos naranjas. Aparece cuando el sol se pone y se queda hasta que alguien se duerme.",
+   "weak": [
+    "rayo",
+    "fuego"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "dodgeBonus": 0.11
+  },
+  "luciernaga_gigante": {
+   "name": "Luciérnaga Gigante",
+   "emoji": "🪲",
+   "color": "#f8f0a0",
+   "level": 77,
+   "hp": 7600,
+   "atk": 262,
+   "def": 150,
+   "mag": 318,
+   "spd": 94,
+   "xp": 1715,
+   "gold": 385,
+   "skills": [
+    {
+     "name": "Destello",
+     "power": 212,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Luz de Guía",
+     "power": 168,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Una luciérnaga del tamaño de un perro. Su luz sirve para encontrar el camino, pero también para que otros te encuentren.",
+   "weak": [
+    "hielo",
+    "oscuro"
+   ],
+   "dodgeBonus": 0.1,
+   "loot": [
+    {
+     "item": "grano_de_luz",
+     "chance": 0.35
+    }
+   ]
+  },
+  "sombra_vespertina": {
+   "name": "Sombra Vespertina",
+   "emoji": "🌆",
+   "color": "#7a5878",
+   "level": 78,
+   "hp": 14000,
+   "atk": 334,
+   "def": 262,
+   "mag": 140,
+   "spd": 28,
+   "xp": 1743,
+   "gold": 390,
+   "skills": [
+    {
+     "name": "Zarpazo Largo",
+     "power": 224,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Alargarse",
+     "power": 170,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "La sombra larga que se estira al atardecer. Ya no es de nadie y llega hasta donde llega el día.",
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro",
+    "fisico"
+   ]
+  },
+  "sacerdotisa_horas": {
+   "name": "La Sacerdotisa de las Horas Rosadas",
+   "emoji": "🕯️",
+   "color": "#ffc8d0",
+   "level": 75,
+   "hp": 56000,
+   "atk": 296,
+   "def": 196,
+   "mag": 262,
+   "spd": 62,
+   "xp": 6639,
+   "gold": 1050,
+   "skills": [
+    {
+     "name": "Báculo Rosado",
+     "power": 218,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Oración Colectiva",
+     "power": 168,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Hora Santa",
+     "power": 334,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡La Sacerdotisa empieza una oración muy larga! ¡La hora santa está a punto de cumplirse!"
+    }
+   ],
+   "desc": "Cuida el templo donde se rezan las seis de la mañana desde hace mil años. Cada hora tiene su oración y ninguna puede saltarse.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "latido",
+   "enrageAbility": "panico",
+   "loot": [
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.12
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Sacerdotisa rompe el orden de las oraciones! Reza todas a la vez."
+   },
+   "ultimate": {
+    "name": "Todas las Horas",
+    "power": 268,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Todas las horas rosadas suenan juntas!"
+   }
+  },
+  "segador_luz": {
+   "name": "El Segador de Luz",
+   "emoji": "🌅",
+   "color": "#f0b848",
+   "level": 76,
+   "hp": 66000,
+   "atk": 300,
+   "def": 198,
+   "mag": 250,
+   "spd": 64,
+   "xp": 6750,
+   "gold": 1064,
+   "skills": [
+    {
+     "name": "Hoz Luminosa",
+     "power": 222,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Siega Amplia",
+     "power": 172,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Gran Siega",
+     "power": 340,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Segador levanta la hoz con las dos manos! ¡Va a segar a quien esté más herido!"
+    }
+   ],
+   "desc": "Siega la tarde dorada con una hoz que no es de acero sino de luz. Lo que corta no sangra: se apaga.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "siega",
+   "enrageAbility": "fragilidad",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.55
+    },
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.12
+    },
+    {
+     "item": "espiga_de_oro",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Segador deja caer la hoz y la recoge con rabia! La luz se vuelve roja."
+   },
+   "ultimate": {
+    "name": "Cosecha Final",
+    "power": 272,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Toda la tarde cae como una hoz sobre vosotros!"
+   }
+  },
+  "espantapajaros": {
+   "name": "El Espantapájaros Gigante",
+   "emoji": "🎃",
+   "color": "#c8a848",
+   "level": 76,
+   "hp": 30000,
+   "atk": 304,
+   "def": 190,
+   "mag": 210,
+   "spd": 60,
+   "xp": 6750,
+   "gold": 1064,
+   "skills": [
+    {
+     "name": "Garra de Paja",
+     "power": 218,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Sacudida",
+     "power": 168,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    },
+    {
+     "name": "Cabezazo de Calabaza",
+     "power": 334,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "chargeText": "¡El Espantapájaros echa atrás la calabaza! ¡Va a embestir!"
+    }
+   ],
+   "desc": "Un espantapájaros de cuatro metros que vigila un granero sin fondo. Cuando los cuervos se acercan, se mueve. Cuando nadie mira, también.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro"
+   ],
+   "immune": [
+    "stun",
+    "freeze",
+    "poison"
+   ],
+   "ability": "paja",
+   "enrageAbility": "regeneracion",
+   "loot": [
+    {
+     "item": "@x:divine:8",
+     "chance": 0.6
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.12
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Espantapájaros se parte por la mitad y cada mitad sigue luchando!"
+   },
+   "ultimate": {
+    "name": "Tormenta de Paja",
+    "power": 262,
+    "element": "fisico",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Una tormenta de paja cubre todo el granero!"
+   }
+  },
+  "vigia_crepusculo": {
+   "name": "La Vigía del Crepúsculo",
+   "emoji": "🔭",
+   "color": "#e89860",
+   "level": 77,
+   "hp": 70000,
+   "atk": 298,
+   "def": 196,
+   "mag": 268,
+   "spd": 66,
+   "xp": 6861,
+   "gold": 1078,
+   "skills": [
+    {
+     "name": "Rayo de Poniente",
+     "power": 224,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Luz Larga",
+     "power": 172,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Último Rayo",
+     "power": 342,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡La Vigía alza el catalejo hacia el sol! ¡Concentra el último rayo del día!"
+    }
+   ],
+   "desc": "Vigila desde el mirador cuándo debe empezar la noche. Lleva siglos sin dar la señal.",
+   "boss": true,
+   "weak": [
+    "hielo",
+    "oscuro"
+   ],
+   "resist": [
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "anochecer",
+   "enrageAbility": "intimidacion",
+   "loot": [
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@x:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.12
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Vigía deja caer el catalejo! El sol se esconde de golpe tras las colinas."
+   },
+   "ultimate": {
+    "name": "Señal de Poniente",
+    "power": 274,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La señal del ocaso cae sobre todos!"
+   }
+  },
+  "crepusculo_boss": {
+   "name": "El Señor del Crepúsculo",
+   "emoji": "🌆",
+   "color": "#7a4878",
+   "level": 78,
+   "hp": 56000,
+   "atk": 308,
+   "def": 204,
+   "mag": 282,
+   "spd": 70,
+   "xp": 6973,
+   "gold": 1092,
+   "skills": [
+    {
+     "name": "Manto Violeta",
+     "power": 228,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Sombra Larga",
+     "power": 176,
+     "element": "oscuro",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Rayo Rosado",
+     "power": 208,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 2,
+     "stat": "mag"
+    },
+    {
+     "name": "Fin del Día",
+     "power": 350,
+     "element": "oscuro",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El Crepúsculo abre el manto! ¡Toda la luz se va de golpe!"
+    }
+   ],
+   "desc": "La hora en que el día se rinde y la noche aún no se atreve. El Crepúsculo lleva siglos sosteniendo ese instante y está agotado.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "rayo"
+   ],
+   "resist": [
+    "oscuro",
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "crepusculo",
+   "enrageAbility": "velo_nocturno",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.15
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.12
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Crepúsculo cae del todo! La noche llega por primera vez en mil años."
+   },
+   "ultimate": {
+    "name": "Noche Anunciada",
+    "power": 280,
+    "element": "oscuro",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La noche cae sobre todos a la vez!"
+   }
+  },
+  "guardia_alba": {
+   "name": "Guardia del Alba",
+   "emoji": "🛡️",
+   "color": "#ffe8c0",
+   "level": 79,
+   "hp": 11800,
+   "atk": 340,
+   "def": 272,
+   "mag": 176,
+   "spd": 70,
+   "xp": 1771,
+   "gold": 395,
+   "skills": [
+    {
+     "name": "Lanza de Guardia",
+     "power": 232,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Formación",
+     "power": 176,
+     "element": "fisico",
+     "target": "all_enemies",
+     "weight": 1
+    }
+   ],
+   "desc": "Un soldado de armadura dorada que protege el palacio desde hace doscientos años. No ha dormido nunca y no sabe por qué lo hace.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "fisico"
+   ],
+   "dodgeBonus": 0.05
+  },
+  "estrella_dormida": {
+   "name": "Estrella Dormida",
+   "emoji": "⭐",
+   "color": "#fff8d0",
+   "level": 79,
+   "hp": 9000,
+   "atk": 230,
+   "def": 176,
+   "mag": 330,
+   "spd": 92,
+   "xp": 1771,
+   "gold": 395,
+   "skills": [
+    {
+     "name": "Destello Soñoliento",
+     "power": 228,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Nana Estelar",
+     "power": 176,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag",
+     "effect": {
+      "slow": 0.3
+     }
+    }
+   ],
+   "desc": "Una estrella pequeña que no llegó a salir. Ronda por el palacio tarareando una nana que no termina.",
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "dodgeBonus": 0.1,
+   "loot": [
+    {
+     "item": "fragmento_de_estrella",
+     "chance": 0.35
+    }
+   ]
+  },
+  "mensajero_aurora": {
+   "name": "Mensajero de la Aurora",
+   "emoji": "🕊️",
+   "color": "#ffd8e8",
+   "level": 80,
+   "hp": 8400,
+   "atk": 290,
+   "def": 160,
+   "mag": 340,
+   "spd": 100,
+   "xp": 1799,
+   "gold": 400,
+   "skills": [
+    {
+     "name": "Pico Rosado",
+     "power": 232,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Mensaje Urgente",
+     "power": 178,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Lleva doscientos años entregando un mensaje que nadie le dijo para quién era.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "dodgeBonus": 0.12
+  },
+  "espejo_viviente": {
+   "name": "Espejo Viviente",
+   "emoji": "🪞",
+   "color": "#e8d8f0",
+   "level": 80,
+   "hp": 15200,
+   "atk": 350,
+   "def": 290,
+   "mag": 150,
+   "spd": 32,
+   "xp": 1799,
+   "gold": 400,
+   "skills": [
+    {
+     "name": "Golpe de Marco",
+     "power": 236,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Reflejo Hiriente",
+     "power": 180,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    }
+   ],
+   "desc": "Un espejo del salón que ha aprendido a andar. Devuelve la cara que más le dueles.",
+   "weak": [
+    "rayo",
+    "oscuro"
+   ],
+   "resist": [
+    "arcano",
+    "fisico"
+   ]
+  },
+  "guardiana_espejos": {
+   "name": "La Guardiana de los Mil Espejos",
+   "emoji": "🪞",
+   "color": "#d8b8e8",
+   "level": 79,
+   "hp": 50000,
+   "atk": 330,
+   "def": 214,
+   "mag": 282,
+   "spd": 70,
+   "xp": 7085,
+   "gold": 1106,
+   "skills": [
+    {
+     "name": "Esquirla de Espejo",
+     "power": 234,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 3
+    },
+    {
+     "name": "Mil Reflejos",
+     "power": 180,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Rostro Roto",
+     "power": 350,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡La Guardiana rompe un espejo entre las manos! ¡Mil esquirlas salen volando!"
+    }
+   ],
+   "desc": "Cuida el salón donde la Madre se miraba esperando ver a su hija. Cada espejo guarda un gesto de la niña.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "rayo"
+   ],
+   "resist": [
+    "arcano"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "contraataque",
+   "enrageAbility": "espejo",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.15
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡La Guardiana se parte en mil reflejos! Cada uno tiene un arma."
+   },
+   "ultimate": {
+    "name": "Mil Espejos",
+    "power": 290,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Mil espejos devuelven la misma luz!"
+   }
+  },
+  "recuerdo_shirayuki": {
+   "name": "El Recuerdo de Shirayuki",
+   "emoji": "❄️",
+   "color": "#e8f0ff",
+   "level": 80,
+   "hp": 41000,
+   "atk": 320,
+   "def": 208,
+   "mag": 296,
+   "spd": 80,
+   "xp": 7197,
+   "gold": 1120,
+   "skills": [
+    {
+     "name": "Zarpa de Recuerdo",
+     "power": 236,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Canción Antigua",
+     "power": 182,
+     "element": "hielo",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Adiós",
+     "power": 352,
+     "element": "hielo",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El Recuerdo se da la vuelta! ¡Va a marcharse otra vez!"
+    }
+   ],
+   "desc": "No es ella: es el recuerdo que la Madre guardó. Sonríe como una niña que está a punto de marcharse.",
+   "boss": true,
+   "weak": [
+    "fuego",
+    "oscuro"
+   ],
+   "resist": [
+    "hielo"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "concha",
+   "enrageAbility": "panico",
+   "loot": [
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.2
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.2
+    },
+    {
+     "item": "panuelo_shirayuki",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Recuerdo echa a correr! Hay que alcanzarlo antes de que se pierda."
+   },
+   "ultimate": {
+    "name": "Despedida",
+    "power": 292,
+    "element": "hielo",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡El Recuerdo se despide con todas sus fuerzas!"
+   }
+  },
+  "heredero_alba": {
+   "name": "El Último Hijo del Alba",
+   "emoji": "👑",
+   "color": "#ffd890",
+   "level": 80,
+   "hp": 112000,
+   "atk": 334,
+   "def": 218,
+   "mag": 296,
+   "spd": 72,
+   "xp": 7197,
+   "gold": 1120,
+   "skills": [
+    {
+     "name": "Cetro del Alba",
+     "power": 238,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Lluvia de Oro",
+     "power": 182,
+     "element": "arcano",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Corona Rota",
+     "power": 354,
+     "element": "fuego",
+     "target": "enemy",
+     "weight": 1,
+     "charge": 1,
+     "stat": "mag",
+     "chargeText": "¡El Hijo se quita la corona! ¡La luz de la corona sale en un solo rayo!"
+    }
+   ],
+   "desc": "El último de los hijos adoptados de la Madre. Es el único que se quedó a su lado cuando los demás se fueron.",
+   "boss": true,
+   "weak": [
+    "oscuro",
+    "hielo"
+   ],
+   "resist": [
+    "arcano",
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze"
+   ],
+   "ability": "duelo",
+   "enrageAbility": "aullido",
+   "loot": [
+    {
+     "item": "@w:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@a:divine:8",
+     "chance": 0.5
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.2
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡El Hijo del Alba lanza la corona al suelo! No va a dejar pasar a nadie."
+   },
+   "ultimate": {
+    "name": "Rayo de la Corona",
+    "power": 296,
+    "element": "arcano",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡La corona estalla en un solo rayo!"
+   }
+  },
+  "madre_alba": {
+   "name": "Madre del Alba",
+   "emoji": "🌅",
+   "color": "#fff0c8",
+   "level": 80,
+   "hp": 56000,
+   "atk": 410,
+   "def": 230,
+   "mag": 370,
+   "spd": 76,
+   "xp": 7197,
+   "gold": 1120,
+   "skills": [
+    {
+     "name": "Lanza de Alba",
+     "power": 288,
+     "element": "arcano",
+     "target": "enemy",
+     "weight": 3,
+     "stat": "mag"
+    },
+    {
+     "name": "Rayo de Madre",
+     "power": 224,
+     "element": "fuego",
+     "target": "all_enemies",
+     "weight": 1,
+     "stat": "mag"
+    },
+    {
+     "name": "Mano de Oro",
+     "power": 276,
+     "element": "fisico",
+     "target": "enemy",
+     "weight": 2
+    }
+   ],
+   "desc": "La Madre del Alba, despierta. Detuvo el sol doscientos años para no perder a su hija otra vez y ya no sabe cómo soltarlo.",
+   "boss": true,
+   "weak": [
+    "oscuro"
+   ],
+   "resist": [
+    "arcano",
+    "fuego"
+   ],
+   "immune": [
+    "stun",
+    "freeze",
+    "poison",
+    "burn"
+   ],
+   "ability": "ilusion",
+   "enrageAbility": "dia_noche",
+   "fakeDeath": true,
+   "fakeDeathText": [
+    "Madre del Alba: «...Shirayuki...»",
+    "Madre del Alba se desploma. El palacio se queda a oscuras y en silencio.",
+    "Yukine: «¿Lo hemos... logrado?»",
+    "Madre del Alba: «No. No puedo. No puedo soltarla otra vez.»"
+   ],
+   "loot": [
+    {
+     "item": "@w:cosmic:8",
+     "chance": 0.7
+    },
+    {
+     "item": "@a:cosmic:8",
+     "chance": 0.7
+    },
+    {
+     "item": "@x:cosmic:8",
+     "chance": 0.7
+    },
+    {
+     "item": "corona_del_alba",
+     "chance": 1
+    }
+   ],
+   "enrage": {
+    "hp": 0.5,
+    "text": "¡Madre del Alba rasga el cielo! El día y la noche empiezan a girar sin parar."
+   },
+   "ultimate": {
+    "name": "Mediodía Eterno",
+    "power": 400,
+    "element": "fuego",
+    "target": "all_enemies",
+    "charge": 1,
+    "every": 4,
+    "chargeText": "¡Madre del Alba concentra el mediodía eterno! ¡Defended o caed!"
+   }
   }
  }
 }

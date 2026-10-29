@@ -17,6 +17,7 @@ const TYPE_LABEL = { town: 'Aldea', wild: 'Zona salvaje', sanctuary: 'Santuario'
 
 export const autosave = () => saveSlot('auto', State.game);
 let hooks = { openMenu: () => {}, gameOver: () => {} };
+const sellBase = it => it ? (it.price || (it.mprice ? Math.round(it.mprice * 0.45) : 0)) : 0;
 export function setHooks(h) { hooks = { ...hooks, ...h }; }
 
 /** Ejecuta una función controlando el Abort (derrota, etc.). */
@@ -315,10 +316,10 @@ export async function openShop(list, opts = {}) {
       }
     } else {
       const eq = new Set(partyChars().flatMap(c => Object.values(c.equipment || {})));
-      const sellable = Object.entries(items()).filter(([id, n]) => Data.itemById[id].price && Data.itemById[id].type !== 'key' && !(eq.has(id) && n <= 1));
+      const sellable = Object.entries(items()).filter(([id, n]) => sellBase(Data.itemById[id]) && Data.itemById[id].type !== 'key' && !(eq.has(id) && n <= 1));
       if (!sellable.length) rows.push(el('p', {}, 'No tienes nada que vender.'));
       for (const [id, n] of sellable) {
-        const it = Data.itemById[id], val = Math.floor(it.price * 0.4);
+        const it = Data.itemById[id], val = Math.floor(sellBase(it) * 0.4);
         rows.push(el('div', { class: 'shop-row' }, el('span', { class: 'si' }, it.icon), el('div', { class: 'sd' }, el('b', {}, it.name), el('small', {}, ` ×${n}`)),
           el('button', { class: 'btn', onclick: () => { removeItem(id, 1); addGold(val); render(); } }, `Vender ${val} 🪙`)));
       }

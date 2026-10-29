@@ -108,13 +108,11 @@ async function castHeal(caster, t) {
 
 /* ---------- Inventario ---------- */
 function renderInv(box) {
-  // Una partida guardada puede contener IDs de objetos de una versión anterior.
-  // Filtrarlos aquí evita que un ID sin definición rompa todo el menú.
   const entries = Object.entries(items()).filter(([id, count]) => Data.itemById[id] && count > 0);
   if (!entries.length) return box.append(el('p', {}, 'Tu mochila está vacía.'));
   const groups = { consumable: 'Consumibles', scroll: 'Pergaminos', gift: 'Regalos', equipment: 'Equipamiento', key: 'Objetos clave' };
   for (const [type, label] of Object.entries(groups)) {
-    const list = entries.filter(([id]) => Data.itemById[id]?.type === type); if (!list.length) continue;
+    const list = entries.filter(([id]) => { const item = Data.itemById[id]; return item && item.type === type; }); if (!list.length) continue;
     box.append(el('h4', {}, label));
     for (const [id, n] of list) {
       const it = Data.itemById[id];
@@ -178,10 +176,7 @@ function renderEquip(box) {
     const card = el('div', { class: 'char-card' }, el('h3', {}, c.name));
     for (const [slot, label] of SLOTS_EQ) {
       const cur = c.equipment[slot] ? Data.itemById[c.equipment[slot]] : null;
-      const owned = Object.keys(items()).filter(id => {
-        const item = Data.itemById[id];
-        return item && item.slot === slot && canEquip(c, id);
-      });
+      const owned = Object.keys(items()).filter(id => { const item = Data.itemById[id]; return item && item.slot === slot && canEquip(c, id); });
       card.append(el('div', { class: 'eq-slot' }, el('b', {}, label),
         el('div', { class: 'eq-cur' }, cur ? el('span', { style: `color:${rarityColor(cur.rarity)}` }, `${cur.icon} ${cur.name}`) : '', cur ? ` Nv ${itemLevel(c.equipment[slot])}/${itemMax(c.equipment[slot])} — ${bonusText(scaledBonus(c.equipment[slot]))}` : '— vacío —'),
         el('div', { class: 'chips' }, ...owned.map(id => el('button', { class: 'chip', title: bonusText(scaledBonus(id)), onclick: () => equip(c, slot, id) }, `${Data.itemById[id].icon} ${Data.itemById[id].name} Nv${itemLevel(id)}`)),

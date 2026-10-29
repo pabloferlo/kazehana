@@ -46,7 +46,10 @@ Niveles 81-100: Torre Infinita, Torneo, superjefes (nv 100), cuevas con jefes re
 7. ✅ v0.8.5 (hecho): fin de la Cordillera + inicio de la Ciudad de Luz (santuario 1), tier 7, técnicas 57-60. Nivel máx. 62.
 8. ✅ v0.8.6 (hecho): Ciudad de Luz sector 2 (santuarios 2-3), técnicas 63-66. Nivel máx. 66.
 9. ✅ v0.9.0 (hecho): fin de la Ciudad de Luz (santuarios 4-5, la Dama de la Luz), técnicas 67-70. Nivel máx. 70.
-10. Siguiente: Corazón del Alba (niveles 71-80, Madre del Alba), luego postgame (Torre Infinita, torneo).
+10. ✅ v0.9.1 (hecho): Corazón del Alba sector 1 (santuarios 1-2), tier 8, técnicas 71-74. Nivel máx. 74.
+11. ✅ v0.9.2 (hecho): Corazón del Alba sector 2 (santuarios 3-4), técnicas 75-78. Nivel máx. 78.
+12. ✅ v0.9.3 (hecho): Palacio del Alba, Madre del Alba (jefe final, 3 fases), técnicas 79-80. Nivel máx. 80. FIN DE LA CAMPAÑA.
+13. Siguiente: postgame (Torre Infinita, torneo, niveles 81-100, superjefes).
 
 
 ## Rarezas por región (decidido en v0.7.3)

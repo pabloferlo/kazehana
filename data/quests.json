@@ -1860,6 +1860,234 @@
     ]
    },
    "giver": "ryoichi"
+  },
+  "sq51": {
+   "type": "side",
+   "name": "Brotes que se pasan",
+   "desc": "Taiga quiere seis brotes del alba menos.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "brote_alba",
+     "count": 6,
+     "text": "Brotes del Alba derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 10000,
+    "items": [
+     [
+      "@a:divine:8",
+      1
+     ]
+    ]
+   },
+   "giver": "taiga"
+  },
+  "sq52": {
+   "type": "side",
+   "name": "Un almohadón rosado",
+   "desc": "Oboro necesita tres plumas de alba.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "pluma_de_alba",
+     "count": 3,
+     "text": "Plumas de Alba"
+    }
+   ],
+   "reward": {
+    "gold": 9000,
+    "items": [
+     [
+      "lazo_de_aurora",
+      2
+     ],
+     [
+      "hilo_de_alba",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "oboro"
+  },
+  "m12": {
+   "type": "main",
+   "name": "El Corazón del Alba",
+   "desc": "La Dama de la Luz ha dicho que Madre del Alba espera. Para llegar a ella hay que cruzar los umbrales del Corazón del Alba.",
+   "objectives": [
+    {
+     "type": "flag",
+     "flag": "jardin_done",
+     "text": "Vencer al Jardinero de las Semillas Dormidas"
+    },
+    {
+     "type": "flag",
+     "flag": "a1_done",
+     "text": "Cruzar el Santuario del Primer Rocío"
+    },
+    {
+     "type": "flag",
+     "flag": "campanario_done",
+     "text": "Silenciar el Campanario del Gallo Eterno"
+    },
+    {
+     "type": "flag",
+     "flag": "a2_done",
+     "text": "Cruzar el Santuario de la Aurora Detenida"
+    },
+    {
+     "type": "flag",
+     "flag": "templo_done",
+     "text": "Acabar con la Sacerdotisa del Templo de las Horas Rosadas"
+    },
+    {
+     "type": "flag",
+     "flag": "a3_done",
+     "text": "Cruzar el Santuario de la Tarde Dorada"
+    },
+    {
+     "type": "flag",
+     "flag": "mirador_done",
+     "text": "Bajar la señal del Mirador del Atardecer"
+    },
+    {
+     "type": "flag",
+     "flag": "a4_done",
+     "text": "Cruzar el Santuario del Crepúsculo"
+    },
+    {
+     "type": "flag",
+     "flag": "salon_done",
+     "text": "Atravesar el Salón de los Mil Espejos"
+    },
+    {
+     "type": "flag",
+     "flag": "pal_alba_done",
+     "text": "Cruzar el Palacio del Alba"
+    },
+    {
+     "type": "flag",
+     "flag": "madre_done",
+     "text": "Enfrentar a la Madre del Alba"
+    }
+   ],
+   "reward": {
+    "gold": 30000
+   },
+   "give": "l5_done"
+  },
+  "sq53": {
+   "type": "side",
+   "name": "Espigas salvajes",
+   "desc": "Ryūma quiere seis espigas vivas menos.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "espiga_viva",
+     "count": 6,
+     "text": "Espigas Vivas derrotadas"
+    }
+   ],
+   "reward": {
+    "gold": 11000,
+    "items": [
+     [
+      "@a:divine:8",
+      1
+     ]
+    ]
+   },
+   "giver": "ryuma"
+  },
+  "sq54": {
+   "type": "side",
+   "name": "Granos para el farol",
+   "desc": "Tomoe necesita tres granos de luz.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "grano_de_luz",
+     "count": 3,
+     "text": "Granos de Luz"
+    }
+   ],
+   "reward": {
+    "gold": 10000,
+    "items": [
+     [
+      "manta_de_trigo",
+      2
+     ],
+     [
+      "farol_de_cebada",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "tomoe"
+  },
+  "sq55": {
+   "type": "side",
+   "name": "Guardias que no duermen",
+   "desc": "Rinto pide dejar descansar a seis guardias del alba.",
+   "objectives": [
+    {
+     "type": "kill",
+     "enemy": "guardia_alba",
+     "count": 6,
+     "text": "Guardias del Alba derrotados"
+    }
+   ],
+   "reward": {
+    "gold": 12000,
+    "items": [
+     [
+      "@a:cosmic:8",
+      1
+     ]
+    ]
+   },
+   "giver": "rinto"
+  },
+  "sq56": {
+   "type": "side",
+   "name": "Estrellas para un mapa",
+   "desc": "Ume necesita tres fragmentos de estrella.",
+   "objectives": [
+    {
+     "type": "item",
+     "item": "fragmento_de_estrella",
+     "count": 3,
+     "text": "Fragmentos de Estrella"
+    }
+   ],
+   "reward": {
+    "gold": 11000,
+    "items": [
+     [
+      "estrella_de_papel",
+      2
+     ],
+     [
+      "luz_en_frasco",
+      1
+     ],
+     [
+      "pluma_fenix_dorada",
+      3
+     ]
+    ]
+   },
+   "giver": "ume"
   }
  }
 }

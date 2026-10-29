@@ -2230,6 +2230,168 @@
      "text": "Me encantan las estrellas."
     }
    ]
+  },
+  {
+   "id": "t53",
+   "title": "Una gota, un sol",
+   "if": [
+    "gate_corazon"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Cada gota guarda un sol."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Y cada sol, un día."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "Quiero guardar todos los que pueda contigo."
+    }
+   ]
+  },
+  {
+   "id": "t54",
+   "title": "La hija de la Madre",
+   "if": [
+    "a2_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "afraid",
+     "text": "Dijo que la Madre tiene una hija."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Sea quien sea, no será peor que lo que ya hemos visto."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "sad",
+     "text": "No sé. Tengo un presentimiento."
+    }
+   ]
+  },
+  {
+   "id": "t55",
+   "title": "Una tarde de verdad",
+   "if": [
+    "templo_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Por fin una tarde de verdad."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Huele a trigo."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "Y a hogar, aunque nunca tuve uno así."
+    }
+   ]
+  },
+  {
+   "id": "t56",
+   "title": "Mi abuela",
+   "if": [
+    "a4_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "sad",
+     "text": "Entonces... la Madre del Alba es mi abuela."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Y quiere que vuelva a casa."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "neutral",
+     "text": "No sé qué quiere. Pero se lo voy a preguntar de frente."
+    }
+   ]
+  },
+  {
+   "id": "t57",
+   "title": "Antes de la Madre",
+   "if": [
+    "pal_alba_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "afraid",
+     "text": "Mañana... bueno, hoy... conoceré a mi abuela."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Pase lo que pase, estoy contigo."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "Eso es lo único que necesito."
+    }
+   ]
+  },
+  {
+   "id": "t58",
+   "title": "Después del alba",
+   "if": [
+    "madre_done"
+   ],
+   "scenes": [
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "happy",
+     "text": "Ya hay noche. Ya hay estrellas."
+    },
+    {
+     "speaker": "{name}",
+     "char": "protagonista",
+     "emotion": "neutral",
+     "text": "Y mañana saldrá el sol de verdad."
+    },
+    {
+     "speaker": "Yukine",
+     "char": "yukine",
+     "emotion": "shy",
+     "text": "Quiero verlo contigo."
+    }
+   ]
   }
  ],
  "intimate": [
@@ -11426,6 +11588,1361 @@
      "flag": "ev_dama_vencida"
     }
    ]
+  }
+ ],
+ "alba_llegada": [
+  {
+   "narration": true,
+   "text": "Al cruzar el horizonte, el mundo se tiñe de rosa y oro. Un amanecer inmenso ocupa todo el cielo y no se mueve: ni sube ni baja. Debajo hay un valle de rocío con miles de brotes mirando al sol.",
+   "bg": "linear-gradient(180deg,#ffe8e0,#e8a890 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Huele a mañana."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y a algo que no deja de empezar."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Mamá vino por aquí. Lo noto. Hay algo suyo en el aire."
+  },
+  {
+   "narration": true,
+   "text": "Una voz inmensa, sin dueño, susurra desde el cielo: «...has vuelto a casa...»."
+  }
+ ],
+ "alba_rocio": [
+  {
+   "narration": true,
+   "text": "El Sendero del Rocío es un camino de hierba mojada que brilla como si estuviera lleno de espejitos. Cada gota guarda un amanecer en miniatura.",
+   "bg": "linear-gradient(180deg,#fff0e8,#e8b8a0 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "Cada gota tiene un sol."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "No las pises todas."
+  }
+ ],
+ "alba_refugio": [
+  {
+   "narration": true,
+   "text": "El Refugio de los Despiertos es una aldea de casitas de barro y paja agrupadas en torno a un pozo. Quien llega aquí ha despertado de un sueño que no era suyo.",
+   "bg": "linear-gradient(180deg,#fff4e0,#d8a878 55%,#05050a)"
+  },
+  {
+   "speaker": "Hoshina",
+   "char": "hoshina",
+   "emotion": "neutral",
+   "text": "Otra vez forasteros. Hace mucho que nadie llega con la sombra a cuestas."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Veníamos de la ciudad de luz."
+  },
+  {
+   "speaker": "Hoshina",
+   "char": "hoshina",
+   "emotion": "happy",
+   "text": "Entonces la Dama os dejó pasar. Bien. Aquí está lo difícil."
+  }
+ ],
+ "alba_bosque": [
+  {
+   "narration": true,
+   "text": "El Bosque de las Madrugadas es un bosque de árboles de corteza rosada donde siempre son las seis de la mañana. Las hojas gotean luz. Cada tronco tiene un reloj de sol que marca la misma sombra.",
+   "bg": "linear-gradient(180deg,#ffe0e8,#c88898 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Es precioso."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y por eso hay que andar con cuidado."
+  }
+ ],
+ "alba_jardin_i": [
+  {
+   "narration": true,
+   "text": "El Jardín de las Semillas Dormidas es un invernadero inmenso de cristal rosa. Miles de macetas, cada una con una semilla que no germina. Entre ellas, un hombre con sombrero de paja se arrodilla y las riega una a una.",
+   "bg": "linear-gradient(180deg,#f0f8e0,#98b878 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Les habla."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Les pide que despierten."
+  }
+ ],
+ "alba_jardin_p": [
+  {
+   "speaker": "Jardinero",
+   "char": "jardinero_n",
+   "emotion": "sad",
+   "text": "Doscientos años regando. Y no despierta ninguna. Porque ella no las deja."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Quién?"
+  },
+  {
+   "speaker": "Jardinero",
+   "char": "jardinero_n",
+   "emotion": "angry",
+   "text": "¡La Madre! ¡Las quiere dormidas para siempre! Y yo... yo corto las que se atreven a crecer."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Entonces te detendremos."
+  }
+ ],
+ "alba_jardin_c": [
+  {
+   "narration": true,
+   "text": "El Jardinero cae entre las macetas. Una semilla se agrieta y de la grieta sale un tallo verde y pequeñito. El primero en doscientos años.",
+   "bg": "linear-gradient(180deg,#f0f8e0,#98b878 55%,#05050a)"
+  },
+  {
+   "speaker": "Jardinero",
+   "char": "jardinero_n",
+   "emotion": "sad",
+   "text": "Está creciendo. Nadie la ha podado. Nadie... la ha obligado."
+  },
+  {
+   "speaker": "Jardinero",
+   "char": "jardinero_n",
+   "emotion": "neutral",
+   "text": "El Santuario del Primer Rocío está al este. Allí la Nodriza guarda las lágrimas de las semillas. Tened cuidado: se alimenta de lo caído."
+  },
+  {
+   "narration": true,
+   "text": "En el invernadero se oye un crujido: miles de semillas se agrietan a la vez.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_semillas"
+    }
+   ]
+  }
+ ],
+ "alba_a1_i": [
+  {
+   "narration": true,
+   "text": "El Santuario del Primer Rocío es una gruta abierta al cielo, con una fuente en el centro de la que brota agua clara sin parar. Alrededor, cientos de semillas dormidas esperan una sola gota.",
+   "bg": "linear-gradient(180deg,#f0fff8,#a8d8c8 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Qué silencio tan limpio."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y tan lleno de cosas por decir."
+  }
+ ],
+ "alba_a1_p": [
+  {
+   "narration": true,
+   "text": "Una mujer alta, de piel azul muy pálida, emerge de la fuente con un cántaro en cada mano. Su pelo es una cascada que sube y baja.",
+   "bg": "linear-gradient(180deg,#f0fff8,#a8d8c8 55%,#05050a)"
+  },
+  {
+   "speaker": "Nodriza",
+   "char": "nodriza_n",
+   "emotion": "neutral",
+   "text": "Mis niñas. Llevan siglos dormidas. Si alguna se apaga, tomo lo que quedó para las otras."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "¿Y si no se apaga?"
+  },
+  {
+   "speaker": "Nodriza",
+   "char": "nodriza_n",
+   "emotion": "angry",
+   "text": "Entonces ayudo a que se apague. Es amor. Es lo único que sé."
+  }
+ ],
+ "alba_a1_c": [
+  {
+   "narration": true,
+   "text": "La Nodriza se deshace en gotas que caen sobre las semillas. Todas brotan a la vez: una alfombra de verde recién nacido llena el santuario.",
+   "bg": "linear-gradient(180deg,#f0fff8,#a8d8c8 55%,#05050a)"
+  },
+  {
+   "speaker": "Nodriza",
+   "char": "nodriza_n",
+   "emotion": "sad",
+   "text": "Qué manera tan feliz de acabar. Gracias."
+  },
+  {
+   "speaker": "Nodriza",
+   "char": "nodriza_n",
+   "emotion": "neutral",
+   "text": "El campanario del este mantiene a todos dormidos. Si calláis la campana, la mañana avanzará."
+  },
+  {
+   "narration": true,
+   "text": "Una brisa tibia recorre el valle. Por primera vez, el sol se mueve un dedo.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_rocio"
+    }
+   ]
+  }
+ ],
+ "alba_nidos_i": [
+  {
+   "narration": true,
+   "text": "La Cueva de los Nidos Dorados es una gruta tibia llena de nidos grandes como cestas, forrados de plumas rosadas. Algo muy grande respira en el fondo.",
+   "bg": "linear-gradient(180deg,#4a3820,#201408 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Hay huevos. Muchos."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y alguien que los cuida."
+  }
+ ],
+ "alba_nidos_c": [
+  {
+   "narration": true,
+   "text": "El Gallo Dorado se deja caer sobre su nido y se queda quieto. Un huevo se rompe, sin ruido, y asoma un pollito rosado que mira a Yukine.",
+   "bg": "linear-gradient(180deg,#4a3820,#201408 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "Hola, pequeño."
+  }
+ ],
+ "alba_lago": [
+  {
+   "narration": true,
+   "text": "El Lago de la Primera Luz es un espejo inmenso de agua tibia. Bajo la superficie se ve un sol dorado que no existe sobre el cielo.",
+   "bg": "linear-gradient(180deg,#fff0d0,#e8b868 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "El sol está debajo."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y todos miran hacia arriba."
+  }
+ ],
+ "alba_cam_i": [
+  {
+   "narration": true,
+   "text": "El Campanario del Gallo Eterno es una torre de piedra rosa con una campana de bronce del tamaño de una casa. Toca una única nota, grave y larga, cada pocos segundos. Quien la oye, se queda dormido en pie.",
+   "bg": "linear-gradient(180deg,#ffe8c8,#c8985a 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "Me da sueño."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "No te duermas. Tápate los oídos si hace falta."
+  }
+ ],
+ "alba_cam_p": [
+  {
+   "speaker": "Campanero",
+   "char": "campanero_n",
+   "emotion": "sad",
+   "text": "No puedo parar. Si paro, llega la noche. Y de la noche... hay cosas de las que no se vuelve."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Pero así nadie despierta."
+  },
+  {
+   "speaker": "Campanero",
+   "char": "campanero_n",
+   "emotion": "angry",
+   "text": "¡Mejor dormidos que muertos! ¡Mejor un alba eterna que una noche sin fin!"
+  }
+ ],
+ "alba_cam_c": [
+  {
+   "narration": true,
+   "text": "El Campanero suelta la cuerda. La campana vibra una última vez y se calla. Durante unos segundos no se oye nada. Luego, un pájaro, y otro, y otro.",
+   "bg": "linear-gradient(180deg,#ffe8c8,#c8985a 55%,#05050a)"
+  },
+  {
+   "speaker": "Campanero",
+   "char": "campanero_n",
+   "emotion": "sad",
+   "text": "Silencio. Qué silencio tan hermoso. Y no ha llegado la noche."
+  },
+  {
+   "speaker": "Campanero",
+   "char": "campanero_n",
+   "emotion": "neutral",
+   "text": "La Aurora Detenida está en el último santuario. Es el primer amanecer. Pidió ayuda hace siglos y nadie la entendió."
+  },
+  {
+   "narration": true,
+   "text": "El sol se mueve un dedo más. En el refugio, alguien se echa a llorar de alegría.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_campana"
+    }
+   ]
+  }
+ ],
+ "alba_a2_i": [
+  {
+   "narration": true,
+   "text": "El Santuario de la Aurora Detenida es un anfiteatro de nubes rosadas con una mujer de luz en el centro. A su alrededor, el cielo se arremolina como si fuera a romper a llorar.",
+   "bg": "linear-gradient(180deg,#ffe0f0,#d898b8 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Es el amanecer."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y está atrapado."
+  }
+ ],
+ "alba_a2_p": [
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "sad",
+   "text": "Nací para pasar. Pero ella me detuvo. Soy el primer día y no puedo dar paso al segundo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Quién?"
+  },
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "neutral",
+   "text": "Mi madre. La Madre del Alba. Dijo que no soportaría una noche más. Que debía quedarme."
+  },
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "angry",
+   "text": "¡Y ahora todo lo que cae en mi luz se queda! ¡Ayudadme a pasar! ¡Pero tendréis que vencerme, porque no sé parar!"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Lo haremos."
+  }
+ ],
+ "alba_a2_c": [
+  {
+   "narration": true,
+   "text": "La Aurora Detenida se rompe en mil rayos rosados que suben al cielo. El sol, por fin, se mueve: sube, sube, y a lo lejos algo parecido a un atardecer empieza a teñir las nubes.",
+   "bg": "linear-gradient(180deg,#fff8e8,#e8c898 55%,#05050a)"
+  },
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "happy",
+   "text": "¡Gracias! Cuánto tiempo sin ver una tarde. Qué bonita es."
+  },
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "neutral",
+   "text": "Ella está más allá. En el centro del alba. Os espera. Y tiene un nombre que no sabéis: el de su hija."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "¿Su hija...?"
+  },
+  {
+   "speaker": "Aurora",
+   "char": "aurora_n",
+   "emotion": "sad",
+   "text": "Te lo dirá ella. Y te dolerá."
+  },
+  {
+   "narration": true,
+   "text": "Por todo el valle, miles de semillas brotan. El horizonte, por primera vez, tiene sombra. El Corazón del Alba aún guarda mucho más, pero la mañana, por fin, ha empezado a moverse.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "alba_continuara1"
+    },
+    {
+     "type": "flag",
+     "flag": "ev_aurora"
+    }
+   ]
+  }
+ ],
+ "alba2_campos": [
+  {
+   "narration": true,
+   "text": "Más allá del santuario, el valle cambia de color: el rosa se vuelve oro y el oro, naranja. Campos de trigo se mecen sin viento hasta el horizonte. Por primera vez desde que llegasteis, el cielo no es de amanecer: es de tarde.",
+   "bg": "linear-gradient(180deg,#fff0c0,#e0a830 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "Es de tarde. ¡De tarde de verdad!"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "El alba empieza a moverse."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Y huele a pan."
+  }
+ ],
+ "alba2_posada": [
+  {
+   "narration": true,
+   "text": "La Posada del Último Rayo es una casa baja de adobe con un farol de cebada en la puerta. Dentro huele a sopa de espiga y a pan de leña. En la barra, una posadera os mira de arriba abajo.",
+   "bg": "linear-gradient(180deg,#ffe8c8,#b87838 55%,#05050a)"
+  },
+  {
+   "speaker": "Tomoe",
+   "char": "tomoe",
+   "emotion": "happy",
+   "text": "Pasad, pasad. Si habéis venido desde el santuario de la Aurora, os debo una cama y una cena."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "¿Os habéis enterado de que se mueve el sol?"
+  },
+  {
+   "speaker": "Tomoe",
+   "char": "tomoe",
+   "emotion": "sad",
+   "text": "Lo hemos visto. Mi abuela rezaba para verlo antes de morir. No pudo."
+  }
+ ],
+ "alba2_rio": [
+  {
+   "narration": true,
+   "text": "El Río de Miel es una corriente lenta y dorada que se desliza entre campos de trigo. El agua es espesa y dulce, y todo lo que cae en ella se queda quieto un rato.",
+   "bg": "linear-gradient(180deg,#ffe8a0,#c89820 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Huele dulce."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "No te pares a probar."
+  }
+ ],
+ "alba2_templo_i": [
+  {
+   "narration": true,
+   "text": "El Templo de las Horas Rosadas es un edificio de columnas altas con un reloj de arena en cada una. Dentro, una mujer con túnica rosa pálido reza ante un altar con doce velas.",
+   "bg": "linear-gradient(180deg,#ffe0e0,#c88898 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Reza sin parar."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Con doce velas, una por hora."
+  }
+ ],
+ "alba2_templo_p": [
+  {
+   "speaker": "Sacerdotisa",
+   "char": "sacerdotisa_n",
+   "emotion": "neutral",
+   "text": "Mil años rezando las mismas doce oraciones. Para que la hora no avance, porque la Madre lo pidió."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Y no te cansa?"
+  },
+  {
+   "speaker": "Sacerdotisa",
+   "char": "sacerdotisa_n",
+   "emotion": "angry",
+   "text": "¡Está prohibido cansarse! ¡Está prohibido avanzar! ¡Y nadie que lo intente saldrá de aquí!"
+  }
+ ],
+ "alba2_templo_c": [
+  {
+   "narration": true,
+   "text": "La Sacerdotisa deja caer el báculo. Una a una, las doce velas se apagan. En el silencio se oye, muy lejos, una campanada de tarde.",
+   "bg": "linear-gradient(180deg,#ffe0e0,#c88898 55%,#05050a)"
+  },
+  {
+   "speaker": "Sacerdotisa",
+   "char": "sacerdotisa_n",
+   "emotion": "sad",
+   "text": "Doce velas apagadas. Qué raro: no ha pasado nada terrible."
+  },
+  {
+   "speaker": "Sacerdotisa",
+   "char": "sacerdotisa_n",
+   "emotion": "neutral",
+   "text": "El Santuario de la Tarde Dorada está al norte. El Segador siega la luz de cada tarde para que no se acabe."
+  },
+  {
+   "narration": true,
+   "text": "Los relojes de arena de las columnas empiezan a vaciarse.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_templo"
+    }
+   ]
+  }
+ ],
+ "alba2_a3_i": [
+  {
+   "narration": true,
+   "text": "El Santuario de la Tarde Dorada es una explanada de trigo maduro bajo un sol bajo y enorme. En medio, una figura alta con una hoz que brilla sin sombra siega la luz.",
+   "bg": "linear-gradient(180deg,#fff0c0,#e8a040 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Cada vez que corta, el cielo se apaga un poco."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y luego vuelve a encenderse."
+  }
+ ],
+ "alba2_a3_p": [
+  {
+   "speaker": "Segador",
+   "char": "segador_n",
+   "emotion": "neutral",
+   "text": "Siego la tarde. Cada día un puñado. Así dura más."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Y los que se duermen con ella?"
+  },
+  {
+   "speaker": "Segador",
+   "char": "segador_n",
+   "emotion": "sad",
+   "text": "Son la cosecha. No tengo elección. La Madre lo pidió."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Siempre se puede elegir."
+  },
+  {
+   "speaker": "Segador",
+   "char": "segador_n",
+   "emotion": "angry",
+   "text": "¡Entonces elijo lo que sé hacer!"
+  }
+ ],
+ "alba2_a3_c": [
+  {
+   "narration": true,
+   "text": "El Segador baja la hoz y por primera vez la mira. La hoz se deshace en una lluvia de oro que cae sobre el trigo y lo hace madurar de golpe.",
+   "bg": "linear-gradient(180deg,#fff0c0,#e8a040 55%,#05050a)"
+  },
+  {
+   "speaker": "Segador",
+   "char": "segador_n",
+   "emotion": "sad",
+   "text": "Nunca vi el trigo madurar solo. Qué cosa más bonita."
+  },
+  {
+   "speaker": "Segador",
+   "char": "segador_n",
+   "emotion": "neutral",
+   "text": "El Mirador del Atardecer está al oeste. La Vigía debe dar la señal, pero no se atreve."
+  },
+  {
+   "narration": true,
+   "text": "En todo el valle empieza a oler a pan recién hecho.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_siega_fin"
+    }
+   ]
+  }
+ ],
+ "alba2_granero_i": [
+  {
+   "narration": true,
+   "text": "El Granero sin Fondo es una nave de madera con el techo de cristal por el que entra una luz anaranjada. El trigo almacenado llega hasta el cielo y de él cuelga, boca abajo, un espantapájaros de cuatro metros.",
+   "bg": "linear-gradient(180deg,#403018,#180e04 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "Se mueve."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Es un espantapájaros. Parece que hay algo dentro."
+  }
+ ],
+ "alba2_granero_c": [
+  {
+   "narration": true,
+   "text": "El Espantapájaros se desinfla como un globo. De su pecho cae una nidada de gorriones asustados que se van volando por el techo de cristal.",
+   "bg": "linear-gradient(180deg,#403018,#180e04 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "¡Estaban escondidos!"
+  }
+ ],
+ "alba2_mirador_i": [
+  {
+   "narration": true,
+   "text": "El Mirador del Atardecer es una terraza de piedra sobre un precipicio, con un catalejo de latón apuntando al horizonte. Allí, una mujer menuda con una trenza muy larga espera algo.",
+   "bg": "linear-gradient(180deg,#ffd8b0,#d87848 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Mira al sol."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Lo vigila."
+  }
+ ],
+ "alba2_mirador_p": [
+  {
+   "speaker": "Vigía",
+   "char": "vigia_n",
+   "emotion": "sad",
+   "text": "Debo avisar cuando empiece la noche. Llevo mil años esperando el momento. Y no me atrevo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿A qué le tienes miedo?"
+  },
+  {
+   "speaker": "Vigía",
+   "char": "vigia_n",
+   "emotion": "angry",
+   "text": "¡A lo que viene detrás! ¡Los que dan la señal no vuelven a ver el sol!"
+  }
+ ],
+ "alba2_mirador_c": [
+  {
+   "narration": true,
+   "text": "La Vigía suelta el catalejo, que rueda por el precipicio hasta perderse. El sol empieza a ponerse detrás de las colinas, tan despacio que apenas se nota.",
+   "bg": "linear-gradient(180deg,#ffd8b0,#d87848 55%,#05050a)"
+  },
+  {
+   "speaker": "Vigía",
+   "char": "vigia_n",
+   "emotion": "sad",
+   "text": "Doy la señal. Ya. Qué ligera me siento."
+  },
+  {
+   "speaker": "Vigía",
+   "char": "vigia_n",
+   "emotion": "neutral",
+   "text": "El Santuario del Crepúsculo está a la espalda de las colinas. Su señor lleva mil años sosteniendo el instante en que el día se rinde. Está cansado."
+  },
+  {
+   "narration": true,
+   "text": "En el valle alguien aplaude. Luego, más gente. Por fin hay una tarde que acaba.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_senal"
+    }
+   ]
+  }
+ ],
+ "alba2_a4_i": [
+  {
+   "narration": true,
+   "text": "El Santuario del Crepúsculo es un anfiteatro de colinas donde el cielo se divide en dos: de un lado rosa y oro, del otro violeta y estrellas. En el centro, un hombre con un manto morado sostiene la línea que los separa.",
+   "bg": "linear-gradient(180deg,#e8c0d8,#7a4878 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Es el momento más bonito del día."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y lo sostiene alguien muy cansado."
+  }
+ ],
+ "alba2_a4_p": [
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "sad",
+   "text": "Soy el instante en que el día se rinde. Mil años sosteniéndolo para que no llegue la noche. Porque ella lo pidió."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Ella?"
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "neutral",
+   "text": "La Madre del Alba. Perdió una hija una noche, hace doscientos años. Una noche sin luna. Desde entonces no soporta la oscuridad."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "¿Su hija... se fue de noche?"
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "sad",
+   "text": "Huyó con una niña a cuestas. Se hacía llamar Shirayuki."
+  },
+  {
+   "narration": true,
+   "text": "Yukine se queda inmóvil. El viento mueve su pelo blanco. No dice nada durante un rato largo."
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "angry",
+   "text": "Si queréis pasar, tendréis que dejarme caer. ¡Pero no os dejaré avanzar sin luchar!"
+  }
+ ],
+ "alba2_a4_c": [
+  {
+   "narration": true,
+   "text": "El Crepúsculo cae de rodillas. El cielo se parte del todo: a un lado, el resto del día; al otro, la noche entera, con estrellas que no se han visto en mil años.",
+   "bg": "linear-gradient(180deg,#ffe8d8,#c89890 55%,#05050a)"
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "happy",
+   "text": "Qué bonitas son. Ya no hace falta sostener nada."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Mi madre era hija de la Madre del Alba."
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "sad",
+   "text": "Sí. Y tú eres su nieta. Por eso te dejó pasar la Dama. Por eso el alba se movió cuando llegaste."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Yukine..."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Estoy bien. Necesito ver el final. Necesito que ella me lo diga."
+  },
+  {
+   "speaker": "Crepúsculo",
+   "char": "crepusculo_n",
+   "emotion": "neutral",
+   "text": "Al fondo del valle está el último umbral: el Palacio del Alba. Allí, Madre del Alba."
+  },
+  {
+   "narration": true,
+   "text": "Por primera vez en mil años, el cielo se llena de estrellas. Yukine alza la cabeza: «madre... hay estrellas».",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "alba_continuara2"
+    },
+    {
+     "type": "flag",
+     "flag": "ev_noche"
+    }
+   ]
+  }
+ ],
+ "fin_escalinata": [
+  {
+   "narration": true,
+   "text": "Una escalinata de mármol violeta sube hacia el Palacio del Alba. El cielo, que ya empezaba a oscurecer, se parte a cada peldaño entre el rosa y las primeras estrellas.",
+   "bg": "linear-gradient(180deg,#e8d8f8,#a888c8 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Mamá subió por aquí. Lo sé."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Y te trajo hasta aquí sin saberlo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Estoy asustada. Pero contigo me atrevo."
+  }
+ ],
+ "fin_salon_i": [
+  {
+   "narration": true,
+   "text": "El Salón de los Mil Espejos es una galería infinita con espejos del suelo al techo. En cada uno hay una niña distinta: un día dormida, otro riendo, otro de espaldas. La misma niña, en mil días.",
+   "bg": "linear-gradient(180deg,#fff0f8,#c898d0 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Es ella. Es mi madre de niña."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "La Madre se sentaba aquí a mirarla."
+  }
+ ],
+ "fin_salon_p": [
+  {
+   "speaker": "Guardiana",
+   "char": "guardiana_espejos_n",
+   "emotion": "sad",
+   "text": "Cada espejo guarda un gesto de la niña. Los cuido porque son lo único que queda de ella."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Pero ella no está en ninguno."
+  },
+  {
+   "speaker": "Guardiana",
+   "char": "guardiana_espejos_n",
+   "emotion": "angry",
+   "text": "¡Los espejos no se tocan! ¡Y quien los toque no sale de aquí!"
+  }
+ ],
+ "fin_salon_c": [
+  {
+   "narration": true,
+   "text": "La Guardiana se quiebra en mil esquirlas. Los espejos del salón se empañan, uno a uno, y la niña de cada uno se va quedando dormida.",
+   "bg": "linear-gradient(180deg,#fff0f8,#c898d0 55%,#05050a)"
+  },
+  {
+   "speaker": "Guardiana",
+   "char": "guardiana_espejos_n",
+   "emotion": "sad",
+   "text": "Gracias. Por fin podré descansar con ella."
+  },
+  {
+   "speaker": "Guardiana",
+   "char": "guardiana_espejos_n",
+   "emotion": "neutral",
+   "text": "El Palacio del Alba está al final de la galería. El último hijo de la Madre lo guarda. Es amable. Y es terrible."
+  },
+  {
+   "narration": true,
+   "text": "En el último espejo, una niña de pelo blanco levanta la mano y se despide.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_espejos"
+    }
+   ]
+  }
+ ],
+ "fin_recuerdos_i": [
+  {
+   "narration": true,
+   "text": "La Cámara de los Recuerdos es una sala circular sin puertas, con un único sillón y una figura sentada. Cuando entráis, la figura se pone de pie despacio. Es una joven de pelo blanco.",
+   "bg": "linear-gradient(180deg,#fff8e8,#d8b898 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "¿Mamá?"
+  },
+  {
+   "speaker": "Shirayuki",
+   "char": "shirayuki_n",
+   "emotion": "sad",
+   "text": "No soy ella. Soy lo que la Madre guardó de ella. Un recuerdo de un día de invierno."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Entonces... ¿puedo abrazarte?"
+  },
+  {
+   "speaker": "Shirayuki",
+   "char": "shirayuki_n",
+   "emotion": "neutral",
+   "text": "Puedes intentarlo. Pero el recuerdo se defiende: es lo único que le queda."
+  }
+ ],
+ "fin_recuerdos_c": [
+  {
+   "narration": true,
+   "text": "El Recuerdo de Shirayuki sonríe, apoya la frente en la de Yukine y se deshace en copos de nieve. Quedan en el suelo un pañuelo blanco con un lobo bordado y el eco de una nana.",
+   "bg": "linear-gradient(180deg,#fff8e8,#d8b898 55%,#05050a)"
+  },
+  {
+   "speaker": "Shirayuki",
+   "char": "shirayuki_n",
+   "emotion": "happy",
+   "text": "Cuídate, mi niña. Cuida de la que va contigo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Mamá..."
+  },
+  {
+   "narration": true,
+   "text": "Yukine se arrodilla, recoge el pañuelo y lo aprieta contra el pecho.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_recuerdo"
+    }
+   ]
+  }
+ ],
+ "fin_palacio_i": [
+  {
+   "narration": true,
+   "text": "El Palacio del Alba es una nave de oro blanco con ventanales que dan a un cielo mitad día, mitad noche. Al fondo, un hombre con una corona rota espera de pie junto a un trono vacío.",
+   "bg": "linear-gradient(180deg,#fff0d0,#e8b878 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Está esperándonos."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Lleva doscientos años esperándonos."
+  }
+ ],
+ "fin_palacio_p": [
+  {
+   "speaker": "Hijo del Alba",
+   "char": "heredero_n",
+   "emotion": "neutral",
+   "text": "Me llamo Haru. Soy el último de los hijos que la Madre adoptó cuando perdió a su hija. Los otros se fueron. Yo me quedé."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Por qué?"
+  },
+  {
+   "speaker": "Hijo del Alba",
+   "char": "heredero_n",
+   "emotion": "sad",
+   "text": "Porque alguien tenía que hacerle compañía. Y porque la quiero, aunque ella a mí no me llame por mi nombre."
+  },
+  {
+   "speaker": "Hijo del Alba",
+   "char": "heredero_n",
+   "emotion": "angry",
+   "text": "Si queréis pasar, tendréis que pasar sobre mí. No por maldad. Es lo único que me queda para demostrarle que me quedé."
+  }
+ ],
+ "fin_palacio_c": [
+  {
+   "narration": true,
+   "text": "Haru cae sobre un rodilla y la corona rota rueda hasta los pies de Yukine. Él sonríe, con los ojos húmedos.",
+   "bg": "linear-gradient(180deg,#fff0d0,#e8b878 55%,#05050a)"
+  },
+  {
+   "speaker": "Hijo del Alba",
+   "char": "heredero_n",
+   "emotion": "happy",
+   "text": "Gracias. Por fin podré decirle que me quedé hasta el final, y que puede soltar."
+  },
+  {
+   "speaker": "Hijo del Alba",
+   "char": "heredero_n",
+   "emotion": "neutral",
+   "text": "El trono está tras esa puerta. Ella os espera. Está despierta. Tratadla con cuidado: es la mujer más sola del mundo."
+  },
+  {
+   "narration": true,
+   "text": "La puerta del fondo se abre sola. Del otro lado llega una luz blanca y tibia, y un murmullo muy suave: una mujer que canta una nana.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_haru"
+    }
+   ]
+  }
+ ],
+ "fin_madre_i": [
+  {
+   "narration": true,
+   "text": "El Trono del Alba Eterna no tiene paredes: es una plataforma de luz suspendida entre el día y la noche. Un trono de oro, vacío; y delante, de pie, una mujer altísima de cabello blanco dorado que flota como luz líquida.",
+   "bg": "linear-gradient(180deg,#ffffff,#ffd8a0 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "afraid",
+   "text": "Es ella. La del sueño."
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "La Madre del Alba. Despierta."
+  }
+ ],
+ "fin_madre_p": [
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "neutral",
+   "text": "Sabía que vendrías. Lo supe cuando el sol se movió un dedo. Hacía doscientos años que no se movía."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Me llamo Yukine. No soy Shirayuki."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "sad",
+   "text": "Lo sé. Lo supe en cuanto te vi: tienes sus ojos, pero no su manera de caminar. Eres de ella y no eres ella."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "neutral",
+   "text": "Os he visto atravesar mi alba. Cada umbral. Cada guardián. Y he pensado: que lleguen. Que lleguen, para que por fin alguien me diga que puedo parar."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "¿Y por qué sigues luchando?"
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "angry",
+   "text": "¡Porque no sé parar! ¡Llevo doscientos años haciendo lo único que sabía! ¡Y ahora, si lo suelto, no me queda nada!"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "determined",
+   "text": "Entonces te ayudaremos a soltarlo."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "sad",
+   "text": "Hacedlo si podéis. Pero no os lo pondré fácil. No sé hacerlo de otra manera."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "neutral",
+   "text": "¡Hijos de la luz, a mí!"
+  }
+ ],
+ "fin_madre_c": [
+  {
+   "narration": true,
+   "text": "La luz de la Madre del Alba se apaga despacio. No explota: se aquieta, como una vela cuando se le acaba la cera. Cae de rodillas ante Yukine, y entonces ya no es altísima: es una mujer mayor, muy cansada, con una corona que le pesa.",
+   "bg": "linear-gradient(180deg,#ffe0c0,#6a4878 55%,#05050a)"
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "sad",
+   "text": "He perdido. Qué alivio más grande."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "sad",
+   "text": "Mi madre me pidió algo antes de irse. Dijo que, si te encontraba, te dijera que no fue culpa tuya."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "sad",
+   "text": "¿Eso... dijo?"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "No con esas palabras. Con una nana. Pero eso quería decir."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "happy",
+   "text": "Mi niña. Mi niña blanca. Qué tonta he sido."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "neutral",
+   "text": "Se fue porque quería ver el mar. Y yo, en vez de dejarla ir, detuve el mundo. Qué vergüenza me da."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "Mi madre te perdonó mucho antes de que yo llegara. Solo faltaba que tú te dejaras perdonar."
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "sad",
+   "text": "Y la Primera Noche... la eché de mi alba. Una niña pequeña con miedo a la oscuridad: eso era yo.",
+   "if": [
+    "cave_m1_done"
+   ]
+  },
+  {
+   "narration": true,
+   "text": "La Primera Noche, que ha seguido a Yukine desde el refugio, se acerca despacio y toma la mano de la Madre. No dice nada. Las dos se quedan quietas.",
+   "if": [
+    "cave_m1_done"
+   ]
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "happy",
+   "text": "Suelto el alba. Que el día siga. Que la noche vuelva. Que mañana amanezca de verdad."
+  },
+  {
+   "narration": true,
+   "text": "La corona de la Madre se deshace en luz. Por los ventanales del Palacio del Alba, el sol empieza a moverse: baja despacio hasta el horizonte y, por primera vez en doscientos años, se pone.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "ev_atardecer"
+    }
+   ]
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "¡{name}! ¡El sol se pone! ¡Se pone de verdad!"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "happy",
+   "text": "Lo hemos conseguido, Yukine."
+  },
+  {
+   "narration": true,
+   "text": "Después, las estrellas. Todas a la vez, como si llevasen mil años conteniéndose.",
+   "bg": "linear-gradient(180deg,#ffe0c0,#6a4878 55%,#05050a)"
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Hay tantas... Mamá, ¿las ves?"
+  },
+  {
+   "speaker": "Madre del Alba",
+   "char": "madre_alba",
+   "emotion": "happy",
+   "text": "Las veo, hija. Las veo todas."
+  },
+  {
+   "narration": true,
+   "text": "Madre del Alba se deshace en una luz suave que sube hacia el cielo. Una de las estrellas parpadea, más grande que las demás.",
+   "actions": [
+    {
+     "type": "flag",
+     "flag": "madre_done"
+    },
+    {
+     "type": "flag",
+     "flag": "game_complete"
+    },
+    {
+     "type": "flag",
+     "flag": "alba_continuara3"
+    }
+   ]
+  },
+  {
+   "narration": true,
+   "text": "LA MADRE DEL ALBA HA DESCANSADO."
+  },
+  {
+   "narration": true,
+   "text": "EL CORAZÓN DEL ALBA HA SIDO LIBERADO."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "neutral",
+   "text": "{name}... ¿y ahora?"
+  },
+  {
+   "speaker": "{name}",
+   "char": "protagonista",
+   "emotion": "neutral",
+   "text": "Ahora, lo que tú quieras."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "happy",
+   "text": "Quiero volver a casa. A Tsukimori. Contigo."
+  },
+  {
+   "speaker": "Yukine",
+   "char": "yukine",
+   "emotion": "shy",
+   "text": "Y quiero volver a mirar el mar. Una vez más, con mamá en las estrellas."
+  },
+  {
+   "narration": true,
+   "text": "La campaña ha terminado. Pero el mundo sigue ahí fuera: la Torre sin Fin y el torneo os esperan en una próxima versión."
   }
  ]
 }
